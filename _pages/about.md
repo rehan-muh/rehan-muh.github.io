@@ -30,5 +30,3 @@ latest_posts:
 I am a 3rd year PhD student in the Program in Indo-European Studies at UCLA. Trained as a historical linguist, Indo-Europeanist, and a phonologist, I am broadly interested in the evolution and spatial distributions of phonological features. A part of my research applies Bayesian statistical methods to model the spatial and spatio-temporal dynamics of phonological features, while another strand of research aims to develop integrative phylogenetic methods (especially sequence alignment methods) that incorporate phonological characters in phylogenetic inference. I am also interested in using phonological typology and experimental phonetics to gain insights into the synchronic and diachronic phonologies of ancient Indo-European languages.
 
 
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
