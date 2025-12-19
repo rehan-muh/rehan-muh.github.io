@@ -2,96 +2,274 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      [cite_start]value: Muhammad Rehan # [cite: 1]
     - name: Languages
-      value: English, German
+      [cite_start]value: "Ancient (Advanced): Ancient Greek, Hittite, Gothic, Latin, Vedic; Intermediate: Middle High German, Old Persian, Avestan, Luwian; Modern (Near-)Native: Hindi/Urdu, Panjabi, English; German (C1)" # [cite: 130-135]
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+    - title: Graduate Student, Program in Indo-European Studies
+      institution: University of California, Los Angeles (UCLA)
+      [cite_start]year: 2023- # [cite: 3]
+    - title: M.A. in Indo-European Studies
+      institution: University of California, Los Angeles (UCLA)
+      [cite_start]year: 2023-2024 # [cite: 4, 5]
+    - title: Post-Baccalaureate Certificate in Classics (with Distinction)
+      institution: University of California, Los Angeles (UCLA)
+      [cite_start]year: 2022-2023 # [cite: 6, 7]
+    - title: B.A. in Classics (Hons.) and German Studies (Hons.)
+      institution: Grinnell College
+      [cite_start]year: 2018-2022 # [cite: 7]
 
-- title: Experience
+- title: Publications
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+    - title: "From Points to Polygons: Modeling Spatial Autocorrelation."
+      institution: (with David Goldstein)
+      year: In Prep. [cite_start]# [cite: 9, 10]
+    - title: "Young Infants' Discrimination of Phonetic Contrasts Predicts their Typological Frequency."
+      institution: (with Megha Sundara)
+      year: In Prep. [cite_start]# [cite: 11, 12]
+    - title: "Re-evaluating the Word-Medial Operation of the Saussure-Hirt Effect in Greek."
+      institution: Proceedings of the 4th International Conference on Ancient Greek Linguistics.
+      year: Forth. [cite_start]# [cite: 13, 14]
+    - title: "Gk. μοιχός 'adulterer': Re-mixing a Piss-Poor Etymology"
+      institution: Proceedings of the 35th Annual UCLA Indo-European Conference.
+      year: Forth. [cite_start]# [cite: 15-17]
+    - title: "Mind your Language, Mister! A Case Study in Aristophanic Humor."
+      institution: Animus Vol. 3.1 (Winter). 36-51.
+      [cite_start]year: 2023 # [cite: 18, 19]
+    - title: "Between Need, Want, Material and Innate Beauty: Tracing Shades of Eros."
+      institution: Corvus Vol. 13 (Spring). 27-35.
+      [cite_start]year: 2023 # [cite: 20, 21]
+    - title: "Gendered Language in Aristophanes' Birds."
+      institution: Persephone Vol. 8.1 (Spring). 12-29.
+      [cite_start]year: 2023 # [cite: 22-24]
+    - title: "The Estuarine Ecological Knowledge Network: Future Prospects."
+      institution: (with Grant S. McCall, Russell Greaves, Brian Hitchcock, Brian Ostahowski, and Sherman W. Horn III.) Marine Technology and Science Journal 55 (3). 122-123.
+      [cite_start]year: 2021 # [cite: 25, 26]
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Presentations & Posters
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: "From points to polygons: Modeling spatial autocorrelation"
+      institution: with David Goldstein. Special workshop on "The geography of linguistic evolution", EVOLANG XVI, Apr. 7.
+      [cite_start]year: 2026 # [cite: 28-31]
+    - title: "Lexical stress and syllable weight in Hindi-Urdu pop text-setting."
+      institution: with Jahnavi Narkar and Dhanya Charan. Linguistics Society of America Annual Meeting 2026, Jan. 9.
+      [cite_start]year: 2026 # [cite: 30-34]
+    - title: "Investigating lexical stress in Hindi-Urdu pop music."
+      institution: with Jahnavi Narkar and Dhanya Charan. Sixth Joint Meeting of Acoustical Society of America and Acoustical Society of Japan, Dec. 5.
+      [cite_start]year: 2025 # [cite: 38-40]
+    - title: "The development of word-final stops in Hittite."
+      institution: AnatoLinks, University of Oxford, Dec. 4.
+      [cite_start]year: 2025 # [cite: 41-43]
+    - title: "Synchronic phonetic variation drives diachronic sound change: Further evidence from pre-nasal raising in Young Avestan."
+      institution: 7th Edinburgh Symposium on Historical Phonology, Dec. 2.
+      [cite_start]year: 2025 # [cite: 44-46]
+    - title: "Converging computational evidence against an East-Germanic clade."
+      institution: with Sean Liu, and Marc Canby. WeCIEC 36: Annual UCLA Indo-European Conference, Oct. 28.
+      [cite_start]year: 2025 # [cite: 47-50]
+    - title: "Issues of lexical cognacy encoding in IE-CoR."
+      institution: with Tom Francis, Klaus Kim, and Laura McLean. 27th International Conference on Historical Linguistics, Aug. 18.
+      [cite_start]year: 2025 # [cite: 51-54]
+    - title: "Population size has a weak effect on phoneme inventory size."
+      institution: Poster presented at the Linguistic Society of America Summer Institute, University of Oregon, Jul. 10.
+      [cite_start]year: 2025 # [cite: 55-57]
+    - title: "Re-evaluating the word-medial operation of the Saussure-Hirt effect in Greek."
+      institution: 11th International Colloquium on Ancient Greek Linguistics, June 26.
+      [cite_start]year: 2025 # [cite: 58, 59]
+    - title: "Word-final voicing in Hittite?"
+      institution: Southern California Annual Meeting on Phonology 2025, Apr. 12.
+      [cite_start]year: 2025 # [cite: 60-62]
+    - title: "Re-mixing a piss-poor etymology: On Gk. μοιχός and OE (ge)mah."
+      institution: WeCIEC 35: Annual UCLA Indo-European Conference, Oct. 25.
+      [cite_start]year: 2024 # [cite: 63, 64]
+    - title: "Towards an integrative approach to the investigation of linguistic phylogenies."
+      institution: 5th Munich-UCLA Historical Linguistics Colloquium, Jun. 28.
+      [cite_start]year: 2024 # [cite: 65, 66]
+    - title: "FSAs, FSTs and sequence alignment in phylogenetic studies: The case of Tocharian B."
+      institution: UCLA Program in Indo-European Studies Graduate Seminar, May 29.
+      [cite_start]year: 2024 # [cite: 67-69]
 
-- title: Honors and Awards
+- title: Invited Talks
   type: time_table
   contents:
-    - year: 1921
+    - title: "Uncovering the sounds of ancient languages using phonological typology and experimental phonetics."
+      institution: LING 114: How to Learn a Foreign Language, University of Arizona, T.B.D
+      [cite_start]year: 2026 # [cite: 71]
+    - title: "A meta-analysis of studies on young infants' perception of phonetic contrasts."
+      institution: Department of Linguistics, USC Dornsife, T.B.D
+      [cite_start]year: 2026 # [cite: 71]
+    - title: "brms tutorial."
+      institution: LING 217: Experimental Phonology, UCLA, Nov. 18
+      [cite_start]year: 2025 # [cite: 71]
+    - title: "Origins and nature of food vocabulary in English."
+      institution: Classics 185: Origins and nature of English vocabulary, UCLA, Jul. 8.
+      [cite_start]year: 2025 # [cite: 71]
+    - title: "Historical Linguistics."
+      institution: LING-20: Introduction to the study of language, UCLA (with Aidan Holmgren and Nick Guymon).
+      [cite_start]year: 2025 # [cite: 71]
+    - title: "Karma is the breeze in my hair on the weekend: Sanskrit loanwords into English."
+      institution: Classics 185: Origins and nature of English vocabulary, UCLA, Jul. 11.
+      [cite_start]year: 2024 # [cite: 76, 77]
+
+- title: Teaching Experience
+  type: time_table
+  contents:
+    - title: Teaching Assistant
+      institution: UCLA. CLS 52: Greco-Roman Technologies. Faculty Supervisor: Prof Sarah Beckmann
+      [cite_start]year: 2026 # [cite: 79, 86, 87]
+    - title: Teaching Assistant
+      institution: UCLA. CLS 51: Art and Archaeology of Ancient Greece. Instructor of Record: Prof. John Papadopoulos
+      [cite_start]year: 2025 # [cite: 80, 88, 89]
+    - title: Instructor of Record
+      institution: UCLA. LING-110: Introduction to Historical Linguistics. Faculty Supervisor: Prof. Stefan Keine
+      [cite_start]year: 2025 # [cite: 81, 90, 91]
+    - title: Undergraduate Supervisor
+      institution: UCLA. LING-197: Infants' Discrimination of Phonetic Contrasts. Faculty Supervisor: Prof. Megha Sundara
+      [cite_start]year: 2025 # [cite: 82, 92, 93]
+    - title: Teaching Assistant
+      institution: UCLA. LING-20: Introduction to Linguistic Analysis. Instructor of Record: Prof. Ben Eischens, Prof. Anoop Mahajan
+      [cite_start]year: 2025 # [cite: 83, 94, 95]
+    - title: Teaching Assistant
+      institution: UCLA. LING-110: Introduction to Historical Linguistics. Instructor of Record: Prof. David Goldstein
+      [cite_start]year: Fall 2024 # [cite: 84, 96, 97]
+    - title: Teaching Assistant
+      institution: UCLA. LING-1: Introduction to the Study of Language. Instructor of Record: Corrina Fuller
+      year: Sum. [cite_start]2024 # [cite: 85, 98, 99]
+    - title: Instructor
+      institution: Grinnell College. ALS-102: Urdu
+      [cite_start]year: Fall 2021 # [cite: 100-102]
+
+- title: Research Experience
+  type: time_table
+  contents:
+    - title: Research Assistant
+      institution: Supervisor: Prof. Brent Vine, UCLA
+      [cite_start]year: 2025 # [cite: 104]
+    - title: Research Assistant
+      institution: Supervisor: Prof. David Goldstein, UCLA
+      [cite_start]year: 2023- # [cite: 104]
+    - title: Independent research, "Nibelungenlied and Middle High German verse"
+      institution: Mentor: Prof. Daniel Reynolds, Grinnell College
+      [cite_start]year: 2022 # [cite: 104]
+    - title: Independent research, "Jewish life in Pakistan."
+      institution: Mentor: Prof. Viktoria Pötzl, Grinnell College
+      [cite_start]year: 2021 # [cite: 104]
+    - title: Independent research, "Peter Schneider's Der Mauerspringer and the search for a German identity"
+      institution: Mentor: Prof. Vance Byrd, University of Pennsylvania
+      [cite_start]year: 2021 # [cite: 104]
+    - title: Research Assistant, "Modeling pre-historic foraging patterns along the coast of New Orleans."
+      institution: Supervisor: Prof. Grant McCall, Tulane University
+      [cite_start]year: 2020 # [cite: 107, 109]
+
+- title: Scholarships & Awards
+  type: time_table
+  contents:
+    - year: 2025
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - [cite_start]Graduate Summer Research Mentorship Award # [cite: 111]
+    - year: 2024 & 2025
       items:
-        - Max Planck Medal
+        - [cite_start]Morvarid Guiv Graduate Fellowship in Zoroastrian Studies # [cite: 111]
+    - year: 2024
+      items:
+        - [cite_start]UCLA/Keck Humanistic Inquiry Research Award (shared with Tom Francis, Klaus Kim, and Laura McLean) # [cite: 111]
+        - [cite_start]Graduate Summer Research Mentorship Award # [cite: 111]
+    - year: 2023-24
+      items:
+        - [cite_start]Institute for the Study of Global Antiquity Fellowship # [cite: 111]
+    - year: 2023
+      items:
+        - [cite_start]Society for Classical Studies Lionel Pearson Fellowship # [cite: 111]
+    - year: 2022-23
+      items:
+        - [cite_start]Joan Palevsky Chair Post-Baccalaureate Scholarship in Classics # [cite: 111]
+    - year: 2022
+      items:
+        - [cite_start]CAMWS Award for Outstanding Accomplishment in Classical Studies # [cite: 111]
+        - [cite_start]Gus and Elfie Kalfass Prize for Excellence in German Studies # [cite: 111]
+    - year: 2021
+      items:
+        - [cite_start]Gerald W. LaLonde Fellowship in Classical Studies # [cite: 111]
+        - [cite_start]UC Berkeley Intensive Greek Workshop Fellowship # [cite: 111]
+    - year: 2019
+      items:
+        - [cite_start]Institute for Global Engagement Summer Language Study Scholarship # [cite: 111]
 
-- title: Academic Interests
+- title: External Coursework and Certifications
+  type: time_table
+  contents:
+    - title: LSA Summer Institute, University of Oregon
+      institution: Linguistic Typology in Evolutionary Perspective, Statistical Measures in Corpus Linguistics, Foundations of Predictive Modeling with R, Variationist Sociolinguistics, Reconstructing Syntax, Adaptive Speech Perception and Comprehension, Language Phylogenies
+      [cite_start]year: 2025 # [cite: 113-115]
+    - title: CreteLing 2024
+      institution: Exceptionality, Phonological Grammar and Opacity, Historical Linguistics
+      [cite_start]year: 2024 # [cite: 116, 117]
+    - title: Leiden Summer School in Languages and Linguistics
+      institution: Old English
+      [cite_start]year: 2021 # [cite: 118-120]
+    - title: UC Berkeley
+      institution: The Ancient Greek Workshop
+      [cite_start]year: 2021 # [cite: 121-123]
+    - title: Humboldt Universität
+      institution: Deutsch Erleben Workshop
+      [cite_start]year: 2020 # [cite: 124-126]
+    - title: Universität Leipzig
+      institution: German Language Program
+      [cite_start]year: 2019 # [cite: 127-129]
+
+- title: Technical Skills & Programming Languages
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Programming & Software
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - [cite_start]Microsoft Office Suite, NetLogo, RevBayes, Beast2.0, Python, TEX, Julia, Stan, R # [cite: 135]
+    - title: R Packages
       items:
-        - Description 1.
-        - Description 2.
+        - [cite_start]sp, sf, brms, lme4, mgcv, rstan, R-INLA, geostan, inlabru, cmdstank and many others # [cite: 136]
 
-- title: Other Interests
+- title: Service
+  type: time_table
+  contents:
+    - title: Abstract reviewer, Southern California Undergraduate Linguistics Conference
+      [cite_start]year: 2025- # [cite: 138, 140]
+    - title: Graduate Seminar Organizer (with Aidan Holmgren), PIES, UCLA
+      [cite_start]year: 2024- # [cite: 139, 140]
+    - title: Mentor, Asian and Asian American Classical Caucus
+      [cite_start]year: 2023- # [cite: 141, 142]
+    - title: Organizer, UCLA Indo-European Conference
+      [cite_start]year: 2023- # [cite: 143, 144]
+    - title: Graduate Student Association Representative, UCLA Undergraduate Council
+      [cite_start]year: 2023-24 # [cite: 145, 147]
+    - title: Co-Chair, Grinnell College Classical Studies Student Education Policy Committee
+      [cite_start]year: 2021-22 # [cite: 146, 147]
+    - title: Co-Chair, Grinnell College German Studies Student Education Policy Committee
+      [cite_start]year: 2020-22 # [cite: 148, 149]
+
+- title: Professional Organizations
+  type: time_table
+  contents:
+    - title: American Society for Premodern Asia
+      [cite_start]year: 2025- # [cite: 151]
+    - title: Linguistic Society of America
+      [cite_start]year: 2025- # [cite: 152, 153]
+    - title: Acoustical Society of America
+      [cite_start]year: 2025- # [cite: 154]
+    - title: Indogermanische Gesellschaft
+      [cite_start]year: 2023- # [cite: 155, 156]
+    - title: Society for Classical Studies
+      [cite_start]year: 2022- # [cite: 157, 158]
+    - title: Classical Association of Midwest and South
+      [cite_start]year: 2022- # [cite: 159, 160]
+
+- title: References
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - [cite_start]Prof. David Goldstein (dgoldstein@humnet.ucla.edu) # [cite: 162-167]
+    - [cite_start]Prof. Stephanie Jamison (jamison@humnet.ucla.edu) # [cite: 168-172]
+    - [cite_start]Prof. Angelo Mercado (mercadoa@grinnell.edu) # [cite: 173-179]
+    - [cite_start]Prof. Brent Vine (vine@humnet.ucla.edu) # [cite: 180-185]
+    - [cite_start]Prof. Anthony Yates (adyates@ucla.edu) # [cite: 186-190]
