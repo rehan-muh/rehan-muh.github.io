@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='#'>Graduate Student, Program in Indo-European Studies, UCLA</a>.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Dodd 74, Dodd Hall</p>
+    <p>390 Portola Plaza</p>
+    <p>Los Angeles, CA 90034</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +27,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a 3rd year PhD student in the Program in Indo-European Studies at UCLA. Trained as a historical linguist, Indo-Europeanist, and a phonologist, I am broadly interested in the evolution and spatial distributions of phonological features. A part of my research applies Bayesian statistical methods to model the spatial and spatio-temporal dynamics of phonological features, while another strand of research aims to develop integrative phylogenetic methods (especially sequence alignment methods) that incorporate phonological characters in phylogenetic inference. I am also interested in using phonological typology and experimental phonetics to gain insights into the synchronic and diachronic phonologies of ancient Indo-European languages.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+
 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
