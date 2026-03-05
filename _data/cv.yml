@@ -69,7 +69,7 @@
       institution: 7th Edinburgh Symposium on Historical Phonology, Dec. 2.
       year: 2025
     - title: "Converging computational evidence against an East-Germanic clade."
-      institution: with Sean Liu, and Marc Canby. WeCIEC 36: Annual UCLA Indo-European Conference, Oct. 28.
+      institution: "with Sean Liu, and Marc Canby. WeCIEC 36: Annual UCLA Indo-European Conference, Oct. 28."
       year: 2025
     - title: "Issues of lexical cognacy encoding in IE-CoR."
       institution: with Tom Francis, Klaus Kim, and Laura McLean. 27th International Conference on Historical Linguistics, Aug. 18.
@@ -84,7 +84,7 @@
       institution: Southern California Annual Meeting on Phonology 2025, Apr. 12.
       year: 2025
     - title: "Re-mixing a piss-poor etymology: On Gk. μοιχός and OE (ge)mah."
-      institution: WeCIEC 35: Annual UCLA Indo-European Conference, Oct. 25.
+      institution: "WeCIEC 35: Annual UCLA Indo-European Conference, Oct. 25."
       year: 2024
     - title: "Towards an integrative approach to the investigation of linguistic phylogenies."
       institution: 5th Munich-UCLA Historical Linguistics Colloquium, Jun. 28.
@@ -97,72 +97,72 @@
   type: time_table
   contents:
     - title: "Uncovering the sounds of ancient languages using phonological typology and experimental phonetics."
-      institution: LING 114: How to Learn a Foreign Language, University of Arizona, T.B.D
+      institution: "LING 114: How to Learn a Foreign Language, University of Arizona, T.B.D"
       year: 2026
     - title: "A meta-analysis of studies on young infants' perception of phonetic contrasts."
       institution: Department of Linguistics, USC Dornsife, T.B.D
       year: 2026
     - title: "brms tutorial."
-      institution: LING 217: Experimental Phonology, UCLA, Nov. 18
+      institution: "LING 217: Experimental Phonology, UCLA, Nov. 18"
       year: 2025
     - title: "Origins and nature of food vocabulary in English."
-      institution: Classics 185: Origins and nature of English vocabulary, UCLA, Jul. 8.
+      institution: "Classics 185: Origins and nature of English vocabulary, UCLA, Jul. 8."
       year: 2025
     - title: "Historical Linguistics."
-      institution: LING-20: Introduction to the study of language, UCLA (with Aidan Holmgren and Nick Guymon).
+      institution: "LING-20: Introduction to the study of language, UCLA (with Aidan Holmgren and Nick Guymon)."
       year: 2025
     - title: "Karma is the breeze in my hair on the weekend: Sanskrit loanwords into English."
-      institution: Classics 185: Origins and nature of English vocabulary, UCLA, Jul. 11.
+      institution: "Classics 185: Origins and nature of English vocabulary, UCLA, Jul. 11."
       year: 2024
 
 - title: Teaching Experience
   type: time_table
   contents:
     - title: Teaching Assistant
-      institution: UCLA. CLS 52: Greco-Roman Technologies. Faculty Supervisor: Prof Sarah Beckmann
+      institution: "UCLA. CLS 52: Greco-Roman Technologies. Faculty Supervisor: Prof Sarah Beckmann"
       year: 2026
     - title: Teaching Assistant
-      institution: UCLA. CLS 51: Art and Archaeology of Ancient Greece. Instructor of Record: Prof. John Papadopoulos
+      institution: "UCLA. CLS 51: Art and Archaeology of Ancient Greece. Instructor of Record: Prof. John Papadopoulos"
       year: 2025
     - title: Instructor of Record
-      institution: UCLA. LING-110: Introduction to Historical Linguistics. Faculty Supervisor: Prof. Stefan Keine
+      institution: "UCLA. LING-110: Introduction to Historical Linguistics. Faculty Supervisor: Prof. Stefan Keine"
       year: 2025
     - title: Undergraduate Supervisor
-      institution: UCLA. LING-197: Infants' Discrimination of Phonetic Contrasts. Faculty Supervisor: Prof. Megha Sundara
+      institution: "UCLA. LING-197: Infants' Discrimination of Phonetic Contrasts. Faculty Supervisor: Prof. Megha Sundara"
       year: 2025
     - title: Teaching Assistant
-      institution: UCLA. LING-20: Introduction to Linguistic Analysis. Instructor of Record: Prof. Ben Eischens, Prof. Anoop Mahajan
+      institution: "UCLA. LING-20: Introduction to Linguistic Analysis. Instructor of Record: Prof. Ben Eischens, Prof. Anoop Mahajan"
       year: 2025
     - title: Teaching Assistant
-      institution: UCLA. LING-110: Introduction to Historical Linguistics. Instructor of Record: Prof. David Goldstein
+      institution: "UCLA. LING-110: Introduction to Historical Linguistics. Instructor of Record: Prof. David Goldstein"
       year: Fall 2024
     - title: Teaching Assistant
-      institution: UCLA. LING-1: Introduction to the Study of Language. Instructor of Record: Corrina Fuller
+      institution: "UCLA. LING-1: Introduction to the Study of Language. Instructor of Record: Corrina Fuller"
       year: Sum. 2024
     - title: Instructor
-      institution: Grinnell College. ALS-102: Urdu
+      institution: "Grinnell College. ALS-102: Urdu"
       year: Fall 2021
 
 - title: Research Experience
   type: time_table
   contents:
     - title: Research Assistant
-      institution: Supervisor: Prof. Brent Vine, UCLA
+      institution: "Supervisor: Prof. Brent Vine, UCLA"
       year: 2025
     - title: Research Assistant
-      institution: Supervisor: Prof. David Goldstein, UCLA
+      institution: "Supervisor: Prof. David Goldstein, UCLA"
       year: 2023-
     - title: Independent research, "Nibelungenlied and Middle High German verse"
-      institution: Mentor: Prof. Daniel Reynolds, Grinnell College
+      institution: "Mentor: Prof. Daniel Reynolds, Grinnell College"
       year: 2022
     - title: Independent research, "Jewish life in Pakistan."
-      institution: Mentor: Prof. Viktoria Pötzl, Grinnell College
+      institution: "Mentor: Prof. Viktoria Pötzl, Grinnell College"
       year: 2021
     - title: Independent research, "Peter Schneider's Der Mauerspringer and the search for a German identity"
-      institution: Mentor: Prof. Vance Byrd, University of Pennsylvania
+      institution: "Mentor: Prof. Vance Byrd, University of Pennsylvania"
       year: 2021
     - title: Research Assistant, "Modeling pre-historic foraging patterns along the coast of New Orleans."
-      institution: Supervisor: Prof. Grant McCall, Tulane University
+      institution: "Supervisor: Prof. Grant McCall, Tulane University"
       year: 2020
 
 - title: Scholarships & Awards
