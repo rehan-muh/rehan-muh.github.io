@@ -3,10 +3,8 @@
 # the socials will be displayed in the order they are defined here
 
 academia_edu:
-  organization: chavez-ucla
+  organization: ucla
   username: MuhammadRehan
 cv_pdf: /assets/pdf/cv.pdf
 email: rehanmuh@g.ucla.edu
 github_username: rehan-muh
-linkedin_username: rehanmuh
-work_url: https://rehanmuh.netlify.app
