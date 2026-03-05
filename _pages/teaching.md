@@ -33,7 +33,3 @@ nav_order: 6
 ## Grinnell College
 
 - **Instructor (Fall 2021)** — **ALS-102**: _Urdu_
-
----
-
-If you would like, I can also split this into separate course pages with syllabi, weekly schedule, assignments, and reading lists.
