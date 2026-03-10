@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-presentations",
           title: "presentations",
-          description: "presentations and posters listed from the CV section, with optional downloads and BibTeX copy.",
+          description: "presentations and posters listed from the CV section.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/presentations/";
