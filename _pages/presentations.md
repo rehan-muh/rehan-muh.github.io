@@ -2,7 +2,7 @@
 layout: page
 permalink: /presentations/
 title: presentations
-description: presentations and posters listed from the CV section, with optional downloads and BibTeX copy.
+description: presentations and posters listed from the CV section, with optional downloads and BibTeX.
 nav: true
 nav_order: 3
 ---
@@ -13,6 +13,8 @@ nav_order: 3
   {% if presentations_section and presentations_section.contents %}
     {% for presentation in presentations_section.contents %}
       {% assign citation_id = 'presentation-citation-' | append: forloop.index %}
+      {% assign bibtex_panel_id = 'presentation-bibtex-panel-' | append: forloop.index %}
+
       <div class="row mb-4">
         <div class="col-sm-2 text-sm-center mb-2 mb-sm-0">
           {% if presentation.year %}
@@ -30,32 +32,8 @@ nav_order: 3
           {% endif %}
 
           <div class="links mt-2">
-            {% if presentation.downloads %}
-              {% for file in presentation.downloads %}
-                {% if file.url %}
-                  {% assign is_absolute_url = file.url contains '://' %}
-                  {% assign file_url_first_char = file.url | slice: 0, 1 %}
-                  {% assign is_root_relative = file_url_first_char == '/' %}
-
-                  {% if is_absolute_url %}
-                    <a href="{{ file.url }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">
-                      <i class="fa-solid fa-download"></i> {{ file.label | default: 'Download file' }}
-                    </a>
-                  {% elsif is_root_relative %}
-                    <a href="{{ file.url | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>
-                      <i class="fa-solid fa-download"></i> {{ file.label | default: 'Download file' }}
-                    </a>
-                  {% else %}
-                    <a href="{{ file.url | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>
-                      <i class="fa-solid fa-download"></i> {{ file.label | default: 'Download file' }}
-                    </a>
-                  {% endif %}
-                {% endif %}
-              {% endfor %}
-            {% endif %}
-
             {% if presentation.bibtex %}
-              <button class="btn btn-sm z-depth-0 citation-modal-trigger" type="button" data-citation-target="{{ citation_id }}">BibTeX</button>
+              <button class="btn btn-sm z-depth-0 bibtex-toggle" type="button" data-bibtex-target="{{ bibtex_panel_id }}">BibTeX</button>
               <textarea id="{{ citation_id }}" class="d-none" aria-hidden="true">{{ presentation.bibtex | strip }}</textarea>
             {% endif %}
 
@@ -71,7 +49,39 @@ nav_order: 3
                 <a href="{{ presentation.download | prepend: '/assets/files/presentations/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
               {% endif %}
             {% endif %}
+
+            {% if presentation.downloads %}
+              {% for file in presentation.downloads %}
+                {% if file.url %}
+                  {% assign is_absolute_url = file.url contains '://' %}
+                  {% assign file_url_first_char = file.url | slice: 0, 1 %}
+                  {% assign is_root_relative = file_url_first_char == '/' %}
+                  {% if is_absolute_url %}
+                    <a href="{{ file.url }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">
+                      <i class="fa-solid fa-download"></i> {{ file.label | default: 'Download file' }}
+                    </a>
+                  {% elsif is_root_relative %}
+                    <a href="{{ file.url | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>
+                      <i class="fa-solid fa-download"></i> {{ file.label | default: 'Download file' }}
+                    </a>
+                  {% else %}
+                    <a href="{{ file.url | prepend: '/assets/files/presentations/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>
+                      <i class="fa-solid fa-download"></i> {{ file.label | default: 'Download file' }}
+                    </a>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
           </div>
+
+          {% if presentation.bibtex %}
+            <div id="{{ bibtex_panel_id }}" class="d-none mt-2">
+              <pre class="mb-2"><code>{{ presentation.bibtex | strip }}</code></pre>
+              <button class="btn btn-sm z-depth-0 bibtex-copy-btn" type="button" data-copy-target="{{ citation_id }}">
+                <i class="fa-solid fa-clipboard"></i> Copy
+              </button>
+            </div>
+          {% endif %}
         </div>
       </div>
     {% endfor %}
@@ -83,8 +93,8 @@ nav_order: 3
 <hr>
 
 <p>
-  To add a right-side <code>BibTeX</code> button and <code>Download</code> link, add optional <code>bibtex</code> and <code>download</code> fields in
-  <code>_data/cv.yml</code> under <code>Presentations &amp; Posters</code> entries.
+  To add downloadable files and BibTeX for a presentation, add optional <code>download</code>, <code>downloads</code>, and <code>bibtex</code>
+  fields in <code>_data/cv.yml</code> under <code>Presentations &amp; Posters</code> entries.
 </p>
 
 {% raw %}
@@ -92,6 +102,9 @@ nav_order: 3
   institution: "Conference name"
   year: 2026
   download: "example-slides.pdf" # resolves to /assets/files/presentations/example-slides.pdf
+  downloads:
+    - label: "Poster"
+      url: "/assets/files/presentations/example-poster.pdf"
   bibtex: |
     @inproceedings{example2026,
       title = {Example presentation title},
