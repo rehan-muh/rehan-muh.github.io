@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleButtons = document.querySelectorAll(".bibtex-toggle");
+  const modalElement = document.getElementById("citationModal");
+  const modalContent = document.getElementById("citation-modal-content");
+  const copyButton = document.getElementById("citation-modal-copy-btn");
+  const triggerButtons = document.querySelectorAll(".citation-modal-trigger");
+
+  if (!modalElement || !modalContent || !copyButton || !triggerButtons.length) return;
+
+  let activeCitation = "";
 
   const copyText = async (text) => {
     try {
@@ -18,31 +25,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  toggleButtons.forEach((button) => {
+  triggerButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const targetId = button.dataset.bibtexTarget;
-      const panel = targetId ? document.getElementById(targetId) : null;
-      if (!panel) return;
-
-      panel.classList.toggle("d-none");
-      button.textContent = panel.classList.contains("d-none") ? "BibTeX" : "Hide BibTeX";
+      const citationTarget = button.dataset.citationTarget;
+      const citationNode = citationTarget ? document.getElementById(citationTarget) : null;
+      activeCitation = citationNode ? citationNode.value || citationNode.textContent : "";
+      modalContent.textContent = activeCitation;
+      window.jQuery(modalElement).modal("show");
     });
   });
 
-  const copyButtons = document.querySelectorAll(".bibtex-copy-btn");
-  copyButtons.forEach((button) => {
-    button.addEventListener("click", async () => {
-      const targetId = button.dataset.copyTarget;
-      const target = targetId ? document.getElementById(targetId) : null;
-      if (!target) return;
+  copyButton.addEventListener("click", async () => {
+    if (!activeCitation) return;
 
-      await copyText(target.value || target.textContent || "");
+    await copyText(activeCitation);
 
-      const originalLabel = button.innerHTML;
-      button.innerHTML = '<i class="fa-solid fa-clipboard-check"></i> Copied';
-      setTimeout(() => {
-        button.innerHTML = originalLabel;
-      }, 1500);
-    });
+    const originalLabel = copyButton.innerHTML;
+    copyButton.innerHTML = '<i class="fa-solid fa-clipboard-check"></i> Copied';
+    setTimeout(() => {
+      copyButton.innerHTML = originalLabel;
+    }, 1500);
   });
 });
