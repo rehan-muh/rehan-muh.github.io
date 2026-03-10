@@ -185,6 +185,24 @@
       {{ entry.note | strip }}
     </div>
 
+    {% assign citation_key = entry.key | default: entry.title | slugify | append: entry.year %}
+    {% assign citation_id = 'citation-' | append: citation_key | slugify %}
+    {% assign bibtex_panel_id = 'bibtex-panel-' | append: citation_key | slugify %}
+    {% if entry.bibtex %}
+      {% assign publication_bibtex = entry.bibtex | strip %}
+    {% else %}
+      {% capture publication_bibtex %}@article{ {{ citation_key | slugify }},
+  title = { {{ entry.title | default: 'Publication' }} },
+  author = { {{ site.first_name }} {{ site.last_name }} },
+  year = { {{ entry.year | default: '' }} }
+}{% endcapture %}
+    {% endif %}
+
+    {% assign publication_download = entry.download | default: entry.pdf %}
+    {% if publication_download == blank %}
+      {% assign publication_download = citation_key | slugify | append: '.pdf' %}
+    {% endif %}
+
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.award %}
@@ -277,6 +295,14 @@
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% endif %}
     </div>
+
+    <div id="{{ bibtex_panel_id }}" class="d-none mt-2">
+      <pre class="mb-2"><code>{{ publication_bibtex }}</code></pre>
+      <button class="btn btn-sm z-depth-0 bibtex-copy-btn" type="button" data-copy-target="{{ citation_id }}">
+        <i class="fa-solid fa-clipboard"></i> Copy
+      </button>
+    </div>
+
     {% if site.enable_publication_badges %}
       {% assign entry_has_altmetric_badge = false %}
       {% if entry.altmetric and entry.altmetric != 'false' %}
