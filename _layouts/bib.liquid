@@ -201,8 +201,21 @@
       {% if entry.arxiv %}
         <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
       {% endif %}
-      {% if entry.bibtex_show %}
-        <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+      {% if entry.bibtex_show and entry.bibtex %}
+        {% assign citation_id = 'citation-' | append: entry.key | slugify %}
+        <button class="btn btn-sm z-depth-0 citation-modal-trigger" type="button" data-citation-target="{{ citation_id }}">BibTeX</button>
+        <textarea id="{{ citation_id }}" class="d-none" aria-hidden="true">{{ entry.bibtex | strip }}</textarea>
+      {% endif %}
+      {% if entry.download %}
+        {% assign download_first_char = entry.download | slice: 0, 1 %}
+        {% assign is_root_download = download_first_char == '/' %}
+        {% if entry.download contains '://' %}
+          <a href="{{ entry.download }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Download</a>
+        {% elsif is_root_download %}
+          <a href="{{ entry.download | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
+        {% else %}
+          <a href="{{ entry.download | prepend: '/assets/files/publications/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
+        {% endif %}
       {% endif %}
       {% if entry.html %}
         {% if entry.html contains '://' %}
@@ -371,14 +384,6 @@
       </div>
     {% endif %}
 
-    {% if entry.bibtex_show %}
-      <!-- Hidden bibtex block -->
-      <div class="bibtex hidden">
-        {% highlight bibtex %}
-        {{- entry.bibtex | hideCustomBibtex -}}
-        {% endhighlight %}
-      </div>
-    {% endif %}
 
     {% if entry.video and site.enable_video_embedding %}
       <!-- Hidden video block -->
