@@ -1,30 +1,49 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const citationButtons = document.querySelectorAll("[data-copy-citation]");
+  const modalElement = document.getElementById("citationModal");
+  const modalContent = document.getElementById("citation-modal-content");
+  const copyButton = document.getElementById("citation-modal-copy-btn");
+  const triggerButtons = document.querySelectorAll(".citation-modal-trigger");
 
-  citationButtons.forEach((button) => {
-    button.addEventListener("click", async () => {
-      const citation = button.dataset.copyCitation;
-      if (!citation) return;
+  if (!modalElement || !modalContent || !copyButton || !triggerButtons.length) return;
 
-      try {
-        await navigator.clipboard.writeText(citation);
-      } catch (error) {
-        const fallback = document.createElement("textarea");
-        fallback.value = citation;
-        fallback.style.position = "fixed";
-        fallback.style.opacity = "0";
-        document.body.appendChild(fallback);
-        fallback.focus();
-        fallback.select();
-        document.execCommand("copy");
-        document.body.removeChild(fallback);
-      }
+  let activeCitation = "";
 
-      const originalLabel = button.innerHTML;
-      button.innerHTML = '<i class="fa-solid fa-clipboard-check"></i> Copied';
-      setTimeout(() => {
-        button.innerHTML = originalLabel;
-      }, 1500);
+  const copyText = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      return;
+    } catch (error) {
+      const fallback = document.createElement("textarea");
+      fallback.value = text;
+      fallback.style.position = "fixed";
+      fallback.style.opacity = "0";
+      document.body.appendChild(fallback);
+      fallback.focus();
+      fallback.select();
+      document.execCommand("copy");
+      document.body.removeChild(fallback);
+    }
+  };
+
+  triggerButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const citationTarget = button.dataset.citationTarget;
+      const citationNode = citationTarget ? document.getElementById(citationTarget) : null;
+      activeCitation = citationNode ? citationNode.value || citationNode.textContent : "";
+      modalContent.textContent = activeCitation;
+      window.jQuery(modalElement).modal("show");
     });
+  });
+
+  copyButton.addEventListener("click", async () => {
+    if (!activeCitation) return;
+
+    await copyText(activeCitation);
+
+    const originalLabel = copyButton.innerHTML;
+    copyButton.innerHTML = '<i class="fa-solid fa-clipboard-check"></i> Copied';
+    setTimeout(() => {
+      copyButton.innerHTML = originalLabel;
+    }, 1500);
   });
 });
