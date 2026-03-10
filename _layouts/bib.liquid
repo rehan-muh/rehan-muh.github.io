@@ -201,31 +201,29 @@
       {% if entry.arxiv %}
         <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
       {% endif %}
-      {% if entry.bibtex_show and entry.bibtex %}
+      {% if entry.bibtex %}
         {% assign citation_id = 'citation-' | append: entry.key | slugify %}
-        <button class="btn btn-sm z-depth-0 citation-modal-trigger" type="button" data-citation-target="{{ citation_id }}">BibTeX</button>
+        {% assign bibtex_panel_id = 'bibtex-panel-' | append: entry.key | slugify %}
+        <button class="btn btn-sm z-depth-0 bibtex-toggle" type="button" data-bibtex-target="{{ bibtex_panel_id }}">BibTeX</button>
         <textarea id="{{ citation_id }}" class="d-none" aria-hidden="true">{{ entry.bibtex | strip }}</textarea>
       {% endif %}
-      {% if entry.download %}
-        {% assign download_first_char = entry.download | slice: 0, 1 %}
+      {% assign publication_download = entry.download | default: entry.pdf %}
+      {% if publication_download %}
+        {% assign download_first_char = publication_download | slice: 0, 1 %}
         {% assign is_root_download = download_first_char == '/' %}
-        {% if entry.download contains '://' %}
-          <a href="{{ entry.download }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Download</a>
+        {% if publication_download contains '://' %}
+          <a href="{{ publication_download }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Download</a>
         {% elsif is_root_download %}
-          <a href="{{ entry.download | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
+          <a href="{{ publication_download | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
         {% else %}
-          <a href="{{ entry.download | prepend: '/assets/files/publications/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
+          <a
+            href="{{ publication_download | prepend: '/assets/files/publications/' | relative_url }}"
+            class="btn btn-sm z-depth-0"
+            role="button"
+            download
+            >Download</a
+          >
         {% endif %}
-      {% endif %}
-      {% if entry.bibtex %}
-        <button
-          class="btn btn-sm z-depth-0"
-          type="button"
-          data-copy-citation="{{ entry.bibtex | strip | escape }}"
-          aria-label="Copy BibTeX citation"
-        >
-          <i class="fa-solid fa-clipboard"></i> Copy BibTeX
-        </button>
       {% endif %}
       {% if entry.html %}
         {% if entry.html contains '://' %}
@@ -277,6 +275,18 @@
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% endif %}
     </div>
+
+    {% if entry.bibtex %}
+      {% assign citation_id = 'citation-' | append: entry.key | slugify %}
+      {% assign bibtex_panel_id = 'bibtex-panel-' | append: entry.key | slugify %}
+      <div id="{{ bibtex_panel_id }}" class="d-none mt-2">
+        <pre class="mb-2"><code>{{ entry.bibtex | strip }}</code></pre>
+        <button class="btn btn-sm z-depth-0 bibtex-copy-btn" type="button" data-copy-target="{{ citation_id }}">
+          <i class="fa-solid fa-clipboard"></i> Copy
+        </button>
+      </div>
+    {% endif %}
+
     {% if site.enable_publication_badges %}
       {% assign entry_has_altmetric_badge = false %}
       {% if entry.altmetric and entry.altmetric != 'false' %}
@@ -393,7 +403,6 @@
         <p>{{ entry.abstract }}</p>
       </div>
     {% endif %}
-
 
     {% if entry.video and site.enable_video_embedding %}
       <!-- Hidden video block -->
