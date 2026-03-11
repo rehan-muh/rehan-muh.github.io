@@ -223,9 +223,15 @@
       {% if show_download_button %}
         {% assign download_first_char = publication_download | slice: 0, 1 %}
         {% assign is_root_download = download_first_char == '/' %}
+        {% assign is_assets_relative_download = publication_download | slice: 0, 7 == 'assets/' %}
+        {% assign has_path_separator = publication_download contains '/' %}
         {% if publication_download contains '://' %}
           <a href="{{ publication_download }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Download</a>
         {% elsif is_root_download %}
+          <a href="{{ publication_download | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
+        {% elsif is_assets_relative_download %}
+          <a href="{{ publication_download | prepend: '/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
+        {% elsif has_path_separator %}
           <a href="{{ publication_download | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
         {% else %}
           <a

@@ -59,9 +59,15 @@ year = { {{ presentation.year | default: '' }} }
               {% assign is_absolute_download = presentation_download contains '://' %}
               {% assign download_first_char = presentation_download | slice: 0, 1 %}
               {% assign is_root_download = download_first_char == '/' %}
+              {% assign is_assets_relative_download = presentation_download | slice: 0, 7 == 'assets/' %}
+              {% assign has_path_separator = presentation_download contains '/' %}
               {% if is_absolute_download %}
                 <a href="{{ presentation_download }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Download</a>
               {% elsif is_root_download %}
+                <a href="{{ presentation_download | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
+              {% elsif is_assets_relative_download %}
+                <a href="{{ presentation_download | prepend: '/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
+              {% elsif has_path_separator %}
                 <a href="{{ presentation_download | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
               {% else %}
                 <a href="{{ presentation_download | prepend: '/assets/files/presentations/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
