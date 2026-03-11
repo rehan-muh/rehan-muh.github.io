@@ -32,8 +32,24 @@ year = { {{ presentation.year | default: '' }} }
       {% if presentation_download == blank and presentation.downloads and presentation.downloads.first and presentation.downloads.first.url %}
         {% assign presentation_download = presentation.downloads.first.url %}
       {% endif %}
-      {% if presentation_download == blank %}
-        {% assign presentation_download = presentation.year | append: '-' | append: presentation.title | slugify | append: '.pdf' %}
+
+      {% assign show_download_button = false %}
+      {% if presentation_download != blank %}
+        {% if presentation_download contains '://' %}
+          {% assign show_download_button = true %}
+        {% elsif presentation_download | slice: 0, 1 == '/' %}
+          {% assign root_relative_path = presentation_download | remove_first: '/' %}
+          {% capture root_file_exists %}{% file_exists {{ root_relative_path }} %}{% endcapture %}
+          {% if root_file_exists == 'true' %}
+            {% assign show_download_button = true %}
+          {% endif %}
+        {% else %}
+          {% assign local_presentation_path = presentation_download | prepend: 'assets/files/presentations/' %}
+          {% capture local_file_exists %}{% file_exists {{ local_presentation_path }} %}{% endcapture %}
+          {% if local_file_exists == 'true' %}
+            {% assign show_download_button = true %}
+          {% endif %}
+        {% endif %}
       {% endif %}
 
       <div class="row mb-4">
@@ -56,15 +72,17 @@ year = { {{ presentation.year | default: '' }} }
             <button class="btn btn-sm z-depth-0 bibtex-toggle" type="button" data-bibtex-target="{{ bibtex_panel_id }}">BibTeX</button>
             <textarea id="{{ citation_id }}" class="d-none" aria-hidden="true">{{ presentation_bibtex }}</textarea>
 
-            {% assign is_absolute_download = presentation_download contains '://' %}
-            {% assign download_first_char = presentation_download | slice: 0, 1 %}
-            {% assign is_root_download = download_first_char == '/' %}
-            {% if is_absolute_download %}
-              <a href="{{ presentation_download }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Download</a>
-            {% elsif is_root_download %}
-              <a href="{{ presentation_download | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
-            {% else %}
-              <a href="{{ presentation_download | prepend: '/assets/files/presentations/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
+            {% if show_download_button %}
+              {% assign is_absolute_download = presentation_download contains '://' %}
+              {% assign download_first_char = presentation_download | slice: 0, 1 %}
+              {% assign is_root_download = download_first_char == '/' %}
+              {% if is_absolute_download %}
+                <a href="{{ presentation_download }}" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener noreferrer">Download</a>
+              {% elsif is_root_download %}
+                <a href="{{ presentation_download | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
+              {% else %}
+                <a href="{{ presentation_download | prepend: '/assets/files/presentations/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" download>Download</a>
+              {% endif %}
             {% endif %}
           </div>
 
