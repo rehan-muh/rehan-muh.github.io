@@ -199,24 +199,7 @@
     {% endif %}
 
     {% assign publication_download = entry.download | default: entry.pdf %}
-    {% assign show_download_button = false %}
-    {% if publication_download != blank %}
-      {% if publication_download contains '://' %}
-        {% assign show_download_button = true %}
-      {% elsif publication_download | slice: 0, 1 == '/' %}
-        {% assign root_relative_path = publication_download | remove_first: '/' %}
-        {% capture root_file_exists %}{% file_exists {{ root_relative_path }} %}{% endcapture %}
-        {% if root_file_exists == 'true' %}
-          {% assign show_download_button = true %}
-        {% endif %}
-      {% else %}
-        {% assign local_publication_path = publication_download | prepend: 'assets/files/publications/' %}
-        {% capture local_file_exists %}{% file_exists {{ local_publication_path }} %}{% endcapture %}
-        {% if local_file_exists == 'true' %}
-          {% assign show_download_button = true %}
-        {% endif %}
-      {% endif %}
-    {% endif %}
+    {% assign show_download_button = publication_download != blank %}
 
     <!-- Links/Buttons -->
     <div class="links">

@@ -33,24 +33,7 @@ year = { {{ presentation.year | default: '' }} }
         {% assign presentation_download = presentation.downloads.first.url %}
       {% endif %}
 
-      {% assign show_download_button = false %}
-      {% if presentation_download != blank %}
-        {% if presentation_download contains '://' %}
-          {% assign show_download_button = true %}
-        {% elsif presentation_download | slice: 0, 1 == '/' %}
-          {% assign root_relative_path = presentation_download | remove_first: '/' %}
-          {% capture root_file_exists %}{% file_exists {{ root_relative_path }} %}{% endcapture %}
-          {% if root_file_exists == 'true' %}
-            {% assign show_download_button = true %}
-          {% endif %}
-        {% else %}
-          {% assign local_presentation_path = presentation_download | prepend: 'assets/files/presentations/' %}
-          {% capture local_file_exists %}{% file_exists {{ local_presentation_path }} %}{% endcapture %}
-          {% if local_file_exists == 'true' %}
-            {% assign show_download_button = true %}
-          {% endif %}
-        {% endif %}
-      {% endif %}
+      {% assign show_download_button = presentation_download != blank %}
 
       <div class="row mb-4">
         <div class="col-sm-2 text-sm-center mb-2 mb-sm-0">
