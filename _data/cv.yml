@@ -6,7 +6,7 @@
     - name: Email
       value: rehanmuh@g.ucla.edu
     - name: Website
-      value: https://rehanmuh.netlify.app
+      value: https://rehan-muh.github.io
     - name: Languages
       value: "Ancient (Advanced): Ancient Greek, Hittite, Gothic, Latin, Vedic; Intermediate: Middle High German, Old Persian, Avestan, Luwian; Modern (Near-)Native: Hindi/Urdu, Panjabi, English; German (C1)"
 
@@ -36,7 +36,7 @@
     - title: "Young Infants' Discrimination of Phonetic Contrasts Predicts Their Typological Frequency."
       institution: "with Megha Sundara"
       year: In Prep.
-    - title: "Supervised Text Classification in Historical Linguistics: The Case of Christian Latin."
+    - title: "Supervised Measurement of Christian Latin."
       institution: "with Valentina Lunardi and David Goldstein"
       year: Submitted
     - title: "E-lorgesailie: An Agent-Based Simulation Model of Acheulean Lithic Raw Material Procurement and Handaxe Deposition Patterns."
