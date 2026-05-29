@@ -84,7 +84,7 @@ ninja.data = [{
         title: 'Work',
         section: 'Socials',
         handler: () => {
-          window.open("https://rehan-muh@github.io", "_blank");
+          window.open("https://rehan-muh.github.io", "_blank");
         },
       },{
       id: 'light-theme',
