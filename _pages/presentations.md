@@ -2,7 +2,6 @@
 layout: page
 permalink: /presentations/
 title: presentations
-description: presentations and posters listed from the CV section.
 nav: true
 nav_order: 3
 ---

@@ -2,7 +2,6 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Teaching experience from my current CV.
 nav: true
 nav_order: 6
 ---
