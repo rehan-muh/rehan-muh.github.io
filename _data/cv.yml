@@ -27,6 +27,7 @@
       year: 2018-2022
 
 - title: Publications
+  toc: true
   type: time_table
   contents:
     - title: "From Points to Polygons: Modeling Spatial Autocorrelation."
@@ -39,8 +40,8 @@
       institution: "with Valentina Lunardi and David Goldstein"
       year: Submitted
     - title: "E-lorgesailie: An Agent-Based Simulation Model of Acheulean Lithic Raw Material Procurement and Handaxe Deposition Patterns."
-      institution: "with Grant McCall"
-      year: Submitted
+      institution: "with Grant S. McCall. Journal of Archaeological Method and Theory, Vol. 33, Article 49. https://doi.org/10.1007/s10816-026-09788-y"
+      year: 2026
     - title: "Re-evaluating the Word-Medial Operation of the Saussure-Hirt Effect in Greek."
       institution: "Proceedings of the 4th International Conference on Ancient Greek Linguistics"
       year: Forth.
@@ -61,6 +62,7 @@
       year: 2021
 
 - title: Presentations & Posters
+  toc: true
   type: time_table
   contents:
     - title: "From points to polygons: Modeling spatial autocorrelation"
@@ -149,6 +151,7 @@
       year: 2024
 
 - title: Teaching Experience
+  toc: true
   type: time_table
   contents:
     - title: Teaching Assistant
