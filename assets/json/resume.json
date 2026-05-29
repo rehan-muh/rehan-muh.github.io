@@ -1,200 +1,343 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Muhammad Rehan",
+    "label": "Graduate Student, Program in Indo-European Studies, UCLA",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "rehanmuh@g.ucla.edu",
+    "url": "https://rehanmuh.netlify.app",
+    "summary": "Graduate student in Indo-European Studies at UCLA working on phonology, historical linguistics, and quantitative/computational methods.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "address": "Dodd 74, Dodd Hall, 390 Portola Plaza",
+      "postalCode": "CA 90034",
+      "city": "Los Angeles",
       "countryCode": "US",
       "region": "California"
     },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
-    ]
+    "profiles": []
   },
-  "work": [
-    {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
-  ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
+      "institution": "University of California, Los Angeles (UCLA)",
+      "area": "Indo-European Studies",
+      "studyType": "Graduate Student",
+      "startDate": "2023",
+      "endDate": ""
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
+      "institution": "University of California, Los Angeles (UCLA)",
+      "area": "Indo-European Studies",
+      "studyType": "M.A.",
+      "startDate": "2023",
+      "endDate": "2024"
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
+      "institution": "University of California, Los Angeles (UCLA)",
+      "area": "Classics",
+      "studyType": "Post-Baccalaureate Certificate (with Distinction)",
+      "startDate": "2022",
+      "endDate": "2023"
     },
     {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
+      "institution": "Grinnell College",
+      "area": "Classics (Hons.) and German Studies (Hons.)",
+      "studyType": "B.A.",
+      "startDate": "2018",
+      "endDate": "2022"
     }
   ],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "From Points to Polygons: Modeling Spatial Autocorrelation",
+      "publisher": "with David Goldstein",
+      "releaseDate": "In Prep."
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "Young Infants' Discrimination of Phonetic Contrasts Predicts Their Typological Frequency",
+      "publisher": "with Megha Sundara",
+      "releaseDate": "In Prep."
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "Supervised Text Classification in Historical Linguistics: The Case of Christian Latin",
+      "publisher": "with Valentina Lunardi and David Goldstein",
+      "releaseDate": "Submitted"
+    },
+    {
+      "name": "E-lorgesailie: An Agent-Based Simulation Model of Acheulean Lithic Raw Material Procurement and Handaxe Deposition Patterns",
+      "publisher": "Journal of Archaeological Method and Theory, Vol. 33, Article 49",
+      "releaseDate": "2026",
+      "url": "https://doi.org/10.1007/s10816-026-09788-y"
+    },
+    {
+      "name": "Re-evaluating the Word-Medial Operation of the Saussure-Hirt Effect in Greek",
+      "publisher": "Proceedings of the 4th International Conference on Ancient Greek Linguistics",
+      "releaseDate": "Forth."
+    },
+    {
+      "name": "Gk. μοιχός 'adulterer': Re-mixing a Piss-Poor Etymology",
+      "publisher": "Proceedings of the 35th Annual UCLA Indo-European Conference, Vol. 35, pp. 147-163",
+      "releaseDate": "2026"
+    },
+    {
+      "name": "Mind your Language, Mister! A Case Study in Aristophanic Humor",
+      "publisher": "Animus, Vol. 3.1 (Winter), pp. 36-51",
+      "releaseDate": "2023"
+    },
+    {
+      "name": "Between Need, Want, Material and Innate Beauty: Tracing Shades of Erōs",
+      "publisher": "Corvus, Vol. 13 (Spring), pp. 27-35",
+      "releaseDate": "2023"
+    },
+    {
+      "name": "Gendered Language in Aristophanes' Birds",
+      "publisher": "Persephone, Vol. 8.1 (Spring), pp. 12-29",
+      "releaseDate": "2023"
+    },
+    {
+      "name": "The Estuarine Ecological Knowledge Network: Future Prospects",
+      "publisher": "Marine Technology and Science Journal, 55(3), pp. 122-123",
+      "releaseDate": "2021"
+    }
+  ],
+  "work": [
+    {
+      "name": "University of California, Los Angeles (UCLA)",
+      "position": "Research Assistant",
+      "startDate": "2025",
+      "summary": "Supervisor: Prof. Brent Vine"
+    },
+    {
+      "name": "University of California, Los Angeles (UCLA)",
+      "position": "Research Assistant",
+      "startDate": "2023",
+      "summary": "Supervisor: Prof. David Goldstein"
+    },
+    {
+      "name": "Grinnell College",
+      "position": "Independent research: Nibelungenlied and Middle High German verse",
+      "startDate": "2022",
+      "summary": "Mentor: Prof. Daniel Reynolds"
+    },
+    {
+      "name": "Grinnell College",
+      "position": "Independent research: Jewish life in Pakistan",
+      "startDate": "2021",
+      "summary": "Mentor: Prof. Viktoria Pötzl"
+    },
+    {
+      "name": "University of Pennsylvania",
+      "position": "Independent research: Peter Schneider's Der Mauerspringer and the search for a German identity",
+      "startDate": "2021",
+      "summary": "Mentor: Prof. Vance Byrd"
+    },
+    {
+      "name": "Tulane University",
+      "position": "Research Assistant: Modeling pre-historic foraging patterns along the coast of New Orleans",
+      "startDate": "2020",
+      "summary": "Supervisor: Prof. Grant McCall"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Graduate Summer Research Mentorship Award",
+      "date": "2025"
+    },
+    {
+      "title": "Morvarid Guiv Graduate Fellowship in Zoroastrian Studies",
+      "date": "2024 & 2025"
+    },
+    {
+      "title": "UCLA/Keck Humanistic Inquiry Research Award",
+      "date": "2024",
+      "summary": "Shared with Tom Francis, Klaus Kim, and Laura McLean"
+    },
+    {
+      "title": "Graduate Summer Research Mentorship Award",
+      "date": "2024"
+    },
+    {
+      "title": "Institute for the Study of Global Antiquity Fellowship",
+      "date": "2023-24"
+    },
+    {
+      "title": "Society for Classical Studies Lionel Pearson Fellowship",
+      "date": "2023"
+    },
+    {
+      "title": "Joan Palevsky Chair Post-Baccalaureate Scholarship in Classics",
+      "date": "2022-23"
+    },
+    {
+      "title": "CAMWS Award for Outstanding Accomplishment in Classical Studies",
+      "date": "2022"
+    },
+    {
+      "title": "Gus and Elfie Kalfass Prize for Excellence in German Studies",
+      "date": "2022"
+    },
+    {
+      "title": "Gerald W. LaLonde Fellowship in Classical Studies",
+      "date": "2021"
+    },
+    {
+      "title": "UC Berkeley Intensive Greek Workshop Fellowship",
+      "date": "2021"
+    },
+    {
+      "title": "Institute for Global Engagement Summer Language Study Scholarship",
+      "date": "2019"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "LSA Summer Institute, University of Oregon",
+      "date": "2025",
+      "issuer": "Linguistic Typology in Evolutionary Perspective; Statistical Measures in Corpus Linguistics; Foundations of Predictive Modeling with R; Variationist Sociolinguistics; Reconstructing Syntax; Adaptive Speech Perception and Comprehension; Language Phylogenies"
+    },
+    {
+      "name": "CreteLing 2024",
+      "date": "2024",
+      "issuer": "Exceptionality; Phonological Grammar and Opacity; Historical Linguistics"
+    },
+    {
+      "name": "Old English",
+      "date": "2021",
+      "issuer": "Leiden Summer School in Languages and Linguistics"
+    },
+    {
+      "name": "The Ancient Greek Workshop",
+      "date": "2021",
+      "issuer": "UC Berkeley"
+    },
+    {
+      "name": "Deutsch Erleben Workshop",
+      "date": "2020",
+      "issuer": "Humboldt Universität"
+    },
+    {
+      "name": "German Language Program",
+      "date": "2019",
+      "issuer": "Universität Leipzig"
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
+      "name": "Programming & Software",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Microsoft Office Suite",
+        "NetLogo",
+        "RevBayes",
+        "BEAST2",
+        "Python",
+        "LaTeX",
+        "Julia",
+        "Stan",
+        "R"
+      ]
+    },
+    {
+      "name": "R Packages",
+      "keywords": [
+        "sp",
+        "sf",
+        "brms",
+        "lme4",
+        "mgcv",
+        "rstan",
+        "R-INLA",
+        "geostan",
+        "inlabru",
+        "cmdstanR"
       ]
     }
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
+      "language": "Ancient Greek",
+      "fluency": "Ancient (Advanced)"
+    },
+    {
+      "language": "Hittite",
+      "fluency": "Ancient (Advanced)"
+    },
+    {
+      "language": "Gothic",
+      "fluency": "Ancient (Advanced)"
+    },
+    {
+      "language": "Latin",
+      "fluency": "Ancient (Advanced)"
+    },
+    {
+      "language": "Vedic",
+      "fluency": "Ancient (Advanced)"
+    },
+    {
+      "language": "Middle High German",
+      "fluency": "Intermediate"
+    },
+    {
+      "language": "Old Persian",
+      "fluency": "Intermediate"
+    },
+    {
+      "language": "Avestan",
+      "fluency": "Intermediate"
+    },
+    {
+      "language": "Luwian",
+      "fluency": "Intermediate"
+    },
+    {
+      "language": "Hindi/Urdu",
+      "fluency": "Modern (Near-)Native"
+    },
+    {
+      "language": "Panjabi",
+      "fluency": "Modern (Near-)Native"
     },
     {
       "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
+      "fluency": "Modern (Near-)Native"
+    },
+    {
+      "language": "German",
+      "fluency": "C1"
     }
   ],
   "interests": [
     {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
+      "name": "Historical linguistics"
+    },
+    {
+      "name": "Phonology"
+    },
+    {
+      "name": "Indo-European studies"
+    },
+    {
+      "name": "Quantitative and computational methods"
     }
   ],
   "references": [
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "Prof. David Goldstein",
+      "reference": "Department of Linguistics/Classics/Program in Indo-European Studies, UCLA (dgoldstein@humnet.ucla.edu)"
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
-  "projects": [
+      "name": "Prof. Stephanie Jamison",
+      "reference": "Department of Asian Languages & Cultures/Program in Indo-European Studies, UCLA (jamison@humnet.ucla.edu)"
+    },
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "Prof. Angelo Mercado",
+      "reference": "Department of Classics/Linguistics, Grinnell College (mercadoa@grinnell.edu)"
+    },
+    {
+      "name": "Prof. Brent Vine",
+      "reference": "Department of Classics/Program in Indo-European Studies (Emeritus), UCLA (vine@humnet.ucla.edu)"
+    },
+    {
+      "name": "Prof. Anthony Yates",
+      "reference": "Department of Near Eastern Languages and Cultures/Program in Indo-European Studies, UCLA (adyates@ucla.edu)"
     }
   ]
 }
