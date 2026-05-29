@@ -18,11 +18,12 @@ nav_order: 3
       {% if presentation.bibtex %}
         {% assign presentation_bibtex = presentation.bibtex | strip %}
       {% else %}
-        {% capture presentation_bibtex %}@inproceedings{ {{ generated_key }},
+        {% capture presentation_bibtex %}@misc{ {{ generated_key }},
 
 title = { {{ presentation.title | default: 'Presentation' }} },
 author = { Muhammad Rehan },
-booktitle = { {{ presentation.institution | default: 'Conference presentation' }} },
+howpublished = { {{ presentation.institution | default: 'Presentation' }} },
+note = { Presentation },
 year = { {{ presentation.year | default: '' }} }
 }{% endcapture %}
 {% endif %}
