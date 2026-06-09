@@ -27,6 +27,7 @@
       year: 2018-2022
 
 - title: Publications
+  toc: true
   type: time_table
   contents:
     - title: "From Points to Polygons: Modeling Spatial Autocorrelation."
@@ -61,6 +62,7 @@
       year: 2021
 
 - title: Presentations & Posters
+  toc: true
   type: time_table
   contents:
     - title: "From points to polygons: Modeling spatial autocorrelation"
@@ -155,6 +157,7 @@
       year: 2024
 
 - title: Teaching Experience
+  toc: true
   type: time_table
   contents:
     - title: Teaching Assistant
