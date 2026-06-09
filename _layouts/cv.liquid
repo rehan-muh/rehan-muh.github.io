@@ -21,7 +21,21 @@ layout: default
       {% endif %}
     </h1>
     {% if page.description %}
-      <p class="post-description">{{ page.description }}</p>
+      <p class="post-description">
+        {% if page.cv_pdf %}
+          <a
+            {% if page.cv_pdf contains '://' %}
+              href="{{ page.cv_pdf }}"
+            {% else %}
+              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
+            {% endif %}
+            target="_blank"
+            rel="noopener noreferrer"
+          >{{ page.description }}</a>
+        {% else %}
+          {{ page.description }}
+        {% endif %}
+      </p>
     {% endif %}
   </header>
 
