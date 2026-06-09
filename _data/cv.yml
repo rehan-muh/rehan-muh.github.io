@@ -68,15 +68,15 @@
     - title: "From points to polygons: Modeling spatial autocorrelation"
       institution: "with David Goldstein. qc-leste: Quantitative Cross-Linguistic Explorations of Space, Time, and Evolution, Jun. 10"
       year: 2026
-    - title: "Modeling the spread of alphabets in ancient Italy using spatiotemporal Hawkes processes."
+    - title: "Point processes and spatiotemporal modeling of alphabet spread in ancient Italy"
       institution: "with Tom Francis. DataX, UCLA, May 19"
       year: 2026
       download: /assets/files/presentations/point_process.pdf
-    - title: "Why do languages have the sounds they do?"
+    - title: "Why do languages have the sounds they do? Insights from infant experiments and phylogenetic modeling"
       institution: "DataX, UCLA, Apr. 20"
       year: 2026
       download: /assets/files/presentations/infant_typology.pdf
-    - title: "Discerning segmental stability"
+    - title: "Discerning segmental stability using phylogenetic models."
       year: 2026
       download: /assets/files/presentations/discerning.pdf
     - title: "The phonetic value of Avestan <ȧ>."
