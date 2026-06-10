@@ -6,7 +6,7 @@
     - name: Email
       value: rehanmuh@g.ucla.edu
     - name: Website
-      value: https://rehanmuh.netlify.app
+      value: https://rehan-muh.github.io
     - name: Languages
       value: "Ancient (Advanced): Ancient Greek, Hittite, Gothic, Latin, Vedic; Intermediate: Middle High German, Old Persian, Avestan, Luwian; Modern (Near-)Native: Hindi/Urdu, Panjabi, English; German (C1)"
 
@@ -35,12 +35,12 @@
     - title: "Young Infants' Discrimination of Phonetic Contrasts Predicts Their Typological Frequency."
       institution: "with Megha Sundara"
       year: In Prep.
-    - title: "Supervised Text Classification in Historical Linguistics: The Case of Christian Latin."
+    - title: "Supervised Measurement of Christian Latin."
       institution: "with Valentina Lunardi and David Goldstein"
       year: Submitted
     - title: "E-lorgesailie: An Agent-Based Simulation Model of Acheulean Lithic Raw Material Procurement and Handaxe Deposition Patterns."
-      institution: "with Grant McCall"
-      year: Submitted
+      institution: "with Grant S. McCall. Journal of Archaeological Method and Theory, Vol. 33, Article 49. https://doi.org/10.1007/s10816-026-09788-y"
+      year: 2026
     - title: "Re-evaluating the Word-Medial Operation of the Saussure-Hirt Effect in Greek."
       institution: "Proceedings of the 4th International Conference on Ancient Greek Linguistics"
       year: Forth.
@@ -63,21 +63,28 @@
 - title: Presentations & Posters
   type: time_table
   contents:
-    - title: "From points to polygons: Modeling spatial autocorrelation"
+    - title: "Spatiophylogenetic modeling provides new insights into feature economy"
       institution: "with David Goldstein. qc-leste: Quantitative Cross-Linguistic Explorations of Space, Time, and Evolution, Jun. 10"
       year: 2026
-    - title: "Modeling the spread of alphabets in ancient Italy using spatiotemporal Hawkes processes."
+    - title: "Point processes and spatiotemporal modeling of alphabet spread in ancient Italy"
       institution: "with Tom Francis. DataX, UCLA, May 19"
       year: 2026
-    - title: "Predicting phonological typology and rates of phonological change."
+      download: /assets/files/presentations/point_process.pdf
+    - title: "Why do languages have the sounds they do? Insights from infant experiments and phylogenetic modeling"
       institution: "DataX, UCLA, Apr. 20"
       year: 2026
+      download: /assets/files/presentations/infant_typology.pdf
+    - title: "Discerning segmental stability using phylogenetic models."
+      year: 2026
+      download: /assets/files/presentations/discerning.pdf
     - title: "The phonetic value of Avestan <ȧ>."
       institution: "American Society for Premodern Asia Annual Meeting, Apr. 27"
       year: 2026
+      download: /assets/files/presentations/av_a.pdf
     - title: "From points to polygons: Modeling spatial autocorrelation"
       institution: 'with David Goldstein. Special workshop on "The geography of linguistic evolution", EVOLANG XVI, Apr. 7'
       year: 2026
+      download: /assets/files/presentations/polygon.pdf
     - title: "Lexical stress and syllable weight in Hindi-Urdu pop text-setting."
       institution: "with Jahnavi Narkar and Dhanya Charan. Linguistics Society of America Annual Meeting 2026, Jan. 9"
       year: 2026
