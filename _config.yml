@@ -14,7 +14,7 @@ description: >-
 keywords: linguistics, phonology, historical linguistics, Indo-European, Bayesian statistics, phylogenetics, spatial modeling
 
 lang: en
-icon: ✳️
+icon: favicon.png
 
 url: https://rehan-muh.github.io
 baseurl: ""
@@ -418,7 +418,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Material+Icons&display=swap"
   highlightjs:
     integrity:
       css:

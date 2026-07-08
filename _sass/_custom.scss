@@ -2,7 +2,7 @@
  * Custom theme layer: "iron-gall ink & viridis"
  *
  * Typography
- *   - Gentium Book Plus  : body & display serif (full polytonic Greek + IPA)
+ *   - STIX Two Text      : body & display serif (scholarly; full Greek + IPA)
  *   - IBM Plex Sans      : UI (nav, buttons, badges, labels)
  *   - IBM Plex Mono      : metadata (years, IPA, addresses)
  *
@@ -10,7 +10,7 @@
  * the philologist's mark for reconstructed forms.
  ******************************************************************************/
 
-$serif-stack: "Gentium Book Plus", "Gentium Plus", Georgia, "Times New Roman", serif;
+$serif-stack: "STIX Two Text", "Gentium Book Plus", Georgia, "Times New Roman", serif;
 $sans-stack: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
 $mono-stack: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
 
@@ -300,6 +300,7 @@ article,
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.14em;
+    text-transform: uppercase;
     color: var(--meta-mono);
     border-top: 1px solid var(--global-divider-color);
     text-align: left;
