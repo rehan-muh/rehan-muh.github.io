@@ -1,9 +1,6 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+# Map venue abbreviations (the `abbr` field of a bibtex entry) to a URL and
+# badge color. Example:
+#
+# "DSH":
+#   url: https://academic.oup.com/dsh
+#   color: "#00369f"

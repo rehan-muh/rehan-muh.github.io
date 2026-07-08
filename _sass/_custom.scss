@@ -1,0 +1,564 @@
+/*******************************************************************************
+ * Custom theme layer: "iron-gall ink & viridis"
+ *
+ * Typography
+ *   - Gentium Book Plus  : body & display serif (full polytonic Greek + IPA)
+ *   - IBM Plex Sans      : UI (nav, buttons, badges, labels)
+ *   - IBM Plex Mono      : metadata (years, IPA, addresses)
+ *
+ * Signature element: a raised ochre asterisk before section headings,
+ * the philologist's mark for reconstructed forms.
+ ******************************************************************************/
+
+$serif-stack: "Gentium Book Plus", "Gentium Plus", Georgia, "Times New Roman", serif;
+$sans-stack: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+$mono-stack: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+
+// ---------------------------------------------------------------------------
+// Palette overrides (light)
+// ---------------------------------------------------------------------------
+
+:root {
+  --global-bg-color: #fcfcfa;
+  --global-card-bg-color: #ffffff;
+  --global-text-color: #1f2733;
+  --global-text-color-light: #5c6672;
+  --global-theme-color: #14706a;
+  --global-hover-color: #0d5652;
+  --global-hover-text-color: #ffffff;
+  --global-highlight-color: #b0812a;
+  --global-divider-color: #e5e6e1;
+  --global-footer-bg-color: #171e26;
+  --global-footer-text-color: #9aa4ad;
+  --global-footer-link-color: #e8ebe6;
+  --global-code-bg-color: rgba(20, 112, 106, 0.06);
+
+  --accent-ochre: #b0812a;
+  --meta-mono: #6b7683;
+}
+
+html[data-theme="dark"] {
+  --global-bg-color: #12181f;
+  --global-card-bg-color: #1a222b;
+  --global-text-color: #d9dde2;
+  --global-text-color-light: #98a2ac;
+  --global-theme-color: #4cc8bc;
+  --global-hover-color: #7adcd2;
+  --global-hover-text-color: #12181f;
+  --global-highlight-color: #d9a94f;
+  --global-divider-color: #2a333d;
+  --global-code-bg-color: rgba(76, 200, 188, 0.08);
+
+  --accent-ochre: #d9a94f;
+  --meta-mono: #8a95a0;
+}
+
+// ---------------------------------------------------------------------------
+// Base typography
+// ---------------------------------------------------------------------------
+
+body {
+  font-family: $serif-stack;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  background-color: var(--global-bg-color);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings:
+    "liga" 1,
+    "kern" 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif-stack;
+  letter-spacing: -0.01em;
+}
+
+a {
+  text-underline-offset: 0.15em;
+  transition: color 0.15s ease;
+}
+
+article,
+.post {
+  a:not(.btn):not(.nav-link) {
+    text-decoration-color: color-mix(in srgb, var(--global-theme-color) 45%, transparent);
+
+    &:hover {
+      text-decoration-color: var(--global-theme-color);
+    }
+  }
+}
+
+::selection {
+  background: color-mix(in srgb, var(--global-theme-color) 22%, transparent);
+}
+
+// Signature: reconstruction asterisk before section headings
+.post article > h2,
+.post .clearfix h2 {
+  scroll-margin-top: 90px;
+}
+
+.post article h2:not(.bibliography):not(.year):not(.teaching-group)::before,
+.post .clearfix h2::before {
+  content: "*";
+  color: var(--accent-ochre);
+  font-weight: 700;
+  margin-right: 0.35rem;
+  position: relative;
+  top: 0.08em;
+}
+
+// ---------------------------------------------------------------------------
+// Navbar
+// ---------------------------------------------------------------------------
+
+.navbar.navbar-light {
+  background-color: color-mix(in srgb, var(--global-bg-color) 88%, transparent) !important;
+  backdrop-filter: saturate(1.4) blur(10px);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--global-divider-color);
+  box-shadow: none !important;
+
+  .navbar-brand {
+    font-family: $serif-stack;
+    font-size: 1.15rem;
+    letter-spacing: 0.01em;
+
+    &::before {
+      content: "*";
+      color: var(--accent-ochre);
+      font-weight: 700;
+      margin-right: 0.3rem;
+    }
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-family: $sans-stack;
+    font-size: 0.86rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding-top: 0.65rem;
+    padding-bottom: 0.55rem;
+  }
+
+  .navbar-nav .nav-item.active > .nav-link {
+    font-weight: 600;
+    color: var(--global-theme-color);
+    box-shadow: inset 0 -2px 0 var(--global-theme-color);
+  }
+}
+
+#progress {
+  background-color: transparent;
+
+  &::-webkit-progress-value {
+    background-color: var(--global-theme-color);
+  }
+
+  &::-moz-progress-bar {
+    background-color: var(--global-theme-color);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// About page hero
+// ---------------------------------------------------------------------------
+
+.post-header {
+  padding-top: 1.25rem;
+  margin-bottom: 1.5rem;
+
+  .post-title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+
+    @media (max-width: 576px) {
+      font-size: 2.25rem;
+    }
+  }
+
+  .desc {
+    font-family: $sans-stack;
+    font-size: 1rem;
+    color: var(--global-text-color-light);
+    max-width: 42rem;
+
+    .ipa-name {
+      font-family: $mono-stack;
+      font-size: 0.9rem;
+      color: var(--meta-mono);
+      display: inline-block;
+      margin-right: 0.25rem;
+    }
+
+    a {
+      color: var(--global-theme-color);
+      text-decoration: none;
+      border-bottom: 1px solid color-mix(in srgb, var(--global-theme-color) 40%, transparent);
+
+      &:hover {
+        border-bottom-color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// homepage only: rule under the hero, echoing an apparatus criticus
+.post-header .desc::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 2px;
+  margin-top: 1.25rem;
+  background: linear-gradient(to right, var(--accent-ochre), var(--global-theme-color));
+}
+
+.profile {
+  img {
+    border-radius: 10px;
+    box-shadow:
+      0 1px 2px rgba(15, 23, 32, 0.08),
+      0 8px 24px rgba(15, 23, 32, 0.1) !important;
+  }
+
+  .more-info {
+    font-family: $mono-stack;
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: var(--global-text-color-light);
+    margin-top: 0.75rem;
+
+    p strong {
+      font-family: $sans-stack;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--meta-mono);
+    }
+  }
+}
+
+// research-interest tags on the about page
+.interest-tags {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  span {
+    font-family: $sans-stack;
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: var(--global-text-color-light);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    padding: 0.18rem 0.65rem;
+    background: var(--global-card-bg-color);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Section headings on the about page (news / selected publications)
+// ---------------------------------------------------------------------------
+
+.post article > h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-top: 2.75rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+// ---------------------------------------------------------------------------
+// Publications
+// ---------------------------------------------------------------------------
+
+.publications {
+  h1 {
+    font-size: 2.1rem;
+    text-align: left;
+    color: var(--global-text-color);
+    margin-bottom: 0.25em;
+  }
+
+  h2.bibliography {
+    font-family: $mono-stack;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: var(--meta-mono);
+    border-top: 1px solid var(--global-divider-color);
+    text-align: left;
+    padding-top: 1.4rem;
+    margin-top: 2.4rem;
+  }
+
+  ol.bibliography li {
+    margin-bottom: 1.6rem;
+
+    .title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+
+    .author {
+      color: var(--global-text-color-light);
+      font-size: 0.95rem;
+    }
+
+    .periodical {
+      font-size: 0.92rem;
+      color: var(--global-text-color-light);
+    }
+
+    .abbr abbr {
+      font-family: $sans-stack;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      border-radius: 4px;
+      padding: 0.15rem 0.5rem;
+    }
+
+    .links a.btn {
+      font-family: $sans-stack;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 999px;
+      color: var(--global-text-color-light);
+      padding: 0.22rem 0.85rem;
+      margin-right: 0.35rem;
+      margin-bottom: 0.35rem;
+      transition:
+        color 0.15s ease,
+        border-color 0.15s ease,
+        background-color 0.15s ease;
+
+      &:hover {
+        color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+        background-color: var(--global-code-bg-color);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// presentations page: year chips + custom bibtex buttons
+.publications .badge.danger-color-dark {
+  font-family: $mono-stack;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--meta-mono) !important;
+  background-color: transparent !important;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  padding: 0.32rem 0.6rem;
+}
+
+.publications .row .title {
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.publications .row .periodical {
+  font-size: 0.92rem;
+  color: var(--global-text-color-light);
+}
+
+.publications button.btn,
+.publications .links button.btn {
+  font-family: $sans-stack;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  color: var(--global-text-color-light);
+  padding: 0.22rem 0.85rem;
+
+  &:hover {
+    color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    background-color: var(--global-code-bg-color);
+  }
+}
+
+.publications pre {
+  font-family: $mono-stack;
+  font-size: 0.8rem;
+  background: var(--global-code-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+}
+
+// ---------------------------------------------------------------------------
+// CV page
+// ---------------------------------------------------------------------------
+
+.cv {
+  .card {
+    background-color: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 10px;
+    box-shadow: none !important;
+
+    .card-title {
+      font-family: $serif-stack;
+      font-weight: 700;
+    }
+  }
+
+  .table {
+    font-size: 0.98rem;
+  }
+}
+
+.header-bar {
+  border-bottom: 1px solid var(--global-divider-color);
+
+  h1 {
+    color: var(--global-text-color);
+    font-size: 2.6rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-family: $sans-stack;
+    font-size: 1rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Teaching page
+// ---------------------------------------------------------------------------
+
+.teaching-list {
+  .teaching-group {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &::before {
+      content: "*";
+      color: var(--accent-ochre);
+      font-weight: 700;
+      margin-right: 0.35rem;
+    }
+  }
+
+  .teaching-item {
+    margin-bottom: 1.1rem;
+
+    .teaching-title {
+      font-weight: 700;
+    }
+
+    .teaching-year {
+      font-family: $mono-stack;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--meta-mono);
+      border: 1px solid var(--global-divider-color);
+      border-radius: 999px;
+      padding: 0.1rem 0.55rem;
+      margin-left: 0.4rem;
+      vertical-align: 0.1em;
+      white-space: nowrap;
+    }
+
+    .teaching-institution {
+      font-size: 0.92rem;
+      color: var(--global-text-color-light);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Social icons & footer
+// ---------------------------------------------------------------------------
+
+.social {
+  .contact-icons {
+    font-size: 1.9rem;
+
+    a {
+      color: var(--global-text-color-light);
+      transition:
+        color 0.15s ease,
+        transform 0.15s ease;
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
+footer.fixed-bottom,
+footer.sticky-bottom {
+  font-family: $sans-stack;
+  font-size: 0.8rem;
+}
+
+// ---------------------------------------------------------------------------
+// Tables, code, misc
+// ---------------------------------------------------------------------------
+
+figcaption,
+.post-meta,
+.post-tags {
+  font-family: $sans-stack;
+}
+
+code {
+  font-family: $mono-stack;
+  font-size: 0.88em;
+  background: var(--global-code-bg-color);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+// ---------------------------------------------------------------------------
+// Accessibility & motion
+// ---------------------------------------------------------------------------
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
