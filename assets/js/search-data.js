@@ -80,13 +80,6 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/rehanmuh", "_blank");
         },
       },{
-        id: 'social-work',
-        title: 'Work',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://rehan-muh.github.io", "_blank");
-        },
-      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
