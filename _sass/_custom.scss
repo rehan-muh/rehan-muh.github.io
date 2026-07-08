@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Custom theme layer: "iron-gall ink & viridis"
+ * Custom theme layer: "iron-gall ink & terracotta"
  *
  * Typography
  *   - STIX Two Text      : body & display serif (scholarly; full Greek + IPA)
@@ -19,38 +19,48 @@ $mono-stack: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
 // ---------------------------------------------------------------------------
 
 :root {
-  --global-bg-color: #fcfcfa;
+  --global-bg-color: #fdfcfb;
   --global-card-bg-color: #ffffff;
-  --global-text-color: #1f2733;
-  --global-text-color-light: #5c6672;
-  --global-theme-color: #14706a;
-  --global-hover-color: #0d5652;
+  --global-text-color: #26221f;
+  --global-text-color-light: #6b615c;
+  --global-theme-color: #a61c00;
+  --global-hover-color: #7e1500;
   --global-hover-text-color: #ffffff;
-  --global-highlight-color: #b0812a;
-  --global-divider-color: #e5e6e1;
-  --global-footer-bg-color: #171e26;
-  --global-footer-text-color: #9aa4ad;
-  --global-footer-link-color: #e8ebe6;
-  --global-code-bg-color: rgba(20, 112, 106, 0.06);
+  --global-highlight-color: #d28d7f;
+  --global-divider-color: #edd2cc;
+  --global-footer-bg-color: #241713;
+  --global-footer-text-color: #b3a49d;
+  --global-footer-link-color: #edd2cc;
+  --global-code-bg-color: rgba(166, 28, 0, 0.05);
 
-  --accent-ochre: #b0812a;
-  --meta-mono: #6b7683;
+  --accent-secondary: #d28d7f;
+  --accent-tint: #edd2cc;
+  --selection-bg: #edd2cc;
+  --meta-mono: #86736c;
 }
 
 html[data-theme="dark"] {
-  --global-bg-color: #12181f;
-  --global-card-bg-color: #1a222b;
-  --global-text-color: #d9dde2;
-  --global-text-color-light: #98a2ac;
-  --global-theme-color: #4cc8bc;
-  --global-hover-color: #7adcd2;
-  --global-hover-text-color: #12181f;
-  --global-highlight-color: #d9a94f;
-  --global-divider-color: #2a333d;
-  --global-code-bg-color: rgba(76, 200, 188, 0.08);
+  --global-bg-color: #171110;
+  --global-card-bg-color: #211815;
+  --global-text-color: #e7ddd8;
+  --global-text-color-light: #ab9b94;
+  --global-theme-color: #d28d7f;
+  --global-hover-color: #edd2cc;
+  --global-hover-text-color: #171110;
+  --global-highlight-color: #edd2cc;
+  --global-divider-color: #382a25;
+  --global-code-bg-color: rgba(210, 141, 127, 0.1);
 
-  --accent-ochre: #d9a94f;
-  --meta-mono: #8a95a0;
+  --accent-secondary: #d28d7f;
+  --accent-tint: #edd2cc;
+  --selection-bg: rgba(210, 141, 127, 0.35);
+  --meta-mono: #99857d;
+
+  // photos otherwise appear to brighten against the dark surround
+  .profile img,
+  figure img {
+    filter: brightness(0.86) contrast(1.02);
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -96,7 +106,7 @@ article,
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--global-theme-color) 22%, transparent);
+  background: var(--selection-bg);
 }
 
 // Signature: reconstruction asterisk before section headings
@@ -108,7 +118,7 @@ article,
 .post article h2:not(.bibliography):not(.year):not(.teaching-group)::before,
 .post .clearfix h2::before {
   content: "*";
-  color: var(--accent-ochre);
+  color: var(--accent-secondary);
   font-weight: 700;
   margin-right: 0.35rem;
   position: relative;
@@ -133,7 +143,7 @@ article,
 
     &::before {
       content: "*";
-      color: var(--accent-ochre);
+      color: var(--accent-secondary);
       font-weight: 700;
       margin-right: 0.3rem;
     }
@@ -221,7 +231,7 @@ article,
   width: 3.5rem;
   height: 2px;
   margin-top: 1.25rem;
-  background: linear-gradient(to right, var(--accent-ochre), var(--global-theme-color));
+  background: linear-gradient(to right, var(--accent-secondary), var(--global-theme-color));
 }
 
 .profile {
@@ -263,10 +273,10 @@ article,
     font-weight: 500;
     letter-spacing: 0.03em;
     color: var(--global-text-color-light);
-    border: 1px solid var(--global-divider-color);
+    border: 1px solid var(--accent-tint);
     border-radius: 999px;
     padding: 0.18rem 0.65rem;
-    background: var(--global-card-bg-color);
+    background: color-mix(in srgb, var(--accent-tint) 22%, var(--global-card-bg-color));
   }
 }
 
@@ -465,7 +475,7 @@ article,
 
     &::before {
       content: "*";
-      color: var(--accent-ochre);
+      color: var(--accent-secondary);
       font-weight: 700;
       margin-right: 0.35rem;
     }
