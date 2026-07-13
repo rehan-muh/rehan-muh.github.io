@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Custom theme layer: "crimson & gold"
+ * Custom theme layer: "Oxford ink & sky"
  *
  * Typography
  *   - STIX Two Text      : body & display serif (scholarly; full Greek + IPA)
@@ -19,42 +19,42 @@ $mono-stack: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
 // ---------------------------------------------------------------------------
 
 :root {
-  --global-bg-color: #fdfcf8;
+  --global-bg-color: #fbfbf9;
   --global-card-bg-color: #ffffff;
-  --global-text-color: #27211c;
-  --global-text-color-light: #6d635a;
-  --global-theme-color: #be1a1a;
-  --global-hover-color: #d0311e;
+  --global-text-color: #20242c;
+  --global-text-color-light: #646b76;
+  --global-theme-color: #1d4e89;
+  --global-hover-color: #163c6b;
   --global-hover-text-color: #ffffff;
-  --global-highlight-color: #f7d87f;
-  --global-divider-color: #f0e3b8;
-  --global-footer-bg-color: #251310;
-  --global-footer-text-color: #b5a58f;
-  --global-footer-link-color: #f8ebab;
-  --global-code-bg-color: rgba(190, 26, 26, 0.05);
+  --global-highlight-color: #7eb2dd;
+  --global-divider-color: #e2e9f0;
+  --global-footer-bg-color: #121a24;
+  --global-footer-text-color: #98a2ae;
+  --global-footer-link-color: #dce8f4;
+  --global-code-bg-color: rgba(29, 78, 137, 0.05);
 
-  --accent-secondary: #d0311e;
-  --accent-tint: #f8ebab;
-  --selection-bg: #f8ebab;
-  --meta-mono: #8a7a66;
+  --accent-secondary: #7eb2dd;
+  --accent-tint: #e4edf5;
+  --selection-bg: #d7e6f4;
+  --meta-mono: #6f7a88;
 }
 
 html[data-theme="dark"] {
-  --global-bg-color: #1a100e;
-  --global-card-bg-color: #251614;
-  --global-text-color: #ece1d0;
-  --global-text-color-light: #b1a08c;
-  --global-theme-color: #f7d87f;
-  --global-hover-color: #f8ebab;
-  --global-hover-text-color: #1a100e;
-  --global-highlight-color: #d0311e;
-  --global-divider-color: #3d281c;
-  --global-code-bg-color: rgba(247, 216, 127, 0.08);
+  --global-bg-color: #12181f;
+  --global-card-bg-color: #1a2230;
+  --global-text-color: #dee3e9;
+  --global-text-color-light: #98a2ae;
+  --global-theme-color: #7eb2dd;
+  --global-hover-color: #a8ccec;
+  --global-hover-text-color: #12181f;
+  --global-highlight-color: #4a7ab5;
+  --global-divider-color: #263243;
+  --global-code-bg-color: rgba(126, 178, 221, 0.08);
 
-  --accent-secondary: #d0311e;
-  --accent-tint: #f7d87f;
-  --selection-bg: rgba(208, 49, 30, 0.4);
-  --meta-mono: #a08a6c;
+  --accent-secondary: #4a7ab5;
+  --accent-tint: #7eb2dd;
+  --selection-bg: rgba(126, 178, 221, 0.3);
+  --meta-mono: #8794a3;
 
   // photos otherwise appear to brighten against the dark surround
   .profile img,
