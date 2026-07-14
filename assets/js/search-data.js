@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
+        },{id: "nav-phonoalign-c",
+          title: "PhonoAlign-C",
+          description: "Multilingual consistency alignment for historical phonology",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/phonoalign-c/";
+          },
         },{id: "nav-teaching",
           title: "teaching",
           description: "",
