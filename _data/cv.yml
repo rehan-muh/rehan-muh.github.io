@@ -26,69 +26,82 @@
       institution: "Grinnell College"
       year: 2018-2022
 
+- title: Research Interests
+  type: list
+  contents:
+    - "Quantitative historical linguistics; probabilistic models of sound change; linguistic phylogenetics; Bayesian spatiotemporal modeling; agent-based modeling; Indo-European philology and linguistics."
+
 - title: Publications
   toc: true
   type: time_table
   contents:
-    - title: "From Points to Polygons: Modeling Spatial Autocorrelation."
-      institution: "with David Goldstein"
-      year: In Prep.
-    - title: "Young Infants' Discrimination of Phonetic Contrasts Predicts Their Typological Frequency."
-      institution: "with Megha Sundara"
-      year: In Prep.
     - title: "Supervised Measurement of Christian Latin."
-      institution: "with Valentina Lunardi and David Goldstein"
-      year: Submitted
+      institution: "with Valentina Lunardi and David Goldstein. Digital Scholarship in the Humanities"
+      year: Under Review
     - title: "E-lorgesailie: An Agent-Based Simulation Model of Acheulean Lithic Raw Material Procurement and Handaxe Deposition Patterns."
       institution: "with Grant S. McCall. Journal of Archaeological Method and Theory, Vol. 33, Article 49. https://doi.org/10.1007/s10816-026-09788-y"
       year: 2026
+    - title: "The Estuarine Ecological Knowledge Network: Future Prospects."
+      institution: "with Grant S. McCall, Russell Greaves, Brian Hitchcock, Brian Ostahowski, and Sherman W. Horn III. Marine Technology and Science Journal, 55(3), pp. 122-123"
+      year: 2021
     - title: "Re-evaluating the Word-Medial Operation of the Saussure-Hirt Effect in Greek."
       institution: "Proceedings of the 4th International Conference on Ancient Greek Linguistics"
       year: Forth.
     - title: "Gk. μοιχός 'adulterer': Re-mixing a Piss-Poor Etymology"
       institution: "Proceedings of the 35th Annual UCLA Indo-European Conference, Vol. 35, pp. 147-163"
       year: 2026
-    - title: "Mind your Language, Mister! A Case Study in Aristophanic Humor."
-      institution: "Animus, Vol. 3.1 (Winter), pp. 36-51"
-      year: 2023
-    - title: "Between Need, Want, Material and Innate Beauty: Tracing Shades of Erōs."
-      institution: "Corvus, Vol. 13 (Spring), pp. 27-35"
-      year: 2023
-    - title: "Gendered Language in Aristophanes' Birds."
-      institution: "Persephone, Vol. 8.1 (Spring), pp. 12-29"
-      year: 2023
-    - title: "The Estuarine Ecological Knowledge Network: Future Prospects."
-      institution: "with Grant S. McCall, Russell Greaves, Brian Hitchcock, Brian Ostahowski, and Sherman W. Horn III. Marine Technology and Science Journal, 55(3), pp. 122-123"
-      year: 2021
 
 - title: Presentations & Posters
   toc: true
   type: time_table
   contents:
-    - title: "Spatiophylogenetic modeling provides new insights into feature economy"
+    - title: "Vowel-to-vowel coarticulation is language specific and modulated by phonology."
+      institution: "with Coralie Cram. LSA Annual Meeting 2027, Jan. 8"
+      year: 2027
+    - title: "Infants' discrimination of sound pairs predicts their occurrence in the world's languages."
+      institution: "with Megha Sundara. Five-Minute Linguist, LSA Annual Meeting 2027, Jan. 8"
+      year: 2027
+    - title: "Positional asymmetries in consonantal sound change."
+      institution: '5th AMC Symposium: "Types of Evidence in Historical Linguistics", Dec. 9'
+      year: 2026
+    - title: "A tool to derive P-map constraints from infants' discriminability of phonetic contrasts."
+      institution: "with Megha Sundara. Annual Meeting on Phonology, Oct. 9"
+      year: 2026
+    - title: "Modeling alphabet diffusion and community interactions in ancient Italy with spatiotemporal point processes."
+      institution: "with Tom Francis. Connected Past 2026, Sept. 23"
+      year: 2026
+      download: /assets/files/presentations/connected_past_2026.pdf
+    - title: "Language contact is not consistently associated with increased feature economy."
+      institution: "with David Goldstein. Typology in Historical Phonology Workshop 2026, Aug. 25"
+      year: 2026
+    - title: "MoPSoS: Introduction to the database of Ancient Greek morphology, prosody, syntax and scansion."
+      institution: 'with Elisa Migliaretti, Spiridon-Iosif Capotos, and Zachary Fletcher. "Epic through Numbers" panel, Celtic Conference in Classics, Jul. 15'
+      year: 2026
+    - title: "Spatiophylogenetic modeling provides new insights into feature economy."
       institution: "with David Goldstein. qc-leste: Quantitative Cross-Linguistic Explorations of Space, Time, and Evolution, Jun. 10"
       year: 2026
-    - title: "Point processes and spatiotemporal modeling of alphabet spread in ancient Italy"
+    - title: "Point processes and spatiotemporal modeling of alphabet spread in ancient Italy."
       institution: "with Tom Francis. DataX, UCLA, May 19"
       year: 2026
       download: /assets/files/presentations/point_process.pdf
-    - title: "Why do languages have the sounds they do? Insights from infant experiments and phylogenetic modeling"
+    - title: "The phonetic value of Avestan <ȧ>."
+      institution: "American Society for Premodern Asia Annual Meeting, Apr. 24"
+      year: 2026
+      download: /assets/files/presentations/av_a.pdf
+    - title: "Why do languages have the sounds they do? Insights from infant experiments and phylogenetic modeling."
       institution: "DataX, UCLA, Apr. 20"
       year: 2026
       download: /assets/files/presentations/infant_typology.pdf
     - title: "Discerning segmental stability using phylogenetic models."
+      institution: "Southern California Annual Meeting on Phonology, Apr. 11"
       year: 2026
       download: /assets/files/presentations/discerning.pdf
-    - title: "The phonetic value of Avestan <ȧ>."
-      institution: "American Society for Premodern Asia Annual Meeting, Apr. 27"
-      year: 2026
-      download: /assets/files/presentations/av_a.pdf
-    - title: "From points to polygons: Modeling spatial autocorrelation"
+    - title: "From points to polygons: Modeling spatial autocorrelation."
       institution: 'with David Goldstein. Special workshop on "The geography of linguistic evolution", EVOLANG XVI, Apr. 7'
       year: 2026
       download: /assets/files/presentations/polygon.pdf
     - title: "Lexical stress and syllable weight in Hindi-Urdu pop text-setting."
-      institution: "with Jahnavi Narkar and Dhanya Charan. Linguistics Society of America Annual Meeting 2026, Jan. 9"
+      institution: "with Jahnavi Narkar and Dhanya Charan. Linguistic Society of America Annual Meeting 2026, Jan. 9"
       year: 2026
       download: /assets/files/presentations/lsa_2026_pres.pdf
     - title: "Investigating lexical stress in Hindi-Urdu pop music."
@@ -134,14 +147,14 @@
       institution: "UCLA Program in Indo-European Studies Graduate Seminar, May 29"
       year: 2024
 
-- title: Invited Talks
+- title: Guest Lectures
   type: time_table
   contents:
-    - title: "Uncovering the sounds of ancient languages using phonological typology and experimental phonetics."
-      institution: "LING 114, How to Learn a Foreign Language, University of Arizona, Mar. 22"
+    - title: "Why are some words more stable than others? Bayesian modeling of lexical replacement in Indo-European."
+      institution: "CLS-185, Origins and Nature of English Vocabulary, UCLA, Jul. 7"
       year: 2026
-    - title: "A meta-analysis of studies on young infants' perception of phonetic contrasts."
-      institution: "Department of Linguistics, USC Dornsife, T.B.D."
+    - title: "How can experimental psycholinguistics and diachronic phonology help us learn languages?"
+      institution: "LING 114, How to Learn a Foreign Language, University of Arizona, Mar. 14"
       year: 2026
     - title: "brms tutorial."
       institution: "LING 217, Experimental Phonology, UCLA, Nov. 18"
@@ -149,7 +162,7 @@
     - title: "Origins and nature of food vocabulary in English."
       institution: "Classics 185, Origins and Nature of English Vocabulary, UCLA, Jul. 8"
       year: 2025
-    - title: "Historical Linguistics."
+    - title: "Historical linguistics."
       institution: "LING-20, Introduction to the Study of Language, UCLA (with Aidan Holmgren and Nick Guymon)"
       year: 2025
     - title: "Karma is the breeze in my hair on the weekend: Sanskrit loanwords into English."
@@ -160,8 +173,14 @@
   toc: true
   type: time_table
   contents:
+    - title: Instructor of Record
+      institution: "LING-20, Introduction to Linguistic Analysis, UCLA. Faculty Supervisor: Prof. Stefan Keine"
+      year: Sum. 2026
     - title: Teaching Assistant
-      institution: "CLS 52, Greco-Roman Technologies: Materials, Monuments, Machines, UCLA. Faculty Supervisor: Prof Sarah Beckmann"
+      institution: "LING-110, Introduction to Historical Linguistics, UCLA. Instructor of Record: Dr. Thomas Motter"
+      year: Spr. 2026
+    - title: Teaching Assistant
+      institution: "CLS 52, Greco-Roman Technologies: Materials, Monuments, Machines, UCLA. Instructor of Record: Prof. Sarah Beckmann"
       year: 2026
     - title: Teaching Assistant
       institution: "CLS 51, Art and Archaeology of Ancient Greece, UCLA. Instructor of Record: Prof. John Papadopoulos"
@@ -185,31 +204,31 @@
       institution: "ALS-102, Urdu, Grinnell College"
       year: Fall 2021
 
-- title: Research Experience
+- title: Research and Academic Work Experience
   type: time_table
   contents:
+    - title: Humanities Technology Consultant
+      institution: "HumTech, UCLA"
+      year: 2026-
+    - title: Research Associate
+      institution: "Center for Human-Environmental Research"
+      year: 2026-
     - title: Research Assistant
       institution: "Supervisor: Prof. Brent Vine, UCLA"
       year: 2025
     - title: Research Assistant
       institution: "Supervisor: Prof. David Goldstein, UCLA"
       year: 2023-
-    - title: "Independent research: Nibelungenlied and Middle High German verse"
-      institution: "Mentor: Prof. Daniel Reynolds, Grinnell College"
-      year: 2022
-    - title: "Independent research: Jewish life in Pakistan"
-      institution: "Mentor: Prof. Viktoria Pötzl, Grinnell College"
-      year: 2021
-    - title: "Independent research: Peter Schneider's Der Mauerspringer and the search for a German identity"
-      institution: "Mentor: Prof. Vance Byrd, University of Pennsylvania"
-      year: 2021
-    - title: "Research Assistant: Modeling pre-historic foraging patterns along the coast of New Orleans"
+    - title: Research Assistant
       institution: "Supervisor: Prof. Grant McCall, Tulane University"
       year: 2020
 
 - title: Scholarships & Awards
   type: time_table
   contents:
+    - year: 2026
+      items:
+        - Keck Summer Graduate Fellowship
     - year: 2025
       items:
         - Graduate Summer Research Mentorship Award
@@ -244,6 +263,9 @@
 - title: External Coursework and Certifications
   type: time_table
   contents:
+    - title: Ninth Summer School on Statistical Methods for Linguistics and Psychology, Potsdam
+      institution: "Advanced Bayesian Data Analysis"
+      year: 2026
     - title: LSA Summer Institute, University of Oregon
       institution: "Linguistic Typology in Evolutionary Perspective, Statistical Measures in Corpus Linguistics, Foundations of Predictive Modeling with R, Variationist Sociolinguistics, Reconstructing Syntax, Adaptive Speech Perception and Comprehension, Language Phylogenies"
       year: 2025
@@ -276,12 +298,16 @@
 - title: Service
   type: time_table
   contents:
-    - title: Abstract reviewer, Southern California Undergraduate Linguistics Conference
+    - title: Webmaster, Program in Indo-European Studies, UCLA
+      year: 2026-
+    - title: Seminar Organizer, DataX, UCLA
+      year: 2026-
+    - title: Abstract Reviewer, Southern California Undergraduate Linguistics Conference
       year: 2025-
-    - title: Graduate Seminar Organizer (with Aidan Holmgren), PIES, UCLA
-      year: 2024-
+    - title: Graduate Seminar Organizer (with Aidan Holmgren), Program in Indo-European Studies, UCLA
+      year: 2024-26
     - title: Mentor, Asian and Asian American Classical Caucus
-      year: 2023-
+      year: 2023-26
     - title: Organizer, UCLA Indo-European Conference
       year: 2023-
     - title: Graduate Student Association Representative, UCLA Undergraduate Council
@@ -294,7 +320,7 @@
 - title: Professional Organizations
   type: time_table
   contents:
-    - title: American Society for the Study of Premodern Asia
+    - title: American Society for Premodern Asia
       year: 2025-
     - title: Linguistic Society of America
       year: 2025-
@@ -307,6 +333,19 @@
     - title: Classical Association of the Middle West and South
       year: 2022-
 
+- title: Miscellaneous Publications
+  type: time_table
+  contents:
+    - title: "Mind your Language, Mister! A Case Study in Aristophanic Humor."
+      institution: "Animus, Vol. 3.1 (Winter), pp. 36-51"
+      year: 2023
+    - title: "Between Need, Want, Material and Innate Beauty: Tracing Shades of Erōs."
+      institution: "Corvus, Vol. 13 (Spring), pp. 27-35"
+      year: 2023
+    - title: "Gendered Language in Aristophanes' Birds."
+      institution: "Persephone, Vol. 8.1 (Spring), pp. 12-29"
+      year: 2023
+
 - title: References
   type: list
   contents:
@@ -314,4 +353,5 @@
     - "Prof. Stephanie Jamison — Department of Asian Languages & Cultures/Program in Indo-European Studies, UCLA (jamison@humnet.ucla.edu)"
     - "Prof. Angelo Mercado — Department of Classics/Linguistics, Grinnell College (mercadoa@grinnell.edu)"
     - "Prof. Brent Vine — Department of Classics/Program in Indo-European Studies (Emeritus), UCLA (vine@humnet.ucla.edu)"
+    - "Prof. Tandy Warnow — Siebel School of Computing and Data Science, University of Illinois Urbana-Champaign (warnow@illinois.edu)"
     - "Prof. Anthony Yates — Department of Near Eastern Languages and Cultures/Program in Indo-European Studies, UCLA (adyates@ucla.edu)"
