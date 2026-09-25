@@ -44,16 +44,16 @@ year = { {{ presentation.year | default: '' }} }
 
         <div class="col-sm-10">
           {% if presentation.title %}
-            <div class="title">{{ presentation.title }}</div>
+            <div class="title">{{ presentation.title | escape }}</div>
           {% endif %}
 
           {% if presentation.institution %}
-            <div class="periodical"><em>{{ presentation.institution }}</em></div>
+            <div class="periodical"><em>{{ presentation.institution | escape }}</em></div>
           {% endif %}
 
           <div class="links mt-2">
             <button class="btn btn-sm z-depth-0 bibtex-toggle" type="button" data-bibtex-target="{{ bibtex_panel_id }}">BibTeX</button>
-            <textarea id="{{ citation_id }}" class="d-none" aria-hidden="true">{{ presentation_bibtex }}</textarea>
+            <textarea id="{{ citation_id }}" class="d-none" aria-hidden="true">{{ presentation_bibtex | escape }}</textarea>
 
             {% if show_download_button %}
               {% assign is_absolute_download = presentation_download contains '://' %}
@@ -74,7 +74,7 @@ year = { {{ presentation.year | default: '' }} }
           </div>
 
           <div id="{{ bibtex_panel_id }}" class="d-none mt-2">
-            <pre class="mb-2"><code>{{ presentation_bibtex }}</code></pre>
+            <pre class="mb-2"><code>{{ presentation_bibtex | escape }}</code></pre>
             <button class="btn btn-sm z-depth-0 bibtex-copy-btn" type="button" data-copy-target="{{ citation_id }}">
               <i class="fa-solid fa-clipboard"></i> Copy
             </button>
