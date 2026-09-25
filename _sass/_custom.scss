@@ -1,5 +1,12 @@
 /*******************************************************************************
- * Custom theme layer: "Oxford ink & sky" — editorial redesign
+ * Custom theme layer: "Vermilion & saffron" — editorial redesign
+ *
+ * Palette
+ *   #E43D12 vermilion : the single accent (links, labels, active states)
+ *   #D6536D rose      : hover states
+ *   #FFA2B6 pink      : tints, selection
+ *   #EFB11D saffron   : the reconstruction asterisk & small highlights
+ *   #EBE9E1 paper     : page ground (light) / text (dark)
  *
  * Typography
  *   - STIX Two Text  : text & display serif (scholarly; full Greek + IPA)
@@ -14,57 +21,69 @@ $serif-stack: "STIX Two Text", "Gentium Book Plus", Georgia, "Times New Roman", 
 $sans-stack: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
 $mono-stack: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
 
+$vermilion: #e43d12;
+$rose: #d6536d;
+$pink: #ffa2b6;
+$saffron: #efb11d;
+$paper: #ebe9e1;
+
 // ---------------------------------------------------------------------------
 // Palette
 // ---------------------------------------------------------------------------
 
 :root {
-  --global-bg-color: #fbfbf9;
-  --global-card-bg-color: #ffffff;
-  --global-text-color: #20242c;
-  --global-text-color-light: #646b76;
-  --global-theme-color: #1d4e89;
-  --global-hover-color: #163c6b;
-  --global-hover-text-color: #ffffff;
-  --global-highlight-color: #7eb2dd;
-  --global-divider-color: #e4e7ea;
-  --global-footer-bg-color: #fbfbf9;
-  --global-footer-text-color: #646b76;
-  --global-footer-link-color: #1d4e89;
-  --global-code-bg-color: rgba(29, 78, 137, 0.05);
+  --global-bg-color: #{$paper};
+  --global-card-bg-color: #f4f2ec;
+  --global-text-color: #221c19;
+  --global-text-color-light: #5f5852;
+  --global-theme-color: #{$vermilion};
+  --global-hover-color: #{$rose};
+  --global-hover-text-color: #{$paper};
+  --global-highlight-color: #{$saffron};
+  --global-divider-color: #d9d5ca;
+  --global-footer-bg-color: #{$paper};
+  --global-footer-text-color: #5f5852;
+  --global-footer-link-color: #{$vermilion};
+  --global-code-bg-color: rgba(228, 61, 18, 0.06);
+  --global-newsletter-bg-color: #f4f2ec;
+  --global-newsletter-text-color: #221c19;
 
-  --accent-secondary: #7eb2dd;
-  --accent-tint: #e4edf5;
-  --selection-bg: #d7e6f4;
-  --meta-mono: #6f7a88;
-  --hairline: #e4e7ea;
+  --accent-secondary: #{$saffron};
+  --accent-tint: rgba(255, 162, 182, 0.35);
+  --selection-bg: #{$pink};
+  --meta-mono: #6e665e;
+  --hairline: #d9d5ca;
+  --shadow-ink: rgba(34, 28, 25, 0.16);
 }
 
 html[data-theme="dark"] {
-  --global-bg-color: #12181f;
-  --global-card-bg-color: #1a2230;
-  --global-text-color: #dee3e9;
-  --global-text-color-light: #98a2ae;
-  --global-theme-color: #7eb2dd;
-  --global-hover-color: #a8ccec;
-  --global-hover-text-color: #12181f;
-  --global-highlight-color: #4a7ab5;
-  --global-divider-color: #263243;
-  --global-footer-bg-color: #12181f;
-  --global-footer-text-color: #98a2ae;
-  --global-footer-link-color: #7eb2dd;
-  --global-code-bg-color: rgba(126, 178, 221, 0.08);
+  --global-bg-color: #1a1513;
+  --global-card-bg-color: #231d1a;
+  --global-text-color: #{$paper};
+  --global-text-color-light: #aba59b;
+  --global-theme-color: #{$vermilion};
+  --global-hover-color: #{$pink};
+  --global-hover-text-color: #1a1513;
+  --global-highlight-color: #{$saffron};
+  --global-divider-color: #342b27;
+  --global-footer-bg-color: #1a1513;
+  --global-footer-text-color: #aba59b;
+  --global-footer-link-color: #{$vermilion};
+  --global-code-bg-color: rgba(228, 61, 18, 0.1);
+  --global-newsletter-bg-color: #231d1a;
+  --global-newsletter-text-color: #{$paper};
 
-  --accent-secondary: #4a7ab5;
-  --accent-tint: #7eb2dd;
-  --selection-bg: rgba(126, 178, 221, 0.3);
-  --meta-mono: #8794a3;
-  --hairline: #263243;
+  --accent-secondary: #{$saffron};
+  --accent-tint: rgba(214, 83, 109, 0.22);
+  --selection-bg: rgba(214, 83, 109, 0.45);
+  --meta-mono: #9a9389;
+  --hairline: #342b27;
+  --shadow-ink: rgba(0, 0, 0, 0.45);
 
   // photos otherwise appear to brighten against the dark surround
   .profile img,
   figure img {
-    filter: brightness(0.86) contrast(1.02);
+    filter: brightness(0.9) contrast(1.02);
   }
 }
 
@@ -103,12 +122,17 @@ h6 {
 }
 
 a {
+  color: var(--global-theme-color);
   text-underline-offset: 0.16em;
   transition:
     color 0.15s ease,
     text-decoration-color 0.15s ease,
     border-color 0.15s ease,
     background-color 0.15s ease;
+
+  &:hover {
+    color: var(--global-hover-color);
+  }
 }
 
 article a:not(.btn):not(.nav-link):not(.section-label a) {
@@ -129,18 +153,18 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
 }
 
 // ---------------------------------------------------------------------------
-// Section labels — overline style, with the reconstruction asterisk
+// Section labels — rubricated overlines, with the reconstruction asterisk
 // ---------------------------------------------------------------------------
 
 .section-label,
 .post article > h2:not(.section-label),
 .teaching-list .teaching-group {
   font-family: $sans-stack;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--global-text-color-light);
+  color: var(--global-theme-color);
   border-bottom: 1px solid var(--hairline);
   padding-bottom: 0.65rem;
   margin-top: 4rem;
@@ -164,7 +188,7 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
   }
 
   a:hover {
-    color: var(--global-theme-color);
+    color: var(--global-hover-color);
   }
 }
 
@@ -173,9 +197,9 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
 // ---------------------------------------------------------------------------
 
 .navbar.navbar-light {
-  background-color: color-mix(in srgb, var(--global-bg-color) 86%, transparent) !important;
-  backdrop-filter: saturate(1.4) blur(12px);
-  -webkit-backdrop-filter: saturate(1.4) blur(12px);
+  background-color: color-mix(in srgb, var(--global-bg-color) 88%, transparent) !important;
+  backdrop-filter: saturate(1.3) blur(12px);
+  -webkit-backdrop-filter: saturate(1.3) blur(12px);
   border-bottom: 1px solid var(--hairline);
   box-shadow: none !important;
   padding-top: 0.9rem;
@@ -184,14 +208,19 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
   .navbar-brand {
     font-family: $serif-stack;
     font-size: 1.2rem;
+    font-weight: 600 !important;
     letter-spacing: 0.01em;
     color: var(--global-text-color);
 
     &::before {
       content: "*";
-      color: var(--accent-secondary);
+      color: var(--global-theme-color);
       font-weight: 700;
       margin-right: 0.3rem;
+    }
+
+    &:hover {
+      color: var(--global-theme-color);
     }
   }
 
@@ -199,7 +228,7 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
     font-family: $sans-stack;
     font-size: 0.84rem;
     font-weight: 500;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     color: var(--global-text-color-light);
     padding: 0.4rem 0.15rem;
     margin-left: 1.1rem;
@@ -212,7 +241,7 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
       background-size 0.22s ease;
 
     &:hover {
-      color: var(--global-theme-color);
+      color: var(--global-text-color);
       background-size: 100% 2px;
     }
   }
@@ -221,6 +250,10 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
     font-weight: 600;
     color: var(--global-theme-color);
     background-size: 100% 2px;
+  }
+
+  .navbar-toggler .icon-bar {
+    background-color: var(--global-text-color);
   }
 }
 
@@ -241,20 +274,20 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
 // ---------------------------------------------------------------------------
 
 .about-page .post-header {
-  padding-top: 2.75rem;
-  margin-bottom: 2rem;
+  padding-top: 3rem;
+  margin-bottom: 2.25rem;
 
   .post-title {
-    font-size: clamp(2.5rem, 6vw, 3.6rem);
+    font-size: clamp(2.6rem, 6.5vw, 3.9rem);
     font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.08;
-    margin-bottom: 0.85rem;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    margin-bottom: 0.9rem;
   }
 
   .desc {
     font-family: $sans-stack;
-    font-size: 0.98rem;
+    font-size: 1rem;
     color: var(--global-text-color-light);
     max-width: 44rem;
     margin-bottom: 0;
@@ -262,17 +295,18 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
     .ipa-name {
       font-family: $mono-stack;
       font-size: 0.88rem;
-      color: var(--meta-mono);
+      color: var(--global-theme-color);
       display: inline-block;
       margin-right: 0.25rem;
     }
 
     a {
-      color: var(--global-theme-color);
+      color: var(--global-text-color);
       text-decoration: none;
-      border-bottom: 1px solid color-mix(in srgb, var(--global-theme-color) 35%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--global-theme-color) 50%, transparent);
 
       &:hover {
+        color: var(--global-theme-color);
         border-bottom-color: var(--global-theme-color);
       }
     }
@@ -281,10 +315,10 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
   .desc::after {
     content: "";
     display: block;
-    width: 3.5rem;
-    height: 2px;
-    margin-top: 1.5rem;
-    background: linear-gradient(to right, var(--accent-secondary), var(--global-theme-color));
+    width: 4rem;
+    height: 3px;
+    margin-top: 1.6rem;
+    background: linear-gradient(to right, #{$vermilion} 0 50%, #{$rose} 50% 75%, #{$saffron} 75%);
   }
 }
 
@@ -294,9 +328,26 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
   gap: 3rem;
   align-items: start;
 
+  // on narrow screens the portrait leads, ahead of the bio
   @media (max-width: 767px) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+
+    .profile {
+      order: -1;
+    }
   }
+}
+
+// rubricated initial on the opening paragraph of the bio
+.hero-body > p:first-child::first-letter {
+  float: left;
+  font-family: $serif-stack;
+  font-size: 3.55em;
+  font-weight: 700;
+  line-height: 0.82;
+  color: var(--global-theme-color);
+  margin: 0.08em 0.1em 0 0;
 }
 
 .about-page .profile {
@@ -307,10 +358,10 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
 
   img.portrait,
   img {
-    border-radius: 14px;
-    box-shadow:
-      0 1px 2px rgba(18, 24, 31, 0.06),
-      0 10px 30px rgba(18, 24, 31, 0.12);
+    border-radius: 4px;
+    outline: 1px solid var(--hairline);
+    outline-offset: 6px;
+    box-shadow: 0 12px 32px -12px var(--shadow-ink);
   }
 
   .more-info {
@@ -318,7 +369,9 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
     font-size: 0.76rem;
     line-height: 1.6;
     color: var(--global-text-color-light);
-    margin-top: 1rem;
+    margin-top: 1.25rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--hairline);
 
     p {
       margin-bottom: 0;
@@ -328,20 +381,21 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
       font-family: $sans-stack;
       font-size: 0.68rem;
       font-weight: 600;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--meta-mono);
+      color: var(--global-theme-color);
     }
   }
 
   @media (max-width: 767px) {
+    width: 100%;
     max-width: 240px;
-    margin: 0 auto 1.75rem;
+    margin: 0 auto 2.25rem;
   }
 }
 
 .interest-tags {
-  margin-top: 1.4rem;
+  margin-top: 1.6rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
@@ -350,15 +404,19 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
     font-family: $sans-stack;
     font-size: 0.74rem;
     font-weight: 500;
-    letter-spacing: 0.04em;
-    color: var(--global-text-color-light);
-    border: 1px solid var(--hairline);
-    border-radius: 999px;
-    padding: 0.2rem 0.7rem;
-    transition: border-color 0.15s ease;
+    letter-spacing: 0.03em;
+    color: var(--global-text-color);
+    background: var(--accent-tint);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 0.22rem 0.65rem;
+    transition:
+      border-color 0.15s ease,
+      color 0.15s ease;
 
     &:hover {
-      border-color: var(--accent-secondary);
+      color: var(--global-theme-color);
+      border-color: color-mix(in srgb, var(--global-theme-color) 45%, transparent);
     }
   }
 }
@@ -366,6 +424,26 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
 // ---------------------------------------------------------------------------
 // Publications — editorial bibliography
 // ---------------------------------------------------------------------------
+
+.bibsearch-form-input {
+  font-family: $sans-stack;
+  font-size: 0.9rem;
+  color: var(--global-text-color);
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  box-shadow: none;
+  padding: 0.55rem 0.85rem;
+  transition: border-color 0.15s ease;
+
+  &::placeholder {
+    color: var(--global-text-color-light);
+  }
+
+  &:focus {
+    border-color: var(--global-theme-color);
+  }
+}
 
 .publications {
   h1 {
@@ -382,16 +460,28 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--meta-mono);
+    color: var(--global-theme-color);
     text-align: left;
+    border-top: none;
     border-bottom: 1px solid var(--hairline);
+    padding-top: 0;
     padding-bottom: 0.6rem;
     margin-top: 3.25rem;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.6rem;
   }
 
   ol.bibliography li {
-    margin-bottom: 1.9rem;
+    margin-bottom: 2rem;
+
+    // entries without an abbreviation badge get the full width
+    .abbr:not(:has(*)) {
+      display: none;
+
+      + [class*="col-sm-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
 
     .title {
       font-weight: 700;
@@ -402,6 +492,11 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
     .author {
       color: var(--global-text-color-light);
       font-size: 0.95rem;
+
+      > em {
+        color: var(--global-text-color);
+        border-bottom: 1px solid color-mix(in srgb, var(--global-theme-color) 55%, transparent);
+      }
     }
 
     .periodical {
@@ -427,22 +522,22 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
     }
   }
 
-  // link rows: quiet text links, not pills
+  // link rows: quiet text links, not pills (DOI / HTML / BibTeX all alike)
   .links a.btn,
   .links button.btn,
+  ol.bibliography li .links a.btn,
   button.btn {
     font-family: $sans-stack;
-    font-size: 0.78rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--global-theme-color);
     background: transparent;
     border: none;
     border-radius: 0;
     padding: 0.1rem 0;
-    margin-right: 1.1rem;
-    margin-bottom: 0.2rem;
+    margin: 0.35rem 1.25rem 0.2rem 0;
     box-shadow: none !important;
     background-image: linear-gradient(var(--global-theme-color), var(--global-theme-color));
     background-repeat: no-repeat;
@@ -459,16 +554,46 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
     }
   }
 
+  // year column (presentations)
   .badge.danger-color-dark {
     font-family: $mono-stack;
-    font-size: 0.76rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    color: var(--meta-mono) !important;
+    font-size: 0.82rem;
+    font-weight: 500 !important;
+    letter-spacing: 0.04em;
+    color: var(--global-theme-color) !important;
     background-color: transparent !important;
-    border: 1px solid var(--hairline);
-    border-radius: 999px;
-    padding: 0.3rem 0.6rem;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0.2rem 0;
+    min-width: 0 !important;
+  }
+
+  > .row {
+    padding-bottom: 1.4rem;
+    margin-bottom: 1.4rem !important;
+    background-image: linear-gradient(var(--hairline), var(--hairline));
+    background-repeat: no-repeat;
+    background-position: 15px 100%;
+    background-size: calc(100% - 30px) 1px;
+
+    &:last-child {
+      background-image: none;
+    }
+
+    > .col-sm-2 {
+      text-align: left !important;
+
+      @media (min-width: 576px) {
+        flex: 0 0 6rem;
+        max-width: 6rem;
+
+        + .col-sm-10 {
+          flex: 1 1 0;
+          max-width: none;
+        }
+      }
+    }
   }
 
   .row .title {
@@ -486,7 +611,8 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
     font-size: 0.8rem;
     background: var(--global-code-bg-color);
     border: 1px solid var(--hairline);
-    border-radius: 10px;
+    border-left: 3px solid var(--global-theme-color);
+    border-radius: 4px;
     padding: 0.9rem 1.1rem;
   }
 }
@@ -497,11 +623,12 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
 
 .post-header:not(.hero) {
   padding-top: 2.25rem;
+  margin-bottom: 1.5rem;
 
   .post-title {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     font-weight: 700;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
   }
 
   .post-description {
@@ -541,7 +668,7 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
     transition: border-color 0.2s ease;
 
     &:hover {
-      border-left-color: var(--accent-secondary);
+      border-left-color: var(--global-theme-color);
     }
 
     .card-title {
@@ -554,8 +681,44 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
     }
   }
 
+  .list-group-item {
+    background-color: transparent;
+    border-color: var(--hairline);
+  }
+
+  .card .list-group-item .badge.danger-color-dark {
+    font-family: $mono-stack;
+    font-size: 0.74rem;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em;
+    color: var(--global-theme-color) !important;
+    background-color: transparent !important;
+    border: 1px solid color-mix(in srgb, var(--global-theme-color) 35%, transparent);
+    border-radius: 3px;
+    box-shadow: none;
+    padding: 0.25rem 0.4rem;
+  }
+
+  i.iconinstitution,
+  i.iconlocation {
+    color: var(--accent-secondary);
+  }
+
   .table {
     font-size: 0.98rem;
+  }
+}
+
+// CV sidebar table of contents
+#toc-sidebar nav a,
+nav#toc-sidebar a {
+  font-family: $sans-stack;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+
+  &:hover,
+  &.active {
+    color: var(--global-theme-color);
   }
 }
 
@@ -575,10 +738,10 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
       font-family: $mono-stack;
       font-size: 0.76rem;
       font-weight: 500;
-      color: var(--meta-mono);
-      border: 1px solid var(--hairline);
-      border-radius: 999px;
-      padding: 0.08rem 0.55rem;
+      color: var(--global-theme-color);
+      border: 1px solid color-mix(in srgb, var(--global-theme-color) 35%, transparent);
+      border-radius: 3px;
+      padding: 0.08rem 0.45rem;
       margin-left: 0.45rem;
       vertical-align: 0.12em;
       white-space: nowrap;
@@ -596,20 +759,25 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
 // ---------------------------------------------------------------------------
 
 .social {
-  margin-top: 3.5rem;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--hairline);
 
   .contact-icons {
-    font-size: 1.55rem;
+    font-size: 1.45rem;
     display: flex;
     justify-content: center;
-    gap: 1.4rem;
+    gap: 1.5rem;
 
     a {
       color: var(--global-text-color-light);
-      transition: color 0.15s ease;
+      transition:
+        color 0.15s ease,
+        transform 0.15s ease;
 
       &:hover {
         color: var(--global-theme-color);
+        transform: translateY(-2px);
       }
     }
   }
@@ -629,6 +797,12 @@ footer {
   background-color: transparent !important;
   color: var(--global-text-color-light) !important;
   border-top: 1px solid var(--hairline);
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+
+  .container {
+    color: inherit;
+  }
 
   a {
     color: var(--global-theme-color) !important;
@@ -648,6 +822,7 @@ figcaption,
 code {
   font-family: $mono-stack;
   font-size: 0.88em;
+  color: inherit;
   background: var(--global-code-bg-color);
   border-radius: 4px;
   padding: 0.1em 0.35em;
