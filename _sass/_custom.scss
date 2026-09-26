@@ -421,6 +421,27 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
   }
 }
 
+// topic tags on publications and presentations (same vocabulary as the
+// interest tags on the front page)
+.entry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.45rem;
+
+  span {
+    font-family: $sans-stack;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.5;
+    color: var(--global-text-color-light);
+    background: var(--accent-tint);
+    border-radius: 3px;
+    padding: 0.08rem 0.5rem;
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Publications — editorial bibliography
 // ---------------------------------------------------------------------------

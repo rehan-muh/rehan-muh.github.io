@@ -51,6 +51,12 @@ year = { {{ presentation.year | default: '' }} }
             <div class="periodical"><em>{{ presentation.institution | escape }}</em></div>
           {% endif %}
 
+          {% if presentation.tags %}
+            <div class="entry-tags">
+              {% for tag in presentation.tags %}<span>{{ tag | escape }}</span>{% endfor %}
+            </div>
+          {% endif %}
+
           <div class="links mt-2">
             <button class="btn btn-sm z-depth-0 bibtex-toggle" type="button" data-bibtex-target="{{ bibtex_panel_id }}">BibTeX</button>
             <textarea id="{{ citation_id }}" class="d-none" aria-hidden="true">{{ presentation_bibtex | escape }}</textarea>

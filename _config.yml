@@ -296,6 +296,7 @@ filtered_bibtex_keywords:
     selected,
     slides,
     supp,
+    tags,
     title_html,
     video,
     website,
