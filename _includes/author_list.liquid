@@ -1,0 +1,12 @@
+{%- comment -%}
+  Renders an ordered author list as "A", "A and B", or "A, B, and C",
+  emphasising the site owner. Pass the list as `authors`.
+{%- endcomment -%}
+{%- assign self_name = site.first_name | append: ' ' | append: site.last_name -%}
+{%- assign author_count = include.authors | size -%}
+{%- for author in include.authors -%}
+  {%- unless forloop.first -%}
+    {%- if author_count == 2 -%}{{ ' and ' }}{%- elsif forloop.last -%}{{ ', and ' }}{%- else -%}{{ ', ' }}{%- endif -%}
+  {%- endunless -%}
+  {%- if author == self_name -%}<em>{{ author | escape }}</em>{%- else -%}{{ author | escape }}{%- endif -%}
+{%- endfor -%}

@@ -7,6 +7,8 @@ nav_order: 3
 ---
 
 {% assign presentations_section = site.data.cv | where_exp: "section", "section.title == 'Presentations & Posters'" | first %}
+{% assign self_name = site.first_name | append: ' ' | append: site.last_name %}
+{% assign self_only = self_name | split: '|' %}
 
 <div class="publications">
   {% if presentations_section and presentations_section.contents %}
@@ -14,6 +16,8 @@ nav_order: 3
       {% assign citation_id = 'presentation-citation-' | append: forloop.index %}
       {% assign bibtex_panel_id = 'presentation-bibtex-panel-' | append: forloop.index %}
       {% assign generated_key = presentation.title | default: 'presentation' | slugify | append: presentation.year %}
+      {% assign presentation_authors = presentation.authors | default: self_only %}
+      {% assign presentation_venue = presentation.venue | default: presentation.institution %}
 
       {% if presentation.bibtex %}
         {% assign presentation_bibtex = presentation.bibtex | strip %}
@@ -21,8 +25,8 @@ nav_order: 3
         {% capture presentation_bibtex %}@misc{ {{ generated_key }},
 
 title = { {{ presentation.title | default: 'Presentation' }} },
-author = { Muhammad Rehan },
-howpublished = { {{ presentation.institution | default: 'Presentation' }} },
+author = { {{ presentation_authors | join: ' and ' }} },
+howpublished = { {{ presentation_venue | default: 'Presentation' }} },
 note = { Presentation },
 year = { {{ presentation.year | default: '' }} }
 }{% endcapture %}
@@ -47,8 +51,10 @@ year = { {{ presentation.year | default: '' }} }
             <div class="title">{{ presentation.title | escape }}</div>
           {% endif %}
 
-          {% if presentation.institution %}
-            <div class="periodical"><em>{{ presentation.institution | escape }}</em></div>
+          <div class="author">{% include author_list.liquid authors=presentation_authors %}</div>
+
+          {% if presentation_venue %}
+            <div class="periodical"><em>{{ presentation_venue | escape }}</em></div>
           {% endif %}
 
           {% if presentation.tags %}

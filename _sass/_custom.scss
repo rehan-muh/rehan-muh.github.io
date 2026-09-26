@@ -627,6 +627,18 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
     color: var(--global-text-color-light);
   }
 
+  // presentation bylines, styled like the bibliography's
+  .row .author {
+    font-size: 0.95rem;
+    color: var(--global-text-color-light);
+
+    em {
+      font-style: normal;
+      color: var(--global-text-color);
+      border-bottom: 1px solid color-mix(in srgb, var(--global-theme-color) 55%, transparent);
+    }
+  }
+
   pre {
     font-family: $mono-stack;
     font-size: 0.8rem;
