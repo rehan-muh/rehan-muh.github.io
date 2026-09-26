@@ -16,7 +16,12 @@ layout: default
 
   <article>
     <div class="hero-grid">
-      <div class="hero-body clearfix">{{ content }}</div>
+      <div class="hero-body clearfix">
+        {{ content }}
+        {% if page.interests %}
+          {% include topic_filter.liquid %}
+        {% endif %}
+      </div>
 
       {% if page.profile %}
         <aside class="profile">

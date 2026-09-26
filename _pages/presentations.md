@@ -39,7 +39,7 @@ year = { {{ presentation.year | default: '' }} }
 
       {% assign show_download_button = presentation_download != blank %}
 
-      <div class="row mb-4">
+      <div class="row mb-4" id="{{ generated_key | slugify }}">
         <div class="col-sm-2 text-sm-center mb-2 mb-sm-0">
           {% if presentation.year %}
             <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">{{ presentation.year }}</span>
@@ -55,12 +55,6 @@ year = { {{ presentation.year | default: '' }} }
 
           {% if presentation_venue %}
             <div class="periodical"><em>{{ presentation_venue | escape }}</em></div>
-          {% endif %}
-
-          {% if presentation.tags %}
-            <div class="entry-tags">
-              {% for tag in presentation.tags %}<span>{{ tag | escape }}</span>{% endfor %}
-            </div>
           {% endif %}
 
           <div class="links mt-2">

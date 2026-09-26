@@ -184,12 +184,6 @@
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
-    {% if entry.tags %}
-      {% assign entry_tags = entry.tags | split: ',' %}
-      <div class="entry-tags">
-        {% for tag in entry_tags %}<span>{{ tag | strip | escape }}</span>{% endfor %}
-      </div>
-    {% endif %}
 
     {% assign citation_key = entry.key | default: entry.title | slugify | append: entry.year %}
     {% assign citation_id = 'citation-' | append: citation_key | slugify %}

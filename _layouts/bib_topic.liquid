@@ -1,0 +1,16 @@
+---
+---
+{% comment %}
+  Compact publication entry for the topic filter on the about page. Tags are
+  carried as data only and never shown.
+{% endcomment %}
+{% assign entry_venue = entry.journal | default: entry.booktitle | default: entry.publisher | default: entry.school %}
+<div class="topic-item" data-tags="{{ entry.tags | downcase | split: ',' | join: '|' | escape }}">
+  <span class="topic-year">{{ entry.year }}</span>
+  <div class="topic-body">
+    <a class="topic-title" href="{{ '/publications/' | relative_url }}#{{ entry.key }}">{{ entry.title_html | default: entry.title }}</a>
+    {% if entry_venue %}
+      <div class="topic-venue">{{ entry_venue }}</div>
+    {% endif %}
+  </div>
+</div>

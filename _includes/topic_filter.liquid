@@ -1,0 +1,49 @@
+{% comment %}
+  Research-interest tags on the about page. Each tag filters the publications
+  (`tags` field in papers.bib) and presentations (`tags` in cv.yml) that carry
+  it; the tags themselves are never displayed on the entries.
+{% endcomment %}
+{% assign presentations_section = site.data.cv | where_exp: 'section', "section.title == 'Presentations & Posters'" | first %}
+
+<div class="interest-tags" role="group" aria-label="Filter work by research area">
+  {% for interest in page.interests %}
+    <button type="button" class="topic-tag" data-topic="{{ interest | downcase | escape }}" aria-pressed="false" aria-controls="topic-results">
+      {{- interest | escape -}}
+    </button>
+  {% endfor %}
+</div>
+
+<section id="topic-results" class="topic-results" hidden aria-live="polite">
+  <div class="topic-results-head">
+    <p class="topic-summary"></p>
+    <button type="button" class="topic-clear">Clear</button>
+  </div>
+
+  <div class="topic-group" data-group="publications">
+    <h3 class="topic-group-label">Publications</h3>
+    <div class="topic-list">
+      {% bibliography --group_by none --template bib_topic %}
+    </div>
+  </div>
+
+  <div class="topic-group" data-group="presentations">
+    <h3 class="topic-group-label">Presentations</h3>
+    <div class="topic-list">
+      {% for presentation in presentations_section.contents %}
+        {% assign generated_key = presentation.title | default: 'presentation' | slugify | append: presentation.year %}
+        {% assign presentation_venue = presentation.venue | default: presentation.institution %}
+        <div class="topic-item" data-tags="{{ presentation.tags | join: '|' | downcase | escape }}">
+          <span class="topic-year">{{ presentation.year }}</span>
+          <div class="topic-body">
+            <a class="topic-title" href="{{ '/presentations/' | relative_url }}#{{ generated_key | slugify }}">{{ presentation.title | escape }}</a>
+            {% if presentation_venue %}
+              <div class="topic-venue">{{ presentation_venue | escape }}</div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script defer src="{{ '/assets/js/topic-filter.js' | relative_url | bust_file_cache }}"></script>
