@@ -38,6 +38,6 @@ latest_posts:
   enabled: false
 ---
 
-I am a 4th year PhD student in the Program in Indo-European Studies at UCLA. Trained as a historical linguist, Indo-Europeanist, and a phonologist, I am broadly interested in the evolution and spatial distributions of phonological variables. My work asks why sound systems vary across languages and how they change over time. To answer this, I combine Bayesian spatial and phylogenetic models with large-scale analyses of phonetic and experimental data.
+I am a 4th year PhD student in the Program in Indo-European Studies at UCLA. Trained as a historical linguist, Indo-Europeanist, and a phonologist, I am broadly interested in the evolution and spatial distributions of phonological variables. To study this, I combine Bayesian spatial and phylogenetic models with large-scale analyses of phonetic and experimental data.
 
 Please look around and feel free to contact me with questions about any of my work and requests for code. I am also very happy to collaborate on projects if you see something on the site that catches your eye!
