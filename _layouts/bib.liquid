@@ -48,7 +48,7 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    <div class="title">{{ entry.title_html | default: entry.title }}</div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -189,7 +189,7 @@
     {% assign citation_id = 'citation-' | append: citation_key | slugify %}
     {% assign bibtex_panel_id = 'bibtex-panel-' | append: citation_key | slugify %}
     {% if entry.bibtex %}
-      {% assign publication_bibtex = entry.bibtex | strip %}
+      {% assign publication_bibtex = entry.bibtex | hideCustomBibtex | strip %}
     {% else %}
       {% capture publication_bibtex %}@article{ {{ citation_key | slugify }},
   title = { {{ entry.title | default: 'Publication' }} },
