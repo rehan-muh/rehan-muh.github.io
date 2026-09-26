@@ -259,6 +259,13 @@ article a:not(.btn):not(.nav-link):not(.section-label a) {
   }
 }
 
+// Reserve the navbar's real height up front (padding + brand line + border).
+// progress-bar.js sets the same value on load; the stock 56px left a gap it
+// then closed, which shoved the page down by ~16px on every load.
+body.fixed-top-nav {
+  padding-top: calc(1.8rem + 1.2rem * 1.7 + 0.625rem + 1px);
+}
+
 #progress {
   background-color: transparent;
 
