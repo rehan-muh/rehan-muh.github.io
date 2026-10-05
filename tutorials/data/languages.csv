@@ -1,0 +1,501 @@
+"glottocode","name","family","macroarea","lat","lon","elevation","ejectives","n_consonants","n_vowels","tone"
+"adyg1241","West Circassian","Abkhaz-Adyge","Eurasia",44,39.33,235,1,56,3,0
+"beja1238","Beja","Afro-Asiatic","Africa",17.2436,36.6666,378,0,21,5,0
+"alab1254","Alaba-K'abeena","Afro-Asiatic","Africa",7.3901,38.1732,2029,1,52,10,0
+"kamb1316","Kambaata","Afro-Asiatic","Africa",7.3758,37.9088,2105,1,49,10,0
+"hadi1240","Hadiyya","Afro-Asiatic","Africa",7.5738,37.7577,2182,1,46,10,0
+"east2652","Eastern Oromo","Afro-Asiatic","Africa",8.6743,41.4395,1417,1,48,10,1
+"rend1243","Rendille","Afro-Asiatic","Africa",2.2706,37.3608,531,0,21,10,1
+"tsam1247","Tsamai","Afro-Asiatic","Africa",5.3097,36.9139,805,1,56,10,1
+"bili1260","Bilin","Afro-Asiatic","Africa",15.7833,38.3917,1643,1,31,7,0
+"bade1248","Bade","Afro-Asiatic","Africa",12.789,10.6557,344,0,33,9,1
+"gwan1268","Gwandara","Afro-Asiatic","Africa",9.2046,7.4993,741,0,28,10,1
+"pero1241","Pero","Afro-Asiatic","Africa",9.6209,11.044,323,0,18,10,1
+"bare1279","Barain","Afro-Asiatic","Africa",10.9701,17.9117,400,0,28,10,1
+"cuvo1236","Cuvok","Afro-Asiatic","Africa",10.6448,14.0006,639,0,27,2,0
+"fali1285","Fali","Afro-Asiatic","Africa",10.5419,13.4087,837,1,38,7,1
+"gude1246","Gude","Afro-Asiatic","Africa",10.2138,13.403,868,0,30,4,1
+"tera1251","Tera","Afro-Asiatic","Africa",11.0376,11.8095,378,0,42,6,0
+"dghw1239","Dghwede","Afro-Asiatic","Africa",11.0575,13.7785,657,0,33,3,1
+"park1239","Parkwa","Afro-Asiatic","Africa",11.0206,14.0964,571,0,31,4,0
+"marg1265","Marghi Central","Afro-Asiatic","Africa",10.9385,13.0521,427,0,36,6,1
+"hdii1240","Hdi","Afro-Asiatic","Africa",10.942,13.6881,640,0,37,4,0
+"mpad1242","Mpade","Afro-Asiatic","Africa",12.5614,14.4469,290,1,30,6,1
+"vame1236","Vame","Afro-Asiatic","Africa",10.9481,14.2131,414,0,38,5,1
+"tigr1271","Tigrinya","Afro-Asiatic","Africa",15.3359,38.9266,2337,1,59,7,0
+"hara1271","Harari","Afro-Asiatic","Africa",9.3048,42.1332,1872,1,25,9,0
+"zayy1238","Zay","Afro-Asiatic","Africa",8.0115,38.8258,1636,0,23,14,0
+"kist1241","Kistane","Afro-Asiatic","Africa",8.3356,38.4763,2577,1,34,7,0
+"tigr1270","Tigre","Afro-Asiatic","Africa",17.3494,38.2233,2059,1,47,7,0
+"hebr1245","Modern Hebrew","Afro-Asiatic","Eurasia",31.1056,35.0179,534,0,24,6,0
+"stan1318","Standard Arabic","Afro-Asiatic","Eurasia",27.9625,43.8525,628,0,29,8,0
+"malt1254","Maltese","Afro-Asiatic","Eurasia",35.8884,14.4508,60,0,45,10,0
+"nubi1253","Nubi","Afro-Asiatic","Africa",-0.1832,34.7552,400,0,30,5,0
+"sheh1240","Jibbali","Afro-Asiatic","Eurasia",17.2915,53.9953,769,1,30,8,0
+"siwi1239","Siwi","Afro-Asiatic","Africa",29.2004,25.5196,0,0,26,12,0
+"east2542","Eastern Ojibwa","Algic","North America",45.0112,-79.7503,210,0,16,11,0
+"unam1242","Unami","Algic","North America",40.4,-74.3,28,0,22,17,0
+"ando1256","Andoque","Isolate: Andoque","South America",-0.5375,-72.0869,172,0,11,15,0
+"cabi1241","Cabiyarí","Arawakan","South America",0.161,-71.0622,189,0,12,5,0
+"acha1250","Achagua","Arawakan","South America",4.3865,-72.2005,174,0,19,10,0
+"yucu1253","Yucuna","Arawakan","South America",-0.7608,-71.0033,156,0,16,5,0
+"caqu1242","Caquinte","Arawakan","South America",-11.4812,-73.4451,739,0,19,8,0
+"mach1267","Machiguenga","Arawakan","South America",-12.1291,-72.5017,1822,0,18,9,0
+"igna1246","Ignaciano","Arawakan","South America",-15.1188,-65.3993,158,0,21,4,0
+"trin1274","Trinitario-Javeriano-Loretano","Arawakan","South America",-15.3331,-65.4096,164,0,18,12,0
+"yine1238","Yine","Arawakan","South America",-11.1086,-73.3087,351,0,16,10,0
+"mehi1240","Mehináku","Arawakan","South America",-12.5364,-53.521,311,0,13,10,0
+"wapi1253","Wapishana","Arawakan","South America",2.5874,-59.8021,131,0,17,12,0
+"yavi1244","Yavitero-Pareni","Arawakan","South America",2.9248,-67.4389,103,0,17,4,0
+"jama1261","Madi","Arawan","South America",-7.6222,-66.5662,91,0,11,4,0
+"deni1241","Deni","Arawan","South America",-6.7496,-67.5029,141,0,18,4,0
+"tana1290","Tanacross","Athabaskan-Eyak-Tlingit","North America",63.4046,-143.338,485,1,35,14,1
+"abar1238","Mungbam","Atlantic-Congo","Africa",6.5805,10.2267,792,0,24,8,1
+"ambe1247","Ambele","Atlantic-Congo","Africa",5.9404,9.6203,619,0,38,10,1
+"befa1241","Menchum","Atlantic-Congo","Africa",6.2756,10.0342,623,0,43,14,1
+"awin1248","Awing","Atlantic-Congo","Africa",5.8836,10.264,1866,0,39,17,0
+"piny1238","Pinyin","Atlantic-Congo","Africa",5.7991,10.0682,1841,0,42,19,1
+"mung1266","Mungaka","Atlantic-Congo","Africa",5.8975,10.0294,1347,0,21,9,1
+"bame1260","Bamenyam","Atlantic-Congo","Africa",5.7705,10.3302,1219,0,39,11,0
+"ngom1271","Ngombale","Atlantic-Congo","Africa",5.7031,10.1446,1759,0,37,19,1
+"mfum1238","Southern Mfumte","Atlantic-Congo","Africa",6.6,10.9364,773,0,74,10,1
+"bumm1238","Bum","Atlantic-Congo","Africa",6.4866,10.418,1284,0,37,7,1
+"mmen1238","Mmen","Atlantic-Congo","Africa",6.4321,10.2541,1102,0,27,9,1
+"komc1235","Kom (Cameroon)","Atlantic-Congo","Africa",6.2596,10.3348,1713,0,59,9,1
+"bako1249","Bakoko","Atlantic-Congo","Africa",3.5652,9.999,40,0,26,7,0
+"bank1256","Bankon","Atlantic-Congo","Africa",4.3702,9.6403,93,0,26,7,1
+"fang1246","Fang (Equatorial Guinea)","Atlantic-Congo","Africa",1.724,11.6145,627,0,25,16,0
+"bass1260","Bassossi","Atlantic-Congo","Africa",5.2366,9.5228,320,0,20,12,1
+"mokp1239","Mokpwe","Atlantic-Congo","Africa",4.2418,9.2389,2249,0,22,7,1
+"maka1304","Makaa","Atlantic-Congo","Africa",4.1547,13.0789,714,0,30,21,1
+"myen1241","Myene","Atlantic-Congo","Africa",-1.4874,9.5025,30,0,29,7,0
+"elip1238","Elip","Atlantic-Congo","Africa",4.4569,11.193,421,0,19,7,1
+"tune1261","Tunen","Atlantic-Congo","Africa",4.75,10.67,684,0,17,7,1
+"gwen1239","Gweno","Atlantic-Congo","Africa",-3.6841,37.6827,1008,0,24,5,0
+"kiny1244","Kinyarwanda","Atlantic-Congo","Africa",-1.5677,29.6441,1648,0,39,10,0
+"hang1260","Hangaza","Atlantic-Congo","Africa",-2.5235,30.7074,1410,0,23,10,1
+"jita1239","Jita","Atlantic-Congo","Africa",-1.6268,33.9141,1277,0,17,10,1
+"kway1241","Kwaya","Atlantic-Congo","Africa",-1.8074,33.71,1156,0,17,10,1
+"kuri1259","Kuria","Atlantic-Congo","Africa",-1.5064,34.5049,1178,0,15,7,0
+"nyam1277","Nyambo","Atlantic-Congo","Africa",-1.6096,30.9156,1513,0,20,10,1
+"ngaz1238","Ngazidja Comorian","Atlantic-Congo","Africa",-11.6129,43.36,449,0,41,5,1
+"swah1253","Swahili","Atlantic-Congo","Africa",-8.256,37.624,204,0,31,5,0
+"sumb1240","Sumbwa","Atlantic-Congo","Africa",-3.4734,31.9457,1205,0,20,10,1
+"holo1240","Holoholo","Atlantic-Congo","Africa",-5.3754,28.3274,822,0,17,7,1
+"lega1249","Lega-Shabunda","Atlantic-Congo","Africa",-3.832,27.1424,622,0,18,14,1
+"ndam1239","Ndamba","Atlantic-Congo","Africa",-8.4048,36.0271,312,0,19,5,0
+"zulu1248","Zulu","Atlantic-Congo","Africa",-28.9,30.2,1077,1,35,5,1
+"nort2795","Zimbabwean Ndebele","Atlantic-Congo","Africa",-20.2513,27.4096,1185,1,61,5,1
+"shon1251","Shona","Atlantic-Congo","Africa",-17.2085,29.7572,1207,0,37,5,0
+"tong1318","Tonga (Zambia)","Atlantic-Congo","Africa",-17.4223,27.1035,903,0,33,5,1
+"yaoo1241","Yao","Atlantic-Congo","Africa",-13.6119,35.2387,1136,0,18,7,1
+"hung1278","Hungan","Atlantic-Congo","Africa",-3.697,18.4312,347,0,20,10,1
+"kitu1245","Kituba (Congo)","Atlantic-Congo","Africa",-4.1565,14.5648,434,0,17,5,0
+"kwes1244","Kwese","Atlantic-Congo","Africa",-5.6044,18.5759,779,0,16,6,1
+"luya1241","Luyi","Atlantic-Congo","Africa",-15.01,22.67,1035,0,17,5,0
+"mbuk1240","Mbukushu","Atlantic-Congo","Africa",-17.6827,22.5026,1011,0,22,7,0
+"pagi1243","Pagibete","Atlantic-Congo","Africa",3.1564,22.1212,483,0,42,7,1
+"wong1247","Wongo","Atlantic-Congo","Africa",-5.7384,20.5054,532,0,15,7,1
+"iyiv1238","Iyive","Atlantic-Congo","Africa",6.5044,9.533,372,0,53,7,1
+"naki1238","Naki","Atlantic-Congo","Africa",6.6278,10.2378,689,0,36,8,0
+"ncan1245","Ncane-Mungong","Atlantic-Congo","Africa",6.507,10.5312,983,0,17,18,1
+"baan1242","Baangi","Atlantic-Congo","Africa",10.8083,5.7261,409,0,28,27,1
+"jere1244","Jere","Atlantic-Congo","Africa",10.1962,8.9583,885,0,24,16,1
+"bini1246","Bini","Atlantic-Congo","Africa",6.407,5.7043,122,0,25,21,1
+"yekh1238","Yekhee","Atlantic-Congo","Africa",7.102,6.4492,297,0,26,7,1
+"enge1239","Egene","Atlantic-Congo","Africa",5.1193,6.3734,17,0,20,10,1
+"ekpe1253","Ekpeye","Atlantic-Congo","Africa",5.0672,6.5336,14,0,24,9,1
+"ikwe1242","Ikwere","Atlantic-Congo","Africa",5.0433,6.8665,27,0,23,18,1
+"eloy1241","Ajiri","Atlantic-Congo","Africa",8.247,7.9706,125,0,41,7,1
+"eten1239","Eten","Atlantic-Congo","Africa",9.7307,8.6144,1176,0,63,6,1
+"mada1282","Mada (Nigeria)","Atlantic-Congo","Africa",9.0229,8.3412,472,0,22,13,1
+"ifee1241","Ifè","Atlantic-Congo","Africa",7.6357,1.5849,216,0,19,12,1
+"iged1239","Igede","Atlantic-Congo","Africa",6.9552,8.2736,64,0,24,10,1
+"kohu1244","Kohumono","Atlantic-Congo","Africa",5.926,7.962,33,0,28,10,0
+"obol1243","Obolo","Atlantic-Congo","Africa",4.6285,7.8198,17,0,22,12,1
+"anuf1239","Anufo","Atlantic-Congo","Africa",10.2839,0.5602,136,0,22,19,1
+"baou1238","Baoulé","Atlantic-Congo","Africa",5.4251,-4.7656,13,0,21,12,1
+"anyi1244","Anyin Morofo","Atlantic-Congo","Africa",6.1627,-4.6423,85,0,21,16,0
+"anyi1245","Anyin","Atlantic-Congo","Africa",6.3178,-3.3053,159,0,19,16,1
+"cher1271","Cherepon","Atlantic-Congo","Africa",6.0539,-0.1095,200,0,26,10,1
+"giny1241","Ginyanga","Atlantic-Congo","Africa",8.2327,0.9835,299,0,31,22,0
+"kota1272","Kotafon Gbe","Atlantic-Congo","Africa",6.6403,1.7235,43,0,29,13,1
+"xwel1235","Xwela Gbe","Atlantic-Congo","Africa",6.4134,2.0299,30,0,29,13,1
+"tofi1235","Tofin Gbe","Atlantic-Congo","Africa",6.5177,2.4323,1,0,23,14,1
+"logb1245","Ikpana","Atlantic-Congo","Africa",6.9284,0.4307,160,0,25,7,1
+"sele1249","Selee","Atlantic-Congo","Africa",7.1746,0.4246,324,0,18,12,1
+"siwu1238","Siwu","Atlantic-Congo","Africa",7.2381,0.4436,290,0,20,14,1
+"apro1235","Aproumu Aizi","Atlantic-Congo","Africa",5.2027,-4.5219,12,0,24,9,0
+"baat1238","Baatonum","Atlantic-Congo","Africa",9.6319,2.9961,381,0,18,12,0
+"degg1238","Deg","Atlantic-Congo","Africa",8.4385,-2.2872,157,0,22,30,0
+"vagl1239","Vagla","Atlantic-Congo","Africa",9.3385,-2.3133,319,0,24,30,0
+"kabi1261","Kabiyé","Atlantic-Congo","Africa",8.9682,0.495,194,0,24,23,0
+"bial1238","Biali","Atlantic-Congo","Africa",11.0382,1.0826,151,0,14,10,1
+"nate1242","Nateni","Atlantic-Congo","Africa",10.5191,1.2188,406,0,13,24,1
+"dita1238","Ditammari","Atlantic-Congo","Africa",10.1614,1.1804,354,0,17,12,1
+"gour1243","Gourmanchéma","Atlantic-Congo","Africa",11.6711,1.2849,201,0,20,10,1
+"konk1269","Konkomba","Atlantic-Congo","Africa",9.8222,0.2783,136,0,22,12,1
+"ngan1299","Ngangam","Atlantic-Congo","Africa",10.2523,0.7051,159,0,22,14,1
+"yomm1242","Yom","Atlantic-Congo","Africa",9.8719,1.811,400,0,25,9,1
+"nort2780","Northern Dagara","Atlantic-Congo","Africa",11.0441,-3.0124,307,0,29,9,1
+"sout2789","Central Dagaare","Atlantic-Congo","Africa",10.4226,-2.5226,337,0,24,27,1
+"buli1254","Buli (Ghana)","Atlantic-Congo","Africa",10.5763,-1.2675,199,0,23,13,1
+"buam1238","Buamu","Atlantic-Congo","Africa",11.1687,-3.503,315,0,17,8,1
+"boun1243","Bouna Kulango","Atlantic-Congo","Africa",8.4601,-2.7463,263,0,27,17,1
+"nort2787","Northern Toussian","Atlantic-Congo","Africa",11.133,-4.8827,418,0,16,14,1
+"band1345","Banda-Ndélé","Atlantic-Congo","Africa",8.0334,23.9021,821,0,32,8,1
+"ndog1248","Ndogo","Atlantic-Congo","Africa",7.7303,27.5588,462,0,29,5,1
+"mamb1294","Mambai","Atlantic-Congo","Africa",9.6121,14.0013,246,0,26,24,1
+"gbay1287","Gbaya-Bossangoa","Atlantic-Congo","Africa",6.619,17.645,470,0,31,12,1
+"sena1262","Senar de Kankalaba","Atlantic-Congo","Africa",10.4987,-5.2822,350,0,19,28,1
+"west2466","Western Karaboro","Atlantic-Congo","Africa",10.6298,-4.7648,296,0,20,21,1
+"bady1239","Jaad-Badyara","Atlantic-Congo","Africa",12.6425,-13.4759,67,0,25,18,0
+"jola1263","Jola-Fonyi","Atlantic-Congo","Africa",12.7575,-15.7355,32,0,19,10,0
+"jola1262","Jola-Esulalu","Atlantic-Congo","Africa",12.5089,-16.5539,18,0,31,20,0
+"sere1260","Sereer","Atlantic-Congo","Africa",13.8941,-16.3916,6,0,33,10,0
+"maas1239","Maasina Fulfulde","Atlantic-Congo","Africa",11.1324,-3.6476,300,0,27,10,0
+"pula1262","Pular","Atlantic-Congo","Africa",12.1826,-12.7338,127,0,28,10,0
+"west2454","Western Niger Fulfulde","Atlantic-Congo","Africa",14.2471,-0.52,293,0,27,5,0
+"wame1240","Wamey","Atlantic-Congo","Africa",12.5421,-13.177,80,0,39,7,0
+"nort2765","Northern Kissi","Atlantic-Congo","Africa",8.7283,-10.4063,427,0,22,20,0
+"palo1243","Palor","Atlantic-Congo","Africa",14.8628,-16.9557,102,0,26,17,0
+"blan1242","Blang","Austroasiatic","Eurasia",22.0092,99.7405,1235,0,24,14,1
+"nucl1290","Zhenkang Wa","Austroasiatic","Eurasia",23.1024,99.108,1583,0,27,22,0
+"bodo1267","Bodo Gadaba","Austroasiatic","Eurasia",18.3857,82.771,1037,0,21,19,0
+"kork1243","Korku","Austroasiatic","Eurasia",21.8358,77.5541,466,0,26,11,0
+"hooo1248","Ho","Austroasiatic","Eurasia",23.9596,87.1188,139,0,24,19,0
+"sant1410","Santali","Austroasiatic","Eurasia",25.0317,87.8185,28,0,35,11,0
+"carn1240","Car Nicobarese","Austroasiatic","Eurasia",9.1885,92.7671,40,0,16,9,0
+"cent1989","Central Khmer","Austroasiatic","Eurasia",12.0515,105.015,24,0,21,21,0
+"nort2684","Northern Khmer","Austroasiatic","Eurasia",14.4674,103.863,218,0,24,19,0
+"jahh1242","Jah Hut","Austroasiatic","Eurasia",3.6762,102.291,88,0,22,30,0
+"seme1247","Semelai","Austroasiatic","Eurasia",2.828,102.806,65,0,33,18,0
+"viet1252","Vietnamese","Austroasiatic","Eurasia",20.6812,105.7741,6,0,21,12,1
+"cham1312","Chamorro","Austronesian","Papunesia",13.438,144.7447,76,0,30,6,0
+"sund1252","Sundanese","Austronesian","Papunesia",-6.8971,107.106,531,0,19,7,0
+"anei1239","Aneityum","Austronesian","Papunesia",-20.1864,169.825,436,0,21,5,0
+"iaai1238","Iaai","Austronesian","Papunesia",-20.6301,166.59,17,0,33,19,0
+"kela1255","Kela (Papua New Guinea)","Austronesian","Papunesia",-7.471,147.173,92,0,16,14,0
+"lusi1240","Lusi","Austronesian","Papunesia",-5.5503,149.148,72,0,16,5,0
+"mana1295","Manam","Austronesian","Papunesia",-4.0792,145.033,1165,0,13,5,0
+"siar1238","Siar-Lak","Austronesian","Papunesia",-4.6206,152.892,650,0,15,7,0
+"peta1245","Petats","Austronesian","Papunesia",-5.3407,154.593,165,0,15,15,0
+"tiga1245","Tigak","Austronesian","Papunesia",-2.7095,150.893,33,0,12,5,0
+"pohn1238","Pohnpeian","Austronesian","Papunesia",6.8721,158.223,499,0,14,6,0
+"sata1237","Satawalese","Austronesian","Papunesia",7.3608,147.038,0,0,29,13,0
+"seim1238","Seimat","Austronesian","Papunesia",-1.2667,144.25,0,0,11,17,0
+"east2440","East Makian","Austronesian","Papunesia",0.0734,127.423,107,0,19,5,0
+"bata1289","Batak Toba","Austronesian","Papunesia",2.355,99.1761,950,0,16,5,0
+"cent2092","Central Sama","Austronesian","Papunesia",7.0046,118.456,63,0,30,6,0
+"east2563","Eastern Cham","Austronesian","Eurasia",11.2853,108.49,25,0,24,9,1
+"kupa1239","Kupang Malay","Austronesian","Papunesia",-10.2526,123.63,376,0,19,6,0
+"mala1481","Manado Malay","Austronesian","Papunesia",1.481,124.843,20,0,19,6,0
+"mina1268","Minangkabau","Austronesian","Papunesia",-0.896,100.44,203,0,23,10,0
+"hili1240","Hiligaynon","Austronesian","Papunesia",10.4018,122.974,79,0,20,5,0
+"taga1270","Tagalog","Austronesian","Papunesia",14.06,121.747,156,0,18,10,0
+"idaa1241","Ida'an","Austronesian","Papunesia",5.2906,118.515,43,0,17,6,0
+"tata1257","Tatana","Austronesian","Papunesia",5.4981,115.553,15,0,17,4,0
+"kamb1299","Kambera","Austronesian","Papunesia",-9.8845,120.235,379,0,19,10,0
+"keoo1238","Kéo","Austronesian","Papunesia",-8.8704,121.256,374,0,24,6,0
+"mori1268","Mori Bawah","Austronesian","Papunesia",-2.5602,121.37,583,0,22,5,0
+"muna1247","Muna","Austronesian","Papunesia",-5.4042,122.541,82,0,28,5,0
+"pamp1243","Pampanga","Austronesian","Papunesia",14.9603,120.502,28,0,17,5,0
+"pang1290","Pangasinan","Austronesian","Papunesia",15.9377,120.365,11,0,16,5,0
+"sout2895","South Nuaulu","Austronesian","Papunesia",-3.2341,129.148,123,0,12,5,0
+"taro1264","Seediq","Austronesian","Papunesia",23.9032,121.358,1354,0,33,10,0
+"tsou1248","Tsou","Austronesian","Papunesia",23.216,120.787,1032,0,15,6,0
+"cent2142","Central Aymara","Aymaran","South America",-17,-68.5,4215,1,26,6,0
+"qaqe1238","Qaqet","Baining","Papunesia",-4.4526,151.702,979,0,14,8,0
+"awac1239","Awa-Cuaiquer","Barbacoan","South America",1.2165,-78.3401,511,0,14,7,0
+"colo1256","Tsafiki","Barbacoan","South America",-0.2118,-79.2347,438,0,16,9,0
+"guam1248","Guambiano","Barbacoan","South America",2.5585,-76.582,1730,0,18,6,0
+"bubi1249","Bubia","Bookkeeping","Africa",4.0218,9.223,124,0,25,14,0
+"nucl1668","Katukína","Bookkeeping","South America",-8.1912,-70.3822,161,0,12,8,0
+"bora1263","Bora","Boran","South America",-2.0003,-72.2571,112,0,29,12,0
+"imon1245","Imonda","Border","Papunesia",-3.3123,141.171,324,0,13,10,0
+"chay1248","Shawi","Cahuapanan","South America",-5.6376,-76.8252,1088,0,14,4,0
+"cams1241","Camsá","Isolate: Camsá","South America",1.1454,-76.8931,2498,0,22,6,0
+"apal1257","Apalaí","Cariban","South America",1.4979,-54.7457,369,0,12,12,0
+"akaw1239","Akawaio-Ingariko","Cariban","South America",6.1628,-60.862,897,0,13,10,0
+"cari1279","Carijona","Cariban","South America",1.2189,-72.0664,227,0,14,7,0
+"maqu1238","Ye'kwana","Cariban","South America",4.707,-64.3877,1152,0,12,14,0
+"para1310","Pará Arára","Cariban","South America",-3.7126,-53.0657,193,0,11,6,0
+"mbay1241","Mbay","Central Sudanic","Africa",8.2307,15.7328,466,0,22,19,1
+"arhu1242","Arhuaco","Chibchan","South America",10.7018,-73.6363,3643,0,16,16,0
+"brib1243","Bribri","Chibchan","North America",9.3979,-83.0539,888,0,18,9,0
+"quil1240","Quileute","Chimakuan","North America",47.9106,-124.603,46,1,33,4,0
+"chiq1248","Lomeriano-Ignaciano Chiquitano","Chiquitano","South America",-16.7696,-61.8178,368,0,14,12,0
+"tehu1242","Tehuelche","Chonan","South America",-47.5796,-68.3235,297,1,28,7,0
+"alut1245","Alutor","Chukotko-Kamchatkan","Eurasia",60.3844,165.653,15,0,18,9,0
+"chuk1273","Chukchi","Chukotko-Kamchatkan","Eurasia",68.6436,170.045,21,0,15,7,0
+"kory1246","Koryak","Chukotko-Kamchatkan","Eurasia",63.8977,166.695,193,0,16,5,0
+"kumi1248","Tipai-Kumeyaay-Huerteno","Cochimi-Yuman","North America",32.331,-116.604,337,0,25,9,0
+"cofa1242","Cofán","Isolate: Cofán","South America",0.2767,-77.0643,325,0,30,5,0
+"toro1252","Toro So Dogon","Dogon","Africa",14.4075,-3.1001,281,0,16,12,0
+"jenn1240","Jennu Kurumba","Dravidian","Eurasia",11.5041,76.5767,1810,0,26,7,0
+"ural1274","Urali of Idukki","Dravidian","Eurasia",10.8519,76.8007,435,0,26,20,0
+"tulu1258","Tulu","Dravidian","Eurasia",12.8114,75.2651,72,0,24,13,0
+"west2408","Western Muria","Dravidian","Eurasia",20.2384,80.7006,361,0,21,5,0
+"pott1240","Pottangi Ollar Gadaba","Dravidian","Eurasia",18.5968,82.7586,916,0,22,12,0
+"aleu1260","Aleut","Eskimo-Aleut","North America",52.1228,-174.29,89,0,30,6,0
+"cent2128","Central Siberian Yupik","Eskimo-Aleut","Eurasia",63.4308,-170.272,13,0,32,4,0
+"nort2943","North Alaskan Inupiatun","Eskimo-Aleut","North America",69.582,-143.77,351,0,24,3,0
+"wany1247","Wanyi","Garrwan","Australia",-18.6529,137.608,356,0,14,6,0
+"erre1238","Erre","Giimbiyu","Australia",-12.2839,132.868,11,0,18,5,0
+"yems1235","Yemsa","Ta-Ne-Omotic","Africa",7.7982,37.4412,2227,1,25,10,1
+"wola1242","Wolaytta","Ta-Ne-Omotic","Africa",6.3267,37.7537,1314,1,38,10,0
+"maca1259","Hitnu","Guahiboan","South America",6.3458,-71.2671,149,0,16,6,0
+"cuib1242","Cuiba","Guahiboan","South America",6.1983,-69.8197,98,0,17,8,0
+"guah1255","Sikuani","Guahiboan","South America",5.8174,-68.9839,94,0,17,12,0
+"pila1245","Pilagá","Guaicuruan","South America",-25.0058,-60.1537,118,0,18,4,0
+"anin1240","Anindilyakwa","Gunwinyguan","Australia",-13.999,136.6415,75,0,22,4,0
+"nung1290","Wubuy","Gunwinyguan","Australia",-14.2623,135.753,7,0,19,5,0
+"djau1244","Jawoyn","Gunwinyguan","Australia",-14.1361,133.002,243,0,22,5,0
+"remb1249","Rembarrnga","Gunwinyguan","Australia",-12.9608,134.308,266,0,22,6,0
+"hadz1240","Hadza","Isolate: Hadza","Africa",-3.8312,35.0458,1285,1,57,5,0
+"moro1285","Moro","Heibanic","Africa",10.9194,30.2138,801,0,22,7,0
+"chol1284","Cholón","Hibito-Cholon","South America",-9.2313,-75.9621,749,0,15,5,0
+"iumi1238","Iu Mien","Hmong-Mien","Eurasia",20.83,101.17,1086,0,35,8,1
+"muru1274","Murui Huitoto","Huitotoan","South America",-1.1367,-73.8331,164,0,14,6,0
+"bakh1245","Bakhtiari","Indo-European","Eurasia",32.0163,49.7713,1066,0,24,12,0
+"west2369","Western Farsi","Indo-European","Eurasia",32.9,53.3,1295,0,24,6,0
+"digo1242","Digor Ossetian","Indo-European","Eurasia",43.1581,44.1569,450,1,36,6,0
+"yagn1238","Yagnobi","Indo-European","Eurasia",39.1486,69.2422,3049,0,27,9,0
+"sout2642","Southern Balochi","Indo-European","Eurasia",26,64,551,0,24,8,0
+"munj1244","Munji","Indo-European","Eurasia",35.9321,70.9404,3891,0,35,9,0
+"beng1280","Bengali","Indo-European","Eurasia",24,90,10,0,36,17,0
+"rajb1243","Rajbanshi","Indo-European","Eurasia",26.5219,88.0386,89,0,34,9,0
+"doma1258","Domari","Indo-European","Eurasia",32,35,213,0,33,12,0
+"urdu1245","Urdu","Indo-European","Eurasia",25,67,52,0,35,19,0
+"maga1260","Magahi","Indo-European","Eurasia",25.0915,85.3335,66,0,34,16,0
+"mait1250","Maithili","Indo-European","Eurasia",26.3817,86.2211,62,0,34,8,0
+"dhiv1236","Dhivehi","Indo-European","Eurasia",1.9285,73.5443,0,0,27,12,0
+"shin1264","Shina","Indo-European","Eurasia",34.6515,75.287,3882,0,35,13,0
+"berb1259","Berbice Creole Dutch","Indo-European","South America",5.3829,-58.0002,25,0,20,6,0
+"dutc1256","Dutch","Indo-European","Eurasia",52,5,0,0,24,15,0
+"stan1295","German","Indo-European","Eurasia",48.649,12.4676,358,0,23,16,0
+"faro1244","Faroese","Indo-European","Eurasia",62.0732,-6.885,149,0,16,20,0
+"camp1261","Campidanese Sardinian","Indo-European","Eurasia",39.0566,9.0394,49,0,44,14,0
+"friu1240","Friulian","Indo-European","Eurasia",46.1473,13.0493,182,0,25,14,0
+"ligu1248","Ligurian","Indo-European","Eurasia",44.0816,7.9052,721,0,24,21,0
+"roma1326","Romansh","Indo-European","Eurasia",46.5538,9.9281,2239,0,27,19,0
+"mira1251","Mirandese","Indo-European","Eurasia",41.5375,-6.3837,749,0,22,27,0
+"saot1239","Sãotomense","Indo-European","Africa",0.2833,6.6194,1057,0,19,13,0
+"occi1239","Occitan","Indo-European","Eurasia",44.1415,6.8298,1448,0,27,31,0
+"gheg1238","Gheg Albanian","Indo-European","Eurasia",42.317,21.3837,523,0,27,16,0
+"amar1271","Amurdak","Iwaidjan Proper","Australia",-11.9876,132.878,23,0,21,3,0
+"miya1259","Miyako","Japonic","Eurasia",24.7564,125.363,66,0,14,5,0
+"kitj1240","Kitja","Jarrakan","Australia",-17.5758,127.392,501,0,19,5,0
+"miri1266","Miriwung","Jarrakan","Australia",-16.3596,128.889,94,0,16,4,0
+"huam1247","Huambisa","Chicham","South America",-3.9911,-77.9797,1220,0,15,8,0
+"karo1304","Karuk","Isolate: Karuk","North America",41.8228,-123.315,725,0,27,11,1
+"ming1252","Mingrelian","Kartvelian","Eurasia",42.5129,41.8719,111,1,30,5,0
+"jeme1245","Towa","Kiowa-Tanoan","North America",35.5994,-106.766,1781,1,39,22,0
+"kiow1266","Kiowa","Kiowa-Tanoan","North America",34.9403,-98.9042,446,1,22,20,0
+"opuu1239","Opo","Koman","Africa",8.4753,33.853,418,1,20,5,0
+"kond1303","Yaben (Konda)","Konda-Yahadian","Papunesia",-1.8263,132.06,17,0,23,10,0
+"kuna1268","Kunama","Isolate: Kunama","Africa",14.5879,37.5292,1042,0,19,7,0
+"kunz1244","Kunza","Isolate: Kunza","South America",-23,-69,2602,1,23,10,0
+"juho1239","South-Eastern Ju","Kxa","Africa",-19.688,20.7673,1160,1,95,46,0
+"lule1238","Lule","Isolate: Lule","South America",-25.2218,-61.8878,171,1,16,5,0
+"nort2952","Northeast Maidu","Maiduan","North America",40.4102,-120.645,1275,1,18,6,0
+"bamb1269","Bambara","Mande","Africa",12.9,-7.65,384,0,21,14,0
+"dyul1238","Dyula","Mande","Africa",9.291,-4.5823,266,0,23,14,1
+"koya1253","Koyaga","Mande","Africa",8.0946,-6.2041,307,0,29,12,1
+"many1261","Manya","Mande","Africa",8.5619,-9.4426,565,0,18,7,1
+"lele1266","Lele (Guinea)","Mande","Africa",8.9804,-10.371,704,0,19,7,1
+"loko1255","Loko","Mande","Africa",9.1184,-12.1583,83,0,18,7,0
+"hain1253","Hainyaxo Bozo","Mande","Africa",13.8734,-5.6508,279,0,20,14,0
+"jowu1238","Jowulu","Mande","Africa",10.7691,-5.4787,507,0,20,21,1
+"sout2840","Southern Bobo Madaré","Mande","Africa",11.5409,-4.265,312,0,19,19,0
+"dann1241","Dan","Mande","Africa",7.2281,-8.2454,326,0,19,20,0
+"wann1242","Wan","Mande","Africa",7.8877,-5.8209,278,0,21,12,1
+"shan1282","Shanga","Mande","Africa",11.2752,4.4146,156,0,22,12,1
+"naka1260","Nakara","Maningrida","Australia",-12.0765,134.3273,32,0,20,5,0
+"maca1260","Maká","Mataguayan","South America",-25.0119,-57.3694,67,1,22,10,0
+"kich1262","K'iche'","Mayan","North America",14.5278,-91.1696,1177,1,22,10,0
+"tzut1248","Tz'utujil","Mayan","North America",14.6351,-91.2012,2094,1,25,10,0
+"popt1235","Popti'","Mayan","North America",15.6609,-91.6633,2048,1,27,5,0
+"halh1238","Halh Mongolian","Mongolic-Khitan","Eurasia",48.324,106.2887,1278,0,21,14,0
+"alab1237","Alabama","Muskogean","North America",30.7674,-94.6285,99,0,15,6,0
+"daww1239","Dâw","Naduhup","South America",-0.1177,-67.2934,106,0,24,15,0
+"hupd1244","Hup","Naduhup","South America",0.5862,-69.8359,173,0,20,9,0
+"bats1242","Bats","Nakh-Daghestanian","Eurasia",42.1806,45.344,1039,1,35,10,0
+"dido1241","Tsez","Nakh-Daghestanian","Eurasia",42.2646,45.8096,2032,1,36,6,0
+"ghod1238","Godoberi","Nakh-Daghestanian","Eurasia",42.7428,46.2252,2024,1,53,13,0
+"nara1262","Nara","Isolate: Nara","Africa",15.3251,37.499,839,0,17,5,0
+"ache1245","Acheron","Narrow Talodi","Africa",10.8827,30.3187,872,0,18,20,0
+"hang1263","Hanga Hundi","Ndu","Papunesia",-3.9036,142.849,59,0,16,7,0
+"buru1301","Northern Burun","Nilotic","Africa",10.725,33.921,573,0,19,16,1
+"shil1265","Shilluk","Nilotic","Africa",9.8547,31.7926,398,0,25,26,1
+"sout2833","South Central Dinka","Nilotic","Africa",6.7307,30.3021,429,0,20,37,1
+"nand1266","Nandi","Nilotic","Africa",0.7937,35.4085,2111,0,13,10,0
+"ngas1238","Ngasa","Nilotic","Africa",-2.9772,37.528,1813,0,22,9,0
+"topo1242","Toposa","Nilotic","Africa",5.159,34.2159,457,0,17,9,1
+"kama1367","Kamasau","Nuclear Torricelli","Papunesia",-3.8503,143.842,105,0,23,6,0
+"mufi1238","Mufian","Nuclear Torricelli","Papunesia",-3.5793,142.955,225,0,17,5,0
+"ning1273","Ningil","Nuclear Torricelli","Papunesia",-3.4973,142.251,467,0,14,7,0
+"amel1241","Amele","Nuclear Trans New Guinea","Papunesia",-5.2913,145.687,146,0,15,5,0
+"chua1250","Chuave","Nuclear Trans New Guinea","Papunesia",-6.1782,145.139,2083,0,12,5,0
+"east2516","East Kewa","Nuclear Trans New Guinea","Papunesia",-6.3299,143.931,1888,0,15,5,0
+"faiw1243","Faiwol","Nuclear Trans New Guinea","Papunesia",-5.4967,141.656,1292,0,12,8,0
+"ofay1240","Ofayé","Nuclear-Macro-Je","South America",-22.278,-53.7227,350,0,14,10,0
+"kain1272","Kaingang","Nuclear-Macro-Je","South America",-27.7671,-52.5394,667,0,13,14,0
+"nyul1247","Nyulnyul","Nyulnyulan","Australia",-16.9129,122.851,87,0,17,3,0
+"yawu1244","Yawuru","Nyulnyulan","Australia",-18.004,122.693,16,0,22,6,0
+"cent2144","Central Mazahua","Otomanguean","North America",19.7357,-100.018,2879,1,45,15,1
+"leal1235","Lealao Chinantec","Otomanguean","North America",17.3162,-95.9265,1094,0,28,7,0
+"sanj1284","Western Tlacolula Valley Zapotec","Otomanguean","North America",17.0332,-96.5967,1620,0,29,18,0
+"paez1247","Páez","Isolate: Páez","South America",2.6152,-76.3125,3268,0,29,10,0
+"guga1239","Gugadj","Pama-Nyungan","Australia",-17.8372,141.168,9,0,16,7,0
+"alng1239","Alngith","Pama-Nyungan","Australia",-12.5324,141.938,36,0,24,4,0
+"angg1238","Angkamuthi","Pama-Nyungan","Australia",-11.443,142.242,27,0,18,6,0
+"yadh1237","Yadhaykenu","Pama-Nyungan","Australia",-11.314,142.725,64,0,18,8,0
+"yiry1245","Yir-Yoront","Pama-Nyungan","Australia",-15.1117,141.767,5,0,20,6,0
+"gugu1254","Gugubera","Pama-Nyungan","Australia",-15.4296,141.635,6,0,15,6,0
+"wikn1246","Wikngenchera","Pama-Nyungan","Australia",-13.4957,141.599,10,0,20,10,0
+"kuuk1238","Kuuku-Ya'u","Pama-Nyungan","Australia",-12.4947,143.165,85,0,15,6,0
+"paka1251","Pakanha","Pama-Nyungan","Australia",-15.0908,142.74,91,0,21,10,0
+"wikm1247","Wik-Mungkan","Pama-Nyungan","Australia",-13.9805,141.8161,31,0,13,10,0
+"kayt1238","Kaytetye","Pama-Nyungan","Australia",-21.5844,133.602,471,0,40,3,0
+"alya1239","Alyawarr","Pama-Nyungan","Australia",-21.0427,136.835,240,0,25,7,0
+"east2379","Eastern Arrernte","Pama-Nyungan","Australia",-23.3583,135.046,671,0,27,3,0
+"badi1246","Badimaya","Pama-Nyungan","Australia",-29.0647,117.246,313,0,20,3,0
+"bayu1240","Bayungu","Pama-Nyungan","Australia",-23.3809,114.108,31,0,20,6,0
+"dhal1245","Dhalandji","Pama-Nyungan","Australia",-22.196,114.937,26,0,20,6,0
+"nhuw1239","Nhuwala","Pama-Nyungan","Australia",-21.3815,115.7454,14,0,20,6,0
+"kurr1243","Kurrama","Pama-Nyungan","Australia",-22.2134,117.51,636,0,21,6,0
+"pany1241","Panytyima","Pama-Nyungan","Australia",-22.7816,118.723,739,0,20,5,0
+"thii1234","Thiin","Pama-Nyungan","Australia",-23.7116,116.6801,341,0,20,6,0
+"wari1262","Wariyangga","Pama-Nyungan","Australia",-24.353,116.927,399,0,20,6,0
+"kala1379","Kalarko-Mirniny","Pama-Nyungan","Australia",-31.7154,118.911,455,0,20,6,0
+"kala1401","Kalaamaya","Pama-Nyungan","Australia",-30.245,120.223,414,0,20,6,0
+"ngad1258","Ngadjunmaya","Pama-Nyungan","Australia",-32.0245,124.466,147,0,20,6,0
+"biga1237","Bigambal","Pama-Nyungan","Australia",-28.266,149.515,234,0,13,3,0
+"pirl1238","Pirlatapa","Pama-Nyungan","Australia",-29.524,139.77,23,0,22,3,0
+"dier1241","Dieri","Pama-Nyungan","Australia",-28.1667,138,22,0,22,3,0
+"mith1236","Mithaka","Pama-Nyungan","Australia",-25.1361,139.5984,86,0,26,3,0
+"kala1380","Bulloo River","Pama-Nyungan","Australia",-28.136,143.929,150,0,18,3,0
+"pirr1240","Pirriya","Pama-Nyungan","Australia",-25.4801,142.5485,122,0,19,5,0
+"djam1256","Djambarrpuyngu","Pama-Nyungan","Australia",-12.021,135.59,28,0,25,6,0
+"djan1238","Djangun","Pama-Nyungan","Australia",-16.9105,144.9324,365,0,13,3,0
+"yidi1250","Yidiñ","Pama-Nyungan","Australia",-17.1332,145.876,48,0,13,3,0
+"dyan1250","Dyangadi","Pama-Nyungan","Australia",-30.8469,152.602,158,0,13,6,0
+"ngan1296","Nganyaywana","Pama-Nyungan","Australia",-29.581,151.313,722,0,14,3,0
+"gang1268","Gangulu","Pama-Nyungan","Australia",-22.7637,149.416,295,0,15,3,0
+"guwa1243","Guwamu","Pama-Nyungan","Australia",-27.8289,148.867,248,0,15,6,0
+"kung1258","Kunggari","Pama-Nyungan","Australia",-24.2182,143.222,158,0,15,3,0
+"guny1241","Gunya","Pama-Nyungan","Australia",-27.0642,145.862,249,0,25,6,0
+"waru1264","Warrongo","Pama-Nyungan","Australia",-18.2496,144.37,467,0,13,4,0
+"yand1251","Yanda","Pama-Nyungan","Australia",-21.2327,140.5135,346,0,21,3,0
+"waru1265","Warumungu","Pama-Nyungan","Australia",-20.6479,134.375,441,0,22,6,0
+"mudb1240","Mudburra","Pama-Nyungan","Australia",-16.7694,132.329,280,0,17,6,0
+"guri1247","Gurindji","Pama-Nyungan","Australia",-17.0329,130.379,297,0,17,6,0
+"mang1383","Mangala","Pama-Nyungan","Australia",-18.6597,123.769,113,0,17,7,0
+"ngaa1240","Ngaanyatjarra","Pama-Nyungan","Australia",-25.7514,127.602,519,0,17,6,0
+"guwa1244","Guwar","Pama-Nyungan","Australia",-27.167,153.3998,111,0,13,6,0
+"hawk1239","Hawkesbury","Pama-Nyungan","Australia",-33.1147,150.4952,560,0,15,3,0
+"sout2771","Southern Coastal Yuin","Pama-Nyungan","Australia",-37.0623,149.7169,299,0,19,6,0
+"muru1266","Muruwari","Pama-Nyungan","Australia",-28.9618,146.546,140,0,19,6,0
+"kabi1260","Kabikabi","Pama-Nyungan","Australia",-25.4449,153.154,28,0,16,8,0
+"wang1291","Ngiyambaa","Pama-Nyungan","Australia",-30.6481,146.18,151,0,15,3,0
+"yort1237","Yorta Yorta","Pama-Nyungan","Australia",-35.9,145.01,107,0,15,5,0
+"kalk1246","Kalkatungu","Pama-Nyungan","Australia",-21,139.5,444,0,20,3,0
+"cash1251","Cashibo-Cacataibo","Pano-Tacanan","South America",-8.7023,-75.4206,283,0,15,6,0
+"kaxa1239","Kaxararí","Pano-Tacanan","South America",-9.4729,-66.3329,177,0,15,5,0
+"amah1246","Amahuaca","Pano-Tacanan","South America",-10.2012,-72.3208,412,0,14,8,0
+"cash1254","Cashinahua","Pano-Tacanan","South America",-9.7203,-71.1733,271,0,15,8,0
+"shan1283","Shanenawa","Pano-Tacanan","South America",-8.0092,-73.3264,239,0,14,4,0
+"mati1255","Matís","Pano-Tacanan","South America",-4.3553,-70.2079,77,0,15,6,0
+"reye1240","Reyesano","Pano-Tacanan","South America",-14.8333,-67.0833,254,0,18,4,0
+"taca1256","Tacana","Pano-Tacanan","South America",-13.3925,-68.0406,211,0,18,4,0
+"yagu1244","Yagua","Peba-Yagua","South America",-3.4291,-72.2186,96,0,11,12,0
+"inga1252","Colombian Inga","Quechuan","South America",1.0031,-76.8606,2360,0,19,3,0
+"napo1242","Napo Lowland Quechua","Quechuan","South America",-0.0725,-76.3889,261,0,20,3,0
+"lamb1276","Lambayeque Quechua","Quechuan","South America",-6.1715,-79.468,1950,0,16,3,0
+"nort2976","North Bolivian Quechua","Quechuan","South America",-14.4014,-68.7894,2642,1,25,3,0
+"nort2980","North Junín Quechua","Quechuan","South America",-11.2132,-75.8128,4268,0,19,6,0
+"sanm1289","San Martín Quechua","Quechuan","South America",-6.9582,-76.6608,819,0,15,3,0
+"cent2050","Central Kanuri","Saharan","Africa",11.8,13.13,332,0,25,6,1
+"teda1241","Tedaga","Saharan","Africa",18.0426,14.7717,468,0,24,11,0
+"bell1243","Bella Coola","Salishan","North America",52.3448,-126.689,504,1,28,3,0
+"shus1248","Shuswap","Salishan","North America",50.8734,-119.667,722,0,37,7,0
+"squa1248","Squamish","Salishan","North America",49.3231,-123.014,88,1,30,7,0
+"savo1255","Savosavo","Isolate: Savosavo","Papunesia",-9.1285,159.814,250,0,17,5,0
+"iwam1256","Iwam","Sepik","Papunesia",-4.2735,141.817,26,0,11,6,0
+"akha1245","Akha","Sino-Tibetan","Eurasia",21.2309,100.964,1237,0,28,13,1
+"axiy1235","Axi Yi","Sino-Tibetan","Eurasia",24.6009,103.713,1817,0,38,14,0
+"zaiw1241","Zaiwa","Sino-Tibetan","Eurasia",24.1726,98.3643,1998,0,21,8,1
+"naxi1245","Naxi","Sino-Tibetan","Eurasia",27.5,100,3653,0,38,11,0
+"anga1288","Angami Naga","Sino-Tibetan","Eurasia",25.6841,93.8668,479,0,38,6,1
+"loth1237","Lotha Naga","Sino-Tibetan","Eurasia",26.014,94.0436,392,0,35,8,1
+"bodo1269","Bodo-Mech","Sino-Tibetan","Eurasia",26.1,92,133,0,15,6,0
+"tase1235","Pangwa Naga","Sino-Tibetan","Eurasia",27.2572,96.3855,936,0,23,6,0
+"bujh1238","Bujhyal","Sino-Tibetan","Eurasia",28.0084,84.5068,742,0,31,16,0
+"newa1246","Kathmandu Valley Newari","Sino-Tibetan","Eurasia",27.67,85.326,1315,0,24,8,0
+"thul1246","Thulung","Sino-Tibetan","Eurasia",27.5389,87.6063,2487,0,30,8,0
+"dakp1242","Dakpakha","Sino-Tibetan","Eurasia",27.3762,91.8245,2547,0,34,19,0
+"dzon1239","Dzongkha","Sino-Tibetan","Eurasia",27.4108,89.5816,2724,0,32,26,0
+"huml1238","Humla","Sino-Tibetan","Eurasia",30.1451,81.5659,4876,0,41,28,0
+"walu1241","Walungge","Sino-Tibetan","Eurasia",27.695,87.2374,3737,0,32,14,0
+"kurt1248","Kurtokha","Sino-Tibetan","Eurasia",27.5365,90.9822,3667,0,31,14,0
+"mind1253","Min Dong Chinese","Sino-Tibetan","Eurasia",26,119.5,26,0,14,7,0
+"rawa1265","Rawang","Sino-Tibetan","Eurasia",27.1027,97.0738,2198,0,20,14,0
+"nucl1634","Skou","Sko","Papunesia",-2.6438,140.902,27,0,13,7,1
+"zarm1239","Zarma-Kaado","Songhay","Africa",12.8554,2.4117,180,0,20,16,1
+"dime1235","Dime","South Omotic","Africa",6.2095,36.3329,1844,1,53,18,1
+"aari1239","Aari","South Omotic","Africa",5.9503,36.5721,1565,1,26,10,0
+"hame1242","Hamer-Banna","South Omotic","Africa",5.0652,36.5176,1015,1,25,10,0
+"murs1242","Mursi","Surmic","Africa",5.698,36.0971,812,0,21,5,0
+"guib1244","Guibian Zhuang","Tai-Kadai","Eurasia",24.3,106.2,512,0,19,16,0
+"luuu1242","Lü","Tai-Kadai","Eurasia",21.0321,101.282,994,0,22,9,0
+"lakk1238","Lakkia","Tai-Kadai","Eurasia",24.1169,110.106,1003,0,31,22,1
+"qaua1234","Central Gelao-Qau","Tai-Kadai","Eurasia",26.1554,106.1646,1267,0,31,12,0
+"tama1331","Tama (Chad)","Tamaic","Africa",14.332,21.9951,1039,0,21,9,0
+"lard1243","Lardil","Tangkic","Australia",-16.5615,139.4343,7,0,17,8,0
+"taus1253","Taushiro","Isolate: Taushiro","South America",-3.225,-75.5603,210,0,12,5,0
+"adan1251","Adang","Timor-Alor-Pantar","Papunesia",-8.1896,124.448,265,0,18,22,0
+"kama1365","Kamang","Timor-Alor-Pantar","Papunesia",-8.269,124.792,987,0,16,12,0
+"tini1245","Tinigua","Isolate: Tinigua","South America",2.716,-73.768,261,0,22,18,0
+"tonk1249","Tonkawa","Isolate: Tonkawa","North America",30.25,-96.75,90,0,15,10,0
+"hueh1236","Huehuetla Tepehua","Totonacan","North America",20.6189,-97.9347,261,1,26,10,0
+"nucl1649","Southern-Coastal Tsimshian","Tsimshian","North America",52.591,-128.5445,299,1,38,3,0
+"nisg1240","Nisga'a","Tsimshian","North America",55.199,-129.192,56,1,32,10,0
+"seco1241","Secoya","Tucanoan","South America",-0.4598,-75.5547,211,0,12,6,0
+"tuca1252","Tucano","Tucanoan","South America",0.5798,-69.5763,149,0,15,12,0
+"tatu1247","Tatuyo","Tucanoan","South America",0.5558,-70.5327,219,0,11,6,0
+"even1259","Evenki","Tungusic","Eurasia",61.972,94.689,295,0,18,11,0
+"even1260","Even","Tungusic","Eurasia",70.6687,130.914,151,0,18,18,0
+"awet1244","Awetí","Tupian","South America",-12.3819,-53.3919,302,0,14,12,0
+"east2555","Eastern Bolivian Guaraní","Tupian","South America",-20.42,-63.37,1134,0,12,12,0
+"mbya1239","Mbyá Guaraní","Tupian","South America",-26.0188,-52.711,566,0,14,12,0
+"guar1292","Guarayu","Tupian","South America",-15.8247,-61.6934,371,0,14,12,0
+"nhen1239","Nhengatu","Tupian","South America",1.045,-66.9646,111,0,19,4,0
+"juma1249","Júma","Tupian","South America",-7.275,-64.0998,69,0,12,12,0
+"xipa1240","Xipaya","Tupian","South America",-4.133,-49.948,103,0,14,9,0
+"tupa1250","Tuparí","Tupian","South America",-11.8884,-62.2544,274,0,14,15,0
+"chuv1255","Chuvash","Turkic","Eurasia",55.487,47.163,110,0,30,9,0
+"kara1462","Taiga Sayan Turkic","Turkic","Eurasia",53.7145,98.3792,1334,0,28,39,0
+"khak1248","Khakas","Turkic","Eurasia",52.66,89.6741,643,0,23,16,0
+"kara1464","Karaim","Turkic","Eurasia",54.5534,25.1054,154,0,29,8,0
+"kara1467","Kara-Kalpak","Turkic","Eurasia",39.98,63.3223,181,0,25,13,0
+"uigh1240","Uighur","Turkic","Eurasia",43.88,87.38,733,0,28,15,0
+"sala1264","Salar","Turkic","Eurasia",35.5457,102.819,2877,0,31,12,0
+"erzy1239","Erzya","Uralic","Eurasia",52.8548,45.3901,182,0,29,6,0
+"moks1248","Moksha","Uralic","Eurasia",54.1855,42.6728,151,0,33,7,0
+"esto1258","Estonian","Uralic","Eurasia",58.55,25.82,51,0,45,9,0
+"hung1274","Hungarian","Uralic","Eurasia",46.9069,19.6555,116,0,50,15,0
+"kama1351","Kamas-Koibal","Uralic","Eurasia",55.07,94.83,432,0,26,11,0
+"sout2674","South Saami","Uralic","Eurasia",62.8801,13.7006,736,0,39,6,0
+"west2392","Western Mari","Uralic","Eurasia",56.22,46.569,172,0,24,10,0
+"chip1262","Chipaya","Uru-Chipaya","South America",-18.7395,-67.8963,3725,1,41,10,0
+"cupe1243","Cupeño","Uto-Aztecan","North America",33.3148,-116.515,1476,0,27,11,0
+"serr1255","Serrano","Uto-Aztecan","North America",33.9479,-116.772,769,0,33,9,0
+"nort2954","Northern Paiute","Uto-Aztecan","North America",40.0799,-119.536,1165,0,14,10,0
+"waor1240","Waorani","Isolate: Waorani","South America",-1.1231,-76.683,245,0,11,10,0
+"ngar1284","Ngarinyin","Worrorran","Australia",-16.4006,126.433,521,0,18,6,0
+"yama1264","Yámana","Isolate: Yámana","South America",-55.2748,-68.2648,189,0,15,5,0
+"yano1261","Yanomamö","Yanomamic","South America",1.6797,-64.8781,552,0,12,7,0
+"yare1248","Yareba","Yareban","Papunesia",-9.5065,148.605,260,0,13,5,0
+"kett1243","Ket","Yeniseian","Eurasia",63.7551,87.5466,29,0,18,14,0
+"ayor1240","Ayoreo","Zamucoan","South America",-19.2201,-60.2175,233,0,20,10,0

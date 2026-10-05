@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The same models as a GAM · Relatives and Neighbours</title>
+<meta name="description" content="In mgcv a family intercept, a phylogenetic effect and a spatial surface are all the same object, a penalised smooth, and a model with all three fits in seconds without priors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Charis+SIL:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="../assets/atlas.css">
+</head>
+<body data-plate="07-mgcv">
+<a class="skip" href="#sheet">Skip to the tutorial</a>
+
+<header class="masthead">
+  <a class="series" href="../">Relatives and Neighbours</a>
+  <nav class="plates" aria-label="All plates"><span class="lbl" aria-hidden="true">Plates</span><ol class="sheet-index"><li><a href="../01-the-problem/" data-plate="01-the-problem"><span class="n">1</span><span class="t">Seeing the problem</span></a></li><li><a href="../02-phylogeny/" data-plate="02-phylogeny"><span class="n">2</span><span class="t">Phylogeny as a covariance matrix</span></a></li><li><a href="../03-space-surface/" data-plate="03-space-surface"><span class="n">3</span><span class="t">Space as a smooth surface</span></a></li><li><a href="../04-space-neighbours/" data-plate="04-space-neighbours"><span class="n">4</span><span class="t">Space as a network of neighbours</span></a></li><li><a href="../05-joint/" data-plate="05-joint"><span class="n">5</span><span class="t">Both at once</span></a></li><li><a href="../06-inla/" data-plate="06-inla"><span class="n">6</span><span class="t">The same models in INLA</span></a></li><li><a href="../07-mgcv/" aria-current="page" data-plate="07-mgcv"><span class="n">7</span><span class="t">The same models as a GAM</span></a></li><li><a href="../08-classical/" data-plate="08-classical"><span class="n">8</span><span class="t">The classical toolkit: PGLS and SAR</span></a></li></ol></nav>
+  <div class="tools">
+    <a href="https://rehan-muh.github.io/">Muhammad Rehan</a>
+  </div>
+</header>
+
+<div class="titleblock">
+  <h1><span class="platenum" aria-hidden="true">7</span><span><span class="vh">Plate 7: </span>The same models as a GAM</span></h1>
+  <p class="lede">In mgcv a family intercept, a phylogenetic effect and a spatial surface are all the same object, a penalised smooth, and a model with all three fits in seconds without priors.</p>
+  <dl class="marginalia">
+    <div><dt>Fitted with</dt><dd>mgcv</dd></div>
+    <div><dt>Model fitting</dt><dd>under a minute in total</dd></div>
+    <div><dt>Packages</dt><dd><code>mgcv</code> <code>ape</code> <code>sf</code> <code>rnaturalearth</code> <code>ggplot2</code></dd></div>
+  </dl>
+  <p class="takeaway"><a href="07-mgcv.R" download>Download the R script</a><a href="07-mgcv.md">Markdown source</a></p>
+</div>
+
+<div class="chart">
+  <aside class="legend">
+    <h2 id="legend-h">On this plate</h2>
+    <nav aria-labelledby="legend-h">
+<ul>
+<li><a href="#set-up" id="toc-set-up">Set up</a></li>
+<li><a href="#how-a-gam-sees-dependence" id="toc-how-a-gam-sees-dependence">How a GAM sees dependence</a></li>
+<li><a href="#family-intercepts" id="toc-family-intercepts">Family intercepts</a></li>
+<li><a href="#phylogeny-as-a-markov-random-field" id="toc-phylogeny-as-a-markov-random-field">Phylogeny as a Markov random field</a></li>
+<li><a href="#space-as-a-spline-on-the-sphere" id="toc-space-as-a-spline-on-the-sphere">Space as a spline on the sphere</a></li>
+<li><a href="#phylogeny-and-space-together" id="toc-phylogeny-and-space-together">Phylogeny and space together</a></li>
+<li><a href="#all-four" id="toc-all-four">All four</a></li>
+<li><a href="#what-to-carry-forward" id="toc-what-to-carry-forward">What to carry forward</a></li>
+</ul>
+    </nav>
+    <p class="key" aria-hidden="true"><span><i></i>ahead</span><span class="k-here"><i></i>here</span><span class="k-read"><i></i>read</span></p>
+  </aside>
+
+  <main id="sheet" class="sheet">
+<section id="set-up" class="level2">
+<h2>Set up</h2>
+<p>mgcv identifies groups by factor levels, so the family and language columns become factors. The language factor takes its level order from the tree, which will matter below.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mgcv)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ape)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;glottolog_tree.nwk&quot;</span>))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> d<span class="sc">$</span>elevation <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>family     <span class="ot">&lt;-</span> <span class="fu">factor</span>(d<span class="sc">$</span>family)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>glottocode <span class="ot">&lt;-</span> <span class="fu">factor</span>(d<span class="sc">$</span>glottocode, <span class="at">levels =</span> tree<span class="sc">$</span>tip.label)</span></code></pre></div>
+</section>
+<section id="how-a-gam-sees-dependence" class="level2">
+<h2>How a GAM sees dependence</h2>
+<p>A generalised additive model adds smooth terms to a regression. Each smooth is a set of coefficients with a penalty that discourages some patterns among them. Choose the penalty and you choose the kind of dependence:</p>
+<ul>
+<li>Penalise each coefficient’s distance from zero, and you have a random intercept.</li>
+<li>Penalise differences between coefficients according to a tree, and you have a phylogenetic effect.</li>
+<li>Penalise the wiggliness of a surface, and you have a spatial smooth.</li>
+</ul>
+<p>mgcv estimates the strength of each penalty from the data by restricted maximum likelihood (REML). There are no priors to set and nothing to sample, which is why it is fast. It is also why it has less to say about uncertainty in the variance components than brms or INLA do.</p>
+</section>
+<section id="family-intercepts" class="level2">
+<h2>Family intercepts</h2>
+<p><code>bs = "re"</code> is the random-effect smooth.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>g_fam <span class="ot">&lt;-</span> <span class="fu">gam</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">s</span>(family, <span class="at">bs =</span> <span class="st">&quot;re&quot;</span>),</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">family =</span> binomial, <span class="at">data =</span> d, <span class="at">method =</span> <span class="st">&quot;REML&quot;</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(g_fam)<span class="sc">$</span>p.table</span></code></pre></div>
+<pre class="output"><code>            Estimate Std. Error z value Pr(&gt;|z|)
+(Intercept)    -3.43      0.655   -5.24 1.58e-07
+elev_km         1.16      0.309    3.77 1.60e-04</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gam.vcomp</span>(g_fam)</span></code></pre></div>
+<pre class="output"><code>
+Standard deviations and 0.95 confidence intervals:
+
+          std.dev lower upper
+s(family)    4.51   2.8  7.28
+
+Rank: 1/1
+
+All smooth components:
+[1] 4.51</code></pre>
+<p><code>gam.vcomp()</code> reports the penalty as a standard deviation, the counterpart of <code>sd(Intercept)</code> in brms.</p>
+</section>
+<section id="phylogeny-as-a-markov-random-field" class="level2">
+<h2>Phylogeny as a Markov random field</h2>
+<p><code>bs = "mrf"</code> is a smooth over the levels of a factor whose penalty you supply as a matrix. Give it the inverse of the phylogenetic correlation matrix and it becomes a phylogenetic random effect: the same model as <code>gr(glottocode, cov = A)</code> on Plate 2.</p>
+<p>The penalty matrix needs row and column names that match the factor levels. That is why the factor was built from <code>tree$tip.label</code>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">vcv</span>(tree, <span class="at">corr =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>Q <span class="ot">&lt;-</span> <span class="fu">solve</span>(A)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dimnames</span>(Q) <span class="ot">&lt;-</span> <span class="fu">dimnames</span>(A)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>g_phy <span class="ot">&lt;-</span> <span class="fu">gam</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>               <span class="fu">s</span>(glottocode, <span class="at">bs =</span> <span class="st">&quot;mrf&quot;</span>, <span class="at">xt =</span> <span class="fu">list</span>(<span class="at">penalty =</span> Q)),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">family =</span> binomial, <span class="at">data =</span> d, <span class="at">method =</span> <span class="st">&quot;REML&quot;</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(g_phy)<span class="sc">$</span>p.table</span></code></pre></div>
+<pre class="output"><code>            Estimate Std. Error z value Pr(&gt;|z|)
+(Intercept)    -4.05      0.435   -9.32 1.20e-20
+elev_km         0.97      0.358    2.71 6.69e-03</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gam.vcomp</span>(g_phy)</span></code></pre></div>
+<pre class="output"><code>
+Standard deviations and 0.95 confidence intervals:
+
+              std.dev lower upper
+s(glottocode)    3.85  2.31  6.44
+
+Rank: 1/1
+
+All smooth components:
+[1] 3.85</code></pre>
+<div class="callout pitfall">
+<p>The <code>mrf</code> smooth takes an argument <code>k</code> that keeps only the <code>k</code> smoothest patterns on the tree. It is tempting for speed, and for a phylogeny it is risky: the patterns it drops first are the ones that separate small families and close sisters, which is most of what a language tree contains. Leave <code>k</code> out, as above, to keep the full matrix. With 500 languages that still fits in a few seconds.</p>
+</div>
+</section>
+<section id="space-as-a-spline-on-the-sphere" class="level2">
+<h2>Space as a spline on the sphere</h2>
+<p><code>bs = "sos"</code> is a spline on the sphere. It takes latitude and longitude in degrees, in that order, and measures distance along the globe. No projection is needed.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>g_sos <span class="ot">&lt;-</span> <span class="fu">gam</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">s</span>(lat, lon, <span class="at">bs =</span> <span class="st">&quot;sos&quot;</span>, <span class="at">k =</span> <span class="dv">60</span>),</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">family =</span> binomial, <span class="at">data =</span> d, <span class="at">method =</span> <span class="st">&quot;REML&quot;</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(g_sos)<span class="sc">$</span>p.table</span></code></pre></div>
+<pre class="output"><code>            Estimate Std. Error z value Pr(&gt;|z|)
+(Intercept)    -6.22      1.676   -3.71 0.000208
+elev_km         1.10      0.352    3.14 0.001705</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(g_sos)<span class="sc">$</span>s.table</span></code></pre></div>
+<pre class="output"><code>            edf Ref.df Chi.sq p-value
+s(lat,lon) 23.4     59   69.1       0</code></pre>
+<p><code>k = 60</code> is the largest number of building blocks the surface may use; the penalty then decides how many it effectively needs, reported as <code>edf</code>. If <code>edf</code> comes out close to <code>k</code>, the surface wanted more room: raise <code>k</code> and refit. <code>k.check()</code> runs a formal version of that test.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">k.check</span>(g_sos)</span></code></pre></div>
+<pre class="output"><code>           k&#39;  edf k-index p-value
+s(lat,lon) 59 23.4       1    0.62</code></pre>
+<p>A fitted smooth can be evaluated anywhere. As on Plate 6, predict it on a grid of land points. <code>type = "terms"</code> returns the contribution of each term separately, so the surface can be drawn without the intercept or elevation.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="st">&quot;small&quot;</span>, <span class="at">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sf_use_s2</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">lon =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">179</span>, <span class="dv">179</span>, <span class="dv">2</span>), <span class="at">lat =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">55</span>, <span class="dv">75</span>, <span class="dv">2</span>), <span class="at">elev_km =</span> <span class="dv">0</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(grid, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>), <span class="at">crs =</span> <span class="dv">4326</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> grid[<span class="fu">lengths</span>(<span class="fu">st_intersects</span>(grid, world)) <span class="sc">&gt;</span> <span class="dv">0</span>, ]</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>grid<span class="sc">$</span>surface <span class="ot">&lt;-</span> <span class="fu">predict</span>(g_sos, <span class="at">newdata =</span> grid, <span class="at">type =</span> <span class="st">&quot;terms&quot;</span>,</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>                        <span class="at">terms =</span> <span class="st">&quot;s(lat,lon)&quot;</span>)[, <span class="dv">1</span>]</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> world, <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> grid, <span class="fu">aes</span>(<span class="at">colour =</span> surface), <span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">shape =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_gradient2</span>(<span class="at">low =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#F0EFEC&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#E34948&quot;</span>,</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&quot;spatial effect&quot;</span>) <span class="sc">+</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=eqearth&quot;</span>)</span></code></pre></div>
+<figure>
+<img src="figures/sos-map-1.png" width="814" height="451" alt="The spline-on-the-sphere surface on land, on the logit scale. It finds the same regions as the surfaces on Plates 3 and 6." />
+<figcaption aria-hidden="true">The spline-on-the-sphere surface on land, on the logit scale. It finds the same regions as the surfaces on Plates 3 and 6.</figcaption>
+</figure>
+</section>
+<section id="phylogeny-and-space-together" class="level2">
+<h2>Phylogeny and space together</h2>
+<p>Add the two smooths.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>g_joint <span class="ot">&lt;-</span> <span class="fu">gam</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">s</span>(glottocode, <span class="at">bs =</span> <span class="st">&quot;mrf&quot;</span>, <span class="at">xt =</span> <span class="fu">list</span>(<span class="at">penalty =</span> Q)) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">s</span>(lat, lon, <span class="at">bs =</span> <span class="st">&quot;sos&quot;</span>, <span class="at">k =</span> <span class="dv">60</span>),</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">family =</span> binomial, <span class="at">data =</span> d, <span class="at">method =</span> <span class="st">&quot;REML&quot;</span>)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(g_joint)<span class="sc">$</span>p.table</span></code></pre></div>
+<pre class="output"><code>            Estimate Std. Error z value Pr(&gt;|z|)
+(Intercept)    -6.75      1.987   -3.40 0.000686
+elev_km         1.26      0.507    2.49 0.012759</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(g_joint)<span class="sc">$</span>s.table</span></code></pre></div>
+<pre class="output"><code>               edf Ref.df Chi.sq p-value
+s(glottocode) 34.7    498   38.1  0.1414
+s(lat,lon)    21.9     59   44.5  0.0257</code></pre>
+<p>The <code>edf</code> column is the GAM’s version of the trade-off on Plate 5. It says how much of each term’s flexibility the fit ended up using once the other was present.</p>
+</section>
+<section id="all-four" class="level2">
+<h2>All four</h2>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>fits <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;family intercept&quot;</span> <span class="ot">=</span> g_fam, <span class="st">&quot;phylogeny&quot;</span> <span class="ot">=</span> g_phy,</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;space: sphere spline&quot;</span> <span class="ot">=</span> g_sos, <span class="st">&quot;phylogeny + space&quot;</span> <span class="ot">=</span> g_joint)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">t</span>(<span class="fu">sapply</span>(fits, <span class="cf">function</span>(g) <span class="fu">summary</span>(g)<span class="sc">$</span>p.table[<span class="st">&quot;elev_km&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>])), <span class="dv">2</span>)</span></code></pre></div>
+<pre class="output"><code>                     Estimate Std. Error z value
+family intercept         1.16       0.31    3.77
+phylogeny                0.97       0.36    2.71
+space: sphere spline     1.10       0.35    3.14
+phylogeny + space        1.26       0.51    2.49</code></pre>
+<p>The regression lines. As on Plates 5 and 6, each is averaged over the sample: every language keeps its own fitted smooths and all are moved to the same elevation. <code>predict()</code> returns each language’s linear predictor, smooths included.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>x  <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">4.5</span>, <span class="at">by =</span> <span class="fl">0.1</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> d)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>line_of <span class="ot">&lt;-</span> <span class="cf">function</span>(g, label) {</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  b      <span class="ot">&lt;-</span> <span class="fu">coef</span>(g)[[<span class="st">&quot;elev_km&quot;</span>]]</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  at_sea <span class="ot">&lt;-</span> <span class="fu">predict</span>(g) <span class="sc">-</span> b <span class="sc">*</span> d<span class="sc">$</span>elev_km    <span class="co"># every language moved to 0 km</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x, <span class="at">model =</span> label,</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">p =</span> <span class="fu">sapply</span>(x, <span class="cf">function</span>(xi) <span class="fu">mean</span>(<span class="fu">plogis</span>(at_sea <span class="sc">+</span> b <span class="sc">*</span> xi))))</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>lines <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">Map</span>(line_of, fits, <span class="fu">names</span>(fits)))</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>lines<span class="sc">$</span>model <span class="ot">&lt;-</span> <span class="fu">factor</span>(lines<span class="sc">$</span>model, <span class="at">levels =</span> <span class="fu">names</span>(fits))</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>kind_of <span class="ot">&lt;-</span> <span class="cf">function</span>(model) {</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(<span class="fu">grepl</span>(<span class="st">&quot;+&quot;</span>, model, <span class="at">fixed =</span> <span class="cn">TRUE</span>), <span class="st">&quot;both&quot;</span>,</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>         <span class="fu">ifelse</span>(<span class="fu">grepl</span>(<span class="st">&quot;space&quot;</span>, model), <span class="st">&quot;space&quot;</span>, <span class="st">&quot;ancestry&quot;</span>))</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>hues <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">naive =</span> <span class="st">&quot;grey45&quot;</span>, <span class="at">ancestry =</span> <span class="st">&quot;#1BAF7A&quot;</span>, <span class="at">space =</span> <span class="st">&quot;#2A78D6&quot;</span>,</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>          <span class="at">both =</span> <span class="st">&quot;grey10&quot;</span>)</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>lines<span class="sc">$</span>kind <span class="ot">&lt;-</span> <span class="fu">kind_of</span>(lines<span class="sc">$</span>model)</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>naive <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x)</span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>naive<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">predict</span>(m0, <span class="at">newdata =</span> naive, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(lines, <span class="fu">aes</span>(elev_km, p)) <span class="sc">+</span></span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">colour =</span> kind), <span class="at">linewidth =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> naive, <span class="at">linetype =</span> <span class="st">&quot;22&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;grey35&quot;</span>) <span class="sc">+</span></span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> hues, <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>model, <span class="at">nrow =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;elevation (km)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;probability of ejectives&quot;</span>)</span></code></pre></div>
+<figure>
+<img src="figures/lines-1.png" width="814" height="572" alt="The regression line of each GAM, averaged over the sample. The dashed line is the naive regression. Compare the brms panels on Plate 5 and the INLA panels on Plate 6." />
+<figcaption aria-hidden="true">The regression line of each GAM, averaged over the sample. The dashed line is the naive regression. Compare the brms panels on Plate 5 and the INLA panels on Plate 6.</figcaption>
+</figure>
+<div class="callout assume">
+<p>These standard errors treat the estimated penalties as known. That makes them a little too small. <code>vcov(g_joint, unconditional = TRUE)</code> returns a covariance matrix corrected for it; take the square root of its <code>elev_km</code> diagonal entry if you want the more careful number.</p>
+</div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">sqrt</span>(<span class="fu">diag</span>(<span class="fu">vcov</span>(g_joint, <span class="at">unconditional =</span> <span class="cn">TRUE</span>))[<span class="st">&quot;elev_km&quot;</span>]), <span class="dv">2</span>)</span></code></pre></div>
+<pre class="output"><code>elev_km 
+   0.58 </code></pre>
+<div class="callout yours">
+<p>For tens of thousands of rows, replace <code>gam()</code> with <code>bam()</code> and add <code>discrete = TRUE</code>; the formula does not change. For a neighbour graph in place of a tree, <code>bs = "mrf"</code> with <code>xt = list(nb = ...)</code> takes a named list of neighbours and fits an ICAR-type smooth, the mgcv counterpart of Plate 4.</p>
+</div>
+</section>
+<section id="what-to-carry-forward" class="level2">
+<h2>What to carry forward</h2>
+<ul>
+<li><code>s(family, bs = "re")</code>, <code>s(glottocode, bs = "mrf", xt = list(penalty = Q))</code> and <code>s(lat, lon, bs = "sos")</code> are the three terms. They add.</li>
+<li>A GAM gives a fast, prior-free answer and good maps. Its account of uncertainty in the variance components is thinner than a Bayesian fit’s.</li>
+<li>Set this plate beside Plates 5 and 6. Three engines with different machinery put the slope between about 1.0 and 1.5, with errors of 0.3 to 0.5. That agreement is the point.</li>
+</ul>
+<p><a href="../08-classical/">Plate 8</a> closes the series with the oldest tools for the same job.</p>
+</section>
+    <nav class="adjoining" aria-label="Adjoining plates"><a class="prev" href="../06-inla/"><span class="dir">Previous plate</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ttl">The same models in INLA</span></a><a class="next" href="../08-classical/"><span class="dir">Next plate</span><span class="ttl">The classical toolkit: PGLS and SAR</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11.5M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></nav>
+  </main>
+</div>
+
+<footer class="colophon">
+  <p>Relatives and Neighbours is a companion to <em>Modeling spatial and phylogenetic autocorrelation in linguistic typology</em> by Muhammad Rehan.</p>
+  <p>Data: PHOIBLE 2.0 (CC BY-SA 3.0), Glottolog (CC BY 4.0), ETOPO1 elevation (public domain). <a href="../#data">How the sample was built</a>.</p>
+</footer>
+
+<script src="../assets/atlas.js"></script>
+</body>
+</html>

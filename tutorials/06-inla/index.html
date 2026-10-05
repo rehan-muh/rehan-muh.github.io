@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The same models in INLA · Relatives and Neighbours</title>
+<meta name="description" content="Refit the family, phylogenetic, neighbour and joint models with INLA, which returns in seconds what Stan returns in minutes, and add a spatial surface that lives on the globe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Charis+SIL:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="../assets/atlas.css">
+</head>
+<body data-plate="06-inla">
+<a class="skip" href="#sheet">Skip to the tutorial</a>
+
+<header class="masthead">
+  <a class="series" href="../">Relatives and Neighbours</a>
+  <nav class="plates" aria-label="All plates"><span class="lbl" aria-hidden="true">Plates</span><ol class="sheet-index"><li><a href="../01-the-problem/" data-plate="01-the-problem"><span class="n">1</span><span class="t">Seeing the problem</span></a></li><li><a href="../02-phylogeny/" data-plate="02-phylogeny"><span class="n">2</span><span class="t">Phylogeny as a covariance matrix</span></a></li><li><a href="../03-space-surface/" data-plate="03-space-surface"><span class="n">3</span><span class="t">Space as a smooth surface</span></a></li><li><a href="../04-space-neighbours/" data-plate="04-space-neighbours"><span class="n">4</span><span class="t">Space as a network of neighbours</span></a></li><li><a href="../05-joint/" data-plate="05-joint"><span class="n">5</span><span class="t">Both at once</span></a></li><li><a href="../06-inla/" aria-current="page" data-plate="06-inla"><span class="n">6</span><span class="t">The same models in INLA</span></a></li><li><a href="../07-mgcv/" data-plate="07-mgcv"><span class="n">7</span><span class="t">The same models as a GAM</span></a></li><li><a href="../08-classical/" data-plate="08-classical"><span class="n">8</span><span class="t">The classical toolkit: PGLS and SAR</span></a></li></ol></nav>
+  <div class="tools">
+    <a href="https://rehan-muh.github.io/">Muhammad Rehan</a>
+  </div>
+</header>
+
+<div class="titleblock">
+  <h1><span class="platenum" aria-hidden="true">6</span><span><span class="vh">Plate 6: </span>The same models in INLA</span></h1>
+  <p class="lede">Refit the family, phylogenetic, neighbour and joint models with INLA, which returns in seconds what Stan returns in minutes, and add a spatial surface that lives on the globe.</p>
+  <dl class="marginalia">
+    <div><dt>Fitted with</dt><dd>INLA</dd></div>
+    <div><dt>Model fitting</dt><dd>about 3 minutes</dd></div>
+    <div><dt>Packages</dt><dd><code>INLA</code> <code>fmesher</code> <code>ape</code> <code>spdep</code> <code>sf</code> <code>rnaturalearth</code> <code>ggplot2</code></dd></div>
+  </dl>
+  <p class="takeaway"><a href="06-inla.R" download>Download the R script</a><a href="06-inla.md">Markdown source</a></p>
+</div>
+
+<div class="chart">
+  <aside class="legend">
+    <h2 id="legend-h">On this plate</h2>
+    <nav aria-labelledby="legend-h">
+<ul>
+<li><a href="#set-up" id="toc-set-up">Set up</a></li>
+<li><a href="#how-inla-differs" id="toc-how-inla-differs">How INLA differs</a></li>
+<li><a href="#matching-the-priors" id="toc-matching-the-priors">Matching the priors</a></li>
+<li><a href="#family-intercepts" id="toc-family-intercepts">Family intercepts</a></li>
+<li><a href="#phylogeny" id="toc-phylogeny">Phylogeny</a></li>
+<li><a href="#neighbours-bym2" id="toc-neighbours-bym2">Neighbours: BYM2</a></li>
+<li><a href="#a-surface-on-the-sphere-spde" id="toc-a-surface-on-the-sphere-spde">A surface on the sphere: SPDE</a></li>
+<li><a href="#phylogeny-and-space-together" id="toc-phylogeny-and-space-together">Phylogeny and space together</a></li>
+<li><a href="#check-the-approximation" id="toc-check-the-approximation">Check the approximation</a></li>
+<li><a href="#all-five-and-what-they-cost" id="toc-all-five-and-what-they-cost">All five, and what they cost</a></li>
+<li><a href="#what-to-carry-forward" id="toc-what-to-carry-forward">What to carry forward</a></li>
+</ul>
+    </nav>
+    <p class="key" aria-hidden="true"><span><i></i>ahead</span><span class="k-here"><i></i>here</span><span class="k-read"><i></i>read</span></p>
+  </aside>
+
+  <main id="sheet" class="sheet">
+<section id="set-up" class="level2">
+<h2>Set up</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(INLA)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fmesher)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ape)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;glottolog_tree.nwk&quot;</span>))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> d<span class="sc">$</span>elevation <span class="sc">/</span> <span class="dv">1000</span></span></code></pre></div>
+</section>
+<section id="how-inla-differs" class="level2">
+<h2>How INLA differs</h2>
+<p>brms draws samples from the posterior. INLA computes an approximation to it directly, using the fact that all the models in this series share one shape: a regression with Gaussian latent effects. For that class the approximation is accurate and takes seconds. The price is a formula interface with its own vocabulary:</p>
+<ul>
+<li>A latent effect is written <code>f(index, model = "...")</code>, where <code>index</code> is a column of integers saying which effect each row uses.</li>
+<li>INLA thinks in <strong>precisions</strong>, one over the variance, and in <strong>precision matrices</strong>, the inverse of covariance matrices.</li>
+<li>Priors are attached to each <code>f()</code> through <code>hyper =</code>.</li>
+</ul>
+<p>So the first step is to give each language the integer indices the models will need.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>fam_id <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">factor</span>(d<span class="sc">$</span>family))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>phy_id <span class="ot">&lt;-</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(d))        <span class="co"># row i of the phylogenetic matrix</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>sp_id  <span class="ot">&lt;-</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(d))        <span class="co"># row i of the neighbour matrix</span></span></code></pre></div>
+</section>
+<section id="matching-the-priors" class="level2">
+<h2>Matching the priors</h2>
+<p>To compare with the brms plates, use the same priors. There, every standard deviation had an exponential(1) prior, which puts 5% of its mass above 3. INLA’s penalised-complexity prior <code>pc.prec</code> is that same exponential distribution on the standard deviation, specified by exactly that statement: <code>param = c(3, 0.05)</code> reads “the probability that the standard deviation exceeds 3 is 0.05”. The slope prior, normal(0, 1), goes in <code>control.fixed</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pc_sd <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">prec =</span> <span class="fu">list</span>(<span class="at">prior =</span> <span class="st">&quot;pc.prec&quot;</span>, <span class="at">param =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="fl">0.05</span>)))</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>fixed <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">0</span>, <span class="at">prec =</span> <span class="dv">1</span>)</span></code></pre></div>
+<p>INLA reports precisions. This helper converts a precision’s posterior into a summary of the standard deviation, so the output can be read against the earlier plates.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sd_of <span class="ot">&lt;-</span> <span class="cf">function</span>(fit, name) {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  m <span class="ot">&lt;-</span> <span class="fu">inla.tmarginal</span>(<span class="cf">function</span>(p) <span class="dv">1</span> <span class="sc">/</span> <span class="fu">sqrt</span>(p), fit<span class="sc">$</span>marginals.hyperpar[[name]])</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  z <span class="ot">&lt;-</span> <span class="fu">inla.zmarginal</span>(m, <span class="at">silent =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="fu">c</span>(<span class="at">mean =</span> z<span class="sc">$</span>mean, <span class="at">lower =</span> z<span class="sc">$</span>quant0<span class="fl">.025</span>, <span class="at">upper =</span> z<span class="sc">$</span>quant0<span class="fl">.975</span>), <span class="dv">2</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>slope_of <span class="ot">&lt;-</span> <span class="cf">function</span>(fit) {</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;sd&quot;</span>, <span class="st">&quot;0.025quant&quot;</span>, <span class="st">&quot;0.975quant&quot;</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="fu">unlist</span>(fit<span class="sc">$</span>summary.fixed[<span class="st">&quot;elev_km&quot;</span>, cols]), <span class="dv">2</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</section>
+<section id="family-intercepts" class="level2">
+<h2>Family intercepts</h2>
+<p>The counterpart of <code>(1 | family)</code> is an <code>iid</code> effect.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>i_fam <span class="ot">&lt;-</span> <span class="fu">inla</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">f</span>(fam_id, <span class="at">model =</span> <span class="st">&quot;iid&quot;</span>, <span class="at">hyper =</span> pc_sd),</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">family =</span> <span class="st">&quot;binomial&quot;</span>, <span class="at">data =</span> d, <span class="at">control.fixed =</span> fixed)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">slope_of</span>(i_fam)</span></code></pre></div>
+<pre class="output"><code>      mean         sd 0.025quant 0.975quant 
+      1.36       0.31       0.79       2.00 </code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd_of</span>(i_fam, <span class="st">&quot;Precision for fam_id&quot;</span>)</span></code></pre></div>
+<pre class="output"><code> mean lower upper 
+ 3.76  2.36  5.64 </code></pre>
+<p>Compare Plate 2, where brms gave a slope of 1.29 with an error of 0.31 for the same model. The two engines agree closely.</p>
+</section>
+<section id="phylogeny" class="level2">
+<h2>Phylogeny</h2>
+<p>The counterpart of <code>gr(glottocode, cov = A)</code> is a <code>generic0</code> effect. It wants the precision matrix, so invert the phylogenetic correlation matrix once. <code>phy_id</code> already follows the order of the data, so reorder <code>A</code> to match before inverting.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">vcv</span>(tree, <span class="at">corr =</span> <span class="cn">TRUE</span>)[d<span class="sc">$</span>glottocode, d<span class="sc">$</span>glottocode]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Q <span class="ot">&lt;-</span> <span class="fu">solve</span>(A)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>i_phy <span class="ot">&lt;-</span> <span class="fu">inla</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>                <span class="fu">f</span>(phy_id, <span class="at">model =</span> <span class="st">&quot;generic0&quot;</span>, <span class="at">Cmatrix =</span> Q, <span class="at">hyper =</span> pc_sd),</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">family =</span> <span class="st">&quot;binomial&quot;</span>, <span class="at">data =</span> d, <span class="at">control.fixed =</span> fixed)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">slope_of</span>(i_phy)</span></code></pre></div>
+<pre class="output"><code>      mean         sd 0.025quant 0.975quant 
+      1.45       0.40       0.78       2.38 </code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd_of</span>(i_phy, <span class="st">&quot;Precision for phy_id&quot;</span>)</span></code></pre></div>
+<pre class="output"><code> mean lower upper 
+ 3.00  1.75  4.58 </code></pre>
+<div class="callout yours">
+<p><code>solve()</code> on a dense matrix is fine up to a few thousand languages. The one thing to get right is the order: row <code>i</code> of <code>Q</code> must be the language whose <code>phy_id</code> is <code>i</code>. Indexing <code>A</code> by the data’s language column, as above, guarantees it.</p>
+</div>
+</section>
+<section id="neighbours-bym2" class="level2">
+<h2>Neighbours: BYM2</h2>
+<p>Build the same five-nearest-neighbour graph as on Plate 4. INLA takes the 0/1 matrix as its <code>graph</code>.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>coords <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)])</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>nb <span class="ot">&lt;-</span> <span class="fu">make.sym.nb</span>(<span class="fu">knn2nb</span>(<span class="fu">knearneigh</span>(coords, <span class="at">k =</span> <span class="dv">5</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>W  <span class="ot">&lt;-</span> <span class="fu">nb2mat</span>(nb, <span class="at">style =</span> <span class="st">&quot;B&quot;</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>pc_bym <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">prec =</span> <span class="fu">list</span>(<span class="at">prior =</span> <span class="st">&quot;pc.prec&quot;</span>, <span class="at">param =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="fl">0.05</span>)),</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">phi  =</span> <span class="fu">list</span>(<span class="at">prior =</span> <span class="st">&quot;pc&quot;</span>, <span class="at">param =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>)))</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>i_bym <span class="ot">&lt;-</span> <span class="fu">inla</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>                <span class="fu">f</span>(sp_id, <span class="at">model =</span> <span class="st">&quot;bym2&quot;</span>, <span class="at">graph =</span> W, <span class="at">scale.model =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>                  <span class="at">hyper =</span> pc_bym),</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">family =</span> <span class="st">&quot;binomial&quot;</span>, <span class="at">data =</span> d, <span class="at">control.fixed =</span> fixed)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="fu">slope_of</span>(i_bym)</span></code></pre></div>
+<pre class="output"><code>      mean         sd 0.025quant 0.975quant 
+      2.99       1.47       0.58       5.54 </code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd_of</span>(i_bym, <span class="st">&quot;Precision for sp_id&quot;</span>)</span></code></pre></div>
+<pre class="output"><code> mean lower upper 
+ 4.71  3.01  7.06 </code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ci <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;0.025quant&quot;</span>, <span class="st">&quot;0.975quant&quot;</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(i_bym<span class="sc">$</span>summary.hyperpar[<span class="st">&quot;Phi for sp_id&quot;</span>, ci], <span class="dv">2</span>)</span></code></pre></div>
+<pre class="output"><code>              mean 0.025quant 0.975quant
+Phi for sp_id 0.98        0.9          1</code></pre>
+<p><code>Phi</code> is the spatial share that brms called <code>rhocar</code>. Its prior here says it is as likely to be above one half as below.</p>
+<p>Now look at the slope. On Plate 4, brms gave about 1.2 for this model, with the same data, the same graph and the same priors. INLA’s answer is more than twice that, with an interval several times wider. One of the two is wrong. Hold that thought; the section on checking the approximation, below, settles it.</p>
+</section>
+<section id="a-surface-on-the-sphere-spde" class="level2">
+<h2>A surface on the sphere: SPDE</h2>
+<p>Plate 3 drew its surface on a flat map. INLA’s stochastic partial differential equation (SPDE) approach builds a Gaussian process on a mesh of triangles, and the mesh can cover the globe. There is no projection and no edge.</p>
+<p>It takes four steps.</p>
+<p><strong>1. Put the languages on the unit sphere.</strong></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>to_sphere <span class="ot">&lt;-</span> <span class="cf">function</span>(lon, lat) {</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  rad <span class="ot">&lt;-</span> pi <span class="sc">/</span> <span class="dv">180</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cbind</span>(<span class="fu">cos</span>(lat <span class="sc">*</span> rad) <span class="sc">*</span> <span class="fu">cos</span>(lon <span class="sc">*</span> rad),</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">cos</span>(lat <span class="sc">*</span> rad) <span class="sc">*</span> <span class="fu">sin</span>(lon <span class="sc">*</span> rad),</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sin</span>(lat <span class="sc">*</span> rad))</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>xyz <span class="ot">&lt;-</span> <span class="fu">to_sphere</span>(d<span class="sc">$</span>lon, d<span class="sc">$</span>lat)</span></code></pre></div>
+<p><strong>2. Build the mesh.</strong> <code>globe = 12</code> divides the sphere into triangles with sides of roughly 600 km. The surface is free to vary between mesh nodes, so the triangles should be clearly smaller than the distances over which you expect it to change.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>mesh <span class="ot">&lt;-</span> <span class="fu">fm_rcdt_2d</span>(<span class="at">globe =</span> <span class="dv">12</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>mesh<span class="sc">$</span>n</span></code></pre></div>
+<pre class="output"><code>[1] 1442</code></pre>
+<p><strong>3. Define the surface and its priors.</strong> Distances on the unit sphere are in radians; one radian is about 6,370 km. The priors say that the range, the distance at which correlation has nearly died out, is unlikely to be below 0.05 radians (about 300 km), and that the standard deviation is unlikely to exceed 3, as everywhere else.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>spde <span class="ot">&lt;-</span> <span class="fu">inla.spde2.pcmatern</span>(mesh,</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>                            <span class="at">prior.range =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.05</span>),</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>                            <span class="at">prior.sigma =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="fl">0.05</span>))</span></code></pre></div>
+<p><strong>4. Connect languages to the mesh and fit.</strong> A language rarely sits on a mesh node, so its value is interpolated from the three corners of its triangle. <code>fm_basis()</code> computes those weights, and <code>inla.stack()</code> bundles them with the data. This is the one piece of bookkeeping the SPDE approach demands.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>loc_weights <span class="ot">&lt;-</span> <span class="fu">fm_basis</span>(mesh, <span class="at">loc =</span> xyz)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>stack <span class="ot">&lt;-</span> <span class="fu">inla.stack</span>(</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> <span class="fu">list</span>(<span class="at">y =</span> d<span class="sc">$</span>ejectives),</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">A       =</span> <span class="fu">list</span>(loc_weights, <span class="dv">1</span>),</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">effects =</span> <span class="fu">list</span>(<span class="at">field =</span> <span class="fu">seq_len</span>(mesh<span class="sc">$</span>n),</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">data.frame</span>(<span class="at">intercept =</span> <span class="dv">1</span>, <span class="at">elev_km =</span> d<span class="sc">$</span>elev_km,</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>                            <span class="at">phy_id =</span> d<span class="sc">$</span>phy_id)))</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>i_spde <span class="ot">&lt;-</span> <span class="fu">inla</span>(y <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> intercept <span class="sc">+</span> elev_km <span class="sc">+</span> <span class="fu">f</span>(field, <span class="at">model =</span> spde),</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">family =</span> <span class="st">&quot;binomial&quot;</span>, <span class="at">data =</span> <span class="fu">inla.stack.data</span>(stack),</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>               <span class="at">control.predictor =</span> <span class="fu">list</span>(<span class="at">A =</span> <span class="fu">inla.stack.A</span>(stack)),</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>               <span class="at">control.fixed =</span> fixed)</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="fu">slope_of</span>(i_spde)</span></code></pre></div>
+<pre class="output"><code>      mean         sd 0.025quant 0.975quant 
+      1.09       0.32       0.48       1.73 </code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(i_spde<span class="sc">$</span>summary.hyperpar[, ci], <span class="dv">2</span>)</span></code></pre></div>
+<pre class="output"><code>                mean 0.025quant 0.975quant
+Range for field 1.15       0.63       1.91
+Stdev for field 4.97       2.87       7.95</code></pre>
+<p>The estimated range is about 7,300 km. The range of a Matérn surface is the distance at which correlation has fallen to roughly 0.1, so it is always a larger number than the length-scale brms reported on Plate 3, by a factor of about two. The two fits describe surfaces of similar reach: wide regional swells, with the sample’s whole eastern half sitting low.</p>
+<p>Because the surface is defined everywhere on the mesh, it can be evaluated anywhere, not only where there are languages. Evaluate it on a grid of land points and draw the map.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="st">&quot;small&quot;</span>, <span class="at">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sf_use_s2</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">lon =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">179</span>, <span class="dv">179</span>, <span class="dv">2</span>), <span class="at">lat =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">55</span>, <span class="dv">75</span>, <span class="dv">2</span>))</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(grid, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>), <span class="at">crs =</span> <span class="dv">4326</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> grid[<span class="fu">lengths</span>(<span class="fu">st_intersects</span>(grid, world)) <span class="sc">&gt;</span> <span class="dv">0</span>, ]</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>grid<span class="sc">$</span>field <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">fm_basis</span>(mesh, <span class="at">loc =</span> <span class="fu">to_sphere</span>(grid<span class="sc">$</span>lon, grid<span class="sc">$</span>lat)) <span class="sc">%*%</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>                          i_spde<span class="sc">$</span>summary.random<span class="sc">$</span>field<span class="sc">$</span>mean)</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> world, <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> grid, <span class="fu">aes</span>(<span class="at">colour =</span> field), <span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">shape =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_gradient2</span>(<span class="at">low =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#F0EFEC&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#E34948&quot;</span>,</span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&quot;spatial effect&quot;</span>) <span class="sc">+</span></span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=eqearth&quot;</span>)</span></code></pre></div>
+<figure>
+<img src="figures/spde-map-1.png" width="814" height="451" alt="Posterior mean of the SPDE surface on land, on the logit scale. Red regions favour ejectives beyond what elevation predicts; blue regions disfavour them." />
+<figcaption aria-hidden="true">Posterior mean of the SPDE surface on land, on the logit scale. Red regions favour ejectives beyond what elevation predicts; blue regions disfavour them.</figcaption>
+</figure>
+</section>
+<section id="phylogeny-and-space-together" class="level2">
+<h2>Phylogeny and space together</h2>
+<p>The joint model adds the phylogenetic <code>generic0</code> term to the SPDE model. The stack already carries <code>phy_id</code>, so only the formula changes.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>i_joint <span class="ot">&lt;-</span> <span class="fu">inla</span>(y <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> intercept <span class="sc">+</span> elev_km <span class="sc">+</span> <span class="fu">f</span>(field, <span class="at">model =</span> spde) <span class="sc">+</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">f</span>(phy_id, <span class="at">model =</span> <span class="st">&quot;generic0&quot;</span>, <span class="at">Cmatrix =</span> Q, <span class="at">hyper =</span> pc_sd),</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">family =</span> <span class="st">&quot;binomial&quot;</span>, <span class="at">data =</span> <span class="fu">inla.stack.data</span>(stack),</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">control.predictor =</span> <span class="fu">list</span>(<span class="at">A =</span> <span class="fu">inla.stack.A</span>(stack)),</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">control.fixed =</span> fixed)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="fu">slope_of</span>(i_joint)</span></code></pre></div>
+<pre class="output"><code>      mean         sd 0.025quant 0.975quant 
+      1.18       0.35       0.52       1.91 </code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd_of</span>(i_joint, <span class="st">&quot;Precision for phy_id&quot;</span>)</span></code></pre></div>
+<pre class="output"><code> mean lower upper 
+ 0.80  0.15  1.97 </code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(i_joint<span class="sc">$</span>summary.hyperpar[<span class="fu">c</span>(<span class="st">&quot;Range for field&quot;</span>, <span class="st">&quot;Stdev for field&quot;</span>), ci], <span class="dv">2</span>)</span></code></pre></div>
+<pre class="output"><code>                mean 0.025quant 0.975quant
+Range for field 1.21       0.67       2.00
+Stdev for field 5.13       2.98       8.13</code></pre>
+</section>
+<section id="check-the-approximation" class="level2">
+<h2>Check the approximation</h2>
+<p>INLA does not sample. It approximates, and an approximation can fail without an error message. Binary data with one latent value per language, which is our case, is where it is under the most strain.</p>
+<p>There is a cheap test. INLA has two computational modes: the current default, which is fast and applies a variational correction, and an older one called <code>classic</code>, which is slower and built differently. When the two agree, the answer is very likely sound. When they disagree, at least one is wrong.</p>
+<p>Every INLA fit stores the arguments it was called with in <code>.args</code>, so all five models can be refitted in classic mode without retyping them.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>fits <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;family intercept&quot;</span> <span class="ot">=</span> i_fam, <span class="st">&quot;phylogeny&quot;</span> <span class="ot">=</span> i_phy,</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;space: BYM2&quot;</span> <span class="ot">=</span> i_bym, <span class="st">&quot;space: SPDE&quot;</span> <span class="ot">=</span> i_spde,</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;phylogeny + space&quot;</span> <span class="ot">=</span> i_joint)</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>classic <span class="ot">&lt;-</span> <span class="fu">lapply</span>(fits, <span class="cf">function</span>(fit) {</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  args <span class="ot">&lt;-</span> fit<span class="sc">$</span>.args</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  args<span class="sc">$</span>inla.mode <span class="ot">&lt;-</span> <span class="st">&quot;classic&quot;</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">do.call</span>(inla, args)</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">default =</span> <span class="fu">sapply</span>(fits, <span class="cf">function</span>(f) <span class="fu">slope_of</span>(f)[[<span class="st">&quot;mean&quot;</span>]]),</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>           <span class="at">classic =</span> <span class="fu">sapply</span>(classic, <span class="cf">function</span>(f) <span class="fu">slope_of</span>(f)[[<span class="st">&quot;mean&quot;</span>]]))</span></code></pre></div>
+<pre class="output"><code>                  default classic
+family intercept     1.36    1.34
+phylogeny            1.45    1.47
+space: BYM2          2.99    1.13
+space: SPDE          1.09    1.03
+phylogeny + space    1.18    1.13</code></pre>
+<p>Four of the five models give the same slope either way. BYM2 does not. In classic mode its slope matches the brms fit from Plate 4; in the default mode it is far off. So for this model, with these data, the default approximation failed, and nothing in the output said so.</p>
+<div class="callout pitfall">
+<p>Make this comparison a habit for any INLA model with a binary outcome, and keep one brms fit of your final model as a reference. If the modes disagree, report the one a sampler confirms, and say that you checked.</p>
+</div>
+</section>
+<section id="all-five-and-what-they-cost" class="level2">
+<h2>All five, and what they cost</h2>
+<p>Use the classic fit for BYM2 and the default fits for the rest.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>fits[[<span class="st">&quot;space: BYM2&quot;</span>]] <span class="ot">&lt;-</span> classic[[<span class="st">&quot;space: BYM2&quot;</span>]]</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>out <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">t</span>(<span class="fu">sapply</span>(fits, slope_of)))</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>seconds <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">sapply</span>(fits, <span class="cf">function</span>(f) f<span class="sc">$</span>cpu.used[[<span class="st">&quot;Total&quot;</span>]]), <span class="dv">1</span>)</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>out</span></code></pre></div>
+<pre class="output"><code>                  mean   sd 0.025quant 0.975quant seconds
+family intercept  1.36 0.31       0.79       2.00     5.4
+phylogeny         1.45 0.40       0.78       2.38     4.4
+space: BYM2       1.13 0.32       0.56       1.80    29.4
+space: SPDE       1.09 0.32       0.48       1.73    17.2
+phylogeny + space 1.18 0.35       0.52       1.91    17.1</code></pre>
+<p>And the regression lines. As on Plate 5, each line is averaged over the sample so that it can be compared with the naive regression: every language keeps its own latent effects and all are moved to the same elevation. INLA stores the posterior mean of each language’s linear predictor, so these are lines without bands. For bands, fit with <code>control.compute = list(config = TRUE)</code> and draw from <code>inla.posterior.sample()</code>.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>x  <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">4.5</span>, <span class="at">by =</span> <span class="fl">0.1</span>)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> d)</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>line_of <span class="ot">&lt;-</span> <span class="cf">function</span>(fit, label) {</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>  eta    <span class="ot">&lt;-</span> fit<span class="sc">$</span>summary.linear.predictor<span class="sc">$</span>mean[<span class="fu">seq_len</span>(<span class="fu">nrow</span>(d))]</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  b      <span class="ot">&lt;-</span> fit<span class="sc">$</span>summary.fixed[<span class="st">&quot;elev_km&quot;</span>, <span class="st">&quot;mean&quot;</span>]</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>  at_sea <span class="ot">&lt;-</span> eta <span class="sc">-</span> b <span class="sc">*</span> d<span class="sc">$</span>elev_km           <span class="co"># every language moved to 0 km</span></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x, <span class="at">model =</span> label,</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>             <span class="at">p =</span> <span class="fu">sapply</span>(x, <span class="cf">function</span>(xi) <span class="fu">mean</span>(<span class="fu">plogis</span>(at_sea <span class="sc">+</span> b <span class="sc">*</span> xi))))</span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>lines <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">Map</span>(line_of, fits, <span class="fu">names</span>(fits)))</span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>lines<span class="sc">$</span>model <span class="ot">&lt;-</span> <span class="fu">factor</span>(lines<span class="sc">$</span>model, <span class="at">levels =</span> <span class="fu">names</span>(fits))</span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>kind_of <span class="ot">&lt;-</span> <span class="cf">function</span>(model) {</span>
+<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(<span class="fu">grepl</span>(<span class="st">&quot;+&quot;</span>, model, <span class="at">fixed =</span> <span class="cn">TRUE</span>), <span class="st">&quot;both&quot;</span>,</span>
+<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a>         <span class="fu">ifelse</span>(<span class="fu">grepl</span>(<span class="st">&quot;space&quot;</span>, model), <span class="st">&quot;space&quot;</span>, <span class="st">&quot;ancestry&quot;</span>))</span>
+<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb38-18"><a href="#cb38-18" aria-hidden="true" tabindex="-1"></a>hues <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">naive =</span> <span class="st">&quot;grey45&quot;</span>, <span class="at">ancestry =</span> <span class="st">&quot;#1BAF7A&quot;</span>, <span class="at">space =</span> <span class="st">&quot;#2A78D6&quot;</span>,</span>
+<span id="cb38-19"><a href="#cb38-19" aria-hidden="true" tabindex="-1"></a>          <span class="at">both =</span> <span class="st">&quot;grey10&quot;</span>)</span>
+<span id="cb38-20"><a href="#cb38-20" aria-hidden="true" tabindex="-1"></a>lines<span class="sc">$</span>kind <span class="ot">&lt;-</span> <span class="fu">kind_of</span>(lines<span class="sc">$</span>model)</span>
+<span id="cb38-21"><a href="#cb38-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-22"><a href="#cb38-22" aria-hidden="true" tabindex="-1"></a>naive <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x)</span>
+<span id="cb38-23"><a href="#cb38-23" aria-hidden="true" tabindex="-1"></a>naive<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">predict</span>(m0, <span class="at">newdata =</span> naive, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span>
+<span id="cb38-24"><a href="#cb38-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-25"><a href="#cb38-25" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(lines, <span class="fu">aes</span>(elev_km, p)) <span class="sc">+</span></span>
+<span id="cb38-26"><a href="#cb38-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">colour =</span> kind), <span class="at">linewidth =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb38-27"><a href="#cb38-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> naive, <span class="at">linetype =</span> <span class="st">&quot;22&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;grey35&quot;</span>) <span class="sc">+</span></span>
+<span id="cb38-28"><a href="#cb38-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> hues, <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb38-29"><a href="#cb38-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>model, <span class="at">nrow =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb38-30"><a href="#cb38-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;elevation (km)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;probability of ejectives&quot;</span>)</span></code></pre></div>
+<figure>
+<img src="figures/lines-1.png" width="814" height="572" alt="The regression line of each INLA model, averaged over the sample and computed at posterior means. The dashed line is the naive regression. Compare the brms panels on Plate 5." />
+<figcaption aria-hidden="true">The regression line of each INLA model, averaged over the sample and computed at posterior means. The dashed line is the naive regression. Compare the brms panels on Plate 5.</figcaption>
+</figure>
+<p>Set this beside the table on Plate 5. The slopes agree with the brms fits, model for model, and the whole table took less time than one Stan compilation.</p>
+<div class="callout assume">
+<p>The SPDE surface is a Matérn field, a rougher relative of the default surface in brms. Its smoothness is fixed by the method; the range and standard deviation are estimated.</p>
+</div>
+</section>
+<section id="what-to-carry-forward" class="level2">
+<h2>What to carry forward</h2>
+<ul>
+<li>Every model from Plates 2 to 5 has an INLA counterpart: <code>iid</code>, <code>generic0</code> with the inverse of the phylogenetic matrix, <code>bym2</code> with the neighbour matrix, and an SPDE surface.</li>
+<li><code>pc.prec</code> with <code>param = c(3, 0.05)</code> is the exponential(1) prior of the brms plates.</li>
+<li>Refit in <code>classic</code> mode and compare. It caught a failure here that would otherwise have gone into a table.</li>
+<li>The SPDE mesh on the sphere is the cleanest way in this series to treat a world sample as what it is.</li>
+</ul>
+<p>When you need to try twenty specifications, INLA is the tool. <a href="../07-mgcv/">Plate 7</a> covers another fast engine with a different philosophy: everything is a penalised smooth.</p>
+</section>
+    <nav class="adjoining" aria-label="Adjoining plates"><a class="prev" href="../05-joint/"><span class="dir">Previous plate</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ttl">Both at once</span></a><a class="next" href="../07-mgcv/"><span class="dir">Next plate</span><span class="ttl">The same models as a GAM</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11.5M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></nav>
+  </main>
+</div>
+
+<footer class="colophon">
+  <p>Relatives and Neighbours is a companion to <em>Modeling spatial and phylogenetic autocorrelation in linguistic typology</em> by Muhammad Rehan.</p>
+  <p>Data: PHOIBLE 2.0 (CC BY-SA 3.0), Glottolog (CC BY 4.0), ETOPO1 elevation (public domain). <a href="../#data">How the sample was built</a>.</p>
+</footer>
+
+<script src="../assets/atlas.js"></script>
+</body>
+</html>
