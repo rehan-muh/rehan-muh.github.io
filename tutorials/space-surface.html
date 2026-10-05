@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Space as a smooth surface | Relatives and Neighbours</title>
+  <meta name="description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Space as a smooth surface | Relatives and Neighbours" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Space as a smooth surface | Relatives and Neighbours" />
+  
+  <meta name="twitter:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
+  
+
+<meta name="author" content="Muhammad Rehan" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="phylogeny.html"/>
+<link rel="next" href="space-neighbours.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>Relatives and Neighbours</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#before-you-start"><i class="fa fa-check"></i>Before you start</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-running-example"><i class="fa fa-check"></i>The running example</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#sources"><i class="fa fa-check"></i>Sources</a></li>
+</ul></li>
+<li class="part"><span><b>I Diagnose</b></span></li>
+<li class="chapter" data-level="1" data-path="the-problem.html"><a href="the-problem.html"><i class="fa fa-check"></i><b>1</b> Seeing the problem</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="the-problem.html"><a href="the-problem.html#the-data-and-the-first-model"><i class="fa fa-check"></i><b>1.1</b> The data and the first model</a></li>
+<li class="chapter" data-level="1.2" data-path="the-problem.html"><a href="the-problem.html#where-the-ejectives-are"><i class="fa fa-check"></i><b>1.2</b> Where the ejectives are</a></li>
+<li class="chapter" data-level="1.3" data-path="the-problem.html"><a href="the-problem.html#how-often-does-a-meaningless-predictor-pass"><i class="fa fa-check"></i><b>1.3</b> How often does a meaningless predictor pass?</a></li>
+<li class="chapter" data-level="1.4" data-path="the-problem.html"><a href="the-problem.html#measuring-spatial-dependence-morans-i"><i class="fa fa-check"></i><b>1.4</b> Measuring spatial dependence: Moran’s I</a></li>
+<li class="chapter" data-level="1.5" data-path="the-problem.html"><a href="the-problem.html#measuring-phylogenetic-signal"><i class="fa fa-check"></i><b>1.5</b> Measuring phylogenetic signal</a></li>
+<li class="chapter" data-level="1.6" data-path="the-problem.html"><a href="the-problem.html#what-to-carry-forward"><i class="fa fa-check"></i><b>1.6</b> What to carry forward</a></li>
+</ul></li>
+<li class="part"><span><b>II Model it in brms</b></span></li>
+<li class="chapter" data-level="2" data-path="phylogeny.html"><a href="phylogeny.html"><i class="fa fa-check"></i><b>2</b> Phylogeny as a covariance matrix</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="phylogeny.html"><a href="phylogeny.html#set-up"><i class="fa fa-check"></i><b>2.1</b> Set up</a></li>
+<li class="chapter" data-level="2.2" data-path="phylogeny.html"><a href="phylogeny.html#from-a-tree-to-a-matrix"><i class="fa fa-check"></i><b>2.2</b> From a tree to a matrix</a></li>
+<li class="chapter" data-level="2.3" data-path="phylogeny.html"><a href="phylogeny.html#first-rung-family-as-a-random-intercept"><i class="fa fa-check"></i><b>2.3</b> First rung: family as a random intercept</a></li>
+<li class="chapter" data-level="2.4" data-path="phylogeny.html"><a href="phylogeny.html#the-phylogenetic-model"><i class="fa fa-check"></i><b>2.4</b> The phylogenetic model</a></li>
+<li class="chapter" data-level="2.5" data-path="phylogeny.html"><a href="phylogeny.html#reading-the-result"><i class="fa fa-check"></i><b>2.5</b> Reading the result</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="phylogeny.html"><a href="phylogeny.html#the-slope"><i class="fa fa-check"></i><b>2.5.1</b> The slope</a></li>
+<li class="chapter" data-level="2.5.2" data-path="phylogeny.html"><a href="phylogeny.html#the-regression-line"><i class="fa fa-check"></i><b>2.5.2</b> The regression line</a></li>
+<li class="chapter" data-level="2.5.3" data-path="phylogeny.html"><a href="phylogeny.html#phylogenetic-signal"><i class="fa fa-check"></i><b>2.5.3</b> Phylogenetic signal</a></li>
+<li class="chapter" data-level="2.5.4" data-path="phylogeny.html"><a href="phylogeny.html#where-the-model-put-the-lineage-effects"><i class="fa fa-check"></i><b>2.5.4</b> Where the model put the lineage effects</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="phylogeny.html"><a href="phylogeny.html#what-to-carry-forward-1"><i class="fa fa-check"></i><b>2.6</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="space-surface.html"><a href="space-surface.html"><i class="fa fa-check"></i><b>3</b> Space as a smooth surface</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="space-surface.html"><a href="space-surface.html#set-up-1"><i class="fa fa-check"></i><b>3.1</b> Set up</a></li>
+<li class="chapter" data-level="3.2" data-path="space-surface.html"><a href="space-surface.html#the-idea"><i class="fa fa-check"></i><b>3.2</b> The idea</a></li>
+<li class="chapter" data-level="3.3" data-path="space-surface.html"><a href="space-surface.html#coordinates-the-model-can-measure-with"><i class="fa fa-check"></i><b>3.3</b> Coordinates the model can measure with</a></li>
+<li class="chapter" data-level="3.4" data-path="space-surface.html"><a href="space-surface.html#fitting-it"><i class="fa fa-check"></i><b>3.4</b> Fitting it</a></li>
+<li class="chapter" data-level="3.5" data-path="space-surface.html"><a href="space-surface.html#was-k-large-enough"><i class="fa fa-check"></i><b>3.5</b> Was <code>k</code> large enough?</a></li>
+<li class="chapter" data-level="3.6" data-path="space-surface.html"><a href="space-surface.html#what-the-surface-looks-like"><i class="fa fa-check"></i><b>3.6</b> What the surface looks like</a></li>
+<li class="chapter" data-level="3.7" data-path="space-surface.html"><a href="space-surface.html#did-it-work"><i class="fa fa-check"></i><b>3.7</b> Did it work?</a></li>
+<li class="chapter" data-level="3.8" data-path="space-surface.html"><a href="space-surface.html#the-regression-line-1"><i class="fa fa-check"></i><b>3.8</b> The regression line</a></li>
+<li class="chapter" data-level="3.9" data-path="space-surface.html"><a href="space-surface.html#variations"><i class="fa fa-check"></i><b>3.9</b> Variations</a></li>
+<li class="chapter" data-level="3.10" data-path="space-surface.html"><a href="space-surface.html#what-to-carry-forward-2"><i class="fa fa-check"></i><b>3.10</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="space-neighbours.html"><a href="space-neighbours.html"><i class="fa fa-check"></i><b>4</b> Space as a network of neighbours</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="space-neighbours.html"><a href="space-neighbours.html#set-up-2"><i class="fa fa-check"></i><b>4.1</b> Set up</a></li>
+<li class="chapter" data-level="4.2" data-path="space-neighbours.html"><a href="space-neighbours.html#the-idea-1"><i class="fa fa-check"></i><b>4.2</b> The idea</a></li>
+<li class="chapter" data-level="4.3" data-path="space-neighbours.html"><a href="space-neighbours.html#building-the-graph"><i class="fa fa-check"></i><b>4.3</b> Building the graph</a></li>
+<li class="chapter" data-level="4.4" data-path="space-neighbours.html"><a href="space-neighbours.html#icar"><i class="fa fa-check"></i><b>4.4</b> ICAR</a></li>
+<li class="chapter" data-level="4.5" data-path="space-neighbours.html"><a href="space-neighbours.html#bym2"><i class="fa fa-check"></i><b>4.5</b> BYM2</a></li>
+<li class="chapter" data-level="4.6" data-path="space-neighbours.html"><a href="space-neighbours.html#the-regression-line-2"><i class="fa fa-check"></i><b>4.6</b> The regression line</a></li>
+<li class="chapter" data-level="4.7" data-path="space-neighbours.html"><a href="space-neighbours.html#how-much-does-the-graph-matter"><i class="fa fa-check"></i><b>4.7</b> How much does the graph matter?</a></li>
+<li class="chapter" data-level="4.8" data-path="space-neighbours.html"><a href="space-neighbours.html#other-models-in-the-same-family"><i class="fa fa-check"></i><b>4.8</b> Other models in the same family</a></li>
+<li class="chapter" data-level="4.9" data-path="space-neighbours.html"><a href="space-neighbours.html#what-to-carry-forward-3"><i class="fa fa-check"></i><b>4.9</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="joint.html"><a href="joint.html"><i class="fa fa-check"></i><b>5</b> Both at once</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="joint.html"><a href="joint.html#set-up-3"><i class="fa fa-check"></i><b>5.1</b> Set up</a></li>
+<li class="chapter" data-level="5.2" data-path="joint.html"><a href="joint.html#why-one-model-and-not-two"><i class="fa fa-check"></i><b>5.2</b> Why one model and not two</a></li>
+<li class="chapter" data-level="5.3" data-path="joint.html"><a href="joint.html#the-joint-model"><i class="fa fa-check"></i><b>5.3</b> The joint model</a></li>
+<li class="chapter" data-level="5.4" data-path="joint.html"><a href="joint.html#bring-back-the-earlier-models"><i class="fa fa-check"></i><b>5.4</b> Bring back the earlier models</a></li>
+<li class="chapter" data-level="5.5" data-path="joint.html"><a href="joint.html#who-gets-the-credit"><i class="fa fa-check"></i><b>5.5</b> Who gets the credit</a></li>
+<li class="chapter" data-level="5.6" data-path="joint.html"><a href="joint.html#every-slope-so-far"><i class="fa fa-check"></i><b>5.6</b> Every slope so far</a></li>
+<li class="chapter" data-level="5.7" data-path="joint.html"><a href="joint.html#every-regression-line-so-far"><i class="fa fa-check"></i><b>5.7</b> Every regression line so far</a></li>
+<li class="chapter" data-level="5.8" data-path="joint.html"><a href="joint.html#which-model-to-report"><i class="fa fa-check"></i><b>5.8</b> Which model to report</a></li>
+<li class="chapter" data-level="5.9" data-path="joint.html"><a href="joint.html#what-to-carry-forward-4"><i class="fa fa-check"></i><b>5.9</b> What to carry forward</a></li>
+</ul></li>
+<li class="part"><span><b>III Other engines</b></span></li>
+<li class="chapter" data-level="6" data-path="inla.html"><a href="inla.html"><i class="fa fa-check"></i><b>6</b> The same models in INLA</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="inla.html"><a href="inla.html#set-up-4"><i class="fa fa-check"></i><b>6.1</b> Set up</a></li>
+<li class="chapter" data-level="6.2" data-path="inla.html"><a href="inla.html#how-inla-differs"><i class="fa fa-check"></i><b>6.2</b> How INLA differs</a></li>
+<li class="chapter" data-level="6.3" data-path="inla.html"><a href="inla.html#matching-the-priors"><i class="fa fa-check"></i><b>6.3</b> Matching the priors</a></li>
+<li class="chapter" data-level="6.4" data-path="inla.html"><a href="inla.html#family-intercepts"><i class="fa fa-check"></i><b>6.4</b> Family intercepts</a></li>
+<li class="chapter" data-level="6.5" data-path="inla.html"><a href="inla.html#phylogeny-1"><i class="fa fa-check"></i><b>6.5</b> Phylogeny</a></li>
+<li class="chapter" data-level="6.6" data-path="inla.html"><a href="inla.html#neighbours-bym2"><i class="fa fa-check"></i><b>6.6</b> Neighbours: BYM2</a></li>
+<li class="chapter" data-level="6.7" data-path="inla.html"><a href="inla.html#a-surface-on-the-sphere-spde"><i class="fa fa-check"></i><b>6.7</b> A surface on the sphere: SPDE</a></li>
+<li class="chapter" data-level="6.8" data-path="inla.html"><a href="inla.html#phylogeny-and-space-together"><i class="fa fa-check"></i><b>6.8</b> Phylogeny and space together</a></li>
+<li class="chapter" data-level="6.9" data-path="inla.html"><a href="inla.html#check-the-approximation"><i class="fa fa-check"></i><b>6.9</b> Check the approximation</a></li>
+<li class="chapter" data-level="6.10" data-path="inla.html"><a href="inla.html#all-five-and-what-they-cost"><i class="fa fa-check"></i><b>6.10</b> All five, and what they cost</a></li>
+<li class="chapter" data-level="6.11" data-path="inla.html"><a href="inla.html#what-to-carry-forward-5"><i class="fa fa-check"></i><b>6.11</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="mgcv.html"><a href="mgcv.html"><i class="fa fa-check"></i><b>7</b> The same models as a GAM</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="mgcv.html"><a href="mgcv.html#set-up-5"><i class="fa fa-check"></i><b>7.1</b> Set up</a></li>
+<li class="chapter" data-level="7.2" data-path="mgcv.html"><a href="mgcv.html#how-a-gam-sees-dependence"><i class="fa fa-check"></i><b>7.2</b> How a GAM sees dependence</a></li>
+<li class="chapter" data-level="7.3" data-path="mgcv.html"><a href="mgcv.html#family-intercepts-1"><i class="fa fa-check"></i><b>7.3</b> Family intercepts</a></li>
+<li class="chapter" data-level="7.4" data-path="mgcv.html"><a href="mgcv.html#phylogeny-as-a-markov-random-field"><i class="fa fa-check"></i><b>7.4</b> Phylogeny as a Markov random field</a></li>
+<li class="chapter" data-level="7.5" data-path="mgcv.html"><a href="mgcv.html#space-as-a-spline-on-the-sphere"><i class="fa fa-check"></i><b>7.5</b> Space as a spline on the sphere</a></li>
+<li class="chapter" data-level="7.6" data-path="mgcv.html"><a href="mgcv.html#phylogeny-and-space-together-1"><i class="fa fa-check"></i><b>7.6</b> Phylogeny and space together</a></li>
+<li class="chapter" data-level="7.7" data-path="mgcv.html"><a href="mgcv.html#all-four"><i class="fa fa-check"></i><b>7.7</b> All four</a></li>
+<li class="chapter" data-level="7.8" data-path="mgcv.html"><a href="mgcv.html#what-to-carry-forward-6"><i class="fa fa-check"></i><b>7.8</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="classical.html"><a href="classical.html"><i class="fa fa-check"></i><b>8</b> The classical toolkit: PGLS and SAR</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="classical.html"><a href="classical.html#set-up-6"><i class="fa fa-check"></i><b>8.1</b> Set up</a></li>
+<li class="chapter" data-level="8.2" data-path="classical.html"><a href="classical.html#phylogenetic-generalised-least-squares"><i class="fa fa-check"></i><b>8.2</b> Phylogenetic generalised least squares</a></li>
+<li class="chapter" data-level="8.3" data-path="classical.html"><a href="classical.html#phylogenetic-logistic-regression"><i class="fa fa-check"></i><b>8.3</b> Phylogenetic logistic regression</a></li>
+<li class="chapter" data-level="8.4" data-path="classical.html"><a href="classical.html#simultaneous-autoregressive-models"><i class="fa fa-check"></i><b>8.4</b> Simultaneous autoregressive models</a></li>
+<li class="chapter" data-level="8.5" data-path="classical.html"><a href="classical.html#side-by-side"><i class="fa fa-check"></i><b>8.5</b> Side by side</a></li>
+<li class="chapter" data-level="8.6" data-path="classical.html"><a href="classical.html#when-the-classical-tools-are-enough"><i class="fa fa-check"></i><b>8.6</b> When the classical tools are enough</a></li>
+<li class="chapter" data-level="8.7" data-path="classical.html"><a href="classical.html#the-series-in-one-paragraph"><i class="fa fa-check"></i><b>8.7</b> The series in one paragraph</a></li>
+</ul></li>
+<li class="part"><span><b>IV Sampling and simulation</b></span></li>
+<li class="chapter" data-level="9" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>9</b> Sampling instead of modelling</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="sampling.html"><a href="sampling.html#set-up-7"><i class="fa fa-check"></i><b>9.1</b> Set up</a></li>
+<li class="chapter" data-level="9.2" data-path="sampling.html"><a href="sampling.html#the-sampling-tradition"><i class="fa fa-check"></i><b>9.2</b> The sampling tradition</a></li>
+<li class="chapter" data-level="9.3" data-path="sampling.html"><a href="sampling.html#three-designs"><i class="fa fa-check"></i><b>9.3</b> Three designs</a></li>
+<li class="chapter" data-level="9.4" data-path="sampling.html"><a href="sampling.html#one-sample-one-answer"><i class="fa fa-check"></i><b>9.4</b> One sample, one answer</a></li>
+<li class="chapter" data-level="9.5" data-path="sampling.html"><a href="sampling.html#a-thousand-samples"><i class="fa fa-check"></i><b>9.5</b> A thousand samples</a></li>
+<li class="chapter" data-level="9.6" data-path="sampling.html"><a href="sampling.html#the-regression-lines"><i class="fa fa-check"></i><b>9.6</b> The regression lines</a></li>
+<li class="chapter" data-level="9.7" data-path="sampling.html"><a href="sampling.html#does-sampling-remove-the-dependence"><i class="fa fa-check"></i><b>9.7</b> Does sampling remove the dependence?</a></li>
+<li class="chapter" data-level="9.8" data-path="sampling.html"><a href="sampling.html#what-to-carry-forward-7"><i class="fa fa-check"></i><b>9.8</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="simulation.html"><a href="simulation.html"><i class="fa fa-check"></i><b>10</b> Does it recover the truth?</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="simulation.html"><a href="simulation.html#why-simulate"><i class="fa fa-check"></i><b>10.1</b> Why simulate</a></li>
+<li class="chapter" data-level="10.2" data-path="simulation.html"><a href="simulation.html#set-up-8"><i class="fa fa-check"></i><b>10.2</b> Set up</a></li>
+<li class="chapter" data-level="10.3" data-path="simulation.html"><a href="simulation.html#a-world-with-a-known-slope"><i class="fa fa-check"></i><b>10.3</b> A world with a known slope</a></li>
+<li class="chapter" data-level="10.4" data-path="simulation.html"><a href="simulation.html#seven-methods"><i class="fa fa-check"></i><b>10.4</b> Seven methods</a></li>
+<li class="chapter" data-level="10.5" data-path="simulation.html"><a href="simulation.html#one-world-looked-at-closely"><i class="fa fa-check"></i><b>10.5</b> One world, looked at closely</a></li>
+<li class="chapter" data-level="10.6" data-path="simulation.html"><a href="simulation.html#three-hundred-worlds"><i class="fa fa-check"></i><b>10.6</b> Three hundred worlds</a></li>
+<li class="chapter" data-level="10.7" data-path="simulation.html"><a href="simulation.html#no-effect-who-cries-wolf"><i class="fa fa-check"></i><b>10.7</b> No effect: who cries wolf?</a></li>
+<li class="chapter" data-level="10.8" data-path="simulation.html"><a href="simulation.html#a-true-effect-who-finds-it-and-how-precisely"><i class="fa fa-check"></i><b>10.8</b> A true effect: who finds it, and how precisely?</a></li>
+<li class="chapter" data-level="10.9" data-path="simulation.html"><a href="simulation.html#shared-history-the-limit-of-every-method"><i class="fa fa-check"></i><b>10.9</b> Shared history: the limit of every method</a></li>
+<li class="chapter" data-level="10.10" data-path="simulation.html"><a href="simulation.html#make-it-your-own"><i class="fa fa-check"></i><b>10.10</b> Make it your own</a></li>
+<li class="chapter" data-level="10.11" data-path="simulation.html"><a href="simulation.html#what-to-carry-forward-8"><i class="fa fa-check"></i><b>10.11</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://rehan-muh.github.io/">Muhammad Rehan</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Relatives and Neighbours</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="space-surface" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Space as a smooth surface<a href="space-surface.html#space-surface" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p class="lede">
+Let a Gaussian process draw a smooth surface over the map, so that nearby languages are pulled towards the same baseline.
+</p>
+<p class="chapter-meta">
+<span><b>Fitted with</b> brms</span><span><b>Model fitting</b> about 5 minutes, plus 5 for an optional check</span><span><b>Packages</b> <code>ape</code> <code>brms</code> <code>sf</code> <code>spdep</code> <code>rnaturalearth</code> <code>ggplot2</code></span><span><a href="scripts/03-space-surface.R">Download the R script</a></span>
+</p>
+<div id="set-up-1" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Set up<a href="space-surface.html#set-up-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="space-surface.html#cb45-1" tabindex="-1"></a><span class="fu">library</span>(ape)</span>
+<span id="cb45-2"><a href="space-surface.html#cb45-2" tabindex="-1"></a><span class="fu">library</span>(brms)</span>
+<span id="cb45-3"><a href="space-surface.html#cb45-3" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb45-4"><a href="space-surface.html#cb45-4" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
+<span id="cb45-5"><a href="space-surface.html#cb45-5" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb45-6"><a href="space-surface.html#cb45-6" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb45-7"><a href="space-surface.html#cb45-7" tabindex="-1"></a></span>
+<span id="cb45-8"><a href="space-surface.html#cb45-8" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
+<span id="cb45-9"><a href="space-surface.html#cb45-9" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
+<span id="cb45-10"><a href="space-surface.html#cb45-10" tabindex="-1"></a>d<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> d<span class="sc">$</span>elevation <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb45-11"><a href="space-surface.html#cb45-11" tabindex="-1"></a></span>
+<span id="cb45-12"><a href="space-surface.html#cb45-12" tabindex="-1"></a><span class="fu">options</span>(<span class="at">mc.cores =</span> <span class="dv">4</span>, <span class="at">brms.backend =</span> <span class="st">&quot;cmdstanr&quot;</span>)</span>
+<span id="cb45-13"><a href="space-surface.html#cb45-13" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;fits&quot;</span>, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+</div>
+<div id="the-idea" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> The idea<a href="space-surface.html#the-idea" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Chapter 2 said: languages are alike to the degree that they share ancestry. This chapter says: languages are alike to the degree that they are close on the ground, whoever their ancestors were.</p>
+<p>A Gaussian process (GP) turns that sentence into a model <span class="citation">(<a href="#ref-rasmussen2006">Rasmussen and Williams 2006</a>)</span>. It adds to the regression an unknown surface <span class="math inline">\(f\)</span> over the map,</p>
+<p><span class="math display">\[\text{logit}\,\Pr(\text{ejectives}_i) = \alpha + \beta\,\text{elevation}_i + f(\text{location}_i),\]</span></p>
+<p>and assumes only that <span class="math inline">\(f\)</span> is smooth: its values at two places are correlated, and the correlation fades with the distance between them. Two numbers govern it. The <strong>length-scale</strong> is how far you must travel before the surface is free to change. The <strong>standard deviation</strong> is how far the surface strays from zero. Both are estimated.</p>
+<p>Where the model sees a cluster of ejective languages, it can raise the surface there and explain the cluster by location. Elevation then has to earn its slope from what the surface leaves over: differences between neighbours at different heights.</p>
+</div>
+<div id="coordinates-the-model-can-measure-with" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Coordinates the model can measure with<a href="space-surface.html#coordinates-the-model-can-measure-with" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A GP needs distances, and longitude and latitude are angles. A degree of longitude is 111 km at the equator and 56 km at 60° north. So first project the points to a flat map on which distances are roughly right. Equal Earth is a reasonable choice for a world sample. The units are converted to thousands of kilometres to keep the numbers small.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="space-surface.html#cb46-1" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(d, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>), <span class="at">crs =</span> <span class="dv">4326</span>)</span>
+<span id="cb46-2"><a href="space-surface.html#cb46-2" tabindex="-1"></a>xy  <span class="ot">&lt;-</span> <span class="fu">st_coordinates</span>(<span class="fu">st_transform</span>(pts, <span class="st">&quot;+proj=eqearth&quot;</span>)) <span class="sc">/</span> <span class="fl">1e6</span></span>
+<span id="cb46-3"><a href="space-surface.html#cb46-3" tabindex="-1"></a>d<span class="sc">$</span>x <span class="ot">&lt;-</span> xy[, <span class="dv">1</span>]</span>
+<span id="cb46-4"><a href="space-surface.html#cb46-4" tabindex="-1"></a>d<span class="sc">$</span>y <span class="ot">&lt;-</span> xy[, <span class="dv">2</span>]</span></code></pre></div>
+<blockquote>
+<p><strong>What this assumes.</strong> A flat map cannot keep every distance true, and this one is cut at the 180th meridian, so languages on either side of the Bering Strait look far apart. For this sample almost nothing depends on that. <a href="inla.html#inla">Chapter 6</a> and <a href="mgcv.html#mgcv">Chapter 7</a> fit surfaces on the sphere itself.</p>
+</blockquote>
+</div>
+<div id="fitting-it" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Fitting it<a href="space-surface.html#fitting-it" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>An exact GP over 500 points is slow, because the model must work with a 500 by 500 matrix at every step. brms offers an approximation that builds the surface from a fixed set of smooth waves, known as a Hilbert-space GP <span class="citation">(<a href="#ref-solin2020">Solin and Särkkä 2020</a>; <a href="#ref-riutort2023">Riutort-Mayol et al. 2023</a>)</span>. You ask for it by giving <code>gp()</code> the argument <code>k</code>, the number of waves in each direction.</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="space-surface.html#cb47-1" tabindex="-1"></a>priors <span class="ot">&lt;-</span> <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
+<span id="cb47-2"><a href="space-surface.html#cb47-2" tabindex="-1"></a>          <span class="fu">prior</span>(<span class="fu">exponential</span>(<span class="dv">1</span>), <span class="at">class =</span> sdgp)</span>
+<span id="cb47-3"><a href="space-surface.html#cb47-3" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="space-surface.html#cb47-4" tabindex="-1"></a>m_gp <span class="ot">&lt;-</span> <span class="fu">brm</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">gp</span>(x, y, <span class="at">k =</span> <span class="dv">20</span>, <span class="at">c =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">4</span>),</span>
+<span id="cb47-5"><a href="space-surface.html#cb47-5" tabindex="-1"></a>            <span class="at">data =</span> d, <span class="at">family =</span> <span class="fu">bernoulli</span>(), <span class="at">prior =</span> priors,</span>
+<span id="cb47-6"><a href="space-surface.html#cb47-6" tabindex="-1"></a>            <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
+<span id="cb47-7"><a href="space-surface.html#cb47-7" tabindex="-1"></a>            <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">file =</span> <span class="st">&quot;fits/m_gp&quot;</span>)</span>
+<span id="cb47-8"><a href="space-surface.html#cb47-8" tabindex="-1"></a></span>
+<span id="cb47-9"><a href="space-surface.html#cb47-9" tabindex="-1"></a><span class="fu">summary</span>(m_gp)</span></code></pre></div>
+<pre><code>##  Family: bernoulli 
+##   Links: mu = logit 
+## Formula: ejectives ~ elev_km + gp(x, y, k = 20, c = 5/4) 
+##    Data: d (Number of observations: 500) 
+##   Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+##          total post-warmup draws = 4000
+## 
+## Gaussian Process Hyperparameters:
+##              Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sdgp(gpxy)       4.52      1.32     2.51     7.65 1.00     2095     2814
+## lscale(gpxy)     0.05      0.02     0.02     0.10 1.00     2517     2528
+## 
+## Regression Coefficients:
+##           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept    -4.55      1.21    -7.21    -2.38 1.00     2474     1826
+## elev_km       1.13      0.27     0.65     1.69 1.00     5418     2822
+## 
+## Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
+## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+<p>The pieces of the call:</p>
+<ul>
+<li><code>gp(x, y)</code> asks for one surface over both coordinates, with a single length-scale.</li>
+<li><code>k = 20</code> uses 20 waves in each direction, 400 in all. More waves can follow a wigglier surface and cost more time.</li>
+<li><code>c = 5/4</code> extends the area the waves cover a little beyond the data, which keeps the approximation accurate near the edges. It is the usual value.</li>
+<li><code>prior(exponential(1), class = sdgp)</code> is the same prior as in Chapter 2, now on the standard deviation of the surface.</li>
+<li><code>adapt_delta = 0.95</code> makes the sampler take smaller steps. GPs often need it; if brms warns about divergent transitions, raise it towards 0.99.</li>
+</ul>
+<p>In the output, <code>sdgp</code> is the standard deviation of the surface and <code>lscale</code> its length-scale. brms rescales the coordinates so that the largest distance in the data is 1, so <code>lscale</code> is a fraction of that distance.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="space-surface.html#cb49-1" tabindex="-1"></a>max_dist <span class="ot">&lt;-</span> <span class="fu">max</span>(<span class="fu">dist</span>(xy)) <span class="sc">*</span> <span class="dv">1000</span>        <span class="co"># in km</span></span>
+<span id="cb49-2"><a href="space-surface.html#cb49-2" tabindex="-1"></a>ls <span class="ot">&lt;-</span> <span class="fu">posterior_summary</span>(m_gp, <span class="at">variable =</span> <span class="st">&quot;lscale_gpxy&quot;</span>)</span>
+<span id="cb49-3"><a href="space-surface.html#cb49-3" tabindex="-1"></a><span class="fu">round</span>(ls[, <span class="fu">c</span>(<span class="st">&quot;Estimate&quot;</span>, <span class="st">&quot;Q2.5&quot;</span>, <span class="st">&quot;Q97.5&quot;</span>)] <span class="sc">*</span> max_dist)</span></code></pre></div>
+<pre><code>## Estimate     Q2.5    Q97.5 
+##     1602      732     3010</code></pre>
+<p>The surface changes over distances of that order, in kilometres: regions, not continents.</p>
+</div>
+<div id="was-k-large-enough" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Was <code>k</code> large enough?<a href="space-surface.html#was-k-large-enough" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>k</code> is a setting, not a result, and too small a <code>k</code> silently flattens the surface. The shorter the length-scale, the more waves are needed to draw it. A quick rule, simplified from <span class="citation">Riutort-Mayol et al. (<a href="#ref-riutort2023">2023</a>)</span>: the estimated <code>lscale</code> should stay above <code>c / k</code>. Here <code>c / k</code> is 0.062 and the estimate is 0.05, a little under. That is a warning, not a verdict.</p>
+<p>The direct check is to fit again with other values of <code>k</code> and see whether anything you care about moves. Fit a coarser surface with 12 waves a side and a finer one with 28. The finer one has 784 waves and takes about five minutes; skip it if you are following along for the first time.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="space-surface.html#cb51-1" tabindex="-1"></a>m_gp12 <span class="ot">&lt;-</span> <span class="fu">brm</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">gp</span>(x, y, <span class="at">k =</span> <span class="dv">12</span>, <span class="at">c =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">4</span>),</span>
+<span id="cb51-2"><a href="space-surface.html#cb51-2" tabindex="-1"></a>              <span class="at">data =</span> d, <span class="at">family =</span> <span class="fu">bernoulli</span>(), <span class="at">prior =</span> priors,</span>
+<span id="cb51-3"><a href="space-surface.html#cb51-3" tabindex="-1"></a>              <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
+<span id="cb51-4"><a href="space-surface.html#cb51-4" tabindex="-1"></a>              <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">file =</span> <span class="st">&quot;fits/m_gp12&quot;</span>)</span>
+<span id="cb51-5"><a href="space-surface.html#cb51-5" tabindex="-1"></a>m_gp28 <span class="ot">&lt;-</span> <span class="fu">brm</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">gp</span>(x, y, <span class="at">k =</span> <span class="dv">28</span>, <span class="at">c =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">4</span>),</span>
+<span id="cb51-6"><a href="space-surface.html#cb51-6" tabindex="-1"></a>              <span class="at">data =</span> d, <span class="at">family =</span> <span class="fu">bernoulli</span>(), <span class="at">prior =</span> priors,</span>
+<span id="cb51-7"><a href="space-surface.html#cb51-7" tabindex="-1"></a>              <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
+<span id="cb51-8"><a href="space-surface.html#cb51-8" tabindex="-1"></a>              <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">file =</span> <span class="st">&quot;fits/m_gp28&quot;</span>)</span>
+<span id="cb51-9"><a href="space-surface.html#cb51-9" tabindex="-1"></a></span>
+<span id="cb51-10"><a href="space-surface.html#cb51-10" tabindex="-1"></a>check <span class="ot">&lt;-</span> <span class="cf">function</span>(m) {</span>
+<span id="cb51-11"><a href="space-surface.html#cb51-11" tabindex="-1"></a>  <span class="fu">c</span>(<span class="fu">fixef</span>(m)[<span class="st">&quot;elev_km&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;Estimate&quot;</span>, <span class="st">&quot;Est.Error&quot;</span>)],</span>
+<span id="cb51-12"><a href="space-surface.html#cb51-12" tabindex="-1"></a>    <span class="at">lscale =</span> <span class="fu">posterior_summary</span>(m, <span class="at">variable =</span> <span class="st">&quot;lscale_gpxy&quot;</span>)[, <span class="st">&quot;Estimate&quot;</span>])</span>
+<span id="cb51-13"><a href="space-surface.html#cb51-13" tabindex="-1"></a>}</span>
+<span id="cb51-14"><a href="space-surface.html#cb51-14" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">rbind</span>(<span class="st">&quot;k = 12&quot;</span> <span class="ot">=</span> <span class="fu">check</span>(m_gp12),</span>
+<span id="cb51-15"><a href="space-surface.html#cb51-15" tabindex="-1"></a>            <span class="st">&quot;k = 20&quot;</span> <span class="ot">=</span> <span class="fu">check</span>(m_gp),</span>
+<span id="cb51-16"><a href="space-surface.html#cb51-16" tabindex="-1"></a>            <span class="st">&quot;k = 28&quot;</span> <span class="ot">=</span> <span class="fu">check</span>(m_gp28)), <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##        Estimate Est.Error lscale
+## k = 12     0.90      0.22   0.08
+## k = 20     1.13      0.27   0.05
+## k = 28     1.21      0.31   0.04</code></pre>
+<p>Read down the columns. From 12 to 20 waves the slope moves by almost a full standard error: 12 was too few, and nothing in that fit’s own output would have told you. From 20 to 28 it moves by about a quarter of a standard error. The length-scale is still creeping down, because the ejective clusters are small and tight, and a surface that follows them closely needs a great many waves.</p>
+<p>So <code>k = 20</code> is adequate for the slope, which is what this series is after, and the rest of the chapters use it. If the surface itself were your result, you would want a finer one, or one of the methods in Chapters 6 and 7, which handle short ranges with less effort. Either way, the comparison is worth a line in a methods section: say which <code>k</code> you used and that the result held at a larger one.</p>
+<blockquote>
+<p><strong>Watch out.</strong> If brms prints warnings about divergent transitions for a GP, the surface is usually being asked to do something the data do not pin down. Raise <code>adapt_delta</code> towards 0.99 first. If they persist, tighten the prior on <code>sdgp</code>.</p>
+</blockquote>
+</div>
+<div id="what-the-surface-looks-like" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> What the surface looks like<a href="space-surface.html#what-the-surface-looks-like" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>fitted()</code> with elevation set to zero returns the baseline the model assigns to each location: intercept plus surface, with altitude taken out. Plotted on the map, it is the model’s picture of where ejectives are at home.</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="space-surface.html#cb53-1" tabindex="-1"></a>sea_level <span class="ot">&lt;-</span> <span class="fu">transform</span>(d, <span class="at">elev_km =</span> <span class="dv">0</span>)</span>
+<span id="cb53-2"><a href="space-surface.html#cb53-2" tabindex="-1"></a>d<span class="sc">$</span>baseline <span class="ot">&lt;-</span> <span class="fu">fitted</span>(m_gp, <span class="at">newdata =</span> sea_level)[, <span class="st">&quot;Estimate&quot;</span>]</span>
+<span id="cb53-3"><a href="space-surface.html#cb53-3" tabindex="-1"></a></span>
+<span id="cb53-4"><a href="space-surface.html#cb53-4" tabindex="-1"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="st">&quot;small&quot;</span>, <span class="at">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span>
+<span id="cb53-5"><a href="space-surface.html#cb53-5" tabindex="-1"></a>pts<span class="sc">$</span>baseline <span class="ot">&lt;-</span> d<span class="sc">$</span>baseline</span>
+<span id="cb53-6"><a href="space-surface.html#cb53-6" tabindex="-1"></a></span>
+<span id="cb53-7"><a href="space-surface.html#cb53-7" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb53-8"><a href="space-surface.html#cb53-8" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> world, <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb53-9"><a href="space-surface.html#cb53-9" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> pts[<span class="fu">order</span>(pts<span class="sc">$</span>baseline), ], <span class="fu">aes</span>(<span class="at">colour =</span> baseline),</span>
+<span id="cb53-10"><a href="space-surface.html#cb53-10" tabindex="-1"></a>          <span class="at">size =</span> <span class="fl">1.6</span>) <span class="sc">+</span></span>
+<span id="cb53-11"><a href="space-surface.html#cb53-11" tabindex="-1"></a>  <span class="fu">scale_colour_viridis_c</span>(<span class="at">name =</span> <span class="st">&quot;baseline probability&quot;</span>) <span class="sc">+</span></span>
+<span id="cb53-12"><a href="space-surface.html#cb53-12" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=eqearth&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:space-surface-surface"></span>
+<span id="fig:space-surface-surface" style="display:block;"></span>
+<img src="figures/03-space-surface/surface-1.png" alt="The spatial baseline at each language's location: the probability of ejectives the model expects there at sea level. The surface rises over the same regions where the map in Chapter 1 showed clusters." width="710" />
+<p class="caption">
+Figure 3.1: The spatial baseline at each language’s location: the probability of ejectives the model expects there at sea level. The surface rises over the same regions where the map in Chapter 1 showed clusters.
+</p>
+</div>
+</div>
+<div id="did-it-work" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Did it work?<a href="space-surface.html#did-it-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In Chapter 1 the residuals of the naive model had a Moran’s I of 0.44. Run the same test on the residuals of this model, with the same neighbours.</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="space-surface.html#cb54-1" tabindex="-1"></a>nb <span class="ot">&lt;-</span> <span class="fu">knn2nb</span>(<span class="fu">knearneigh</span>(<span class="fu">as.matrix</span>(d[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)]), <span class="at">k =</span> <span class="dv">5</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb54-2"><a href="space-surface.html#cb54-2" tabindex="-1"></a>lw <span class="ot">&lt;-</span> <span class="fu">nb2listw</span>(<span class="fu">make.sym.nb</span>(nb), <span class="at">style =</span> <span class="st">&quot;W&quot;</span>)</span>
+<span id="cb54-3"><a href="space-surface.html#cb54-3" tabindex="-1"></a></span>
+<span id="cb54-4"><a href="space-surface.html#cb54-4" tabindex="-1"></a>p   <span class="ot">&lt;-</span> <span class="fu">fitted</span>(m_gp)[, <span class="st">&quot;Estimate&quot;</span>]</span>
+<span id="cb54-5"><a href="space-surface.html#cb54-5" tabindex="-1"></a>res <span class="ot">&lt;-</span> (d<span class="sc">$</span>ejectives <span class="sc">-</span> p) <span class="sc">/</span> <span class="fu">sqrt</span>(p <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p))        <span class="co"># Pearson residuals</span></span>
+<span id="cb54-6"><a href="space-surface.html#cb54-6" tabindex="-1"></a>after <span class="ot">&lt;-</span> <span class="fu">moran.mc</span>(res, lw, <span class="at">nsim =</span> <span class="dv">999</span>)</span>
+<span id="cb54-7"><a href="space-surface.html#cb54-7" tabindex="-1"></a>after</span></code></pre></div>
+<pre><code>## 
+##  Monte-Carlo simulation of Moran I
+## 
+## data:  res 
+## weights: lw  
+## number of simulations + 1: 1000 
+## 
+## statistic = 0.06, observed rank = 982, p-value = 0.02
+## alternative hypothesis: greater</code></pre>
+<p>Moran’s I has dropped from 0.44 to 0.06. A trace of spatial pattern is still detectable, but nearly all of it has been absorbed by the surface: what is left unexplained about one language now says very little about what is left unexplained about its neighbours.</p>
+<p>And the slope:</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="space-surface.html#cb56-1" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">fixef</span>(m_gp)[<span class="st">&quot;elev_km&quot;</span>, ], <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##  Estimate Est.Error      Q2.5     Q97.5 
+##      1.13      0.27      0.65      1.69</code></pre>
+<p>As in Chapter 2, compare the interval with the naive one (0.55 to 1.13), not the raw estimate; the note there about slopes in models with latent effects applies here too.</p>
+</div>
+<div id="the-regression-line-1" class="section level2 hasAnchor" number="3.8">
+<h2><span class="header-section-number">3.8</span> The regression line<a href="space-surface.html#the-regression-line-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Draw the model’s regression line beside the naive one. As in Chapter 2, the fair comparison is the line averaged over the sample: keep each language’s own spatial effect, move all 500 languages to the same elevation, and take the share expected to have ejectives.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="space-surface.html#cb58-1" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> d)</span>
+<span id="cb58-2"><a href="space-surface.html#cb58-2" tabindex="-1"></a>x  <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">4.5</span>, <span class="at">by =</span> <span class="fl">0.1</span>)</span>
+<span id="cb58-3"><a href="space-surface.html#cb58-3" tabindex="-1"></a>pr <span class="ot">&lt;-</span> <span class="fu">predict</span>(m0, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x), <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb58-4"><a href="space-surface.html#cb58-4" tabindex="-1"></a>naive <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x, <span class="at">model =</span> <span class="st">&quot;naive glm&quot;</span>, <span class="at">p =</span> <span class="fu">plogis</span>(pr<span class="sc">$</span>fit),</span>
+<span id="cb58-5"><a href="space-surface.html#cb58-5" tabindex="-1"></a>                    <span class="at">lo =</span> <span class="fu">plogis</span>(pr<span class="sc">$</span>fit <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> pr<span class="sc">$</span>se.fit),</span>
+<span id="cb58-6"><a href="space-surface.html#cb58-6" tabindex="-1"></a>                    <span class="at">hi =</span> <span class="fu">plogis</span>(pr<span class="sc">$</span>fit <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> pr<span class="sc">$</span>se.fit))</span>
+<span id="cb58-7"><a href="space-surface.html#cb58-7" tabindex="-1"></a></span>
+<span id="cb58-8"><a href="space-surface.html#cb58-8" tabindex="-1"></a>b      <span class="ot">&lt;-</span> <span class="fu">as_draws_df</span>(m_gp)<span class="sc">$</span>b_elev_km</span>
+<span id="cb58-9"><a href="space-surface.html#cb58-9" tabindex="-1"></a>eta    <span class="ot">&lt;-</span> <span class="fu">posterior_linpred</span>(m_gp)        <span class="co"># draws by languages, logit scale</span></span>
+<span id="cb58-10"><a href="space-surface.html#cb58-10" tabindex="-1"></a>at_sea <span class="ot">&lt;-</span> eta <span class="sc">-</span> <span class="fu">outer</span>(b, d<span class="sc">$</span>elev_km)      <span class="co"># every language moved to 0 km</span></span>
+<span id="cb58-11"><a href="space-surface.html#cb58-11" tabindex="-1"></a>p      <span class="ot">&lt;-</span> <span class="fu">sapply</span>(x, <span class="cf">function</span>(xi) <span class="fu">rowMeans</span>(<span class="fu">plogis</span>(at_sea <span class="sc">+</span> b <span class="sc">*</span> xi)))</span>
+<span id="cb58-12"><a href="space-surface.html#cb58-12" tabindex="-1"></a>model  <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x, <span class="at">model =</span> <span class="st">&quot;spatial surface (GP)&quot;</span>,</span>
+<span id="cb58-13"><a href="space-surface.html#cb58-13" tabindex="-1"></a>                     <span class="at">p  =</span> <span class="fu">colMeans</span>(p),</span>
+<span id="cb58-14"><a href="space-surface.html#cb58-14" tabindex="-1"></a>                     <span class="at">lo =</span> <span class="fu">apply</span>(p, <span class="dv">2</span>, quantile, <span class="fl">0.025</span>),</span>
+<span id="cb58-15"><a href="space-surface.html#cb58-15" tabindex="-1"></a>                     <span class="at">hi =</span> <span class="fu">apply</span>(p, <span class="dv">2</span>, quantile, <span class="fl">0.975</span>))</span>
+<span id="cb58-16"><a href="space-surface.html#cb58-16" tabindex="-1"></a></span>
+<span id="cb58-17"><a href="space-surface.html#cb58-17" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">rbind</span>(naive, model), <span class="fu">aes</span>(elev_km, p, <span class="at">colour =</span> model, <span class="at">fill =</span> model)) <span class="sc">+</span></span>
+<span id="cb58-18"><a href="space-surface.html#cb58-18" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lo, <span class="at">ymax =</span> hi), <span class="at">alpha =</span> <span class="fl">0.15</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb58-19"><a href="space-surface.html#cb58-19" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb58-20"><a href="space-surface.html#cb58-20" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;grey40&quot;</span>, <span class="st">&quot;#2A78D6&quot;</span>),</span>
+<span id="cb58-21"><a href="space-surface.html#cb58-21" tabindex="-1"></a>                      <span class="at">aesthetics =</span> <span class="fu">c</span>(<span class="st">&quot;colour&quot;</span>, <span class="st">&quot;fill&quot;</span>), <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb58-22"><a href="space-surface.html#cb58-22" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;elevation (km)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;probability of ejectives&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:space-surface-lines"></span>
+<span id="fig:space-surface-lines" style="display:block;"></span>
+<img src="figures/03-space-surface/lines-1.png" alt="The naive regression line (grey) and the line from the spatial model averaged over the sample (blue), with 95% bands. The two agree in the lowlands. At altitude the spatial model's line is lower and its band is wider, because highland languages with ejectives sit in a few neighbourhoods." width="710" />
+<p class="caption">
+Figure 3.2: The naive regression line (grey) and the line from the spatial model averaged over the sample (blue), with 95% bands. The two agree in the lowlands. At altitude the spatial model’s line is lower and its band is wider, because highland languages with ejectives sit in a few neighbourhoods.
+</p>
+</div>
+</div>
+<div id="variations" class="section level2 hasAnchor" number="3.9">
+<h2><span class="header-section-number">3.9</span> Variations<a href="space-surface.html#variations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>A rougher surface.</strong> The default kernel produces very smooth surfaces. Contact zones can have sharper edges than that. <code>gp(x, y, k = 20, c = 5/4, cov = "matern32")</code> uses a Matérn kernel, which allows them. It needs brms 2.23 or later.</p>
+<p><strong>A spline in place of a GP.</strong> <code>s(lat, lon, bs = "sos")</code> in the same formula fits a spline on the sphere, with no projection. It samples faster and answers the same question; <a href="mgcv.html#mgcv">Chapter 7</a> covers it in its home package.</p>
+<blockquote>
+<p><strong>With your own data.</strong> For a sample from one region, project to a local coordinate system (a UTM zone, or an equal-area projection centred on your area) and the flat-map caveat mostly disappears. If several languages share one location, the GP treats them as the same place, which is what you want.</p>
+</blockquote>
+</div>
+<div id="what-to-carry-forward-2" class="section level2 hasAnchor" number="3.10">
+<h2><span class="header-section-number">3.10</span> What to carry forward<a href="space-surface.html#what-to-carry-forward-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>A spatial regression in brms is one extra term: <code>gp(x, y, k = , c = 5/4)</code> on projected coordinates.</li>
+<li>Check <code>k</code> against the estimated length-scale, and check the residuals with Moran’s I.</li>
+<li>The surface is a description of where the feature clusters. It does not say why: contact, shared environment and unrecorded ancestry all look the same to it. A surface can also compete with the predictor itself when the predictor varies smoothly over the map, a problem known as spatial confounding <span class="citation">(<a href="#ref-hodges2010">Hodges and Reich 2010</a>)</span>.</li>
+</ul>
+<p>A GP treats space as continuous. <a href="space-neighbours.html#space-neighbours">Chapter 4</a> takes the other view, where space is a network and each language answers to its neighbours.</p>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-hodges2010" class="csl-entry">
+Hodges, James S., and Brian J. Reich. 2010. <span>“Adding Spatially-Correlated Errors Can Mess up the Fixed Effect You Love.”</span> <em>The American Statistician</em> 64 (4): 325–34.
+</div>
+<div id="ref-rasmussen2006" class="csl-entry">
+Rasmussen, Carl Edward, and Christopher K. I. Williams. 2006. <em>Gaussian Processes for Machine Learning</em>. MIT Press.
+</div>
+<div id="ref-riutort2023" class="csl-entry">
+Riutort-Mayol, Gabriel, Paul-Christian Bürkner, Michael R. Andersen, Arno Solin, and Aki Vehtari. 2023. <span>“Practical <span>H</span>ilbert Space Approximate <span>B</span>ayesian <span>G</span>aussian Processes for Probabilistic Programming.”</span> <em>Statistics and Computing</em> 33: 17.
+</div>
+<div id="ref-solin2020" class="csl-entry">
+Solin, Arno, and Simo Särkkä. 2020. <span>“Hilbert Space Methods for Reduced-Rank <span>G</span>aussian Process Regression.”</span> <em>Statistics and Computing</em> 30: 419–46.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="phylogeny.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="space-neighbours.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

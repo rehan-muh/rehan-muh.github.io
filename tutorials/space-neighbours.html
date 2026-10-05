@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Space as a network of neighbours | Relatives and Neighbours</title>
+  <meta name="description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
+  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Space as a network of neighbours | Relatives and Neighbours" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Space as a network of neighbours | Relatives and Neighbours" />
+  
+  <meta name="twitter:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
+  
+
+<meta name="author" content="Muhammad Rehan" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="space-surface.html"/>
+<link rel="next" href="joint.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>Relatives and Neighbours</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#before-you-start"><i class="fa fa-check"></i>Before you start</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-running-example"><i class="fa fa-check"></i>The running example</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#sources"><i class="fa fa-check"></i>Sources</a></li>
+</ul></li>
+<li class="part"><span><b>I Diagnose</b></span></li>
+<li class="chapter" data-level="1" data-path="the-problem.html"><a href="the-problem.html"><i class="fa fa-check"></i><b>1</b> Seeing the problem</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="the-problem.html"><a href="the-problem.html#the-data-and-the-first-model"><i class="fa fa-check"></i><b>1.1</b> The data and the first model</a></li>
+<li class="chapter" data-level="1.2" data-path="the-problem.html"><a href="the-problem.html#where-the-ejectives-are"><i class="fa fa-check"></i><b>1.2</b> Where the ejectives are</a></li>
+<li class="chapter" data-level="1.3" data-path="the-problem.html"><a href="the-problem.html#how-often-does-a-meaningless-predictor-pass"><i class="fa fa-check"></i><b>1.3</b> How often does a meaningless predictor pass?</a></li>
+<li class="chapter" data-level="1.4" data-path="the-problem.html"><a href="the-problem.html#measuring-spatial-dependence-morans-i"><i class="fa fa-check"></i><b>1.4</b> Measuring spatial dependence: Moran’s I</a></li>
+<li class="chapter" data-level="1.5" data-path="the-problem.html"><a href="the-problem.html#measuring-phylogenetic-signal"><i class="fa fa-check"></i><b>1.5</b> Measuring phylogenetic signal</a></li>
+<li class="chapter" data-level="1.6" data-path="the-problem.html"><a href="the-problem.html#what-to-carry-forward"><i class="fa fa-check"></i><b>1.6</b> What to carry forward</a></li>
+</ul></li>
+<li class="part"><span><b>II Model it in brms</b></span></li>
+<li class="chapter" data-level="2" data-path="phylogeny.html"><a href="phylogeny.html"><i class="fa fa-check"></i><b>2</b> Phylogeny as a covariance matrix</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="phylogeny.html"><a href="phylogeny.html#set-up"><i class="fa fa-check"></i><b>2.1</b> Set up</a></li>
+<li class="chapter" data-level="2.2" data-path="phylogeny.html"><a href="phylogeny.html#from-a-tree-to-a-matrix"><i class="fa fa-check"></i><b>2.2</b> From a tree to a matrix</a></li>
+<li class="chapter" data-level="2.3" data-path="phylogeny.html"><a href="phylogeny.html#first-rung-family-as-a-random-intercept"><i class="fa fa-check"></i><b>2.3</b> First rung: family as a random intercept</a></li>
+<li class="chapter" data-level="2.4" data-path="phylogeny.html"><a href="phylogeny.html#the-phylogenetic-model"><i class="fa fa-check"></i><b>2.4</b> The phylogenetic model</a></li>
+<li class="chapter" data-level="2.5" data-path="phylogeny.html"><a href="phylogeny.html#reading-the-result"><i class="fa fa-check"></i><b>2.5</b> Reading the result</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="phylogeny.html"><a href="phylogeny.html#the-slope"><i class="fa fa-check"></i><b>2.5.1</b> The slope</a></li>
+<li class="chapter" data-level="2.5.2" data-path="phylogeny.html"><a href="phylogeny.html#the-regression-line"><i class="fa fa-check"></i><b>2.5.2</b> The regression line</a></li>
+<li class="chapter" data-level="2.5.3" data-path="phylogeny.html"><a href="phylogeny.html#phylogenetic-signal"><i class="fa fa-check"></i><b>2.5.3</b> Phylogenetic signal</a></li>
+<li class="chapter" data-level="2.5.4" data-path="phylogeny.html"><a href="phylogeny.html#where-the-model-put-the-lineage-effects"><i class="fa fa-check"></i><b>2.5.4</b> Where the model put the lineage effects</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="phylogeny.html"><a href="phylogeny.html#what-to-carry-forward-1"><i class="fa fa-check"></i><b>2.6</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="space-surface.html"><a href="space-surface.html"><i class="fa fa-check"></i><b>3</b> Space as a smooth surface</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="space-surface.html"><a href="space-surface.html#set-up-1"><i class="fa fa-check"></i><b>3.1</b> Set up</a></li>
+<li class="chapter" data-level="3.2" data-path="space-surface.html"><a href="space-surface.html#the-idea"><i class="fa fa-check"></i><b>3.2</b> The idea</a></li>
+<li class="chapter" data-level="3.3" data-path="space-surface.html"><a href="space-surface.html#coordinates-the-model-can-measure-with"><i class="fa fa-check"></i><b>3.3</b> Coordinates the model can measure with</a></li>
+<li class="chapter" data-level="3.4" data-path="space-surface.html"><a href="space-surface.html#fitting-it"><i class="fa fa-check"></i><b>3.4</b> Fitting it</a></li>
+<li class="chapter" data-level="3.5" data-path="space-surface.html"><a href="space-surface.html#was-k-large-enough"><i class="fa fa-check"></i><b>3.5</b> Was <code>k</code> large enough?</a></li>
+<li class="chapter" data-level="3.6" data-path="space-surface.html"><a href="space-surface.html#what-the-surface-looks-like"><i class="fa fa-check"></i><b>3.6</b> What the surface looks like</a></li>
+<li class="chapter" data-level="3.7" data-path="space-surface.html"><a href="space-surface.html#did-it-work"><i class="fa fa-check"></i><b>3.7</b> Did it work?</a></li>
+<li class="chapter" data-level="3.8" data-path="space-surface.html"><a href="space-surface.html#the-regression-line-1"><i class="fa fa-check"></i><b>3.8</b> The regression line</a></li>
+<li class="chapter" data-level="3.9" data-path="space-surface.html"><a href="space-surface.html#variations"><i class="fa fa-check"></i><b>3.9</b> Variations</a></li>
+<li class="chapter" data-level="3.10" data-path="space-surface.html"><a href="space-surface.html#what-to-carry-forward-2"><i class="fa fa-check"></i><b>3.10</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="space-neighbours.html"><a href="space-neighbours.html"><i class="fa fa-check"></i><b>4</b> Space as a network of neighbours</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="space-neighbours.html"><a href="space-neighbours.html#set-up-2"><i class="fa fa-check"></i><b>4.1</b> Set up</a></li>
+<li class="chapter" data-level="4.2" data-path="space-neighbours.html"><a href="space-neighbours.html#the-idea-1"><i class="fa fa-check"></i><b>4.2</b> The idea</a></li>
+<li class="chapter" data-level="4.3" data-path="space-neighbours.html"><a href="space-neighbours.html#building-the-graph"><i class="fa fa-check"></i><b>4.3</b> Building the graph</a></li>
+<li class="chapter" data-level="4.4" data-path="space-neighbours.html"><a href="space-neighbours.html#icar"><i class="fa fa-check"></i><b>4.4</b> ICAR</a></li>
+<li class="chapter" data-level="4.5" data-path="space-neighbours.html"><a href="space-neighbours.html#bym2"><i class="fa fa-check"></i><b>4.5</b> BYM2</a></li>
+<li class="chapter" data-level="4.6" data-path="space-neighbours.html"><a href="space-neighbours.html#the-regression-line-2"><i class="fa fa-check"></i><b>4.6</b> The regression line</a></li>
+<li class="chapter" data-level="4.7" data-path="space-neighbours.html"><a href="space-neighbours.html#how-much-does-the-graph-matter"><i class="fa fa-check"></i><b>4.7</b> How much does the graph matter?</a></li>
+<li class="chapter" data-level="4.8" data-path="space-neighbours.html"><a href="space-neighbours.html#other-models-in-the-same-family"><i class="fa fa-check"></i><b>4.8</b> Other models in the same family</a></li>
+<li class="chapter" data-level="4.9" data-path="space-neighbours.html"><a href="space-neighbours.html#what-to-carry-forward-3"><i class="fa fa-check"></i><b>4.9</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="joint.html"><a href="joint.html"><i class="fa fa-check"></i><b>5</b> Both at once</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="joint.html"><a href="joint.html#set-up-3"><i class="fa fa-check"></i><b>5.1</b> Set up</a></li>
+<li class="chapter" data-level="5.2" data-path="joint.html"><a href="joint.html#why-one-model-and-not-two"><i class="fa fa-check"></i><b>5.2</b> Why one model and not two</a></li>
+<li class="chapter" data-level="5.3" data-path="joint.html"><a href="joint.html#the-joint-model"><i class="fa fa-check"></i><b>5.3</b> The joint model</a></li>
+<li class="chapter" data-level="5.4" data-path="joint.html"><a href="joint.html#bring-back-the-earlier-models"><i class="fa fa-check"></i><b>5.4</b> Bring back the earlier models</a></li>
+<li class="chapter" data-level="5.5" data-path="joint.html"><a href="joint.html#who-gets-the-credit"><i class="fa fa-check"></i><b>5.5</b> Who gets the credit</a></li>
+<li class="chapter" data-level="5.6" data-path="joint.html"><a href="joint.html#every-slope-so-far"><i class="fa fa-check"></i><b>5.6</b> Every slope so far</a></li>
+<li class="chapter" data-level="5.7" data-path="joint.html"><a href="joint.html#every-regression-line-so-far"><i class="fa fa-check"></i><b>5.7</b> Every regression line so far</a></li>
+<li class="chapter" data-level="5.8" data-path="joint.html"><a href="joint.html#which-model-to-report"><i class="fa fa-check"></i><b>5.8</b> Which model to report</a></li>
+<li class="chapter" data-level="5.9" data-path="joint.html"><a href="joint.html#what-to-carry-forward-4"><i class="fa fa-check"></i><b>5.9</b> What to carry forward</a></li>
+</ul></li>
+<li class="part"><span><b>III Other engines</b></span></li>
+<li class="chapter" data-level="6" data-path="inla.html"><a href="inla.html"><i class="fa fa-check"></i><b>6</b> The same models in INLA</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="inla.html"><a href="inla.html#set-up-4"><i class="fa fa-check"></i><b>6.1</b> Set up</a></li>
+<li class="chapter" data-level="6.2" data-path="inla.html"><a href="inla.html#how-inla-differs"><i class="fa fa-check"></i><b>6.2</b> How INLA differs</a></li>
+<li class="chapter" data-level="6.3" data-path="inla.html"><a href="inla.html#matching-the-priors"><i class="fa fa-check"></i><b>6.3</b> Matching the priors</a></li>
+<li class="chapter" data-level="6.4" data-path="inla.html"><a href="inla.html#family-intercepts"><i class="fa fa-check"></i><b>6.4</b> Family intercepts</a></li>
+<li class="chapter" data-level="6.5" data-path="inla.html"><a href="inla.html#phylogeny-1"><i class="fa fa-check"></i><b>6.5</b> Phylogeny</a></li>
+<li class="chapter" data-level="6.6" data-path="inla.html"><a href="inla.html#neighbours-bym2"><i class="fa fa-check"></i><b>6.6</b> Neighbours: BYM2</a></li>
+<li class="chapter" data-level="6.7" data-path="inla.html"><a href="inla.html#a-surface-on-the-sphere-spde"><i class="fa fa-check"></i><b>6.7</b> A surface on the sphere: SPDE</a></li>
+<li class="chapter" data-level="6.8" data-path="inla.html"><a href="inla.html#phylogeny-and-space-together"><i class="fa fa-check"></i><b>6.8</b> Phylogeny and space together</a></li>
+<li class="chapter" data-level="6.9" data-path="inla.html"><a href="inla.html#check-the-approximation"><i class="fa fa-check"></i><b>6.9</b> Check the approximation</a></li>
+<li class="chapter" data-level="6.10" data-path="inla.html"><a href="inla.html#all-five-and-what-they-cost"><i class="fa fa-check"></i><b>6.10</b> All five, and what they cost</a></li>
+<li class="chapter" data-level="6.11" data-path="inla.html"><a href="inla.html#what-to-carry-forward-5"><i class="fa fa-check"></i><b>6.11</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="mgcv.html"><a href="mgcv.html"><i class="fa fa-check"></i><b>7</b> The same models as a GAM</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="mgcv.html"><a href="mgcv.html#set-up-5"><i class="fa fa-check"></i><b>7.1</b> Set up</a></li>
+<li class="chapter" data-level="7.2" data-path="mgcv.html"><a href="mgcv.html#how-a-gam-sees-dependence"><i class="fa fa-check"></i><b>7.2</b> How a GAM sees dependence</a></li>
+<li class="chapter" data-level="7.3" data-path="mgcv.html"><a href="mgcv.html#family-intercepts-1"><i class="fa fa-check"></i><b>7.3</b> Family intercepts</a></li>
+<li class="chapter" data-level="7.4" data-path="mgcv.html"><a href="mgcv.html#phylogeny-as-a-markov-random-field"><i class="fa fa-check"></i><b>7.4</b> Phylogeny as a Markov random field</a></li>
+<li class="chapter" data-level="7.5" data-path="mgcv.html"><a href="mgcv.html#space-as-a-spline-on-the-sphere"><i class="fa fa-check"></i><b>7.5</b> Space as a spline on the sphere</a></li>
+<li class="chapter" data-level="7.6" data-path="mgcv.html"><a href="mgcv.html#phylogeny-and-space-together-1"><i class="fa fa-check"></i><b>7.6</b> Phylogeny and space together</a></li>
+<li class="chapter" data-level="7.7" data-path="mgcv.html"><a href="mgcv.html#all-four"><i class="fa fa-check"></i><b>7.7</b> All four</a></li>
+<li class="chapter" data-level="7.8" data-path="mgcv.html"><a href="mgcv.html#what-to-carry-forward-6"><i class="fa fa-check"></i><b>7.8</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="classical.html"><a href="classical.html"><i class="fa fa-check"></i><b>8</b> The classical toolkit: PGLS and SAR</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="classical.html"><a href="classical.html#set-up-6"><i class="fa fa-check"></i><b>8.1</b> Set up</a></li>
+<li class="chapter" data-level="8.2" data-path="classical.html"><a href="classical.html#phylogenetic-generalised-least-squares"><i class="fa fa-check"></i><b>8.2</b> Phylogenetic generalised least squares</a></li>
+<li class="chapter" data-level="8.3" data-path="classical.html"><a href="classical.html#phylogenetic-logistic-regression"><i class="fa fa-check"></i><b>8.3</b> Phylogenetic logistic regression</a></li>
+<li class="chapter" data-level="8.4" data-path="classical.html"><a href="classical.html#simultaneous-autoregressive-models"><i class="fa fa-check"></i><b>8.4</b> Simultaneous autoregressive models</a></li>
+<li class="chapter" data-level="8.5" data-path="classical.html"><a href="classical.html#side-by-side"><i class="fa fa-check"></i><b>8.5</b> Side by side</a></li>
+<li class="chapter" data-level="8.6" data-path="classical.html"><a href="classical.html#when-the-classical-tools-are-enough"><i class="fa fa-check"></i><b>8.6</b> When the classical tools are enough</a></li>
+<li class="chapter" data-level="8.7" data-path="classical.html"><a href="classical.html#the-series-in-one-paragraph"><i class="fa fa-check"></i><b>8.7</b> The series in one paragraph</a></li>
+</ul></li>
+<li class="part"><span><b>IV Sampling and simulation</b></span></li>
+<li class="chapter" data-level="9" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>9</b> Sampling instead of modelling</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="sampling.html"><a href="sampling.html#set-up-7"><i class="fa fa-check"></i><b>9.1</b> Set up</a></li>
+<li class="chapter" data-level="9.2" data-path="sampling.html"><a href="sampling.html#the-sampling-tradition"><i class="fa fa-check"></i><b>9.2</b> The sampling tradition</a></li>
+<li class="chapter" data-level="9.3" data-path="sampling.html"><a href="sampling.html#three-designs"><i class="fa fa-check"></i><b>9.3</b> Three designs</a></li>
+<li class="chapter" data-level="9.4" data-path="sampling.html"><a href="sampling.html#one-sample-one-answer"><i class="fa fa-check"></i><b>9.4</b> One sample, one answer</a></li>
+<li class="chapter" data-level="9.5" data-path="sampling.html"><a href="sampling.html#a-thousand-samples"><i class="fa fa-check"></i><b>9.5</b> A thousand samples</a></li>
+<li class="chapter" data-level="9.6" data-path="sampling.html"><a href="sampling.html#the-regression-lines"><i class="fa fa-check"></i><b>9.6</b> The regression lines</a></li>
+<li class="chapter" data-level="9.7" data-path="sampling.html"><a href="sampling.html#does-sampling-remove-the-dependence"><i class="fa fa-check"></i><b>9.7</b> Does sampling remove the dependence?</a></li>
+<li class="chapter" data-level="9.8" data-path="sampling.html"><a href="sampling.html#what-to-carry-forward-7"><i class="fa fa-check"></i><b>9.8</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="simulation.html"><a href="simulation.html"><i class="fa fa-check"></i><b>10</b> Does it recover the truth?</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="simulation.html"><a href="simulation.html#why-simulate"><i class="fa fa-check"></i><b>10.1</b> Why simulate</a></li>
+<li class="chapter" data-level="10.2" data-path="simulation.html"><a href="simulation.html#set-up-8"><i class="fa fa-check"></i><b>10.2</b> Set up</a></li>
+<li class="chapter" data-level="10.3" data-path="simulation.html"><a href="simulation.html#a-world-with-a-known-slope"><i class="fa fa-check"></i><b>10.3</b> A world with a known slope</a></li>
+<li class="chapter" data-level="10.4" data-path="simulation.html"><a href="simulation.html#seven-methods"><i class="fa fa-check"></i><b>10.4</b> Seven methods</a></li>
+<li class="chapter" data-level="10.5" data-path="simulation.html"><a href="simulation.html#one-world-looked-at-closely"><i class="fa fa-check"></i><b>10.5</b> One world, looked at closely</a></li>
+<li class="chapter" data-level="10.6" data-path="simulation.html"><a href="simulation.html#three-hundred-worlds"><i class="fa fa-check"></i><b>10.6</b> Three hundred worlds</a></li>
+<li class="chapter" data-level="10.7" data-path="simulation.html"><a href="simulation.html#no-effect-who-cries-wolf"><i class="fa fa-check"></i><b>10.7</b> No effect: who cries wolf?</a></li>
+<li class="chapter" data-level="10.8" data-path="simulation.html"><a href="simulation.html#a-true-effect-who-finds-it-and-how-precisely"><i class="fa fa-check"></i><b>10.8</b> A true effect: who finds it, and how precisely?</a></li>
+<li class="chapter" data-level="10.9" data-path="simulation.html"><a href="simulation.html#shared-history-the-limit-of-every-method"><i class="fa fa-check"></i><b>10.9</b> Shared history: the limit of every method</a></li>
+<li class="chapter" data-level="10.10" data-path="simulation.html"><a href="simulation.html#make-it-your-own"><i class="fa fa-check"></i><b>10.10</b> Make it your own</a></li>
+<li class="chapter" data-level="10.11" data-path="simulation.html"><a href="simulation.html#what-to-carry-forward-8"><i class="fa fa-check"></i><b>10.11</b> What to carry forward</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://rehan-muh.github.io/">Muhammad Rehan</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Relatives and Neighbours</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="space-neighbours" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Space as a network of neighbours<a href="space-neighbours.html#space-neighbours" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p class="lede">
+Link each language to the languages around it and let every language lean towards the average of its neighbours.
+</p>
+<p class="chapter-meta">
+<span><b>Fitted with</b> spdep and brms</span><span><b>Model fitting</b> about 6 minutes</span><span><b>Packages</b> <code>brms</code> <code>spdep</code> <code>sf</code> <code>rnaturalearth</code> <code>ggplot2</code></span><span><a href="scripts/04-space-neighbours.R">Download the R script</a></span>
+</p>
+<div id="set-up-2" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Set up<a href="space-neighbours.html#set-up-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="space-neighbours.html#cb59-1" tabindex="-1"></a><span class="fu">library</span>(brms)</span>
+<span id="cb59-2"><a href="space-neighbours.html#cb59-2" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
+<span id="cb59-3"><a href="space-neighbours.html#cb59-3" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb59-4"><a href="space-neighbours.html#cb59-4" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb59-5"><a href="space-neighbours.html#cb59-5" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb59-6"><a href="space-neighbours.html#cb59-6" tabindex="-1"></a></span>
+<span id="cb59-7"><a href="space-neighbours.html#cb59-7" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
+<span id="cb59-8"><a href="space-neighbours.html#cb59-8" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
+<span id="cb59-9"><a href="space-neighbours.html#cb59-9" tabindex="-1"></a>d<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> d<span class="sc">$</span>elevation <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb59-10"><a href="space-neighbours.html#cb59-10" tabindex="-1"></a></span>
+<span id="cb59-11"><a href="space-neighbours.html#cb59-11" tabindex="-1"></a><span class="fu">options</span>(<span class="at">mc.cores =</span> <span class="dv">4</span>, <span class="at">brms.backend =</span> <span class="st">&quot;cmdstanr&quot;</span>)</span>
+<span id="cb59-12"><a href="space-neighbours.html#cb59-12" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;fits&quot;</span>, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+</div>
+<div id="the-idea-1" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> The idea<a href="space-neighbours.html#the-idea-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The Gaussian process in Chapter 3 measured distances. The models on this chapter only ask who is next to whom. You draw a graph with a link between every pair of neighbouring languages, and the model gives each language a spatial effect that is expected to equal the average of its neighbours’ effects:</p>
+<p><span class="math display">\[\phi_i \mid \phi_{\text{others}} \sim \mathcal{N}\!\left(\frac{1}{n_i}\sum_{j \sim i} \phi_j,\ \frac{\sigma^2}{n_i}\right)\]</span></p>
+<p>Here <span class="math inline">\(j \sim i\)</span> runs over the <span class="math inline">\(n_i\)</span> neighbours of language <span class="math inline">\(i\)</span>. This is the intrinsic conditional autoregressive model, ICAR <span class="citation">(<a href="#ref-besag1974">Besag 1974</a>)</span>. It was designed for areas such as counties, which have borders and therefore natural neighbours. Languages recorded as points have no borders, so the graph is yours to define, and that definition is the main modelling decision on this chapter.</p>
+</div>
+<div id="building-the-graph" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Building the graph<a href="space-neighbours.html#building-the-graph" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A simple, defensible rule: link every language to its five nearest languages by great-circle distance, and make every link mutual.</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="space-neighbours.html#cb60-1" tabindex="-1"></a>coords <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)])</span>
+<span id="cb60-2"><a href="space-neighbours.html#cb60-2" tabindex="-1"></a>nb <span class="ot">&lt;-</span> <span class="fu">knn2nb</span>(<span class="fu">knearneigh</span>(coords, <span class="at">k =</span> <span class="dv">5</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb60-3"><a href="space-neighbours.html#cb60-3" tabindex="-1"></a>nb <span class="ot">&lt;-</span> <span class="fu">make.sym.nb</span>(nb)</span>
+<span id="cb60-4"><a href="space-neighbours.html#cb60-4" tabindex="-1"></a></span>
+<span id="cb60-5"><a href="space-neighbours.html#cb60-5" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">card</span>(nb))        <span class="co"># number of neighbours per language</span></span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    5.00    5.00    6.00    6.43    7.00   10.00</code></pre>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="space-neighbours.html#cb62-1" tabindex="-1"></a><span class="fu">n.comp.nb</span>(nb)<span class="sc">$</span>nc         <span class="co"># number of separate pieces</span></span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<p>After the links are made mutual, languages have between 5 and 10 neighbours. The second number matters more: the graph is in one piece. The models below need that. If <code>n.comp.nb()</code> reports more than one piece, raise <code>k</code> until it reports one.</p>
+<p>Always look at the graph.</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="space-neighbours.html#cb64-1" tabindex="-1"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="st">&quot;small&quot;</span>, <span class="at">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span>
+<span id="cb64-2"><a href="space-neighbours.html#cb64-2" tabindex="-1"></a>pts   <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(d, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>), <span class="at">crs =</span> <span class="dv">4326</span>)</span>
+<span id="cb64-3"><a href="space-neighbours.html#cb64-3" tabindex="-1"></a>links <span class="ot">&lt;-</span> <span class="fu">nb2lines</span>(nb, <span class="at">coords =</span> <span class="fu">st_geometry</span>(pts))</span>
+<span id="cb64-4"><a href="space-neighbours.html#cb64-4" tabindex="-1"></a><span class="co"># split the links that cross the 180th meridian, so they are drawn the short way</span></span>
+<span id="cb64-5"><a href="space-neighbours.html#cb64-5" tabindex="-1"></a>links <span class="ot">&lt;-</span> <span class="fu">st_wrap_dateline</span>(links, <span class="at">options =</span> <span class="fu">c</span>(<span class="st">&quot;WRAPDATELINE=YES&quot;</span>,</span>
+<span id="cb64-6"><a href="space-neighbours.html#cb64-6" tabindex="-1"></a>                                             <span class="st">&quot;DATELINEOFFSET=60&quot;</span>))</span>
+<span id="cb64-7"><a href="space-neighbours.html#cb64-7" tabindex="-1"></a></span>
+<span id="cb64-8"><a href="space-neighbours.html#cb64-8" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb64-9"><a href="space-neighbours.html#cb64-9" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> world, <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb64-10"><a href="space-neighbours.html#cb64-10" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> links, <span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.25</span>) <span class="sc">+</span></span>
+<span id="cb64-11"><a href="space-neighbours.html#cb64-11" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> pts, <span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb64-12"><a href="space-neighbours.html#cb64-12" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=eqearth&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:space-neighbours-graph-map"></span>
+<span id="fig:space-neighbours-graph-map" style="display:block;"></span>
+<img src="figures/04-space-neighbours/graph-map-1.png" alt="The five-nearest-neighbour graph. Most links are short. The graph holds together through a few longer ones: across the Bering Strait, through Central America, and from Australia to New Guinea." width="710" />
+<p class="caption">
+Figure 4.1: The five-nearest-neighbour graph. Most links are short. The graph holds together through a few longer ones: across the Bering Strait, through Central America, and from Australia to New Guinea.
+</p>
+</div>
+<p>brms takes the graph as a matrix <code>W</code> with a 1 wherever two languages are linked. Its row names must match a column of the data.</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="space-neighbours.html#cb65-1" tabindex="-1"></a>W <span class="ot">&lt;-</span> <span class="fu">nb2mat</span>(nb, <span class="at">style =</span> <span class="st">&quot;B&quot;</span>)</span>
+<span id="cb65-2"><a href="space-neighbours.html#cb65-2" tabindex="-1"></a><span class="fu">dimnames</span>(W) <span class="ot">&lt;-</span> <span class="fu">list</span>(d<span class="sc">$</span>glottocode, d<span class="sc">$</span>glottocode)</span></code></pre></div>
+</div>
+<div id="icar" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> ICAR<a href="space-neighbours.html#icar" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The spatial term is <code>car()</code>. It names the matrix, the column that identifies the rows, and the type of model.</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="space-neighbours.html#cb66-1" tabindex="-1"></a>priors <span class="ot">&lt;-</span> <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
+<span id="cb66-2"><a href="space-neighbours.html#cb66-2" tabindex="-1"></a>          <span class="fu">prior</span>(<span class="fu">exponential</span>(<span class="dv">1</span>), <span class="at">class =</span> sdcar)</span>
+<span id="cb66-3"><a href="space-neighbours.html#cb66-3" tabindex="-1"></a></span>
+<span id="cb66-4"><a href="space-neighbours.html#cb66-4" tabindex="-1"></a>m_icar <span class="ot">&lt;-</span> <span class="fu">brm</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">car</span>(W, <span class="at">gr =</span> glottocode, <span class="at">type =</span> <span class="st">&quot;icar&quot;</span>),</span>
+<span id="cb66-5"><a href="space-neighbours.html#cb66-5" tabindex="-1"></a>              <span class="at">data =</span> d, <span class="at">data2 =</span> <span class="fu">list</span>(<span class="at">W =</span> W),</span>
+<span id="cb66-6"><a href="space-neighbours.html#cb66-6" tabindex="-1"></a>              <span class="at">family =</span> <span class="fu">bernoulli</span>(), <span class="at">prior =</span> priors,</span>
+<span id="cb66-7"><a href="space-neighbours.html#cb66-7" tabindex="-1"></a>              <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">file =</span> <span class="st">&quot;fits/m_icar&quot;</span>)</span>
+<span id="cb66-8"><a href="space-neighbours.html#cb66-8" tabindex="-1"></a></span>
+<span id="cb66-9"><a href="space-neighbours.html#cb66-9" tabindex="-1"></a><span class="fu">summary</span>(m_icar)</span></code></pre></div>
+<pre><code>##  Family: bernoulli 
+##   Links: mu = logit 
+## Formula: ejectives ~ elev_km + car(W, gr = glottocode, type = &quot;icar&quot;) 
+##    Data: d (Number of observations: 500) 
+##   Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+##          total post-warmup draws = 4000
+## 
+## Correlation Structures:
+##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sdcar     4.04      1.00     2.45     6.31 1.00      860     1867
+## 
+## Regression Coefficients:
+##           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept    -7.83      1.68   -11.67    -5.20 1.01      494     1071
+## elev_km       1.18      0.36     0.53     1.95 1.00     1709     2821
+## 
+## Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
+## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+<p><code>sdcar</code> is the standard deviation of the spatial effects. Note that it is not on the same footing as <code>sd</code> in Chapter 2 or <code>sdgp</code> in Chapter 3: its meaning depends on how many links the graph has. That is one reason to prefer the next model.</p>
+</div>
+<div id="bym2" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> BYM2<a href="space-neighbours.html#bym2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>ICAR forces all the extra variation to be spatially smooth. BYM2, named after Besag, York and Mollié <span class="citation">(<a href="#ref-besag1991">1991</a>)</span> and used here in the scaled form of <span class="citation">Riebler et al. (<a href="#ref-riebler2016">2016</a>)</span>, splits each language’s effect into a smooth part and an independent part, and estimates the mix:</p>
+<p><span class="math display">\[u_i = \sigma\left(\sqrt{\rho}\,\phi_i^{*} + \sqrt{1-\rho}\,\theta_i\right)\]</span></p>
+<p><span class="math inline">\(\phi^{*}\)</span> is the ICAR effect rescaled to have variance near 1, <span class="math inline">\(\theta\)</span> is plain independent noise, and <span class="math inline">\(\rho\)</span> is the share of the variance that is spatial. Because of the rescaling, <span class="math inline">\(\sigma\)</span> is an ordinary standard deviation and the exponential(1) prior means what it meant in Chapter 2.</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="space-neighbours.html#cb68-1" tabindex="-1"></a>m_bym <span class="ot">&lt;-</span> <span class="fu">brm</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">car</span>(W, <span class="at">gr =</span> glottocode, <span class="at">type =</span> <span class="st">&quot;bym2&quot;</span>),</span>
+<span id="cb68-2"><a href="space-neighbours.html#cb68-2" tabindex="-1"></a>             <span class="at">data =</span> d, <span class="at">data2 =</span> <span class="fu">list</span>(<span class="at">W =</span> W),</span>
+<span id="cb68-3"><a href="space-neighbours.html#cb68-3" tabindex="-1"></a>             <span class="at">family =</span> <span class="fu">bernoulli</span>(), <span class="at">prior =</span> priors,</span>
+<span id="cb68-4"><a href="space-neighbours.html#cb68-4" tabindex="-1"></a>             <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">file =</span> <span class="st">&quot;fits/m_bym&quot;</span>)</span>
+<span id="cb68-5"><a href="space-neighbours.html#cb68-5" tabindex="-1"></a></span>
+<span id="cb68-6"><a href="space-neighbours.html#cb68-6" tabindex="-1"></a><span class="fu">summary</span>(m_bym)</span></code></pre></div>
+<pre><code>##  Family: bernoulli 
+##   Links: mu = logit 
+## Formula: ejectives ~ elev_km + car(W, gr = glottocode, type = &quot;bym2&quot;) 
+##    Data: d (Number of observations: 500) 
+##   Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+##          total post-warmup draws = 4000
+## 
+## Correlation Structures:
+##        Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## rhocar     0.96      0.04     0.87     1.00 1.00      831     1176
+## sdcar      5.21      1.27     3.19     8.18 1.01      559     1623
+## 
+## Regression Coefficients:
+##           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept    -7.68      1.59   -11.32    -5.14 1.02      264     1388
+## elev_km       1.17      0.37     0.52     1.97 1.00     1055     1902
+## 
+## Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
+## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+<p>The Stan implementation behind <code>car()</code> follows <span class="citation">M. Morris et al. (<a href="#ref-morris2019bym">2019</a>)</span>. <code>rhocar</code> near 1 says that almost all the extra variation is shared between neighbours; near 0 it would say the languages vary independently and the graph is not helping.</p>
+<p>One more thing to read: the effective sample size of the intercept is in the hundreds, well below the slope’s. Neighbour models mix slowly in the intercept because every spatial effect can shift against it. The estimate is still usable, but if a <code>Bulk_ESS</code> drops below about 400, add <code>iter = 4000</code> to the call and let it run longer.</p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="space-neighbours.html#cb70-1" tabindex="-1"></a>sea_level <span class="ot">&lt;-</span> <span class="fu">transform</span>(d, <span class="at">elev_km =</span> <span class="dv">0</span>)</span>
+<span id="cb70-2"><a href="space-neighbours.html#cb70-2" tabindex="-1"></a>pts<span class="sc">$</span>baseline <span class="ot">&lt;-</span> <span class="fu">fitted</span>(m_bym, <span class="at">newdata =</span> sea_level)[, <span class="st">&quot;Estimate&quot;</span>]</span>
+<span id="cb70-3"><a href="space-neighbours.html#cb70-3" tabindex="-1"></a></span>
+<span id="cb70-4"><a href="space-neighbours.html#cb70-4" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb70-5"><a href="space-neighbours.html#cb70-5" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> world, <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb70-6"><a href="space-neighbours.html#cb70-6" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> pts[<span class="fu">order</span>(pts<span class="sc">$</span>baseline), ], <span class="fu">aes</span>(<span class="at">colour =</span> baseline),</span>
+<span id="cb70-7"><a href="space-neighbours.html#cb70-7" tabindex="-1"></a>          <span class="at">size =</span> <span class="fl">1.6</span>) <span class="sc">+</span></span>
+<span id="cb70-8"><a href="space-neighbours.html#cb70-8" tabindex="-1"></a>  <span class="fu">scale_colour_viridis_c</span>(<span class="at">name =</span> <span class="st">&quot;baseline probability&quot;</span>) <span class="sc">+</span></span>
+<span id="cb70-9"><a href="space-neighbours.html#cb70-9" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=eqearth&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:space-neighbours-effects"></span>
+<span id="fig:space-neighbours-effects" style="display:block;"></span>
+<img src="figures/04-space-neighbours/effects-1.png" alt="The BYM2 baseline at each language: the probability of ejectives the model expects there at sea level. Compare the surface in Chapter 3." width="710" />
+<p class="caption">
+Figure 4.2: The BYM2 baseline at each language: the probability of ejectives the model expects there at sea level. Compare the surface in Chapter 3.
+</p>
+</div>
+</div>
+<div id="the-regression-line-2" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> The regression line<a href="space-neighbours.html#the-regression-line-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Draw the model’s regression line beside the naive one. As in Chapter 2, the fair comparison is the line averaged over the sample: keep each language’s own spatial effect, move all 500 languages to the same elevation, and take the share expected to have ejectives.</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="space-neighbours.html#cb71-1" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> d)</span>
+<span id="cb71-2"><a href="space-neighbours.html#cb71-2" tabindex="-1"></a>x  <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">4.5</span>, <span class="at">by =</span> <span class="fl">0.1</span>)</span>
+<span id="cb71-3"><a href="space-neighbours.html#cb71-3" tabindex="-1"></a>pr <span class="ot">&lt;-</span> <span class="fu">predict</span>(m0, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x), <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb71-4"><a href="space-neighbours.html#cb71-4" tabindex="-1"></a>naive <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x, <span class="at">model =</span> <span class="st">&quot;naive glm&quot;</span>, <span class="at">p =</span> <span class="fu">plogis</span>(pr<span class="sc">$</span>fit),</span>
+<span id="cb71-5"><a href="space-neighbours.html#cb71-5" tabindex="-1"></a>                    <span class="at">lo =</span> <span class="fu">plogis</span>(pr<span class="sc">$</span>fit <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> pr<span class="sc">$</span>se.fit),</span>
+<span id="cb71-6"><a href="space-neighbours.html#cb71-6" tabindex="-1"></a>                    <span class="at">hi =</span> <span class="fu">plogis</span>(pr<span class="sc">$</span>fit <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> pr<span class="sc">$</span>se.fit))</span>
+<span id="cb71-7"><a href="space-neighbours.html#cb71-7" tabindex="-1"></a></span>
+<span id="cb71-8"><a href="space-neighbours.html#cb71-8" tabindex="-1"></a>b      <span class="ot">&lt;-</span> <span class="fu">as_draws_df</span>(m_bym)<span class="sc">$</span>b_elev_km</span>
+<span id="cb71-9"><a href="space-neighbours.html#cb71-9" tabindex="-1"></a>eta    <span class="ot">&lt;-</span> <span class="fu">posterior_linpred</span>(m_bym)        <span class="co"># draws by languages, logit scale</span></span>
+<span id="cb71-10"><a href="space-neighbours.html#cb71-10" tabindex="-1"></a>at_sea <span class="ot">&lt;-</span> eta <span class="sc">-</span> <span class="fu">outer</span>(b, d<span class="sc">$</span>elev_km)      <span class="co"># every language moved to 0 km</span></span>
+<span id="cb71-11"><a href="space-neighbours.html#cb71-11" tabindex="-1"></a>p      <span class="ot">&lt;-</span> <span class="fu">sapply</span>(x, <span class="cf">function</span>(xi) <span class="fu">rowMeans</span>(<span class="fu">plogis</span>(at_sea <span class="sc">+</span> b <span class="sc">*</span> xi)))</span>
+<span id="cb71-12"><a href="space-neighbours.html#cb71-12" tabindex="-1"></a>model  <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x, <span class="at">model =</span> <span class="st">&quot;neighbour graph (BYM2)&quot;</span>,</span>
+<span id="cb71-13"><a href="space-neighbours.html#cb71-13" tabindex="-1"></a>                     <span class="at">p  =</span> <span class="fu">colMeans</span>(p),</span>
+<span id="cb71-14"><a href="space-neighbours.html#cb71-14" tabindex="-1"></a>                     <span class="at">lo =</span> <span class="fu">apply</span>(p, <span class="dv">2</span>, quantile, <span class="fl">0.025</span>),</span>
+<span id="cb71-15"><a href="space-neighbours.html#cb71-15" tabindex="-1"></a>                     <span class="at">hi =</span> <span class="fu">apply</span>(p, <span class="dv">2</span>, quantile, <span class="fl">0.975</span>))</span>
+<span id="cb71-16"><a href="space-neighbours.html#cb71-16" tabindex="-1"></a></span>
+<span id="cb71-17"><a href="space-neighbours.html#cb71-17" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">rbind</span>(naive, model), <span class="fu">aes</span>(elev_km, p, <span class="at">colour =</span> model, <span class="at">fill =</span> model)) <span class="sc">+</span></span>
+<span id="cb71-18"><a href="space-neighbours.html#cb71-18" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lo, <span class="at">ymax =</span> hi), <span class="at">alpha =</span> <span class="fl">0.15</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb71-19"><a href="space-neighbours.html#cb71-19" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb71-20"><a href="space-neighbours.html#cb71-20" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;grey40&quot;</span>, <span class="st">&quot;#2A78D6&quot;</span>),</span>
+<span id="cb71-21"><a href="space-neighbours.html#cb71-21" tabindex="-1"></a>                      <span class="at">aesthetics =</span> <span class="fu">c</span>(<span class="st">&quot;colour&quot;</span>, <span class="st">&quot;fill&quot;</span>), <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb71-22"><a href="space-neighbours.html#cb71-22" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;elevation (km)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;probability of ejectives&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:space-neighbours-lines"></span>
+<span id="fig:space-neighbours-lines" style="display:block;"></span>
+<img src="figures/04-space-neighbours/lines-1.png" alt="The naive regression line (grey) and the BYM2 line averaged over the sample (blue), with 95% bands. It is close to the Gaussian-process line in Chapter 3: two different descriptions of space, nearly the same regression line." width="710" />
+<p class="caption">
+Figure 4.3: The naive regression line (grey) and the BYM2 line averaged over the sample (blue), with 95% bands. It is close to the Gaussian-process line in Chapter 3: two different descriptions of space, nearly the same regression line.
+</p>
+</div>
+</div>
+<div id="how-much-does-the-graph-matter" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> How much does the graph matter?<a href="space-neighbours.html#how-much-does-the-graph-matter" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The graph was a choice, so vary it. Build a denser one with ten nearest neighbours and refit.</p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="space-neighbours.html#cb72-1" tabindex="-1"></a>nb10 <span class="ot">&lt;-</span> <span class="fu">make.sym.nb</span>(<span class="fu">knn2nb</span>(<span class="fu">knearneigh</span>(coords, <span class="at">k =</span> <span class="dv">10</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb72-2"><a href="space-neighbours.html#cb72-2" tabindex="-1"></a>W10  <span class="ot">&lt;-</span> <span class="fu">nb2mat</span>(nb10, <span class="at">style =</span> <span class="st">&quot;B&quot;</span>)</span>
+<span id="cb72-3"><a href="space-neighbours.html#cb72-3" tabindex="-1"></a><span class="fu">dimnames</span>(W10) <span class="ot">&lt;-</span> <span class="fu">list</span>(d<span class="sc">$</span>glottocode, d<span class="sc">$</span>glottocode)</span>
+<span id="cb72-4"><a href="space-neighbours.html#cb72-4" tabindex="-1"></a></span>
+<span id="cb72-5"><a href="space-neighbours.html#cb72-5" tabindex="-1"></a>m_bym10 <span class="ot">&lt;-</span> <span class="fu">brm</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">car</span>(W, <span class="at">gr =</span> glottocode, <span class="at">type =</span> <span class="st">&quot;bym2&quot;</span>),</span>
+<span id="cb72-6"><a href="space-neighbours.html#cb72-6" tabindex="-1"></a>               <span class="at">data =</span> d, <span class="at">data2 =</span> <span class="fu">list</span>(<span class="at">W =</span> W10),</span>
+<span id="cb72-7"><a href="space-neighbours.html#cb72-7" tabindex="-1"></a>               <span class="at">family =</span> <span class="fu">bernoulli</span>(), <span class="at">prior =</span> priors,</span>
+<span id="cb72-8"><a href="space-neighbours.html#cb72-8" tabindex="-1"></a>               <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">file =</span> <span class="st">&quot;fits/m_bym10&quot;</span>)</span>
+<span id="cb72-9"><a href="space-neighbours.html#cb72-9" tabindex="-1"></a></span>
+<span id="cb72-10"><a href="space-neighbours.html#cb72-10" tabindex="-1"></a>slopes <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="fu">fixef</span>(m_icar)[<span class="st">&quot;elev_km&quot;</span>, ], <span class="fu">fixef</span>(m_bym)[<span class="st">&quot;elev_km&quot;</span>, ],</span>
+<span id="cb72-11"><a href="space-neighbours.html#cb72-11" tabindex="-1"></a>                <span class="fu">fixef</span>(m_bym10)[<span class="st">&quot;elev_km&quot;</span>, ])</span>
+<span id="cb72-12"><a href="space-neighbours.html#cb72-12" tabindex="-1"></a><span class="fu">rownames</span>(slopes) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;ICAR, k = 5&quot;</span>, <span class="st">&quot;BYM2, k = 5&quot;</span>, <span class="st">&quot;BYM2, k = 10&quot;</span>)</span>
+<span id="cb72-13"><a href="space-neighbours.html#cb72-13" tabindex="-1"></a><span class="fu">round</span>(slopes, <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##              Estimate Est.Error Q2.5 Q97.5
+## ICAR, k = 5      1.18      0.36 0.53  1.95
+## BYM2, k = 5      1.17      0.37 0.52  1.97
+## BYM2, k = 10     1.31      0.39 0.62  2.13</code></pre>
+<p>Doubling the number of neighbours moves the slope a little and leaves the conclusion where it was. Report a check like this whenever you use a neighbour model on point data. If the conclusion changes with a reasonable change of graph, that is a finding about how much the data can say.</p>
+<blockquote>
+<p><strong>Watch out.</strong> Nearest-neighbour links ignore everything a linguist knows about contact. A link across the Sahara or the Bering Strait counts the same as one between adjacent villages. Other rules are a line of code away: <code>dnearneigh()</code> links all pairs within a fixed distance, and <code>tri2nb()</code> or <code>gabrielneigh()</code> link natural neighbours without choosing <code>k</code>. You can also edit links by hand with <code>edit.nb()</code> or build <code>W</code> yourself from a table of known contact.</p>
+</blockquote>
+<blockquote>
+<p><strong>With your own data.</strong> If your units really are areas (language polygons, countries, grid cells), read them with <code>sf</code> and call <code>poly2nb()</code> to link the ones that share a border. Everything after <code>nb</code> is the same.</p>
+</blockquote>
+</div>
+<div id="other-models-in-the-same-family" class="section level2 hasAnchor" number="4.8">
+<h2><span class="header-section-number">4.8</span> Other models in the same family<a href="space-neighbours.html#other-models-in-the-same-family" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>car()</code> also accepts <code>type = "escar"</code>, the proper CAR model, which estimates how strongly neighbours pull on each other in place of assuming the maximum. Simultaneous autoregressive (SAR) models are a close relative with their own term, <code>sar()</code>, but brms fits them only for continuous outcomes; they appear on <a href="classical.html#classical">Chapter 8</a>.</p>
+</div>
+<div id="what-to-carry-forward-3" class="section level2 hasAnchor" number="4.9">
+<h2><span class="header-section-number">4.9</span> What to carry forward<a href="space-neighbours.html#what-to-carry-forward-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Neighbour models need a graph in one piece and a matrix <code>W</code> whose row names match the data.</li>
+<li><code>car(W, gr = , type = "bym2")</code> is the version to start with: its parameters have plain meanings, a standard deviation and a spatial share.</li>
+<li>The graph is an assumption. Show it and vary it.</li>
+</ul>
+<p>Chapters 2 to 4 each handled one kind of dependence. <a href="joint.html#joint">Chapter 5</a> puts ancestry and geography in the same model.</p>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-besag1974" class="csl-entry">
+Besag, Julian. 1974. <span>“Spatial Interaction and the Statistical Analysis of Lattice Systems.”</span> <em>Journal of the Royal Statistical Society: Series B</em> 36 (2): 192–236.
+</div>
+<div id="ref-besag1991" class="csl-entry">
+Besag, Julian, Jeremy York, and Annie Mollié. 1991. <span>“Bayesian Image Restoration, with Two Applications in Spatial Statistics.”</span> <em>Annals of the Institute of Statistical Mathematics</em> 43 (1): 1–20.
+</div>
+<div id="ref-morris2019bym" class="csl-entry">
+Morris, Mitzi, Katherine Wheeler-Martin, Dan Simpson, Stephen J. Mooney, Andrew Gelman, and Charles DiMaggio. 2019. <span>“Bayesian Hierarchical Spatial Models: Implementing the <span>B</span>esag <span>Y</span>ork <span>M</span>olli<span>é</span> Model in <span>S</span>tan.”</span> <em>Spatial and Spatio-Temporal Epidemiology</em> 31: 100301.
+</div>
+<div id="ref-riebler2016" class="csl-entry">
+Riebler, Andrea, Sigrunn H. Sørbye, Daniel Simpson, and Håvard Rue. 2016. <span>“An Intuitive <span>B</span>ayesian Spatial Model for Disease Mapping That Accounts for Scaling.”</span> <em>Statistical Methods in Medical Research</em> 25 (4): 1145–65.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="space-surface.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="joint.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": {
+    "position": "fixed"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

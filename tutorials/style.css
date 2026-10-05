@@ -1,0 +1,70 @@
+/* Refinements on top of the stock GitBook style. The base look (layout,
+   sidebar, toolbar, fonts) is bookdown's own and is left alone. */
+
+.book .book-body .page-wrapper .page-inner { max-width: 860px; }
+
+/* links and the sidebar's current chapter take the palette's blue */
+.book .book-body .page-wrapper .page-inner section.normal a { color: #1c5cab; }
+.book .book-summary ul.summary li.active > a { color: #1c5cab; }
+.book .book-summary ul.summary li.part { color: #0b0b0b; font-weight: 700; letter-spacing: 0.02em; }
+
+/* chapter opening: a standfirst and one line of practical facts */
+.book .book-body .page-wrapper .page-inner section.normal p.lede {
+  font-size: 1.18em; line-height: 1.5; color: #52514e; margin: 0 0 0.9em;
+}
+.book .book-body .page-wrapper .page-inner section.normal p.chapter-meta {
+  display: flex; flex-wrap: wrap; gap: 0.25em 1.6em;
+  margin: 0 0 2em; padding: 0.6em 0;
+  border-top: 1px solid #e1e0d9; border-bottom: 1px solid #e1e0d9;
+  font-size: 0.9em; color: #52514e;
+}
+.book .book-body .page-wrapper .page-inner section.normal p.chapter-meta b { color: #0b0b0b; font-weight: 600; margin-right: 0.3em; }
+.book .book-body .page-wrapper .page-inner section.normal p.chapter-meta code { background: none; padding: 0 0.15em; }
+
+/* section headings get air above and a hairline, so long chapters are easy to scan */
+.book .book-body .page-wrapper .page-inner section.normal h2 {
+  margin-top: 2.2em; padding-top: 1em; border-top: 1px solid #e1e0d9;
+}
+.book .book-body .page-wrapper .page-inner section.normal h3 { margin-top: 1.8em; }
+/* the first section follows the ruled facts line, so it needs no rule of its own */
+.book .book-body .page-wrapper .page-inner section.normal p.chapter-meta + div.section > h2 {
+  margin-top: 0; padding-top: 0; border-top: 0;
+}
+
+/* code and output: one quiet plane, a hairline frame, output slightly recessed */
+.book .book-body .page-wrapper .page-inner section.normal pre {
+  background: #f9f9f7; border: 1px solid #e1e0d9; border-radius: 3px;
+  font-size: 0.85em; line-height: 1.5;
+}
+.book .book-body .page-wrapper .page-inner section.normal div.sourceCode + pre {
+  margin-top: -1.275em; background: #ffffff; color: #52514e;
+  border-top-left-radius: 0; border-top-right-radius: 0;
+}
+.book .book-body .page-wrapper .page-inner section.normal code { font-size: 0.88em; }
+.book .book-body .page-wrapper .page-inner section.normal p code,
+.book .book-body .page-wrapper .page-inner section.normal li code {
+  background: #f3f2ee; border-radius: 3px; padding: 0.1em 0.3em;
+}
+
+/* figures: full width of the column, caption as a left-aligned note */
+.book .book-body .page-wrapper .page-inner section.normal .figure { margin: 1.8em 0 2em; }
+.book .book-body .page-wrapper .page-inner section.normal .figure img { max-width: 100%; height: auto; }
+.book .book-body .page-wrapper .page-inner section.normal p.caption {
+  margin: 0.7em 0 0; padding-top: 0.6em; border-top: 1px solid #e1e0d9;
+  text-align: left; font-size: 0.9em; line-height: 1.45; color: #52514e;
+}
+
+/* notes: assumptions, pitfalls, "with your own data", run times */
+.book .book-body .page-wrapper .page-inner section.normal blockquote {
+  margin: 1.6em 0; padding: 0.8em 1.1em;
+  background: #f9f9f7; border-left: 4px solid #2a78d6; color: inherit;
+}
+.book .book-body .page-wrapper .page-inner section.normal blockquote p { margin-bottom: 0.6em; }
+.book .book-body .page-wrapper .page-inner section.normal blockquote p:last-child { margin-bottom: 0; }
+.book .book-body .page-wrapper .page-inner section.normal blockquote > p:first-child > strong:first-child { color: #1c5cab; }
+
+/* tables: ruled rows, tabular figures */
+.book .book-body .page-wrapper .page-inner section.normal table { font-variant-numeric: tabular-nums; }
+.book .book-body .page-wrapper .page-inner section.normal table th { border-bottom: 2px solid #0b0b0b; }
+.book .book-body .page-wrapper .page-inner section.normal table td,
+.book .book-body .page-wrapper .page-inner section.normal table th { border-left: 0; border-right: 0; background: #ffffff; }
