@@ -189,9 +189,11 @@ div.csl-indent {
 <li class="chapter" data-level="2.4" data-path="trees.html"><a href="trees.html#look-at-it"><i class="fa fa-check"></i><b>2.4</b> Look at it</a></li>
 <li class="chapter" data-level="2.5" data-path="trees.html"><a href="trees.html#what-the-branch-lengths-mean"><i class="fa fa-check"></i><b>2.5</b> What the branch lengths mean</a></li>
 <li class="chapter" data-level="2.6" data-path="trees.html"><a href="trees.html#build-a-tree-from-a-table"><i class="fa fa-check"></i><b>2.6</b> Build a tree from a table</a></li>
-<li class="chapter" data-level="2.7" data-path="trees.html"><a href="trees.html#how-tree-like-is-a-feature"><i class="fa fa-check"></i><b>2.7</b> How tree-like is a feature?</a></li>
-<li class="chapter" data-level="2.8" data-path="trees.html"><a href="trees.html#what-to-carry-forward-1"><i class="fa fa-check"></i><b>2.8</b> What to carry forward</a></li>
-<li class="chapter" data-level="2.9" data-path="trees.html"><a href="trees.html#further-reading-2"><i class="fa fa-check"></i><b>2.9</b> Further reading</a></li>
+<li class="chapter" data-level="2.7" data-path="trees.html"><a href="trees.html#where-trees-come-from"><i class="fa fa-check"></i><b>2.7</b> Where trees come from</a></li>
+<li class="chapter" data-level="2.8" data-path="trees.html"><a href="trees.html#a-dated-tree-from-phlorest"><i class="fa fa-check"></i><b>2.8</b> A dated tree from Phlorest</a></li>
+<li class="chapter" data-level="2.9" data-path="trees.html"><a href="trees.html#how-tree-like-is-a-feature"><i class="fa fa-check"></i><b>2.9</b> How tree-like is a feature?</a></li>
+<li class="chapter" data-level="2.10" data-path="trees.html"><a href="trees.html#what-to-carry-forward-1"><i class="fa fa-check"></i><b>2.10</b> What to carry forward</a></li>
+<li class="chapter" data-level="2.11" data-path="trees.html"><a href="trees.html#further-reading-2"><i class="fa fa-check"></i><b>2.11</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="phylogeny.html"><a href="phylogeny.html"><i class="fa fa-check"></i><b>3</b> Phylogeny as a covariance matrix</a>
 <ul>
@@ -230,8 +232,11 @@ div.csl-indent {
 <li class="chapter" data-level="5.5" data-path="maps.html"><a href="maps.html#neighbours"><i class="fa fa-check"></i><b>5.5</b> Neighbours</a></li>
 <li class="chapter" data-level="5.6" data-path="maps.html"><a href="maps.html#from-a-graph-to-weights"><i class="fa fa-check"></i><b>5.6</b> From a graph to weights</a></li>
 <li class="chapter" data-level="5.7" data-path="maps.html"><a href="maps.html#how-far-does-similarity-reach"><i class="fa fa-check"></i><b>5.7</b> How far does similarity reach?</a></li>
-<li class="chapter" data-level="5.8" data-path="maps.html"><a href="maps.html#what-to-carry-forward-4"><i class="fa fa-check"></i><b>5.8</b> What to carry forward</a></li>
-<li class="chapter" data-level="5.9" data-path="maps.html"><a href="maps.html#further-reading-5"><i class="fa fa-check"></i><b>5.9</b> Further reading</a></li>
+<li class="chapter" data-level="5.8" data-path="maps.html"><a href="maps.html#where-locations-come-from"><i class="fa fa-check"></i><b>5.8</b> Where locations come from</a></li>
+<li class="chapter" data-level="5.9" data-path="maps.html"><a href="maps.html#speaker-areas-as-polygons"><i class="fa fa-check"></i><b>5.9</b> Speaker areas as polygons</a></li>
+<li class="chapter" data-level="5.10" data-path="maps.html"><a href="maps.html#what-a-location-leaves-out"><i class="fa fa-check"></i><b>5.10</b> What a location leaves out</a></li>
+<li class="chapter" data-level="5.11" data-path="maps.html"><a href="maps.html#what-to-carry-forward-4"><i class="fa fa-check"></i><b>5.11</b> What to carry forward</a></li>
+<li class="chapter" data-level="5.12" data-path="maps.html"><a href="maps.html#further-reading-5"><i class="fa fa-check"></i><b>5.12</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="space-surface.html"><a href="space-surface.html"><i class="fa fa-check"></i><b>6</b> Space as a smooth surface</a>
 <ul>
@@ -357,19 +362,19 @@ The older remedy for related languages is to leave most of them out. Draw balanc
 </p>
 <div id="set-up-9" class="section level2 hasAnchor" number="11.1">
 <h2><span class="header-section-number">11.1</span> Set up<a href="sampling.html#set-up-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="sampling.html#cb210-1" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
-<span id="cb210-2"><a href="sampling.html#cb210-2" tabindex="-1"></a><span class="fu">library</span>(mgcv)</span>
-<span id="cb210-3"><a href="sampling.html#cb210-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb210-4"><a href="sampling.html#cb210-4" tabindex="-1"></a></span>
-<span id="cb210-5"><a href="sampling.html#cb210-5" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
-<span id="cb210-6"><a href="sampling.html#cb210-6" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
-<span id="cb210-7"><a href="sampling.html#cb210-7" tabindex="-1"></a>d<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> d<span class="sc">$</span>elevation <span class="sc">/</span> <span class="dv">1000</span></span>
-<span id="cb210-8"><a href="sampling.html#cb210-8" tabindex="-1"></a>d<span class="sc">$</span>family  <span class="ot">&lt;-</span> <span class="fu">factor</span>(d<span class="sc">$</span>family)</span>
-<span id="cb210-9"><a href="sampling.html#cb210-9" tabindex="-1"></a></span>
-<span id="cb210-10"><a href="sampling.html#cb210-10" tabindex="-1"></a><span class="co"># great-circle distance between every pair of languages, in km</span></span>
-<span id="cb210-11"><a href="sampling.html#cb210-11" tabindex="-1"></a>km <span class="ot">&lt;-</span> sp<span class="sc">::</span><span class="fu">spDists</span>(<span class="fu">as.matrix</span>(d[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)]), <span class="at">longlat =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb210-12"><a href="sampling.html#cb210-12" tabindex="-1"></a></span>
-<span id="cb210-13"><a href="sampling.html#cb210-13" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> d)</span></code></pre></div>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="sampling.html#cb238-1" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
+<span id="cb238-2"><a href="sampling.html#cb238-2" tabindex="-1"></a><span class="fu">library</span>(mgcv)</span>
+<span id="cb238-3"><a href="sampling.html#cb238-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb238-4"><a href="sampling.html#cb238-4" tabindex="-1"></a></span>
+<span id="cb238-5"><a href="sampling.html#cb238-5" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
+<span id="cb238-6"><a href="sampling.html#cb238-6" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
+<span id="cb238-7"><a href="sampling.html#cb238-7" tabindex="-1"></a>d<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> d<span class="sc">$</span>elevation <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb238-8"><a href="sampling.html#cb238-8" tabindex="-1"></a>d<span class="sc">$</span>family  <span class="ot">&lt;-</span> <span class="fu">factor</span>(d<span class="sc">$</span>family)</span>
+<span id="cb238-9"><a href="sampling.html#cb238-9" tabindex="-1"></a></span>
+<span id="cb238-10"><a href="sampling.html#cb238-10" tabindex="-1"></a><span class="co"># great-circle distance between every pair of languages, in km</span></span>
+<span id="cb238-11"><a href="sampling.html#cb238-11" tabindex="-1"></a>km <span class="ot">&lt;-</span> sp<span class="sc">::</span><span class="fu">spDists</span>(<span class="fu">as.matrix</span>(d[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)]), <span class="at">longlat =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb238-12"><a href="sampling.html#cb238-12" tabindex="-1"></a></span>
+<span id="cb238-13"><a href="sampling.html#cb238-13" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> d)</span></code></pre></div>
 </div>
 <div id="the-sampling-tradition" class="section level2 hasAnchor" number="11.2">
 <h2><span class="header-section-number">11.2</span> The sampling tradition<a href="sampling.html#the-sampling-tradition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -379,39 +384,39 @@ The older remedy for related languages is to leave most of them out. Draw balanc
 <div id="three-designs" class="section level2 hasAnchor" number="11.3">
 <h2><span class="header-section-number">11.3</span> Three designs<a href="sampling.html#three-designs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Each design is a function that takes the full data and returns a random balanced sample.</p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="sampling.html#cb211-1" tabindex="-1"></a><span class="co"># one language drawn at random from every family</span></span>
-<span id="cb211-2"><a href="sampling.html#cb211-2" tabindex="-1"></a>one_per_family <span class="ot">&lt;-</span> <span class="cf">function</span>(d) {</span>
-<span id="cb211-3"><a href="sampling.html#cb211-3" tabindex="-1"></a>  pick <span class="ot">&lt;-</span> <span class="fu">tapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(d)), d<span class="sc">$</span>family,</span>
-<span id="cb211-4"><a href="sampling.html#cb211-4" tabindex="-1"></a>                 <span class="cf">function</span>(i) i[<span class="fu">sample.int</span>(<span class="fu">length</span>(i), <span class="dv">1</span>)])</span>
-<span id="cb211-5"><a href="sampling.html#cb211-5" tabindex="-1"></a>  d[pick, ]</span>
-<span id="cb211-6"><a href="sampling.html#cb211-6" tabindex="-1"></a>}</span>
-<span id="cb211-7"><a href="sampling.html#cb211-7" tabindex="-1"></a></span>
-<span id="cb211-8"><a href="sampling.html#cb211-8" tabindex="-1"></a><span class="co"># one language per family within each macroarea, so that families</span></span>
-<span id="cb211-9"><a href="sampling.html#cb211-9" tabindex="-1"></a><span class="co"># spread over several areas contribute once per area</span></span>
-<span id="cb211-10"><a href="sampling.html#cb211-10" tabindex="-1"></a>family_by_area <span class="ot">&lt;-</span> <span class="cf">function</span>(d) {</span>
-<span id="cb211-11"><a href="sampling.html#cb211-11" tabindex="-1"></a>  cell <span class="ot">&lt;-</span> <span class="fu">interaction</span>(d<span class="sc">$</span>family, d<span class="sc">$</span>macroarea, <span class="at">drop =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb211-12"><a href="sampling.html#cb211-12" tabindex="-1"></a>  pick <span class="ot">&lt;-</span> <span class="fu">tapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(d)), cell,</span>
-<span id="cb211-13"><a href="sampling.html#cb211-13" tabindex="-1"></a>                 <span class="cf">function</span>(i) i[<span class="fu">sample.int</span>(<span class="fu">length</span>(i), <span class="dv">1</span>)])</span>
-<span id="cb211-14"><a href="sampling.html#cb211-14" tabindex="-1"></a>  d[pick, ]</span>
-<span id="cb211-15"><a href="sampling.html#cb211-15" tabindex="-1"></a>}</span>
-<span id="cb211-16"><a href="sampling.html#cb211-16" tabindex="-1"></a></span>
-<span id="cb211-17"><a href="sampling.html#cb211-17" tabindex="-1"></a><span class="co"># spatial thinning: visit the languages in random order and keep one</span></span>
-<span id="cb211-18"><a href="sampling.html#cb211-18" tabindex="-1"></a><span class="co"># only if it is at least min_km from every language already kept</span></span>
-<span id="cb211-19"><a href="sampling.html#cb211-19" tabindex="-1"></a>thinned <span class="ot">&lt;-</span> <span class="cf">function</span>(d, min_km) {</span>
-<span id="cb211-20"><a href="sampling.html#cb211-20" tabindex="-1"></a>  keep <span class="ot">&lt;-</span> <span class="fu">integer</span>()</span>
-<span id="cb211-21"><a href="sampling.html#cb211-21" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">sample.int</span>(<span class="fu">nrow</span>(d))) {</span>
-<span id="cb211-22"><a href="sampling.html#cb211-22" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">all</span>(km[i, keep] <span class="sc">&gt;=</span> min_km)) keep <span class="ot">&lt;-</span> <span class="fu">c</span>(keep, i)</span>
-<span id="cb211-23"><a href="sampling.html#cb211-23" tabindex="-1"></a>  }</span>
-<span id="cb211-24"><a href="sampling.html#cb211-24" tabindex="-1"></a>  d[keep, ]</span>
-<span id="cb211-25"><a href="sampling.html#cb211-25" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="sampling.html#cb239-1" tabindex="-1"></a><span class="co"># one language drawn at random from every family</span></span>
+<span id="cb239-2"><a href="sampling.html#cb239-2" tabindex="-1"></a>one_per_family <span class="ot">&lt;-</span> <span class="cf">function</span>(d) {</span>
+<span id="cb239-3"><a href="sampling.html#cb239-3" tabindex="-1"></a>  pick <span class="ot">&lt;-</span> <span class="fu">tapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(d)), d<span class="sc">$</span>family,</span>
+<span id="cb239-4"><a href="sampling.html#cb239-4" tabindex="-1"></a>                 <span class="cf">function</span>(i) i[<span class="fu">sample.int</span>(<span class="fu">length</span>(i), <span class="dv">1</span>)])</span>
+<span id="cb239-5"><a href="sampling.html#cb239-5" tabindex="-1"></a>  d[pick, ]</span>
+<span id="cb239-6"><a href="sampling.html#cb239-6" tabindex="-1"></a>}</span>
+<span id="cb239-7"><a href="sampling.html#cb239-7" tabindex="-1"></a></span>
+<span id="cb239-8"><a href="sampling.html#cb239-8" tabindex="-1"></a><span class="co"># one language per family within each macroarea, so that families</span></span>
+<span id="cb239-9"><a href="sampling.html#cb239-9" tabindex="-1"></a><span class="co"># spread over several areas contribute once per area</span></span>
+<span id="cb239-10"><a href="sampling.html#cb239-10" tabindex="-1"></a>family_by_area <span class="ot">&lt;-</span> <span class="cf">function</span>(d) {</span>
+<span id="cb239-11"><a href="sampling.html#cb239-11" tabindex="-1"></a>  cell <span class="ot">&lt;-</span> <span class="fu">interaction</span>(d<span class="sc">$</span>family, d<span class="sc">$</span>macroarea, <span class="at">drop =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb239-12"><a href="sampling.html#cb239-12" tabindex="-1"></a>  pick <span class="ot">&lt;-</span> <span class="fu">tapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(d)), cell,</span>
+<span id="cb239-13"><a href="sampling.html#cb239-13" tabindex="-1"></a>                 <span class="cf">function</span>(i) i[<span class="fu">sample.int</span>(<span class="fu">length</span>(i), <span class="dv">1</span>)])</span>
+<span id="cb239-14"><a href="sampling.html#cb239-14" tabindex="-1"></a>  d[pick, ]</span>
+<span id="cb239-15"><a href="sampling.html#cb239-15" tabindex="-1"></a>}</span>
+<span id="cb239-16"><a href="sampling.html#cb239-16" tabindex="-1"></a></span>
+<span id="cb239-17"><a href="sampling.html#cb239-17" tabindex="-1"></a><span class="co"># spatial thinning: visit the languages in random order and keep one</span></span>
+<span id="cb239-18"><a href="sampling.html#cb239-18" tabindex="-1"></a><span class="co"># only if it is at least min_km from every language already kept</span></span>
+<span id="cb239-19"><a href="sampling.html#cb239-19" tabindex="-1"></a>thinned <span class="ot">&lt;-</span> <span class="cf">function</span>(d, min_km) {</span>
+<span id="cb239-20"><a href="sampling.html#cb239-20" tabindex="-1"></a>  keep <span class="ot">&lt;-</span> <span class="fu">integer</span>()</span>
+<span id="cb239-21"><a href="sampling.html#cb239-21" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">sample.int</span>(<span class="fu">nrow</span>(d))) {</span>
+<span id="cb239-22"><a href="sampling.html#cb239-22" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">all</span>(km[i, keep] <span class="sc">&gt;=</span> min_km)) keep <span class="ot">&lt;-</span> <span class="fu">c</span>(keep, i)</span>
+<span id="cb239-23"><a href="sampling.html#cb239-23" tabindex="-1"></a>  }</span>
+<span id="cb239-24"><a href="sampling.html#cb239-24" tabindex="-1"></a>  d[keep, ]</span>
+<span id="cb239-25"><a href="sampling.html#cb239-25" tabindex="-1"></a>}</span></code></pre></div>
 <p>Draw one sample of each kind and count what is left of the 500 languages and the 50 with ejectives.</p>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="sampling.html#cb212-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1989</span>)</span>
-<span id="cb212-2"><a href="sampling.html#cb212-2" tabindex="-1"></a>one <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;one per family&quot;</span>     <span class="ot">=</span> <span class="fu">one_per_family</span>(d),</span>
-<span id="cb212-3"><a href="sampling.html#cb212-3" tabindex="-1"></a>            <span class="st">&quot;family within area&quot;</span> <span class="ot">=</span> <span class="fu">family_by_area</span>(d),</span>
-<span id="cb212-4"><a href="sampling.html#cb212-4" tabindex="-1"></a>            <span class="st">&quot;thinned to 500 km&quot;</span>  <span class="ot">=</span> <span class="fu">thinned</span>(d, <span class="dv">500</span>))</span>
-<span id="cb212-5"><a href="sampling.html#cb212-5" tabindex="-1"></a></span>
-<span id="cb212-6"><a href="sampling.html#cb212-6" tabindex="-1"></a><span class="fu">sapply</span>(one, <span class="cf">function</span>(s) <span class="fu">c</span>(<span class="at">languages =</span> <span class="fu">nrow</span>(s),</span>
-<span id="cb212-7"><a href="sampling.html#cb212-7" tabindex="-1"></a>                          <span class="at">with_ejectives =</span> <span class="fu">sum</span>(s<span class="sc">$</span>ejectives)))</span></code></pre></div>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="sampling.html#cb240-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1989</span>)</span>
+<span id="cb240-2"><a href="sampling.html#cb240-2" tabindex="-1"></a>one <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;one per family&quot;</span>     <span class="ot">=</span> <span class="fu">one_per_family</span>(d),</span>
+<span id="cb240-3"><a href="sampling.html#cb240-3" tabindex="-1"></a>            <span class="st">&quot;family within area&quot;</span> <span class="ot">=</span> <span class="fu">family_by_area</span>(d),</span>
+<span id="cb240-4"><a href="sampling.html#cb240-4" tabindex="-1"></a>            <span class="st">&quot;thinned to 500 km&quot;</span>  <span class="ot">=</span> <span class="fu">thinned</span>(d, <span class="dv">500</span>))</span>
+<span id="cb240-5"><a href="sampling.html#cb240-5" tabindex="-1"></a></span>
+<span id="cb240-6"><a href="sampling.html#cb240-6" tabindex="-1"></a><span class="fu">sapply</span>(one, <span class="cf">function</span>(s) <span class="fu">c</span>(<span class="at">languages =</span> <span class="fu">nrow</span>(s),</span>
+<span id="cb240-7"><a href="sampling.html#cb240-7" tabindex="-1"></a>                          <span class="at">with_ejectives =</span> <span class="fu">sum</span>(s<span class="sc">$</span>ejectives)))</span></code></pre></div>
 <pre><code>##                one per family family within area thinned to 500 km
 ## languages                 110                117               144
 ## with_ejectives             22                 22                16</code></pre>
@@ -420,8 +425,8 @@ The older remedy for related languages is to leave most of them out. Draw balanc
 <div id="one-sample-one-answer" class="section level2 hasAnchor" number="11.4">
 <h2><span class="header-section-number">11.4</span> One sample, one answer<a href="sampling.html#one-sample-one-answer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Fit the regression of Chapter <a href="the-problem.html#the-problem">1</a> to the one-per-family sample.</p>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="sampling.html#cb214-1" tabindex="-1"></a>m_one <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> one[[<span class="dv">1</span>]])</span>
-<span id="cb214-2"><a href="sampling.html#cb214-2" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">summary</span>(m_one)<span class="sc">$</span>coefficients, <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="sampling.html#cb242-1" tabindex="-1"></a>m_one <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> one[[<span class="dv">1</span>]])</span>
+<span id="cb242-2"><a href="sampling.html#cb242-2" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">summary</span>(m_one)<span class="sc">$</span>coefficients, <span class="dv">3</span>)</span></code></pre></div>
 <pre><code>##             Estimate Std. Error z value Pr(&gt;|z|)
 ## (Intercept)   -1.941      0.330   -5.89    0.000
 ## elev_km        0.754      0.267    2.82    0.005</code></pre>
@@ -430,47 +435,47 @@ The older remedy for related languages is to leave most of them out. Draw balanc
 <div id="a-thousand-samples" class="section level2 hasAnchor" number="11.5">
 <h2><span class="header-section-number">11.5</span> A thousand samples<a href="sampling.html#a-thousand-samples" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>So draw a thousand of each and keep the intercept, the slope, its standard error and its p-value every time.</p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="sampling.html#cb216-1" tabindex="-1"></a>fit_sample <span class="ot">&lt;-</span> <span class="cf">function</span>(s) {</span>
-<span id="cb216-2"><a href="sampling.html#cb216-2" tabindex="-1"></a>  m <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> s)</span>
-<span id="cb216-3"><a href="sampling.html#cb216-3" tabindex="-1"></a>  <span class="fu">c</span>(<span class="fu">coef</span>(m), <span class="fu">coef</span>(<span class="fu">summary</span>(m))[<span class="st">&quot;elev_km&quot;</span>, <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>)], <span class="fu">nrow</span>(s))</span>
-<span id="cb216-4"><a href="sampling.html#cb216-4" tabindex="-1"></a>}</span>
-<span id="cb216-5"><a href="sampling.html#cb216-5" tabindex="-1"></a></span>
-<span id="cb216-6"><a href="sampling.html#cb216-6" tabindex="-1"></a>designs <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;one per family&quot;</span>     <span class="ot">=</span> <span class="cf">function</span>() <span class="fu">one_per_family</span>(d),</span>
-<span id="cb216-7"><a href="sampling.html#cb216-7" tabindex="-1"></a>                <span class="st">&quot;family within area&quot;</span> <span class="ot">=</span> <span class="cf">function</span>() <span class="fu">family_by_area</span>(d),</span>
-<span id="cb216-8"><a href="sampling.html#cb216-8" tabindex="-1"></a>                <span class="st">&quot;thinned to 500 km&quot;</span>  <span class="ot">=</span> <span class="cf">function</span>() <span class="fu">thinned</span>(d, <span class="dv">500</span>))</span>
-<span id="cb216-9"><a href="sampling.html#cb216-9" tabindex="-1"></a></span>
-<span id="cb216-10"><a href="sampling.html#cb216-10" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1989</span>)</span>
-<span id="cb216-11"><a href="sampling.html#cb216-11" tabindex="-1"></a>draws <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">names</span>(designs), <span class="cf">function</span>(design) {</span>
-<span id="cb216-12"><a href="sampling.html#cb216-12" tabindex="-1"></a>  r <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">t</span>(<span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">fit_sample</span>(designs[[design]]()))))</span>
-<span id="cb216-13"><a href="sampling.html#cb216-13" tabindex="-1"></a>  <span class="fu">names</span>(r) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;intercept&quot;</span>, <span class="st">&quot;slope&quot;</span>, <span class="st">&quot;se&quot;</span>, <span class="st">&quot;p&quot;</span>, <span class="st">&quot;n&quot;</span>)</span>
-<span id="cb216-14"><a href="sampling.html#cb216-14" tabindex="-1"></a>  r<span class="sc">$</span>design <span class="ot">&lt;-</span> design</span>
-<span id="cb216-15"><a href="sampling.html#cb216-15" tabindex="-1"></a>  r</span>
-<span id="cb216-16"><a href="sampling.html#cb216-16" tabindex="-1"></a>}))</span>
-<span id="cb216-17"><a href="sampling.html#cb216-17" tabindex="-1"></a>draws<span class="sc">$</span>design <span class="ot">&lt;-</span> <span class="fu">factor</span>(draws<span class="sc">$</span>design, <span class="at">levels =</span> <span class="fu">names</span>(designs))</span></code></pre></div>
-<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="sampling.html#cb217-1" tabindex="-1"></a>summarise <span class="ot">&lt;-</span> <span class="cf">function</span>(r) {</span>
-<span id="cb217-2"><a href="sampling.html#cb217-2" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">languages   =</span> <span class="fu">median</span>(r<span class="sc">$</span>n),</span>
-<span id="cb217-3"><a href="sampling.html#cb217-3" tabindex="-1"></a>    <span class="at">slope       =</span> <span class="fu">median</span>(r<span class="sc">$</span>slope),</span>
-<span id="cb217-4"><a href="sampling.html#cb217-4" tabindex="-1"></a>    <span class="at">lowest      =</span> <span class="fu">unname</span>(<span class="fu">quantile</span>(r<span class="sc">$</span>slope, <span class="fl">0.025</span>)),</span>
-<span id="cb217-5"><a href="sampling.html#cb217-5" tabindex="-1"></a>    <span class="at">highest     =</span> <span class="fu">unname</span>(<span class="fu">quantile</span>(r<span class="sc">$</span>slope, <span class="fl">0.975</span>)),</span>
-<span id="cb217-6"><a href="sampling.html#cb217-6" tabindex="-1"></a>    <span class="at">std_error   =</span> <span class="fu">median</span>(r<span class="sc">$</span>se),</span>
-<span id="cb217-7"><a href="sampling.html#cb217-7" tabindex="-1"></a>    <span class="at">significant =</span> <span class="fu">mean</span>(r<span class="sc">$</span>p <span class="sc">&lt;</span> <span class="fl">0.05</span>))</span>
-<span id="cb217-8"><a href="sampling.html#cb217-8" tabindex="-1"></a>}</span>
-<span id="cb217-9"><a href="sampling.html#cb217-9" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">sapply</span>(<span class="fu">split</span>(draws, draws<span class="sc">$</span>design), summarise))</span>
-<span id="cb217-10"><a href="sampling.html#cb217-10" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">rbind</span>(tab, <span class="st">&quot;all 500 languages&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">500</span>, <span class="fu">coef</span>(m0)[<span class="dv">2</span>], <span class="cn">NA</span>, <span class="cn">NA</span>,</span>
-<span id="cb217-11"><a href="sampling.html#cb217-11" tabindex="-1"></a>                                         <span class="fu">sqrt</span>(<span class="fu">vcov</span>(m0)[<span class="dv">2</span>, <span class="dv">2</span>]), <span class="dv">1</span>)), <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="sampling.html#cb244-1" tabindex="-1"></a>fit_sample <span class="ot">&lt;-</span> <span class="cf">function</span>(s) {</span>
+<span id="cb244-2"><a href="sampling.html#cb244-2" tabindex="-1"></a>  m <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> s)</span>
+<span id="cb244-3"><a href="sampling.html#cb244-3" tabindex="-1"></a>  <span class="fu">c</span>(<span class="fu">coef</span>(m), <span class="fu">coef</span>(<span class="fu">summary</span>(m))[<span class="st">&quot;elev_km&quot;</span>, <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>)], <span class="fu">nrow</span>(s))</span>
+<span id="cb244-4"><a href="sampling.html#cb244-4" tabindex="-1"></a>}</span>
+<span id="cb244-5"><a href="sampling.html#cb244-5" tabindex="-1"></a></span>
+<span id="cb244-6"><a href="sampling.html#cb244-6" tabindex="-1"></a>designs <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;one per family&quot;</span>     <span class="ot">=</span> <span class="cf">function</span>() <span class="fu">one_per_family</span>(d),</span>
+<span id="cb244-7"><a href="sampling.html#cb244-7" tabindex="-1"></a>                <span class="st">&quot;family within area&quot;</span> <span class="ot">=</span> <span class="cf">function</span>() <span class="fu">family_by_area</span>(d),</span>
+<span id="cb244-8"><a href="sampling.html#cb244-8" tabindex="-1"></a>                <span class="st">&quot;thinned to 500 km&quot;</span>  <span class="ot">=</span> <span class="cf">function</span>() <span class="fu">thinned</span>(d, <span class="dv">500</span>))</span>
+<span id="cb244-9"><a href="sampling.html#cb244-9" tabindex="-1"></a></span>
+<span id="cb244-10"><a href="sampling.html#cb244-10" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1989</span>)</span>
+<span id="cb244-11"><a href="sampling.html#cb244-11" tabindex="-1"></a>draws <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">names</span>(designs), <span class="cf">function</span>(design) {</span>
+<span id="cb244-12"><a href="sampling.html#cb244-12" tabindex="-1"></a>  r <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">t</span>(<span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">fit_sample</span>(designs[[design]]()))))</span>
+<span id="cb244-13"><a href="sampling.html#cb244-13" tabindex="-1"></a>  <span class="fu">names</span>(r) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;intercept&quot;</span>, <span class="st">&quot;slope&quot;</span>, <span class="st">&quot;se&quot;</span>, <span class="st">&quot;p&quot;</span>, <span class="st">&quot;n&quot;</span>)</span>
+<span id="cb244-14"><a href="sampling.html#cb244-14" tabindex="-1"></a>  r<span class="sc">$</span>design <span class="ot">&lt;-</span> design</span>
+<span id="cb244-15"><a href="sampling.html#cb244-15" tabindex="-1"></a>  r</span>
+<span id="cb244-16"><a href="sampling.html#cb244-16" tabindex="-1"></a>}))</span>
+<span id="cb244-17"><a href="sampling.html#cb244-17" tabindex="-1"></a>draws<span class="sc">$</span>design <span class="ot">&lt;-</span> <span class="fu">factor</span>(draws<span class="sc">$</span>design, <span class="at">levels =</span> <span class="fu">names</span>(designs))</span></code></pre></div>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="sampling.html#cb245-1" tabindex="-1"></a>summarise <span class="ot">&lt;-</span> <span class="cf">function</span>(r) {</span>
+<span id="cb245-2"><a href="sampling.html#cb245-2" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">languages   =</span> <span class="fu">median</span>(r<span class="sc">$</span>n),</span>
+<span id="cb245-3"><a href="sampling.html#cb245-3" tabindex="-1"></a>    <span class="at">slope       =</span> <span class="fu">median</span>(r<span class="sc">$</span>slope),</span>
+<span id="cb245-4"><a href="sampling.html#cb245-4" tabindex="-1"></a>    <span class="at">lowest      =</span> <span class="fu">unname</span>(<span class="fu">quantile</span>(r<span class="sc">$</span>slope, <span class="fl">0.025</span>)),</span>
+<span id="cb245-5"><a href="sampling.html#cb245-5" tabindex="-1"></a>    <span class="at">highest     =</span> <span class="fu">unname</span>(<span class="fu">quantile</span>(r<span class="sc">$</span>slope, <span class="fl">0.975</span>)),</span>
+<span id="cb245-6"><a href="sampling.html#cb245-6" tabindex="-1"></a>    <span class="at">std_error   =</span> <span class="fu">median</span>(r<span class="sc">$</span>se),</span>
+<span id="cb245-7"><a href="sampling.html#cb245-7" tabindex="-1"></a>    <span class="at">significant =</span> <span class="fu">mean</span>(r<span class="sc">$</span>p <span class="sc">&lt;</span> <span class="fl">0.05</span>))</span>
+<span id="cb245-8"><a href="sampling.html#cb245-8" tabindex="-1"></a>}</span>
+<span id="cb245-9"><a href="sampling.html#cb245-9" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">sapply</span>(<span class="fu">split</span>(draws, draws<span class="sc">$</span>design), summarise))</span>
+<span id="cb245-10"><a href="sampling.html#cb245-10" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">rbind</span>(tab, <span class="st">&quot;all 500 languages&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">500</span>, <span class="fu">coef</span>(m0)[<span class="dv">2</span>], <span class="cn">NA</span>, <span class="cn">NA</span>,</span>
+<span id="cb245-11"><a href="sampling.html#cb245-11" tabindex="-1"></a>                                         <span class="fu">sqrt</span>(<span class="fu">vcov</span>(m0)[<span class="dv">2</span>, <span class="dv">2</span>]), <span class="dv">1</span>)), <span class="dv">2</span>)</span></code></pre></div>
 <pre><code>##                    languages slope lowest highest std_error significant
 ## one per family           110  0.75   0.49    1.07      0.26        0.99
 ## family within area       117  0.70   0.50    0.94      0.25        1.00
 ## thinned to 500 km        149  0.62   0.40    0.92      0.25        0.89
 ## all 500 languages        500  0.84     NA      NA      0.15        1.00</code></pre>
 <p>Read the columns from left to right. <code>slope</code> is the median estimate over a thousand samples and <code>lowest</code> to <code>highest</code> is the range that holds 95% of them. <code>std_error</code> is the typical standard error of a single sample. <code>significant</code> is the share of samples in which the slope passes the 5% test.</p>
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="sampling.html#cb219-1" tabindex="-1"></a><span class="fu">ggplot</span>(draws, <span class="fu">aes</span>(slope)) <span class="sc">+</span></span>
-<span id="cb219-2"><a href="sampling.html#cb219-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">40</span>, <span class="at">fill =</span> <span class="st">&quot;#EDA100&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;white&quot;</span>,</span>
-<span id="cb219-3"><a href="sampling.html#cb219-3" tabindex="-1"></a>                 <span class="at">linewidth =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
-<span id="cb219-4"><a href="sampling.html#cb219-4" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">coef</span>(m0)[<span class="dv">2</span>], <span class="at">linetype =</span> <span class="st">&quot;22&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;grey35&quot;</span>) <span class="sc">+</span></span>
-<span id="cb219-5"><a href="sampling.html#cb219-5" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>design) <span class="sc">+</span></span>
-<span id="cb219-6"><a href="sampling.html#cb219-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;log-odds of ejectives per km of elevation&quot;</span>,</span>
-<span id="cb219-7"><a href="sampling.html#cb219-7" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;samples out of 1,000&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="sampling.html#cb247-1" tabindex="-1"></a><span class="fu">ggplot</span>(draws, <span class="fu">aes</span>(slope)) <span class="sc">+</span></span>
+<span id="cb247-2"><a href="sampling.html#cb247-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">40</span>, <span class="at">fill =</span> <span class="st">&quot;#EDA100&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;white&quot;</span>,</span>
+<span id="cb247-3"><a href="sampling.html#cb247-3" tabindex="-1"></a>                 <span class="at">linewidth =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb247-4"><a href="sampling.html#cb247-4" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">coef</span>(m0)[<span class="dv">2</span>], <span class="at">linetype =</span> <span class="st">&quot;22&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;grey35&quot;</span>) <span class="sc">+</span></span>
+<span id="cb247-5"><a href="sampling.html#cb247-5" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>design) <span class="sc">+</span></span>
+<span id="cb247-6"><a href="sampling.html#cb247-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;log-odds of ejectives per km of elevation&quot;</span>,</span>
+<span id="cb247-7"><a href="sampling.html#cb247-7" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;samples out of 1,000&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:sampling-draws-plot"></span>
 <span id="fig:sampling-draws-plot" style="display:block;"></span>
 <img src="figures/11-sampling/draws-plot-1.png" alt="The elevation slope in 1,000 random samples of each design. The dashed line is the slope from all 500 languages. Any one of these samples could have been the one published." width="710" />
@@ -487,31 +492,31 @@ Figure 11.1: The elevation slope in 1,000 random samples of each design. The das
 <h2><span class="header-section-number">11.6</span> The regression lines<a href="sampling.html#the-regression-lines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Draw the lines the samples produce: 150 from each design, with the full-data naive line and the line of a model that keeps every language.</p>
 <p>The model is the cheapest joint model in this series, a GAM with a family intercept and a spline on the sphere (Chapters <a href="phylogeny-engines.html#phylogeny-engines">4</a> and <a href="space-engines.html#space-engines">8</a>), and its line is averaged over the sample as in Chapter <a href="joint.html#joint">9</a>.</p>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="sampling.html#cb220-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">4.5</span>, <span class="at">by =</span> <span class="fl">0.1</span>)</span>
-<span id="cb220-2"><a href="sampling.html#cb220-2" tabindex="-1"></a></span>
-<span id="cb220-3"><a href="sampling.html#cb220-3" tabindex="-1"></a>g <span class="ot">&lt;-</span> <span class="fu">gam</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">s</span>(family, <span class="at">bs =</span> <span class="st">&quot;re&quot;</span>) <span class="sc">+</span></span>
-<span id="cb220-4"><a href="sampling.html#cb220-4" tabindex="-1"></a>           <span class="fu">s</span>(lat, lon, <span class="at">bs =</span> <span class="st">&quot;sos&quot;</span>, <span class="at">k =</span> <span class="dv">60</span>),</span>
-<span id="cb220-5"><a href="sampling.html#cb220-5" tabindex="-1"></a>         <span class="at">family =</span> binomial, <span class="at">data =</span> d, <span class="at">method =</span> <span class="st">&quot;REML&quot;</span>)</span>
-<span id="cb220-6"><a href="sampling.html#cb220-6" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">coef</span>(g)[[<span class="st">&quot;elev_km&quot;</span>]]</span>
-<span id="cb220-7"><a href="sampling.html#cb220-7" tabindex="-1"></a>at_sea <span class="ot">&lt;-</span> <span class="fu">predict</span>(g) <span class="sc">-</span> b <span class="sc">*</span> d<span class="sc">$</span>elev_km          <span class="co"># every language moved to 0 km</span></span>
-<span id="cb220-8"><a href="sampling.html#cb220-8" tabindex="-1"></a>model  <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x,</span>
-<span id="cb220-9"><a href="sampling.html#cb220-9" tabindex="-1"></a>                     <span class="at">p =</span> <span class="fu">sapply</span>(x, <span class="cf">function</span>(xi) <span class="fu">mean</span>(<span class="fu">plogis</span>(at_sea <span class="sc">+</span> b <span class="sc">*</span> xi))))</span>
-<span id="cb220-10"><a href="sampling.html#cb220-10" tabindex="-1"></a>naive  <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x)</span>
-<span id="cb220-11"><a href="sampling.html#cb220-11" tabindex="-1"></a>naive<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">predict</span>(m0, <span class="at">newdata =</span> naive, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span>
-<span id="cb220-12"><a href="sampling.html#cb220-12" tabindex="-1"></a></span>
-<span id="cb220-13"><a href="sampling.html#cb220-13" tabindex="-1"></a>some <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">split</span>(draws, draws<span class="sc">$</span>design), head, <span class="dv">150</span>))</span>
-<span id="cb220-14"><a href="sampling.html#cb220-14" tabindex="-1"></a>some<span class="sc">$</span>id <span class="ot">&lt;-</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(some))</span>
-<span id="cb220-15"><a href="sampling.html#cb220-15" tabindex="-1"></a>curves  <span class="ot">&lt;-</span> <span class="fu">merge</span>(some[, <span class="fu">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;design&quot;</span>, <span class="st">&quot;intercept&quot;</span>, <span class="st">&quot;slope&quot;</span>)],</span>
-<span id="cb220-16"><a href="sampling.html#cb220-16" tabindex="-1"></a>                 <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x))</span>
-<span id="cb220-17"><a href="sampling.html#cb220-17" tabindex="-1"></a>curves<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">plogis</span>(curves<span class="sc">$</span>intercept <span class="sc">+</span> curves<span class="sc">$</span>slope <span class="sc">*</span> curves<span class="sc">$</span>elev_km)</span>
-<span id="cb220-18"><a href="sampling.html#cb220-18" tabindex="-1"></a></span>
-<span id="cb220-19"><a href="sampling.html#cb220-19" tabindex="-1"></a><span class="fu">ggplot</span>(curves, <span class="fu">aes</span>(elev_km, p)) <span class="sc">+</span></span>
-<span id="cb220-20"><a href="sampling.html#cb220-20" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">group =</span> id), <span class="at">colour =</span> <span class="st">&quot;#EDA100&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>,</span>
-<span id="cb220-21"><a href="sampling.html#cb220-21" tabindex="-1"></a>            <span class="at">linewidth =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
-<span id="cb220-22"><a href="sampling.html#cb220-22" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> naive, <span class="at">linetype =</span> <span class="st">&quot;22&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;grey35&quot;</span>) <span class="sc">+</span></span>
-<span id="cb220-23"><a href="sampling.html#cb220-23" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> model, <span class="at">colour =</span> <span class="st">&quot;grey10&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
-<span id="cb220-24"><a href="sampling.html#cb220-24" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>design) <span class="sc">+</span></span>
-<span id="cb220-25"><a href="sampling.html#cb220-25" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;elevation (km)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;probability of ejectives&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="sampling.html#cb248-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">4.5</span>, <span class="at">by =</span> <span class="fl">0.1</span>)</span>
+<span id="cb248-2"><a href="sampling.html#cb248-2" tabindex="-1"></a></span>
+<span id="cb248-3"><a href="sampling.html#cb248-3" tabindex="-1"></a>g <span class="ot">&lt;-</span> <span class="fu">gam</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">s</span>(family, <span class="at">bs =</span> <span class="st">&quot;re&quot;</span>) <span class="sc">+</span></span>
+<span id="cb248-4"><a href="sampling.html#cb248-4" tabindex="-1"></a>           <span class="fu">s</span>(lat, lon, <span class="at">bs =</span> <span class="st">&quot;sos&quot;</span>, <span class="at">k =</span> <span class="dv">60</span>),</span>
+<span id="cb248-5"><a href="sampling.html#cb248-5" tabindex="-1"></a>         <span class="at">family =</span> binomial, <span class="at">data =</span> d, <span class="at">method =</span> <span class="st">&quot;REML&quot;</span>)</span>
+<span id="cb248-6"><a href="sampling.html#cb248-6" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">coef</span>(g)[[<span class="st">&quot;elev_km&quot;</span>]]</span>
+<span id="cb248-7"><a href="sampling.html#cb248-7" tabindex="-1"></a>at_sea <span class="ot">&lt;-</span> <span class="fu">predict</span>(g) <span class="sc">-</span> b <span class="sc">*</span> d<span class="sc">$</span>elev_km          <span class="co"># every language moved to 0 km</span></span>
+<span id="cb248-8"><a href="sampling.html#cb248-8" tabindex="-1"></a>model  <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x,</span>
+<span id="cb248-9"><a href="sampling.html#cb248-9" tabindex="-1"></a>                     <span class="at">p =</span> <span class="fu">sapply</span>(x, <span class="cf">function</span>(xi) <span class="fu">mean</span>(<span class="fu">plogis</span>(at_sea <span class="sc">+</span> b <span class="sc">*</span> xi))))</span>
+<span id="cb248-10"><a href="sampling.html#cb248-10" tabindex="-1"></a>naive  <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x)</span>
+<span id="cb248-11"><a href="sampling.html#cb248-11" tabindex="-1"></a>naive<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">predict</span>(m0, <span class="at">newdata =</span> naive, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span>
+<span id="cb248-12"><a href="sampling.html#cb248-12" tabindex="-1"></a></span>
+<span id="cb248-13"><a href="sampling.html#cb248-13" tabindex="-1"></a>some <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">split</span>(draws, draws<span class="sc">$</span>design), head, <span class="dv">150</span>))</span>
+<span id="cb248-14"><a href="sampling.html#cb248-14" tabindex="-1"></a>some<span class="sc">$</span>id <span class="ot">&lt;-</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(some))</span>
+<span id="cb248-15"><a href="sampling.html#cb248-15" tabindex="-1"></a>curves  <span class="ot">&lt;-</span> <span class="fu">merge</span>(some[, <span class="fu">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;design&quot;</span>, <span class="st">&quot;intercept&quot;</span>, <span class="st">&quot;slope&quot;</span>)],</span>
+<span id="cb248-16"><a href="sampling.html#cb248-16" tabindex="-1"></a>                 <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x))</span>
+<span id="cb248-17"><a href="sampling.html#cb248-17" tabindex="-1"></a>curves<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">plogis</span>(curves<span class="sc">$</span>intercept <span class="sc">+</span> curves<span class="sc">$</span>slope <span class="sc">*</span> curves<span class="sc">$</span>elev_km)</span>
+<span id="cb248-18"><a href="sampling.html#cb248-18" tabindex="-1"></a></span>
+<span id="cb248-19"><a href="sampling.html#cb248-19" tabindex="-1"></a><span class="fu">ggplot</span>(curves, <span class="fu">aes</span>(elev_km, p)) <span class="sc">+</span></span>
+<span id="cb248-20"><a href="sampling.html#cb248-20" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">group =</span> id), <span class="at">colour =</span> <span class="st">&quot;#EDA100&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>,</span>
+<span id="cb248-21"><a href="sampling.html#cb248-21" tabindex="-1"></a>            <span class="at">linewidth =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb248-22"><a href="sampling.html#cb248-22" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> naive, <span class="at">linetype =</span> <span class="st">&quot;22&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;grey35&quot;</span>) <span class="sc">+</span></span>
+<span id="cb248-23"><a href="sampling.html#cb248-23" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> model, <span class="at">colour =</span> <span class="st">&quot;grey10&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb248-24"><a href="sampling.html#cb248-24" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>design) <span class="sc">+</span></span>
+<span id="cb248-25"><a href="sampling.html#cb248-25" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;elevation (km)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;probability of ejectives&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:sampling-lines"></span>
 <span id="fig:sampling-lines" style="display:block;"></span>
 <img src="figures/11-sampling/lines-1.png" alt="Regression lines from 150 random samples of each design (thin yellow lines), the naive regression on all 500 languages (dashed) and a joint model fitted to all 500 (solid black)." width="710" />
@@ -525,22 +530,22 @@ Figure 11.2: Regression lines from 150 random samples of each design (thin yello
 <div id="does-sampling-remove-the-dependence" class="section level2 hasAnchor" number="11.7">
 <h2><span class="header-section-number">11.7</span> Does sampling remove the dependence?<a href="sampling.html#does-sampling-remove-the-dependence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The point of a balanced sample is that its languages are independent. Check it the way Chapter <a href="the-problem.html#the-problem">1</a> checked the full data: Moran’s I on the residuals, with each language linked to its five nearest neighbours in the sample.</p>
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="sampling.html#cb221-1" tabindex="-1"></a>residual_moran <span class="ot">&lt;-</span> <span class="cf">function</span>(s) {</span>
-<span id="cb221-2"><a href="sampling.html#cb221-2" tabindex="-1"></a>  m  <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> s)</span>
-<span id="cb221-3"><a href="sampling.html#cb221-3" tabindex="-1"></a>  xy <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(s[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)])</span>
-<span id="cb221-4"><a href="sampling.html#cb221-4" tabindex="-1"></a>  nb <span class="ot">&lt;-</span> <span class="fu">knn2nb</span>(<span class="fu">knearneigh</span>(xy, <span class="at">k =</span> <span class="dv">5</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb221-5"><a href="sampling.html#cb221-5" tabindex="-1"></a>  lw <span class="ot">&lt;-</span> <span class="fu">nb2listw</span>(<span class="fu">make.sym.nb</span>(nb), <span class="at">style =</span> <span class="st">&quot;W&quot;</span>)</span>
-<span id="cb221-6"><a href="sampling.html#cb221-6" tabindex="-1"></a>  test <span class="ot">&lt;-</span> <span class="fu">moran.test</span>(<span class="fu">residuals</span>(m, <span class="at">type =</span> <span class="st">&quot;pearson&quot;</span>), lw)</span>
-<span id="cb221-7"><a href="sampling.html#cb221-7" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">I =</span> <span class="fu">unname</span>(test<span class="sc">$</span>estimate[<span class="dv">1</span>]), <span class="at">p =</span> test<span class="sc">$</span>p.value)</span>
-<span id="cb221-8"><a href="sampling.html#cb221-8" tabindex="-1"></a>}</span>
-<span id="cb221-9"><a href="sampling.html#cb221-9" tabindex="-1"></a></span>
-<span id="cb221-10"><a href="sampling.html#cb221-10" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1989</span>)</span>
-<span id="cb221-11"><a href="sampling.html#cb221-11" tabindex="-1"></a>checks <span class="ot">&lt;-</span> <span class="fu">lapply</span>(designs, <span class="cf">function</span>(draw) {</span>
-<span id="cb221-12"><a href="sampling.html#cb221-12" tabindex="-1"></a>  <span class="fu">t</span>(<span class="fu">replicate</span>(<span class="dv">200</span>, <span class="fu">residual_moran</span>(<span class="fu">draw</span>())))</span>
-<span id="cb221-13"><a href="sampling.html#cb221-13" tabindex="-1"></a>})</span>
-<span id="cb221-14"><a href="sampling.html#cb221-14" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">sapply</span>(checks, <span class="cf">function</span>(r) {</span>
-<span id="cb221-15"><a href="sampling.html#cb221-15" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">median_I =</span> <span class="fu">median</span>(r[, <span class="st">&quot;I&quot;</span>]), <span class="at">share_autocorrelated =</span> <span class="fu">mean</span>(r[, <span class="st">&quot;p&quot;</span>] <span class="sc">&lt;</span> <span class="fl">0.05</span>))</span>
-<span id="cb221-16"><a href="sampling.html#cb221-16" tabindex="-1"></a>}), <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="sampling.html#cb249-1" tabindex="-1"></a>residual_moran <span class="ot">&lt;-</span> <span class="cf">function</span>(s) {</span>
+<span id="cb249-2"><a href="sampling.html#cb249-2" tabindex="-1"></a>  m  <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> s)</span>
+<span id="cb249-3"><a href="sampling.html#cb249-3" tabindex="-1"></a>  xy <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(s[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)])</span>
+<span id="cb249-4"><a href="sampling.html#cb249-4" tabindex="-1"></a>  nb <span class="ot">&lt;-</span> <span class="fu">knn2nb</span>(<span class="fu">knearneigh</span>(xy, <span class="at">k =</span> <span class="dv">5</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb249-5"><a href="sampling.html#cb249-5" tabindex="-1"></a>  lw <span class="ot">&lt;-</span> <span class="fu">nb2listw</span>(<span class="fu">make.sym.nb</span>(nb), <span class="at">style =</span> <span class="st">&quot;W&quot;</span>)</span>
+<span id="cb249-6"><a href="sampling.html#cb249-6" tabindex="-1"></a>  test <span class="ot">&lt;-</span> <span class="fu">moran.test</span>(<span class="fu">residuals</span>(m, <span class="at">type =</span> <span class="st">&quot;pearson&quot;</span>), lw)</span>
+<span id="cb249-7"><a href="sampling.html#cb249-7" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">I =</span> <span class="fu">unname</span>(test<span class="sc">$</span>estimate[<span class="dv">1</span>]), <span class="at">p =</span> test<span class="sc">$</span>p.value)</span>
+<span id="cb249-8"><a href="sampling.html#cb249-8" tabindex="-1"></a>}</span>
+<span id="cb249-9"><a href="sampling.html#cb249-9" tabindex="-1"></a></span>
+<span id="cb249-10"><a href="sampling.html#cb249-10" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1989</span>)</span>
+<span id="cb249-11"><a href="sampling.html#cb249-11" tabindex="-1"></a>checks <span class="ot">&lt;-</span> <span class="fu">lapply</span>(designs, <span class="cf">function</span>(draw) {</span>
+<span id="cb249-12"><a href="sampling.html#cb249-12" tabindex="-1"></a>  <span class="fu">t</span>(<span class="fu">replicate</span>(<span class="dv">200</span>, <span class="fu">residual_moran</span>(<span class="fu">draw</span>())))</span>
+<span id="cb249-13"><a href="sampling.html#cb249-13" tabindex="-1"></a>})</span>
+<span id="cb249-14"><a href="sampling.html#cb249-14" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">sapply</span>(checks, <span class="cf">function</span>(r) {</span>
+<span id="cb249-15"><a href="sampling.html#cb249-15" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">median_I =</span> <span class="fu">median</span>(r[, <span class="st">&quot;I&quot;</span>]), <span class="at">share_autocorrelated =</span> <span class="fu">mean</span>(r[, <span class="st">&quot;p&quot;</span>] <span class="sc">&lt;</span> <span class="fl">0.05</span>))</span>
+<span id="cb249-16"><a href="sampling.html#cb249-16" tabindex="-1"></a>}), <span class="dv">2</span>)</span></code></pre></div>
 <pre><code>##                      one per family family within area thinned to 500 km
 ## median_I                       0.27               0.28               0.2
 ## share_autocorrelated           1.00               1.00               1.0</code></pre>
