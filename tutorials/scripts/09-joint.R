@@ -9,14 +9,14 @@ d    <- read.csv(paste0(base, "languages.csv"))
 tree <- read.tree(paste0(base, "glottolog_tree.nwk"))
 d$elev_km <- d$elevation / 1000
 
-A <- vcv(tree, corr = TRUE)                                   # Chapter 2
+A <- vcv(tree, corr = TRUE)                                   # phylogeny
 
-pts <- st_as_sf(d, coords = c("lon", "lat"), crs = 4326)      # Chapter 3
+pts <- st_as_sf(d, coords = c("lon", "lat"), crs = 4326)      # surface
 xy  <- st_coordinates(st_transform(pts, "+proj=eqearth")) / 1e6
 d$x <- xy[, 1]
 d$y <- xy[, 2]
 
-coords <- as.matrix(d[, c("lon", "lat")])                     # Chapter 4
+coords <- as.matrix(d[, c("lon", "lat")])                     # neighbours
 W <- nb2mat(make.sym.nb(knn2nb(knearneigh(coords, k = 5, longlat = TRUE))),
             style = "B")
 dimnames(W) <- list(d$glottocode, d$glottocode)

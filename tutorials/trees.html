@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Relatives and Neighbours</title>
+  <title>2 Trees: the raw material | Relatives and Neighbours</title>
   <meta name="description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
   <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Relatives and Neighbours" />
+  <meta property="og:title" content="2 Trees: the raw material | Relatives and Neighbours" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Relatives and Neighbours" />
+  <meta name="twitter:title" content="2 Trees: the raw material | Relatives and Neighbours" />
   
   <meta name="twitter:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="the-problem.html"/>
+<link rel="prev" href="the-problem.html"/>
+<link rel="next" href="phylogeny.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -347,215 +347,176 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Relatives and Neighbours</h1>
-<h2 class="subtitle"><em>Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only</em></h2>
-<p class="author"><em>Muhammad Rehan</em></p>
+<div id="trees" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Trees: the raw material<a href="trees.html#trees" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p class="lede">
+Before any phylogenetic model there is a tree, and most of the work is getting one that matches your data. Read it, check it against the languages, look at it, and build one from a classification when none exists.
+</p>
+<p class="chapter-meta">
+<span><b>Fitted with</b> ape, phytools</span><span><b>Model fitting</b> a few seconds</span><span><b>Packages</b> <code>ape</code> <code>phytools</code></span><span><a href="scripts/02-trees.R">Download the R script</a></span>
+</p>
+<div id="set-up" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Set up<a href="trees.html#set-up" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="trees.html#cb25-1" tabindex="-1"></a><span class="fu">library</span>(ape)</span>
+<span id="cb25-2"><a href="trees.html#cb25-2" tabindex="-1"></a><span class="fu">library</span>(phytools)</span>
+<span id="cb25-3"><a href="trees.html#cb25-3" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="trees.html#cb25-4" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
+<span id="cb25-5"><a href="trees.html#cb25-5" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
+<span id="cb25-6"><a href="trees.html#cb25-6" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;glottolog_tree.nwk&quot;</span>))</span></code></pre></div>
 </div>
-<div id="welcome" class="section level1 unnumbered hasAnchor">
-<h1>Welcome<a href="index.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>These are follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package, with no custom Stan programs and no long data wrangling. Open R beside this page and type along.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:index-welcome-map"></span>
-<span id="fig:index-welcome-map" style="display:block;"></span>
-<img src="figures/index/welcome-map-1.png" alt="The 500 languages used throughout. Filled symbols have ejective consonants; triangles sit at 1,500 m or above. Inventories from PHOIBLE 2.0, locations from Glottolog." width="710" />
+<div id="what-a-tree-object-holds" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> What a tree object holds<a href="trees.html#what-a-tree-object-holds" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>read.tree()</code> reads the Newick format, which is how trees from Glottolog, D-PLACE and most phylogenetic software are distributed. <code>read.nexus()</code> reads the other common format. Either returns a <code>phylo</code> object.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="trees.html#cb26-1" tabindex="-1"></a>tree</span></code></pre></div>
+<pre><code>## 
+## Phylogenetic tree with 500 tips and 264 internal nodes.
+## 
+## Tip labels:
+##   adyg1241, beja1238, alab1254, kamb1316, hadi1240, east2652, ...
+## 
+## Unrooted; includes branch length(s).</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="trees.html#cb28-1" tabindex="-1"></a><span class="fu">head</span>(tree<span class="sc">$</span>tip.label)</span></code></pre></div>
+<pre><code>## [1] &quot;adyg1241&quot; &quot;beja1238&quot; &quot;alab1254&quot; &quot;kamb1316&quot; &quot;hadi1240&quot; &quot;east2652&quot;</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="trees.html#cb30-1" tabindex="-1"></a><span class="fu">c</span>(<span class="at">tips =</span> <span class="fu">Ntip</span>(tree), <span class="at">internal_nodes =</span> <span class="fu">Nnode</span>(tree))</span></code></pre></div>
+<pre><code>##           tips internal_nodes 
+##            500            264</code></pre>
+<p>The tips are the languages, labelled here by Glottocode. The internal nodes are the groupings: subgroups, families, and at the top a root that joins everything.</p>
+<p>Two properties matter for what follows.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="trees.html#cb32-1" tabindex="-1"></a><span class="fu">is.ultrametric</span>(tree)    <span class="co"># do all languages end at the same height?</span></span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="trees.html#cb34-1" tabindex="-1"></a><span class="fu">is.binary</span>(tree)         <span class="co"># does every node split in exactly two?</span></span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<p>The tree is ultrametric: every language is the same distance from the root, as it should be for languages all spoken today. It is not binary, and that is fine. A classification often says “these six languages form a group” without saying how the six relate, and the tree records that as one node with six branches. Every model in this book accepts such trees.</p>
+</div>
+<div id="does-the-tree-match-the-data" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Does the tree match the data?<a href="trees.html#does-the-tree-match-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This check prevents more wasted afternoons than any other line in the book. Every language in the data must be a tip, and every tip must be a language in the data.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="trees.html#cb36-1" tabindex="-1"></a><span class="fu">setdiff</span>(d<span class="sc">$</span>glottocode, tree<span class="sc">$</span>tip.label)    <span class="co"># in the data, missing from the tree</span></span></code></pre></div>
+<pre><code>## character(0)</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="trees.html#cb38-1" tabindex="-1"></a><span class="fu">setdiff</span>(tree<span class="sc">$</span>tip.label, d<span class="sc">$</span>glottocode)    <span class="co"># in the tree, missing from the data</span></span></code></pre></div>
+<pre><code>## character(0)</code></pre>
+<p>Both are empty here because the two files were built together. With your own data they will not be. Languages missing from the tree have to be dropped from the analysis or added to the tree. Tips missing from the data are pruned:</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="trees.html#cb40-1" tabindex="-1"></a>some  <span class="ot">&lt;-</span> d<span class="sc">$</span>glottocode[d<span class="sc">$</span>macroarea <span class="sc">==</span> <span class="st">&quot;Australia&quot;</span>]</span>
+<span id="cb40-2"><a href="trees.html#cb40-2" tabindex="-1"></a>small <span class="ot">&lt;-</span> <span class="fu">keep.tip</span>(tree, some)       <span class="co"># the tree of just these languages</span></span>
+<span id="cb40-3"><a href="trees.html#cb40-3" tabindex="-1"></a>small</span></code></pre></div>
+<pre><code>## 
+## Phylogenetic tree with 68 tips and 34 internal nodes.
+## 
+## Tip labels:
+##   wany1247, erre1238, anin1240, nung1290, djau1244, remb1249, ...
+## 
+## Unrooted; includes branch length(s).</code></pre>
+<p><code>drop.tip()</code> does the reverse, removing the tips you name. Pruning keeps the branch lengths between the tips that remain, so a pruned tree still says the right thing about them.</p>
+<p>It also helps to put the data in the order of the tips, so that row <code>i</code> and tip <code>i</code> are the same language:</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="trees.html#cb42-1" tabindex="-1"></a>d <span class="ot">&lt;-</span> d[<span class="fu">match</span>(tree<span class="sc">$</span>tip.label, d<span class="sc">$</span>glottocode), ]</span>
+<span id="cb42-2"><a href="trees.html#cb42-2" tabindex="-1"></a><span class="fu">all</span>(d<span class="sc">$</span>glottocode <span class="sc">==</span> tree<span class="sc">$</span>tip.label)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="look-at-it" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Look at it<a href="trees.html#look-at-it" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A tree of 500 tips is hard to read (Chapter <a href="the-problem.html#the-problem">1</a> drew it as a fan). One family is easy. Prune to Afro-Asiatic and swap the Glottocodes for names.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="trees.html#cb44-1" tabindex="-1"></a>aa <span class="ot">&lt;-</span> <span class="fu">keep.tip</span>(tree, d<span class="sc">$</span>glottocode[d<span class="sc">$</span>family <span class="sc">==</span> <span class="st">&quot;Afro-Asiatic&quot;</span>])</span>
+<span id="cb44-2"><a href="trees.html#cb44-2" tabindex="-1"></a>aa<span class="sc">$</span>tip.label <span class="ot">&lt;-</span> d<span class="sc">$</span>name[<span class="fu">match</span>(aa<span class="sc">$</span>tip.label, d<span class="sc">$</span>glottocode)]</span>
+<span id="cb44-3"><a href="trees.html#cb44-3" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="trees.html#cb44-4" tabindex="-1"></a><span class="fu">plot</span>(aa, <span class="at">cex =</span> <span class="fl">0.75</span>)</span>
+<span id="cb44-5"><a href="trees.html#cb44-5" tabindex="-1"></a><span class="fu">axisPhylo</span>()</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:trees-family"></span>
+<span id="fig:trees-family" style="display:block;"></span>
+<img src="figures/02-trees/family-1.png" alt="The Afro-Asiatic languages of the sample as the tree has them. Each split is a level of the Glottolog classification; the scale is the share of the tree's height." width="634" />
 <p class="caption">
-Figure 0.1: The 500 languages used throughout. Filled symbols have ejective consonants; triangles sit at 1,500 m or above. Inventories from PHOIBLE 2.0, locations from Glottolog.
+Figure 2.1: The Afro-Asiatic languages of the sample as the tree has them. Each split is a level of the Glottolog classification; the scale is the share of the tree’s height.
 </p>
 </div>
-<p>The map shows the problem. Languages with ejectives cluster in the Caucasus, the Ethiopian highlands, southern Africa, the North American Cordillera and the Andes. Neighbours share features through contact and relatives share them through inheritance, so 500 languages carry far less than 500 languages’ worth of independent evidence. A regression that ignores this is too sure of itself. The difficulty is Galton’s problem, as old as cross-cultural statistics <span class="citation">(<a href="#ref-naroll1961">Naroll 1961</a>)</span>, and it has produced a long list of spurious correlations in linguistics <span class="citation">(<a href="#ref-roberts2013">Roberts and Winters 2013</a>; <a href="#ref-ladd2015">Ladd et al. 2015</a>)</span>.</p>
-<p>Each chapter fixes that in one way, with one tool. They share a single running example, so the same slope can be followed from the first model to the last. Read them in order the first time; after that each one stands alone.</p>
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Chapter</th>
-<th align="left">What it does</th>
-<th align="left">Fitted with</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><a href="the-problem.html#the-problem">1</a> Seeing the problem</td>
-<td align="left">The naive regression, and how often it cries wolf</td>
-<td align="left">base R, spdep, phytools</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="trees.html#trees">2</a> Trees: the raw material</td>
-<td align="left">Reading, checking, pruning and building a language tree</td>
-<td align="left">ape, phytools</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="phylogeny.html#phylogeny">3</a> Phylogeny as a covariance matrix</td>
-<td align="left">Family intercepts, then a phylogenetic random effect</td>
-<td align="left">brms</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="phylogeny-engines.html#phylogeny-engines">4</a> Phylogeny in other engines</td>
-<td align="left">The same model in INLA and mgcv; PGLS and phylogenetic logistic regression</td>
-<td align="left">INLA, mgcv, phylolm</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="maps.html#maps">5</a> Maps: coordinates, distances, neighbours</td>
-<td align="left">Distances, projections, neighbour graphs and weights</td>
-<td align="left">sf, spdep</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="space-surface.html#space-surface">6</a> Space as a smooth surface</td>
-<td align="left">An approximate Gaussian process over the map</td>
-<td align="left">brms</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="space-neighbours.html#space-neighbours">7</a> Space as a network of neighbours</td>
-<td align="left">ICAR and BYM2 on a neighbour graph</td>
-<td align="left">spdep, brms</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="space-engines.html#space-engines">8</a> Space in other engines</td>
-<td align="left">BYM2 and a surface on the globe in INLA; a spline on the sphere; SAR</td>
-<td align="left">INLA, mgcv, spatialreg</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="joint.html#joint">9</a> Both at once</td>
-<td align="left">Ancestry and geography in one model; every slope compared</td>
-<td align="left">brms</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="joint-engines.html#joint-engines">10</a> Both at once in other engines</td>
-<td align="left">The joint model in INLA and mgcv; every structure in every engine</td>
-<td align="left">INLA, mgcv</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="sampling.html#sampling">11</a> Sampling instead of modelling</td>
-<td align="left">One language per family, and what it costs</td>
-<td align="left">base R</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="simulation.html#simulation">12</a> Does it recover the truth?</td>
-<td align="left">Every method on simulated data with a known slope</td>
-<td align="left">nlme, phylolm, mgcv</td>
-</tr>
-</tbody>
-</table>
-<p>The book builds in the order phylogeny, space, both. Each of the three parts starts from the raw material, fits the model in brms where every piece is visible, and then repeats it in the faster engines.</p>
-<div id="before-you-start" class="section level2 unnumbered hasAnchor">
-<h2>Before you start<a href="index.html#before-you-start" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You need R 4.3 or later. Install the packages once. The first block covers the chapters that need no Bayesian engine; the others add the tree figures, brms and INLA.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;ape&quot;</span>, <span class="st">&quot;phytools&quot;</span>, <span class="st">&quot;phylolm&quot;</span>, <span class="st">&quot;nlme&quot;</span>, <span class="st">&quot;sf&quot;</span>, <span class="st">&quot;spdep&quot;</span>,</span>
-<span id="cb1-2"><a href="index.html#cb1-2" tabindex="-1"></a>                   <span class="st">&quot;spatialreg&quot;</span>, <span class="st">&quot;rnaturalearth&quot;</span>, <span class="st">&quot;rnaturalearthdata&quot;</span>,</span>
-<span id="cb1-3"><a href="index.html#cb1-3" tabindex="-1"></a>                   <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;mgcv&quot;</span>))</span>
-<span id="cb1-4"><a href="index.html#cb1-4" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="index.html#cb1-5" tabindex="-1"></a><span class="co"># two tree figures use ggtree, from Bioconductor</span></span>
-<span id="cb1-6"><a href="index.html#cb1-6" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
-<span id="cb1-7"><a href="index.html#cb1-7" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;ggtree&quot;</span>)</span>
-<span id="cb1-8"><a href="index.html#cb1-8" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="index.html#cb1-9" tabindex="-1"></a><span class="co"># brms compiles its models with Stan, through cmdstanr</span></span>
-<span id="cb1-10"><a href="index.html#cb1-10" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;brms&quot;</span>)</span>
-<span id="cb1-11"><a href="index.html#cb1-11" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;cmdstanr&quot;</span>,</span>
-<span id="cb1-12"><a href="index.html#cb1-12" tabindex="-1"></a>                 <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">&quot;https://stan-dev.r-universe.dev&quot;</span>, <span class="fu">getOption</span>(<span class="st">&quot;repos&quot;</span>)))</span>
-<span id="cb1-13"><a href="index.html#cb1-13" tabindex="-1"></a>cmdstanr<span class="sc">::</span><span class="fu">install_cmdstan</span>()</span>
-<span id="cb1-14"><a href="index.html#cb1-14" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="index.html#cb1-15" tabindex="-1"></a><span class="co"># INLA lives in its own repository</span></span>
-<span id="cb1-16"><a href="index.html#cb1-16" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;INLA&quot;</span>, <span class="at">dependencies =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb1-17"><a href="index.html#cb1-17" tabindex="-1"></a>                 <span class="at">repos =</span> <span class="fu">c</span>(<span class="fu">getOption</span>(<span class="st">&quot;repos&quot;</span>),</span>
-<span id="cb1-18"><a href="index.html#cb1-18" tabindex="-1"></a>                           <span class="at">INLA =</span> <span class="st">&quot;https://inla.r-inla-download.org/R/stable&quot;</span>))</span></code></pre></div>
-<p>On Windows, <code>cmdstanr</code> needs <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>; <code>cmdstanr::check_cmdstan_toolchain()</code> tells you whether yours is ready.</p>
-<p>Every chapter starts by reading the same two files, straight from this site:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" tabindex="-1"></a><span class="fu">library</span>(ape)</span>
-<span id="cb2-2"><a href="index.html#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="index.html#cb2-3" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
-<span id="cb2-4"><a href="index.html#cb2-4" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
-<span id="cb2-5"><a href="index.html#cb2-5" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;glottolog_tree.nwk&quot;</span>))</span></code></pre></div>
-<p>Each chapter has a link at the top to download its code as one R script. The figures use a small ggplot2 theme; your plots will show the same thing in ggplot’s default look. If you want them to match, <a href="scripts/atlas_theme.R">download <code>atlas_theme.R</code></a> and <code>source()</code> it.</p>
+<p>Read it from the left. The first split separates the main branches of the family; each further split is a subgroup inside the one before. Two languages are as related, for the purposes of a model, as the length of the path they share from the root.</p>
 </div>
-<div id="the-running-example" class="section level2 unnumbered hasAnchor">
-<h2>The running example<a href="index.html#the-running-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In 2013 Caleb Everett reported that languages spoken at high altitude are more likely to have ejective consonants <span class="citation">(<a href="#ref-everett2013">Everett 2013</a>)</span>, sounds such as [kʼ] and [tʼ] made by compressing air above a closed glottis. The proposed reason is articulatory: thinner air makes the compression cheaper. The claim is a good teaching case because the raw association is strong, the mechanism is plausible, and the data are the kind where relatives and neighbours can manufacture a correlation by themselves.</p>
-<p>The sample is 500 languages drawn at random from the 2,026 in PHOIBLE 2.0 <span class="citation">(<a href="#ref-moran2019">Moran and McCloy 2019</a>)</span> that Glottolog <span class="citation">(<a href="#ref-glottolog">Hammarström et al., n.d.</a>)</span> locates on the map. For each language the file has:</p>
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Column</th>
-<th align="left">Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>glottocode</code>, <code>name</code></td>
-<td align="left">Glottolog identifier and name</td>
-</tr>
-<tr class="even">
-<td align="left"><code>family</code>, <code>macroarea</code></td>
-<td align="left">Top-level Glottolog family and macroarea</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>lat</code>, <code>lon</code></td>
-<td align="left">Glottolog’s point location</td>
-</tr>
-<tr class="even">
-<td align="left"><code>elevation</code></td>
-<td align="left">Metres above sea level at that point, from ETOPO1</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>ejectives</code></td>
-<td align="left">1 if the PHOIBLE inventory has at least one ejective consonant</td>
-</tr>
-<tr class="even">
-<td align="left"><code>n_consonants</code>, <code>n_vowels</code></td>
-<td align="left">Sizes of the consonant and vowel inventories</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>tone</code></td>
-<td align="left">1 if the inventory lists tones</td>
-</tr>
-</tbody>
-</table>
-<p>The tree is Glottolog’s classification turned into a phylogeny. Each family is a clade shaped by Glottolog’s subgroups. Every level of the classification counts as one step, the family itself included, and all languages end at the same height, so two languages share as much of the tree as they share levels of classification. Families join only at the root: Glottolog makes no claim about relationships between families, so languages in different families share no history in this tree.</p>
-<p>Three limits are worth knowing before you read any estimate off these pages. A language is one point, though its speakers occupy an area. The elevation is the height at that point on a grid of about two kilometres <span class="citation">(<a href="#ref-amante2009">Amante and Eakins 2009</a>)</span>. And a classification with conventional branch lengths is a rough stand-in for a dated phylogeny. The tutorials teach the models; they are not a verdict on Everett’s hypothesis. For a fuller reanalysis with genealogical and areal controls, see <span class="citation">Urban and Moran (<a href="#ref-urban2021">2021</a>)</span>.</p>
-<p>The script that builds both files from the sources is <a href="data/make_data.R"><code>make_data.R</code></a>. The files themselves are <a href="data/languages.csv"><code>languages.csv</code></a> and <a href="data/glottolog_tree.nwk"><code>glottolog_tree.nwk</code></a>.</p>
-</div>
-<div id="further-reading" class="section level2 unnumbered hasAnchor">
-<h2>Further reading<a href="index.html#further-reading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Each chapter ends with its own list. Four books cover the ground under all of them.</p>
+<div id="what-the-branch-lengths-mean" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> What the branch lengths mean<a href="trees.html#what-the-branch-lengths-mean" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A classification gives only the shape of a tree. Branch lengths have to come from somewhere, and where they come from is an assumption you should be able to state.</p>
+<p>In this tree every level of the Glottolog classification is one step, the family counts as a level, and tips are stretched so that all languages end at the same height. As a consequence, two languages share as much history as they share levels of classification.</p>
+<p>The usual alternatives:</p>
 <ul>
-<li><span class="citation">McElreath (<a href="#ref-mcelreath2020">2020</a>)</span> builds multilevel models, Gaussian processes and phylogenetic regression from first principles, in the same Bayesian style as the brms chapters here.</li>
-<li><span class="citation">Banerjee et al. (<a href="#ref-banerjee2014">2014</a>)</span> is the standard reference for hierarchical spatial models, point-referenced and areal.</li>
-<li><span class="citation">Wood (<a href="#ref-wood2017">2017</a>)</span> is the book behind <code>mgcv</code>, and <span class="citation">Krainski et al. (<a href="#ref-krainski2019">2019</a>)</span> the book behind the SPDE approach in INLA.</li>
-<li>For the typological side of the argument, start with <span class="citation">Ladd et al. (<a href="#ref-ladd2015">2015</a>)</span> on correlational studies and <span class="citation">Guzmán Naranjo and Becker (<a href="#ref-guzman2022">2022</a>)</span> on bias control.</li>
+<li><strong>Grafen’s lengths.</strong> <code>compute.brlen(tree, method = "Grafen")</code> sets the height of each node from the number of tips below it. Large groups come out old and small groups young <span class="citation">(<a href="#ref-grafen1989">Grafen 1989</a>)</span>.</li>
+<li><strong>All branches equal.</strong> <code>compute.brlen(tree, 1)</code> is simple, but languages no longer end at the same height.</li>
+<li><strong>A dated tree.</strong> For families with a published Bayesian phylogeny, the branch lengths are estimated times. That is the best case, and the models in the next chapters use such a tree exactly as they use this one.</li>
 </ul>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="trees.html#cb45-1" tabindex="-1"></a>grafen <span class="ot">&lt;-</span> <span class="fu">compute.brlen</span>(aa, <span class="at">method =</span> <span class="st">&quot;Grafen&quot;</span>)</span>
+<span id="cb45-2"><a href="trees.html#cb45-2" tabindex="-1"></a>ours   <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">vcv</span>(aa, <span class="at">corr =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb45-3"><a href="trees.html#cb45-3" tabindex="-1"></a>theirs <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">vcv</span>(grafen, <span class="at">corr =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb45-4"><a href="trees.html#cb45-4" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">cor</span>(ours, theirs), <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 0.85</code></pre>
+<p>The number is the correlation between the two correlation matrices for this family. The shape of the tree is the same under both conventions, and the shape does much of the work, but the conventions are not interchangeable. Chapter <a href="simulation.html#simulation">12</a> shows how to find out whether such a choice matters for your result.</p>
+<blockquote>
+<p><strong>What this assumes.</strong> Any tree built from a classification assumes the classification is right and that depth in it is comparable across families. Glottolog is deliberately conservative: it groups only what has been demonstrated, so many families are small and there are many isolates. Each isolate is its own lineage and shares nothing with anything else.</p>
+</blockquote>
 </div>
-<div id="sources" class="section level2 unnumbered hasAnchor">
-<h2>Sources<a href="index.html#sources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="build-a-tree-from-a-table" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Build a tree from a table<a href="trees.html#build-a-tree-from-a-table" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If all you have is columns that classify the languages, <code>as.phylo()</code> turns them into a tree. The formula lists the levels from the top down. The sample file has only the family, so this builds the coarsest possible tree, family then language:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="trees.html#cb47-1" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">family =</span> <span class="fu">factor</span>(d<span class="sc">$</span>family), <span class="at">language =</span> <span class="fu">factor</span>(d<span class="sc">$</span>glottocode))</span>
+<span id="cb47-2"><a href="trees.html#cb47-2" tabindex="-1"></a>flat <span class="ot">&lt;-</span> <span class="fu">as.phylo</span>(<span class="sc">~</span>family <span class="sc">/</span> language, <span class="at">data =</span> tab)</span>
+<span id="cb47-3"><a href="trees.html#cb47-3" tabindex="-1"></a>flat <span class="ot">&lt;-</span> <span class="fu">compute.brlen</span>(flat, <span class="at">method =</span> <span class="st">&quot;Grafen&quot;</span>)</span>
+<span id="cb47-4"><a href="trees.html#cb47-4" tabindex="-1"></a>flat</span></code></pre></div>
+<pre><code>## 
+## Phylogenetic tree with 500 tips and 47 internal nodes.
+## 
+## Tip labels:
+##   adyg1241, beja1238, alab1254, kamb1316, hadi1240, east2652, ...
+## Node labels:
+##   , Afro-Asiatic, Algic, Arawakan, Arawan, Atlantic-Congo, ...
+## 
+## Unrooted; includes branch length(s).</code></pre>
+<p>With a genus or subgroup column you would write <code>~family / genus / language</code>, and each extra level adds structure. A tree with only the family level is the family random intercept of the next chapter drawn as a picture: all languages of a family equally close, and no information below that.</p>
+</div>
+<div id="how-tree-like-is-a-feature" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> How tree-like is a feature?<a href="trees.html#how-tree-like-is-a-feature" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>With a tree in hand, the first question about any feature is how closely it follows the tree. Chapter <a href="the-problem.html#the-problem">1</a> used Pagel’s λ. Blomberg’s K is the other standard measure: K near 1 means relatives resemble each other as much as Brownian motion on this tree predicts, K near 0 means the tree is irrelevant <span class="citation">(<a href="#ref-blomberg2003">Blomberg et al. 2003</a>)</span>.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="trees.html#cb49-1" tabindex="-1"></a>log_cons <span class="ot">&lt;-</span> <span class="fu">setNames</span>(<span class="fu">log</span>(d<span class="sc">$</span>n_consonants), d<span class="sc">$</span>glottocode)</span>
+<span id="cb49-2"><a href="trees.html#cb49-2" tabindex="-1"></a><span class="fu">phylosig</span>(tree, log_cons, <span class="at">method =</span> <span class="st">&quot;K&quot;</span>, <span class="at">test =</span> <span class="cn">TRUE</span>, <span class="at">nsim =</span> <span class="dv">999</span>)</span></code></pre></div>
+<pre><code>## 
+## Phylogenetic signal K : 1.14463 
+## P-value (based on 999 randomizations) : 0.001001</code></pre>
+<p>Consonant inventory size is strongly tree-like. That is a warning for any regression that uses it, and the reason Chapter <a href="phylogeny-engines.html#phylogeny-engines">4</a> returns to it.</p>
+<blockquote>
+<p><strong>With your own data.</strong> Glottolog publishes its classification as Newick trees, one per family, and D-PLACE collects published dated phylogenies with Glottocodes on the tips. Whatever the source, run the two <code>setdiff()</code> lines first, prune with <code>keep.tip()</code>, and plot at least one family you know well, so that you can spot languages the tree puts somewhere you do not believe. The model takes the tree as given.</p>
+</blockquote>
+</div>
+<div id="what-to-carry-forward-1" class="section level2 hasAnchor" number="2.8">
+<h2><span class="header-section-number">2.8</span> What to carry forward<a href="trees.html#what-to-carry-forward-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Moran, Steven and Daniel McCloy (eds.) 2019. <em>PHOIBLE 2.0</em>. Jena: Max Planck Institute for the Science of Human History. CC BY-SA 3.0.</li>
-<li>Hammarström, Harald, Robert Forkel, Martin Haspelmath and Sebastian Bank. <em>Glottolog</em>. Leipzig: Max Planck Institute for Evolutionary Anthropology. CC BY 4.0.</li>
-<li>Amante, Christopher and Barry Eakins 2009. <em>ETOPO1 1 arc-minute global relief model</em>. NOAA. Public domain.</li>
-<li>Everett, Caleb 2013. Evidence for direct geographic influences on linguistic sounds: the case of ejectives. <em>PLoS ONE</em> 8(6): e65275.</li>
+<li>A <code>phylo</code> object needs tip labels that match a column of your data exactly. Check both directions.</li>
+<li><code>keep.tip()</code> and <code>drop.tip()</code> prune; <code>match()</code> puts the data in tip order.</li>
+<li>Branch lengths from a classification are a convention, so say which one you used.</li>
+<li>A tree built from a family column alone carries the same information as a family random intercept.</li>
 </ul>
-<p>These tutorials are a companion to <em>Modeling spatial and phylogenetic autocorrelation in linguistic typology</em> by Muhammad Rehan.</p>
+<p>The next chapter turns the tree into a matrix, the form a regression can use.</p>
+</div>
+<div id="further-reading-2" class="section level2 hasAnchor" number="2.9">
+<h2><span class="header-section-number">2.9</span> Further reading<a href="trees.html#further-reading-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>How earlier studies obtained their trees.</strong> Most typological studies have had no tree at all and used the family, or the genus, as a grouping factor: <span class="citation">Dryer (<a href="#ref-dryer1989">1989</a>)</span> samples genera within areas, and <span class="citation">Jaeger et al. (<a href="#ref-jaeger2011">2011</a>)</span> give family a random intercept. Studies of single families could use dated Bayesian phylogenies, as <span class="citation">Dunn et al. (<a href="#ref-dunn2011">2011</a>)</span> did for word-order correlations in four families. Global studies need a global tree. <span class="citation"><span class="nocase">Skirgård et al.</span> (<a href="#ref-skirgard2023">2023</a>)</span> use one assembled from published family phylogenies and the Glottolog classification, and <span class="citation">Guzmán Naranjo and Becker (<a href="#ref-guzman2022">2022</a>)</span> use Glottolog family trees much as this book does. <span class="citation">Jäger (<a href="#ref-jager2018">2018</a>)</span> infers a worldwide tree directly from word lists.</p>
+<ul>
+<li><span class="citation">Grafen (<a href="#ref-grafen1989">1989</a>)</span> introduced phylogenetic regression for trees built from taxonomies, including the branch-length convention that bears his name.</li>
+<li><span class="citation">Münkemüller et al. (<a href="#ref-munkemuller2012">2012</a>)</span> compare the measures of phylogenetic signal, and <span class="citation">Fritz and Purvis (<a href="#ref-fritz2010">2010</a>)</span> give the D statistic for binary features (<code>caper::phylo.d()</code>).</li>
+<li>The Glottolog classification itself is documented by <span class="citation">Hammarström et al. (<a href="#ref-glottolog">n.d.</a>)</span>.</li>
+</ul>
 
 </div>
 </div>
-
-
-
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-amante2009" class="csl-entry">
-Amante, Christopher, and Barry W. Eakins. 2009. <em><span>ETOPO1</span> 1 Arc-Minute Global Relief Model: Procedures, Data Sources and Analysis</em>. NOAA Technical Memorandum NESDIS NGDC-24. National Geophysical Data Center, NOAA.
+<div id="ref-blomberg2003" class="csl-entry">
+Blomberg, Simon P., Theodore Garland Jr., and Anthony R. Ives. 2003. <span>“Testing for Phylogenetic Signal in Comparative Data: Behavioral Traits Are More Labile.”</span> <em>Evolution</em> 57 (4): 717–45.
 </div>
-<div id="ref-banerjee2014" class="csl-entry">
-Banerjee, Sudipto, Bradley P. Carlin, and Alan E. Gelfand. 2014. <em>Hierarchical Modeling and Analysis for Spatial Data</em>. 2nd ed. Chapman; Hall/CRC.
+<div id="ref-dryer1989" class="csl-entry">
+Dryer, Matthew S. 1989. <span>“Large Linguistic Areas and Language Sampling.”</span> <em>Studies in Language</em> 13 (2): 257–92.
 </div>
-<div id="ref-everett2013" class="csl-entry">
-Everett, Caleb. 2013. <span>“Evidence for Direct Geographic Influences on Linguistic Sounds: The Case of Ejectives.”</span> <em>PLoS ONE</em> 8 (6): e65275. <a href="https://doi.org/10.1371/journal.pone.0065275">https://doi.org/10.1371/journal.pone.0065275</a>.
+<div id="ref-dunn2011" class="csl-entry">
+Dunn, Michael, Simon J. Greenhill, Stephen C. Levinson, and Russell D. Gray. 2011. <span>“Evolved Structure of Language Shows Lineage-Specific Trends in Word-Order Universals.”</span> <em>Nature</em> 473: 79–82.
+</div>
+<div id="ref-fritz2010" class="csl-entry">
+Fritz, Susanne A., and Andy Purvis. 2010. <span>“Selectivity in Mammalian Extinction Risk and Threat Types: A New Measure of Phylogenetic Signal Strength in Binary Traits.”</span> <em>Conservation Biology</em> 24 (4): 1042–51.
+</div>
+<div id="ref-grafen1989" class="csl-entry">
+Grafen, Alan. 1989. <span>“The Phylogenetic Regression.”</span> <em>Philosophical Transactions of the Royal Society of London B</em> 326 (1233): 119–57.
 </div>
 <div id="ref-guzman2022" class="csl-entry">
 Guzmán Naranjo, Matías, and Laura Becker. 2022. <span>“Statistical Bias Control in Typology.”</span> <em>Linguistic Typology</em> 26 (3): 605–70. <a href="https://doi.org/10.1515/lingty-2021-0002">https://doi.org/10.1515/lingty-2021-0002</a>.
@@ -563,29 +524,17 @@ Guzmán Naranjo, Matías, and Laura Becker. 2022. <span>“Statistical Bias Cont
 <div id="ref-glottolog" class="csl-entry">
 Hammarström, Harald, Robert Forkel, Martin Haspelmath, and Sebastian Bank. n.d. <em>Glottolog</em>. Leipzig: Max Planck Institute for Evolutionary Anthropology. <a href="https://glottolog.org">https://glottolog.org</a>.
 </div>
-<div id="ref-krainski2019" class="csl-entry">
-Krainski, Elias T., Virgilio Gómez-Rubio, Haakon Bakka, et al. 2019. <em>Advanced Spatial Modeling with Stochastic Partial Differential Equations Using <span>R</span> and <span>INLA</span></em>. Chapman; Hall/CRC.
+<div id="ref-jaeger2011" class="csl-entry">
+Jaeger, T. Florian, Peter Graff, William Croft, and Daniel Pontillo. 2011. <span>“Mixed Effect Models for Genetic and Areal Dependencies in Linguistic Typology.”</span> <em>Linguistic Typology</em> 15 (2): 281–319.
 </div>
-<div id="ref-ladd2015" class="csl-entry">
-Ladd, D. Robert, Seán G. Roberts, and Dan Dediu. 2015. <span>“Correlational Studies in Typological and Historical Linguistics.”</span> <em>Annual Review of Linguistics</em> 1: 221–41. <a href="https://doi.org/10.1146/annurev-linguist-030514-124819">https://doi.org/10.1146/annurev-linguist-030514-124819</a>.
+<div id="ref-jager2018" class="csl-entry">
+Jäger, Gerhard. 2018. <span>“Global-Scale Phylogenetic Linguistic Inference from Lexical Resources.”</span> <em>Scientific Data</em> 5: 180189.
 </div>
-<div id="ref-mcelreath2020" class="csl-entry">
-McElreath, Richard. 2020. <em>Statistical Rethinking: A <span>B</span>ayesian Course with Examples in <span>R</span> and <span>S</span>tan</em>. 2nd ed. Chapman; Hall/CRC.
+<div id="ref-munkemuller2012" class="csl-entry">
+Münkemüller, Tamara, Sébastien Lavergne, Bruno Bzeznik, et al. 2012. <span>“How to Measure and Test Phylogenetic Signal.”</span> <em>Methods in Ecology and Evolution</em> 3 (4): 743–56.
 </div>
-<div id="ref-moran2019" class="csl-entry">
-Moran, Steven, and Daniel McCloy, eds. 2019. <em><span>PHOIBLE</span> 2.0</em>. Max Planck Institute for the Science of Human History. <a href="https://phoible.org">https://phoible.org</a>.
-</div>
-<div id="ref-naroll1961" class="csl-entry">
-Naroll, Raoul. 1961. <span>“Two Solutions to <span>G</span>alton’s Problem.”</span> <em>Philosophy of Science</em> 28 (1): 15–39.
-</div>
-<div id="ref-roberts2013" class="csl-entry">
-Roberts, Seán, and James Winters. 2013. <span>“Linguistic Diversity and Traffic Accidents: Lessons from Statistical Studies of Cultural Traits.”</span> <em>PLoS ONE</em> 8 (8): e70902. <a href="https://doi.org/10.1371/journal.pone.0070902">https://doi.org/10.1371/journal.pone.0070902</a>.
-</div>
-<div id="ref-urban2021" class="csl-entry">
-Urban, Matthias, and Steven Moran. 2021. <span>“Altitude and the Distributional Typology of Language Structure: Ejectives and Beyond.”</span> <em>PLoS ONE</em> 16 (2): e0245522. <a href="https://doi.org/10.1371/journal.pone.0245522">https://doi.org/10.1371/journal.pone.0245522</a>.
-</div>
-<div id="ref-wood2017" class="csl-entry">
-Wood, Simon N. 2017. <em>Generalized Additive Models: An Introduction with <span>R</span></em>. 2nd ed. Chapman; Hall/CRC.
+<div id="ref-skirgard2023" class="csl-entry">
+<span class="nocase">Skirgård, Hedvig, Hannah J. Haynie, Damián E. Blasi, et al.</span> 2023. <span>“Grambank Reveals the Importance of Genealogical Constraints on Linguistic Diversity and Highlights the Impact of Language Loss.”</span> <em>Science Advances</em> 9 (16): eadg6175. <a href="https://doi.org/10.1126/sciadv.adg6175">https://doi.org/10.1126/sciadv.adg6175</a>.
 </div>
 </div>
             </section>
@@ -593,8 +542,8 @@ Wood, Simon N. 2017. <em>Generalized Additive Models: An Introduction with <span
           </div>
         </div>
       </div>
-
-<a href="the-problem.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="the-problem.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="phylogeny.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
