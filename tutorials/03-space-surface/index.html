@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Space as a smooth surface · Relatives and Neighbours</title>
+<meta name="description" content="Let a Gaussian process draw a smooth surface over the map, so that nearby languages are pulled towards the same baseline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Charis+SIL:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="../assets/atlas.css">
+</head>
+<body data-plate="03-space-surface">
+<a class="skip" href="#sheet">Skip to the tutorial</a>
+
+<header class="masthead">
+  <a class="series" href="../">Relatives and Neighbours</a>
+  <nav class="plates" aria-label="All plates"><span class="lbl" aria-hidden="true">Plates</span><ol class="sheet-index"><li><a href="../01-the-problem/" data-plate="01-the-problem"><span class="n">1</span><span class="t">Seeing the problem</span></a></li><li><a href="../02-phylogeny/" data-plate="02-phylogeny"><span class="n">2</span><span class="t">Phylogeny as a covariance matrix</span></a></li><li><a href="../03-space-surface/" aria-current="page" data-plate="03-space-surface"><span class="n">3</span><span class="t">Space as a smooth surface</span></a></li><li><a href="../04-space-neighbours/" data-plate="04-space-neighbours"><span class="n">4</span><span class="t">Space as a network of neighbours</span></a></li><li><a href="../05-joint/" data-plate="05-joint"><span class="n">5</span><span class="t">Both at once</span></a></li><li><a href="../06-inla/" data-plate="06-inla"><span class="n">6</span><span class="t">The same models in INLA</span></a></li><li><a href="../07-mgcv/" data-plate="07-mgcv"><span class="n">7</span><span class="t">The same models as a GAM</span></a></li><li><a href="../08-classical/" data-plate="08-classical"><span class="n">8</span><span class="t">The classical toolkit: PGLS and SAR</span></a></li></ol></nav>
+  <div class="tools">
+    <a href="https://rehan-muh.github.io/">Muhammad Rehan</a>
+  </div>
+</header>
+
+<div class="titleblock">
+  <h1><span class="platenum" aria-hidden="true">3</span><span><span class="vh">Plate 3: </span>Space as a smooth surface</span></h1>
+  <p class="lede">Let a Gaussian process draw a smooth surface over the map, so that nearby languages are pulled towards the same baseline.</p>
+  <dl class="marginalia">
+    <div><dt>Fitted with</dt><dd>brms</dd></div>
+    <div><dt>Model fitting</dt><dd>about 5 minutes, plus 5 for an optional check</dd></div>
+    <div><dt>Packages</dt><dd><code>ape</code> <code>brms</code> <code>sf</code> <code>spdep</code> <code>rnaturalearth</code> <code>ggplot2</code></dd></div>
+  </dl>
+  <p class="takeaway"><a href="03-space-surface.R" download>Download the R script</a><a href="03-space-surface.md">Markdown source</a></p>
+</div>
+
+<div class="chart">
+  <aside class="legend">
+    <h2 id="legend-h">On this plate</h2>
+    <nav aria-labelledby="legend-h">
+<ul>
+<li><a href="#set-up" id="toc-set-up">Set up</a></li>
+<li><a href="#the-idea" id="toc-the-idea">The idea</a></li>
+<li><a href="#coordinates-the-model-can-measure-with" id="toc-coordinates-the-model-can-measure-with">Coordinates the model can measure with</a></li>
+<li><a href="#fitting-it" id="toc-fitting-it">Fitting it</a></li>
+<li><a href="#was-k-large-enough" id="toc-was-k-large-enough">Was <code>k</code> large enough?</a></li>
+<li><a href="#what-the-surface-looks-like" id="toc-what-the-surface-looks-like">What the surface looks like</a></li>
+<li><a href="#did-it-work" id="toc-did-it-work">Did it work?</a></li>
+<li><a href="#the-regression-line" id="toc-the-regression-line">The regression line</a></li>
+<li><a href="#variations" id="toc-variations">Variations</a></li>
+<li><a href="#what-to-carry-forward" id="toc-what-to-carry-forward">What to carry forward</a></li>
+</ul>
+    </nav>
+    <p class="key" aria-hidden="true"><span><i></i>ahead</span><span class="k-here"><i></i>here</span><span class="k-read"><i></i>read</span></p>
+  </aside>
+
+  <main id="sheet" class="sheet">
+<section id="set-up" class="level2">
+<h2>Set up</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ape)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(brms)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> d<span class="sc">$</span>elevation <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">mc.cores =</span> <span class="dv">4</span>, <span class="at">brms.backend =</span> <span class="st">&quot;cmdstanr&quot;</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;fits&quot;</span>, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+</section>
+<section id="the-idea" class="level2">
+<h2>The idea</h2>
+<p>Plate 2 said: languages are alike to the degree that they share ancestry. This plate says: languages are alike to the degree that they are close on the ground, whoever their ancestors were.</p>
+<p>A Gaussian process (GP) turns that sentence into a model. It adds to the regression an unknown surface <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> over the map,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">logit</mtext><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">Pr</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mtext mathvariant="normal">ejectives</mtext><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>α</mi><mo>+</mo><mi>β</mi><mspace width="0.167em"></mspace><msub><mtext mathvariant="normal">elevation</mtext><mi>i</mi></msub><mo>+</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><msub><mtext mathvariant="normal">location</mtext><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">\text{logit}\,\Pr(\text{ejectives}_i) = \alpha + \beta\,\text{elevation}_i + f(\text{location}_i),</annotation></semantics></math></p>
+<p>and assumes only that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> is smooth: its values at two places are correlated, and the correlation fades with the distance between them. Two numbers govern it. The <strong>length-scale</strong> is how far you must travel before the surface is free to change. The <strong>standard deviation</strong> is how far the surface strays from zero. Both are estimated.</p>
+<p>Where the model sees a cluster of ejective languages, it can raise the surface there and explain the cluster by location. Elevation then has to earn its slope from what the surface leaves over: differences between neighbours at different heights.</p>
+</section>
+<section id="coordinates-the-model-can-measure-with" class="level2">
+<h2>Coordinates the model can measure with</h2>
+<p>A GP needs distances, and longitude and latitude are angles. A degree of longitude is 111 km at the equator and 56 km at 60° north. So first project the points to a flat map on which distances are roughly right. Equal Earth is a reasonable choice for a world sample. The units are converted to thousands of kilometres to keep the numbers small.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(d, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>), <span class="at">crs =</span> <span class="dv">4326</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>xy  <span class="ot">&lt;-</span> <span class="fu">st_coordinates</span>(<span class="fu">st_transform</span>(pts, <span class="st">&quot;+proj=eqearth&quot;</span>)) <span class="sc">/</span> <span class="fl">1e6</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>x <span class="ot">&lt;-</span> xy[, <span class="dv">1</span>]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>y <span class="ot">&lt;-</span> xy[, <span class="dv">2</span>]</span></code></pre></div>
+<div class="callout assume">
+<p>A flat map cannot keep every distance true, and this one is cut at the 180th meridian, so languages on either side of the Bering Strait look far apart. For this sample almost nothing depends on that. <a href="../06-inla/">Plate 6</a> and <a href="../07-mgcv/">Plate 7</a> fit surfaces on the sphere itself.</p>
+</div>
+</section>
+<section id="fitting-it" class="level2">
+<h2>Fitting it</h2>
+<p>An exact GP over 500 points is slow, because the model must work with a 500 by 500 matrix at every step. brms offers an approximation that builds the surface from a fixed set of smooth waves, known as a Hilbert-space GP. You ask for it by giving <code>gp()</code> the argument <code>k</code>, the number of waves in each direction.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>priors <span class="ot">&lt;-</span> <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>          <span class="fu">prior</span>(<span class="fu">exponential</span>(<span class="dv">1</span>), <span class="at">class =</span> sdgp)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>m_gp <span class="ot">&lt;-</span> <span class="fu">brm</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">gp</span>(x, y, <span class="at">k =</span> <span class="dv">20</span>, <span class="at">c =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">4</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> d, <span class="at">family =</span> <span class="fu">bernoulli</span>(), <span class="at">prior =</span> priors,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">file =</span> <span class="st">&quot;fits/m_gp&quot;</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_gp)</span></code></pre></div>
+<pre class="output"><code> Family: bernoulli 
+  Links: mu = logit 
+Formula: ejectives ~ elev_km + gp(x, y, k = 20, c = 5/4) 
+   Data: d (Number of observations: 500) 
+  Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup draws = 4000
+
+Gaussian Process Hyperparameters:
+             Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sdgp(gpxy)       4.52      1.32     2.51     7.65 1.00     2095     2814
+lscale(gpxy)     0.05      0.02     0.02     0.10 1.00     2517     2528
+
+Regression Coefficients:
+          Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept    -4.55      1.21    -7.21    -2.38 1.00     2474     1826
+elev_km       1.13      0.27     0.65     1.69 1.00     5418     2822
+
+Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+<p>The pieces of the call:</p>
+<ul>
+<li><code>gp(x, y)</code> asks for one surface over both coordinates, with a single length-scale.</li>
+<li><code>k = 20</code> uses 20 waves in each direction, 400 in all. More waves can follow a wigglier surface and cost more time.</li>
+<li><code>c = 5/4</code> extends the area the waves cover a little beyond the data, which keeps the approximation accurate near the edges. It is the usual value.</li>
+<li><code>prior(exponential(1), class = sdgp)</code> is the same prior as on Plate 2, now on the standard deviation of the surface.</li>
+<li><code>adapt_delta = 0.95</code> makes the sampler take smaller steps. GPs often need it; if brms warns about divergent transitions, raise it towards 0.99.</li>
+</ul>
+<p>In the output, <code>sdgp</code> is the standard deviation of the surface and <code>lscale</code> its length-scale. brms rescales the coordinates so that the largest distance in the data is 1, so <code>lscale</code> is a fraction of that distance.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>max_dist <span class="ot">&lt;-</span> <span class="fu">max</span>(<span class="fu">dist</span>(xy)) <span class="sc">*</span> <span class="dv">1000</span>        <span class="co"># in km</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>ls <span class="ot">&lt;-</span> <span class="fu">posterior_summary</span>(m_gp, <span class="at">variable =</span> <span class="st">&quot;lscale_gpxy&quot;</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(ls[, <span class="fu">c</span>(<span class="st">&quot;Estimate&quot;</span>, <span class="st">&quot;Q2.5&quot;</span>, <span class="st">&quot;Q97.5&quot;</span>)] <span class="sc">*</span> max_dist)</span></code></pre></div>
+<pre class="output"><code>Estimate     Q2.5    Q97.5 
+    1602      732     3010 </code></pre>
+<p>The surface changes over distances of that order, in kilometres: regions, not continents.</p>
+</section>
+<section id="was-k-large-enough" class="level2">
+<h2>Was <code>k</code> large enough?</h2>
+<p><code>k</code> is a setting, not a result, and too small a <code>k</code> silently flattens the surface. The shorter the length-scale, the more waves are needed to draw it. A quick rule: the estimated <code>lscale</code> should stay above <code>c / k</code>. Here <code>c / k</code> is 0.062 and the estimate is 0.05, a little under. That is a warning, not a verdict.</p>
+<p>The direct check is to fit again with other values of <code>k</code> and see whether anything you care about moves. Fit a coarser surface with 12 waves a side and a finer one with 28. The finer one has 784 waves and takes about five minutes; skip it if you are following along for the first time.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>m_gp12 <span class="ot">&lt;-</span> <span class="fu">brm</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">gp</span>(x, y, <span class="at">k =</span> <span class="dv">12</span>, <span class="at">c =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">4</span>),</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> d, <span class="at">family =</span> <span class="fu">bernoulli</span>(), <span class="at">prior =</span> priors,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">file =</span> <span class="st">&quot;fits/m_gp12&quot;</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>m_gp28 <span class="ot">&lt;-</span> <span class="fu">brm</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">gp</span>(x, y, <span class="at">k =</span> <span class="dv">28</span>, <span class="at">c =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">4</span>),</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> d, <span class="at">family =</span> <span class="fu">bernoulli</span>(), <span class="at">prior =</span> priors,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">file =</span> <span class="st">&quot;fits/m_gp28&quot;</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>check <span class="ot">&lt;-</span> <span class="cf">function</span>(m) {</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="fu">fixef</span>(m)[<span class="st">&quot;elev_km&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;Estimate&quot;</span>, <span class="st">&quot;Est.Error&quot;</span>)],</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">lscale =</span> <span class="fu">posterior_summary</span>(m, <span class="at">variable =</span> <span class="st">&quot;lscale_gpxy&quot;</span>)[, <span class="st">&quot;Estimate&quot;</span>])</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">rbind</span>(<span class="st">&quot;k = 12&quot;</span> <span class="ot">=</span> <span class="fu">check</span>(m_gp12),</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;k = 20&quot;</span> <span class="ot">=</span> <span class="fu">check</span>(m_gp),</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;k = 28&quot;</span> <span class="ot">=</span> <span class="fu">check</span>(m_gp28)), <span class="dv">2</span>)</span></code></pre></div>
+<pre class="output"><code>       Estimate Est.Error lscale
+k = 12     0.90      0.22   0.08
+k = 20     1.13      0.27   0.05
+k = 28     1.21      0.31   0.04</code></pre>
+<p>Read down the columns. From 12 to 20 waves the slope moves by almost a full standard error: 12 was too few, and nothing in that fit’s own output would have told you. From 20 to 28 it moves by about a quarter of a standard error. The length-scale is still creeping down, because the ejective clusters are small and tight, and a surface that follows them closely needs a great many waves.</p>
+<p>So <code>k = 20</code> is adequate for the slope, which is what this series is after, and the rest of the plates use it. If the surface itself were your result, you would want a finer one, or one of the methods on Plates 6 and 7, which handle short ranges with less effort. Either way, the comparison is worth a line in a methods section: say which <code>k</code> you used and that the result held at a larger one.</p>
+<div class="callout pitfall">
+<p>If brms prints warnings about divergent transitions for a GP, the surface is usually being asked to do something the data do not pin down. Raise <code>adapt_delta</code> towards 0.99 first. If they persist, tighten the prior on <code>sdgp</code>.</p>
+</div>
+</section>
+<section id="what-the-surface-looks-like" class="level2">
+<h2>What the surface looks like</h2>
+<p><code>fitted()</code> with elevation set to zero returns the baseline the model assigns to each location: intercept plus surface, with altitude taken out. Plotted on the map, it is the model’s picture of where ejectives are at home.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>sea_level <span class="ot">&lt;-</span> <span class="fu">transform</span>(d, <span class="at">elev_km =</span> <span class="dv">0</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>baseline <span class="ot">&lt;-</span> <span class="fu">fitted</span>(m_gp, <span class="at">newdata =</span> sea_level)[, <span class="st">&quot;Estimate&quot;</span>]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="st">&quot;small&quot;</span>, <span class="at">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>pts<span class="sc">$</span>baseline <span class="ot">&lt;-</span> d<span class="sc">$</span>baseline</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> world, <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> pts[<span class="fu">order</span>(pts<span class="sc">$</span>baseline), ], <span class="fu">aes</span>(<span class="at">colour =</span> baseline),</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">size =</span> <span class="fl">1.6</span>) <span class="sc">+</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_viridis_c</span>(<span class="at">name =</span> <span class="st">&quot;baseline probability&quot;</span>) <span class="sc">+</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=eqearth&quot;</span>)</span></code></pre></div>
+<figure>
+<img src="figures/surface-1.png" width="814" height="451" alt="The spatial baseline at each language&#39;s location: the probability of ejectives the model expects there at sea level. The surface rises over the same regions where the map on Plate 1 showed clusters." />
+<figcaption>The spatial baseline at each language’s location: the probability of ejectives the model expects there at sea level. The surface rises over the same regions where the map on Plate 1 showed clusters.</figcaption>
+</figure>
+</section>
+<section id="did-it-work" class="level2">
+<h2>Did it work?</h2>
+<p>On Plate 1 the residuals of the naive model had a Moran’s I of 0.44. Run the same test on the residuals of this model, with the same neighbours.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>nb <span class="ot">&lt;-</span> <span class="fu">knn2nb</span>(<span class="fu">knearneigh</span>(<span class="fu">as.matrix</span>(d[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)]), <span class="at">k =</span> <span class="dv">5</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>lw <span class="ot">&lt;-</span> <span class="fu">nb2listw</span>(<span class="fu">make.sym.nb</span>(nb), <span class="at">style =</span> <span class="st">&quot;W&quot;</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>p   <span class="ot">&lt;-</span> <span class="fu">fitted</span>(m_gp)[, <span class="st">&quot;Estimate&quot;</span>]</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> (d<span class="sc">$</span>ejectives <span class="sc">-</span> p) <span class="sc">/</span> <span class="fu">sqrt</span>(p <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> p))        <span class="co"># Pearson residuals</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>after <span class="ot">&lt;-</span> <span class="fu">moran.mc</span>(res, lw, <span class="at">nsim =</span> <span class="dv">999</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>after</span></code></pre></div>
+<pre class="output"><code>
+    Monte-Carlo simulation of Moran I
+
+data:  res 
+weights: lw  
+number of simulations + 1: 1000 
+
+statistic = 0.06, observed rank = 990, p-value = 0.01
+alternative hypothesis: greater</code></pre>
+<p>Moran’s I has dropped from 0.44 to 0.06. A trace of spatial pattern is still detectable, but nearly all of it has been absorbed by the surface: what is left unexplained about one language now says very little about what is left unexplained about its neighbours.</p>
+<p>And the slope:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">fixef</span>(m_gp)[<span class="st">&quot;elev_km&quot;</span>, ], <span class="dv">2</span>)</span></code></pre></div>
+<pre class="output"><code> Estimate Est.Error      Q2.5     Q97.5 
+     1.13      0.27      0.65      1.69 </code></pre>
+<p>As on Plate 2, compare the interval with the naive one (0.55 to 1.13), not the raw estimate; the note there about slopes in models with latent effects applies here too.</p>
+</section>
+<section id="the-regression-line" class="level2">
+<h2>The regression line</h2>
+<p>Draw the model’s regression line beside the naive one. As on Plate 2, the fair comparison is the line averaged over the sample: keep each language’s own spatial effect, move all 500 languages to the same elevation, and take the share expected to have ejectives.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> d)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>x  <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">4.5</span>, <span class="at">by =</span> <span class="fl">0.1</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>pr <span class="ot">&lt;-</span> <span class="fu">predict</span>(m0, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x), <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>naive <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x, <span class="at">model =</span> <span class="st">&quot;naive glm&quot;</span>, <span class="at">p =</span> <span class="fu">plogis</span>(pr<span class="sc">$</span>fit),</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">lo =</span> <span class="fu">plogis</span>(pr<span class="sc">$</span>fit <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> pr<span class="sc">$</span>se.fit),</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>                    <span class="at">hi =</span> <span class="fu">plogis</span>(pr<span class="sc">$</span>fit <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> pr<span class="sc">$</span>se.fit))</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>b      <span class="ot">&lt;-</span> <span class="fu">as_draws_df</span>(m_gp)<span class="sc">$</span>b_elev_km</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>eta    <span class="ot">&lt;-</span> <span class="fu">posterior_linpred</span>(m_gp)        <span class="co"># draws by languages, logit scale</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>at_sea <span class="ot">&lt;-</span> eta <span class="sc">-</span> <span class="fu">outer</span>(b, d<span class="sc">$</span>elev_km)      <span class="co"># every language moved to 0 km</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>p      <span class="ot">&lt;-</span> <span class="fu">sapply</span>(x, <span class="cf">function</span>(xi) <span class="fu">rowMeans</span>(<span class="fu">plogis</span>(at_sea <span class="sc">+</span> b <span class="sc">*</span> xi)))</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>model  <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x, <span class="at">model =</span> <span class="st">&quot;spatial surface (GP)&quot;</span>,</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>                     <span class="at">p  =</span> <span class="fu">colMeans</span>(p),</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>                     <span class="at">lo =</span> <span class="fu">apply</span>(p, <span class="dv">2</span>, quantile, <span class="fl">0.025</span>),</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>                     <span class="at">hi =</span> <span class="fu">apply</span>(p, <span class="dv">2</span>, quantile, <span class="fl">0.975</span>))</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">rbind</span>(naive, model), <span class="fu">aes</span>(elev_km, p, <span class="at">colour =</span> model, <span class="at">fill =</span> model)) <span class="sc">+</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lo, <span class="at">ymax =</span> hi), <span class="at">alpha =</span> <span class="fl">0.15</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;grey40&quot;</span>, <span class="st">&quot;#2A78D6&quot;</span>),</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>                      <span class="at">aesthetics =</span> <span class="fu">c</span>(<span class="st">&quot;colour&quot;</span>, <span class="st">&quot;fill&quot;</span>), <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;elevation (km)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;probability of ejectives&quot;</span>)</span></code></pre></div>
+<figure>
+<img src="figures/lines-1.png" width="814" height="418" alt="The naive regression line (grey) and the line from the spatial model averaged over the sample (blue), with 95% bands. The two agree in the lowlands. At altitude the spatial model&#39;s line is lower and its band is wider, because highland languages with ejectives sit in a few neighbourhoods." />
+<figcaption>The naive regression line (grey) and the line from the spatial model averaged over the sample (blue), with 95% bands. The two agree in the lowlands. At altitude the spatial model’s line is lower and its band is wider, because highland languages with ejectives sit in a few neighbourhoods.</figcaption>
+</figure>
+</section>
+<section id="variations" class="level2">
+<h2>Variations</h2>
+<p><strong>A rougher surface.</strong> The default kernel produces very smooth surfaces. Contact zones can have sharper edges than that. <code>gp(x, y, k = 20, c = 5/4, cov = "matern32")</code> uses a Matérn kernel, which allows them. It needs brms 2.23 or later.</p>
+<p><strong>A spline in place of a GP.</strong> <code>s(lat, lon, bs = "sos")</code> in the same formula fits a spline on the sphere, with no projection. It samples faster and answers the same question; <a href="../07-mgcv/">Plate 7</a> covers it in its home package.</p>
+<div class="callout yours">
+<p>For a sample from one region, project to a local coordinate system (a UTM zone, or an equal-area projection centred on your area) and the flat-map caveat mostly disappears. If several languages share one location, the GP treats them as the same place, which is what you want.</p>
+</div>
+</section>
+<section id="what-to-carry-forward" class="level2">
+<h2>What to carry forward</h2>
+<ul>
+<li>A spatial regression in brms is one extra term: <code>gp(x, y, k = , c = 5/4)</code> on projected coordinates.</li>
+<li>Check <code>k</code> against the estimated length-scale, and check the residuals with Moran’s I.</li>
+<li>The surface is a description of where the feature clusters. It does not say why: contact, shared environment and unrecorded ancestry all look the same to it.</li>
+</ul>
+<p>A GP treats space as continuous. <a href="../04-space-neighbours/">Plate 4</a> takes the other view, where space is a network and each language answers to its neighbours.</p>
+</section>
+    <nav class="adjoining" aria-label="Adjoining plates"><a class="prev" href="../02-phylogeny/"><span class="dir">Previous plate</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ttl">Phylogeny as a covariance matrix</span></a><a class="next" href="../04-space-neighbours/"><span class="dir">Next plate</span><span class="ttl">Space as a network of neighbours</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11.5M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></nav>
+  </main>
+</div>
+
+<footer class="colophon">
+  <p>Relatives and Neighbours is a companion to <em>Modeling spatial and phylogenetic autocorrelation in linguistic typology</em> by Muhammad Rehan.</p>
+  <p>Data: PHOIBLE 2.0 (CC BY-SA 3.0), Glottolog (CC BY 4.0), ETOPO1 elevation (public domain). <a href="../#data">How the sample was built</a>.</p>
+</footer>
+
+<script src="../assets/atlas.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phylogeny as a covariance matrix · Relatives and Neighbours</title>
+<meta name="description" content="Turn the tree into a matrix that says how much history each pair of languages shares, and hand that matrix to brms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Charis+SIL:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="../assets/atlas.css">
+</head>
+<body data-plate="02-phylogeny">
+<a class="skip" href="#sheet">Skip to the tutorial</a>
+
+<header class="masthead">
+  <a class="series" href="../">Relatives and Neighbours</a>
+  <nav class="plates" aria-label="All plates"><span class="lbl" aria-hidden="true">Plates</span><ol class="sheet-index"><li><a href="../01-the-problem/" data-plate="01-the-problem"><span class="n">1</span><span class="t">Seeing the problem</span></a></li><li><a href="../02-phylogeny/" aria-current="page" data-plate="02-phylogeny"><span class="n">2</span><span class="t">Phylogeny as a covariance matrix</span></a></li><li><a href="../03-space-surface/" data-plate="03-space-surface"><span class="n">3</span><span class="t">Space as a smooth surface</span></a></li><li><a href="../04-space-neighbours/" data-plate="04-space-neighbours"><span class="n">4</span><span class="t">Space as a network of neighbours</span></a></li><li><a href="../05-joint/" data-plate="05-joint"><span class="n">5</span><span class="t">Both at once</span></a></li><li><a href="../06-inla/" data-plate="06-inla"><span class="n">6</span><span class="t">The same models in INLA</span></a></li><li><a href="../07-mgcv/" data-plate="07-mgcv"><span class="n">7</span><span class="t">The same models as a GAM</span></a></li><li><a href="../08-classical/" data-plate="08-classical"><span class="n">8</span><span class="t">The classical toolkit: PGLS and SAR</span></a></li></ol></nav>
+  <div class="tools">
+    <a href="https://rehan-muh.github.io/">Muhammad Rehan</a>
+  </div>
+</header>
+
+<div class="titleblock">
+  <h1><span class="platenum" aria-hidden="true">2</span><span><span class="vh">Plate 2: </span>Phylogeny as a covariance matrix</span></h1>
+  <p class="lede">Turn the tree into a matrix that says how much history each pair of languages shares, and hand that matrix to brms.</p>
+  <dl class="marginalia">
+    <div><dt>Fitted with</dt><dd>brms</dd></div>
+    <div><dt>Model fitting</dt><dd>about 3 minutes, mostly compiling</dd></div>
+    <div><dt>Packages</dt><dd><code>ape</code> <code>brms</code> <code>ggplot2</code> <code>ggtree</code></dd></div>
+  </dl>
+  <p class="takeaway"><a href="02-phylogeny.R" download>Download the R script</a><a href="02-phylogeny.md">Markdown source</a></p>
+</div>
+
+<div class="chart">
+  <aside class="legend">
+    <h2 id="legend-h">On this plate</h2>
+    <nav aria-labelledby="legend-h">
+<ul>
+<li><a href="#set-up" id="toc-set-up">Set up</a></li>
+<li><a href="#from-a-tree-to-a-matrix" id="toc-from-a-tree-to-a-matrix">From a tree to a matrix</a></li>
+<li><a href="#first-rung-family-as-a-random-intercept" id="toc-first-rung-family-as-a-random-intercept">First rung: family as a random intercept</a></li>
+<li><a href="#the-phylogenetic-model" id="toc-the-phylogenetic-model">The phylogenetic model</a></li>
+<li><a href="#reading-the-result" id="toc-reading-the-result">Reading the result</a></li>
+<li><a href="#what-to-carry-forward" id="toc-what-to-carry-forward">What to carry forward</a></li>
+</ul>
+    </nav>
+    <p class="key" aria-hidden="true"><span><i></i>ahead</span><span class="k-here"><i></i>here</span><span class="k-read"><i></i>read</span></p>
+  </aside>
+
+  <main id="sheet" class="sheet">
+<section id="set-up" class="level2">
+<h2>Set up</h2>
+<p>Read the data as on Plate 1 and refit the naive model, so its slope is at hand for comparison.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ape)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(brms)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;glottolog_tree.nwk&quot;</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> d<span class="sc">$</span>elevation <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> d)</span></code></pre></div>
+<p>Two settings make brms pleasant to work with. The first runs the four chains in parallel and uses the <code>cmdstanr</code> backend. The second is a folder for saved fits: with <code>file =</code> in the model call, brms stores the fitted model there and reloads it on the next run, so the script never fits the same model twice.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">mc.cores =</span> <span class="dv">4</span>, <span class="at">brms.backend =</span> <span class="st">&quot;cmdstanr&quot;</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;fits&quot;</span>, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+</section>
+<section id="from-a-tree-to-a-matrix" class="level2">
+<h2>From a tree to a matrix</h2>
+<p>A regression cannot use a tree directly. What it can use is a matrix with one row and one column per language, where each cell says how similar two languages are expected to be. <code>vcv()</code> builds that matrix from the tree.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">vcv</span>(tree, <span class="at">corr =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(A)</span></code></pre></div>
+<pre class="output"><code>[1] 500 500</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>show <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Tigrinya&quot;</span>, <span class="st">&quot;Tigre&quot;</span>, <span class="st">&quot;Harari&quot;</span>, <span class="st">&quot;Eastern Oromo&quot;</span>, <span class="st">&quot;Zulu&quot;</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> d<span class="sc">$</span>glottocode[<span class="fu">match</span>(show, d<span class="sc">$</span>name)]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(A[i, i], <span class="dv">2</span>) <span class="sc">|&gt;</span> <span class="st">`</span><span class="at">dimnames&lt;-</span><span class="st">`</span>(<span class="fu">list</span>(show, show))</span></code></pre></div>
+<pre class="output"><code>              Tigrinya Tigre Harari Eastern Oromo Zulu
+Tigrinya          1.00  0.43   0.43          0.14    0
+Tigre             0.43  1.00   0.43          0.14    0
+Harari            0.43  0.43   1.00          0.14    0
+Eastern Oromo     0.14  0.14   0.14          1.00    0
+Zulu              0.00  0.00   0.00          0.00    1</code></pre>
+<p>The rule behind the numbers is Brownian motion. Imagine a trait drifting at random along the branches. Two languages share every change that happened on the path they have in common and differ by what happened after they split. Their expected correlation is the share of the tree’s height they travelled together.</p>
+<p>In this tree every level of the Glottolog classification is one step, so that share is simply the fraction of classification levels two languages have in common. Tigrinya, Tigre and Harari are all Ethiosemitic: they share every level from Afro-Asiatic down to Ethiosemitic, which comes to 0.43 of the tree’s height. Oromo is Cushitic. It shares with them the family level, Afro-Asiatic, and nothing below it: 0.14. Zulu is in another family and shares nothing.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>long <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">as.table</span>(A))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(long) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;row&quot;</span>, <span class="st">&quot;col&quot;</span>, <span class="st">&quot;r&quot;</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(long, <span class="fu">aes</span>(col, <span class="fu">factor</span>(row, <span class="at">levels =</span> <span class="fu">rev</span>(<span class="fu">rownames</span>(A))), <span class="at">fill =</span> r)) <span class="sc">+</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_raster</span>() <span class="sc">+</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">low =</span> <span class="st">&quot;white&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#1BAF7A&quot;</span>, <span class="at">name =</span> <span class="st">&quot;correlation&quot;</span>) <span class="sc">+</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>() <span class="sc">+</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_blank</span>(), <span class="at">axis.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
+<figure>
+<img src="figures/vcv-plot-1.png" width="616" height="572" alt="The phylogenetic correlation matrix for all 500 languages, in tree order. Each dark square on the diagonal is a family; shading inside a square is subgrouping. Everything outside the squares is zero." />
+<figcaption aria-hidden="true">The phylogenetic correlation matrix for all 500 languages, in tree order. Each dark square on the diagonal is a family; shading inside a square is subgrouping. Everything outside the squares is zero.</figcaption>
+</figure>
+<div class="callout assume">
+<p>Using this matrix asserts three things: the classification is right, the branch lengths mean something, and features change gradually along branches at a steady rate. For a Glottolog tree the second is a convention, not a measurement: nobody believes each level of a classification stands for the same amount of time. The matrix still does the main job, which is to encode who is nested inside what. If you have a dated phylogeny for your families, use it; nothing else on this plate changes.</p>
+</div>
+</section>
+<section id="first-rung-family-as-a-random-intercept" class="level2">
+<h2>First rung: family as a random intercept</h2>
+<p>Before using the whole matrix, fit the model most typologists reach for first: one random intercept per family.</p>
+<p>Priors first. The slope is in log-odds per kilometre, and a normal(0, 1) prior says a kilometre is unlikely to multiply the odds by more than about seven either way. The standard deviation of the family intercepts gets an exponential(1) prior, which puts 95% of its weight below 3. On the logit scale that is already a wide spread: families two standard deviations apart would differ in odds by a factor of several thousand.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>priors <span class="ot">&lt;-</span> <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>          <span class="fu">prior</span>(<span class="fu">exponential</span>(<span class="dv">1</span>), <span class="at">class =</span> sd)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>m_fam <span class="ot">&lt;-</span> <span class="fu">brm</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> family),</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> d, <span class="at">family =</span> <span class="fu">bernoulli</span>(), <span class="at">prior =</span> priors,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">file =</span> <span class="st">&quot;fits/m_fam&quot;</span>)</span></code></pre></div>
+<div class="callout runtime">
+<p>Each new brms model compiles for about a minute before it samples. Sampling itself takes a few seconds here. With <code>file =</code>, the second run of this line returns at once.</p>
+</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_fam)</span></code></pre></div>
+<pre class="output"><code> Family: bernoulli 
+  Links: mu = logit 
+Formula: ejectives ~ elev_km + (1 | family) 
+   Data: d (Number of observations: 500) 
+  Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup draws = 4000
+
+Multilevel Hyperparameters:
+~family (Number of levels: 110) 
+              Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(Intercept)     4.24      1.03     2.61     6.64 1.00     1466     2355
+
+Regression Coefficients:
+          Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept    -4.97      0.96    -7.09    -3.38 1.00     1488     1907
+elev_km       1.29      0.31     0.70     1.91 1.00     4464     3202
+
+Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+<p>Read three things. <code>Rhat</code> is 1.00 everywhere and the effective sample sizes are in the thousands, so the chains agree. <code>sd(Intercept)</code> is large: families differ a great deal in their baseline odds of having ejectives. And the slope for <code>elev_km</code> has moved, with an interval about twice as wide as the naive one.</p>
+<p>A family intercept treats every pair of languages in a family as equally close and every family as unrelated to every other. The second half is what our tree says too. The first half throws away the subgrouping: Tigrinya is no closer to Tigre than to Oromo.</p>
+</section>
+<section id="the-phylogenetic-model" class="level2">
+<h2>The phylogenetic model</h2>
+<p>The phylogenetic model gives every language its own intercept and tells brms that these intercepts are correlated according to <code>A</code>. The grouping term changes from <code>(1 | family)</code> to <code>(1 | gr(glottocode, cov = A))</code>, and the matrix travels in <code>data2</code>.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>m_phy <span class="ot">&lt;-</span> <span class="fu">brm</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> <span class="fu">gr</span>(glottocode, <span class="at">cov =</span> A)),</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> d, <span class="at">data2 =</span> <span class="fu">list</span>(<span class="at">A =</span> A),</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">family =</span> <span class="fu">bernoulli</span>(), <span class="at">prior =</span> priors,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">file =</span> <span class="st">&quot;fits/m_phy&quot;</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_phy)</span></code></pre></div>
+<pre class="output"><code> Family: bernoulli 
+  Links: mu = logit 
+Formula: ejectives ~ elev_km + (1 | gr(glottocode, cov = A)) 
+   Data: d (Number of observations: 500) 
+  Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup draws = 4000
+
+Multilevel Hyperparameters:
+~glottocode (Number of levels: 500) 
+              Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(Intercept)     3.97      1.04     2.32     6.36 1.00     1353     2070
+
+Regression Coefficients:
+          Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept    -6.06      1.30    -9.07    -4.04 1.00     1593     1773
+elev_km       1.49      0.42     0.73     2.39 1.00     2996     2703
+
+Draws were sampled using sample(hmc). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+<p>That is the whole model. In symbols, for language <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">logit</mtext><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">Pr</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mtext mathvariant="normal">ejectives</mtext><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>α</mi><mo>+</mo><mi>β</mi><mspace width="0.167em"></mspace><msub><mtext mathvariant="normal">elevation</mtext><mi>i</mi></msub><mo>+</mo><msub><mi>u</mi><mi>i</mi></msub><mo>,</mo><mspace width="2.0em"></mspace><mi>u</mi><mo>∼</mo><mi>𝒩</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><msup><mi>σ</mi><mn>2</mn></msup><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{logit}\,\Pr(\text{ejectives}_i) = \alpha + \beta\,\text{elevation}_i + u_i, \qquad u \sim \mathcal{N}(0,\ \sigma^2 A)</annotation></semantics></math></p>
+<p>The vector <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math> holds one value per language. Close relatives get similar values because <code>A</code> says so, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>, reported as <code>sd(Intercept)</code>, says how strong the inherited tendencies are.</p>
+<div class="callout yours">
+<p>The row names of <code>A</code> must be the values of the grouping column, here <code>glottocode</code>. If your tree has languages your data lacks, prune it first with <code>keep.tip(tree, d$glottocode)</code>. If you have several observations per language, keep this term and add a plain <code>(1 | language)</code> beside it for language-specific variation that the tree does not explain.</p>
+</div>
+</section>
+<section id="reading-the-result" class="level2">
+<h2>Reading the result</h2>
+<section id="the-slope" class="level3">
+<h3>The slope</h3>
+<p>Put the three slopes side by side.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>naive  <span class="ot">&lt;-</span> <span class="fu">unname</span>(<span class="fu">c</span>(<span class="fu">coef</span>(m0)[<span class="dv">2</span>], <span class="fu">sqrt</span>(<span class="fu">vcov</span>(m0)[<span class="dv">2</span>, <span class="dv">2</span>]), <span class="fu">confint.default</span>(m0)[<span class="dv">2</span>, ]))</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>slopes <span class="ot">&lt;-</span> <span class="fu">rbind</span>(<span class="st">&quot;naive glm&quot;</span>        <span class="ot">=</span> naive,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                <span class="st">&quot;family intercept&quot;</span> <span class="ot">=</span> <span class="fu">fixef</span>(m_fam)[<span class="st">&quot;elev_km&quot;</span>, ],</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>                <span class="st">&quot;phylogeny&quot;</span>        <span class="ot">=</span> <span class="fu">fixef</span>(m_phy)[<span class="st">&quot;elev_km&quot;</span>, ])</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(slopes, <span class="dv">2</span>)</span></code></pre></div>
+<pre class="output"><code>                 Estimate Est.Error Q2.5 Q97.5
+naive glm            0.84      0.15 0.55  1.13
+family intercept     1.29      0.31 0.70  1.91
+phylogeny            1.49      0.42 0.73  2.39</code></pre>
+<p>Two things changed and they should be kept apart.</p>
+<p>The uncertainty grew. The intervals are two to three times as wide as the naive one, which is the honest price of admitting that related languages are not separate witnesses.</p>
+<p>The estimate also grew, and that is not evidence that the effect is stronger. In a logistic model with random effects, the slope describes what a kilometre does <em>within</em> a lineage, holding its inherited tendency fixed. The naive slope averages over lineages. The first is always the larger number when lineages differ a lot. A standard approximation converts one to the other: divide by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mrow><mn>1</mn><mo>+</mo><mn>0.346</mn><mspace width="0.167em"></mspace><msup><mi>σ</mi><mn>2</mn></msup></mrow></msqrt><annotation encoding="application/x-tex">\sqrt{1 + 0.346\,\sigma^2}</annotation></semantics></math>.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>draws <span class="ot">&lt;-</span> <span class="fu">as_draws_df</span>(m_phy)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>averaged <span class="ot">&lt;-</span> draws<span class="sc">$</span>b_elev_km <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">1</span> <span class="sc">+</span> <span class="fl">0.346</span> <span class="sc">*</span> draws<span class="sc">$</span>sd_glottocode__Intercept<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(averaged, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.5</span>, <span class="fl">0.975</span>)), <span class="dv">2</span>)</span></code></pre></div>
+<pre class="output"><code> 2.5%   50% 97.5% 
+ 0.29  0.59  0.91 </code></pre>
+<p>On the scale the naive model works in, the phylogenetic estimate is smaller than 0.84 and its interval is wider. The association survives, with less certainty than the first regression claimed.</p>
+</section>
+<section id="the-regression-line" class="level3">
+<h3>The regression line</h3>
+<p>Numbers in a table hide how different these models are. Draw the lines.</p>
+<p>A model with lineage effects has two regression lines, and they answer different questions. One is the line for <strong>a typical lineage</strong>, whose inherited tendency is zero: what elevation does within a lineage. The other is the line <strong>averaged over the sample</strong>: keep every language’s own lineage effect, move all 500 languages to the same elevation, and ask what share of them would have ejectives. Only the second is comparable with the naive line.</p>
+<p>Both come from the posterior draws. <code>posterior_linpred()</code> returns the linear predictor of every language, lineage effect included, once per draw. Subtracting each language’s own elevation term moves it to sea level; adding the slope times a new elevation moves the whole sample there.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">4.5</span>, <span class="at">by =</span> <span class="fl">0.1</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>pr <span class="ot">&lt;-</span> <span class="fu">predict</span>(m0, <span class="at">newdata =</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x), <span class="at">se.fit =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>naive <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x, <span class="at">model =</span> <span class="st">&quot;naive glm&quot;</span>, <span class="at">p =</span> <span class="fu">plogis</span>(pr<span class="sc">$</span>fit),</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">lo =</span> <span class="fu">plogis</span>(pr<span class="sc">$</span>fit <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> pr<span class="sc">$</span>se.fit),</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">hi =</span> <span class="fu">plogis</span>(pr<span class="sc">$</span>fit <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> pr<span class="sc">$</span>se.fit))</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>band <span class="ot">&lt;-</span> <span class="cf">function</span>(p, label) {</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x, <span class="at">model =</span> label, <span class="at">p =</span> <span class="fu">colMeans</span>(p),</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>             <span class="at">lo =</span> <span class="fu">apply</span>(p, <span class="dv">2</span>, quantile, <span class="fl">0.025</span>),</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>             <span class="at">hi =</span> <span class="fu">apply</span>(p, <span class="dv">2</span>, quantile, <span class="fl">0.975</span>))</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>b      <span class="ot">&lt;-</span> draws<span class="sc">$</span>b_elev_km</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>eta    <span class="ot">&lt;-</span> <span class="fu">posterior_linpred</span>(m_phy)       <span class="co"># draws by languages, logit scale</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>at_sea <span class="ot">&lt;-</span> eta <span class="sc">-</span> <span class="fu">outer</span>(b, d<span class="sc">$</span>elev_km)      <span class="co"># every language moved to 0 km</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>typical  <span class="ot">&lt;-</span> <span class="fu">plogis</span>(draws<span class="sc">$</span>b_Intercept <span class="sc">+</span> <span class="fu">outer</span>(b, x))</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>averaged <span class="ot">&lt;-</span> <span class="fu">sapply</span>(x, <span class="cf">function</span>(xi) <span class="fu">rowMeans</span>(<span class="fu">plogis</span>(at_sea <span class="sc">+</span> b <span class="sc">*</span> xi)))</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>lines <span class="ot">&lt;-</span> <span class="fu">rbind</span>(naive,</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>               <span class="fu">band</span>(averaged, <span class="st">&quot;phylogeny, averaged over the sample&quot;</span>),</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>               <span class="fu">band</span>(typical, <span class="st">&quot;phylogeny, typical lineage&quot;</span>))</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(lines, <span class="fu">aes</span>(elev_km, p, <span class="at">colour =</span> model, <span class="at">fill =</span> model, <span class="at">linetype =</span> model)) <span class="sc">+</span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lo, <span class="at">ymax =</span> hi), <span class="at">alpha =</span> <span class="fl">0.13</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;grey40&quot;</span>, <span class="st">&quot;#1BAF7A&quot;</span>, <span class="st">&quot;#1BAF7A&quot;</span>),</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>                      <span class="at">aesthetics =</span> <span class="fu">c</span>(<span class="st">&quot;colour&quot;</span>, <span class="st">&quot;fill&quot;</span>), <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;solid&quot;</span>, <span class="st">&quot;solid&quot;</span>, <span class="st">&quot;22&quot;</span>), <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;elevation (km)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;probability of ejectives&quot;</span>)</span></code></pre></div>
+<figure>
+<img src="figures/lines-1.png" width="814" height="440" alt="Three regression lines with 95% bands: the naive fit (grey), the phylogenetic model averaged over the sample (solid green), and the phylogenetic model for a typical lineage (dashed green)." />
+<figcaption aria-hidden="true">Three regression lines with 95% bands: the naive fit (grey), the phylogenetic model averaged over the sample (solid green), and the phylogenetic model for a typical lineage (dashed green).</figcaption>
+</figure>
+<p>Read the solid green line against the grey one. In the lowlands, where most of the languages are, the two agree. Above two kilometres they part: the phylogenetic line climbs more slowly and its band fans out. Highland languages with ejectives come from a small number of lineages, so there is much less independent evidence up there than the naive model believed.</p>
+<p>The dashed line is the same model seen from inside one lineage. A typical lineage has almost no chance of ejectives at sea level, and the climb with altitude is steep. This is the slope the model reports, and the reason it is larger than the naive one.</p>
+</section>
+<section id="phylogenetic-signal" class="level3">
+<h3>Phylogenetic signal</h3>
+<p>How much of the variation in ejectives follows the tree? On the logit scale each language carries a fixed residual variance of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>π</mi><mn>2</mn></msup><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">\pi^2/3</annotation></semantics></math>, so the share attributable to phylogeny is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mi>/</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>+</mo><msup><mi>π</mi><mn>2</mn></msup><mi>/</mi><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sigma^2 / (\sigma^2 + \pi^2/3)</annotation></semantics></math>. This is the model-based counterpart of Pagel’s λ from Plate 1, and it agrees with it: most of the variation in who has ejectives runs along the tree.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>signal <span class="ot">&lt;-</span> draws<span class="sc">$</span>sd_glottocode__Intercept<span class="sc">^</span><span class="dv">2</span> <span class="sc">/</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>          (draws<span class="sc">$</span>sd_glottocode__Intercept<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> pi<span class="sc">^</span><span class="dv">2</span> <span class="sc">/</span> <span class="dv">3</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(signal, <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.5</span>, <span class="fl">0.975</span>)), <span class="dv">2</span>)</span></code></pre></div>
+<pre class="output"><code> 2.5%   50% 97.5% 
+ 0.62  0.82  0.92 </code></pre>
+</section>
+<section id="where-the-model-put-the-lineage-effects" class="level3">
+<h3>Where the model put the lineage effects</h3>
+<p><code>ranef()</code> returns the estimated <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>i</mi></msub><annotation encoding="application/x-tex">u_i</annotation></semantics></math> for every language. Painted onto the tree, they show which lineages the model treats as inclined towards ejectives regardless of altitude.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggtree)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="fu">ranef</span>(m_phy)<span class="sc">$</span>glottocode[, <span class="st">&quot;Estimate&quot;</span>, <span class="st">&quot;Intercept&quot;</span>]</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>effects <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">glottocode =</span> <span class="fu">names</span>(u), <span class="at">effect =</span> u)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggtree</span>(tree, <span class="at">layout =</span> <span class="st">&quot;fan&quot;</span>, <span class="at">open.angle =</span> <span class="dv">8</span>,</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">linewidth =</span> <span class="fl">0.2</span>, <span class="at">colour =</span> <span class="st">&quot;grey45&quot;</span>) <span class="sc">%&lt;+%</span> effects <span class="sc">+</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tippoint</span>(<span class="fu">aes</span>(<span class="at">colour =</span> effect), <span class="at">size =</span> <span class="fl">1.3</span>) <span class="sc">+</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_gradient2</span>(<span class="at">low =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#F0EFEC&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#E34948&quot;</span>,</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&quot;lineage effect&quot;</span>)</span></code></pre></div>
+<figure>
+<img src="figures/ranef-tree-1.png" width="704" height="704" alt="Posterior mean of each language&#39;s phylogenetic effect, on the logit scale. Whole clades lean the same way, which is what a phylogenetic random effect is for." />
+<figcaption>Posterior mean of each language’s phylogenetic effect, on the logit scale. Whole clades lean the same way, which is what a phylogenetic random effect is for.</figcaption>
+</figure>
+</section>
+</section>
+<section id="what-to-carry-forward" class="level2">
+<h2>What to carry forward</h2>
+<ul>
+<li>A phylogenetic regression in brms is a random intercept with a known correlation matrix: <code>(1 | gr(glottocode, cov = A))</code> with <code>A &lt;- vcv(tree, corr = TRUE)</code>.</li>
+<li>The family intercept is the coarse version of the same idea. Here the two tell the same story; the phylogenetic model, which also has to learn from the subgroups, is the less certain of the two.</li>
+<li>Compare intervals, not raw slopes, between a model with random effects and one without.</li>
+</ul>
+<p>The same languages that share ancestors also share regions. <a href="../03-space-surface/">Plate 3</a> leaves the tree aside and models location.</p>
+</section>
+    <nav class="adjoining" aria-label="Adjoining plates"><a class="prev" href="../01-the-problem/"><span class="dir">Previous plate</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H2.5M7 3.5 2.5 8 7 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="ttl">Seeing the problem</span></a><a class="next" href="../03-space-surface/"><span class="dir">Next plate</span><span class="ttl">Space as a smooth surface</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11.5M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></nav>
+  </main>
+</div>
+
+<footer class="colophon">
+  <p>Relatives and Neighbours is a companion to <em>Modeling spatial and phylogenetic autocorrelation in linguistic typology</em> by Muhammad Rehan.</p>
+  <p>Data: PHOIBLE 2.0 (CC BY-SA 3.0), Glottolog (CC BY 4.0), ETOPO1 elevation (public domain). <a href="../#data">How the sample was built</a>.</p>
+</footer>
+
+<script src="../assets/atlas.js"></script>
+</body>
+</html>
