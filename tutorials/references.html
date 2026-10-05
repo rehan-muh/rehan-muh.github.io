@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Relatives and Neighbours</title>
+  <title>References | Relatives and Neighbours</title>
   <meta name="description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
   <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Relatives and Neighbours" />
+  <meta property="og:title" content="References | Relatives and Neighbours" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Relatives and Neighbours" />
+  <meta name="twitter:title" content="References | Relatives and Neighbours" />
   
   <meta name="twitter:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="simulation.html"/>
 
-<link rel="next" href="the-problem.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -314,209 +314,157 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Relatives and Neighbours</h1>
-<h2 class="subtitle"><em>Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only</em></h2>
-<p class="author"><em>Muhammad Rehan</em></p>
-</div>
-<div id="welcome" class="section level1 unnumbered hasAnchor">
-<h1>Welcome<a href="index.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>These are follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package: no custom Stan programs and no long data wrangling. Open R beside this page and type along.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:index-welcome-map"></span>
-<span id="fig:index-welcome-map" style="display:block;"></span>
-<img src="figures/index/welcome-map-1.png" alt="The 500 languages used throughout. Filled symbols have ejective consonants; triangles sit at 1,500 m or above. Inventories from PHOIBLE 2.0, locations from Glottolog." width="710" />
-<p class="caption">
-Figure 0.1: The 500 languages used throughout. Filled symbols have ejective consonants; triangles sit at 1,500 m or above. Inventories from PHOIBLE 2.0, locations from Glottolog.
-</p>
-</div>
-<p>The map is the whole problem in one picture. Languages with ejectives are not scattered at random: they sit together in the Caucasus, the Ethiopian highlands, southern Africa, the North American Cordillera and the Andes. Neighbours share features through contact and relatives share them through inheritance, so 500 languages carry far less than 500 languages’ worth of independent evidence. A regression that ignores this is too sure of itself. The difficulty is Galton’s problem, as old as cross-cultural statistics <span class="citation">(<a href="#ref-naroll1961">Naroll 1961</a>)</span>, and it has produced a long list of spurious correlations in linguistics <span class="citation">(<a href="#ref-roberts2013">Roberts and Winters 2013</a>; <a href="#ref-ladd2015">Ladd et al. 2015</a>)</span>.</p>
-<p>Each chapter fixes that in one way, with one tool. They share a single running example, so the same slope can be followed from the first model to the last. Read them in order the first time; after that each one stands alone.</p>
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Chapter</th>
-<th align="left">What it does</th>
-<th align="left">Fitted with</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><a href="the-problem.html#the-problem">1</a> Seeing the problem</td>
-<td align="left">The naive regression, and how often it cries wolf</td>
-<td align="left">base R, spdep, phytools</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="phylogeny.html#phylogeny">2</a> Phylogeny as a covariance matrix</td>
-<td align="left">Family intercepts, then a phylogenetic random effect</td>
-<td align="left">brms</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="space-surface.html#space-surface">3</a> Space as a smooth surface</td>
-<td align="left">An approximate Gaussian process over the map</td>
-<td align="left">brms</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="space-neighbours.html#space-neighbours">4</a> Space as a network of neighbours</td>
-<td align="left">ICAR and BYM2 on a neighbour graph</td>
-<td align="left">spdep, brms</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="joint.html#joint">5</a> Both at once</td>
-<td align="left">Ancestry and geography in one model; every slope compared</td>
-<td align="left">brms</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="inla.html#inla">6</a> The same models in INLA</td>
-<td align="left">Seconds instead of minutes, and a surface on the sphere</td>
-<td align="left">INLA</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="mgcv.html#mgcv">7</a> The same models as a GAM</td>
-<td align="left">Everything as a penalised smooth</td>
-<td align="left">mgcv</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="classical.html#classical">8</a> The classical toolkit</td>
-<td align="left">PGLS, phylogenetic logistic regression, SAR</td>
-<td align="left">phylolm, spatialreg</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="sampling.html#sampling">9</a> Sampling instead of modelling</td>
-<td align="left">One language per family, and what it costs</td>
-<td align="left">base R</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="simulation.html#simulation">10</a> Does it recover the truth?</td>
-<td align="left">Every method on simulated data with a known slope</td>
-<td align="left">nlme, phylolm, mgcv</td>
-</tr>
-</tbody>
-</table>
-<div id="before-you-start" class="section level2 unnumbered hasAnchor">
-<h2>Before you start<a href="index.html#before-you-start" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You need R 4.3 or later. Install the packages once. The first block covers Chapters <a href="the-problem.html#the-problem">1</a> and <a href="mgcv.html#mgcv">7</a> to <a href="simulation.html#simulation">10</a>; the others add the tree figures and the two Bayesian engines.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;ape&quot;</span>, <span class="st">&quot;phytools&quot;</span>, <span class="st">&quot;phylolm&quot;</span>, <span class="st">&quot;nlme&quot;</span>, <span class="st">&quot;sf&quot;</span>, <span class="st">&quot;spdep&quot;</span>,</span>
-<span id="cb1-2"><a href="index.html#cb1-2" tabindex="-1"></a>                   <span class="st">&quot;spatialreg&quot;</span>, <span class="st">&quot;rnaturalearth&quot;</span>, <span class="st">&quot;rnaturalearthdata&quot;</span>,</span>
-<span id="cb1-3"><a href="index.html#cb1-3" tabindex="-1"></a>                   <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;mgcv&quot;</span>))</span>
-<span id="cb1-4"><a href="index.html#cb1-4" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="index.html#cb1-5" tabindex="-1"></a><span class="co"># the tree figures in Chapters 1 and 2 use ggtree, from Bioconductor</span></span>
-<span id="cb1-6"><a href="index.html#cb1-6" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
-<span id="cb1-7"><a href="index.html#cb1-7" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;ggtree&quot;</span>)</span>
-<span id="cb1-8"><a href="index.html#cb1-8" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="index.html#cb1-9" tabindex="-1"></a><span class="co"># brms (Chapters 2 to 5) compiles its models with Stan, through cmdstanr</span></span>
-<span id="cb1-10"><a href="index.html#cb1-10" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;brms&quot;</span>)</span>
-<span id="cb1-11"><a href="index.html#cb1-11" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;cmdstanr&quot;</span>,</span>
-<span id="cb1-12"><a href="index.html#cb1-12" tabindex="-1"></a>                 <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">&quot;https://stan-dev.r-universe.dev&quot;</span>, <span class="fu">getOption</span>(<span class="st">&quot;repos&quot;</span>)))</span>
-<span id="cb1-13"><a href="index.html#cb1-13" tabindex="-1"></a>cmdstanr<span class="sc">::</span><span class="fu">install_cmdstan</span>()</span>
-<span id="cb1-14"><a href="index.html#cb1-14" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="index.html#cb1-15" tabindex="-1"></a><span class="co"># INLA (Chapter 6) lives in its own repository</span></span>
-<span id="cb1-16"><a href="index.html#cb1-16" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;INLA&quot;</span>, <span class="at">dependencies =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb1-17"><a href="index.html#cb1-17" tabindex="-1"></a>                 <span class="at">repos =</span> <span class="fu">c</span>(<span class="fu">getOption</span>(<span class="st">&quot;repos&quot;</span>),</span>
-<span id="cb1-18"><a href="index.html#cb1-18" tabindex="-1"></a>                           <span class="at">INLA =</span> <span class="st">&quot;https://inla.r-inla-download.org/R/stable&quot;</span>))</span></code></pre></div>
-<p>On Windows, <code>cmdstanr</code> needs <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>; <code>cmdstanr::check_cmdstan_toolchain()</code> tells you whether yours is ready.</p>
-<p>Every chapter starts by reading the same two files, straight from this site:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" tabindex="-1"></a><span class="fu">library</span>(ape)</span>
-<span id="cb2-2"><a href="index.html#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="index.html#cb2-3" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
-<span id="cb2-4"><a href="index.html#cb2-4" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
-<span id="cb2-5"><a href="index.html#cb2-5" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;glottolog_tree.nwk&quot;</span>))</span></code></pre></div>
-<p>Each chapter has a link at the top to download its code as one R script. The figures use a small ggplot2 theme; your plots will show the same thing in ggplot’s default look. If you want them to match, <a href="scripts/atlas_theme.R">download <code>atlas_theme.R</code></a> and <code>source()</code> it.</p>
-</div>
-<div id="the-running-example" class="section level2 unnumbered hasAnchor">
-<h2>The running example<a href="index.html#the-running-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In 2013 Caleb Everett reported that languages spoken at high altitude are more likely to have ejective consonants <span class="citation">(<a href="#ref-everett2013">Everett 2013</a>)</span>, sounds such as [kʼ] and [tʼ] made by compressing air above a closed glottis. The proposed reason is articulatory: thinner air makes the compression cheaper. The claim is a good teaching case because the raw association is strong, the mechanism is plausible, and the data are exactly the kind where relatives and neighbours can manufacture a correlation by themselves.</p>
-<p>The sample is 500 languages drawn at random from the 2,026 in PHOIBLE 2.0 <span class="citation">(<a href="#ref-moran2019">Moran and McCloy 2019</a>)</span> that Glottolog <span class="citation">(<a href="#ref-glottolog">Hammarström et al., n.d.</a>)</span> locates on the map. For each language the file has:</p>
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Column</th>
-<th align="left">Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><code>glottocode</code>, <code>name</code></td>
-<td align="left">Glottolog identifier and name</td>
-</tr>
-<tr class="even">
-<td align="left"><code>family</code>, <code>macroarea</code></td>
-<td align="left">Top-level Glottolog family and macroarea</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>lat</code>, <code>lon</code></td>
-<td align="left">Glottolog’s point location</td>
-</tr>
-<tr class="even">
-<td align="left"><code>elevation</code></td>
-<td align="left">Metres above sea level at that point, from ETOPO1</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>ejectives</code></td>
-<td align="left">1 if the PHOIBLE inventory has at least one ejective consonant</td>
-</tr>
-<tr class="even">
-<td align="left"><code>n_consonants</code>, <code>n_vowels</code></td>
-<td align="left">Sizes of the consonant and vowel inventories</td>
-</tr>
-<tr class="odd">
-<td align="left"><code>tone</code></td>
-<td align="left">1 if the inventory lists tones</td>
-</tr>
-</tbody>
-</table>
-<p>The tree is Glottolog’s classification turned into a phylogeny. Each family is a clade shaped by Glottolog’s subgroups. Every level of the classification counts as one step, the family itself included, and all languages end at the same height, so two languages share as much of the tree as they share levels of classification. Families join only at the root: Glottolog makes no claim about relationships between families, so languages in different families share no history in this tree.</p>
-<p>Three limits are worth knowing before you read any estimate off these pages. A language is one point, though its speakers occupy an area. The elevation is the height at that point on a grid of about two kilometres <span class="citation">(<a href="#ref-amante2009">Amante and Eakins 2009</a>)</span>. And a classification with conventional branch lengths is a rough stand-in for a dated phylogeny. The tutorials teach the models; they are not a verdict on Everett’s hypothesis. For a fuller reanalysis with genealogical and areal controls, see <span class="citation">Urban and Moran (<a href="#ref-urban2021">2021</a>)</span>.</p>
-<p>The script that builds both files from the sources is <a href="data/make_data.R"><code>make_data.R</code></a>. The files themselves are <a href="data/languages.csv"><code>languages.csv</code></a> and <a href="data/glottolog_tree.nwk"><code>glottolog_tree.nwk</code></a>.</p>
-</div>
-<div id="sources" class="section level2 unnumbered hasAnchor">
-<h2>Sources<a href="index.html#sources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>Moran, Steven and Daniel McCloy (eds.) 2019. <em>PHOIBLE 2.0</em>. Jena: Max Planck Institute for the Science of Human History. CC BY-SA 3.0.</li>
-<li>Hammarström, Harald, Robert Forkel, Martin Haspelmath and Sebastian Bank. <em>Glottolog</em>. Leipzig: Max Planck Institute for Evolutionary Anthropology. CC BY 4.0.</li>
-<li>Amante, Christopher and Barry Eakins 2009. <em>ETOPO1 1 arc-minute global relief model</em>. NOAA. Public domain.</li>
-<li>Everett, Caleb 2013. Evidence for direct geographic influences on linguistic sounds: the case of ejectives. <em>PLoS ONE</em> 8(6): e65275.</li>
-</ul>
-<p>These tutorials are a companion to <em>Modeling spatial and phylogenetic autocorrelation in linguistic typology</em> by Muhammad Rehan.</p>
+<div id="references" class="section level1 unnumbered hasAnchor">
+<h1>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 
-</div>
-</div>
-
-
-
-<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-amante2009" class="csl-entry">
+<div class="csl-entry">
 Amante, Christopher, and Barry W. Eakins. 2009. <em><span>ETOPO1</span> 1 Arc-Minute Global Relief Model: Procedures, Data Sources and Analysis</em>. NOAA Technical Memorandum NESDIS NGDC-24. National Geophysical Data Center, NOAA.
 </div>
-<div id="ref-everett2013" class="csl-entry">
+<div class="csl-entry">
+Anselin, Luc. 1988. <em>Spatial Econometrics: Methods and Models</em>. Kluwer.
+</div>
+<div class="csl-entry">
+Besag, Julian. 1974. <span>“Spatial Interaction and the Statistical Analysis of Lattice Systems.”</span> <em>Journal of the Royal Statistical Society: Series B</em> 36 (2): 192–236.
+</div>
+<div class="csl-entry">
+Besag, Julian, Jeremy York, and Annie Mollié. 1991. <span>“Bayesian Image Restoration, with Two Applications in Spatial Statistics.”</span> <em>Annals of the Institute of Statistical Mathematics</em> 43 (1): 1–20.
+</div>
+<div class="csl-entry">
+Bickel, Balthasar. 2008. <span>“A Refined Sampling Procedure for Genealogical Control.”</span> <em>Sprachtypologie Und Universalienforschung</em> 61 (3): 221–33.
+</div>
+<div class="csl-entry">
+Bivand, Roger S., Edzer Pebesma, and Virgilio Gómez-Rubio. 2013. <em>Applied Spatial Data Analysis with <span>R</span></em>. 2nd ed. Springer.
+</div>
+<div class="csl-entry">
+Bürkner, Paul-Christian. 2017. <span>“Brms: An <span>R</span> Package for <span>B</span>ayesian Multilevel Models Using <span>S</span>tan.”</span> <em>Journal of Statistical Software</em> 80 (1): 1–28.
+</div>
+<div class="csl-entry">
+Dinnage, Russell, Alexander Skeels, and Marcel Cardillo. 2020. <span>“Spatiophylogenetic Modelling of Extinction Risk Reveals Evolutionary Distinctiveness and Brief Flowering Period as Threats in a Hotspot Plant Genus.”</span> <em>Proceedings of the Royal Society B</em> 287 (1926): 20192817. <a href="https://doi.org/10.1098/rspb.2019.2817">https://doi.org/10.1098/rspb.2019.2817</a>.
+</div>
+<div class="csl-entry">
+Dryer, Matthew S. 1989. <span>“Large Linguistic Areas and Language Sampling.”</span> <em>Studies in Language</em> 13 (2): 257–92.
+</div>
+<div class="csl-entry">
 Everett, Caleb. 2013. <span>“Evidence for Direct Geographic Influences on Linguistic Sounds: The Case of Ejectives.”</span> <em>PLoS ONE</em> 8 (6): e65275. <a href="https://doi.org/10.1371/journal.pone.0065275">https://doi.org/10.1371/journal.pone.0065275</a>.
 </div>
-<div id="ref-glottolog" class="csl-entry">
+<div class="csl-entry">
+Felsenstein, Joseph. 1985. <span>“Phylogenies and the Comparative Method.”</span> <em>The American Naturalist</em> 125 (1): 1–15.
+</div>
+<div class="csl-entry">
+Freckleton, Robert P., Paul H. Harvey, and Mark Pagel. 2002. <span>“Phylogenetic Analysis and Comparative Data: A Test and Review of Evidence.”</span> <em>The American Naturalist</em> 160 (6): 712–26.
+</div>
+<div class="csl-entry">
+Grafen, Alan. 1989. <span>“The Phylogenetic Regression.”</span> <em>Philosophical Transactions of the Royal Society of London B</em> 326 (1233): 119–57.
+</div>
+<div class="csl-entry">
+Guzmán Naranjo, Matías, and Laura Becker. 2022. <span>“Statistical Bias Control in Typology.”</span> <em>Linguistic Typology</em> 26 (3): 605–70. <a href="https://doi.org/10.1515/lingty-2021-0002">https://doi.org/10.1515/lingty-2021-0002</a>.
+</div>
+<div class="csl-entry">
+Hadfield, Jarrod D., and Shinichi Nakagawa. 2010. <span>“General Quantitative Genetic Methods for Comparative Biology: Phylogenies, Taxonomies and Multi-Trait Models for Continuous and Categorical Characters.”</span> <em>Journal of Evolutionary Biology</em> 23 (3): 494–508.
+</div>
+<div class="csl-entry">
 Hammarström, Harald, Robert Forkel, Martin Haspelmath, and Sebastian Bank. n.d. <em>Glottolog</em>. Leipzig: Max Planck Institute for Evolutionary Anthropology. <a href="https://glottolog.org">https://glottolog.org</a>.
 </div>
-<div id="ref-ladd2015" class="csl-entry">
+<div class="csl-entry">
+Ho, Lam si Tung, and Cécile Ané. 2014. <span>“A Linear-Time Algorithm for <span>G</span>aussian and Non-<span>G</span>aussian Trait Evolution Models.”</span> <em>Systematic Biology</em> 63 (3): 397–408.
+</div>
+<div class="csl-entry">
+Hodges, James S., and Brian J. Reich. 2010. <span>“Adding Spatially-Correlated Errors Can Mess up the Fixed Effect You Love.”</span> <em>The American Statistician</em> 64 (4): 325–34.
+</div>
+<div class="csl-entry">
+Ives, Anthony R., and Theodore Garland Jr. 2010. <span>“Phylogenetic Logistic Regression for Binary Dependent Variables.”</span> <em>Systematic Biology</em> 59 (1): 9–26.
+</div>
+<div class="csl-entry">
+Jaeger, T. Florian, Peter Graff, William Croft, and Daniel Pontillo. 2011. <span>“Mixed Effect Models for Genetic and Areal Dependencies in Linguistic Typology.”</span> <em>Linguistic Typology</em> 15 (2): 281–319.
+</div>
+<div class="csl-entry">
+Krainski, Elias T., Virgilio Gómez-Rubio, Haakon Bakka, et al. 2019. <em>Advanced Spatial Modeling with Stochastic Partial Differential Equations Using <span>R</span> and <span>INLA</span></em>. Chapman; Hall/CRC.
+</div>
+<div class="csl-entry">
 Ladd, D. Robert, Seán G. Roberts, and Dan Dediu. 2015. <span>“Correlational Studies in Typological and Historical Linguistics.”</span> <em>Annual Review of Linguistics</em> 1: 221–41. <a href="https://doi.org/10.1146/annurev-linguist-030514-124819">https://doi.org/10.1146/annurev-linguist-030514-124819</a>.
 </div>
-<div id="ref-moran2019" class="csl-entry">
+<div class="csl-entry">
+LeSage, James, and R. Kelley Pace. 2009. <em>Introduction to Spatial Econometrics</em>. Chapman; Hall/CRC.
+</div>
+<div class="csl-entry">
+Lindgren, Finn, Håvard Rue, and Johan Lindström. 2011. <span>“An Explicit Link Between <span>G</span>aussian Fields and <span>G</span>aussian <span>M</span>arkov Random Fields: The Stochastic Partial Differential Equation Approach.”</span> <em>Journal of the Royal Statistical Society: Series B</em> 73 (4): 423–98.
+</div>
+<div class="csl-entry">
+Lynch, Michael. 1991. <span>“Methods for the Analysis of Comparative Data in Evolutionary Biology.”</span> <em>Evolution</em> 45 (5): 1065–80.
+</div>
+<div class="csl-entry">
+Moran, P. A. P. 1950. <span>“Notes on Continuous Stochastic Phenomena.”</span> <em>Biometrika</em> 37 (1/2): 17–23.
+</div>
+<div class="csl-entry">
 Moran, Steven, and Daniel McCloy, eds. 2019. <em><span>PHOIBLE</span> 2.0</em>. Max Planck Institute for the Science of Human History. <a href="https://phoible.org">https://phoible.org</a>.
 </div>
-<div id="ref-naroll1961" class="csl-entry">
+<div class="csl-entry">
+Morris, Mitzi, Katherine Wheeler-Martin, Dan Simpson, Stephen J. Mooney, Andrew Gelman, and Charles DiMaggio. 2019. <span>“Bayesian Hierarchical Spatial Models: Implementing the <span>B</span>esag <span>Y</span>ork <span>M</span>olli<span>é</span> Model in <span>S</span>tan.”</span> <em>Spatial and Spatio-Temporal Epidemiology</em> 31: 100301.
+</div>
+<div class="csl-entry">
+Morris, Tim P., Ian R. White, and Michael J. Crowther. 2019. <span>“Using Simulation Studies to Evaluate Statistical Methods.”</span> <em>Statistics in Medicine</em> 38 (11): 2074–102.
+</div>
+<div class="csl-entry">
 Naroll, Raoul. 1961. <span>“Two Solutions to <span>G</span>alton’s Problem.”</span> <em>Philosophy of Science</em> 28 (1): 15–39.
 </div>
-<div id="ref-roberts2013" class="csl-entry">
+<div class="csl-entry">
+Niekerk, Janet van, Elias Krainski, Denis Rustand, and Håvard Rue. 2023. <span>“A New Avenue for <span>B</span>ayesian Inference with <span>INLA</span>.”</span> <em>Computational Statistics &amp; Data Analysis</em> 181: 107692.
+</div>
+<div class="csl-entry">
+Pagel, Mark. 1999. <span>“Inferring the Historical Patterns of Biological Evolution.”</span> <em>Nature</em> 401: 877–84.
+</div>
+<div class="csl-entry">
+Perkins, Revere D. 1989. <span>“Statistical Techniques for Determining Language Sample Size.”</span> <em>Studies in Language</em> 13 (2): 293–315.
+</div>
+<div class="csl-entry">
+Rasmussen, Carl Edward, and Christopher K. I. Williams. 2006. <em>Gaussian Processes for Machine Learning</em>. MIT Press.
+</div>
+<div class="csl-entry">
+Riebler, Andrea, Sigrunn H. Sørbye, Daniel Simpson, and Håvard Rue. 2016. <span>“An Intuitive <span>B</span>ayesian Spatial Model for Disease Mapping That Accounts for Scaling.”</span> <em>Statistical Methods in Medical Research</em> 25 (4): 1145–65.
+</div>
+<div class="csl-entry">
+Rijkhoff, Jan, and Dik Bakker. 1998. <span>“Language Sampling.”</span> <em>Linguistic Typology</em> 2 (3): 263–314.
+</div>
+<div class="csl-entry">
+Riutort-Mayol, Gabriel, Paul-Christian Bürkner, Michael R. Andersen, Arno Solin, and Aki Vehtari. 2023. <span>“Practical <span>H</span>ilbert Space Approximate <span>B</span>ayesian <span>G</span>aussian Processes for Probabilistic Programming.”</span> <em>Statistics and Computing</em> 33: 17.
+</div>
+<div class="csl-entry">
 Roberts, Seán, and James Winters. 2013. <span>“Linguistic Diversity and Traffic Accidents: Lessons from Statistical Studies of Cultural Traits.”</span> <em>PLoS ONE</em> 8 (8): e70902. <a href="https://doi.org/10.1371/journal.pone.0070902">https://doi.org/10.1371/journal.pone.0070902</a>.
 </div>
-<div id="ref-urban2021" class="csl-entry">
+<div class="csl-entry">
+Rue, Håvard, Sara Martino, and Nicolas Chopin. 2009. <span>“Approximate <span>B</span>ayesian Inference for Latent <span>G</span>aussian Models by Using Integrated Nested <span>L</span>aplace Approximations.”</span> <em>Journal of the Royal Statistical Society: Series B</em> 71 (2): 319–92.
+</div>
+<div class="csl-entry">
+Simpson, Daniel, Håvard Rue, Andrea Riebler, Thiago G. Martins, and Sigrunn H. Sørbye. 2017. <span>“Penalising Model Component Complexity: A Principled, Practical Approach to Constructing Priors.”</span> <em>Statistical Science</em> 32 (1): 1–28.
+</div>
+<div class="csl-entry">
+<span class="nocase">Skirgård, Hedvig, Hannah J. Haynie, Damián E. Blasi, et al.</span> 2023. <span>“Grambank Reveals the Importance of Genealogical Constraints on Linguistic Diversity and Highlights the Impact of Language Loss.”</span> <em>Science Advances</em> 9 (16): eadg6175. <a href="https://doi.org/10.1126/sciadv.adg6175">https://doi.org/10.1126/sciadv.adg6175</a>.
+</div>
+<div class="csl-entry">
+Solin, Arno, and Simo Särkkä. 2020. <span>“Hilbert Space Methods for Reduced-Rank <span>G</span>aussian Process Regression.”</span> <em>Statistics and Computing</em> 30: 419–46.
+</div>
+<div class="csl-entry">
 Urban, Matthias, and Steven Moran. 2021. <span>“Altitude and the Distributional Typology of Language Structure: Ejectives and Beyond.”</span> <em>PLoS ONE</em> 16 (2): e0245522. <a href="https://doi.org/10.1371/journal.pone.0245522">https://doi.org/10.1371/journal.pone.0245522</a>.
+</div>
+<div class="csl-entry">
+Vehtari, Aki, Andrew Gelman, and Jonah Gabry. 2017. <span>“Practical <span>B</span>ayesian Model Evaluation Using Leave-One-Out Cross-Validation and <span>WAIC</span>.”</span> <em>Statistics and Computing</em> 27: 1413–32.
+</div>
+<div class="csl-entry">
+Wahba, Grace. 1981. <span>“Spline Interpolation and Smoothing on the Sphere.”</span> <em>SIAM Journal on Scientific and Statistical Computing</em> 2 (1): 5–16.
+</div>
+<div class="csl-entry">
+Wood, Simon N. 2011. <span>“Fast Stable Restricted Maximum Likelihood and Marginal Likelihood Estimation of Semiparametric Generalized Linear Models.”</span> <em>Journal of the Royal Statistical Society: Series B</em> 73 (1): 3–36.
+</div>
+<div class="csl-entry">
+Wood, Simon N. 2017. <em>Generalized Additive Models: An Introduction with <span>R</span></em>. 2nd ed. Chapman; Hall/CRC.
+</div>
+<div class="csl-entry">
+Wood, Simon N., Natalya Pya, and Benjamin Säfken. 2016. <span>“Smoothing Parameter and Model Selection for General Smooth Models.”</span> <em>Journal of the American Statistical Association</em> 111 (516): 1548–63.
+</div>
+<div class="csl-entry">
+Zeger, Scott L., Kung-Yee Liang, and Paul S. Albert. 1988. <span>“Models for Longitudinal Data: A Generalized Estimating Equation Approach.”</span> <em>Biometrics</em> 44 (4): 1049–60.
+</div>
 </div>
 </div>
             </section>
@@ -524,8 +472,8 @@ Urban, Matthias, and Steven Moran. 2021. <span>“Altitude and the Distributiona
           </div>
         </div>
       </div>
+<a href="simulation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="the-problem.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
