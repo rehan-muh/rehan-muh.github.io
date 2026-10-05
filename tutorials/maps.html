@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Relatives and Neighbours</title>
+  <title>5 Maps: coordinates, distances and neighbours | Relatives and Neighbours</title>
   <meta name="description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
   <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | Relatives and Neighbours" />
+  <meta property="og:title" content="5 Maps: coordinates, distances and neighbours | Relatives and Neighbours" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Relatives and Neighbours" />
+  <meta name="twitter:title" content="5 Maps: coordinates, distances and neighbours | Relatives and Neighbours" />
   
   <meta name="twitter:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="simulation.html"/>
-
+<link rel="prev" href="phylogeny-engines.html"/>
+<link rel="next" href="space-surface.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -347,304 +347,230 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered hasAnchor">
-<h1>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="maps" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Maps: coordinates, distances and neighbours<a href="maps.html#maps" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p class="lede">
+Spatial models need one of two things from your coordinates: distances between languages, or a list of who neighbours whom. Build both, and learn what each choice assumes.
+</p>
+<p class="chapter-meta">
+<span><b>Fitted with</b> sf, spdep</span><span><b>Model fitting</b> a few seconds</span><span><b>Packages</b> <code>sf</code> <code>spdep</code> <code>rnaturalearth</code> <code>ggplot2</code></span><span><a href="scripts/05-maps.R">Download the R script</a></span>
+</p>
+<div id="set-up-3" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Set up<a href="maps.html#set-up-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="maps.html#cb95-1" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb95-2"><a href="maps.html#cb95-2" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
+<span id="cb95-3"><a href="maps.html#cb95-3" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb95-4"><a href="maps.html#cb95-4" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb95-5"><a href="maps.html#cb95-5" tabindex="-1"></a></span>
+<span id="cb95-6"><a href="maps.html#cb95-6" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
+<span id="cb95-7"><a href="maps.html#cb95-7" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
+<span id="cb95-8"><a href="maps.html#cb95-8" tabindex="-1"></a>d<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> d<span class="sc">$</span>elevation <span class="sc">/</span> <span class="dv">1000</span></span></code></pre></div>
+</div>
+<div id="languages-as-points" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Languages as points<a href="maps.html#languages-as-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The data give each language one longitude and one latitude. <code>st_as_sf()</code> turns those two columns into a spatial object, and <code>crs = 4326</code> says they are ordinary degrees on the globe.</p>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="maps.html#cb96-1" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(d, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>), <span class="at">crs =</span> <span class="dv">4326</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb96-2"><a href="maps.html#cb96-2" tabindex="-1"></a>pts[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="fu">c</span>(<span class="st">&quot;name&quot;</span>, <span class="st">&quot;family&quot;</span>, <span class="st">&quot;geometry&quot;</span>)]</span></code></pre></div>
+<pre><code>## Simple feature collection with 3 features and 2 fields
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: 36.7 ymin: 7.39 xmax: 39.3 ymax: 44
+## Geodetic CRS:  WGS 84
+##              name       family          geometry
+## 1 West Circassian Abkhaz-Adyge   POINT (39.3 44)
+## 2            Beja Afro-Asiatic POINT (36.7 17.2)
+## 3  Alaba-K&#39;abeena Afro-Asiatic POINT (38.2 7.39)</code></pre>
+<p>A point is a simplification. A language is spoken over an area, sometimes a discontinuous one, and Glottolog’s point is roughly its centre. For a world sample that is good enough. For a study of one region, speaker-area polygons are better if you can get them, and the last section of this chapter shows where they plug in.</p>
+</div>
+<div id="distances" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Distances<a href="maps.html#distances" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Distance on a globe is measured along great circles. <code>st_distance()</code> does it for <code>sf</code> points and <code>sp::spDists()</code> returns a plain matrix in kilometres, which is the more convenient form.</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="maps.html#cb98-1" tabindex="-1"></a>coords <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)])</span>
+<span id="cb98-2"><a href="maps.html#cb98-2" tabindex="-1"></a>km <span class="ot">&lt;-</span> sp<span class="sc">::</span><span class="fu">spDists</span>(coords, <span class="at">longlat =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb98-3"><a href="maps.html#cb98-3" tabindex="-1"></a><span class="fu">dimnames</span>(km) <span class="ot">&lt;-</span> <span class="fu">list</span>(d<span class="sc">$</span>name, d<span class="sc">$</span>name)</span>
+<span id="cb98-4"><a href="maps.html#cb98-4" tabindex="-1"></a></span>
+<span id="cb98-5"><a href="maps.html#cb98-5" tabindex="-1"></a>show <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Tigrinya&quot;</span>, <span class="st">&quot;Harari&quot;</span>, <span class="st">&quot;Zulu&quot;</span>, <span class="st">&quot;Central Aymara&quot;</span>)</span>
+<span id="cb98-6"><a href="maps.html#cb98-6" tabindex="-1"></a><span class="fu">round</span>(km[show, show])</span></code></pre></div>
+<pre><code>##                Tigrinya Harari Zulu Central Aymara
+## Tigrinya              0    753 4984          12318
+## Harari              753      0 4417          12500
+## Zulu               4984   4417    0           9929
+## Central Aymara    12318  12500 9929              0</code></pre>
+<p>Next, find how far each language is from its nearest neighbour in the sample.</p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="maps.html#cb100-1" tabindex="-1"></a>nearest <span class="ot">&lt;-</span> <span class="fu">apply</span>(km <span class="sc">+</span> <span class="fu">diag</span>(<span class="cn">Inf</span>, <span class="fu">nrow</span>(km)), <span class="dv">1</span>, min)</span>
+<span id="cb100-2"><a href="maps.html#cb100-2" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(nearest, <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="dv">1</span>)))</span></code></pre></div>
+<pre><code>##   0%  25%  50%  75% 100% 
+##    5   75  138  275 1508</code></pre>
+<p>The sample is very uneven: half the languages have another within about 140 km, and the most isolated is 1,500 km from anything. Every spatial model has to cope with that, and they cope in different ways.</p>
+</div>
+<div id="flat-maps-and-their-cost" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Flat maps and their cost<a href="maps.html#flat-maps-and-their-cost" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Some models (the Gaussian process of Chapter <a href="space-surface.html#space-surface">6</a>) want coordinates in which ordinary straight-line distance means something. Degrees will not do: a degree of longitude is 111 km at the equator and 56 km at 60° north. The fix is to project. Equal Earth is a reasonable projection for the whole world.</p>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="maps.html#cb102-1" tabindex="-1"></a>xy <span class="ot">&lt;-</span> <span class="fu">st_coordinates</span>(<span class="fu">st_transform</span>(pts, <span class="st">&quot;+proj=eqearth&quot;</span>)) <span class="sc">/</span> <span class="dv">1000</span>   <span class="co"># km</span></span>
+<span id="cb102-2"><a href="maps.html#cb102-2" tabindex="-1"></a>flat_km <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">dist</span>(xy))</span>
+<span id="cb102-3"><a href="maps.html#cb102-3" tabindex="-1"></a></span>
+<span id="cb102-4"><a href="maps.html#cb102-4" tabindex="-1"></a>close <span class="ot">&lt;-</span> km <span class="sc">&lt;</span> <span class="dv">3000</span> <span class="sc">&amp;</span> <span class="fu">upper.tri</span>(km)</span>
+<span id="cb102-5"><a href="maps.html#cb102-5" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(flat_km[close] <span class="sc">/</span> km[close], <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.5</span>, <span class="fl">0.95</span>)), <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##   5%  50%  95% 
+## 0.86 0.97 1.17</code></pre>
+<p>For pairs of languages within 3,000 km, the distance on the flat map is mostly within about 15% of the true one. The error comes mostly at high latitudes and across the cut at the 180th meridian, where Alaska and Chukotka end up on opposite edges.</p>
+<p>Methods that work on the sphere need no projection. They take either degrees directly or the position of each language as a point on a unit sphere:</p>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="maps.html#cb104-1" tabindex="-1"></a>to_sphere <span class="ot">&lt;-</span> <span class="cf">function</span>(lon, lat) {</span>
+<span id="cb104-2"><a href="maps.html#cb104-2" tabindex="-1"></a>  rad <span class="ot">&lt;-</span> pi <span class="sc">/</span> <span class="dv">180</span></span>
+<span id="cb104-3"><a href="maps.html#cb104-3" tabindex="-1"></a>  <span class="fu">cbind</span>(<span class="at">x =</span> <span class="fu">cos</span>(lat <span class="sc">*</span> rad) <span class="sc">*</span> <span class="fu">cos</span>(lon <span class="sc">*</span> rad),</span>
+<span id="cb104-4"><a href="maps.html#cb104-4" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">cos</span>(lat <span class="sc">*</span> rad) <span class="sc">*</span> <span class="fu">sin</span>(lon <span class="sc">*</span> rad),</span>
+<span id="cb104-5"><a href="maps.html#cb104-5" tabindex="-1"></a>        <span class="at">z =</span> <span class="fu">sin</span>(lat <span class="sc">*</span> rad))</span>
+<span id="cb104-6"><a href="maps.html#cb104-6" tabindex="-1"></a>}</span>
+<span id="cb104-7"><a href="maps.html#cb104-7" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">round</span>(<span class="fu">to_sphere</span>(d<span class="sc">$</span>lon, d<span class="sc">$</span>lat), <span class="dv">3</span>), <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##          x     y     z
+## [1,] 0.556 0.456 0.695
+## [2,] 0.766 0.570 0.296
+## [3,] 0.780 0.613 0.129</code></pre>
+</div>
+<div id="neighbours" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Neighbours<a href="maps.html#neighbours" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The other family of models (Chapter <a href="space-neighbours.html#space-neighbours">7</a>) never looks at a distance. It needs a graph that says which languages count as neighbours. For points there is no natural answer, so you choose a rule. Three common ones:</p>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="maps.html#cb106-1" tabindex="-1"></a><span class="co"># 1. the k nearest languages, made mutual</span></span>
+<span id="cb106-2"><a href="maps.html#cb106-2" tabindex="-1"></a>knn <span class="ot">&lt;-</span> <span class="fu">make.sym.nb</span>(<span class="fu">knn2nb</span>(<span class="fu">knearneigh</span>(coords, <span class="at">k =</span> <span class="dv">5</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb106-3"><a href="maps.html#cb106-3" tabindex="-1"></a></span>
+<span id="cb106-4"><a href="maps.html#cb106-4" tabindex="-1"></a><span class="co"># 2. every language within a fixed distance</span></span>
+<span id="cb106-5"><a href="maps.html#cb106-5" tabindex="-1"></a>band <span class="ot">&lt;-</span> <span class="fu">dnearneigh</span>(coords, <span class="dv">0</span>, <span class="dv">500</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb106-6"><a href="maps.html#cb106-6" tabindex="-1"></a></span>
+<span id="cb106-7"><a href="maps.html#cb106-7" tabindex="-1"></a><span class="co"># 3. natural neighbours: a triangulation of the points</span></span>
+<span id="cb106-8"><a href="maps.html#cb106-8" tabindex="-1"></a>tri <span class="ot">&lt;-</span> <span class="fu">tri2nb</span>(coords)</span>
+<span id="cb106-9"><a href="maps.html#cb106-9" tabindex="-1"></a></span>
+<span id="cb106-10"><a href="maps.html#cb106-10" tabindex="-1"></a>compare <span class="ot">&lt;-</span> <span class="cf">function</span>(nb) {</span>
+<span id="cb106-11"><a href="maps.html#cb106-11" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">links_per_language =</span> <span class="fu">round</span>(<span class="fu">mean</span>(<span class="fu">card</span>(nb)), <span class="dv">1</span>),</span>
+<span id="cb106-12"><a href="maps.html#cb106-12" tabindex="-1"></a>    <span class="at">without_neighbours =</span> <span class="fu">sum</span>(<span class="fu">card</span>(nb) <span class="sc">==</span> <span class="dv">0</span>),</span>
+<span id="cb106-13"><a href="maps.html#cb106-13" tabindex="-1"></a>    <span class="at">separate_pieces    =</span> <span class="fu">n.comp.nb</span>(nb)<span class="sc">$</span>nc)</span>
+<span id="cb106-14"><a href="maps.html#cb106-14" tabindex="-1"></a>}</span>
+<span id="cb106-15"><a href="maps.html#cb106-15" tabindex="-1"></a><span class="fu">rbind</span>(<span class="st">&quot;5 nearest&quot;</span> <span class="ot">=</span> <span class="fu">compare</span>(knn), <span class="st">&quot;within 500 km&quot;</span> <span class="ot">=</span> <span class="fu">compare</span>(band),</span>
+<span id="cb106-16"><a href="maps.html#cb106-16" tabindex="-1"></a>      <span class="st">&quot;triangulation&quot;</span> <span class="ot">=</span> <span class="fu">compare</span>(tri))</span></code></pre></div>
+<pre><code>##               links_per_language without_neighbours separate_pieces
+## 5 nearest                    6.4                  0               1
+## within 500 km                9.1                 44              85
+## triangulation                6.0                  0               1</code></pre>
+<p>Read the three columns as three things that can go wrong.</p>
+<ul>
+<li>Nearest neighbours give every language about the same number of links, whether its neighbours are 20 km away or 2,000. The graph is in one piece.</li>
+<li>A distance band is the most natural idea and the most troublesome in a world sample. Languages in dense regions get dozens of links, isolated ones get none, and the graph falls into many pieces. The models of Chapter <a href="space-neighbours.html#space-neighbours">7</a> need one piece.</li>
+<li>A triangulation always gives one piece and needs no tuning. It also draws long links across oceans, and because it works on raw degrees it treats the map as flat.</li>
+</ul>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="maps.html#cb108-1" tabindex="-1"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="st">&quot;small&quot;</span>, <span class="at">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span>
+<span id="cb108-2"><a href="maps.html#cb108-2" tabindex="-1"></a>wrap  <span class="ot">&lt;-</span> <span class="cf">function</span>(nb) <span class="fu">st_wrap_dateline</span>(<span class="fu">nb2lines</span>(nb, <span class="at">coords =</span> <span class="fu">st_geometry</span>(pts)),</span>
+<span id="cb108-3"><a href="maps.html#cb108-3" tabindex="-1"></a>                                       <span class="at">options =</span> <span class="fu">c</span>(<span class="st">&quot;WRAPDATELINE=YES&quot;</span>,</span>
+<span id="cb108-4"><a href="maps.html#cb108-4" tabindex="-1"></a>                                                   <span class="st">&quot;DATELINEOFFSET=60&quot;</span>))</span>
+<span id="cb108-5"><a href="maps.html#cb108-5" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb108-6"><a href="maps.html#cb108-6" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> world, <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb108-7"><a href="maps.html#cb108-7" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">wrap</span>(knn), <span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.25</span>) <span class="sc">+</span></span>
+<span id="cb108-8"><a href="maps.html#cb108-8" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">wrap</span>(band), <span class="at">colour =</span> <span class="st">&quot;#EB6834&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.2</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb108-9"><a href="maps.html#cb108-9" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> pts, <span class="at">size =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
+<span id="cb108-10"><a href="maps.html#cb108-10" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=eqearth&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:maps-graph-map"></span>
+<span id="fig:maps-graph-map" style="display:block;"></span>
+<img src="figures/05-maps/graph-map-1.png" alt="Two neighbour graphs on the same languages: the five nearest (blue) and everything within 500 km (orange). The distance band leaves much of the world unconnected." width="710" />
+<p class="caption">
+Figure 5.1: Two neighbour graphs on the same languages: the five nearest (blue) and everything within 500 km (orange). The distance band leaves much of the world unconnected.
+</p>
+</div>
+<blockquote>
+<p><strong>Watch out.</strong> No rule knows any linguistics. A link across the Sahara counts the same as a link between neighbouring villages, and two languages on either side of a mountain range are neighbours if they are close on the map. You can edit a graph by hand with <code>edit.nb()</code>, or build it from a table of known contact. Whatever you do, draw it, and try the analysis with a second graph.</p>
+</blockquote>
+</div>
+<div id="from-a-graph-to-weights" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> From a graph to weights<a href="maps.html#from-a-graph-to-weights" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Models use the graph as a matrix. There are two conventions and they are not interchangeable.</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="maps.html#cb109-1" tabindex="-1"></a>W_binary <span class="ot">&lt;-</span> <span class="fu">nb2mat</span>(knn, <span class="at">style =</span> <span class="st">&quot;B&quot;</span>)   <span class="co"># 1 for a neighbour, 0 otherwise</span></span>
+<span id="cb109-2"><a href="maps.html#cb109-2" tabindex="-1"></a>W_rows   <span class="ot">&lt;-</span> <span class="fu">nb2mat</span>(knn, <span class="at">style =</span> <span class="st">&quot;W&quot;</span>)   <span class="co"># each row divided by its row sum</span></span>
+<span id="cb109-3"><a href="maps.html#cb109-3" tabindex="-1"></a></span>
+<span id="cb109-4"><a href="maps.html#cb109-4" tabindex="-1"></a>W_binary[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span></code></pre></div>
+<pre><code>##   1 2 3 4
+## 1 0 0 0 0
+## 2 0 0 0 0
+## 3 0 0 0 1
+## 4 0 0 1 0</code></pre>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="maps.html#cb111-1" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">rowSums</span>(W_rows)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## 1 2 3 4 
+## 1 1 1 1</code></pre>
+<p>The binary matrix is what the conditional autoregressive models of Chapter <a href="space-neighbours.html#space-neighbours">7</a> take. The row-standardised one, usually stored as a list with <code>nb2listw()</code>, is what Moran’s I and the simultaneous autoregressive models of Chapter <a href="space-engines.html#space-engines">8</a> take. With row standardisation a language’s neighbours always sum to one, so a language with two neighbours listens to each of them more than a language with ten.</p>
+</div>
+<div id="how-far-does-similarity-reach" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> How far does similarity reach?<a href="maps.html#how-far-does-similarity-reach" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Chapter <a href="the-problem.html#the-problem">1</a> computed Moran’s I for immediate neighbours. A correlogram repeats the calculation for neighbours of neighbours, and theirs, and so on, which shows how quickly similarity fades with graph distance.</p>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="maps.html#cb113-1" tabindex="-1"></a>m0  <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> d)</span>
+<span id="cb113-2"><a href="maps.html#cb113-2" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">residuals</span>(m0, <span class="at">type =</span> <span class="st">&quot;pearson&quot;</span>)</span>
+<span id="cb113-3"><a href="maps.html#cb113-3" tabindex="-1"></a></span>
+<span id="cb113-4"><a href="maps.html#cb113-4" tabindex="-1"></a>cg <span class="ot">&lt;-</span> <span class="fu">sp.correlogram</span>(knn, res, <span class="at">order =</span> <span class="dv">6</span>, <span class="at">method =</span> <span class="st">&quot;I&quot;</span>, <span class="at">style =</span> <span class="st">&quot;W&quot;</span>)</span>
+<span id="cb113-5"><a href="maps.html#cb113-5" tabindex="-1"></a>steps <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">step =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">I =</span> cg<span class="sc">$</span>res[, <span class="dv">1</span>], <span class="at">se =</span> <span class="fu">sqrt</span>(cg<span class="sc">$</span>res[, <span class="dv">3</span>]))</span>
+<span id="cb113-6"><a href="maps.html#cb113-6" tabindex="-1"></a></span>
+<span id="cb113-7"><a href="maps.html#cb113-7" tabindex="-1"></a><span class="fu">ggplot</span>(steps, <span class="fu">aes</span>(step, I)) <span class="sc">+</span></span>
+<span id="cb113-8"><a href="maps.html#cb113-8" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">&quot;22&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;grey35&quot;</span>) <span class="sc">+</span></span>
+<span id="cb113-9"><a href="maps.html#cb113-9" tabindex="-1"></a>  <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> I <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> se, <span class="at">ymax =</span> I <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> se),</span>
+<span id="cb113-10"><a href="maps.html#cb113-10" tabindex="-1"></a>                 <span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb113-11"><a href="maps.html#cb113-11" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">size =</span> <span class="fl">2.6</span>) <span class="sc">+</span></span>
+<span id="cb113-12"><a href="maps.html#cb113-12" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) <span class="sc">+</span></span>
+<span id="cb113-13"><a href="maps.html#cb113-13" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;steps apart on the neighbour graph&quot;</span>,</span>
+<span id="cb113-14"><a href="maps.html#cb113-14" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Moran&#39;s I of the residuals&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:maps-correlogram"></span>
+<span id="fig:maps-correlogram" style="display:block;"></span>
+<img src="figures/05-maps/correlogram-1.png" alt="Moran's I of the naive model's residuals for neighbours one to six steps apart on the five-nearest-neighbour graph, with two standard errors either side. Similarity is strongest between direct neighbours and is still present several steps away." width="710" />
+<p class="caption">
+Figure 5.2: Moran’s I of the naive model’s residuals for neighbours one to six steps apart on the five-nearest-neighbour graph, with two standard errors either side. Similarity is strongest between direct neighbours and is still present several steps away.
+</p>
+</div>
+<p>A correlogram that dies out within a step or two says that a neighbour model will capture the dependence. One that stays high for many steps, as here, says the patterns are regional, and a model with a smooth surface or a long reach is the better description.</p>
+<blockquote>
+<p><strong>With your own data.</strong> If your units are areas, read the polygons with <code>st_read()</code> and call <code>poly2nb()</code> to link areas that share a border; everything from <code>nb</code> onward is the same. If your sample covers one region, project to a local system (a UTM zone, or an equal-area projection centred on your region) and the flat-map error all but disappears.</p>
+</blockquote>
+</div>
+<div id="what-to-carry-forward-4" class="section level2 hasAnchor" number="5.8">
+<h2><span class="header-section-number">5.8</span> What to carry forward<a href="maps.html#what-to-carry-forward-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Great-circle distances come from <code>sp::spDists(coords, longlat = TRUE)</code>; projected coordinates from <code>st_transform()</code>; points on the sphere from three lines of trigonometry.</li>
+<li>A neighbour graph depends on the rule you choose. Check <code>n.comp.nb()</code> for pieces and <code>card()</code> for languages left alone, and draw the graph.</li>
+<li>Binary weights go to CAR models; row-standardised weights go to Moran’s I and SAR models.</li>
+<li>A correlogram tells you how far the dependence reaches before you choose a model for it.</li>
+</ul>
+</div>
+<div id="further-reading-5" class="section level2 hasAnchor" number="5.9">
+<h2><span class="header-section-number">5.9</span> Further reading<a href="maps.html#further-reading-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>How earlier studies represented space.</strong> For most of typology’s history, space meant a small number of large areas. <span class="citation">Dryer (<a href="#ref-dryer1989">1989</a>)</span> divides the world into five (later six) continental areas and requires a pattern to hold in each; <span class="citation">Jaeger et al. (<a href="#ref-jaeger2011">2011</a>)</span> make the same idea a random intercept for area beside the one for family. The step from areas to coordinates came later. <span class="citation">Wieling et al. (<a href="#ref-wieling2011">2011</a>)</span> fit a smooth function of longitude and latitude in a GAM for Dutch dialect data. <span class="citation">Guzmán Naranjo and Becker (<a href="#ref-guzman2022">2022</a>)</span> use a Gaussian process over coordinates for world samples, and <span class="citation"><span class="nocase">Skirgård et al.</span> (<a href="#ref-skirgard2023">2023</a>)</span> build a spatial covariance matrix from great-circle distances with a Matérn kernel. <span class="citation">Ranacher et al. (<a href="#ref-ranacher2021">2021</a>)</span> go the other way and infer discrete contact areas from the data.</p>
+<ul>
+<li><span class="citation">Bivand et al. (<a href="#ref-bivand2013">2013</a>)</span> is the standard account of spatial objects, neighbours and weights in R, by the authors of <code>spdep</code>.</li>
+<li><span class="citation"><span class="nocase">Dormann et al.</span> (<a href="#ref-dormann2007">2007</a>)</span> review how to account for spatial autocorrelation in regression, with a comparison of methods that maps closely onto the chapters that follow.</li>
+<li><span class="citation">Banerjee et al. (<a href="#ref-banerjee2014">2014</a>)</span> give the statistical theory behind both views of space, as a continuous surface and as a graph of areas.</li>
+</ul>
 
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Amante, Christopher, and Barry W. Eakins. 2009. <em><span>ETOPO1</span> 1 Arc-Minute Global Relief Model: Procedures, Data Sources and Analysis</em>. NOAA Technical Memorandum NESDIS NGDC-24. National Geophysical Data Center, NOAA.
-</div>
-<div class="csl-entry">
-Anselin, Luc. 1988. <em>Spatial Econometrics: Methods and Models</em>. Kluwer.
-</div>
-<div class="csl-entry">
-Bachl, Fabian E., Finn Lindgren, David L. Borchers, and Janine B. Illian. 2019. <span>“Inlabru: An <span>R</span> Package for <span>B</span>ayesian Spatial Modelling from Ecological Survey Data.”</span> <em>Methods in Ecology and Evolution</em> 10 (6): 760–66.
-</div>
-<div class="csl-entry">
-Bakka, Haakon, Jarno Vanhatalo, Janine B. Illian, Daniel Simpson, and Håvard Rue. 2019. <span>“Non-Stationary <span>G</span>aussian Models with Physical Barriers.”</span> <em>Spatial Statistics</em> 29: 268–88.
-</div>
-<div class="csl-entry">
+<div id="ref-banerjee2014" class="csl-entry">
 Banerjee, Sudipto, Bradley P. Carlin, and Alan E. Gelfand. 2014. <em>Hierarchical Modeling and Analysis for Spatial Data</em>. 2nd ed. Chapman; Hall/CRC.
 </div>
-<div class="csl-entry">
-Besag, Julian. 1974. <span>“Spatial Interaction and the Statistical Analysis of Lattice Systems.”</span> <em>Journal of the Royal Statistical Society: Series B</em> 36 (2): 192–236.
-</div>
-<div class="csl-entry">
-Besag, Julian, and Charles Kooperberg. 1995. <span>“On Conditional and Intrinsic Autoregressions.”</span> <em>Biometrika</em> 82 (4): 733–46.
-</div>
-<div class="csl-entry">
-Besag, Julian, Jeremy York, and Annie Mollié. 1991. <span>“Bayesian Image Restoration, with Two Applications in Spatial Statistics.”</span> <em>Annals of the Institute of Statistical Mathematics</em> 43 (1): 1–20.
-</div>
-<div class="csl-entry">
-Bickel, Balthasar. 2008. <span>“A Refined Sampling Procedure for Genealogical Control.”</span> <em>Sprachtypologie Und Universalienforschung</em> 61 (3): 221–33.
-</div>
-<div class="csl-entry">
-Bickel, Balthasar. 2013. <span>“Distributional Biases in Language Families.”</span> In <em>Language Typology and Historical Contingency</em>, edited by Balthasar Bickel, Lenore A. Grenoble, David A. Peterson, and Alan Timberlake. John Benjamins.
-</div>
-<div class="csl-entry">
+<div id="ref-bivand2013" class="csl-entry">
 Bivand, Roger S., Edzer Pebesma, and Virgilio Gómez-Rubio. 2013. <em>Applied Spatial Data Analysis with <span>R</span></em>. 2nd ed. Springer.
 </div>
-<div class="csl-entry">
-Bivand, Roger, Giovanni Millo, and Gianfranco Piras. 2021. <span>“A Review of Software for Spatial Econometrics in <span>R</span>.”</span> <em>Mathematics</em> 9 (11): 1276.
-</div>
-<div class="csl-entry">
-Blomberg, Simon P., Theodore Garland Jr., and Anthony R. Ives. 2003. <span>“Testing for Phylogenetic Signal in Comparative Data: Behavioral Traits Are More Labile.”</span> <em>Evolution</em> 57 (4): 717–45.
-</div>
-<div class="csl-entry">
-Borovitskiy, Viacheslav, Alexander Terenin, Peter Mostowsky, and Marc Peter Deisenroth. 2020. <span>“Mat<span>é</span>rn <span>G</span>aussian Processes on <span>R</span>iemannian Manifolds.”</span> <em>Advances in Neural Information Processing Systems</em> 33.
-</div>
-<div class="csl-entry">
-Bromham, Lindell, Xia Hua, Marcel Cardillo, Hilde Schneemann, and Simon J. Greenhill. 2018. <span>“Parasites and Politics: Why Cross-Cultural Studies Must Control for Relatedness, Proximity and Covariation.”</span> <em>Royal Society Open Science</em> 5 (8): 181100.
-</div>
-<div class="csl-entry">
-Bürkner, Paul-Christian. 2017. <span>“Brms: An <span>R</span> Package for <span>B</span>ayesian Multilevel Models Using <span>S</span>tan.”</span> <em>Journal of Statistical Software</em> 80 (1): 1–28.
-</div>
-<div class="csl-entry">
-Bürkner, Paul-Christian, Jonah Gabry, and Aki Vehtari. 2021. <span>“Efficient Leave-One-Out Cross-Validation for <span>B</span>ayesian Non-Factorized Normal and <span>S</span>tudent-t Models.”</span> <em>Computational Statistics</em> 36: 1243–61.
-</div>
-<div class="csl-entry">
-Datta, Abhirup, Sudipto Banerjee, Andrew O. Finley, and Alan E. Gelfand. 2016. <span>“Hierarchical Nearest-Neighbor <span>G</span>aussian Process Models for Large Geostatistical Datasets.”</span> <em>Journal of the American Statistical Association</em> 111 (514): 800–812.
-</div>
-<div class="csl-entry">
-Datta, Abhirup, Sudipto Banerjee, James S. Hodges, and Leiwen Gao. 2019. <span>“Spatial Disease Mapping Using Directed Acyclic Graph Auto-Regressive (<span>DAGAR</span>) Models.”</span> <em>Bayesian Analysis</em> 14 (4): 1221–44.
-</div>
-<div class="csl-entry">
-Dinnage, Russell, Alexander Skeels, and Marcel Cardillo. 2020. <span>“Spatiophylogenetic Modelling of Extinction Risk Reveals Evolutionary Distinctiveness and Brief Flowering Period as Threats in a Hotspot Plant Genus.”</span> <em>Proceedings of the Royal Society B</em> 287 (1926): 20192817. <a href="https://doi.org/10.1098/rspb.2019.2817">https://doi.org/10.1098/rspb.2019.2817</a>.
-</div>
-<div class="csl-entry">
+<div id="ref-dormann2007" class="csl-entry">
 <span class="nocase">Dormann, Carsten F., Jana M. McPherson, Miguel B. Araújo, et al.</span> 2007. <span>“Methods to Account for Spatial Autocorrelation in the Analysis of Species Distributional Data: A Review.”</span> <em>Ecography</em> 30 (5): 609–28.
 </div>
-<div class="csl-entry">
+<div id="ref-dryer1989" class="csl-entry">
 Dryer, Matthew S. 1989. <span>“Large Linguistic Areas and Language Sampling.”</span> <em>Studies in Language</em> 13 (2): 257–92.
 </div>
-<div class="csl-entry">
-Dryer, Matthew S. 1992. <span>“The <span>G</span>reenbergian Word Order Correlations.”</span> <em>Language</em> 68 (1): 81–138.
-</div>
-<div class="csl-entry">
-Dunn, Michael, Simon J. Greenhill, Stephen C. Levinson, and Russell D. Gray. 2011. <span>“Evolved Structure of Language Shows Lineage-Specific Trends in Word-Order Universals.”</span> <em>Nature</em> 473: 79–82.
-</div>
-<div class="csl-entry">
-Dupont, Emiko, Simon N. Wood, and Nicole H. Augustin. 2022. <span>“Spatial+: A Novel Approach to Spatial Confounding.”</span> <em>Biometrics</em> 78 (4): 1279–90.
-</div>
-<div class="csl-entry">
-Everett, Caleb. 2013. <span>“Evidence for Direct Geographic Influences on Linguistic Sounds: The Case of Ejectives.”</span> <em>PLoS ONE</em> 8 (6): e65275. <a href="https://doi.org/10.1371/journal.pone.0065275">https://doi.org/10.1371/journal.pone.0065275</a>.
-</div>
-<div class="csl-entry">
-Felsenstein, Joseph. 1985. <span>“Phylogenies and the Comparative Method.”</span> <em>The American Naturalist</em> 125 (1): 1–15.
-</div>
-<div class="csl-entry">
-Felsenstein, Joseph. 2012. <span>“A Comparative Method for Both Discrete and Continuous Characters Using the Threshold Model.”</span> <em>The American Naturalist</em> 179 (2): 145–56.
-</div>
-<div class="csl-entry">
-Freckleton, Robert P., Paul H. Harvey, and Mark Pagel. 2002. <span>“Phylogenetic Analysis and Comparative Data: A Test and Review of Evidence.”</span> <em>The American Naturalist</em> 160 (6): 712–26.
-</div>
-<div class="csl-entry">
-Freni-Sterrantino, Anna, Massimo Ventrucci, and Håvard Rue. 2018. <span>“A Note on Intrinsic Conditional Autoregressive Models for Disconnected Graphs.”</span> <em>Spatial and Spatio-Temporal Epidemiology</em> 26: 25–34.
-</div>
-<div class="csl-entry">
-Fritz, Susanne A., and Andy Purvis. 2010. <span>“Selectivity in Mammalian Extinction Risk and Threat Types: A New Measure of Phylogenetic Signal Strength in Binary Traits.”</span> <em>Conservation Biology</em> 24 (4): 1042–51.
-</div>
-<div class="csl-entry">
-Fuglstad, Geir-Arne, Daniel Simpson, Finn Lindgren, and Håvard Rue. 2019. <span>“Constructing Priors That Penalize the Complexity of <span>G</span>aussian Random Fields.”</span> <em>Journal of the American Statistical Association</em> 114 (525): 445–52.
-</div>
-<div class="csl-entry">
-Gabry, Jonah, Daniel Simpson, Aki Vehtari, Michael Betancourt, and Andrew Gelman. 2019. <span>“Visualization in <span>B</span>ayesian Workflow.”</span> <em>Journal of the Royal Statistical Society: Series A</em> 182 (2): 389–402.
-</div>
-<div class="csl-entry">
-Gelman, Andrew, Aki Vehtari, Daniel Simpson, et al. 2020. <em>Bayesian Workflow</em>. arXiv:2011.01808.
-</div>
-<div class="csl-entry">
-Gómez-Rubio, Virgilio. 2020. <em>Bayesian Inference with <span>INLA</span></em>. Chapman; Hall/CRC.
-</div>
-<div class="csl-entry">
-Grafen, Alan. 1989. <span>“The Phylogenetic Regression.”</span> <em>Philosophical Transactions of the Royal Society of London B</em> 326 (1233): 119–57.
-</div>
-<div class="csl-entry">
+<div id="ref-guzman2022" class="csl-entry">
 Guzmán Naranjo, Matías, and Laura Becker. 2022. <span>“Statistical Bias Control in Typology.”</span> <em>Linguistic Typology</em> 26 (3): 605–70. <a href="https://doi.org/10.1515/lingty-2021-0002">https://doi.org/10.1515/lingty-2021-0002</a>.
 </div>
-<div class="csl-entry">
-Hadfield, Jarrod D., and Shinichi Nakagawa. 2010. <span>“General Quantitative Genetic Methods for Comparative Biology: Phylogenies, Taxonomies and Multi-Trait Models for Continuous and Categorical Characters.”</span> <em>Journal of Evolutionary Biology</em> 23 (3): 494–508.
-</div>
-<div class="csl-entry">
-Hammarström, Harald, Robert Forkel, Martin Haspelmath, and Sebastian Bank. n.d. <em>Glottolog</em>. Leipzig: Max Planck Institute for Evolutionary Anthropology. <a href="https://glottolog.org">https://glottolog.org</a>.
-</div>
-<div class="csl-entry">
-Hanks, Ephraim M., Erin M. Schliep, Mevin B. Hooten, and Jennifer A. Hoeting. 2015. <span>“Restricted Spatial Regression in Practice: Geostatistical Models, Confounding, and Robustness Under Model Misspecification.”</span> <em>Environmetrics</em> 26 (4): 243–54.
-</div>
-<div class="csl-entry">
-Hansen, Thomas F. 1997. <span>“Stabilizing Selection and the Comparative Analysis of Adaptation.”</span> <em>Evolution</em> 51 (5): 1341–51.
-</div>
-<div class="csl-entry">
-<span class="nocase">Heaton, Matthew J., Abhirup Datta, Andrew O. Finley, et al.</span> 2019. <span>“A Case Study Competition Among Methods for Analyzing Large Spatial Data.”</span> <em>Journal of Agricultural, Biological and Environmental Statistics</em> 24 (3): 398–425.
-</div>
-<div class="csl-entry">
-Ho, Lam si Tung, and Cécile Ané. 2014. <span>“A Linear-Time Algorithm for <span>G</span>aussian and Non-<span>G</span>aussian Trait Evolution Models.”</span> <em>Systematic Biology</em> 63 (3): 397–408.
-</div>
-<div class="csl-entry">
-Hodges, James S., and Brian J. Reich. 2010. <span>“Adding Spatially-Correlated Errors Can Mess up the Fixed Effect You Love.”</span> <em>The American Statistician</em> 64 (4): 325–34.
-</div>
-<div class="csl-entry">
-Ives, Anthony R. 2019. <span>“R-Squareds for Correlated Data: Phylogenetic Models, <span>LMM</span>s, and <span>GLMM</span>s.”</span> <em>Systematic Biology</em> 68 (2): 234–51.
-</div>
-<div class="csl-entry">
-Ives, Anthony R., and Theodore Garland Jr. 2010. <span>“Phylogenetic Logistic Regression for Binary Dependent Variables.”</span> <em>Systematic Biology</em> 59 (1): 9–26.
-</div>
-<div class="csl-entry">
-Ives, Anthony R., and Jun Zhu. 2006. <span>“Statistics for Correlated Data: Phylogenies, Space, and Time.”</span> <em>Ecological Applications</em> 16 (1): 20–32.
-</div>
-<div class="csl-entry">
+<div id="ref-jaeger2011" class="csl-entry">
 Jaeger, T. Florian, Peter Graff, William Croft, and Daniel Pontillo. 2011. <span>“Mixed Effect Models for Genetic and Areal Dependencies in Linguistic Typology.”</span> <em>Linguistic Typology</em> 15 (2): 281–319.
 </div>
-<div class="csl-entry">
-Jäger, Gerhard. 2018. <span>“Global-Scale Phylogenetic Linguistic Inference from Lexical Resources.”</span> <em>Scientific Data</em> 5: 180189.
-</div>
-<div class="csl-entry">
-Katzfuss, Matthias, and Joseph Guinness. 2021. <span>“A General Framework for <span>V</span>ecchia Approximations of <span>G</span>aussian Processes.”</span> <em>Statistical Science</em> 36 (1): 124–41.
-</div>
-<div class="csl-entry">
-Kissling, W. Daniel, and Gudrun Carl. 2008. <span>“Spatial Autocorrelation and the Selection of Simultaneous Autoregressive Models.”</span> <em>Global Ecology and Biogeography</em> 17 (1): 59–71.
-</div>
-<div class="csl-entry">
-Krainski, Elias T., Virgilio Gómez-Rubio, Haakon Bakka, et al. 2019. <em>Advanced Spatial Modeling with Stochastic Partial Differential Equations Using <span>R</span> and <span>INLA</span></em>. Chapman; Hall/CRC.
-</div>
-<div class="csl-entry">
-Ladd, D. Robert, Seán G. Roberts, and Dan Dediu. 2015. <span>“Correlational Studies in Typological and Historical Linguistics.”</span> <em>Annual Review of Linguistics</em> 1: 221–41. <a href="https://doi.org/10.1146/annurev-linguist-030514-124819">https://doi.org/10.1146/annurev-linguist-030514-124819</a>.
-</div>
-<div class="csl-entry">
-LeSage, James, and R. Kelley Pace. 2009. <em>Introduction to Spatial Econometrics</em>. Chapman; Hall/CRC.
-</div>
-<div class="csl-entry">
-Lindgren, Finn, David Bolin, and Håvard Rue. 2022. <span>“The <span>SPDE</span> Approach for <span>G</span>aussian and Non-<span>G</span>aussian Fields: 10 Years and Still Running.”</span> <em>Spatial Statistics</em> 50: 100599.
-</div>
-<div class="csl-entry">
-Lindgren, Finn, Håvard Rue, and Johan Lindström. 2011. <span>“An Explicit Link Between <span>G</span>aussian Fields and <span>G</span>aussian <span>M</span>arkov Random Fields: The Stochastic Partial Differential Equation Approach.”</span> <em>Journal of the Royal Statistical Society: Series B</em> 73 (4): 423–98.
-</div>
-<div class="csl-entry">
-Lynch, Michael. 1991. <span>“Methods for the Analysis of Comparative Data in Evolutionary Biology.”</span> <em>Evolution</em> 45 (5): 1065–80.
-</div>
-<div class="csl-entry">
-Maddison, Wayne P., and Richard G. FitzJohn. 2015. <span>“The Unsolved Challenge to Phylogenetic Correlation Tests for Categorical Characters.”</span> <em>Systematic Biology</em> 64 (1): 127–36.
-</div>
-<div class="csl-entry">
-Maslova, Elena. 2000. <span>“A Dynamic Approach to the Verification of Distributional Universals.”</span> <em>Linguistic Typology</em> 4 (3): 307–33.
-</div>
-<div class="csl-entry">
-McElreath, Richard. 2020. <em>Statistical Rethinking: A <span>B</span>ayesian Course with Examples in <span>R</span> and <span>S</span>tan</em>. 2nd ed. Chapman; Hall/CRC.
-</div>
-<div class="csl-entry">
-Miestamo, Matti, Dik Bakker, and Antti Arppe. 2016. <span>“Sampling for Variety.”</span> <em>Linguistic Typology</em> 20 (2): 233–96.
-</div>
-<div class="csl-entry">
-Miller, David L., Richard Glennie, and Andrew E. Seaton. 2020. <span>“Understanding the Stochastic Partial Differential Equation Approach to Smoothing.”</span> <em>Journal of Agricultural, Biological and Environmental Statistics</em> 25: 1–16.
-</div>
-<div class="csl-entry">
-Moran, P. A. P. 1950. <span>“Notes on Continuous Stochastic Phenomena.”</span> <em>Biometrika</em> 37 (1/2): 17–23.
-</div>
-<div class="csl-entry">
-Moran, Steven, and Daniel McCloy, eds. 2019. <em><span>PHOIBLE</span> 2.0</em>. Max Planck Institute for the Science of Human History. <a href="https://phoible.org">https://phoible.org</a>.
-</div>
-<div class="csl-entry">
-Morris, Mitzi, Katherine Wheeler-Martin, Dan Simpson, Stephen J. Mooney, Andrew Gelman, and Charles DiMaggio. 2019. <span>“Bayesian Hierarchical Spatial Models: Implementing the <span>B</span>esag <span>Y</span>ork <span>M</span>olli<span>é</span> Model in <span>S</span>tan.”</span> <em>Spatial and Spatio-Temporal Epidemiology</em> 31: 100301.
-</div>
-<div class="csl-entry">
-Morris, Tim P., Ian R. White, and Michael J. Crowther. 2019. <span>“Using Simulation Studies to Evaluate Statistical Methods.”</span> <em>Statistics in Medicine</em> 38 (11): 2074–102.
-</div>
-<div class="csl-entry">
-Münkemüller, Tamara, Sébastien Lavergne, Bruno Bzeznik, et al. 2012. <span>“How to Measure and Test Phylogenetic Signal.”</span> <em>Methods in Ecology and Evolution</em> 3 (4): 743–56.
-</div>
-<div class="csl-entry">
-Naroll, Raoul. 1961. <span>“Two Solutions to <span>G</span>alton’s Problem.”</span> <em>Philosophy of Science</em> 28 (1): 15–39.
-</div>
-<div class="csl-entry">
-Niekerk, Janet van, Elias Krainski, Denis Rustand, and Håvard Rue. 2023. <span>“A New Avenue for <span>B</span>ayesian Inference with <span>INLA</span>.”</span> <em>Computational Statistics &amp; Data Analysis</em> 181: 107692.
-</div>
-<div class="csl-entry">
-Pagel, Mark. 1994. <span>“Detecting Correlated Evolution on Phylogenies: A General Method for the Comparative Analysis of Discrete Characters.”</span> <em>Proceedings of the Royal Society of London B</em> 255 (1342): 37–45.
-</div>
-<div class="csl-entry">
-Pagel, Mark. 1999. <span>“Inferring the Historical Patterns of Biological Evolution.”</span> <em>Nature</em> 401: 877–84.
-</div>
-<div class="csl-entry">
-Pedersen, Eric J., David L. Miller, Gavin L. Simpson, and Noam Ross. 2019. <span>“Hierarchical Generalized Additive Models in Ecology: An Introduction with Mgcv.”</span> <em>PeerJ</em> 7: e6876.
-</div>
-<div class="csl-entry">
-Perkins, Revere D. 1989. <span>“Statistical Techniques for Determining Language Sample Size.”</span> <em>Studies in Language</em> 13 (2): 293–315.
-</div>
-<div class="csl-entry">
+<div id="ref-ranacher2021" class="csl-entry">
 Ranacher, Peter, Nico Neureiter, Rik van Gijn, et al. 2021. <span>“Contact-Tracing in Cultural Evolution: A <span>B</span>ayesian Mixture Model to Detect Geographic Areas of Language Contact.”</span> <em>Journal of the Royal Society Interface</em> 18 (181): 20201031.
 </div>
-<div class="csl-entry">
-Rasmussen, Carl Edward, and Christopher K. I. Williams. 2006. <em>Gaussian Processes for Machine Learning</em>. MIT Press.
-</div>
-<div class="csl-entry">
-Revell, Liam J. 2010. <span>“Phylogenetic Signal and Linear Regression on Species Data.”</span> <em>Methods in Ecology and Evolution</em> 1 (4): 319–29.
-</div>
-<div class="csl-entry">
-Riebler, Andrea, Sigrunn H. Sørbye, Daniel Simpson, and Håvard Rue. 2016. <span>“An Intuitive <span>B</span>ayesian Spatial Model for Disease Mapping That Accounts for Scaling.”</span> <em>Statistical Methods in Medical Research</em> 25 (4): 1145–65.
-</div>
-<div class="csl-entry">
-Rijkhoff, Jan, and Dik Bakker. 1998. <span>“Language Sampling.”</span> <em>Linguistic Typology</em> 2 (3): 263–314.
-</div>
-<div class="csl-entry">
-Riutort-Mayol, Gabriel, Paul-Christian Bürkner, Michael R. Andersen, Arno Solin, and Aki Vehtari. 2023. <span>“Practical <span>H</span>ilbert Space Approximate <span>B</span>ayesian <span>G</span>aussian Processes for Probabilistic Programming.”</span> <em>Statistics and Computing</em> 33: 17.
-</div>
-<div class="csl-entry">
-<span class="nocase">Roberts, David R., Volker Bahn, Simone Ciuti, et al.</span> 2017. <span>“Cross-Validation Strategies for Data with Temporal, Spatial, Hierarchical, or Phylogenetic Structure.”</span> <em>Ecography</em> 40 (8): 913–29.
-</div>
-<div class="csl-entry">
-Roberts, Seán, and James Winters. 2013. <span>“Linguistic Diversity and Traffic Accidents: Lessons from Statistical Studies of Cultural Traits.”</span> <em>PLoS ONE</em> 8 (8): e70902. <a href="https://doi.org/10.1371/journal.pone.0070902">https://doi.org/10.1371/journal.pone.0070902</a>.
-</div>
-<div class="csl-entry">
-Rue, Håvard, Sara Martino, and Nicolas Chopin. 2009. <span>“Approximate <span>B</span>ayesian Inference for Latent <span>G</span>aussian Models by Using Integrated Nested <span>L</span>aplace Approximations.”</span> <em>Journal of the Royal Statistical Society: Series B</em> 71 (2): 319–92.
-</div>
-<div class="csl-entry">
-Simpson, Daniel, Håvard Rue, Andrea Riebler, Thiago G. Martins, and Sigrunn H. Sørbye. 2017. <span>“Penalising Model Component Complexity: A Principled, Practical Approach to Constructing Priors.”</span> <em>Statistical Science</em> 32 (1): 1–28.
-</div>
-<div class="csl-entry">
+<div id="ref-skirgard2023" class="csl-entry">
 <span class="nocase">Skirgård, Hedvig, Hannah J. Haynie, Damián E. Blasi, et al.</span> 2023. <span>“Grambank Reveals the Importance of Genealogical Constraints on Linguistic Diversity and Highlights the Impact of Language Loss.”</span> <em>Science Advances</em> 9 (16): eadg6175. <a href="https://doi.org/10.1126/sciadv.adg6175">https://doi.org/10.1126/sciadv.adg6175</a>.
 </div>
-<div class="csl-entry">
-Solin, Arno, and Simo Särkkä. 2020. <span>“Hilbert Space Methods for Reduced-Rank <span>G</span>aussian Process Regression.”</span> <em>Statistics and Computing</em> 30: 419–46.
-</div>
-<div class="csl-entry">
-Symonds, Matthew R. E., and Simon P. Blomberg. 2014. <span>“A Primer on Phylogenetic Generalised Least Squares.”</span> In <em>Modern Phylogenetic Comparative Methods and Their Application in Evolutionary Biology</em>, edited by László Zsolt Garamszegi. Springer.
-</div>
-<div class="csl-entry">
-Talts, Sean, Michael Betancourt, Daniel Simpson, Aki Vehtari, and Andrew Gelman. 2018. <em>Validating <span>B</span>ayesian Inference Algorithms with Simulation-Based Calibration</em>. arXiv:1804.06788.
-</div>
-<div class="csl-entry">
-Urban, Matthias, and Steven Moran. 2021. <span>“Altitude and the Distributional Typology of Language Structure: Ejectives and Beyond.”</span> <em>PLoS ONE</em> 16 (2): e0245522. <a href="https://doi.org/10.1371/journal.pone.0245522">https://doi.org/10.1371/journal.pone.0245522</a>.
-</div>
-<div class="csl-entry">
-Uyeda, Josef C., Rosana Zenil-Ferguson, and Matthew W. Pennell. 2018. <span>“Rethinking Phylogenetic Comparative Methods.”</span> <em>Systematic Biology</em> 67 (6): 1091–109.
-</div>
-<div class="csl-entry">
-Vehtari, Aki, Andrew Gelman, and Jonah Gabry. 2017. <span>“Practical <span>B</span>ayesian Model Evaluation Using Leave-One-Out Cross-Validation and <span>WAIC</span>.”</span> <em>Statistics and Computing</em> 27: 1413–32.
-</div>
-<div class="csl-entry">
-Ver Hoef, Jay M., Erin E. Peterson, Mevin B. Hooten, Ephraim M. Hanks, and Marie-Josée Fortin. 2018. <span>“Spatial Autoregressive Models for Statistical Inference from Ecological Data.”</span> <em>Ecological Monographs</em> 88 (1): 36–59.
-</div>
-<div class="csl-entry">
-Villemereuil, Pierre de, and Shinichi Nakagawa. 2014. <span>“General Quantitative Genetic Methods for Comparative Biology.”</span> In <em>Modern Phylogenetic Comparative Methods and Their Application in Evolutionary Biology</em>, edited by László Zsolt Garamszegi. Springer.
-</div>
-<div class="csl-entry">
-Wahba, Grace. 1981. <span>“Spline Interpolation and Smoothing on the Sphere.”</span> <em>SIAM Journal on Scientific and Statistical Computing</em> 2 (1): 5–16.
-</div>
-<div class="csl-entry">
+<div id="ref-wieling2011" class="csl-entry">
 Wieling, Martijn, John Nerbonne, and R. Harald Baayen. 2011. <span>“Quantitative Social Dialectology: Explaining Linguistic Variation Geographically and Socially.”</span> <em>PLoS ONE</em> 6 (9): e23613.
-</div>
-<div class="csl-entry">
-Wood, Simon N. 2011. <span>“Fast Stable Restricted Maximum Likelihood and Marginal Likelihood Estimation of Semiparametric Generalized Linear Models.”</span> <em>Journal of the Royal Statistical Society: Series B</em> 73 (1): 3–36.
-</div>
-<div class="csl-entry">
-Wood, Simon N. 2017. <em>Generalized Additive Models: An Introduction with <span>R</span></em>. 2nd ed. Chapman; Hall/CRC.
-</div>
-<div class="csl-entry">
-Wood, Simon N., Natalya Pya, and Benjamin Säfken. 2016. <span>“Smoothing Parameter and Model Selection for General Smooth Models.”</span> <em>Journal of the American Statistical Association</em> 111 (516): 1548–63.
-</div>
-<div class="csl-entry">
-Zeger, Scott L., Kung-Yee Liang, and Paul S. Albert. 1988. <span>“Models for Longitudinal Data: A Generalized Estimating Equation Approach.”</span> <em>Biometrics</em> 44 (4): 1049–60.
-</div>
 </div>
 </div>
             </section>
@@ -652,8 +578,8 @@ Zeger, Scott L., Kung-Yee Liang, and Paul S. Albert. 1988. <span>“Models for L
           </div>
         </div>
       </div>
-<a href="simulation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="phylogeny-engines.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="space-surface.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
