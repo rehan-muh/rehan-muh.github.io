@@ -1,421 +1,175 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 Space in INLA, mgcv and by maximum likelihood | Relatives and Neighbours</title>
-  <meta name="description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
-  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="8 Space in INLA, mgcv and by maximum likelihood | Relatives and Neighbours" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
-  
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 Space in INLA, mgcv and by maximum likelihood | Relatives and Neighbours" />
-  
-  <meta name="twitter:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
-  
-
-<meta name="author" content="Muhammad Rehan" />
-
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="space-neighbours.html"/>
-<link rel="next" href="joint.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>8 Space in INLA, mgcv and by maximum likelihood | Relatives and Neighbours</title>
+<meta name="author" content="Muhammad Rehan">
+<meta name="description" content="Refit the neighbour model in INLA and catch its approximation failing, then put a surface on the globe itself, two ways: an SPDE mesh in INLA and a spline on the sphere in mgcv. Close with the...">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="8 Space in INLA, mgcv and by maximum likelihood | Relatives and Neighbours">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Refit the neighbour model in INLA and catch its approximation failing, then put a surface on the globe itself, two ways: an SPDE mesh in INLA and a spline on the sphere in mgcv. Close with the...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="8 Space in INLA, mgcv and by maximum likelihood | Relatives and Neighbours">
+<meta name="twitter:description" content="Refit the neighbour model in INLA and catch its approximation failing, then put a surface on the globe itself, two ways: an SPDE mesh in INLA and a spline on the sphere in mgcv. Close with the...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.11.0/transition.js"></script><script src="libs/bs3compat-0.11.0/tabs.js"></script><script src="libs/bs3compat-0.11.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
 <style type="text/css">
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<link rel="stylesheet" href="style.css">
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./"><b>Relatives and Neighbours</b></a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
-<ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#before-you-start"><i class="fa fa-check"></i>Before you start</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-running-example"><i class="fa fa-check"></i>The running example</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#sources"><i class="fa fa-check"></i>Sources</a></li>
-</ul></li>
-<li class="part"><span><b>I The problem</b></span></li>
-<li class="chapter" data-level="1" data-path="the-problem.html"><a href="the-problem.html"><i class="fa fa-check"></i><b>1</b> Seeing the problem</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="the-problem.html"><a href="the-problem.html#the-data-and-the-first-model"><i class="fa fa-check"></i><b>1.1</b> The data and the first model</a></li>
-<li class="chapter" data-level="1.2" data-path="the-problem.html"><a href="the-problem.html#where-the-ejectives-are"><i class="fa fa-check"></i><b>1.2</b> Where the ejectives are</a></li>
-<li class="chapter" data-level="1.3" data-path="the-problem.html"><a href="the-problem.html#how-often-does-a-meaningless-predictor-pass"><i class="fa fa-check"></i><b>1.3</b> How often does a meaningless predictor pass?</a></li>
-<li class="chapter" data-level="1.4" data-path="the-problem.html"><a href="the-problem.html#measuring-spatial-dependence-morans-i"><i class="fa fa-check"></i><b>1.4</b> Measuring spatial dependence: Moran’s I</a></li>
-<li class="chapter" data-level="1.5" data-path="the-problem.html"><a href="the-problem.html#measuring-phylogenetic-signal"><i class="fa fa-check"></i><b>1.5</b> Measuring phylogenetic signal</a></li>
-<li class="chapter" data-level="1.6" data-path="the-problem.html"><a href="the-problem.html#what-to-carry-forward"><i class="fa fa-check"></i><b>1.6</b> What to carry forward</a></li>
-<li class="chapter" data-level="1.7" data-path="the-problem.html"><a href="the-problem.html#further-reading-1"><i class="fa fa-check"></i><b>1.7</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>II Phylogeny</b></span></li>
-<li class="chapter" data-level="2" data-path="trees.html"><a href="trees.html"><i class="fa fa-check"></i><b>2</b> Trees: the raw material</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="trees.html"><a href="trees.html#set-up"><i class="fa fa-check"></i><b>2.1</b> Set up</a></li>
-<li class="chapter" data-level="2.2" data-path="trees.html"><a href="trees.html#what-a-tree-object-holds"><i class="fa fa-check"></i><b>2.2</b> What a tree object holds</a></li>
-<li class="chapter" data-level="2.3" data-path="trees.html"><a href="trees.html#does-the-tree-match-the-data"><i class="fa fa-check"></i><b>2.3</b> Does the tree match the data?</a></li>
-<li class="chapter" data-level="2.4" data-path="trees.html"><a href="trees.html#look-at-it"><i class="fa fa-check"></i><b>2.4</b> Look at it</a></li>
-<li class="chapter" data-level="2.5" data-path="trees.html"><a href="trees.html#what-the-branch-lengths-mean"><i class="fa fa-check"></i><b>2.5</b> What the branch lengths mean</a></li>
-<li class="chapter" data-level="2.6" data-path="trees.html"><a href="trees.html#build-a-tree-from-a-table"><i class="fa fa-check"></i><b>2.6</b> Build a tree from a table</a></li>
-<li class="chapter" data-level="2.7" data-path="trees.html"><a href="trees.html#where-trees-come-from"><i class="fa fa-check"></i><b>2.7</b> Where trees come from</a></li>
-<li class="chapter" data-level="2.8" data-path="trees.html"><a href="trees.html#a-dated-tree-from-phlorest"><i class="fa fa-check"></i><b>2.8</b> A dated tree from Phlorest</a></li>
-<li class="chapter" data-level="2.9" data-path="trees.html"><a href="trees.html#how-tree-like-is-a-feature"><i class="fa fa-check"></i><b>2.9</b> How tree-like is a feature?</a></li>
-<li class="chapter" data-level="2.10" data-path="trees.html"><a href="trees.html#what-to-carry-forward-1"><i class="fa fa-check"></i><b>2.10</b> What to carry forward</a></li>
-<li class="chapter" data-level="2.11" data-path="trees.html"><a href="trees.html#further-reading-2"><i class="fa fa-check"></i><b>2.11</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="phylogeny.html"><a href="phylogeny.html"><i class="fa fa-check"></i><b>3</b> Phylogeny as a covariance matrix</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="phylogeny.html"><a href="phylogeny.html#set-up-1"><i class="fa fa-check"></i><b>3.1</b> Set up</a></li>
-<li class="chapter" data-level="3.2" data-path="phylogeny.html"><a href="phylogeny.html#from-a-tree-to-a-matrix"><i class="fa fa-check"></i><b>3.2</b> From a tree to a matrix</a></li>
-<li class="chapter" data-level="3.3" data-path="phylogeny.html"><a href="phylogeny.html#first-rung-family-as-a-random-intercept"><i class="fa fa-check"></i><b>3.3</b> First rung: family as a random intercept</a></li>
-<li class="chapter" data-level="3.4" data-path="phylogeny.html"><a href="phylogeny.html#the-phylogenetic-model"><i class="fa fa-check"></i><b>3.4</b> The phylogenetic model</a></li>
-<li class="chapter" data-level="3.5" data-path="phylogeny.html"><a href="phylogeny.html#reading-the-result"><i class="fa fa-check"></i><b>3.5</b> Reading the result</a>
-<ul>
-<li class="chapter" data-level="3.5.1" data-path="phylogeny.html"><a href="phylogeny.html#the-slope"><i class="fa fa-check"></i><b>3.5.1</b> The slope</a></li>
-<li class="chapter" data-level="3.5.2" data-path="phylogeny.html"><a href="phylogeny.html#the-regression-line"><i class="fa fa-check"></i><b>3.5.2</b> The regression line</a></li>
-<li class="chapter" data-level="3.5.3" data-path="phylogeny.html"><a href="phylogeny.html#phylogenetic-signal"><i class="fa fa-check"></i><b>3.5.3</b> Phylogenetic signal</a></li>
-<li class="chapter" data-level="3.5.4" data-path="phylogeny.html"><a href="phylogeny.html#where-the-model-put-the-lineage-effects"><i class="fa fa-check"></i><b>3.5.4</b> Where the model put the lineage effects</a></li>
-</ul></li>
-<li class="chapter" data-level="3.6" data-path="phylogeny.html"><a href="phylogeny.html#what-to-carry-forward-2"><i class="fa fa-check"></i><b>3.6</b> What to carry forward</a></li>
-<li class="chapter" data-level="3.7" data-path="phylogeny.html"><a href="phylogeny.html#further-reading-3"><i class="fa fa-check"></i><b>3.7</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html"><i class="fa fa-check"></i><b>4</b> Phylogeny in INLA, mgcv and by maximum likelihood</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#set-up-2"><i class="fa fa-check"></i><b>4.1</b> Set up</a></li>
-<li class="chapter" data-level="4.2" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#inla"><i class="fa fa-check"></i><b>4.2</b> INLA</a></li>
-<li class="chapter" data-level="4.3" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#mgcv"><i class="fa fa-check"></i><b>4.3</b> mgcv</a></li>
-<li class="chapter" data-level="4.4" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#maximum-likelihood-pgls"><i class="fa fa-check"></i><b>4.4</b> Maximum likelihood: PGLS</a></li>
-<li class="chapter" data-level="4.5" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#maximum-likelihood-phylogenetic-logistic-regression"><i class="fa fa-check"></i><b>4.5</b> Maximum likelihood: phylogenetic logistic regression</a></li>
-<li class="chapter" data-level="4.6" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#every-engine-one-figure"><i class="fa fa-check"></i><b>4.6</b> Every engine, one figure</a></li>
-<li class="chapter" data-level="4.7" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#what-to-carry-forward-3"><i class="fa fa-check"></i><b>4.7</b> What to carry forward</a></li>
-<li class="chapter" data-level="4.8" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#further-reading-4"><i class="fa fa-check"></i><b>4.8</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>III Space</b></span></li>
-<li class="chapter" data-level="5" data-path="maps.html"><a href="maps.html"><i class="fa fa-check"></i><b>5</b> Maps: coordinates, distances and neighbours</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="maps.html"><a href="maps.html#set-up-3"><i class="fa fa-check"></i><b>5.1</b> Set up</a></li>
-<li class="chapter" data-level="5.2" data-path="maps.html"><a href="maps.html#languages-as-points"><i class="fa fa-check"></i><b>5.2</b> Languages as points</a></li>
-<li class="chapter" data-level="5.3" data-path="maps.html"><a href="maps.html#distances"><i class="fa fa-check"></i><b>5.3</b> Distances</a></li>
-<li class="chapter" data-level="5.4" data-path="maps.html"><a href="maps.html#flat-maps-and-their-cost"><i class="fa fa-check"></i><b>5.4</b> Flat maps and their cost</a></li>
-<li class="chapter" data-level="5.5" data-path="maps.html"><a href="maps.html#neighbours"><i class="fa fa-check"></i><b>5.5</b> Neighbours</a></li>
-<li class="chapter" data-level="5.6" data-path="maps.html"><a href="maps.html#from-a-graph-to-weights"><i class="fa fa-check"></i><b>5.6</b> From a graph to weights</a></li>
-<li class="chapter" data-level="5.7" data-path="maps.html"><a href="maps.html#how-far-does-similarity-reach"><i class="fa fa-check"></i><b>5.7</b> How far does similarity reach?</a></li>
-<li class="chapter" data-level="5.8" data-path="maps.html"><a href="maps.html#where-locations-come-from"><i class="fa fa-check"></i><b>5.8</b> Where locations come from</a></li>
-<li class="chapter" data-level="5.9" data-path="maps.html"><a href="maps.html#speaker-areas-as-polygons"><i class="fa fa-check"></i><b>5.9</b> Speaker areas as polygons</a></li>
-<li class="chapter" data-level="5.10" data-path="maps.html"><a href="maps.html#what-a-location-leaves-out"><i class="fa fa-check"></i><b>5.10</b> What a location leaves out</a></li>
-<li class="chapter" data-level="5.11" data-path="maps.html"><a href="maps.html#what-to-carry-forward-4"><i class="fa fa-check"></i><b>5.11</b> What to carry forward</a></li>
-<li class="chapter" data-level="5.12" data-path="maps.html"><a href="maps.html#further-reading-5"><i class="fa fa-check"></i><b>5.12</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="space-surface.html"><a href="space-surface.html"><i class="fa fa-check"></i><b>6</b> Space as a smooth surface</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="space-surface.html"><a href="space-surface.html#set-up-4"><i class="fa fa-check"></i><b>6.1</b> Set up</a></li>
-<li class="chapter" data-level="6.2" data-path="space-surface.html"><a href="space-surface.html#the-idea"><i class="fa fa-check"></i><b>6.2</b> The idea</a></li>
-<li class="chapter" data-level="6.3" data-path="space-surface.html"><a href="space-surface.html#coordinates-the-model-can-measure-with"><i class="fa fa-check"></i><b>6.3</b> Coordinates the model can measure with</a></li>
-<li class="chapter" data-level="6.4" data-path="space-surface.html"><a href="space-surface.html#fitting-it"><i class="fa fa-check"></i><b>6.4</b> Fitting it</a></li>
-<li class="chapter" data-level="6.5" data-path="space-surface.html"><a href="space-surface.html#was-k-large-enough"><i class="fa fa-check"></i><b>6.5</b> Was <code>k</code> large enough?</a></li>
-<li class="chapter" data-level="6.6" data-path="space-surface.html"><a href="space-surface.html#what-the-surface-looks-like"><i class="fa fa-check"></i><b>6.6</b> What the surface looks like</a></li>
-<li class="chapter" data-level="6.7" data-path="space-surface.html"><a href="space-surface.html#did-it-work"><i class="fa fa-check"></i><b>6.7</b> Did it work?</a></li>
-<li class="chapter" data-level="6.8" data-path="space-surface.html"><a href="space-surface.html#the-regression-line-1"><i class="fa fa-check"></i><b>6.8</b> The regression line</a></li>
-<li class="chapter" data-level="6.9" data-path="space-surface.html"><a href="space-surface.html#variations"><i class="fa fa-check"></i><b>6.9</b> Variations</a></li>
-<li class="chapter" data-level="6.10" data-path="space-surface.html"><a href="space-surface.html#what-to-carry-forward-5"><i class="fa fa-check"></i><b>6.10</b> What to carry forward</a></li>
-<li class="chapter" data-level="6.11" data-path="space-surface.html"><a href="space-surface.html#further-reading-6"><i class="fa fa-check"></i><b>6.11</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="space-neighbours.html"><a href="space-neighbours.html"><i class="fa fa-check"></i><b>7</b> Space as a network of neighbours</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="space-neighbours.html"><a href="space-neighbours.html#set-up-5"><i class="fa fa-check"></i><b>7.1</b> Set up</a></li>
-<li class="chapter" data-level="7.2" data-path="space-neighbours.html"><a href="space-neighbours.html#the-idea-1"><i class="fa fa-check"></i><b>7.2</b> The idea</a></li>
-<li class="chapter" data-level="7.3" data-path="space-neighbours.html"><a href="space-neighbours.html#building-the-graph"><i class="fa fa-check"></i><b>7.3</b> Building the graph</a></li>
-<li class="chapter" data-level="7.4" data-path="space-neighbours.html"><a href="space-neighbours.html#icar"><i class="fa fa-check"></i><b>7.4</b> ICAR</a></li>
-<li class="chapter" data-level="7.5" data-path="space-neighbours.html"><a href="space-neighbours.html#bym2"><i class="fa fa-check"></i><b>7.5</b> BYM2</a></li>
-<li class="chapter" data-level="7.6" data-path="space-neighbours.html"><a href="space-neighbours.html#the-regression-line-2"><i class="fa fa-check"></i><b>7.6</b> The regression line</a></li>
-<li class="chapter" data-level="7.7" data-path="space-neighbours.html"><a href="space-neighbours.html#how-much-does-the-graph-matter"><i class="fa fa-check"></i><b>7.7</b> How much does the graph matter?</a></li>
-<li class="chapter" data-level="7.8" data-path="space-neighbours.html"><a href="space-neighbours.html#other-models-in-the-same-family"><i class="fa fa-check"></i><b>7.8</b> Other models in the same family</a></li>
-<li class="chapter" data-level="7.9" data-path="space-neighbours.html"><a href="space-neighbours.html#what-to-carry-forward-6"><i class="fa fa-check"></i><b>7.9</b> What to carry forward</a></li>
-<li class="chapter" data-level="7.10" data-path="space-neighbours.html"><a href="space-neighbours.html#further-reading-7"><i class="fa fa-check"></i><b>7.10</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="space-engines.html"><a href="space-engines.html"><i class="fa fa-check"></i><b>8</b> Space in INLA, mgcv and by maximum likelihood</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="space-engines.html"><a href="space-engines.html#set-up-6"><i class="fa fa-check"></i><b>8.1</b> Set up</a></li>
-<li class="chapter" data-level="8.2" data-path="space-engines.html"><a href="space-engines.html#neighbours-in-inla-bym2"><i class="fa fa-check"></i><b>8.2</b> Neighbours in INLA: BYM2</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="space-engines.html"><a href="space-engines.html#check-the-approximation"><i class="fa fa-check"></i><b>8.2.1</b> Check the approximation</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="space-engines.html"><a href="space-engines.html#a-surface-on-the-sphere-spde"><i class="fa fa-check"></i><b>8.3</b> A surface on the sphere: SPDE</a></li>
-<li class="chapter" data-level="8.4" data-path="space-engines.html"><a href="space-engines.html#a-surface-on-the-sphere-mgcv"><i class="fa fa-check"></i><b>8.4</b> A surface on the sphere: mgcv</a></li>
-<li class="chapter" data-level="8.5" data-path="space-engines.html"><a href="space-engines.html#maximum-likelihood-simultaneous-autoregressive-models"><i class="fa fa-check"></i><b>8.5</b> Maximum likelihood: simultaneous autoregressive models</a></li>
-<li class="chapter" data-level="8.6" data-path="space-engines.html"><a href="space-engines.html#every-engine-one-figure-1"><i class="fa fa-check"></i><b>8.6</b> Every engine, one figure</a></li>
-<li class="chapter" data-level="8.7" data-path="space-engines.html"><a href="space-engines.html#what-to-carry-forward-7"><i class="fa fa-check"></i><b>8.7</b> What to carry forward</a></li>
-<li class="chapter" data-level="8.8" data-path="space-engines.html"><a href="space-engines.html#further-reading-8"><i class="fa fa-check"></i><b>8.8</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>IV Space and phylogeny</b></span></li>
-<li class="chapter" data-level="9" data-path="joint.html"><a href="joint.html"><i class="fa fa-check"></i><b>9</b> Both at once</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="joint.html"><a href="joint.html#set-up-7"><i class="fa fa-check"></i><b>9.1</b> Set up</a></li>
-<li class="chapter" data-level="9.2" data-path="joint.html"><a href="joint.html#why-one-model-and-not-two"><i class="fa fa-check"></i><b>9.2</b> Why one model and not two</a></li>
-<li class="chapter" data-level="9.3" data-path="joint.html"><a href="joint.html#the-joint-model"><i class="fa fa-check"></i><b>9.3</b> The joint model</a></li>
-<li class="chapter" data-level="9.4" data-path="joint.html"><a href="joint.html#bring-back-the-earlier-models"><i class="fa fa-check"></i><b>9.4</b> Bring back the earlier models</a></li>
-<li class="chapter" data-level="9.5" data-path="joint.html"><a href="joint.html#who-gets-the-credit"><i class="fa fa-check"></i><b>9.5</b> Who gets the credit</a></li>
-<li class="chapter" data-level="9.6" data-path="joint.html"><a href="joint.html#every-slope-so-far"><i class="fa fa-check"></i><b>9.6</b> Every slope so far</a></li>
-<li class="chapter" data-level="9.7" data-path="joint.html"><a href="joint.html#every-regression-line-so-far"><i class="fa fa-check"></i><b>9.7</b> Every regression line so far</a></li>
-<li class="chapter" data-level="9.8" data-path="joint.html"><a href="joint.html#which-model-to-report"><i class="fa fa-check"></i><b>9.8</b> Which model to report</a></li>
-<li class="chapter" data-level="9.9" data-path="joint.html"><a href="joint.html#what-to-carry-forward-8"><i class="fa fa-check"></i><b>9.9</b> What to carry forward</a></li>
-<li class="chapter" data-level="9.10" data-path="joint.html"><a href="joint.html#further-reading-9"><i class="fa fa-check"></i><b>9.10</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="joint-engines.html"><a href="joint-engines.html"><i class="fa fa-check"></i><b>10</b> Both at once in INLA and mgcv</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="joint-engines.html"><a href="joint-engines.html#set-up-8"><i class="fa fa-check"></i><b>10.1</b> Set up</a></li>
-<li class="chapter" data-level="10.2" data-path="joint-engines.html"><a href="joint-engines.html#the-joint-model-in-inla"><i class="fa fa-check"></i><b>10.2</b> The joint model in INLA</a></li>
-<li class="chapter" data-level="10.3" data-path="joint-engines.html"><a href="joint-engines.html#the-joint-model-in-mgcv"><i class="fa fa-check"></i><b>10.3</b> The joint model in mgcv</a></li>
-<li class="chapter" data-level="10.4" data-path="joint-engines.html"><a href="joint-engines.html#the-joint-model-three-engines"><i class="fa fa-check"></i><b>10.4</b> The joint model, three engines</a></li>
-<li class="chapter" data-level="10.5" data-path="joint-engines.html"><a href="joint-engines.html#the-whole-book-in-one-figure"><i class="fa fa-check"></i><b>10.5</b> The whole book in one figure</a></li>
-<li class="chapter" data-level="10.6" data-path="joint-engines.html"><a href="joint-engines.html#what-to-carry-forward-9"><i class="fa fa-check"></i><b>10.6</b> What to carry forward</a></li>
-<li class="chapter" data-level="10.7" data-path="joint-engines.html"><a href="joint-engines.html#further-reading-10"><i class="fa fa-check"></i><b>10.7</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>V Sampling and simulation</b></span></li>
-<li class="chapter" data-level="11" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>11</b> Sampling instead of modelling</a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="sampling.html"><a href="sampling.html#set-up-9"><i class="fa fa-check"></i><b>11.1</b> Set up</a></li>
-<li class="chapter" data-level="11.2" data-path="sampling.html"><a href="sampling.html#the-sampling-tradition"><i class="fa fa-check"></i><b>11.2</b> The sampling tradition</a></li>
-<li class="chapter" data-level="11.3" data-path="sampling.html"><a href="sampling.html#three-designs"><i class="fa fa-check"></i><b>11.3</b> Three designs</a></li>
-<li class="chapter" data-level="11.4" data-path="sampling.html"><a href="sampling.html#one-sample-one-answer"><i class="fa fa-check"></i><b>11.4</b> One sample, one answer</a></li>
-<li class="chapter" data-level="11.5" data-path="sampling.html"><a href="sampling.html#a-thousand-samples"><i class="fa fa-check"></i><b>11.5</b> A thousand samples</a></li>
-<li class="chapter" data-level="11.6" data-path="sampling.html"><a href="sampling.html#the-regression-lines"><i class="fa fa-check"></i><b>11.6</b> The regression lines</a></li>
-<li class="chapter" data-level="11.7" data-path="sampling.html"><a href="sampling.html#does-sampling-remove-the-dependence"><i class="fa fa-check"></i><b>11.7</b> Does sampling remove the dependence?</a></li>
-<li class="chapter" data-level="11.8" data-path="sampling.html"><a href="sampling.html#what-to-carry-forward-10"><i class="fa fa-check"></i><b>11.8</b> What to carry forward</a></li>
-<li class="chapter" data-level="11.9" data-path="sampling.html"><a href="sampling.html#further-reading-11"><i class="fa fa-check"></i><b>11.9</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="simulation.html"><a href="simulation.html"><i class="fa fa-check"></i><b>12</b> Does it recover the truth?</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="simulation.html"><a href="simulation.html#why-simulate"><i class="fa fa-check"></i><b>12.1</b> Why simulate</a></li>
-<li class="chapter" data-level="12.2" data-path="simulation.html"><a href="simulation.html#set-up-10"><i class="fa fa-check"></i><b>12.2</b> Set up</a></li>
-<li class="chapter" data-level="12.3" data-path="simulation.html"><a href="simulation.html#a-world-with-a-known-slope"><i class="fa fa-check"></i><b>12.3</b> A world with a known slope</a></li>
-<li class="chapter" data-level="12.4" data-path="simulation.html"><a href="simulation.html#seven-methods"><i class="fa fa-check"></i><b>12.4</b> Seven methods</a></li>
-<li class="chapter" data-level="12.5" data-path="simulation.html"><a href="simulation.html#one-world-looked-at-closely"><i class="fa fa-check"></i><b>12.5</b> One world, looked at closely</a></li>
-<li class="chapter" data-level="12.6" data-path="simulation.html"><a href="simulation.html#three-hundred-worlds"><i class="fa fa-check"></i><b>12.6</b> Three hundred worlds</a></li>
-<li class="chapter" data-level="12.7" data-path="simulation.html"><a href="simulation.html#no-effect-who-cries-wolf"><i class="fa fa-check"></i><b>12.7</b> No effect: who cries wolf?</a></li>
-<li class="chapter" data-level="12.8" data-path="simulation.html"><a href="simulation.html#a-true-effect-who-finds-it-and-how-precisely"><i class="fa fa-check"></i><b>12.8</b> A true effect: who finds it, and how precisely?</a></li>
-<li class="chapter" data-level="12.9" data-path="simulation.html"><a href="simulation.html#shared-history-the-limit-of-every-method"><i class="fa fa-check"></i><b>12.9</b> Shared history: the limit of every method</a></li>
-<li class="chapter" data-level="12.10" data-path="simulation.html"><a href="simulation.html#make-it-your-own"><i class="fa fa-check"></i><b>12.10</b> Make it your own</a></li>
-<li class="chapter" data-level="12.11" data-path="simulation.html"><a href="simulation.html#what-to-carry-forward-11"><i class="fa fa-check"></i><b>12.11</b> What to carry forward</a></li>
-<li class="chapter" data-level="12.12" data-path="simulation.html"><a href="simulation.html#further-reading-12"><i class="fa fa-check"></i><b>12.12</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://rehan-muh.github.io/">Muhammad Rehan</a></li>
-
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only">Relatives and Neighbours</a>:
+        <small class="text-muted">Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Relatives and Neighbours</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">The problem</li>
+<li><a class="" href="the-problem.html"><span class="header-section-number">1</span> Seeing the problem</a></li>
+<li class="book-part">Phylogeny</li>
+<li><a class="" href="trees.html"><span class="header-section-number">2</span> Trees: the raw material</a></li>
+<li><a class="" href="phylogeny.html"><span class="header-section-number">3</span> Phylogeny as a covariance matrix</a></li>
+<li><a class="" href="phylogeny-engines.html"><span class="header-section-number">4</span> Phylogeny in INLA, mgcv and by maximum likelihood</a></li>
+<li class="book-part">Space</li>
+<li><a class="" href="maps.html"><span class="header-section-number">5</span> Maps: coordinates, distances and neighbours</a></li>
+<li><a class="" href="space-surface.html"><span class="header-section-number">6</span> Space as a smooth surface</a></li>
+<li><a class="" href="space-neighbours.html"><span class="header-section-number">7</span> Space as a network of neighbours</a></li>
+<li><a class="active" href="space-engines.html"><span class="header-section-number">8</span> Space in INLA, mgcv and by maximum likelihood</a></li>
+<li class="book-part">Space and phylogeny</li>
+<li><a class="" href="joint.html"><span class="header-section-number">9</span> Both at once</a></li>
+<li><a class="" href="joint-engines.html"><span class="header-section-number">10</span> Both at once in INLA and mgcv</a></li>
+<li><a class="" href="outcomes.html"><span class="header-section-number">11</span> Other kinds of outcome</a></li>
+<li class="book-part">Sampling and simulation</li>
+<li><a class="" href="sampling.html"><span class="header-section-number">12</span> Sampling instead of modelling</a></li>
+<li><a class="" href="simulation.html"><span class="header-section-number">13</span> Does it recover the truth?</a></li>
+<li class="book-part">Looking ahead</li>
+<li><a class="" href="where-next.html"><span class="header-section-number">14</span> Where next</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="space-engines" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">8</span> Space in INLA, mgcv and by maximum likelihood<a href="space-engines.html#space-engines" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="space-engines" class="section level1" number="8">
+<h1>
+<span class="header-section-number">8</span> Space in INLA, mgcv and by maximum likelihood<a class="anchor" aria-label="anchor" href="#space-engines"><i class="fas fa-link"></i></a>
+</h1>
 <p class="lede">
 Refit the neighbour model in INLA and catch its approximation failing, then put a surface on the globe itself, two ways: an SPDE mesh in INLA and a spline on the sphere in mgcv. Close with the classical spatial regressions.
 </p>
 <p class="chapter-meta">
 <span><b>Fitted with</b> INLA, mgcv, spatialreg</span><span><b>Model fitting</b> about 3 minutes</span><span><b>Packages</b> <code>INLA</code> <code>fmesher</code> <code>mgcv</code> <code>spdep</code> <code>spatialreg</code> <code>sf</code> <code>rnaturalearth</code> <code>brms</code> <code>ggplot2</code></span><span><a href="scripts/08-space-engines.R">Download the R script</a></span>
 </p>
-<div id="set-up-6" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">8.1</span> Set up<a href="space-engines.html#set-up-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="space-engines.html#cb171-1" tabindex="-1"></a><span class="fu">library</span>(INLA)</span>
-<span id="cb171-2"><a href="space-engines.html#cb171-2" tabindex="-1"></a><span class="fu">library</span>(fmesher)</span>
-<span id="cb171-3"><a href="space-engines.html#cb171-3" tabindex="-1"></a><span class="fu">library</span>(mgcv)</span>
-<span id="cb171-4"><a href="space-engines.html#cb171-4" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
-<span id="cb171-5"><a href="space-engines.html#cb171-5" tabindex="-1"></a><span class="fu">library</span>(spatialreg)</span>
-<span id="cb171-6"><a href="space-engines.html#cb171-6" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb171-7"><a href="space-engines.html#cb171-7" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
-<span id="cb171-8"><a href="space-engines.html#cb171-8" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb171-9"><a href="space-engines.html#cb171-9" tabindex="-1"></a></span>
-<span id="cb171-10"><a href="space-engines.html#cb171-10" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
-<span id="cb171-11"><a href="space-engines.html#cb171-11" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
-<span id="cb171-12"><a href="space-engines.html#cb171-12" tabindex="-1"></a>d<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> d<span class="sc">$</span>elevation <span class="sc">/</span> <span class="dv">1000</span></span>
-<span id="cb171-13"><a href="space-engines.html#cb171-13" tabindex="-1"></a>d<span class="sc">$</span>sp_id   <span class="ot">&lt;-</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(d))</span>
-<span id="cb171-14"><a href="space-engines.html#cb171-14" tabindex="-1"></a></span>
-<span id="cb171-15"><a href="space-engines.html#cb171-15" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> d)</span>
-<span id="cb171-16"><a href="space-engines.html#cb171-16" tabindex="-1"></a></span>
-<span id="cb171-17"><a href="space-engines.html#cb171-17" tabindex="-1"></a><span class="co"># the neighbour graph and the INLA priors of the earlier chapters</span></span>
-<span id="cb171-18"><a href="space-engines.html#cb171-18" tabindex="-1"></a>coords <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)])</span>
-<span id="cb171-19"><a href="space-engines.html#cb171-19" tabindex="-1"></a>nb <span class="ot">&lt;-</span> <span class="fu">make.sym.nb</span>(<span class="fu">knn2nb</span>(<span class="fu">knearneigh</span>(coords, <span class="at">k =</span> <span class="dv">5</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>)))</span>
-<span id="cb171-20"><a href="space-engines.html#cb171-20" tabindex="-1"></a>W  <span class="ot">&lt;-</span> <span class="fu">nb2mat</span>(nb, <span class="at">style =</span> <span class="st">&quot;B&quot;</span>)</span>
-<span id="cb171-21"><a href="space-engines.html#cb171-21" tabindex="-1"></a></span>
-<span id="cb171-22"><a href="space-engines.html#cb171-22" tabindex="-1"></a>fixed <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">0</span>, <span class="at">prec =</span> <span class="dv">1</span>)</span>
-<span id="cb171-23"><a href="space-engines.html#cb171-23" tabindex="-1"></a>slope_of <span class="ot">&lt;-</span> <span class="cf">function</span>(fit) {</span>
-<span id="cb171-24"><a href="space-engines.html#cb171-24" tabindex="-1"></a>  cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;sd&quot;</span>, <span class="st">&quot;0.025quant&quot;</span>, <span class="st">&quot;0.975quant&quot;</span>)</span>
-<span id="cb171-25"><a href="space-engines.html#cb171-25" tabindex="-1"></a>  <span class="fu">round</span>(<span class="fu">unlist</span>(fit<span class="sc">$</span>summary.fixed[<span class="st">&quot;elev_km&quot;</span>, cols]), <span class="dv">2</span>)</span>
-<span id="cb171-26"><a href="space-engines.html#cb171-26" tabindex="-1"></a>}</span></code></pre></div>
+<div id="set-up-6" class="section level2" number="8.1">
+<h2>
+<span class="header-section-number">8.1</span> Set up<a class="anchor" aria-label="anchor" href="#set-up-6"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb171"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">INLA</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://inlabru-org.github.io/fmesher/">fmesher</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">mgcv</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-spatial/spdep/">spdep</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-spatial/spatialreg/">spatialreg</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/">sf</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/rnaturalearth/">rnaturalearth</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">base</span> <span class="op">&lt;-</span> <span class="st">"https://rehan-muh.github.io/tutorials/data/"</span></span>
+<span><span class="va">d</span>    <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">base</span>, <span class="st">"languages.csv"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">d</span><span class="op">$</span><span class="va">elev_km</span> <span class="op">&lt;-</span> <span class="va">d</span><span class="op">$</span><span class="va">elevation</span> <span class="op">/</span> <span class="fl">1000</span></span>
+<span><span class="va">d</span><span class="op">$</span><span class="va">sp_id</span>   <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">d</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">m0</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">ejectives</span> <span class="op">~</span> <span class="va">elev_km</span>, family <span class="op">=</span> <span class="va">binomial</span>, data <span class="op">=</span> <span class="va">d</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># the neighbour graph and the INLA priors of the earlier chapters</span></span>
+<span><span class="va">coords</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="va">d</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"lon"</span>, <span class="st">"lat"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">nb</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/testnb.html">make.sym.nb</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/spdep/reference/knn2nb.html">knn2nb</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/spdep/reference/knearneigh.html">knearneigh</a></span><span class="op">(</span><span class="va">coords</span>, k <span class="op">=</span> <span class="fl">5</span>, longlat <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">W</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/nb2mat.html">nb2mat</a></span><span class="op">(</span><span class="va">nb</span>, style <span class="op">=</span> <span class="st">"B"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">fixed</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>mean <span class="op">=</span> <span class="fl">0</span>, prec <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">slope_of</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">fit</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">cols</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"mean"</span>, <span class="st">"sd"</span>, <span class="st">"0.025quant"</span>, <span class="st">"0.975quant"</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="va">fit</span><span class="op">$</span><span class="va">summary.fixed</span><span class="op">[</span><span class="st">"elev_km"</span>, <span class="va">cols</span><span class="op">]</span><span class="op">)</span>, <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
 </div>
-<div id="neighbours-in-inla-bym2" class="section level2 hasAnchor" number="8.2">
-<h2><span class="header-section-number">8.2</span> Neighbours in INLA: BYM2<a href="space-engines.html#neighbours-in-inla-bym2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="neighbours-in-inla-bym2" class="section level2" number="8.2">
+<h2>
+<span class="header-section-number">8.2</span> Neighbours in INLA: BYM2<a class="anchor" aria-label="anchor" href="#neighbours-in-inla-bym2"><i class="fas fa-link"></i></a>
+</h2>
 <p>INLA has the BYM2 model of Chapter <a href="space-neighbours.html#space-neighbours">7</a> built in. It takes the 0/1 matrix as its <code>graph</code>, and the two priors match the brms ones: an exponential(1) on the standard deviation, and a prior on the spatial share <code>phi</code> that is as likely to be above one half as below.</p>
-<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="space-engines.html#cb172-1" tabindex="-1"></a>pc_bym <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">prec =</span> <span class="fu">list</span>(<span class="at">prior =</span> <span class="st">&quot;pc.prec&quot;</span>, <span class="at">param =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="fl">0.05</span>)),</span>
-<span id="cb172-2"><a href="space-engines.html#cb172-2" tabindex="-1"></a>               <span class="at">phi  =</span> <span class="fu">list</span>(<span class="at">prior =</span> <span class="st">&quot;pc&quot;</span>, <span class="at">param =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>)))</span>
-<span id="cb172-3"><a href="space-engines.html#cb172-3" tabindex="-1"></a></span>
-<span id="cb172-4"><a href="space-engines.html#cb172-4" tabindex="-1"></a>i_bym <span class="ot">&lt;-</span> <span class="fu">inla</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span></span>
-<span id="cb172-5"><a href="space-engines.html#cb172-5" tabindex="-1"></a>                <span class="fu">f</span>(sp_id, <span class="at">model =</span> <span class="st">&quot;bym2&quot;</span>, <span class="at">graph =</span> W, <span class="at">scale.model =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb172-6"><a href="space-engines.html#cb172-6" tabindex="-1"></a>                  <span class="at">hyper =</span> pc_bym),</span>
-<span id="cb172-7"><a href="space-engines.html#cb172-7" tabindex="-1"></a>              <span class="at">family =</span> <span class="st">&quot;binomial&quot;</span>, <span class="at">data =</span> d, <span class="at">control.fixed =</span> fixed)</span>
-<span id="cb172-8"><a href="space-engines.html#cb172-8" tabindex="-1"></a></span>
-<span id="cb172-9"><a href="space-engines.html#cb172-9" tabindex="-1"></a><span class="fu">slope_of</span>(i_bym)</span></code></pre></div>
+<div class="sourceCode" id="cb172"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">pc_bym</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>prec <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>prior <span class="op">=</span> <span class="st">"pc.prec"</span>, param <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">0.05</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>               phi  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>prior <span class="op">=</span> <span class="st">"pc"</span>, param <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">i_bym</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/INLA/man/inla.html">inla</a></span><span class="op">(</span><span class="va">ejectives</span> <span class="op">~</span> <span class="va">elev_km</span> <span class="op">+</span></span>
+<span>                <span class="fu"><a href="https://rdrr.io/pkg/INLA/man/f.html">f</a></span><span class="op">(</span><span class="va">sp_id</span>, model <span class="op">=</span> <span class="st">"bym2"</span>, graph <span class="op">=</span> <span class="va">W</span>, scale.model <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>                  hyper <span class="op">=</span> <span class="va">pc_bym</span><span class="op">)</span>,</span>
+<span>              family <span class="op">=</span> <span class="st">"binomial"</span>, data <span class="op">=</span> <span class="va">d</span>, control.fixed <span class="op">=</span> <span class="va">fixed</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">slope_of</span><span class="op">(</span><span class="va">i_bym</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##       mean         sd 0.025quant 0.975quant 
 ##       2.99       1.47       0.58       5.54</code></pre>
 <p>Look at the slope. In Chapter <a href="space-neighbours.html#space-neighbours">7</a>, brms gave about 1.2 for this model, with the same data, the same graph and the same priors. INLA’s answer is more than twice that, with an interval several times wider, so one of the two fits is wrong.</p>
-<div id="check-the-approximation" class="section level3 hasAnchor" number="8.2.1">
-<h3><span class="header-section-number">8.2.1</span> Check the approximation<a href="space-engines.html#check-the-approximation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="check-the-approximation" class="section level3" number="8.2.1">
+<h3>
+<span class="header-section-number">8.2.1</span> Check the approximation<a class="anchor" aria-label="anchor" href="#check-the-approximation"><i class="fas fa-link"></i></a>
+</h3>
 <p>INLA approximates instead of sampling, and an approximation can fail without an error message. Binary data with one latent value per language, which is our case, is where it is under the most strain.</p>
-<p>There is a cheap test. INLA has two computational modes: the current default, which is fast and applies a variational correction <span class="citation">(<a href="#ref-vanniekerk2023">Niekerk et al. 2023</a>)</span>, and an older one called <code>classic</code>, which is slower and built differently. When the two agree, the answer is very likely sound. When they disagree, at least one is wrong. Every INLA fit stores the arguments it was called with, so a refit needs no retyping.</p>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="space-engines.html#cb174-1" tabindex="-1"></a>classic_of <span class="ot">&lt;-</span> <span class="cf">function</span>(fit) {</span>
-<span id="cb174-2"><a href="space-engines.html#cb174-2" tabindex="-1"></a>  args <span class="ot">&lt;-</span> fit<span class="sc">$</span>.args</span>
-<span id="cb174-3"><a href="space-engines.html#cb174-3" tabindex="-1"></a>  args<span class="sc">$</span>inla.mode <span class="ot">&lt;-</span> <span class="st">&quot;classic&quot;</span></span>
-<span id="cb174-4"><a href="space-engines.html#cb174-4" tabindex="-1"></a>  <span class="fu">do.call</span>(inla, args)</span>
-<span id="cb174-5"><a href="space-engines.html#cb174-5" tabindex="-1"></a>}</span>
-<span id="cb174-6"><a href="space-engines.html#cb174-6" tabindex="-1"></a>i_bym_classic <span class="ot">&lt;-</span> <span class="fu">classic_of</span>(i_bym)</span>
-<span id="cb174-7"><a href="space-engines.html#cb174-7" tabindex="-1"></a></span>
-<span id="cb174-8"><a href="space-engines.html#cb174-8" tabindex="-1"></a><span class="fu">rbind</span>(<span class="at">default =</span> <span class="fu">slope_of</span>(i_bym), <span class="at">classic =</span> <span class="fu">slope_of</span>(i_bym_classic))</span></code></pre></div>
+<p>There is a cheap test. INLA has two computational modes: the current default, which is fast and applies a variational correction <span class="citation">(<a href="references.html#ref-vanniekerk2023">Niekerk et al. 2023</a>)</span>, and an older one called <code>classic</code>, which is slower and built differently. When the two agree, the answer is very likely sound. When they disagree, at least one is wrong. Every INLA fit stores the arguments it was called with, so a refit needs no retyping.</p>
+<div class="sourceCode" id="cb174"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">classic_of</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">fit</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">args</span> <span class="op">&lt;-</span> <span class="va">fit</span><span class="op">$</span><span class="va">.args</span></span>
+<span>  <span class="va">args</span><span class="op">$</span><span class="va">inla.mode</span> <span class="op">&lt;-</span> <span class="st">"classic"</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/do.call.html">do.call</a></span><span class="op">(</span><span class="va">inla</span>, <span class="va">args</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="va">i_bym_classic</span> <span class="op">&lt;-</span> <span class="fu">classic_of</span><span class="op">(</span><span class="va">i_bym</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span>default <span class="op">=</span> <span class="fu">slope_of</span><span class="op">(</span><span class="va">i_bym</span><span class="op">)</span>, classic <span class="op">=</span> <span class="fu">slope_of</span><span class="op">(</span><span class="va">i_bym_classic</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##         mean   sd 0.025quant 0.975quant
 ## default 2.99 1.47       0.58       5.54
 ## classic 1.13 0.32       0.56       1.80</code></pre>
@@ -425,72 +179,80 @@ Refit the neighbour model in INLA and catch its approximation failing, then put 
 </blockquote>
 </div>
 </div>
-<div id="a-surface-on-the-sphere-spde" class="section level2 hasAnchor" number="8.3">
-<h2><span class="header-section-number">8.3</span> A surface on the sphere: SPDE<a href="space-engines.html#a-surface-on-the-sphere-spde" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Chapter <a href="space-surface.html#space-surface">6</a> drew its surface on a flat map. INLA’s stochastic partial differential equation (SPDE) approach <span class="citation">(<a href="#ref-lindgren2011">Lindgren et al. 2011</a>; <a href="#ref-krainski2019">Krainski et al. 2019</a>)</span> builds a Gaussian process on a mesh of triangles, and the mesh can cover the globe. There is no projection and no edge.</p>
+<div id="a-surface-on-the-sphere-spde" class="section level2" number="8.3">
+<h2>
+<span class="header-section-number">8.3</span> A surface on the sphere: SPDE<a class="anchor" aria-label="anchor" href="#a-surface-on-the-sphere-spde"><i class="fas fa-link"></i></a>
+</h2>
+<p>Chapter <a href="space-surface.html#space-surface">6</a> drew its surface on a flat map. INLA’s stochastic partial differential equation (SPDE) approach <span class="citation">(<a href="references.html#ref-lindgren2011">Lindgren et al. 2011</a>; <a href="references.html#ref-krainski2019">Krainski et al. 2019</a>)</span> builds a Gaussian process on a mesh of triangles, and the mesh can cover the globe. There is no projection and no edge.</p>
 <p>It takes four steps.</p>
 <p><strong>1. Put the languages on the unit sphere</strong>, with the three lines of Chapter <a href="maps.html#maps">5</a>.</p>
-<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="space-engines.html#cb176-1" tabindex="-1"></a>to_sphere <span class="ot">&lt;-</span> <span class="cf">function</span>(lon, lat) {</span>
-<span id="cb176-2"><a href="space-engines.html#cb176-2" tabindex="-1"></a>  rad <span class="ot">&lt;-</span> pi <span class="sc">/</span> <span class="dv">180</span></span>
-<span id="cb176-3"><a href="space-engines.html#cb176-3" tabindex="-1"></a>  <span class="fu">cbind</span>(<span class="fu">cos</span>(lat <span class="sc">*</span> rad) <span class="sc">*</span> <span class="fu">cos</span>(lon <span class="sc">*</span> rad),</span>
-<span id="cb176-4"><a href="space-engines.html#cb176-4" tabindex="-1"></a>        <span class="fu">cos</span>(lat <span class="sc">*</span> rad) <span class="sc">*</span> <span class="fu">sin</span>(lon <span class="sc">*</span> rad),</span>
-<span id="cb176-5"><a href="space-engines.html#cb176-5" tabindex="-1"></a>        <span class="fu">sin</span>(lat <span class="sc">*</span> rad))</span>
-<span id="cb176-6"><a href="space-engines.html#cb176-6" tabindex="-1"></a>}</span>
-<span id="cb176-7"><a href="space-engines.html#cb176-7" tabindex="-1"></a>xyz <span class="ot">&lt;-</span> <span class="fu">to_sphere</span>(d<span class="sc">$</span>lon, d<span class="sc">$</span>lat)</span></code></pre></div>
+<div class="sourceCode" id="cb176"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">to_sphere</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">rad</span> <span class="op">&lt;-</span> <span class="va">pi</span> <span class="op">/</span> <span class="fl">180</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Trig.html">cos</a></span><span class="op">(</span><span class="va">lat</span> <span class="op">*</span> <span class="va">rad</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Trig.html">cos</a></span><span class="op">(</span><span class="va">lon</span> <span class="op">*</span> <span class="va">rad</span><span class="op">)</span>,</span>
+<span>        <span class="fu"><a href="https://rdrr.io/r/base/Trig.html">cos</a></span><span class="op">(</span><span class="va">lat</span> <span class="op">*</span> <span class="va">rad</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Trig.html">sin</a></span><span class="op">(</span><span class="va">lon</span> <span class="op">*</span> <span class="va">rad</span><span class="op">)</span>,</span>
+<span>        <span class="fu"><a href="https://rdrr.io/r/base/Trig.html">sin</a></span><span class="op">(</span><span class="va">lat</span> <span class="op">*</span> <span class="va">rad</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="va">xyz</span> <span class="op">&lt;-</span> <span class="fu">to_sphere</span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">lon</span>, <span class="va">d</span><span class="op">$</span><span class="va">lat</span><span class="op">)</span></span></code></pre></div>
 <p><strong>2. Build the mesh.</strong> <code>globe = 12</code> divides the sphere into triangles with sides of roughly 600 km. The surface is free to vary between mesh nodes, so the triangles should be clearly smaller than the distances over which you expect it to change.</p>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="space-engines.html#cb177-1" tabindex="-1"></a>mesh <span class="ot">&lt;-</span> <span class="fu">fm_rcdt_2d</span>(<span class="at">globe =</span> <span class="dv">12</span>)</span>
-<span id="cb177-2"><a href="space-engines.html#cb177-2" tabindex="-1"></a>mesh<span class="sc">$</span>n</span></code></pre></div>
+<div class="sourceCode" id="cb177"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mesh</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://inlabru-org.github.io/fmesher/reference/fm_rcdt_2d.html">fm_rcdt_2d</a></span><span class="op">(</span>globe <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span>
+<span><span class="va">mesh</span><span class="op">$</span><span class="va">n</span></span></code></pre></div>
 <pre><code>## [1] 1442</code></pre>
 <p><strong>3. Define the surface and its priors.</strong> Distances on the unit sphere are in radians; one radian is about 6,370 km. The priors say that the range, the distance at which correlation has nearly died out, is unlikely to be below 0.05 radians (about 300 km), and that the standard deviation is unlikely to exceed 3, as everywhere else.</p>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="space-engines.html#cb179-1" tabindex="-1"></a>spde <span class="ot">&lt;-</span> <span class="fu">inla.spde2.pcmatern</span>(mesh,</span>
-<span id="cb179-2"><a href="space-engines.html#cb179-2" tabindex="-1"></a>                            <span class="at">prior.range =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.05</span>),</span>
-<span id="cb179-3"><a href="space-engines.html#cb179-3" tabindex="-1"></a>                            <span class="at">prior.sigma =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="fl">0.05</span>))</span></code></pre></div>
-<p><strong>4. Connect languages to the mesh and fit.</strong> A language rarely sits on a mesh node, so its value is interpolated from the three corners of its triangle. <code>fm_basis()</code> computes those weights, and <code>inla.stack()</code> bundles them with the data. This is the one piece of bookkeeping the SPDE approach demands.</p>
-<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="space-engines.html#cb180-1" tabindex="-1"></a>loc_weights <span class="ot">&lt;-</span> <span class="fu">fm_basis</span>(mesh, <span class="at">loc =</span> xyz)</span>
-<span id="cb180-2"><a href="space-engines.html#cb180-2" tabindex="-1"></a></span>
-<span id="cb180-3"><a href="space-engines.html#cb180-3" tabindex="-1"></a>stack <span class="ot">&lt;-</span> <span class="fu">inla.stack</span>(</span>
-<span id="cb180-4"><a href="space-engines.html#cb180-4" tabindex="-1"></a>  <span class="at">data    =</span> <span class="fu">list</span>(<span class="at">y =</span> d<span class="sc">$</span>ejectives),</span>
-<span id="cb180-5"><a href="space-engines.html#cb180-5" tabindex="-1"></a>  <span class="at">A       =</span> <span class="fu">list</span>(loc_weights, <span class="dv">1</span>),</span>
-<span id="cb180-6"><a href="space-engines.html#cb180-6" tabindex="-1"></a>  <span class="at">effects =</span> <span class="fu">list</span>(<span class="at">field =</span> <span class="fu">seq_len</span>(mesh<span class="sc">$</span>n),</span>
-<span id="cb180-7"><a href="space-engines.html#cb180-7" tabindex="-1"></a>                 <span class="fu">data.frame</span>(<span class="at">intercept =</span> <span class="dv">1</span>, <span class="at">elev_km =</span> d<span class="sc">$</span>elev_km)))</span>
-<span id="cb180-8"><a href="space-engines.html#cb180-8" tabindex="-1"></a></span>
-<span id="cb180-9"><a href="space-engines.html#cb180-9" tabindex="-1"></a>i_spde <span class="ot">&lt;-</span> <span class="fu">inla</span>(y <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> intercept <span class="sc">+</span> elev_km <span class="sc">+</span> <span class="fu">f</span>(field, <span class="at">model =</span> spde),</span>
-<span id="cb180-10"><a href="space-engines.html#cb180-10" tabindex="-1"></a>               <span class="at">family =</span> <span class="st">&quot;binomial&quot;</span>, <span class="at">data =</span> <span class="fu">inla.stack.data</span>(stack),</span>
-<span id="cb180-11"><a href="space-engines.html#cb180-11" tabindex="-1"></a>               <span class="at">control.predictor =</span> <span class="fu">list</span>(<span class="at">A =</span> <span class="fu">inla.stack.A</span>(stack)),</span>
-<span id="cb180-12"><a href="space-engines.html#cb180-12" tabindex="-1"></a>               <span class="at">control.fixed =</span> fixed)</span>
-<span id="cb180-13"><a href="space-engines.html#cb180-13" tabindex="-1"></a></span>
-<span id="cb180-14"><a href="space-engines.html#cb180-14" tabindex="-1"></a>ci <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mean&quot;</span>, <span class="st">&quot;0.025quant&quot;</span>, <span class="st">&quot;0.975quant&quot;</span>)</span>
-<span id="cb180-15"><a href="space-engines.html#cb180-15" tabindex="-1"></a><span class="fu">rbind</span>(<span class="at">default =</span> <span class="fu">slope_of</span>(i_spde), <span class="at">classic =</span> <span class="fu">slope_of</span>(<span class="fu">classic_of</span>(i_spde)))</span></code></pre></div>
+<div class="sourceCode" id="cb179"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">spde</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/INLA/man/inla.spde2.pcmatern.html">inla.spde2.pcmatern</a></span><span class="op">(</span><span class="va">mesh</span>,</span>
+<span>                            prior.range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.05</span>, <span class="fl">0.05</span><span class="op">)</span>,</span>
+<span>                            prior.sigma <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">0.05</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><strong>4. Connect languages to the mesh and fit.</strong> A language rarely sits on a mesh node, so its value is interpolated from the three corners of its triangle. <code><a href="https://inlabru-org.github.io/fmesher/reference/fm_basis.html">fm_basis()</a></code> computes those weights, and <code><a href="https://rdrr.io/pkg/INLA/man/inla.stack.html">inla.stack()</a></code> bundles them with the data. This is the one piece of bookkeeping the SPDE approach demands.</p>
+<div class="sourceCode" id="cb180"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">loc_weights</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://inlabru-org.github.io/fmesher/reference/fm_basis.html">fm_basis</a></span><span class="op">(</span><span class="va">mesh</span>, loc <span class="op">=</span> <span class="va">xyz</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">stack</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/INLA/man/inla.stack.html">inla.stack</a></span><span class="op">(</span></span>
+<span>  data    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">d</span><span class="op">$</span><span class="va">ejectives</span><span class="op">)</span>,</span>
+<span>  A       <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">loc_weights</span>, <span class="fl">1</span><span class="op">)</span>,</span>
+<span>  effects <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>field <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="va">mesh</span><span class="op">$</span><span class="va">n</span><span class="op">)</span>,</span>
+<span>                 <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>intercept <span class="op">=</span> <span class="fl">1</span>, elev_km <span class="op">=</span> <span class="va">d</span><span class="op">$</span><span class="va">elev_km</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">i_spde</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/INLA/man/inla.html">inla</a></span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="fl">0</span> <span class="op">+</span> <span class="va">intercept</span> <span class="op">+</span> <span class="va">elev_km</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/pkg/INLA/man/f.html">f</a></span><span class="op">(</span><span class="va">field</span>, model <span class="op">=</span> <span class="va">spde</span><span class="op">)</span>,</span>
+<span>               family <span class="op">=</span> <span class="st">"binomial"</span>, data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/INLA/man/inla.stack.html">inla.stack.data</a></span><span class="op">(</span><span class="va">stack</span><span class="op">)</span>,</span>
+<span>               control.predictor <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>A <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/INLA/man/inla.stack.html">inla.stack.A</a></span><span class="op">(</span><span class="va">stack</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>               control.fixed <span class="op">=</span> <span class="va">fixed</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ci</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"mean"</span>, <span class="st">"0.025quant"</span>, <span class="st">"0.975quant"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span>default <span class="op">=</span> <span class="fu">slope_of</span><span class="op">(</span><span class="va">i_spde</span><span class="op">)</span>, classic <span class="op">=</span> <span class="fu">slope_of</span><span class="op">(</span><span class="fu">classic_of</span><span class="op">(</span><span class="va">i_spde</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##         mean   sd 0.025quant 0.975quant
 ## default 1.09 0.32       0.48       1.73
 ## classic 1.03 0.31       0.44       1.67</code></pre>
-<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="space-engines.html#cb182-1" tabindex="-1"></a><span class="fu">round</span>(i_spde<span class="sc">$</span>summary.hyperpar[, ci], <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb182"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">i_spde</span><span class="op">$</span><span class="va">summary.hyperpar</span><span class="op">[</span>, <span class="va">ci</span><span class="op">]</span>, <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##                 mean 0.025quant 0.975quant
 ## Range for field 1.15       0.63       1.91
 ## Stdev for field 4.97       2.87       7.95</code></pre>
 <p>The two modes agree for this model, so the default fit stands.</p>
 <p>The estimated range is about 7,300 km. The range of a Matérn surface is the distance at which correlation has fallen to roughly 0.1, so it is always a larger number than the length-scale brms reported in Chapter <a href="space-surface.html#space-surface">6</a>, by a factor of about two.</p>
 <p>Because the surface is defined everywhere on the mesh, it can be evaluated anywhere, not only where there are languages. Evaluate it on a grid of land points and draw the map.</p>
-<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="space-engines.html#cb184-1" tabindex="-1"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="st">&quot;small&quot;</span>, <span class="at">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span>
-<span id="cb184-2"><a href="space-engines.html#cb184-2" tabindex="-1"></a><span class="fu">sf_use_s2</span>(<span class="cn">FALSE</span>)</span>
-<span id="cb184-3"><a href="space-engines.html#cb184-3" tabindex="-1"></a></span>
-<span id="cb184-4"><a href="space-engines.html#cb184-4" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">lon =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">179</span>, <span class="dv">179</span>, <span class="dv">2</span>), <span class="at">lat =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">55</span>, <span class="dv">75</span>, <span class="dv">2</span>), <span class="at">elev_km =</span> <span class="dv">0</span>)</span>
-<span id="cb184-5"><a href="space-engines.html#cb184-5" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(grid, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>), <span class="at">crs =</span> <span class="dv">4326</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb184-6"><a href="space-engines.html#cb184-6" tabindex="-1"></a>grid <span class="ot">&lt;-</span> grid[<span class="fu">lengths</span>(<span class="fu">st_intersects</span>(grid, world)) <span class="sc">&gt;</span> <span class="dv">0</span>, ]</span>
-<span id="cb184-7"><a href="space-engines.html#cb184-7" tabindex="-1"></a></span>
-<span id="cb184-8"><a href="space-engines.html#cb184-8" tabindex="-1"></a>grid<span class="sc">$</span>field <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">fm_basis</span>(mesh, <span class="at">loc =</span> <span class="fu">to_sphere</span>(grid<span class="sc">$</span>lon, grid<span class="sc">$</span>lat)) <span class="sc">%*%</span></span>
-<span id="cb184-9"><a href="space-engines.html#cb184-9" tabindex="-1"></a>                          i_spde<span class="sc">$</span>summary.random<span class="sc">$</span>field<span class="sc">$</span>mean)</span>
-<span id="cb184-10"><a href="space-engines.html#cb184-10" tabindex="-1"></a></span>
-<span id="cb184-11"><a href="space-engines.html#cb184-11" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb184-12"><a href="space-engines.html#cb184-12" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> world, <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
-<span id="cb184-13"><a href="space-engines.html#cb184-13" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> grid, <span class="fu">aes</span>(<span class="at">colour =</span> field), <span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">shape =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
-<span id="cb184-14"><a href="space-engines.html#cb184-14" tabindex="-1"></a>  <span class="fu">scale_colour_gradient2</span>(<span class="at">low =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#F0EFEC&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#E34948&quot;</span>,</span>
-<span id="cb184-15"><a href="space-engines.html#cb184-15" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&quot;spatial effect&quot;</span>) <span class="sc">+</span></span>
-<span id="cb184-16"><a href="space-engines.html#cb184-16" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=eqearth&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:space-engines-spde-map"></span>
+<div class="sourceCode" id="cb184"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">world</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://docs.ropensci.org/rnaturalearth/reference/ne_countries.html">ne_countries</a></span><span class="op">(</span>scale <span class="op">=</span> <span class="st">"small"</span>, returnclass <span class="op">=</span> <span class="st">"sf"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/s2.html">sf_use_s2</a></span><span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">grid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/expand.grid.html">expand.grid</a></span><span class="op">(</span>lon <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="op">-</span><span class="fl">179</span>, <span class="fl">179</span>, <span class="fl">2</span><span class="op">)</span>, lat <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="op">-</span><span class="fl">55</span>, <span class="fl">75</span>, <span class="fl">2</span><span class="op">)</span>, elev_km <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
+<span><span class="va">grid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html">st_as_sf</a></span><span class="op">(</span><span class="va">grid</span>, coords <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"lon"</span>, <span class="st">"lat"</span><span class="op">)</span>, crs <span class="op">=</span> <span class="fl">4326</span>, remove <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">grid</span> <span class="op">&lt;-</span> <span class="va">grid</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/lengths.html">lengths</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/geos_binary_pred.html">st_intersects</a></span><span class="op">(</span><span class="va">grid</span>, <span class="va">world</span><span class="op">)</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">0</span>, <span class="op">]</span></span>
+<span></span>
+<span><span class="va">grid</span><span class="op">$</span><span class="va">field</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/vector.html">as.vector</a></span><span class="op">(</span><span class="fu"><a href="https://inlabru-org.github.io/fmesher/reference/fm_basis.html">fm_basis</a></span><span class="op">(</span><span class="va">mesh</span>, loc <span class="op">=</span> <span class="fu">to_sphere</span><span class="op">(</span><span class="va">grid</span><span class="op">$</span><span class="va">lon</span>, <span class="va">grid</span><span class="op">$</span><span class="va">lat</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/matmult.html">%*%</a></span></span>
+<span>                          <span class="va">i_spde</span><span class="op">$</span><span class="va">summary.random</span><span class="op">$</span><span class="va">field</span><span class="op">$</span><span class="va">mean</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">world</span>, fill <span class="op">=</span> <span class="st">"grey94"</span>, colour <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">grid</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="va">field</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1.5</span>, shape <span class="op">=</span> <span class="fl">15</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html">scale_colour_gradient2</a></span><span class="op">(</span>low <span class="op">=</span> <span class="st">"#2A78D6"</span>, mid <span class="op">=</span> <span class="st">"#F0EFEC"</span>, high <span class="op">=</span> <span class="st">"#E34948"</span>,</span>
+<span>                         name <span class="op">=</span> <span class="st">"spatial effect"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">coord_sf</a></span><span class="op">(</span>crs <span class="op">=</span> <span class="st">"+proj=eqearth"</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:space-engines-spde-map"></span>
 <span id="fig:space-engines-spde-map" style="display:block;"></span>
-<img src="figures/08-space-engines/spde-map-1.png" alt="Posterior mean of the SPDE surface on land, on the logit scale. Red regions favour ejectives beyond what elevation predicts; blue regions disfavour them." width="710" />
-<p class="caption">
+<img src="figures/08-space-engines/spde-map-1.png" alt="Posterior mean of the SPDE surface on land, on the logit scale. Red regions favour ejectives beyond what elevation predicts; blue regions disfavour them." width="710"><p class="caption">
 Figure 8.1: Posterior mean of the SPDE surface on land, on the logit scale. Red regions favour ejectives beyond what elevation predicts; blue regions disfavour them.
 </p>
 </div>
@@ -498,48 +260,57 @@ Figure 8.1: Posterior mean of the SPDE surface on land, on the logit scale. Red 
 <p><strong>What this assumes.</strong> The SPDE surface is a Matérn field, a rougher relative of the default surface in brms. Its smoothness is fixed by the method; the range and standard deviation are estimated.</p>
 </blockquote>
 </div>
-<div id="a-surface-on-the-sphere-mgcv" class="section level2 hasAnchor" number="8.4">
-<h2><span class="header-section-number">8.4</span> A surface on the sphere: mgcv<a href="space-engines.html#a-surface-on-the-sphere-mgcv" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In mgcv a spatial surface is one more penalised smooth. <code>bs = "sos"</code> is a spline on the sphere <span class="citation">(<a href="#ref-wahba1981">Wahba 1981</a>)</span>. It takes latitude and longitude in degrees, in that order, and measures distance along the globe.</p>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="space-engines.html#cb185-1" tabindex="-1"></a>g_sos <span class="ot">&lt;-</span> <span class="fu">gam</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">s</span>(lat, lon, <span class="at">bs =</span> <span class="st">&quot;sos&quot;</span>, <span class="at">k =</span> <span class="dv">60</span>),</span>
-<span id="cb185-2"><a href="space-engines.html#cb185-2" tabindex="-1"></a>             <span class="at">family =</span> binomial, <span class="at">data =</span> d, <span class="at">method =</span> <span class="st">&quot;REML&quot;</span>)</span>
-<span id="cb185-3"><a href="space-engines.html#cb185-3" tabindex="-1"></a></span>
-<span id="cb185-4"><a href="space-engines.html#cb185-4" tabindex="-1"></a><span class="fu">summary</span>(g_sos)<span class="sc">$</span>p.table</span></code></pre></div>
+<div id="a-surface-on-the-sphere-mgcv" class="section level2" number="8.4">
+<h2>
+<span class="header-section-number">8.4</span> A surface on the sphere: mgcv<a class="anchor" aria-label="anchor" href="#a-surface-on-the-sphere-mgcv"><i class="fas fa-link"></i></a>
+</h2>
+<p>In mgcv a spatial surface is one more penalised smooth. <code>bs = "sos"</code> is a spline on the sphere <span class="citation">(<a href="references.html#ref-wahba1981">Wahba 1981</a>)</span>. It takes latitude and longitude in degrees, in that order, and measures distance along the globe.</p>
+<div class="sourceCode" id="cb185"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">g_sos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/gam.html">gam</a></span><span class="op">(</span><span class="va">ejectives</span> <span class="op">~</span> <span class="va">elev_km</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html">s</a></span><span class="op">(</span><span class="va">lat</span>, <span class="va">lon</span>, bs <span class="op">=</span> <span class="st">"sos"</span>, k <span class="op">=</span> <span class="fl">60</span><span class="op">)</span>,</span>
+<span>             family <span class="op">=</span> <span class="va">binomial</span>, data <span class="op">=</span> <span class="va">d</span>, method <span class="op">=</span> <span class="st">"REML"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">g_sos</span><span class="op">)</span><span class="op">$</span><span class="va">p.table</span></span></code></pre></div>
 <pre><code>##             Estimate Std. Error z value Pr(&gt;|z|)
 ## (Intercept)    -6.22      1.676   -3.71 0.000208
 ## elev_km         1.10      0.352    3.14 0.001705</code></pre>
-<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="space-engines.html#cb187-1" tabindex="-1"></a><span class="fu">summary</span>(g_sos)<span class="sc">$</span>s.table</span></code></pre></div>
+<div class="sourceCode" id="cb187"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">g_sos</span><span class="op">)</span><span class="op">$</span><span class="va">s.table</span></span></code></pre></div>
 <pre><code>##             edf Ref.df Chi.sq p-value
 ## s(lat,lon) 23.4     59   69.1       0</code></pre>
-<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="space-engines.html#cb189-1" tabindex="-1"></a><span class="fu">k.check</span>(g_sos)</span></code></pre></div>
-<pre><code>##            k&#39;  edf k-index p-value
+<div class="sourceCode" id="cb189"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/k.check.html">k.check</a></span><span class="op">(</span><span class="va">g_sos</span><span class="op">)</span></span></code></pre></div>
+<pre><code>##            k'  edf k-index p-value
 ## s(lat,lon) 59 23.4       1   0.623</code></pre>
-<p><code>k = 60</code> is the largest number of building blocks the surface may use; the penalty then decides how many it effectively needs, reported as <code>edf</code>. If <code>edf</code> comes out close to <code>k</code>, the surface needed more room, so raise <code>k</code> and refit. <code>k.check()</code> runs a formal version of that test.</p>
-<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="space-engines.html#cb191-1" tabindex="-1"></a>grid<span class="sc">$</span>surface <span class="ot">&lt;-</span> <span class="fu">predict</span>(g_sos, <span class="at">newdata =</span> grid, <span class="at">type =</span> <span class="st">&quot;terms&quot;</span>,</span>
-<span id="cb191-2"><a href="space-engines.html#cb191-2" tabindex="-1"></a>                        <span class="at">terms =</span> <span class="st">&quot;s(lat,lon)&quot;</span>)[, <span class="dv">1</span>]</span>
-<span id="cb191-3"><a href="space-engines.html#cb191-3" tabindex="-1"></a></span>
-<span id="cb191-4"><a href="space-engines.html#cb191-4" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb191-5"><a href="space-engines.html#cb191-5" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> world, <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
-<span id="cb191-6"><a href="space-engines.html#cb191-6" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> grid, <span class="fu">aes</span>(<span class="at">colour =</span> surface), <span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">shape =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
-<span id="cb191-7"><a href="space-engines.html#cb191-7" tabindex="-1"></a>  <span class="fu">scale_colour_gradient2</span>(<span class="at">low =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;#F0EFEC&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#E34948&quot;</span>,</span>
-<span id="cb191-8"><a href="space-engines.html#cb191-8" tabindex="-1"></a>                         <span class="at">name =</span> <span class="st">&quot;spatial effect&quot;</span>) <span class="sc">+</span></span>
-<span id="cb191-9"><a href="space-engines.html#cb191-9" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=eqearth&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:space-engines-sos-map"></span>
+<p><code>k = 60</code> is the largest number of building blocks the surface may use; the penalty then decides how many it effectively needs, reported as <code>edf</code>. If <code>edf</code> comes out close to <code>k</code>, the surface needed more room, so raise <code>k</code> and refit. <code><a href="https://rdrr.io/pkg/mgcv/man/k.check.html">k.check()</a></code> runs a formal version of that test.</p>
+<div class="sourceCode" id="cb191"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">grid</span><span class="op">$</span><span class="va">surface</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">g_sos</span>, newdata <span class="op">=</span> <span class="va">grid</span>, type <span class="op">=</span> <span class="st">"terms"</span>,</span>
+<span>                        terms <span class="op">=</span> <span class="st">"s(lat,lon)"</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">world</span>, fill <span class="op">=</span> <span class="st">"grey94"</span>, colour <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">grid</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="va">surface</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">1.5</span>, shape <span class="op">=</span> <span class="fl">15</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html">scale_colour_gradient2</a></span><span class="op">(</span>low <span class="op">=</span> <span class="st">"#2A78D6"</span>, mid <span class="op">=</span> <span class="st">"#F0EFEC"</span>, high <span class="op">=</span> <span class="st">"#E34948"</span>,</span>
+<span>                         name <span class="op">=</span> <span class="st">"spatial effect"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">coord_sf</a></span><span class="op">(</span>crs <span class="op">=</span> <span class="st">"+proj=eqearth"</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:space-engines-sos-map"></span>
 <span id="fig:space-engines-sos-map" style="display:block;"></span>
-<img src="figures/08-space-engines/sos-map-1.png" alt="The spline-on-the-sphere surface on land, on the logit scale. It finds the same regions as the SPDE surface above and the Gaussian process of the earlier chapter." width="710" />
-<p class="caption">
+<img src="figures/08-space-engines/sos-map-1.png" alt="The spline-on-the-sphere surface on land, on the logit scale. It finds the same regions as the SPDE surface above and the Gaussian process of the earlier chapter." width="710"><p class="caption">
 Figure 8.2: The spline-on-the-sphere surface on land, on the logit scale. It finds the same regions as the SPDE surface above and the Gaussian process of the earlier chapter.
 </p>
 </div>
 </div>
-<div id="maximum-likelihood-simultaneous-autoregressive-models" class="section level2 hasAnchor" number="8.5">
-<h2><span class="header-section-number">8.5</span> Maximum likelihood: simultaneous autoregressive models<a href="space-engines.html#maximum-likelihood-simultaneous-autoregressive-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="maximum-likelihood-simultaneous-autoregressive-models" class="section level2" number="8.5">
+<h2>
+<span class="header-section-number">8.5</span> Maximum likelihood: simultaneous autoregressive models<a class="anchor" aria-label="anchor" href="#maximum-likelihood-simultaneous-autoregressive-models"><i class="fas fa-link"></i></a>
+</h2>
 <p>The classical spatial regressions work on a neighbour graph and a continuous outcome, so return to the question of Chapter <a href="phylogeny-engines.html#phylogeny-engines">4</a>: do languages at altitude have larger consonant inventories?</p>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="space-engines.html#cb192-1" tabindex="-1"></a>d<span class="sc">$</span>log_cons <span class="ot">&lt;-</span> <span class="fu">log</span>(d<span class="sc">$</span>n_consonants)</span>
-<span id="cb192-2"><a href="space-engines.html#cb192-2" tabindex="-1"></a>lw  <span class="ot">&lt;-</span> <span class="fu">nb2listw</span>(nb, <span class="at">style =</span> <span class="st">&quot;W&quot;</span>)</span>
-<span id="cb192-3"><a href="space-engines.html#cb192-3" tabindex="-1"></a>ols <span class="ot">&lt;-</span> <span class="fu">lm</span>(log_cons <span class="sc">~</span> elev_km, <span class="at">data =</span> d)</span>
-<span id="cb192-4"><a href="space-engines.html#cb192-4" tabindex="-1"></a></span>
-<span id="cb192-5"><a href="space-engines.html#cb192-5" tabindex="-1"></a><span class="fu">lm.morantest</span>(ols, lw)</span></code></pre></div>
+<div class="sourceCode" id="cb192"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">d</span><span class="op">$</span><span class="va">log_cons</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">n_consonants</span><span class="op">)</span></span>
+<span><span class="va">lw</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/nb2listw.html">nb2listw</a></span><span class="op">(</span><span class="va">nb</span>, style <span class="op">=</span> <span class="st">"W"</span><span class="op">)</span></span>
+<span><span class="va">ols</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">log_cons</span> <span class="op">~</span> <span class="va">elev_km</span>, data <span class="op">=</span> <span class="va">d</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://r-spatial.github.io/spdep/reference/lm.morantest.html">lm.morantest</a></span><span class="op">(</span><span class="va">ols</span>, <span class="va">lw</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ##  Global Moran I for regression residuals
 ## 
@@ -552,81 +323,88 @@ Figure 8.2: The spline-on-the-sphere surface on land, on the logit scale. It fin
 ## sample estimates:
 ## Observed Moran I      Expectation         Variance 
 ##         0.417249        -0.002826         0.000626</code></pre>
-<p>Inventory size is strongly autocorrelated in space. A simultaneous autoregressive (SAR) model writes that dependence into the regression <span class="citation">(<a href="#ref-anselin1988">Anselin 1988</a>)</span>. There are two versions, and they say different things.</p>
+<p>Inventory size is strongly autocorrelated in space. A simultaneous autoregressive (SAR) model writes that dependence into the regression <span class="citation">(<a href="references.html#ref-anselin1988">Anselin 1988</a>)</span>. There are two versions, and they say different things.</p>
 <p>The <strong>error model</strong> says the residuals are spatially correlated: neighbours share unmeasured influences. Here space is a nuisance to be absorbed.</p>
 <p><span class="math display">\[y = X\beta + u, \qquad u = \lambda W u + \varepsilon\]</span></p>
 <p>The <strong>lag model</strong> says the outcome itself depends on the neighbours’ outcomes: a language’s inventory is pulled towards those around it. Here space is a process of diffusion.</p>
 <p><span class="math display">\[y = \rho W y + X\beta + \varepsilon\]</span></p>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="space-engines.html#cb194-1" tabindex="-1"></a>sar_err <span class="ot">&lt;-</span> <span class="fu">errorsarlm</span>(log_cons <span class="sc">~</span> elev_km, <span class="at">data =</span> d, <span class="at">listw =</span> lw)</span>
-<span id="cb194-2"><a href="space-engines.html#cb194-2" tabindex="-1"></a>sar_lag <span class="ot">&lt;-</span> <span class="fu">lagsarlm</span>(log_cons <span class="sc">~</span> elev_km, <span class="at">data =</span> d, <span class="at">listw =</span> lw)</span>
-<span id="cb194-3"><a href="space-engines.html#cb194-3" tabindex="-1"></a></span>
-<span id="cb194-4"><a href="space-engines.html#cb194-4" tabindex="-1"></a><span class="fu">rbind</span>(<span class="st">&quot;OLS&quot;</span>       <span class="ot">=</span> <span class="fu">summary</span>(ols)<span class="sc">$</span>coefficients[<span class="st">&quot;elev_km&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],</span>
-<span id="cb194-5"><a href="space-engines.html#cb194-5" tabindex="-1"></a>      <span class="st">&quot;SAR error&quot;</span> <span class="ot">=</span> <span class="fu">summary</span>(sar_err)<span class="sc">$</span>Coef[<span class="st">&quot;elev_km&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],</span>
-<span id="cb194-6"><a href="space-engines.html#cb194-6" tabindex="-1"></a>      <span class="st">&quot;SAR lag&quot;</span>   <span class="ot">=</span> <span class="fu">summary</span>(sar_lag)<span class="sc">$</span>Coef[<span class="st">&quot;elev_km&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]) <span class="sc">|&gt;</span> <span class="fu">round</span>(<span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb194"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">sar_err</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spatialreg/reference/ML_models.html">errorsarlm</a></span><span class="op">(</span><span class="va">log_cons</span> <span class="op">~</span> <span class="va">elev_km</span>, data <span class="op">=</span> <span class="va">d</span>, listw <span class="op">=</span> <span class="va">lw</span><span class="op">)</span></span>
+<span><span class="va">sar_lag</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spatialreg/reference/ML_models.html">lagsarlm</a></span><span class="op">(</span><span class="va">log_cons</span> <span class="op">~</span> <span class="va">elev_km</span>, data <span class="op">=</span> <span class="va">d</span>, listw <span class="op">=</span> <span class="va">lw</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span><span class="st">"OLS"</span>       <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">ols</span><span class="op">)</span><span class="op">$</span><span class="va">coefficients</span><span class="op">[</span><span class="st">"elev_km"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span>,</span>
+<span>      <span class="st">"SAR error"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">sar_err</span><span class="op">)</span><span class="op">$</span><span class="va">Coef</span><span class="op">[</span><span class="st">"elev_km"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span>,</span>
+<span>      <span class="st">"SAR lag"</span>   <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">sar_lag</span><span class="op">)</span><span class="op">$</span><span class="va">Coef</span><span class="op">[</span><span class="st">"elev_km"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##           Estimate Std. Error
 ## OLS          0.139      0.020
 ## SAR error    0.082      0.020
 ## SAR lag      0.078      0.016</code></pre>
-<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="space-engines.html#cb196-1" tabindex="-1"></a><span class="fu">c</span>(<span class="at">lambda =</span> <span class="fu">unname</span>(sar_err<span class="sc">$</span>lambda), <span class="at">rho =</span> <span class="fu">unname</span>(sar_lag<span class="sc">$</span>rho))</span></code></pre></div>
+<div class="sourceCode" id="cb196"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>lambda <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/unname.html">unname</a></span><span class="op">(</span><span class="va">sar_err</span><span class="op">$</span><span class="va">lambda</span><span class="op">)</span>, rho <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/unname.html">unname</a></span><span class="op">(</span><span class="va">sar_lag</span><span class="op">$</span><span class="va">rho</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## lambda    rho 
 ##  0.626  0.612</code></pre>
 <blockquote>
-<p><strong>Watch out.</strong> In the lag model the coefficient of <code>elev_km</code> is not the effect of elevation. Raising one language’s elevation changes its inventory, which pulls on its neighbours, which pull back. <code>impacts()</code> adds up those loops <span class="citation">(<a href="#ref-lesage2009">LeSage and Pace 2009</a>)</span>. Its <strong>direct</strong> impact is the number comparable to the other models’ slopes.</p>
+<p><strong>Watch out.</strong> In the lag model the coefficient of <code>elev_km</code> is not the effect of elevation. Raising one language’s elevation changes its inventory, which pulls on its neighbours, which pull back. <code><a href="https://r-spatial.github.io/spatialreg/reference/impacts.html">impacts()</a></code> adds up those loops <span class="citation">(<a href="references.html#ref-lesage2009">LeSage and Pace 2009</a>)</span>. Its <strong>direct</strong> impact is the number comparable to the other models’ slopes.</p>
 </blockquote>
-<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="space-engines.html#cb198-1" tabindex="-1"></a><span class="fu">impacts</span>(sar_lag, <span class="at">listw =</span> lw)</span></code></pre></div>
+<div class="sourceCode" id="cb198"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://r-spatial.github.io/spatialreg/reference/impacts.html">impacts</a></span><span class="op">(</span><span class="va">sar_lag</span>, listw <span class="op">=</span> <span class="va">lw</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## Impact measures (lag, exact):
 ##               Direct Indirect Total
 ## elev_km dy/dx 0.0866    0.116 0.202</code></pre>
 <p>If your interest is the slope and space is something to control for, use the error model. Use the lag model only when diffusion between neighbours is itself the hypothesis. brms fits both with <code>sar(lw, type = "error")</code> or <code>type = "lag"</code>, for Gaussian and Student-t outcomes.</p>
-<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="space-engines.html#cb200-1" tabindex="-1"></a>lines <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">model =</span> <span class="fu">c</span>(<span class="st">&quot;OLS&quot;</span>, <span class="st">&quot;SAR error&quot;</span>),</span>
-<span id="cb200-2"><a href="space-engines.html#cb200-2" tabindex="-1"></a>                    <span class="at">intercept =</span> <span class="fu">c</span>(<span class="fu">coef</span>(ols)[<span class="dv">1</span>], sar_err<span class="sc">$</span>coefficients[<span class="dv">1</span>]),</span>
-<span id="cb200-3"><a href="space-engines.html#cb200-3" tabindex="-1"></a>                    <span class="at">slope     =</span> <span class="fu">c</span>(<span class="fu">coef</span>(ols)[<span class="dv">2</span>], sar_err<span class="sc">$</span>coefficients[<span class="dv">2</span>]))</span>
-<span id="cb200-4"><a href="space-engines.html#cb200-4" tabindex="-1"></a></span>
-<span id="cb200-5"><a href="space-engines.html#cb200-5" tabindex="-1"></a><span class="fu">ggplot</span>(d, <span class="fu">aes</span>(elev_km, log_cons)) <span class="sc">+</span></span>
-<span id="cb200-6"><a href="space-engines.html#cb200-6" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">&quot;grey75&quot;</span>, <span class="at">size =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
-<span id="cb200-7"><a href="space-engines.html#cb200-7" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">data =</span> lines, <span class="at">linewidth =</span> <span class="fl">0.9</span>,</span>
-<span id="cb200-8"><a href="space-engines.html#cb200-8" tabindex="-1"></a>              <span class="fu">aes</span>(<span class="at">intercept =</span> intercept, <span class="at">slope =</span> slope, <span class="at">colour =</span> model)) <span class="sc">+</span></span>
-<span id="cb200-9"><a href="space-engines.html#cb200-9" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;grey35&quot;</span>, <span class="st">&quot;#2A78D6&quot;</span>), <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb200-10"><a href="space-engines.html#cb200-10" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;elevation (km)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;log number of consonants&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:space-engines-sar-lines"></span>
+<div class="sourceCode" id="cb200"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">lines</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>model <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"OLS"</span>, <span class="st">"SAR error"</span><span class="op">)</span>,</span>
+<span>                    intercept <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/coef.html">coef</a></span><span class="op">(</span><span class="va">ols</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, <span class="va">sar_err</span><span class="op">$</span><span class="va">coefficients</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span>,</span>
+<span>                    slope     <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/coef.html">coef</a></span><span class="op">(</span><span class="va">ols</span><span class="op">)</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span>, <span class="va">sar_err</span><span class="op">$</span><span class="va">coefficients</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">d</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">elev_km</span>, <span class="va">log_cons</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"grey75"</span>, size <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_abline</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">lines</span>, linewidth <span class="op">=</span> <span class="fl">0.9</span>,</span>
+<span>              <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>intercept <span class="op">=</span> <span class="va">intercept</span>, slope <span class="op">=</span> <span class="va">slope</span>, colour <span class="op">=</span> <span class="va">model</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_colour_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"grey35"</span>, <span class="st">"#2A78D6"</span><span class="op">)</span>, name <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"elevation (km)"</span>, y <span class="op">=</span> <span class="st">"log number of consonants"</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:space-engines-sar-lines"></span>
 <span id="fig:space-engines-sar-lines" style="display:block;"></span>
-<img src="figures/08-space-engines/sar-lines-1.png" alt="Consonant inventory size against elevation with the ordinary regression line (grey) and the spatial error model's (blue). As with the phylogenetic model of the earlier chapter, admitting that neighbours resemble each other makes the line shallower." width="710" />
-<p class="caption">
+<img src="figures/08-space-engines/sar-lines-1.png" alt="Consonant inventory size against elevation with the ordinary regression line (grey) and the spatial error model's (blue). As with the phylogenetic model of the earlier chapter, admitting that neighbours resemble each other makes the line shallower." width="710"><p class="caption">
 Figure 8.3: Consonant inventory size against elevation with the ordinary regression line (grey) and the spatial error model’s (blue). As with the phylogenetic model of the earlier chapter, admitting that neighbours resemble each other makes the line shallower.
 </p>
 </div>
 </div>
-<div id="every-engine-one-figure-1" class="section level2 hasAnchor" number="8.6">
-<h2><span class="header-section-number">8.6</span> Every engine, one figure<a href="space-engines.html#every-engine-one-figure-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="every-engine-one-figure-1" class="section level2" number="8.6">
+<h2>
+<span class="header-section-number">8.6</span> Every engine, one figure<a class="anchor" aria-label="anchor" href="#every-engine-one-figure-1"><i class="fas fa-link"></i></a>
+</h2>
 <p>Bring back the two brms fits of Chapters <a href="space-surface.html#space-surface">6</a> and <a href="space-neighbours.html#space-neighbours">7</a>. If you ran those chapters the calls load the saved fits; if not, they fit now.</p>
-<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="space-engines.html#cb201-1" tabindex="-1"></a><span class="fu">library</span>(brms)</span>
-<span id="cb201-2"><a href="space-engines.html#cb201-2" tabindex="-1"></a><span class="fu">options</span>(<span class="at">mc.cores =</span> <span class="dv">4</span>, <span class="at">brms.backend =</span> <span class="st">&quot;cmdstanr&quot;</span>)</span>
-<span id="cb201-3"><a href="space-engines.html#cb201-3" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;fits&quot;</span>, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb201-4"><a href="space-engines.html#cb201-4" tabindex="-1"></a></span>
-<span id="cb201-5"><a href="space-engines.html#cb201-5" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(d, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>), <span class="at">crs =</span> <span class="dv">4326</span>)</span>
-<span id="cb201-6"><a href="space-engines.html#cb201-6" tabindex="-1"></a>xy  <span class="ot">&lt;-</span> <span class="fu">st_coordinates</span>(<span class="fu">st_transform</span>(pts, <span class="st">&quot;+proj=eqearth&quot;</span>)) <span class="sc">/</span> <span class="fl">1e6</span></span>
-<span id="cb201-7"><a href="space-engines.html#cb201-7" tabindex="-1"></a>d<span class="sc">$</span>x <span class="ot">&lt;-</span> xy[, <span class="dv">1</span>]</span>
-<span id="cb201-8"><a href="space-engines.html#cb201-8" tabindex="-1"></a>d<span class="sc">$</span>y <span class="ot">&lt;-</span> xy[, <span class="dv">2</span>]</span>
-<span id="cb201-9"><a href="space-engines.html#cb201-9" tabindex="-1"></a><span class="fu">dimnames</span>(W) <span class="ot">&lt;-</span> <span class="fu">list</span>(d<span class="sc">$</span>glottocode, d<span class="sc">$</span>glottocode)</span>
-<span id="cb201-10"><a href="space-engines.html#cb201-10" tabindex="-1"></a></span>
-<span id="cb201-11"><a href="space-engines.html#cb201-11" tabindex="-1"></a>b_gp  <span class="ot">&lt;-</span> <span class="fu">brm</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">gp</span>(x, y, <span class="at">k =</span> <span class="dv">20</span>, <span class="at">c =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">4</span>),</span>
-<span id="cb201-12"><a href="space-engines.html#cb201-12" tabindex="-1"></a>             <span class="at">data =</span> d, <span class="at">family =</span> <span class="fu">bernoulli</span>(),</span>
-<span id="cb201-13"><a href="space-engines.html#cb201-13" tabindex="-1"></a>             <span class="at">prior =</span> <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
-<span id="cb201-14"><a href="space-engines.html#cb201-14" tabindex="-1"></a>                     <span class="fu">prior</span>(<span class="fu">exponential</span>(<span class="dv">1</span>), <span class="at">class =</span> sdgp),</span>
-<span id="cb201-15"><a href="space-engines.html#cb201-15" tabindex="-1"></a>             <span class="at">control =</span> <span class="fu">list</span>(<span class="at">adapt_delta =</span> <span class="fl">0.95</span>),</span>
-<span id="cb201-16"><a href="space-engines.html#cb201-16" tabindex="-1"></a>             <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">file =</span> <span class="st">&quot;fits/m_gp&quot;</span>)</span>
-<span id="cb201-17"><a href="space-engines.html#cb201-17" tabindex="-1"></a>b_bym <span class="ot">&lt;-</span> <span class="fu">brm</span>(ejectives <span class="sc">~</span> elev_km <span class="sc">+</span> <span class="fu">car</span>(W, <span class="at">gr =</span> glottocode, <span class="at">type =</span> <span class="st">&quot;bym2&quot;</span>),</span>
-<span id="cb201-18"><a href="space-engines.html#cb201-18" tabindex="-1"></a>             <span class="at">data =</span> d, <span class="at">data2 =</span> <span class="fu">list</span>(<span class="at">W =</span> W), <span class="at">family =</span> <span class="fu">bernoulli</span>(),</span>
-<span id="cb201-19"><a href="space-engines.html#cb201-19" tabindex="-1"></a>             <span class="at">prior =</span> <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">class =</span> b) <span class="sc">+</span></span>
-<span id="cb201-20"><a href="space-engines.html#cb201-20" tabindex="-1"></a>                     <span class="fu">prior</span>(<span class="fu">exponential</span>(<span class="dv">1</span>), <span class="at">class =</span> sdcar),</span>
-<span id="cb201-21"><a href="space-engines.html#cb201-21" tabindex="-1"></a>             <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">file =</span> <span class="st">&quot;fits/m_bym&quot;</span>)</span>
-<span id="cb201-22"><a href="space-engines.html#cb201-22" tabindex="-1"></a></span>
-<span id="cb201-23"><a href="space-engines.html#cb201-23" tabindex="-1"></a><span class="fu">rbind</span>(<span class="st">&quot;brms, Gaussian process&quot;</span>  <span class="ot">=</span> <span class="fu">fixef</span>(b_gp)[<span class="st">&quot;elev_km&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],</span>
-<span id="cb201-24"><a href="space-engines.html#cb201-24" tabindex="-1"></a>      <span class="st">&quot;brms, BYM2&quot;</span>              <span class="ot">=</span> <span class="fu">fixef</span>(b_bym)[<span class="st">&quot;elev_km&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],</span>
-<span id="cb201-25"><a href="space-engines.html#cb201-25" tabindex="-1"></a>      <span class="st">&quot;INLA, BYM2 (classic)&quot;</span>    <span class="ot">=</span> <span class="fu">slope_of</span>(i_bym_classic)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],</span>
-<span id="cb201-26"><a href="space-engines.html#cb201-26" tabindex="-1"></a>      <span class="st">&quot;INLA, SPDE on the globe&quot;</span> <span class="ot">=</span> <span class="fu">slope_of</span>(i_spde)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],</span>
-<span id="cb201-27"><a href="space-engines.html#cb201-27" tabindex="-1"></a>      <span class="st">&quot;mgcv, spline on sphere&quot;</span>  <span class="ot">=</span> <span class="fu">summary</span>(g_sos)<span class="sc">$</span>p.table[<span class="st">&quot;elev_km&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]) <span class="sc">|&gt;</span></span>
-<span id="cb201-28"><a href="space-engines.html#cb201-28" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb201"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/paul-buerkner/brms">brms</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>mc.cores <span class="op">=</span> <span class="fl">4</span>, brms.backend <span class="op">=</span> <span class="st">"cmdstanr"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span><span class="op">(</span><span class="st">"fits"</span>, showWarnings <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">pts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html">st_as_sf</a></span><span class="op">(</span><span class="va">d</span>, coords <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"lon"</span>, <span class="st">"lat"</span><span class="op">)</span>, crs <span class="op">=</span> <span class="fl">4326</span><span class="op">)</span></span>
+<span><span class="va">xy</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_coordinates.html">st_coordinates</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_transform.html">st_transform</a></span><span class="op">(</span><span class="va">pts</span>, <span class="st">"+proj=eqearth"</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="fl">1e6</span></span>
+<span><span class="va">d</span><span class="op">$</span><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">xy</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span>
+<span><span class="va">d</span><span class="op">$</span><span class="va">y</span> <span class="op">&lt;-</span> <span class="va">xy</span><span class="op">[</span>, <span class="fl">2</span><span class="op">]</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/dimnames.html">dimnames</a></span><span class="op">(</span><span class="va">W</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">glottocode</span>, <span class="va">d</span><span class="op">$</span><span class="va">glottocode</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">b_gp</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://paulbuerkner.com/brms/reference/brm.html">brm</a></span><span class="op">(</span><span class="va">ejectives</span> <span class="op">~</span> <span class="va">elev_km</span> <span class="op">+</span> <span class="fu"><a href="https://paulbuerkner.com/brms/reference/gp.html">gp</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, k <span class="op">=</span> <span class="fl">20</span>, c <span class="op">=</span> <span class="fl">5</span><span class="op">/</span><span class="fl">4</span><span class="op">)</span>,</span>
+<span>             data <span class="op">=</span> <span class="va">d</span>, family <span class="op">=</span> <span class="fu"><a href="https://paulbuerkner.com/brms/reference/brmsfamily.html">bernoulli</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>             prior <span class="op">=</span> <span class="fu"><a href="https://paulbuerkner.com/brms/reference/set_prior.html">prior</a></span><span class="op">(</span><span class="fu">normal</span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>, class <span class="op">=</span> <span class="va">b</span><span class="op">)</span> <span class="op">+</span></span>
+<span>                     <span class="fu"><a href="https://paulbuerkner.com/brms/reference/set_prior.html">prior</a></span><span class="op">(</span><span class="fu"><a href="https://paulbuerkner.com/brms/reference/brmsfamily.html">exponential</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span>, class <span class="op">=</span> <span class="va">sdgp</span><span class="op">)</span>,</span>
+<span>             control <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>adapt_delta <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span>,</span>
+<span>             seed <span class="op">=</span> <span class="fl">1</span>, file <span class="op">=</span> <span class="st">"fits/m_gp"</span><span class="op">)</span></span>
+<span><span class="va">b_bym</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://paulbuerkner.com/brms/reference/brm.html">brm</a></span><span class="op">(</span><span class="va">ejectives</span> <span class="op">~</span> <span class="va">elev_km</span> <span class="op">+</span> <span class="fu"><a href="https://paulbuerkner.com/brms/reference/car.html">car</a></span><span class="op">(</span><span class="va">W</span>, gr <span class="op">=</span> <span class="va">glottocode</span>, type <span class="op">=</span> <span class="st">"bym2"</span><span class="op">)</span>,</span>
+<span>             data <span class="op">=</span> <span class="va">d</span>, data2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>W <span class="op">=</span> <span class="va">W</span><span class="op">)</span>, family <span class="op">=</span> <span class="fu"><a href="https://paulbuerkner.com/brms/reference/brmsfamily.html">bernoulli</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>             prior <span class="op">=</span> <span class="fu"><a href="https://paulbuerkner.com/brms/reference/set_prior.html">prior</a></span><span class="op">(</span><span class="fu">normal</span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>, class <span class="op">=</span> <span class="va">b</span><span class="op">)</span> <span class="op">+</span></span>
+<span>                     <span class="fu"><a href="https://paulbuerkner.com/brms/reference/set_prior.html">prior</a></span><span class="op">(</span><span class="fu"><a href="https://paulbuerkner.com/brms/reference/brmsfamily.html">exponential</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span>, class <span class="op">=</span> <span class="va">sdcar</span><span class="op">)</span>,</span>
+<span>             seed <span class="op">=</span> <span class="fl">1</span>, file <span class="op">=</span> <span class="st">"fits/m_bym"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span><span class="st">"brms, Gaussian process"</span>  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/nlme/man/fixed.effects.html">fixef</a></span><span class="op">(</span><span class="va">b_gp</span><span class="op">)</span><span class="op">[</span><span class="st">"elev_km"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span>,</span>
+<span>      <span class="st">"brms, BYM2"</span>              <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/nlme/man/fixed.effects.html">fixef</a></span><span class="op">(</span><span class="va">b_bym</span><span class="op">)</span><span class="op">[</span><span class="st">"elev_km"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span>,</span>
+<span>      <span class="st">"INLA, BYM2 (classic)"</span>    <span class="op">=</span> <span class="fu">slope_of</span><span class="op">(</span><span class="va">i_bym_classic</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span>,</span>
+<span>      <span class="st">"INLA, SPDE on the globe"</span> <span class="op">=</span> <span class="fu">slope_of</span><span class="op">(</span><span class="va">i_spde</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span>,</span>
+<span>      <span class="st">"mgcv, spline on sphere"</span>  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">g_sos</span><span class="op">)</span><span class="op">$</span><span class="va">p.table</span><span class="op">[</span><span class="st">"elev_km"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##                         Estimate Est.Error
 ## brms, Gaussian process      1.13      0.27
 ## brms, BYM2                  1.17      0.37
@@ -634,203 +412,122 @@ Figure 8.3: Consonant inventory size against elevation with the ordinary regress
 ## INLA, SPDE on the globe     1.09      0.32
 ## mgcv, spline on sphere      1.10      0.35</code></pre>
 <p>The table covers five spatial models from three engines, with two views of space and a flat map against a globe. The figure draws their regression lines, averaged over the sample as in Chapter <a href="phylogeny.html#phylogeny">3</a>.</p>
-<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="space-engines.html#cb203-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">4.5</span>, <span class="at">by =</span> <span class="fl">0.1</span>)</span>
-<span id="cb203-2"><a href="space-engines.html#cb203-2" tabindex="-1"></a>averaged <span class="ot">&lt;-</span> <span class="cf">function</span>(eta, b) {</span>
-<span id="cb203-3"><a href="space-engines.html#cb203-3" tabindex="-1"></a>  at_sea <span class="ot">&lt;-</span> eta <span class="sc">-</span> b <span class="sc">*</span> d<span class="sc">$</span>elev_km           <span class="co"># every language moved to 0 km</span></span>
-<span id="cb203-4"><a href="space-engines.html#cb203-4" tabindex="-1"></a>  <span class="fu">sapply</span>(x, <span class="cf">function</span>(xi) <span class="fu">mean</span>(<span class="fu">plogis</span>(at_sea <span class="sc">+</span> b <span class="sc">*</span> xi)))</span>
-<span id="cb203-5"><a href="space-engines.html#cb203-5" tabindex="-1"></a>}</span>
-<span id="cb203-6"><a href="space-engines.html#cb203-6" tabindex="-1"></a>from_brms <span class="ot">&lt;-</span> <span class="cf">function</span>(fit) {</span>
-<span id="cb203-7"><a href="space-engines.html#cb203-7" tabindex="-1"></a>  <span class="fu">averaged</span>(<span class="fu">colMeans</span>(<span class="fu">posterior_linpred</span>(fit)), <span class="fu">fixef</span>(fit)[<span class="st">&quot;elev_km&quot;</span>, <span class="st">&quot;Estimate&quot;</span>])</span>
-<span id="cb203-8"><a href="space-engines.html#cb203-8" tabindex="-1"></a>}</span>
-<span id="cb203-9"><a href="space-engines.html#cb203-9" tabindex="-1"></a>from_inla <span class="ot">&lt;-</span> <span class="cf">function</span>(fit) {</span>
-<span id="cb203-10"><a href="space-engines.html#cb203-10" tabindex="-1"></a>  <span class="fu">averaged</span>(fit<span class="sc">$</span>summary.linear.predictor<span class="sc">$</span>mean[<span class="fu">seq_len</span>(<span class="fu">nrow</span>(d))],</span>
-<span id="cb203-11"><a href="space-engines.html#cb203-11" tabindex="-1"></a>           fit<span class="sc">$</span>summary.fixed[<span class="st">&quot;elev_km&quot;</span>, <span class="st">&quot;mean&quot;</span>])</span>
-<span id="cb203-12"><a href="space-engines.html#cb203-12" tabindex="-1"></a>}</span>
-<span id="cb203-13"><a href="space-engines.html#cb203-13" tabindex="-1"></a></span>
-<span id="cb203-14"><a href="space-engines.html#cb203-14" tabindex="-1"></a>lines <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb203-15"><a href="space-engines.html#cb203-15" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">model =</span> <span class="st">&quot;brms GP&quot;</span>,   <span class="at">view =</span> <span class="st">&quot;surface&quot;</span>, <span class="at">p =</span> <span class="fu">from_brms</span>(b_gp)),</span>
-<span id="cb203-16"><a href="space-engines.html#cb203-16" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">model =</span> <span class="st">&quot;INLA SPDE&quot;</span>, <span class="at">view =</span> <span class="st">&quot;surface&quot;</span>, <span class="at">p =</span> <span class="fu">from_inla</span>(i_spde)),</span>
-<span id="cb203-17"><a href="space-engines.html#cb203-17" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">model =</span> <span class="st">&quot;mgcv spline&quot;</span>, <span class="at">view =</span> <span class="st">&quot;surface&quot;</span>,</span>
-<span id="cb203-18"><a href="space-engines.html#cb203-18" tabindex="-1"></a>             <span class="at">p =</span> <span class="fu">averaged</span>(<span class="fu">predict</span>(g_sos), <span class="fu">coef</span>(g_sos)[[<span class="st">&quot;elev_km&quot;</span>]])),</span>
-<span id="cb203-19"><a href="space-engines.html#cb203-19" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">model =</span> <span class="st">&quot;brms BYM2&quot;</span>, <span class="at">view =</span> <span class="st">&quot;neighbours&quot;</span>, <span class="at">p =</span> <span class="fu">from_brms</span>(b_bym)),</span>
-<span id="cb203-20"><a href="space-engines.html#cb203-20" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">model =</span> <span class="st">&quot;INLA BYM2&quot;</span>, <span class="at">view =</span> <span class="st">&quot;neighbours&quot;</span>,</span>
-<span id="cb203-21"><a href="space-engines.html#cb203-21" tabindex="-1"></a>             <span class="at">p =</span> <span class="fu">from_inla</span>(i_bym_classic)))</span>
-<span id="cb203-22"><a href="space-engines.html#cb203-22" tabindex="-1"></a>lines<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> x</span>
-<span id="cb203-23"><a href="space-engines.html#cb203-23" tabindex="-1"></a>naive <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">elev_km =</span> x)</span>
-<span id="cb203-24"><a href="space-engines.html#cb203-24" tabindex="-1"></a>naive<span class="sc">$</span>p <span class="ot">&lt;-</span> <span class="fu">predict</span>(m0, <span class="at">newdata =</span> naive, <span class="at">type =</span> <span class="st">&quot;response&quot;</span>)</span>
-<span id="cb203-25"><a href="space-engines.html#cb203-25" tabindex="-1"></a></span>
-<span id="cb203-26"><a href="space-engines.html#cb203-26" tabindex="-1"></a><span class="fu">ggplot</span>(lines, <span class="fu">aes</span>(elev_km, p)) <span class="sc">+</span></span>
-<span id="cb203-27"><a href="space-engines.html#cb203-27" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">group =</span> model, <span class="at">linetype =</span> view), <span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>,</span>
-<span id="cb203-28"><a href="space-engines.html#cb203-28" tabindex="-1"></a>            <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb203-29"><a href="space-engines.html#cb203-29" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> naive, <span class="at">linetype =</span> <span class="st">&quot;22&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;grey35&quot;</span>) <span class="sc">+</span></span>
-<span id="cb203-30"><a href="space-engines.html#cb203-30" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="at">neighbours =</span> <span class="st">&quot;42&quot;</span>, <span class="at">surface =</span> <span class="st">&quot;solid&quot;</span>),</span>
-<span id="cb203-31"><a href="space-engines.html#cb203-31" tabindex="-1"></a>                        <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb203-32"><a href="space-engines.html#cb203-32" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;elevation (km)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;probability of ejectives&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:space-engines-lines"></span>
+<div class="sourceCode" id="cb203"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">4.5</span>, by <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span></span>
+<span><span class="va">averaged</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">eta</span>, <span class="va">b</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">at_sea</span> <span class="op">&lt;-</span> <span class="va">eta</span> <span class="op">-</span> <span class="va">b</span> <span class="op">*</span> <span class="va">d</span><span class="op">$</span><span class="va">elev_km</span>           <span class="co"># every language moved to 0 km</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span><span class="op">(</span><span class="va">x</span>, <span class="kw">function</span><span class="op">(</span><span class="va">xi</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Logistic.html">plogis</a></span><span class="op">(</span><span class="va">at_sea</span> <span class="op">+</span> <span class="va">b</span> <span class="op">*</span> <span class="va">xi</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="va">from_brms</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">fit</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu">averaged</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/Matrix/man/colSums-methods.html">colMeans</a></span><span class="op">(</span><span class="fu"><a href="https://mc-stan.org/rstantools/reference/posterior_linpred.html">posterior_linpred</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/pkg/nlme/man/fixed.effects.html">fixef</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span><span class="op">[</span><span class="st">"elev_km"</span>, <span class="st">"Estimate"</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="va">from_inla</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">fit</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu">averaged</span><span class="op">(</span><span class="va">fit</span><span class="op">$</span><span class="va">summary.linear.predictor</span><span class="op">$</span><span class="va">mean</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">d</span><span class="op">)</span><span class="op">)</span><span class="op">]</span>,</span>
+<span>           <span class="va">fit</span><span class="op">$</span><span class="va">summary.fixed</span><span class="op">[</span><span class="st">"elev_km"</span>, <span class="st">"mean"</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">lines</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>model <span class="op">=</span> <span class="st">"brms GP"</span>,   view <span class="op">=</span> <span class="st">"surface"</span>, p <span class="op">=</span> <span class="fu">from_brms</span><span class="op">(</span><span class="va">b_gp</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>model <span class="op">=</span> <span class="st">"INLA SPDE"</span>, view <span class="op">=</span> <span class="st">"surface"</span>, p <span class="op">=</span> <span class="fu">from_inla</span><span class="op">(</span><span class="va">i_spde</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>model <span class="op">=</span> <span class="st">"mgcv spline"</span>, view <span class="op">=</span> <span class="st">"surface"</span>,</span>
+<span>             p <span class="op">=</span> <span class="fu">averaged</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">g_sos</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/coef.html">coef</a></span><span class="op">(</span><span class="va">g_sos</span><span class="op">)</span><span class="op">[[</span><span class="st">"elev_km"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>model <span class="op">=</span> <span class="st">"brms BYM2"</span>, view <span class="op">=</span> <span class="st">"neighbours"</span>, p <span class="op">=</span> <span class="fu">from_brms</span><span class="op">(</span><span class="va">b_bym</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>model <span class="op">=</span> <span class="st">"INLA BYM2"</span>, view <span class="op">=</span> <span class="st">"neighbours"</span>,</span>
+<span>             p <span class="op">=</span> <span class="fu">from_inla</span><span class="op">(</span><span class="va">i_bym_classic</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">lines</span><span class="op">$</span><span class="va">elev_km</span> <span class="op">&lt;-</span> <span class="va">x</span></span>
+<span><span class="va">naive</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>elev_km <span class="op">=</span> <span class="va">x</span><span class="op">)</span></span>
+<span><span class="va">naive</span><span class="op">$</span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">m0</span>, newdata <span class="op">=</span> <span class="va">naive</span>, type <span class="op">=</span> <span class="st">"response"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">lines</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">elev_km</span>, <span class="va">p</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>group <span class="op">=</span> <span class="va">model</span>, linetype <span class="op">=</span> <span class="va">view</span><span class="op">)</span>, colour <span class="op">=</span> <span class="st">"#2A78D6"</span>,</span>
+<span>            linewidth <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">naive</span>, linetype <span class="op">=</span> <span class="st">"22"</span>, colour <span class="op">=</span> <span class="st">"grey35"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_linetype_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>neighbours <span class="op">=</span> <span class="st">"42"</span>, surface <span class="op">=</span> <span class="st">"solid"</span><span class="op">)</span>,</span>
+<span>                        name <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"elevation (km)"</span>, y <span class="op">=</span> <span class="st">"probability of ejectives"</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:space-engines-lines"></span>
 <span id="fig:space-engines-lines" style="display:block;"></span>
-<img src="figures/08-space-engines/lines-1.png" alt="The regression line of five spatial models, averaged over the sample. Solid lines treat space as a surface, dashed lines as a neighbour graph. The grey dashed line is the naive regression. All five leave the naive line at altitude and stay close to each other." width="710" />
-<p class="caption">
+<img src="figures/08-space-engines/lines-1.png" alt="The regression line of five spatial models, averaged over the sample. Solid lines treat space as a surface, dashed lines as a neighbour graph. The grey dashed line is the naive regression. All five leave the naive line at altitude and stay close to each other." width="710"><p class="caption">
 Figure 8.4: The regression line of five spatial models, averaged over the sample. Solid lines treat space as a surface, dashed lines as a neighbour graph. The grey dashed line is the naive regression. All five leave the naive line at altitude and stay close to each other.
 </p>
 </div>
 </div>
-<div id="what-to-carry-forward-7" class="section level2 hasAnchor" number="8.7">
-<h2><span class="header-section-number">8.7</span> What to carry forward<a href="space-engines.html#what-to-carry-forward-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-to-carry-forward-7" class="section level2" number="8.7">
+<h2>
+<span class="header-section-number">8.7</span> What to carry forward<a class="anchor" aria-label="anchor" href="#what-to-carry-forward-7"><i class="fas fa-link"></i></a>
+</h2>
 <ul>
-<li>A neighbour model is <code>car()</code> in brms and <code>f(id, model = "bym2", graph = W)</code> in INLA. A surface is <code>gp()</code> in brms, an SPDE mesh in INLA, and <code>s(lat, lon, bs = "sos")</code> in mgcv. The last two live on the globe.</li>
+<li>A neighbour model is <code><a href="https://paulbuerkner.com/brms/reference/car.html">car()</a></code> in brms and <code>f(id, model = "bym2", graph = W)</code> in INLA. A surface is <code><a href="https://paulbuerkner.com/brms/reference/gp.html">gp()</a></code> in brms, an SPDE mesh in INLA, and <code>s(lat, lon, bs = "sos")</code> in mgcv. The last two live on the globe.</li>
 <li>Refit INLA models in <code>classic</code> mode and compare. Here the comparison caught a failed approximation that nothing in the output flagged.</li>
-<li>For a continuous outcome, <code>errorsarlm()</code> is the quick classical answer; read a lag model through <code>impacts()</code>.</li>
+<li>For a continuous outcome, <code><a href="https://r-spatial.github.io/spatialreg/reference/ML_models.html">errorsarlm()</a></code> is the quick classical answer; read a lag model through <code><a href="https://r-spatial.github.io/spatialreg/reference/impacts.html">impacts()</a></code>.</li>
 <li>The five spatial models give regression lines close to each other, whichever engine and view of space they use, and all five leave the naive line at altitude.</li>
 </ul>
 <p>The chapters so far handled ancestry and geography separately. The next chapter puts them in one model.</p>
 </div>
-<div id="further-reading-8" class="section level2 hasAnchor" number="8.8">
-<h2><span class="header-section-number">8.8</span> Further reading<a href="space-engines.html#further-reading-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>How earlier studies implemented spatial control.</strong> The first implementations used areas, not coordinates: the continental areas of <span class="citation">Dryer (<a href="#ref-dryer1989">1989</a>)</span>, turned into a random intercept by <span class="citation">Jaeger et al. (<a href="#ref-jaeger2011">2011</a>)</span>. That treats two languages on opposite sides of a continent as equally close as two in adjacent valleys. Continuous space entered through smooths and kernels. <span class="citation">Wieling et al. (<a href="#ref-wieling2011">2011</a>)</span> use a geographic smooth in a GAM, the <code>mgcv</code> model of this chapter on a flat map. <span class="citation">Guzmán Naranjo and Becker (<a href="#ref-guzman2022">2022</a>)</span> use a Gaussian process over coordinates in brms, the model of Chapter <a href="space-surface.html#space-surface">6</a>. <span class="citation"><span class="nocase">Skirgård et al.</span> (<a href="#ref-skirgard2023">2023</a>)</span> build a spatial precision matrix from a Matérn kernel on great-circle distances and give it to INLA as a fixed structure, which is the phylogenetic <code>generic0</code> term of Chapter <a href="phylogeny-engines.html#phylogeny-engines">4</a> with a spatial matrix in place of the tree. None of these uses a neighbour graph; the CAR family has been rare in linguistics and standard in epidemiology <span class="citation">(<a href="#ref-besag1991">Besag et al. 1991</a>; <a href="#ref-riebler2016">Riebler et al. 2016</a>)</span>.</p>
+<div id="further-reading-8" class="section level2" number="8.8">
+<h2>
+<span class="header-section-number">8.8</span> Further reading<a class="anchor" aria-label="anchor" href="#further-reading-8"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>How earlier studies implemented spatial control.</strong> The first implementations used areas, not coordinates: the continental areas of <span class="citation">Dryer (<a href="references.html#ref-dryer1989">1989</a>)</span>, turned into a random intercept by <span class="citation">Jaeger et al. (<a href="references.html#ref-jaeger2011">2011</a>)</span>. That treats two languages on opposite sides of a continent as equally close as two in adjacent valleys. Continuous space entered through smooths and kernels. <span class="citation">Wieling et al. (<a href="references.html#ref-wieling2011">2011</a>)</span> use a geographic smooth in a GAM, the <code>mgcv</code> model of this chapter on a flat map. <span class="citation">Guzmán Naranjo and Becker (<a href="references.html#ref-guzman2022">2022</a>)</span> use a Gaussian process over coordinates in brms, the model of Chapter <a href="space-surface.html#space-surface">6</a>. <span class="citation"><span class="nocase">Skirgård et al.</span> (<a href="references.html#ref-skirgard2023">2023</a>)</span> build a spatial precision matrix from a Matérn kernel on great-circle distances and give it to INLA as a fixed structure, which is the phylogenetic <code>generic0</code> term of Chapter <a href="phylogeny-engines.html#phylogeny-engines">4</a> with a spatial matrix in place of the tree. None of these uses a neighbour graph; the CAR family has been rare in linguistics and standard in epidemiology <span class="citation">(<a href="references.html#ref-besag1991">Besag et al. 1991</a>; <a href="references.html#ref-riebler2016">Riebler et al. 2016</a>)</span>.</p>
 <ul>
-<li><span class="citation">Krainski et al. (<a href="#ref-krainski2019">2019</a>)</span> cover the SPDE approach in depth and <span class="citation">Lindgren et al. (<a href="#ref-lindgren2022">2022</a>)</span> review its development. <code>inlabru</code> <span class="citation">(<a href="#ref-bachl2019">Bachl et al. 2019</a>)</span> hides the stack bookkeeping of this chapter behind a formula interface.</li>
-<li>A stationary surface lets correlation pass straight across seas and mountains. The barrier model of <span class="citation">Bakka et al. (<a href="#ref-bakka2019">2019</a>)</span> stops it at coastlines, and <span class="citation">Fuglstad et al. (<a href="#ref-fuglstad2019">2019</a>)</span> derive the joint prior used here as <code>inla.spde2.pcmatern()</code>.</li>
-<li><span class="citation">Miller et al. (<a href="#ref-miller2020">2020</a>)</span> show that an SPDE field can be fitted as an <code>mgcv</code> smooth, and <span class="citation">Pedersen et al. (<a href="#ref-pedersen2019">2019</a>)</span> show how to give each family or area its own smooth.</li>
-<li><span class="citation">Kissling and Carl (<a href="#ref-kissling2008">2008</a>)</span> compare SAR specifications by simulation and find the error model the most reliable; <span class="citation">Ver Hoef et al. (<a href="#ref-verhoef2018">2018</a>)</span> set SAR and CAR side by side; <span class="citation">Bivand et al. (<a href="#ref-bivand2021">2021</a>)</span> review the R software.</li>
-<li><span class="citation">Hodges and Reich (<a href="#ref-hodges2010">2010</a>)</span> and <span class="citation">Dupont et al. (<a href="#ref-dupont2022">2022</a>)</span> treat spatial confounding, which every model in this chapter is exposed to.</li>
+<li>
+<span class="citation">Krainski et al. (<a href="references.html#ref-krainski2019">2019</a>)</span> cover the SPDE approach in depth and <span class="citation">Lindgren et al. (<a href="references.html#ref-lindgren2022">2022</a>)</span> review its development. <code>inlabru</code> <span class="citation">(<a href="references.html#ref-bachl2019">Bachl et al. 2019</a>)</span> hides the stack bookkeeping of this chapter behind a formula interface.</li>
+<li>A stationary surface lets correlation pass straight across seas and mountains. The barrier model of <span class="citation">Bakka et al. (<a href="references.html#ref-bakka2019">2019</a>)</span> stops it at coastlines, and <span class="citation">Fuglstad et al. (<a href="references.html#ref-fuglstad2019">2019</a>)</span> derive the joint prior used here as <code><a href="https://rdrr.io/pkg/INLA/man/inla.spde2.pcmatern.html">inla.spde2.pcmatern()</a></code>.</li>
+<li>
+<span class="citation">Miller et al. (<a href="references.html#ref-miller2020">2020</a>)</span> show that an SPDE field can be fitted as an <code>mgcv</code> smooth, and <span class="citation">Pedersen et al. (<a href="references.html#ref-pedersen2019">2019</a>)</span> show how to give each family or area its own smooth.</li>
+<li>
+<span class="citation">Kissling and Carl (<a href="references.html#ref-kissling2008">2008</a>)</span> compare SAR specifications by simulation and find the error model the most reliable; <span class="citation">Ver Hoef et al. (<a href="references.html#ref-verhoef2018">2018</a>)</span> set SAR and CAR side by side; <span class="citation">Bivand et al. (<a href="references.html#ref-bivand2021">2021</a>)</span> review the R software.</li>
+<li>
+<span class="citation">Hodges and Reich (<a href="references.html#ref-hodges2010">2010</a>)</span> and <span class="citation">Dupont et al. (<a href="references.html#ref-dupont2022">2022</a>)</span> treat spatial confounding, which every model in this chapter is exposed to.</li>
+</ul>
+</div>
+</div>
+
+
+
+  <div class="chapter-nav">
+<div class="prev"><a href="space-neighbours.html"><span class="header-section-number">7</span> Space as a network of neighbours</a></div>
+<div class="next"><a href="joint.html"><span class="header-section-number">9</span> Both at once</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#space-engines"><span class="header-section-number">8</span> Space in INLA, mgcv and by maximum likelihood</a></li>
+<li><a class="nav-link" href="#set-up-6"><span class="header-section-number">8.1</span> Set up</a></li>
+<li>
+<a class="nav-link" href="#neighbours-in-inla-bym2"><span class="header-section-number">8.2</span> Neighbours in INLA: BYM2</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#check-the-approximation"><span class="header-section-number">8.2.1</span> Check the approximation</a></li></ul>
+</li>
+<li><a class="nav-link" href="#a-surface-on-the-sphere-spde"><span class="header-section-number">8.3</span> A surface on the sphere: SPDE</a></li>
+<li><a class="nav-link" href="#a-surface-on-the-sphere-mgcv"><span class="header-section-number">8.4</span> A surface on the sphere: mgcv</a></li>
+<li><a class="nav-link" href="#maximum-likelihood-simultaneous-autoregressive-models"><span class="header-section-number">8.5</span> Maximum likelihood: simultaneous autoregressive models</a></li>
+<li><a class="nav-link" href="#every-engine-one-figure-1"><span class="header-section-number">8.6</span> Every engine, one figure</a></li>
+<li><a class="nav-link" href="#what-to-carry-forward-7"><span class="header-section-number">8.7</span> What to carry forward</a></li>
+<li><a class="nav-link" href="#further-reading-8"><span class="header-section-number">8.8</span> Further reading</a></li>
 </ul>
 
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
 </div>
+    </nav>
 </div>
 
+</div>
+</div> <!-- .container -->
 
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
-<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-anselin1988" class="csl-entry">
-Anselin, Luc. 1988. <em>Spatial Econometrics: Methods and Models</em>. Kluwer.
-</div>
-<div id="ref-bachl2019" class="csl-entry">
-Bachl, Fabian E., Finn Lindgren, David L. Borchers, and Janine B. Illian. 2019. <span>“Inlabru: An <span>R</span> Package for <span>B</span>ayesian Spatial Modelling from Ecological Survey Data.”</span> <em>Methods in Ecology and Evolution</em> 10 (6): 760–66.
-</div>
-<div id="ref-bakka2019" class="csl-entry">
-Bakka, Haakon, Jarno Vanhatalo, Janine B. Illian, Daniel Simpson, and Håvard Rue. 2019. <span>“Non-Stationary <span>G</span>aussian Models with Physical Barriers.”</span> <em>Spatial Statistics</em> 29: 268–88.
-</div>
-<div id="ref-besag1991" class="csl-entry">
-Besag, Julian, Jeremy York, and Annie Mollié. 1991. <span>“Bayesian Image Restoration, with Two Applications in Spatial Statistics.”</span> <em>Annals of the Institute of Statistical Mathematics</em> 43 (1): 1–20.
-</div>
-<div id="ref-bivand2021" class="csl-entry">
-Bivand, Roger, Giovanni Millo, and Gianfranco Piras. 2021. <span>“A Review of Software for Spatial Econometrics in <span>R</span>.”</span> <em>Mathematics</em> 9 (11): 1276.
-</div>
-<div id="ref-dryer1989" class="csl-entry">
-Dryer, Matthew S. 1989. <span>“Large Linguistic Areas and Language Sampling.”</span> <em>Studies in Language</em> 13 (2): 257–92.
-</div>
-<div id="ref-dupont2022" class="csl-entry">
-Dupont, Emiko, Simon N. Wood, and Nicole H. Augustin. 2022. <span>“Spatial+: A Novel Approach to Spatial Confounding.”</span> <em>Biometrics</em> 78 (4): 1279–90.
-</div>
-<div id="ref-fuglstad2019" class="csl-entry">
-Fuglstad, Geir-Arne, Daniel Simpson, Finn Lindgren, and Håvard Rue. 2019. <span>“Constructing Priors That Penalize the Complexity of <span>G</span>aussian Random Fields.”</span> <em>Journal of the American Statistical Association</em> 114 (525): 445–52.
-</div>
-<div id="ref-guzman2022" class="csl-entry">
-Guzmán Naranjo, Matías, and Laura Becker. 2022. <span>“Statistical Bias Control in Typology.”</span> <em>Linguistic Typology</em> 26 (3): 605–70. <a href="https://doi.org/10.1515/lingty-2021-0002">https://doi.org/10.1515/lingty-2021-0002</a>.
-</div>
-<div id="ref-hodges2010" class="csl-entry">
-Hodges, James S., and Brian J. Reich. 2010. <span>“Adding Spatially-Correlated Errors Can Mess up the Fixed Effect You Love.”</span> <em>The American Statistician</em> 64 (4): 325–34.
-</div>
-<div id="ref-jaeger2011" class="csl-entry">
-Jaeger, T. Florian, Peter Graff, William Croft, and Daniel Pontillo. 2011. <span>“Mixed Effect Models for Genetic and Areal Dependencies in Linguistic Typology.”</span> <em>Linguistic Typology</em> 15 (2): 281–319.
-</div>
-<div id="ref-kissling2008" class="csl-entry">
-Kissling, W. Daniel, and Gudrun Carl. 2008. <span>“Spatial Autocorrelation and the Selection of Simultaneous Autoregressive Models.”</span> <em>Global Ecology and Biogeography</em> 17 (1): 59–71.
-</div>
-<div id="ref-krainski2019" class="csl-entry">
-Krainski, Elias T., Virgilio Gómez-Rubio, Haakon Bakka, et al. 2019. <em>Advanced Spatial Modeling with Stochastic Partial Differential Equations Using <span>R</span> and <span>INLA</span></em>. Chapman; Hall/CRC.
-</div>
-<div id="ref-lesage2009" class="csl-entry">
-LeSage, James, and R. Kelley Pace. 2009. <em>Introduction to Spatial Econometrics</em>. Chapman; Hall/CRC.
-</div>
-<div id="ref-lindgren2022" class="csl-entry">
-Lindgren, Finn, David Bolin, and Håvard Rue. 2022. <span>“The <span>SPDE</span> Approach for <span>G</span>aussian and Non-<span>G</span>aussian Fields: 10 Years and Still Running.”</span> <em>Spatial Statistics</em> 50: 100599.
-</div>
-<div id="ref-lindgren2011" class="csl-entry">
-Lindgren, Finn, Håvard Rue, and Johan Lindström. 2011. <span>“An Explicit Link Between <span>G</span>aussian Fields and <span>G</span>aussian <span>M</span>arkov Random Fields: The Stochastic Partial Differential Equation Approach.”</span> <em>Journal of the Royal Statistical Society: Series B</em> 73 (4): 423–98.
-</div>
-<div id="ref-miller2020" class="csl-entry">
-Miller, David L., Richard Glennie, and Andrew E. Seaton. 2020. <span>“Understanding the Stochastic Partial Differential Equation Approach to Smoothing.”</span> <em>Journal of Agricultural, Biological and Environmental Statistics</em> 25: 1–16.
-</div>
-<div id="ref-vanniekerk2023" class="csl-entry">
-Niekerk, Janet van, Elias Krainski, Denis Rustand, and Håvard Rue. 2023. <span>“A New Avenue for <span>B</span>ayesian Inference with <span>INLA</span>.”</span> <em>Computational Statistics &amp; Data Analysis</em> 181: 107692.
-</div>
-<div id="ref-pedersen2019" class="csl-entry">
-Pedersen, Eric J., David L. Miller, Gavin L. Simpson, and Noam Ross. 2019. <span>“Hierarchical Generalized Additive Models in Ecology: An Introduction with Mgcv.”</span> <em>PeerJ</em> 7: e6876.
-</div>
-<div id="ref-riebler2016" class="csl-entry">
-Riebler, Andrea, Sigrunn H. Sørbye, Daniel Simpson, and Håvard Rue. 2016. <span>“An Intuitive <span>B</span>ayesian Spatial Model for Disease Mapping That Accounts for Scaling.”</span> <em>Statistical Methods in Medical Research</em> 25 (4): 1145–65.
-</div>
-<div id="ref-skirgard2023" class="csl-entry">
-<span class="nocase">Skirgård, Hedvig, Hannah J. Haynie, Damián E. Blasi, et al.</span> 2023. <span>“Grambank Reveals the Importance of Genealogical Constraints on Linguistic Diversity and Highlights the Impact of Language Loss.”</span> <em>Science Advances</em> 9 (16): eadg6175. <a href="https://doi.org/10.1126/sciadv.adg6175">https://doi.org/10.1126/sciadv.adg6175</a>.
-</div>
-<div id="ref-verhoef2018" class="csl-entry">
-Ver Hoef, Jay M., Erin E. Peterson, Mevin B. Hooten, Ephraim M. Hanks, and Marie-Josée Fortin. 2018. <span>“Spatial Autoregressive Models for Statistical Inference from Ecological Data.”</span> <em>Ecological Monographs</em> 88 (1): 36–59.
-</div>
-<div id="ref-wahba1981" class="csl-entry">
-Wahba, Grace. 1981. <span>“Spline Interpolation and Smoothing on the Sphere.”</span> <em>SIAM Journal on Scientific and Statistical Computing</em> 2 (1): 5–16.
-</div>
-<div id="ref-wieling2011" class="csl-entry">
-Wieling, Martijn, John Nerbonne, and R. Harald Baayen. 2011. <span>“Quantitative Social Dialectology: Explaining Linguistic Variation Geographically and Socially.”</span> <em>PLoS ONE</em> 6 (9): e23613.
-</div>
-</div>
-            </section>
-
-          </div>
-        </div>
-      </div>
-<a href="space-neighbours.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="joint.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Relatives and Neighbours</strong>: Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only" was written by Muhammad Rehan. </p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-  "sharing": null,
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": null,
-    "text": null
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": null,
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "section",
-    "scroll_highlight": true
-  },
-  "toolbar": {
-    "position": "fixed"
-  }
-});
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -842,7 +539,22 @@ gitbook.start({
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
 </script>
 </body>
-
 </html>

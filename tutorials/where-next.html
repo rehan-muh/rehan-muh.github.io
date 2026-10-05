@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>14 Where next | Relatives and Neighbours</title>
+<meta name="author" content="Muhammad Rehan">
+<meta name="description" content="Every model in this book can be fitted with a package today. This chapter lists what those models leave out and points to recent work on each gap, in typology and in the statistics it borrows...">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="14 Where next | Relatives and Neighbours">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Every model in this book can be fitted with a package today. This chapter lists what those models leave out and points to recent work on each gap, in typology and in the statistics it borrows...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="14 Where next | Relatives and Neighbours">
+<meta name="twitter:description" content="Every model in this book can be fitted with a package today. This chapter lists what those models leave out and points to recent work on each gap, in typology and in the statistics it borrows...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.11.0/transition.js"></script><script src="libs/bs3compat-0.11.0/tabs.js"></script><script src="libs/bs3compat-0.11.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only">Relatives and Neighbours</a>:
+        <small class="text-muted">Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">The problem</li>
+<li><a class="" href="the-problem.html"><span class="header-section-number">1</span> Seeing the problem</a></li>
+<li class="book-part">Phylogeny</li>
+<li><a class="" href="trees.html"><span class="header-section-number">2</span> Trees: the raw material</a></li>
+<li><a class="" href="phylogeny.html"><span class="header-section-number">3</span> Phylogeny as a covariance matrix</a></li>
+<li><a class="" href="phylogeny-engines.html"><span class="header-section-number">4</span> Phylogeny in INLA, mgcv and by maximum likelihood</a></li>
+<li class="book-part">Space</li>
+<li><a class="" href="maps.html"><span class="header-section-number">5</span> Maps: coordinates, distances and neighbours</a></li>
+<li><a class="" href="space-surface.html"><span class="header-section-number">6</span> Space as a smooth surface</a></li>
+<li><a class="" href="space-neighbours.html"><span class="header-section-number">7</span> Space as a network of neighbours</a></li>
+<li><a class="" href="space-engines.html"><span class="header-section-number">8</span> Space in INLA, mgcv and by maximum likelihood</a></li>
+<li class="book-part">Space and phylogeny</li>
+<li><a class="" href="joint.html"><span class="header-section-number">9</span> Both at once</a></li>
+<li><a class="" href="joint-engines.html"><span class="header-section-number">10</span> Both at once in INLA and mgcv</a></li>
+<li><a class="" href="outcomes.html"><span class="header-section-number">11</span> Other kinds of outcome</a></li>
+<li class="book-part">Sampling and simulation</li>
+<li><a class="" href="sampling.html"><span class="header-section-number">12</span> Sampling instead of modelling</a></li>
+<li><a class="" href="simulation.html"><span class="header-section-number">13</span> Does it recover the truth?</a></li>
+<li class="book-part">Looking ahead</li>
+<li><a class="active" href="where-next.html"><span class="header-section-number">14</span> Where next</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="where-next" class="section level1" number="14">
+<h1>
+<span class="header-section-number">14</span> Where next<a class="anchor" aria-label="anchor" href="#where-next"><i class="fas fa-link"></i></a>
+</h1>
+<p class="lede">
+Every model in this book can be fitted with a package today. This chapter lists what those models leave out and points to recent work on each gap, in typology and in the statistics it borrows from.
+</p>
+<p>This chapter has no code. Each section names a limit of the models in the earlier chapters and then lists recent papers that work on it. The entries are short. They say what a paper is about and which chapter it speaks to, and they leave the findings to the papers.</p>
+<div id="the-assumptions-this-book-made" class="section level2" number="14.1">
+<h2>
+<span class="header-section-number">14.1</span> The assumptions this book made<a class="anchor" aria-label="anchor" href="#the-assumptions-this-book-made"><i class="fas fa-link"></i></a>
+</h2>
+<p>Five choices were made early and kept throughout.</p>
+<ul>
+<li>One tree, taken as known. Chapter <a href="trees.html#trees">2</a> built it from a classification and compared it with one dated tree. No model in the book carried the uncertainty of the tree into the slope.</li>
+<li>One point per language. Chapter <a href="maps.html#maps">5</a> showed how far a point can sit from the area where a language is spoken, and how much a location has moved between the traditional and the contemporary record.</li>
+<li>Contact as a smooth surface or a fixed graph. The Gaussian process of Chapter <a href="space-surface.html#space-surface">6</a> and the neighbour graph of Chapter <a href="space-neighbours.html#space-neighbours">7</a> both say that nearby languages are alike. Neither says who borrowed from whom, when, or across which barrier.</li>
+<li>One slope for the whole world. Elevation had the same effect in the Andes and in the Caucasus.</li>
+<li>One outcome at a time. Chapter <a href="outcomes.html#outcomes">11</a> changed the family, and each model still had a single feature on its left-hand side.</li>
+</ul>
+<p>The sections below come back to each of these, after a look at how the field is using the models that already exist.</p>
+</div>
+<div id="typology-with-both-controls" class="section level2" number="14.2">
+<h2>
+<span class="header-section-number">14.2</span> Typology with both controls<a class="anchor" aria-label="anchor" href="#typology-with-both-controls"><i class="fas fa-link"></i></a>
+</h2>
+<p>The models of Chapters <a href="joint.html#joint">9</a> and <a href="joint-engines.html#joint-engines">10</a> are now common in quantitative typology, and part of the discussion has moved to how results hold up under them.</p>
+<ul>
+<li>
+<strong>Replication.</strong> <span class="citation">Becker and Guzmán Naranjo (<a href="references.html#ref-becker2025">2025</a>)</span> is a target article on replication and methodological robustness in quantitative typology. The same issue of <em>Linguistic Typology</em> carries commentaries, among them <span class="citation">Mauri and Sansò (<a href="references.html#ref-mauri2025replicability">2025</a>)</span> on replicability “all the way up” and <span class="citation">Coupé (<a href="references.html#ref-coupe2025advanced">2025</a>)</span> on what counts as advanced statistical modelling.</li>
+<li>
+<strong>Results that change under the controls.</strong> <span class="citation">Blum (<a href="references.html#ref-blum2025most">2025</a>)</span> reports that most of the over-representation of phonological features in basic vocabulary disappears once spatial and phylogenetic dependence are controlled for. This is the pattern of Chapter <a href="the-problem.html#the-problem">1</a> on a different question.</li>
+<li>
+<strong>Spatial effects as the object of study.</strong> <span class="citation">Hartmann and Nichols (<a href="references.html#ref-hartmann2025geospatial">2025</a>)</span> model geospatial effects on phonological complexity across the world’s languages, and <span class="citation">Di Garbo and Kapellis (<a href="references.html#ref-di2025contact">2025</a>)</span> survey contact effects in nominal number systems worldwide. In both, geography or contact is the object of study.</li>
+<li>
+<strong>Environment and language.</strong> The running example of this book is one of many claims that link a linguistic feature to the physical environment. <span class="citation">Robbeets and Heggarty (<a href="references.html#ref-robbeets2026language">2026</a>)</span> set out first principles for work on language, ecology and climate change.</li>
+<li>
+<strong>The same problem elsewhere.</strong> <span class="citation">Wyner and Brill (<a href="references.html#ref-wyner2026correcting">2026</a>)</span> correct for spatial and temporal dependence in estimates of the economic effect of extreme heat. The data differ and the problem is the one in Chapter <a href="the-problem.html#the-problem">1</a>.</li>
+</ul>
+</div>
+<div id="sampling-1" class="section level2" number="14.3">
+<h2>
+<span class="header-section-number">14.3</span> Sampling<a class="anchor" aria-label="anchor" href="#sampling-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>Chapter <a href="sampling.html#sampling">12</a> treated a balanced sample as a statistical method and Chapter <a href="simulation.html#simulation">13</a> compared it with the models. Work on sampling continues alongside the modelling.</p>
+<ul>
+<li>
+<span class="citation">Miestamo (<a href="references.html#ref-miestamo2025phenomenon">2025</a>)</span> proposes phenomenon-based sampling. Compare it with the variety and probability samples of Chapter <a href="sampling.html#sampling">12</a>.</li>
+<li>
+<span class="citation">Villa (<a href="references.html#ref-villa2025makeitsample">2025</a>)</span> is a Python library that draws typological samples with the diversity value metric. A sample drawn by code can be redrawn many times, which is what Chapter <a href="sampling.html#sampling">12</a> asks for.</li>
+</ul>
+</div>
+<div id="better-trees-and-more-than-one" class="section level2" number="14.4">
+<h2>
+<span class="header-section-number">14.4</span> Better trees, and more than one<a class="anchor" aria-label="anchor" href="#better-trees-and-more-than-one"><i class="fas fa-link"></i></a>
+</h2>
+<p>The covariance matrix <code>A</code> of Chapter <a href="phylogeny.html#phylogeny">3</a> is only as good as the tree behind it. Chapter <a href="trees.html#trees">2</a> listed the sources. The papers below are about how those trees are inferred and how sure anyone can be of them.</p>
+<ul>
+<li>
+<strong>The data behind lexical trees.</strong> <span class="citation">Häuser and Stamatakis (<a href="references.html#ref-hauser2025cognate">2025</a>)</span> describe a cognate data bottleneck in language phylogenetics, and <span class="citation">Häuser et al. (<a href="references.html#ref-hauser2026systematic">2026</a>)</span> explore the limits of inference from cognate data. <span class="citation">Snee et al. (<a href="references.html#ref-snee2026variation">2026</a>)</span> trace variation between language phylogenies to variation in how the concepts of a word list were translated.</li>
+<li>
+<strong>New family trees.</strong> <span class="citation">Koile et al. (<a href="references.html#ref-koile2025reconstruction">2025</a>)</span> reconstruct the Semitic tree with sampled ancestors, which lets attested ancient languages sit on the branches as ancestors of later ones. <span class="citation">Jacques et al. (<a href="references.html#ref-jacques2025bayesian">2025</a>)</span> use Bayesian phylogenies of Kra-Dai to study the history of loom technology together with the languages.</li>
+<li>
+<strong>Other sources of distance.</strong> <span class="citation">Mavridis et al. (<a href="references.html#ref-mavridis2026phonological">2026</a>)</span> build phonological distances for typology and apply them to the origin of Indo-European.</li>
+<li>
+<strong>Software.</strong> <span class="citation"><span class="nocase">Baele et al.</span> (<a href="references.html#ref-baele2025beast">2025</a>)</span> present BEAST X, the current release of the software behind most dated language trees. <span class="citation">Swanepoel et al. (<a href="references.html#ref-swanepoel2026treeflow">2026</a>)</span> describe TreeFlow, which brings automatic differentiation to phylogenetic models.</li>
+<li>
+<strong>Uncertainty about the tree.</strong> <span class="citation">Klawitter and Drummond (<a href="references.html#ref-klawitter2026bayesian">2026</a>)</span> define credible sets for tree topologies. <span class="citation">Piccoli et al. (<a href="references.html#ref-piccoli2025should">2025</a>)</span> ask whether comparative models should be weighted when they account for phylogenetic uncertainty.</li>
+</ul>
+<p>That last question has a practical version in this book’s terms. A posterior sample of trees gives a sample of matrices <code>A</code>, one per tree. <code><a href="https://paulbuerkner.com/brms/reference/brm_multiple.html">brms::brm_multiple()</a></code> takes a list of data sets and a matching list of <code>data2</code> objects. Repeat the data once per tree and supply one matrix per tree, and it fits the model once per matrix and pools the draws. The slope then carries the uncertainty of the tree. Most Phlorest datasets include a posterior sample of trees beside the summary tree used in Chapter <a href="trees.html#trees">2</a>, so this needs no new method, only time.</p>
+</div>
+<div id="contact-as-a-process" class="section level2" number="14.5">
+<h2>
+<span class="header-section-number">14.5</span> Contact as a process<a class="anchor" aria-label="anchor" href="#contact-as-a-process"><i class="fas fa-link"></i></a>
+</h2>
+<p>A Gaussian process says that similarity decays with distance. It has no borrowing events, no direction and no dates. Several lines of work model contact itself.</p>
+<ul>
+<li>
+<strong>Contact inside the history of a family.</strong> <span class="citation">Santos et al. (<a href="references.html#ref-santos2026treating">2026</a>)</span> model the prehistory of Bantu with coalescent theory and treat contact as a normal part of that history.</li>
+<li>
+<strong>Evidence from outside linguistics.</strong> <span class="citation">Graff et al. (<a href="references.html#ref-graff2025patterns">2025</a>)</span> use patterns of genetic admixture to identify contact and compare rates of borrowing across contact scenarios. <span class="citation">Fehn et al. (<a href="references.html#ref-fehn2025tracing">2025</a>)</span> trace contact and migration in southern Africa before the Bantu expansion through lexical borrowing.</li>
+<li>
+<strong>Trees or networks.</strong> <span class="citation">Baraghith (<a href="references.html#ref-baraghith2026networks">2026</a>)</span> evaluates what network models explain that tree models do not in research on cultural evolution, and <span class="citation">Duda (<a href="references.html#ref-duda2026cultures">2026</a>)</span> reviews tree thinking across linguistics, archaeology and anthropology.</li>
+<li>
+<strong>Diffusion over a map in time.</strong> <span class="citation">Wichmann (<a href="references.html#ref-wichmann2025linguistic">2025</a>)</span> covers linguistic phylogeography, the inference of where languages were spoken in the past. <span class="citation">Burridge and Vaux (<a href="references.html#ref-burridge2026statistical">2026</a>)</span> infer the dynamics of language change from maps that change over time, and <span class="citation">Takahashi et al. (<a href="references.html#ref-takahashicellular">n.d.</a>)</span> combine cellular automata with Bayesian MCMC to recover the history of a diffusion process.</li>
+<li>
+<strong>Areas as discrete units.</strong> sBayes <span class="citation">(<a href="references.html#ref-ranacher2021">Ranacher et al. 2021</a>)</span> finds contact areas as sets of languages that share features beyond what inheritance and universal preference predict. It answers a question the surface of Chapter <a href="space-surface.html#space-surface">6</a> cannot ask, namely which languages form an area.</li>
+</ul>
+</div>
+<div id="phylogenetic-regression" class="section level2" number="14.6">
+<h2>
+<span class="header-section-number">14.6</span> Phylogenetic regression<a class="anchor" aria-label="anchor" href="#phylogenetic-regression"><i class="fas fa-link"></i></a>
+</h2>
+<p>The phylogenetic term in this book is a random intercept with Brownian covariance. The comparative-methods literature has kept moving past that.</p>
+<ul>
+<li>
+<span class="citation">Guirguis et al. (<a href="references.html#ref-guirguis2026occam">2026</a>)</span> argue that a bias they call Occam’s bias undermines inferences from phylogenetic linear models. Read it beside the dissenting estimate in Chapter <a href="phylogeny-engines.html#phylogeny-engines">4</a>.</li>
+<li>
+<span class="citation">Lau et al. (<a href="references.html#ref-lau2026efficient">2026</a>)</span> give an efficient Bayesian method for the joint evolution of a continuous and a discrete trait under a state-dependent Ornstein-Uhlenbeck model. This is a process model of two features evolving together, which a regression with a phylogenetic intercept only approximates.</li>
+<li>
+<span class="citation">Davison et al. (<a href="references.html#ref-davison2026scalable">2026</a>)</span> build scalable phylogenetic models that capture trait variation within species. The linguistic counterpart is variation within a language: dialects, or several descriptions of one language, each with its own value.</li>
+<li>
+<span class="citation">Mizuno et al. (<a href="references.html#ref-mizuno2026unified">2026</a>)</span> give a framework and practical guidance for meta-analysis with both phylogenetic and spatial terms, the same pair of terms as in Chapter <a href="joint.html#joint">9</a>.</li>
+</ul>
+</div>
+<div id="spatial-models-at-scale" class="section level2" number="14.7">
+<h2>
+<span class="header-section-number">14.7</span> Spatial models at scale<a class="anchor" aria-label="anchor" href="#spatial-models-at-scale"><i class="fas fa-link"></i></a>
+</h2>
+<p>Five hundred languages are a small spatial dataset. A study of every language in Glottolog, or of dialect data with thousands of sites, runs into the cost of the Gaussian process. Chapter <a href="space-surface.html#space-surface">6</a> used one approximation and Chapter <a href="space-engines.html#space-engines">8</a> another. There are more.</p>
+<ul>
+<li>
+<strong>Reviews and benchmarks.</strong> <span class="citation">Fuentes and Patterson (<a href="references.html#ref-fuentes2026kriging">2026</a>)</span> review fifty years of spatial statistics. <span class="citation">Tedesco et al. (<a href="references.html#ref-tedesco2025computational">2025</a>)</span> benchmark software for spatio-temporal models and include a guide to making R faster. <span class="citation">Irawan (<a href="references.html#ref-irawan2026computational">2026</a>)</span> benchmarks the INLA-SPDE approach for point processes on parameter recovery and spatial confounding, the two questions of Chapter <a href="simulation.html#simulation">13</a>.</li>
+<li>
+<strong>Faster approximations.</strong> <span class="citation">Song and Datta (<a href="references.html#ref-song2026fast">2026</a>)</span> give a fast variational method for large spatial data. <span class="citation">Fu et al. (<a href="references.html#ref-fu2026nearest">2026</a>)</span> extend nearest-neighbour processes beyond the Gaussian case. <span class="citation">Gaedke-Merzhäuser et al. (<a href="references.html#ref-gaedke2025accelerated">2025</a>)</span> accelerate spatio-temporal models with several Gaussian processes on high-performance hardware. <span class="citation">Aiello and Banerjee (<a href="references.html#ref-aiello2026amortized">2026</a>)</span> use amortized inference, in which a model is trained once and then reused, for disease mapping and boundary detection on spatial graphs. Boundary detection is the statistical name for finding an isogloss.</li>
+<li>
+<strong>INLA.</strong> <span class="citation">Dutta et al. (<a href="references.html#ref-dutta2026scalable">2026</a>)</span> work on skewness in the INLA approach with variational Bayes. Chapter <a href="space-engines.html#space-engines">8</a> found a binary model where INLA’s default mode and its classic mode disagreed. Posteriors for binary data are often skewed, so read this before trusting either mode on such data.</li>
+<li>
+<strong>Packages.</strong> <span class="citation">Finley (<a href="references.html#ref-finley2026stlmm">2026</a>)</span> is an R package for Bayesian spatial and space-time linear mixed models.</li>
+</ul>
+</div>
+<div id="what-the-spatial-term-does-to-the-slope" class="section level2" number="14.8">
+<h2>
+<span class="header-section-number">14.8</span> What the spatial term does to the slope<a class="anchor" aria-label="anchor" href="#what-the-spatial-term-does-to-the-slope"><i class="fas fa-link"></i></a>
+</h2>
+<p>Chapter <a href="joint.html#joint">9</a> warned that a spatial term can move a slope when the predictor is itself smooth in space, and elevation is. This is spatial confounding, and the literature on it is not settled.</p>
+<ul>
+<li>
+<span class="citation">Lin and Warren (<a href="references.html#ref-lin2026need">2026</a>)</span> ask when spatial random effects are needed at all in Bayesian regression for multilevel areal data.</li>
+<li>
+<span class="citation">Akbari et al. (<a href="references.html#ref-akbarispatial">n.d.</a>)</span> review spatial causality, and <span class="citation">He et al. (<a href="references.html#ref-he2026graph">2026</a>)</span> estimate treatment effects that vary over space with a causal forest on a graph.</li>
+<li>
+<span class="citation">Yacine and Thomas (<a href="references.html#ref-yacine2026efficient">2026</a>)</span> fit spatially varying coefficients with a Vecchia approximation. A spatially varying coefficient is a slope that changes over the map. For this book’s example it would let elevation matter in one highland region and not in another.</li>
+</ul>
+<p>brms can already fit one. The term <code>gp(x, y, by = elev_km)</code> multiplies a spatial surface by elevation, which gives a slope that varies over the map. It needs more data than 50 languages with ejectives can supply, which is why it does not appear in the earlier chapters.</p>
+</div>
+<div id="who-is-a-neighbour" class="section level2" number="14.9">
+<h2>
+<span class="header-section-number">14.9</span> Who is a neighbour<a class="anchor" aria-label="anchor" href="#who-is-a-neighbour"><i class="fas fa-link"></i></a>
+</h2>
+<p>Chapter <a href="space-neighbours.html#space-neighbours">7</a> joined each language to its five nearest neighbours and checked the result against ten. The graph was fixed before the model saw the data. A group of recent papers estimates it.</p>
+<ul>
+<li>
+<span class="citation">Mendez (<a href="references.html#ref-mendezmy">n.d.</a>)</span> and <span class="citation">Krisztin and Piribauer (<a href="references.html#ref-krisztin2026estimatew">2026</a>)</span> estimate the spatial weight matrix inside a Bayesian model. The second is an R package.</li>
+<li>
+<span class="citation"><span class="nocase">Arumningtyas et al.</span> (<a href="references.html#ref-arumningtyas2026choosing">2026</a>)</span> compare spatial matrices for the BYM model, the model of Chapter <a href="space-neighbours.html#space-neighbours">7</a>.</li>
+<li>
+<span class="citation">Schenk and Afkham (<a href="references.html#ref-schenk2026b">2026</a>)</span> infer the weights of a graph from dynamics inspired by the SPDE approach of Chapter <a href="space-engines.html#space-engines">8</a>.</li>
+</ul>
+<p>For languages this is the natural next step. A neighbour graph built from distance treats a mountain range and a trade route alike. A graph with estimated weights could find that two languages on opposite sides of a strait behave as neighbours and two on opposite sides of a ridge do not.</p>
+</div>
+<div id="languages-as-areas" class="section level2" number="14.10">
+<h2>
+<span class="header-section-number">14.10</span> Languages as areas<a class="anchor" aria-label="anchor" href="#languages-as-areas"><i class="fas fa-link"></i></a>
+</h2>
+<p>Chapter <a href="maps.html#maps">5</a> drew speaker areas as polygons and then went back to points, because every model in the book wants one location per language. Two recent papers work with the areas themselves.</p>
+<ul>
+<li>
+<span class="citation">Cunha Godoy et al. (<a href="references.html#ref-cunha2026statistical">2026</a>)</span> define a Gaussian process over areal units with the Hausdorff distance, a distance between two shapes, in place of the distance between two points. <code><a href="https://r-spatial.github.io/sf/reference/geos_measures.html">sf::st_distance()</a></code> computes it with <code>which = "Hausdorff"</code>, so the polygons of Chapter <a href="maps.html#maps">5</a> can supply the distances.</li>
+<li>
+<span class="citation">Villejo et al. (<a href="references.html#ref-villejo2026spatially">2026</a>)</span> model outcomes that were recorded for areas as coming from a surface that is continuous in space.</li>
+</ul>
+<p>The maps have a history of their own. <span class="citation">Jagessar (<a href="references.html#ref-jagessar2025grierson">2025</a>)</span> examines Grierson’s incomplete linguistic map of India and the limits of Indo-European cartography. Read it with the last section of Chapter <a href="maps.html#maps">5</a>.</p>
+</div>
+<div id="more-kinds-of-outcome" class="section level2" number="14.11">
+<h2>
+<span class="header-section-number">14.11</span> More kinds of outcome<a class="anchor" aria-label="anchor" href="#more-kinds-of-outcome"><i class="fas fa-link"></i></a>
+</h2>
+<p>Chapter <a href="outcomes.html#outcomes">11</a> covered a measurement, a count and ordered classes. The spatial literature has models for cases it left out.</p>
+<ul>
+<li>
+<strong>Counts.</strong> <span class="citation">Nadifar et al. (<a href="references.html#ref-nadifar2026bayesian">2026</a>)</span> model dispersed counts with INLA. <span class="citation">Majumder et al. (<a href="references.html#ref-majumder2026bstzinb">2026</a>)</span> and <span class="citation">Wu et al. (<a href="references.html#ref-wu2026semiparametric">2026</a>)</span> treat zero-inflated negative binomial counts in space and time.</li>
+<li>
+<strong>Discrete data in general.</strong> <span class="citation">Carter (<a href="references.html#ref-carter2024bayesian">2024</a>)</span> is a thesis on Bayesian spatial models for discrete data.</li>
+<li>
+<strong>Coding error.</strong> <span class="citation">Ma et al. (<a href="references.html#ref-ma2026bayesian">2026</a>)</span> analyse binary spatial data that are sometimes misclassified. Typological codings are too. A grammar that does not mention a feature is often coded as lacking it, and a model that allows for misclassification is the principled way to say so.</li>
+<li>
+<strong>Many features at once.</strong> <span class="citation">Mukherjee et al. (<a href="references.html#ref-mukherjee2026scalable">2026</a>)</span> give scalable inference for high-dimensional spatial data of mixed types. A typological database is this kind of data: hundreds of features, some binary, some ordered, some counts, on one set of locations.</li>
+</ul>
+</div>
+<div id="predicting-what-is-missing" class="section level2" number="14.12">
+<h2>
+<span class="header-section-number">14.12</span> Predicting what is missing<a class="anchor" aria-label="anchor" href="#predicting-what-is-missing"><i class="fas fa-link"></i></a>
+</h2>
+<p>The dependence terms in this book were used to protect a slope. They are also prediction tools, since a model that knows a language’s relatives and neighbours can guess its missing values. Work on filling typological databases is growing, and much of it comes from natural language processing. <span class="citation">Ioannidou (<a href="references.html#ref-ioannidou2025typological">2025</a>)</span> predicts Grambank features, <span class="citation">Hus and Anastasopoulos (<a href="references.html#ref-hus2026rag">2026</a>)</span> complete typological databases with retrieval-augmented generation, and <span class="citation">Wang et al. (<a href="references.html#ref-wang2026typological">2026</a>)</span> use in-context learning with large language models. A phylogenetic and spatial model is the baseline such methods should be compared with, because it uses only the tree and the map.</p>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="simulation.html"><span class="header-section-number">13</span> Does it recover the truth?</a></div>
+<div class="next"><a href="references.html">References</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#where-next"><span class="header-section-number">14</span> Where next</a></li>
+<li><a class="nav-link" href="#the-assumptions-this-book-made"><span class="header-section-number">14.1</span> The assumptions this book made</a></li>
+<li><a class="nav-link" href="#typology-with-both-controls"><span class="header-section-number">14.2</span> Typology with both controls</a></li>
+<li><a class="nav-link" href="#sampling-1"><span class="header-section-number">14.3</span> Sampling</a></li>
+<li><a class="nav-link" href="#better-trees-and-more-than-one"><span class="header-section-number">14.4</span> Better trees, and more than one</a></li>
+<li><a class="nav-link" href="#contact-as-a-process"><span class="header-section-number">14.5</span> Contact as a process</a></li>
+<li><a class="nav-link" href="#phylogenetic-regression"><span class="header-section-number">14.6</span> Phylogenetic regression</a></li>
+<li><a class="nav-link" href="#spatial-models-at-scale"><span class="header-section-number">14.7</span> Spatial models at scale</a></li>
+<li><a class="nav-link" href="#what-the-spatial-term-does-to-the-slope"><span class="header-section-number">14.8</span> What the spatial term does to the slope</a></li>
+<li><a class="nav-link" href="#who-is-a-neighbour"><span class="header-section-number">14.9</span> Who is a neighbour</a></li>
+<li><a class="nav-link" href="#languages-as-areas"><span class="header-section-number">14.10</span> Languages as areas</a></li>
+<li><a class="nav-link" href="#more-kinds-of-outcome"><span class="header-section-number">14.11</span> More kinds of outcome</a></li>
+<li><a class="nav-link" href="#predicting-what-is-missing"><span class="header-section-number">14.12</span> Predicting what is missing</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Relatives and Neighbours</strong>: Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only" was written by Muhammad Rehan. </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,378 +1,129 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Trees: the raw material | Relatives and Neighbours</title>
-  <meta name="description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
-  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="2 Trees: the raw material | Relatives and Neighbours" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
-  
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Trees: the raw material | Relatives and Neighbours" />
-  
-  <meta name="twitter:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
-  
-
-<meta name="author" content="Muhammad Rehan" />
-
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="the-problem.html"/>
-<link rel="next" href="phylogeny.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>2 Trees: the raw material | Relatives and Neighbours</title>
+<meta name="author" content="Muhammad Rehan">
+<meta name="description" content="Before any phylogenetic model there is a tree, and most of the work is getting one that matches your data. Read it, check it against the languages, look at it, and build one from a classification...">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="2 Trees: the raw material | Relatives and Neighbours">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Before any phylogenetic model there is a tree, and most of the work is getting one that matches your data. Read it, check it against the languages, look at it, and build one from a classification...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2 Trees: the raw material | Relatives and Neighbours">
+<meta name="twitter:description" content="Before any phylogenetic model there is a tree, and most of the work is getting one that matches your data. Read it, check it against the languages, look at it, and build one from a classification...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.11.0/transition.js"></script><script src="libs/bs3compat-0.11.0/tabs.js"></script><script src="libs/bs3compat-0.11.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
 <style type="text/css">
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<link rel="stylesheet" href="style.css">
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./"><b>Relatives and Neighbours</b></a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
-<ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#before-you-start"><i class="fa fa-check"></i>Before you start</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-running-example"><i class="fa fa-check"></i>The running example</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#sources"><i class="fa fa-check"></i>Sources</a></li>
-</ul></li>
-<li class="part"><span><b>I The problem</b></span></li>
-<li class="chapter" data-level="1" data-path="the-problem.html"><a href="the-problem.html"><i class="fa fa-check"></i><b>1</b> Seeing the problem</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="the-problem.html"><a href="the-problem.html#the-data-and-the-first-model"><i class="fa fa-check"></i><b>1.1</b> The data and the first model</a></li>
-<li class="chapter" data-level="1.2" data-path="the-problem.html"><a href="the-problem.html#where-the-ejectives-are"><i class="fa fa-check"></i><b>1.2</b> Where the ejectives are</a></li>
-<li class="chapter" data-level="1.3" data-path="the-problem.html"><a href="the-problem.html#how-often-does-a-meaningless-predictor-pass"><i class="fa fa-check"></i><b>1.3</b> How often does a meaningless predictor pass?</a></li>
-<li class="chapter" data-level="1.4" data-path="the-problem.html"><a href="the-problem.html#measuring-spatial-dependence-morans-i"><i class="fa fa-check"></i><b>1.4</b> Measuring spatial dependence: Moran’s I</a></li>
-<li class="chapter" data-level="1.5" data-path="the-problem.html"><a href="the-problem.html#measuring-phylogenetic-signal"><i class="fa fa-check"></i><b>1.5</b> Measuring phylogenetic signal</a></li>
-<li class="chapter" data-level="1.6" data-path="the-problem.html"><a href="the-problem.html#what-to-carry-forward"><i class="fa fa-check"></i><b>1.6</b> What to carry forward</a></li>
-<li class="chapter" data-level="1.7" data-path="the-problem.html"><a href="the-problem.html#further-reading-1"><i class="fa fa-check"></i><b>1.7</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>II Phylogeny</b></span></li>
-<li class="chapter" data-level="2" data-path="trees.html"><a href="trees.html"><i class="fa fa-check"></i><b>2</b> Trees: the raw material</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="trees.html"><a href="trees.html#set-up"><i class="fa fa-check"></i><b>2.1</b> Set up</a></li>
-<li class="chapter" data-level="2.2" data-path="trees.html"><a href="trees.html#what-a-tree-object-holds"><i class="fa fa-check"></i><b>2.2</b> What a tree object holds</a></li>
-<li class="chapter" data-level="2.3" data-path="trees.html"><a href="trees.html#does-the-tree-match-the-data"><i class="fa fa-check"></i><b>2.3</b> Does the tree match the data?</a></li>
-<li class="chapter" data-level="2.4" data-path="trees.html"><a href="trees.html#look-at-it"><i class="fa fa-check"></i><b>2.4</b> Look at it</a></li>
-<li class="chapter" data-level="2.5" data-path="trees.html"><a href="trees.html#what-the-branch-lengths-mean"><i class="fa fa-check"></i><b>2.5</b> What the branch lengths mean</a></li>
-<li class="chapter" data-level="2.6" data-path="trees.html"><a href="trees.html#build-a-tree-from-a-table"><i class="fa fa-check"></i><b>2.6</b> Build a tree from a table</a></li>
-<li class="chapter" data-level="2.7" data-path="trees.html"><a href="trees.html#where-trees-come-from"><i class="fa fa-check"></i><b>2.7</b> Where trees come from</a></li>
-<li class="chapter" data-level="2.8" data-path="trees.html"><a href="trees.html#a-dated-tree-from-phlorest"><i class="fa fa-check"></i><b>2.8</b> A dated tree from Phlorest</a></li>
-<li class="chapter" data-level="2.9" data-path="trees.html"><a href="trees.html#how-tree-like-is-a-feature"><i class="fa fa-check"></i><b>2.9</b> How tree-like is a feature?</a></li>
-<li class="chapter" data-level="2.10" data-path="trees.html"><a href="trees.html#what-to-carry-forward-1"><i class="fa fa-check"></i><b>2.10</b> What to carry forward</a></li>
-<li class="chapter" data-level="2.11" data-path="trees.html"><a href="trees.html#further-reading-2"><i class="fa fa-check"></i><b>2.11</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="phylogeny.html"><a href="phylogeny.html"><i class="fa fa-check"></i><b>3</b> Phylogeny as a covariance matrix</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="phylogeny.html"><a href="phylogeny.html#set-up-1"><i class="fa fa-check"></i><b>3.1</b> Set up</a></li>
-<li class="chapter" data-level="3.2" data-path="phylogeny.html"><a href="phylogeny.html#from-a-tree-to-a-matrix"><i class="fa fa-check"></i><b>3.2</b> From a tree to a matrix</a></li>
-<li class="chapter" data-level="3.3" data-path="phylogeny.html"><a href="phylogeny.html#first-rung-family-as-a-random-intercept"><i class="fa fa-check"></i><b>3.3</b> First rung: family as a random intercept</a></li>
-<li class="chapter" data-level="3.4" data-path="phylogeny.html"><a href="phylogeny.html#the-phylogenetic-model"><i class="fa fa-check"></i><b>3.4</b> The phylogenetic model</a></li>
-<li class="chapter" data-level="3.5" data-path="phylogeny.html"><a href="phylogeny.html#reading-the-result"><i class="fa fa-check"></i><b>3.5</b> Reading the result</a>
-<ul>
-<li class="chapter" data-level="3.5.1" data-path="phylogeny.html"><a href="phylogeny.html#the-slope"><i class="fa fa-check"></i><b>3.5.1</b> The slope</a></li>
-<li class="chapter" data-level="3.5.2" data-path="phylogeny.html"><a href="phylogeny.html#the-regression-line"><i class="fa fa-check"></i><b>3.5.2</b> The regression line</a></li>
-<li class="chapter" data-level="3.5.3" data-path="phylogeny.html"><a href="phylogeny.html#phylogenetic-signal"><i class="fa fa-check"></i><b>3.5.3</b> Phylogenetic signal</a></li>
-<li class="chapter" data-level="3.5.4" data-path="phylogeny.html"><a href="phylogeny.html#where-the-model-put-the-lineage-effects"><i class="fa fa-check"></i><b>3.5.4</b> Where the model put the lineage effects</a></li>
-</ul></li>
-<li class="chapter" data-level="3.6" data-path="phylogeny.html"><a href="phylogeny.html#what-to-carry-forward-2"><i class="fa fa-check"></i><b>3.6</b> What to carry forward</a></li>
-<li class="chapter" data-level="3.7" data-path="phylogeny.html"><a href="phylogeny.html#further-reading-3"><i class="fa fa-check"></i><b>3.7</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html"><i class="fa fa-check"></i><b>4</b> Phylogeny in INLA, mgcv and by maximum likelihood</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#set-up-2"><i class="fa fa-check"></i><b>4.1</b> Set up</a></li>
-<li class="chapter" data-level="4.2" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#inla"><i class="fa fa-check"></i><b>4.2</b> INLA</a></li>
-<li class="chapter" data-level="4.3" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#mgcv"><i class="fa fa-check"></i><b>4.3</b> mgcv</a></li>
-<li class="chapter" data-level="4.4" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#maximum-likelihood-pgls"><i class="fa fa-check"></i><b>4.4</b> Maximum likelihood: PGLS</a></li>
-<li class="chapter" data-level="4.5" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#maximum-likelihood-phylogenetic-logistic-regression"><i class="fa fa-check"></i><b>4.5</b> Maximum likelihood: phylogenetic logistic regression</a></li>
-<li class="chapter" data-level="4.6" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#every-engine-one-figure"><i class="fa fa-check"></i><b>4.6</b> Every engine, one figure</a></li>
-<li class="chapter" data-level="4.7" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#what-to-carry-forward-3"><i class="fa fa-check"></i><b>4.7</b> What to carry forward</a></li>
-<li class="chapter" data-level="4.8" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#further-reading-4"><i class="fa fa-check"></i><b>4.8</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>III Space</b></span></li>
-<li class="chapter" data-level="5" data-path="maps.html"><a href="maps.html"><i class="fa fa-check"></i><b>5</b> Maps: coordinates, distances and neighbours</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="maps.html"><a href="maps.html#set-up-3"><i class="fa fa-check"></i><b>5.1</b> Set up</a></li>
-<li class="chapter" data-level="5.2" data-path="maps.html"><a href="maps.html#languages-as-points"><i class="fa fa-check"></i><b>5.2</b> Languages as points</a></li>
-<li class="chapter" data-level="5.3" data-path="maps.html"><a href="maps.html#distances"><i class="fa fa-check"></i><b>5.3</b> Distances</a></li>
-<li class="chapter" data-level="5.4" data-path="maps.html"><a href="maps.html#flat-maps-and-their-cost"><i class="fa fa-check"></i><b>5.4</b> Flat maps and their cost</a></li>
-<li class="chapter" data-level="5.5" data-path="maps.html"><a href="maps.html#neighbours"><i class="fa fa-check"></i><b>5.5</b> Neighbours</a></li>
-<li class="chapter" data-level="5.6" data-path="maps.html"><a href="maps.html#from-a-graph-to-weights"><i class="fa fa-check"></i><b>5.6</b> From a graph to weights</a></li>
-<li class="chapter" data-level="5.7" data-path="maps.html"><a href="maps.html#how-far-does-similarity-reach"><i class="fa fa-check"></i><b>5.7</b> How far does similarity reach?</a></li>
-<li class="chapter" data-level="5.8" data-path="maps.html"><a href="maps.html#where-locations-come-from"><i class="fa fa-check"></i><b>5.8</b> Where locations come from</a></li>
-<li class="chapter" data-level="5.9" data-path="maps.html"><a href="maps.html#speaker-areas-as-polygons"><i class="fa fa-check"></i><b>5.9</b> Speaker areas as polygons</a></li>
-<li class="chapter" data-level="5.10" data-path="maps.html"><a href="maps.html#what-a-location-leaves-out"><i class="fa fa-check"></i><b>5.10</b> What a location leaves out</a></li>
-<li class="chapter" data-level="5.11" data-path="maps.html"><a href="maps.html#what-to-carry-forward-4"><i class="fa fa-check"></i><b>5.11</b> What to carry forward</a></li>
-<li class="chapter" data-level="5.12" data-path="maps.html"><a href="maps.html#further-reading-5"><i class="fa fa-check"></i><b>5.12</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="space-surface.html"><a href="space-surface.html"><i class="fa fa-check"></i><b>6</b> Space as a smooth surface</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="space-surface.html"><a href="space-surface.html#set-up-4"><i class="fa fa-check"></i><b>6.1</b> Set up</a></li>
-<li class="chapter" data-level="6.2" data-path="space-surface.html"><a href="space-surface.html#the-idea"><i class="fa fa-check"></i><b>6.2</b> The idea</a></li>
-<li class="chapter" data-level="6.3" data-path="space-surface.html"><a href="space-surface.html#coordinates-the-model-can-measure-with"><i class="fa fa-check"></i><b>6.3</b> Coordinates the model can measure with</a></li>
-<li class="chapter" data-level="6.4" data-path="space-surface.html"><a href="space-surface.html#fitting-it"><i class="fa fa-check"></i><b>6.4</b> Fitting it</a></li>
-<li class="chapter" data-level="6.5" data-path="space-surface.html"><a href="space-surface.html#was-k-large-enough"><i class="fa fa-check"></i><b>6.5</b> Was <code>k</code> large enough?</a></li>
-<li class="chapter" data-level="6.6" data-path="space-surface.html"><a href="space-surface.html#what-the-surface-looks-like"><i class="fa fa-check"></i><b>6.6</b> What the surface looks like</a></li>
-<li class="chapter" data-level="6.7" data-path="space-surface.html"><a href="space-surface.html#did-it-work"><i class="fa fa-check"></i><b>6.7</b> Did it work?</a></li>
-<li class="chapter" data-level="6.8" data-path="space-surface.html"><a href="space-surface.html#the-regression-line-1"><i class="fa fa-check"></i><b>6.8</b> The regression line</a></li>
-<li class="chapter" data-level="6.9" data-path="space-surface.html"><a href="space-surface.html#variations"><i class="fa fa-check"></i><b>6.9</b> Variations</a></li>
-<li class="chapter" data-level="6.10" data-path="space-surface.html"><a href="space-surface.html#what-to-carry-forward-5"><i class="fa fa-check"></i><b>6.10</b> What to carry forward</a></li>
-<li class="chapter" data-level="6.11" data-path="space-surface.html"><a href="space-surface.html#further-reading-6"><i class="fa fa-check"></i><b>6.11</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="space-neighbours.html"><a href="space-neighbours.html"><i class="fa fa-check"></i><b>7</b> Space as a network of neighbours</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="space-neighbours.html"><a href="space-neighbours.html#set-up-5"><i class="fa fa-check"></i><b>7.1</b> Set up</a></li>
-<li class="chapter" data-level="7.2" data-path="space-neighbours.html"><a href="space-neighbours.html#the-idea-1"><i class="fa fa-check"></i><b>7.2</b> The idea</a></li>
-<li class="chapter" data-level="7.3" data-path="space-neighbours.html"><a href="space-neighbours.html#building-the-graph"><i class="fa fa-check"></i><b>7.3</b> Building the graph</a></li>
-<li class="chapter" data-level="7.4" data-path="space-neighbours.html"><a href="space-neighbours.html#icar"><i class="fa fa-check"></i><b>7.4</b> ICAR</a></li>
-<li class="chapter" data-level="7.5" data-path="space-neighbours.html"><a href="space-neighbours.html#bym2"><i class="fa fa-check"></i><b>7.5</b> BYM2</a></li>
-<li class="chapter" data-level="7.6" data-path="space-neighbours.html"><a href="space-neighbours.html#the-regression-line-2"><i class="fa fa-check"></i><b>7.6</b> The regression line</a></li>
-<li class="chapter" data-level="7.7" data-path="space-neighbours.html"><a href="space-neighbours.html#how-much-does-the-graph-matter"><i class="fa fa-check"></i><b>7.7</b> How much does the graph matter?</a></li>
-<li class="chapter" data-level="7.8" data-path="space-neighbours.html"><a href="space-neighbours.html#other-models-in-the-same-family"><i class="fa fa-check"></i><b>7.8</b> Other models in the same family</a></li>
-<li class="chapter" data-level="7.9" data-path="space-neighbours.html"><a href="space-neighbours.html#what-to-carry-forward-6"><i class="fa fa-check"></i><b>7.9</b> What to carry forward</a></li>
-<li class="chapter" data-level="7.10" data-path="space-neighbours.html"><a href="space-neighbours.html#further-reading-7"><i class="fa fa-check"></i><b>7.10</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="space-engines.html"><a href="space-engines.html"><i class="fa fa-check"></i><b>8</b> Space in INLA, mgcv and by maximum likelihood</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="space-engines.html"><a href="space-engines.html#set-up-6"><i class="fa fa-check"></i><b>8.1</b> Set up</a></li>
-<li class="chapter" data-level="8.2" data-path="space-engines.html"><a href="space-engines.html#neighbours-in-inla-bym2"><i class="fa fa-check"></i><b>8.2</b> Neighbours in INLA: BYM2</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="space-engines.html"><a href="space-engines.html#check-the-approximation"><i class="fa fa-check"></i><b>8.2.1</b> Check the approximation</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="space-engines.html"><a href="space-engines.html#a-surface-on-the-sphere-spde"><i class="fa fa-check"></i><b>8.3</b> A surface on the sphere: SPDE</a></li>
-<li class="chapter" data-level="8.4" data-path="space-engines.html"><a href="space-engines.html#a-surface-on-the-sphere-mgcv"><i class="fa fa-check"></i><b>8.4</b> A surface on the sphere: mgcv</a></li>
-<li class="chapter" data-level="8.5" data-path="space-engines.html"><a href="space-engines.html#maximum-likelihood-simultaneous-autoregressive-models"><i class="fa fa-check"></i><b>8.5</b> Maximum likelihood: simultaneous autoregressive models</a></li>
-<li class="chapter" data-level="8.6" data-path="space-engines.html"><a href="space-engines.html#every-engine-one-figure-1"><i class="fa fa-check"></i><b>8.6</b> Every engine, one figure</a></li>
-<li class="chapter" data-level="8.7" data-path="space-engines.html"><a href="space-engines.html#what-to-carry-forward-7"><i class="fa fa-check"></i><b>8.7</b> What to carry forward</a></li>
-<li class="chapter" data-level="8.8" data-path="space-engines.html"><a href="space-engines.html#further-reading-8"><i class="fa fa-check"></i><b>8.8</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>IV Space and phylogeny</b></span></li>
-<li class="chapter" data-level="9" data-path="joint.html"><a href="joint.html"><i class="fa fa-check"></i><b>9</b> Both at once</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="joint.html"><a href="joint.html#set-up-7"><i class="fa fa-check"></i><b>9.1</b> Set up</a></li>
-<li class="chapter" data-level="9.2" data-path="joint.html"><a href="joint.html#why-one-model-and-not-two"><i class="fa fa-check"></i><b>9.2</b> Why one model and not two</a></li>
-<li class="chapter" data-level="9.3" data-path="joint.html"><a href="joint.html#the-joint-model"><i class="fa fa-check"></i><b>9.3</b> The joint model</a></li>
-<li class="chapter" data-level="9.4" data-path="joint.html"><a href="joint.html#bring-back-the-earlier-models"><i class="fa fa-check"></i><b>9.4</b> Bring back the earlier models</a></li>
-<li class="chapter" data-level="9.5" data-path="joint.html"><a href="joint.html#who-gets-the-credit"><i class="fa fa-check"></i><b>9.5</b> Who gets the credit</a></li>
-<li class="chapter" data-level="9.6" data-path="joint.html"><a href="joint.html#every-slope-so-far"><i class="fa fa-check"></i><b>9.6</b> Every slope so far</a></li>
-<li class="chapter" data-level="9.7" data-path="joint.html"><a href="joint.html#every-regression-line-so-far"><i class="fa fa-check"></i><b>9.7</b> Every regression line so far</a></li>
-<li class="chapter" data-level="9.8" data-path="joint.html"><a href="joint.html#which-model-to-report"><i class="fa fa-check"></i><b>9.8</b> Which model to report</a></li>
-<li class="chapter" data-level="9.9" data-path="joint.html"><a href="joint.html#what-to-carry-forward-8"><i class="fa fa-check"></i><b>9.9</b> What to carry forward</a></li>
-<li class="chapter" data-level="9.10" data-path="joint.html"><a href="joint.html#further-reading-9"><i class="fa fa-check"></i><b>9.10</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="joint-engines.html"><a href="joint-engines.html"><i class="fa fa-check"></i><b>10</b> Both at once in INLA and mgcv</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="joint-engines.html"><a href="joint-engines.html#set-up-8"><i class="fa fa-check"></i><b>10.1</b> Set up</a></li>
-<li class="chapter" data-level="10.2" data-path="joint-engines.html"><a href="joint-engines.html#the-joint-model-in-inla"><i class="fa fa-check"></i><b>10.2</b> The joint model in INLA</a></li>
-<li class="chapter" data-level="10.3" data-path="joint-engines.html"><a href="joint-engines.html#the-joint-model-in-mgcv"><i class="fa fa-check"></i><b>10.3</b> The joint model in mgcv</a></li>
-<li class="chapter" data-level="10.4" data-path="joint-engines.html"><a href="joint-engines.html#the-joint-model-three-engines"><i class="fa fa-check"></i><b>10.4</b> The joint model, three engines</a></li>
-<li class="chapter" data-level="10.5" data-path="joint-engines.html"><a href="joint-engines.html#the-whole-book-in-one-figure"><i class="fa fa-check"></i><b>10.5</b> The whole book in one figure</a></li>
-<li class="chapter" data-level="10.6" data-path="joint-engines.html"><a href="joint-engines.html#what-to-carry-forward-9"><i class="fa fa-check"></i><b>10.6</b> What to carry forward</a></li>
-<li class="chapter" data-level="10.7" data-path="joint-engines.html"><a href="joint-engines.html#further-reading-10"><i class="fa fa-check"></i><b>10.7</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>V Sampling and simulation</b></span></li>
-<li class="chapter" data-level="11" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>11</b> Sampling instead of modelling</a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="sampling.html"><a href="sampling.html#set-up-9"><i class="fa fa-check"></i><b>11.1</b> Set up</a></li>
-<li class="chapter" data-level="11.2" data-path="sampling.html"><a href="sampling.html#the-sampling-tradition"><i class="fa fa-check"></i><b>11.2</b> The sampling tradition</a></li>
-<li class="chapter" data-level="11.3" data-path="sampling.html"><a href="sampling.html#three-designs"><i class="fa fa-check"></i><b>11.3</b> Three designs</a></li>
-<li class="chapter" data-level="11.4" data-path="sampling.html"><a href="sampling.html#one-sample-one-answer"><i class="fa fa-check"></i><b>11.4</b> One sample, one answer</a></li>
-<li class="chapter" data-level="11.5" data-path="sampling.html"><a href="sampling.html#a-thousand-samples"><i class="fa fa-check"></i><b>11.5</b> A thousand samples</a></li>
-<li class="chapter" data-level="11.6" data-path="sampling.html"><a href="sampling.html#the-regression-lines"><i class="fa fa-check"></i><b>11.6</b> The regression lines</a></li>
-<li class="chapter" data-level="11.7" data-path="sampling.html"><a href="sampling.html#does-sampling-remove-the-dependence"><i class="fa fa-check"></i><b>11.7</b> Does sampling remove the dependence?</a></li>
-<li class="chapter" data-level="11.8" data-path="sampling.html"><a href="sampling.html#what-to-carry-forward-10"><i class="fa fa-check"></i><b>11.8</b> What to carry forward</a></li>
-<li class="chapter" data-level="11.9" data-path="sampling.html"><a href="sampling.html#further-reading-11"><i class="fa fa-check"></i><b>11.9</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="simulation.html"><a href="simulation.html"><i class="fa fa-check"></i><b>12</b> Does it recover the truth?</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="simulation.html"><a href="simulation.html#why-simulate"><i class="fa fa-check"></i><b>12.1</b> Why simulate</a></li>
-<li class="chapter" data-level="12.2" data-path="simulation.html"><a href="simulation.html#set-up-10"><i class="fa fa-check"></i><b>12.2</b> Set up</a></li>
-<li class="chapter" data-level="12.3" data-path="simulation.html"><a href="simulation.html#a-world-with-a-known-slope"><i class="fa fa-check"></i><b>12.3</b> A world with a known slope</a></li>
-<li class="chapter" data-level="12.4" data-path="simulation.html"><a href="simulation.html#seven-methods"><i class="fa fa-check"></i><b>12.4</b> Seven methods</a></li>
-<li class="chapter" data-level="12.5" data-path="simulation.html"><a href="simulation.html#one-world-looked-at-closely"><i class="fa fa-check"></i><b>12.5</b> One world, looked at closely</a></li>
-<li class="chapter" data-level="12.6" data-path="simulation.html"><a href="simulation.html#three-hundred-worlds"><i class="fa fa-check"></i><b>12.6</b> Three hundred worlds</a></li>
-<li class="chapter" data-level="12.7" data-path="simulation.html"><a href="simulation.html#no-effect-who-cries-wolf"><i class="fa fa-check"></i><b>12.7</b> No effect: who cries wolf?</a></li>
-<li class="chapter" data-level="12.8" data-path="simulation.html"><a href="simulation.html#a-true-effect-who-finds-it-and-how-precisely"><i class="fa fa-check"></i><b>12.8</b> A true effect: who finds it, and how precisely?</a></li>
-<li class="chapter" data-level="12.9" data-path="simulation.html"><a href="simulation.html#shared-history-the-limit-of-every-method"><i class="fa fa-check"></i><b>12.9</b> Shared history: the limit of every method</a></li>
-<li class="chapter" data-level="12.10" data-path="simulation.html"><a href="simulation.html#make-it-your-own"><i class="fa fa-check"></i><b>12.10</b> Make it your own</a></li>
-<li class="chapter" data-level="12.11" data-path="simulation.html"><a href="simulation.html#what-to-carry-forward-11"><i class="fa fa-check"></i><b>12.11</b> What to carry forward</a></li>
-<li class="chapter" data-level="12.12" data-path="simulation.html"><a href="simulation.html#further-reading-12"><i class="fa fa-check"></i><b>12.12</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://rehan-muh.github.io/">Muhammad Rehan</a></li>
-
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only">Relatives and Neighbours</a>:
+        <small class="text-muted">Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Relatives and Neighbours</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">The problem</li>
+<li><a class="" href="the-problem.html"><span class="header-section-number">1</span> Seeing the problem</a></li>
+<li class="book-part">Phylogeny</li>
+<li><a class="active" href="trees.html"><span class="header-section-number">2</span> Trees: the raw material</a></li>
+<li><a class="" href="phylogeny.html"><span class="header-section-number">3</span> Phylogeny as a covariance matrix</a></li>
+<li><a class="" href="phylogeny-engines.html"><span class="header-section-number">4</span> Phylogeny in INLA, mgcv and by maximum likelihood</a></li>
+<li class="book-part">Space</li>
+<li><a class="" href="maps.html"><span class="header-section-number">5</span> Maps: coordinates, distances and neighbours</a></li>
+<li><a class="" href="space-surface.html"><span class="header-section-number">6</span> Space as a smooth surface</a></li>
+<li><a class="" href="space-neighbours.html"><span class="header-section-number">7</span> Space as a network of neighbours</a></li>
+<li><a class="" href="space-engines.html"><span class="header-section-number">8</span> Space in INLA, mgcv and by maximum likelihood</a></li>
+<li class="book-part">Space and phylogeny</li>
+<li><a class="" href="joint.html"><span class="header-section-number">9</span> Both at once</a></li>
+<li><a class="" href="joint-engines.html"><span class="header-section-number">10</span> Both at once in INLA and mgcv</a></li>
+<li><a class="" href="outcomes.html"><span class="header-section-number">11</span> Other kinds of outcome</a></li>
+<li class="book-part">Sampling and simulation</li>
+<li><a class="" href="sampling.html"><span class="header-section-number">12</span> Sampling instead of modelling</a></li>
+<li><a class="" href="simulation.html"><span class="header-section-number">13</span> Does it recover the truth?</a></li>
+<li class="book-part">Looking ahead</li>
+<li><a class="" href="where-next.html"><span class="header-section-number">14</span> Where next</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="trees" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">2</span> Trees: the raw material<a href="trees.html#trees" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="trees" class="section level1" number="2">
+<h1>
+<span class="header-section-number">2</span> Trees: the raw material<a class="anchor" aria-label="anchor" href="#trees"><i class="fas fa-link"></i></a>
+</h1>
 <p class="lede">
 Before any phylogenetic model there is a tree, and most of the work is getting one that matches your data. Read it, check it against the languages, look at it, and build one from a classification when none exists.
 </p>
 <p class="chapter-meta">
 <span><b>Fitted with</b> ape, phytools</span><span><b>Model fitting</b> a few seconds</span><span><b>Packages</b> <code>ape</code> <code>phytools</code></span><span><a href="scripts/02-trees.R">Download the R script</a></span>
 </p>
-<div id="set-up" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Set up<a href="trees.html#set-up" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="trees.html#cb25-1" tabindex="-1"></a><span class="fu">library</span>(ape)</span>
-<span id="cb25-2"><a href="trees.html#cb25-2" tabindex="-1"></a><span class="fu">library</span>(phytools)</span>
-<span id="cb25-3"><a href="trees.html#cb25-3" tabindex="-1"></a></span>
-<span id="cb25-4"><a href="trees.html#cb25-4" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
-<span id="cb25-5"><a href="trees.html#cb25-5" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
-<span id="cb25-6"><a href="trees.html#cb25-6" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;glottolog_tree.nwk&quot;</span>))</span></code></pre></div>
+<div id="set-up" class="section level2" number="2.1">
+<h2>
+<span class="header-section-number">2.1</span> Set up<a class="anchor" aria-label="anchor" href="#set-up"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/emmanuelparadis/ape">ape</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/liamrevell/phytools">phytools</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">base</span> <span class="op">&lt;-</span> <span class="st">"https://rehan-muh.github.io/tutorials/data/"</span></span>
+<span><span class="va">d</span>    <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">base</span>, <span class="st">"languages.csv"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">tree</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/read.tree.html">read.tree</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">base</span>, <span class="st">"glottolog_tree.nwk"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="what-a-tree-object-holds" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> What a tree object holds<a href="trees.html#what-a-tree-object-holds" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><code>read.tree()</code> reads the Newick format, which is how trees from Glottolog, D-PLACE and most phylogenetic software are distributed. <code>read.nexus()</code> reads the other common format. Either returns a <code>phylo</code> object.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="trees.html#cb26-1" tabindex="-1"></a>tree</span></code></pre></div>
+<div id="what-a-tree-object-holds" class="section level2" number="2.2">
+<h2>
+<span class="header-section-number">2.2</span> What a tree object holds<a class="anchor" aria-label="anchor" href="#what-a-tree-object-holds"><i class="fas fa-link"></i></a>
+</h2>
+<p><code><a href="https://rdrr.io/pkg/ape/man/read.tree.html">read.tree()</a></code> reads the Newick format, which is how trees from Glottolog, D-PLACE and most phylogenetic software are distributed. <code><a href="https://rdrr.io/pkg/ape/man/read.nexus.html">read.nexus()</a></code> reads the other common format. Either returns a <code>phylo</code> object.</p>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">tree</span></span></code></pre></div>
 <pre><code>## 
 ## Phylogenetic tree with 500 tips and 264 internal nodes.
 ## 
@@ -380,30 +131,39 @@ Before any phylogenetic model there is a tree, and most of the work is getting o
 ##   adyg1241, beja1238, alab1254, kamb1316, hadi1240, east2652, ...
 ## 
 ## Unrooted; includes branch length(s).</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="trees.html#cb28-1" tabindex="-1"></a><span class="fu">head</span>(tree<span class="sc">$</span>tip.label)</span></code></pre></div>
-<pre><code>## [1] &quot;adyg1241&quot; &quot;beja1238&quot; &quot;alab1254&quot; &quot;kamb1316&quot; &quot;hadi1240&quot; &quot;east2652&quot;</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="trees.html#cb30-1" tabindex="-1"></a><span class="fu">c</span>(<span class="at">tips =</span> <span class="fu">Ntip</span>(tree), <span class="at">internal_nodes =</span> <span class="fu">Nnode</span>(tree))</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">tree</span><span class="op">$</span><span class="va">tip.label</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## [1] "adyg1241" "beja1238" "alab1254" "kamb1316" "hadi1240" "east2652"</code></pre>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>tips <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/summary.phylo.html">Ntip</a></span><span class="op">(</span><span class="va">tree</span><span class="op">)</span>, internal_nodes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/summary.phylo.html">Nnode</a></span><span class="op">(</span><span class="va">tree</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##           tips internal_nodes 
 ##            500            264</code></pre>
 <p>The tips are the languages, labelled here by Glottocode. The internal nodes are the groupings: subgroups, families, and at the top a root that joins everything.</p>
 <p>Two properties matter for what follows.</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="trees.html#cb32-1" tabindex="-1"></a><span class="fu">is.ultrametric</span>(tree)    <span class="co"># do all languages end at the same height?</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/ape/man/is.ultrametric.html">is.ultrametric</a></span><span class="op">(</span><span class="va">tree</span><span class="op">)</span>    <span class="co"># do all languages end at the same height?</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="trees.html#cb34-1" tabindex="-1"></a><span class="fu">is.binary</span>(tree)         <span class="co"># does every node split in exactly two?</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/ape/man/is.binary.tree.html">is.binary</a></span><span class="op">(</span><span class="va">tree</span><span class="op">)</span>         <span class="co"># does every node split in exactly two?</span></span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
 <p>The tree is ultrametric: every language is the same distance from the root, as it should be for languages all spoken today. It is not binary, and that is fine. A classification often says “these six languages form a group” without saying how the six relate, and the tree records that as one node with six branches. Every model in this book accepts such trees.</p>
 </div>
-<div id="does-the-tree-match-the-data" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Does the tree match the data?<a href="trees.html#does-the-tree-match-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="does-the-tree-match-the-data" class="section level2" number="2.3">
+<h2>
+<span class="header-section-number">2.3</span> Does the tree match the data?<a class="anchor" aria-label="anchor" href="#does-the-tree-match-the-data"><i class="fas fa-link"></i></a>
+</h2>
 <p>This check prevents more wasted afternoons than any other line in the book. Every language in the data must be a tip, and every tip must be a language in the data.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="trees.html#cb36-1" tabindex="-1"></a><span class="fu">setdiff</span>(d<span class="sc">$</span>glottocode, tree<span class="sc">$</span>tip.label)    <span class="co"># in the data, missing from the tree</span></span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sets.html">setdiff</a></span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">glottocode</span>, <span class="va">tree</span><span class="op">$</span><span class="va">tip.label</span><span class="op">)</span>    <span class="co"># in the data, missing from the tree</span></span></code></pre></div>
 <pre><code>## character(0)</code></pre>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="trees.html#cb38-1" tabindex="-1"></a><span class="fu">setdiff</span>(tree<span class="sc">$</span>tip.label, d<span class="sc">$</span>glottocode)    <span class="co"># in the tree, missing from the data</span></span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sets.html">setdiff</a></span><span class="op">(</span><span class="va">tree</span><span class="op">$</span><span class="va">tip.label</span>, <span class="va">d</span><span class="op">$</span><span class="va">glottocode</span><span class="op">)</span>    <span class="co"># in the tree, missing from the data</span></span></code></pre></div>
 <pre><code>## character(0)</code></pre>
 <p>Both are empty here because the two files were built together. With your own data they will not be. Languages missing from the tree have to be dropped from the analysis or added to the tree. Tips missing from the data are pruned:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="trees.html#cb40-1" tabindex="-1"></a>some  <span class="ot">&lt;-</span> d<span class="sc">$</span>glottocode[d<span class="sc">$</span>macroarea <span class="sc">==</span> <span class="st">&quot;Australia&quot;</span>]</span>
-<span id="cb40-2"><a href="trees.html#cb40-2" tabindex="-1"></a>small <span class="ot">&lt;-</span> <span class="fu">keep.tip</span>(tree, some)       <span class="co"># the tree of just these languages</span></span>
-<span id="cb40-3"><a href="trees.html#cb40-3" tabindex="-1"></a>small</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">some</span>  <span class="op">&lt;-</span> <span class="va">d</span><span class="op">$</span><span class="va">glottocode</span><span class="op">[</span><span class="va">d</span><span class="op">$</span><span class="va">macroarea</span> <span class="op">==</span> <span class="st">"Australia"</span><span class="op">]</span></span>
+<span><span class="va">small</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/drop.tip.html">keep.tip</a></span><span class="op">(</span><span class="va">tree</span>, <span class="va">some</span><span class="op">)</span>       <span class="co"># the tree of just these languages</span></span>
+<span><span class="va">small</span></span></code></pre></div>
 <pre><code>## 
 ## Phylogenetic tree with 68 tips and 34 internal nodes.
 ## 
@@ -411,56 +171,69 @@ Before any phylogenetic model there is a tree, and most of the work is getting o
 ##   wany1247, erre1238, anin1240, nung1290, djau1244, remb1249, ...
 ## 
 ## Unrooted; includes branch length(s).</code></pre>
-<p><code>drop.tip()</code> does the reverse, removing the tips you name. Pruning keeps the branch lengths between the tips that remain, so a pruned tree still says the right thing about them.</p>
+<p><code><a href="https://rdrr.io/pkg/ape/man/drop.tip.html">drop.tip()</a></code> does the reverse, removing the tips you name. Pruning keeps the branch lengths between the tips that remain, so a pruned tree still says the right thing about them.</p>
 <p>It also helps to put the data in the order of the tips, so that row <code>i</code> and tip <code>i</code> are the same language:</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="trees.html#cb42-1" tabindex="-1"></a>d <span class="ot">&lt;-</span> d[<span class="fu">match</span>(tree<span class="sc">$</span>tip.label, d<span class="sc">$</span>glottocode), ]</span>
-<span id="cb42-2"><a href="trees.html#cb42-2" tabindex="-1"></a><span class="fu">all</span>(d<span class="sc">$</span>glottocode <span class="sc">==</span> tree<span class="sc">$</span>tip.label)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">d</span> <span class="op">&lt;-</span> <span class="va">d</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/match.html">match</a></span><span class="op">(</span><span class="va">tree</span><span class="op">$</span><span class="va">tip.label</span>, <span class="va">d</span><span class="op">$</span><span class="va">glottocode</span><span class="op">)</span>, <span class="op">]</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/all.html">all</a></span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">glottocode</span> <span class="op">==</span> <span class="va">tree</span><span class="op">$</span><span class="va">tip.label</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 </div>
-<div id="look-at-it" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Look at it<a href="trees.html#look-at-it" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="look-at-it" class="section level2" number="2.4">
+<h2>
+<span class="header-section-number">2.4</span> Look at it<a class="anchor" aria-label="anchor" href="#look-at-it"><i class="fas fa-link"></i></a>
+</h2>
 <p>A tree of 500 tips is hard to read (Chapter <a href="the-problem.html#the-problem">1</a> drew it as a fan). One family is easy. Prune to Afro-Asiatic and swap the Glottocodes for names.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="trees.html#cb44-1" tabindex="-1"></a>aa <span class="ot">&lt;-</span> <span class="fu">keep.tip</span>(tree, d<span class="sc">$</span>glottocode[d<span class="sc">$</span>family <span class="sc">==</span> <span class="st">&quot;Afro-Asiatic&quot;</span>])</span>
-<span id="cb44-2"><a href="trees.html#cb44-2" tabindex="-1"></a>aa<span class="sc">$</span>tip.label <span class="ot">&lt;-</span> d<span class="sc">$</span>name[<span class="fu">match</span>(aa<span class="sc">$</span>tip.label, d<span class="sc">$</span>glottocode)]</span>
-<span id="cb44-3"><a href="trees.html#cb44-3" tabindex="-1"></a></span>
-<span id="cb44-4"><a href="trees.html#cb44-4" tabindex="-1"></a><span class="fu">plot</span>(aa, <span class="at">cex =</span> <span class="fl">0.75</span>)</span>
-<span id="cb44-5"><a href="trees.html#cb44-5" tabindex="-1"></a><span class="fu">axisPhylo</span>()</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:trees-family"></span>
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">aa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/drop.tip.html">keep.tip</a></span><span class="op">(</span><span class="va">tree</span>, <span class="va">d</span><span class="op">$</span><span class="va">glottocode</span><span class="op">[</span><span class="va">d</span><span class="op">$</span><span class="va">family</span> <span class="op">==</span> <span class="st">"Afro-Asiatic"</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">aa</span><span class="op">$</span><span class="va">tip.label</span> <span class="op">&lt;-</span> <span class="va">d</span><span class="op">$</span><span class="va">name</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/match.html">match</a></span><span class="op">(</span><span class="va">aa</span><span class="op">$</span><span class="va">tip.label</span>, <span class="va">d</span><span class="op">$</span><span class="va">glottocode</span><span class="op">)</span><span class="op">]</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">aa</span>, cex <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/ape/man/axisPhylo.html">axisPhylo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:trees-family"></span>
 <span id="fig:trees-family" style="display:block;"></span>
-<img src="figures/02-trees/family-1.png" alt="The Afro-Asiatic languages of the sample as the tree has them. Each split is a level of the Glottolog classification; the scale is the share of the tree's height." width="634" />
-<p class="caption">
+<img src="figures/02-trees/family-1.png" alt="The Afro-Asiatic languages of the sample as the tree has them. Each split is a level of the Glottolog classification; the scale is the share of the tree's height." width="634"><p class="caption">
 Figure 2.1: The Afro-Asiatic languages of the sample as the tree has them. Each split is a level of the Glottolog classification; the scale is the share of the tree’s height.
 </p>
 </div>
 <p>Read it from the left. The first split separates the main branches of the family; each further split is a subgroup inside the one before. Two languages are as related, for the purposes of a model, as the length of the path they share from the root.</p>
 </div>
-<div id="what-the-branch-lengths-mean" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> What the branch lengths mean<a href="trees.html#what-the-branch-lengths-mean" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-the-branch-lengths-mean" class="section level2" number="2.5">
+<h2>
+<span class="header-section-number">2.5</span> What the branch lengths mean<a class="anchor" aria-label="anchor" href="#what-the-branch-lengths-mean"><i class="fas fa-link"></i></a>
+</h2>
 <p>A classification gives only the shape of a tree. Branch lengths have to come from somewhere, and where they come from is an assumption you should be able to state.</p>
 <p>In this tree every level of the Glottolog classification is one step, the family counts as a level, and tips are stretched so that all languages end at the same height. As a consequence, two languages share as much history as they share levels of classification.</p>
 <p>The usual alternatives:</p>
 <ul>
-<li><strong>Grafen’s lengths.</strong> <code>compute.brlen(tree, method = "Grafen")</code> sets the height of each node from the number of tips below it. Large groups come out old and small groups young <span class="citation">(<a href="#ref-grafen1989">Grafen 1989</a>)</span>.</li>
-<li><strong>All branches equal.</strong> <code>compute.brlen(tree, 1)</code> is simple, but languages no longer end at the same height.</li>
-<li><strong>A dated tree.</strong> For families with a published Bayesian phylogeny, the branch lengths are estimated times. That is the best case, and the models in the next chapters use such a tree exactly as they use this one.</li>
+<li>
+<strong>Grafen’s lengths.</strong> <code>compute.brlen(tree, method = "Grafen")</code> sets the height of each node from the number of tips below it. Large groups come out old and small groups young <span class="citation">(<a href="references.html#ref-grafen1989">Grafen 1989</a>)</span>.</li>
+<li>
+<strong>All branches equal.</strong> <code>compute.brlen(tree, 1)</code> is simple, but languages no longer end at the same height.</li>
+<li>
+<strong>A dated tree.</strong> For families with a published Bayesian phylogeny, the branch lengths are estimated times. That is the best case, and the models in the next chapters use such a tree exactly as they use this one.</li>
 </ul>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="trees.html#cb45-1" tabindex="-1"></a>grafen <span class="ot">&lt;-</span> <span class="fu">compute.brlen</span>(aa, <span class="at">method =</span> <span class="st">&quot;Grafen&quot;</span>)</span>
-<span id="cb45-2"><a href="trees.html#cb45-2" tabindex="-1"></a>ours   <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">vcv</span>(aa, <span class="at">corr =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb45-3"><a href="trees.html#cb45-3" tabindex="-1"></a>theirs <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">vcv</span>(grafen, <span class="at">corr =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb45-4"><a href="trees.html#cb45-4" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">cor</span>(ours, theirs), <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">grafen</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/compute.brlen.html">compute.brlen</a></span><span class="op">(</span><span class="va">aa</span>, method <span class="op">=</span> <span class="st">"Grafen"</span><span class="op">)</span></span>
+<span><span class="va">ours</span>   <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/vector.html">as.vector</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/ape/man/vcv.phylo.html">vcv</a></span><span class="op">(</span><span class="va">aa</span>, corr <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">theirs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/vector.html">as.vector</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/ape/man/vcv.phylo.html">vcv</a></span><span class="op">(</span><span class="va">grafen</span>, corr <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">ours</span>, <span class="va">theirs</span><span class="op">)</span>, <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## [1] 0.85</code></pre>
-<p>The number is the correlation between the two correlation matrices for this family. The shape of the tree is the same under both conventions, and the shape does much of the work, but the conventions are not interchangeable. Chapter <a href="simulation.html#simulation">12</a> shows how to find out whether such a choice matters for your result.</p>
+<p>The number is the correlation between the two correlation matrices for this family. The shape of the tree is the same under both conventions, and the shape does much of the work, but the conventions are not interchangeable. Chapter <a href="simulation.html#simulation">13</a> shows how to find out whether such a choice matters for your result.</p>
 <blockquote>
 <p><strong>What this assumes.</strong> Any tree built from a classification assumes the classification is right and that depth in it is comparable across families. Glottolog is deliberately conservative: it groups only what has been demonstrated, so many families are small and there are many isolates. Each isolate is its own lineage and shares nothing with anything else.</p>
 </blockquote>
 </div>
-<div id="build-a-tree-from-a-table" class="section level2 hasAnchor" number="2.6">
-<h2><span class="header-section-number">2.6</span> Build a tree from a table<a href="trees.html#build-a-tree-from-a-table" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If all you have is columns that classify the languages, <code>as.phylo()</code> turns them into a tree. The formula lists the levels from the top down. The sample file has only the family, so this builds the coarsest possible tree, family then language:</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="trees.html#cb47-1" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">family =</span> <span class="fu">factor</span>(d<span class="sc">$</span>family), <span class="at">language =</span> <span class="fu">factor</span>(d<span class="sc">$</span>glottocode))</span>
-<span id="cb47-2"><a href="trees.html#cb47-2" tabindex="-1"></a>flat <span class="ot">&lt;-</span> <span class="fu">as.phylo</span>(<span class="sc">~</span>family <span class="sc">/</span> language, <span class="at">data =</span> tab)</span>
-<span id="cb47-3"><a href="trees.html#cb47-3" tabindex="-1"></a>flat <span class="ot">&lt;-</span> <span class="fu">compute.brlen</span>(flat, <span class="at">method =</span> <span class="st">&quot;Grafen&quot;</span>)</span>
-<span id="cb47-4"><a href="trees.html#cb47-4" tabindex="-1"></a>flat</span></code></pre></div>
+<div id="build-a-tree-from-a-table" class="section level2" number="2.6">
+<h2>
+<span class="header-section-number">2.6</span> Build a tree from a table<a class="anchor" aria-label="anchor" href="#build-a-tree-from-a-table"><i class="fas fa-link"></i></a>
+</h2>
+<p>If all you have is columns that classify the languages, <code><a href="https://rdrr.io/pkg/ape/man/as.phylo.html">as.phylo()</a></code> turns them into a tree. The formula lists the levels from the top down. The sample file has only the family, so this builds the coarsest possible tree, family then language:</p>
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">tab</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">family</span><span class="op">)</span>, language <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">glottocode</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">flat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/as.phylo.html">as.phylo</a></span><span class="op">(</span><span class="op">~</span><span class="va">family</span> <span class="op">/</span> <span class="va">language</span>, data <span class="op">=</span> <span class="va">tab</span><span class="op">)</span></span>
+<span><span class="va">flat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/compute.brlen.html">compute.brlen</a></span><span class="op">(</span><span class="va">flat</span>, method <span class="op">=</span> <span class="st">"Grafen"</span><span class="op">)</span></span>
+<span><span class="va">flat</span></span></code></pre></div>
 <pre><code>## 
 ## Phylogenetic tree with 500 tips and 47 internal nodes.
 ## 
@@ -472,24 +245,24 @@ Figure 2.1: The Afro-Asiatic languages of the sample as the tree has them. Each 
 ## Unrooted; includes branch length(s).</code></pre>
 <p>With a genus or subgroup column you would write <code>~family / genus / language</code>, and each extra level adds structure. A tree with only the family level is the family random intercept of the next chapter drawn as a picture: all languages of a family equally close, and no information below that.</p>
 </div>
-<div id="where-trees-come-from" class="section level2 hasAnchor" number="2.7">
-<h2><span class="header-section-number">2.7</span> Where trees come from<a href="trees.html#where-trees-come-from" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="where-trees-come-from" class="section level2" number="2.7">
+<h2>
+<span class="header-section-number">2.7</span> Where trees come from<a class="anchor" aria-label="anchor" href="#where-trees-come-from"><i class="fas fa-link"></i></a>
+</h2>
 <p>Language trees come from three kinds of source, and the kinds differ in what a branch length means.</p>
-<p>Glottolog publishes its classification as one Newick tree per family <span class="citation">(<a href="#ref-glottolog">Hammarström et al., n.d.</a>)</span>. It covers every known language, so any sample can be given a tree. It has no branch lengths, which is why this book had to choose a convention for them.</p>
-<p>For a growing number of families there is a dated phylogeny, inferred by Bayesian methods from cognate-coded vocabulary. Its branch lengths are estimated years, and it comes with a posterior sample of trees that shows how uncertain the estimate is. Well-known examples cover Austronesian <span class="citation">(<a href="#ref-gray2009">Gray et al. 2009</a>)</span>, Indo-European <span class="citation">(<a href="#ref-bouckaert2012">Bouckaert et al. 2012</a>; <a href="#ref-chang2015">Chang et al. 2015</a>)</span>, Bantu <span class="citation">(<a href="#ref-grollemund2015">Grollemund et al. 2015</a>)</span>, Pama-Nyungan <span class="citation">(<a href="#ref-bouckaert2018">Bouckaert et al. 2018</a>)</span>, Sino-Tibetan <span class="citation">(<a href="#ref-sagart2019">Sagart et al. 2019</a>)</span> and Dravidian <span class="citation">(<a href="#ref-kolipakam2018">Kolipakam et al. 2018</a>)</span>. A dated tree is still an estimate: the two Indo-European studies cited here put the root of the family thousands of years apart.</p>
-<p>Phlorest collects published language phylogenies and distributes each in the same layout: a summary tree, the posterior sample, and a table that gives the Glottocode of every tip <span class="citation">(<a href="#ref-phlorest">Phlorest, n.d.</a>)</span>. It held about thirty studies when this chapter was written. D-PLACE distributes many of the same trees alongside cultural data <span class="citation">(<a href="#ref-kirby2016"><span class="nocase">Kirby et al.</span> 2016</a>)</span>.</p>
-<p>A world sample needs a tree that spans families, and two are in use. <span class="citation">Jäger (<a href="#ref-jager2018">2018</a>)</span> infers one for several thousand languages by automated comparison of the word lists in the ASJP database. <span class="citation">Bouckaert et al. (<a href="#ref-bouckaert2022">2022</a>)</span> build a global tree by joining dated family trees with Glottolog’s groupings and release a posterior sample of such trees; <span class="citation"><span class="nocase">Skirgård et al.</span> (<a href="#ref-skirgard2023">2023</a>)</span> use it for the Grambank analyses. In both trees the branches that join one family to another come from the method and its assumptions, because historical linguistics has not demonstrated those relationships. The tree in this book takes the cautious position and gives different families no shared history.</p>
-<table>
+<p>Glottolog publishes its classification as one Newick tree per family <span class="citation">(<a href="references.html#ref-glottolog">Hammarström et al., n.d.</a>)</span>. It covers every known language, so any sample can be given a tree. It has no branch lengths, which is why this book had to choose a convention for them.</p>
+<p>For a growing number of families there is a dated phylogeny, inferred by Bayesian methods from cognate-coded vocabulary. Its branch lengths are estimated years, and it comes with a posterior sample of trees that shows how uncertain the estimate is. Well-known examples cover Austronesian <span class="citation">(<a href="references.html#ref-gray2009">Gray et al. 2009</a>)</span>, Indo-European <span class="citation">(<a href="references.html#ref-bouckaert2012">Bouckaert et al. 2012</a>; <a href="references.html#ref-chang2015">Chang et al. 2015</a>)</span>, Bantu <span class="citation">(<a href="references.html#ref-grollemund2015">Grollemund et al. 2015</a>)</span>, Pama-Nyungan <span class="citation">(<a href="references.html#ref-bouckaert2018">Bouckaert et al. 2018</a>)</span>, Sino-Tibetan <span class="citation">(<a href="references.html#ref-sagart2019">Sagart et al. 2019</a>)</span> and Dravidian <span class="citation">(<a href="references.html#ref-kolipakam2018">Kolipakam et al. 2018</a>)</span>. A dated tree is still an estimate: the two Indo-European studies cited here put the root of the family thousands of years apart.</p>
+<p>Phlorest collects published language phylogenies and distributes each in the same layout: a summary tree, the posterior sample, and a table that gives the Glottocode of every tip <span class="citation">(<a href="references.html#ref-phlorest">Phlorest, n.d.</a>)</span>. It held about thirty studies when this chapter was written. D-PLACE distributes many of the same trees alongside cultural data <span class="citation">(<a href="references.html#ref-kirby2016"><span class="nocase">Kirby et al.</span> 2016</a>)</span>.</p>
+<p>A world sample needs a tree that spans families, and two are in use. <span class="citation">Jäger (<a href="references.html#ref-jager2018">2018</a>)</span> infers one for several thousand languages by automated comparison of the word lists in the ASJP database. <span class="citation">Bouckaert et al. (<a href="references.html#ref-bouckaert2022">2022</a>)</span> build a global tree by joining dated family trees with Glottolog’s groupings and release a posterior sample of such trees; <span class="citation"><span class="nocase">Skirgård et al.</span> (<a href="references.html#ref-skirgard2023">2023</a>)</span> use it for the Grambank analyses. In both trees the branches that join one family to another come from the method and its assumptions, because historical linguistics has not demonstrated those relationships. The tree in this book takes the cautious position and gives different families no shared history.</p>
+<div class="inline-table"><table class="table table-sm">
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="50%">
+<col width="50%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="left">Your sample</th>
 <th align="left">A reasonable tree</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">One family with a published phylogeny</td>
@@ -504,17 +277,20 @@ Figure 2.1: The Afro-Asiatic languages of the sample as the tree has them. Each 
 <td align="left">Glottolog trees joined at the root, as here, or a global tree. Fit both if you can.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div>
-<div id="a-dated-tree-from-phlorest" class="section level2 hasAnchor" number="2.8">
-<h2><span class="header-section-number">2.8</span> A dated tree from Phlorest<a href="trees.html#a-dated-tree-from-phlorest" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The sample has 54 Pama-Nyungan languages, and Phlorest has the dated tree of <span class="citation">Bouckaert et al. (<a href="#ref-bouckaert2018">2018</a>)</span>. Read the summary tree and the table of tips from the repository.</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="trees.html#cb49-1" tabindex="-1"></a>src   <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;https://raw.githubusercontent.com/phlorest/&quot;</span>,</span>
-<span id="cb49-2"><a href="trees.html#cb49-2" tabindex="-1"></a>                <span class="st">&quot;bouckaert_et_al2018/main/cldf/&quot;</span>)</span>
-<span id="cb49-3"><a href="trees.html#cb49-3" tabindex="-1"></a>taxa  <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(src, <span class="st">&quot;languages.csv&quot;</span>))</span>
-<span id="cb49-4"><a href="trees.html#cb49-4" tabindex="-1"></a>dated <span class="ot">&lt;-</span> <span class="fu">read.nexus</span>(<span class="fu">paste0</span>(src, <span class="st">&quot;summary.trees&quot;</span>))</span>
-<span id="cb49-5"><a href="trees.html#cb49-5" tabindex="-1"></a></span>
-<span id="cb49-6"><a href="trees.html#cb49-6" tabindex="-1"></a>dated</span></code></pre></div>
+<div id="a-dated-tree-from-phlorest" class="section level2" number="2.8">
+<h2>
+<span class="header-section-number">2.8</span> A dated tree from Phlorest<a class="anchor" aria-label="anchor" href="#a-dated-tree-from-phlorest"><i class="fas fa-link"></i></a>
+</h2>
+<p>The sample has 54 Pama-Nyungan languages, and Phlorest has the dated tree of <span class="citation">Bouckaert et al. (<a href="references.html#ref-bouckaert2018">2018</a>)</span>. Read the summary tree and the table of tips from the repository.</p>
+<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">src</span>   <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/phlorest/"</span>,</span>
+<span>                <span class="st">"bouckaert_et_al2018/main/cldf/"</span><span class="op">)</span></span>
+<span><span class="va">taxa</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">src</span>, <span class="st">"languages.csv"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">dated</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/read.nexus.html">read.nexus</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">src</span>, <span class="st">"summary.trees"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">dated</span></span></code></pre></div>
 <pre><code>## 
 ## Phylogenetic tree with 306 tips and 305 internal nodes.
 ## 
@@ -522,212 +298,148 @@ Figure 2.1: The Afro-Asiatic languages of the sample as the tree has them. Each 
 ##   Adnyamathanha, Parnkala, Guyani, Kaurna, Narrungga, Nukunu, ...
 ## 
 ## Rooted; includes branch length(s).</code></pre>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="trees.html#cb51-1" tabindex="-1"></a><span class="fu">head</span>(taxa[, <span class="fu">c</span>(<span class="st">&quot;ID&quot;</span>, <span class="st">&quot;Glottocode&quot;</span>)], <span class="dv">4</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">taxa</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"ID"</span>, <span class="st">"Glottocode"</span><span class="op">)</span><span class="op">]</span>, <span class="fl">4</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##                ID Glottocode
 ## 1   Adnyamathanha   adny1235
 ## 2 AghuTharrnggala   aghu1254
 ## 3         Alngith   alng1239
 ## 4        Alyawarr   alya1239</code></pre>
 <p>The tips carry the names the authors used. The <code>Glottocode</code> column of the table says which language each tip is, and that column is the link to your data.</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="trees.html#cb53-1" tabindex="-1"></a>code <span class="ot">&lt;-</span> taxa<span class="sc">$</span>Glottocode[<span class="fu">match</span>(dated<span class="sc">$</span>tip.label, taxa<span class="sc">$</span>ID)]</span>
-<span id="cb53-2"><a href="trees.html#cb53-2" tabindex="-1"></a><span class="fu">c</span>(<span class="at">tips =</span> <span class="fu">length</span>(code), <span class="at">distinct_glottocodes =</span> <span class="fu">length</span>(<span class="fu">unique</span>(code)))</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">code</span> <span class="op">&lt;-</span> <span class="va">taxa</span><span class="op">$</span><span class="va">Glottocode</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/match.html">match</a></span><span class="op">(</span><span class="va">dated</span><span class="op">$</span><span class="va">tip.label</span>, <span class="va">taxa</span><span class="op">$</span><span class="va">ID</span><span class="op">)</span><span class="op">]</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>tips <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">code</span><span class="op">)</span>, distinct_glottocodes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">code</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##                 tips distinct_glottocodes 
 ##                  306                  226</code></pre>
 <p>Several tips share a Glottocode, because a phylogeny often includes dialects that Glottolog counts as one language. Keep the first tip of each language, keep only the Pama-Nyungan languages of the sample, and relabel the tips with their Glottocodes.</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="trees.html#cb55-1" tabindex="-1"></a>pn    <span class="ot">&lt;-</span> d<span class="sc">$</span>glottocode[d<span class="sc">$</span>family <span class="sc">==</span> <span class="st">&quot;Pama-Nyungan&quot;</span>]</span>
-<span id="cb55-2"><a href="trees.html#cb55-2" tabindex="-1"></a>keep  <span class="ot">&lt;-</span> <span class="sc">!</span><span class="fu">duplicated</span>(code) <span class="sc">&amp;</span> code <span class="sc">%in%</span> pn</span>
-<span id="cb55-3"><a href="trees.html#cb55-3" tabindex="-1"></a>dated <span class="ot">&lt;-</span> <span class="fu">keep.tip</span>(dated, dated<span class="sc">$</span>tip.label[keep])</span>
-<span id="cb55-4"><a href="trees.html#cb55-4" tabindex="-1"></a>dated<span class="sc">$</span>tip.label <span class="ot">&lt;-</span> taxa<span class="sc">$</span>Glottocode[<span class="fu">match</span>(dated<span class="sc">$</span>tip.label, taxa<span class="sc">$</span>ID)]</span>
-<span id="cb55-5"><a href="trees.html#cb55-5" tabindex="-1"></a></span>
-<span id="cb55-6"><a href="trees.html#cb55-6" tabindex="-1"></a><span class="fu">c</span>(<span class="at">in_sample =</span> <span class="fu">length</span>(pn), <span class="at">in_dated_tree =</span> <span class="fu">Ntip</span>(dated),</span>
-<span id="cb55-7"><a href="trees.html#cb55-7" tabindex="-1"></a>  <span class="at">missing =</span> <span class="fu">length</span>(<span class="fu">setdiff</span>(pn, dated<span class="sc">$</span>tip.label)))</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">pn</span>    <span class="op">&lt;-</span> <span class="va">d</span><span class="op">$</span><span class="va">glottocode</span><span class="op">[</span><span class="va">d</span><span class="op">$</span><span class="va">family</span> <span class="op">==</span> <span class="st">"Pama-Nyungan"</span><span class="op">]</span></span>
+<span><span class="va">keep</span>  <span class="op">&lt;-</span> <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/duplicated.html">duplicated</a></span><span class="op">(</span><span class="va">code</span><span class="op">)</span> <span class="op">&amp;</span> <span class="va">code</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">pn</span></span>
+<span><span class="va">dated</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/drop.tip.html">keep.tip</a></span><span class="op">(</span><span class="va">dated</span>, <span class="va">dated</span><span class="op">$</span><span class="va">tip.label</span><span class="op">[</span><span class="va">keep</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">dated</span><span class="op">$</span><span class="va">tip.label</span> <span class="op">&lt;-</span> <span class="va">taxa</span><span class="op">$</span><span class="va">Glottocode</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/match.html">match</a></span><span class="op">(</span><span class="va">dated</span><span class="op">$</span><span class="va">tip.label</span>, <span class="va">taxa</span><span class="op">$</span><span class="va">ID</span><span class="op">)</span><span class="op">]</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>in_sample <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">pn</span><span class="op">)</span>, in_dated_tree <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/summary.phylo.html">Ntip</a></span><span class="op">(</span><span class="va">dated</span><span class="op">)</span>,</span>
+<span>  missing <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sets.html">setdiff</a></span><span class="op">(</span><span class="va">pn</span>, <span class="va">dated</span><span class="op">$</span><span class="va">tip.label</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##     in_sample in_dated_tree       missing 
 ##            54            48             6</code></pre>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="trees.html#cb57-1" tabindex="-1"></a>named <span class="ot">&lt;-</span> dated</span>
-<span id="cb57-2"><a href="trees.html#cb57-2" tabindex="-1"></a>named<span class="sc">$</span>tip.label <span class="ot">&lt;-</span> d<span class="sc">$</span>name[<span class="fu">match</span>(named<span class="sc">$</span>tip.label, d<span class="sc">$</span>glottocode)]</span>
-<span id="cb57-3"><a href="trees.html#cb57-3" tabindex="-1"></a></span>
-<span id="cb57-4"><a href="trees.html#cb57-4" tabindex="-1"></a><span class="fu">plot</span>(named, <span class="at">cex =</span> <span class="fl">0.7</span>)</span>
-<span id="cb57-5"><a href="trees.html#cb57-5" tabindex="-1"></a><span class="fu">axisPhylo</span>()</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:trees-phlorest-plot"></span>
+<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">named</span> <span class="op">&lt;-</span> <span class="va">dated</span></span>
+<span><span class="va">named</span><span class="op">$</span><span class="va">tip.label</span> <span class="op">&lt;-</span> <span class="va">d</span><span class="op">$</span><span class="va">name</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/match.html">match</a></span><span class="op">(</span><span class="va">named</span><span class="op">$</span><span class="va">tip.label</span>, <span class="va">d</span><span class="op">$</span><span class="va">glottocode</span><span class="op">)</span><span class="op">]</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">named</span>, cex <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/ape/man/axisPhylo.html">axisPhylo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:trees-phlorest-plot"></span>
 <span id="fig:trees-phlorest-plot" style="display:block;"></span>
-<img src="figures/02-trees/phlorest-plot-1.png" alt="The Pama-Nyungan languages of the sample on the dated tree of Bouckaert, Bowern and Atkinson (2018). The axis is in years before the present." width="634" />
-<p class="caption">
+<img src="figures/02-trees/phlorest-plot-1.png" alt="The Pama-Nyungan languages of the sample on the dated tree of Bouckaert, Bowern and Atkinson (2018). The axis is in years before the present." width="634"><p class="caption">
 Figure 2.2: The Pama-Nyungan languages of the sample on the dated tree of Bouckaert, Bowern and Atkinson (2018). The axis is in years before the present.
 </p>
 </div>
 <p>Now compare what the two trees say about the same languages. Build both correlation matrices for the languages the dated tree has, and compare them pair by pair.</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="trees.html#cb58-1" tabindex="-1"></a>both   <span class="ot">&lt;-</span> dated<span class="sc">$</span>tip.label</span>
-<span id="cb58-2"><a href="trees.html#cb58-2" tabindex="-1"></a><span class="co"># from the full tree, so that the family&#39;s own stem is counted</span></span>
-<span id="cb58-3"><a href="trees.html#cb58-3" tabindex="-1"></a>ours   <span class="ot">&lt;-</span> <span class="fu">vcv</span>(tree, <span class="at">corr =</span> <span class="cn">TRUE</span>)[both, both]</span>
-<span id="cb58-4"><a href="trees.html#cb58-4" tabindex="-1"></a>theirs <span class="ot">&lt;-</span> <span class="fu">vcv</span>(dated, <span class="at">corr =</span> <span class="cn">TRUE</span>)[both, both]</span>
-<span id="cb58-5"><a href="trees.html#cb58-5" tabindex="-1"></a>pairs  <span class="ot">&lt;-</span> <span class="fu">upper.tri</span>(ours)</span>
-<span id="cb58-6"><a href="trees.html#cb58-6" tabindex="-1"></a></span>
-<span id="cb58-7"><a href="trees.html#cb58-7" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">cor</span>(ours[pairs], theirs[pairs]), <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">both</span>   <span class="op">&lt;-</span> <span class="va">dated</span><span class="op">$</span><span class="va">tip.label</span></span>
+<span><span class="co"># from the full tree, so that the family's own stem is counted</span></span>
+<span><span class="va">ours</span>   <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/vcv.phylo.html">vcv</a></span><span class="op">(</span><span class="va">tree</span>, corr <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">[</span><span class="va">both</span>, <span class="va">both</span><span class="op">]</span></span>
+<span><span class="va">theirs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/vcv.phylo.html">vcv</a></span><span class="op">(</span><span class="va">dated</span>, corr <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">[</span><span class="va">both</span>, <span class="va">both</span><span class="op">]</span></span>
+<span><span class="va">pairs</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lower.tri.html">upper.tri</a></span><span class="op">(</span><span class="va">ours</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">ours</span><span class="op">[</span><span class="va">pairs</span><span class="op">]</span>, <span class="va">theirs</span><span class="op">[</span><span class="va">pairs</span><span class="op">]</span><span class="op">)</span>, <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## [1] 0.74</code></pre>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="trees.html#cb60-1" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">c</span>(<span class="at">classification =</span> <span class="fu">mean</span>(ours[pairs]), <span class="at">dated =</span> <span class="fu">mean</span>(theirs[pairs])), <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>classification <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">ours</span><span class="op">[</span><span class="va">pairs</span><span class="op">]</span><span class="op">)</span>, dated <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">theirs</span><span class="op">[</span><span class="va">pairs</span><span class="op">]</span><span class="op">)</span><span class="op">)</span>, <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## classification          dated 
 ##           0.19           0.11</code></pre>
 <p>The first number is the correlation between the two matrices across all pairs of languages. The second line is the average correlation between two Pama-Nyungan languages under each tree. The two trees rank the pairs of languages similarly but not identically. The dated tree also makes the average pair less alike than the classification does, because in the dated tree most of the time since the family began lies on branches that the languages do not share.</p>
-<p>To use the dated tree in a model, pass its matrix wherever the next chapters pass <code>A</code>. In a world sample you would keep the classification tree for the other families and replace this family’s block of the matrix. The languages missing from the dated tree have to be dropped, or attached by hand with <code>bind.tip()</code> from <code>phytools</code>.</p>
+<p>To use the dated tree in a model, pass its matrix wherever the next chapters pass <code>A</code>. In a world sample you would keep the classification tree for the other families and replace this family’s block of the matrix. The languages missing from the dated tree have to be dropped, or attached by hand with <code><a href="https://rdrr.io/pkg/phytools/man/bind.tip.html">bind.tip()</a></code> from <code>phytools</code>.</p>
 <p>The repository also holds <code>posterior.trees.zip</code>, a sample of trees from the posterior. Fitting the model to each of, say, 100 of them and pooling the draws carries the uncertainty of the tree into the slope. In brms, <code>brm_multiple()</code> does this when given one <code>data2</code> list per tree.</p>
 </div>
-<div id="how-tree-like-is-a-feature" class="section level2 hasAnchor" number="2.9">
-<h2><span class="header-section-number">2.9</span> How tree-like is a feature?<a href="trees.html#how-tree-like-is-a-feature" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>With a tree in hand, the first question about any feature is how closely it follows the tree. Chapter <a href="the-problem.html#the-problem">1</a> used Pagel’s λ. Blomberg’s K is the other standard measure: K near 1 means relatives resemble each other as much as Brownian motion on this tree predicts, K near 0 means the tree is irrelevant <span class="citation">(<a href="#ref-blomberg2003">Blomberg et al. 2003</a>)</span>.</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="trees.html#cb62-1" tabindex="-1"></a>log_cons <span class="ot">&lt;-</span> <span class="fu">setNames</span>(<span class="fu">log</span>(d<span class="sc">$</span>n_consonants), d<span class="sc">$</span>glottocode)</span>
-<span id="cb62-2"><a href="trees.html#cb62-2" tabindex="-1"></a><span class="fu">phylosig</span>(tree, log_cons, <span class="at">method =</span> <span class="st">&quot;K&quot;</span>, <span class="at">test =</span> <span class="cn">TRUE</span>, <span class="at">nsim =</span> <span class="dv">999</span>)</span></code></pre></div>
+<div id="how-tree-like-is-a-feature" class="section level2" number="2.9">
+<h2>
+<span class="header-section-number">2.9</span> How tree-like is a feature?<a class="anchor" aria-label="anchor" href="#how-tree-like-is-a-feature"><i class="fas fa-link"></i></a>
+</h2>
+<p>With a tree in hand, the first question about any feature is how closely it follows the tree. Chapter <a href="the-problem.html#the-problem">1</a> used Pagel’s λ. Blomberg’s K is the other standard measure: K near 1 means relatives resemble each other as much as Brownian motion on this tree predicts, K near 0 means the tree is irrelevant <span class="citation">(<a href="references.html#ref-blomberg2003">Blomberg et al. 2003</a>)</span>.</p>
+<div class="sourceCode" id="cb62"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">log_cons</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/setNames.html">setNames</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">n_consonants</span><span class="op">)</span>, <span class="va">d</span><span class="op">$</span><span class="va">glottocode</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/phytools/man/phylosig.html">phylosig</a></span><span class="op">(</span><span class="va">tree</span>, <span class="va">log_cons</span>, method <span class="op">=</span> <span class="st">"K"</span>, test <span class="op">=</span> <span class="cn">TRUE</span>, nsim <span class="op">=</span> <span class="fl">999</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ## Phylogenetic signal K : 1.14463 
 ## P-value (based on 999 randomizations) : 0.001001</code></pre>
 <p>Consonant inventory size is strongly tree-like. That is a warning for any regression that uses it, and the reason Chapter <a href="phylogeny-engines.html#phylogeny-engines">4</a> returns to it.</p>
 <blockquote>
-<p><strong>With your own data.</strong> Glottolog publishes its classification as Newick trees, one per family, and D-PLACE collects published dated phylogenies with Glottocodes on the tips. Whatever the source, run the two <code>setdiff()</code> lines first, prune with <code>keep.tip()</code>, and plot at least one family you know well, so that you can spot languages the tree puts somewhere you do not believe. The model takes the tree as given.</p>
+<p><strong>With your own data.</strong> Glottolog publishes its classification as Newick trees, one per family, and D-PLACE collects published dated phylogenies with Glottocodes on the tips. Whatever the source, run the two <code><a href="https://rdrr.io/r/base/sets.html">setdiff()</a></code> lines first, prune with <code><a href="https://rdrr.io/pkg/ape/man/drop.tip.html">keep.tip()</a></code>, and plot at least one family you know well, so that you can spot languages the tree puts somewhere you do not believe. The model takes the tree as given.</p>
 </blockquote>
 </div>
-<div id="what-to-carry-forward-1" class="section level2 hasAnchor" number="2.10">
-<h2><span class="header-section-number">2.10</span> What to carry forward<a href="trees.html#what-to-carry-forward-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-to-carry-forward-1" class="section level2" number="2.10">
+<h2>
+<span class="header-section-number">2.10</span> What to carry forward<a class="anchor" aria-label="anchor" href="#what-to-carry-forward-1"><i class="fas fa-link"></i></a>
+</h2>
 <ul>
 <li>A <code>phylo</code> object needs tip labels that match a column of your data exactly. Check both directions.</li>
-<li><code>keep.tip()</code> and <code>drop.tip()</code> prune; <code>match()</code> puts the data in tip order.</li>
+<li>
+<code><a href="https://rdrr.io/pkg/ape/man/drop.tip.html">keep.tip()</a></code> and <code><a href="https://rdrr.io/pkg/ape/man/drop.tip.html">drop.tip()</a></code> prune; <code><a href="https://rdrr.io/r/base/match.html">match()</a></code> puts the data in tip order.</li>
 <li>Branch lengths from a classification are a convention, so say which one you used.</li>
 <li>A tree built from a family column alone carries the same information as a family random intercept.</li>
 </ul>
 <p>The next chapter turns the tree into a matrix, the form a regression can use.</p>
 </div>
-<div id="further-reading-2" class="section level2 hasAnchor" number="2.11">
-<h2><span class="header-section-number">2.11</span> Further reading<a href="trees.html#further-reading-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>How earlier studies obtained their trees.</strong> Most typological studies have had no tree at all and used the family, or the genus, as a grouping factor: <span class="citation">Dryer (<a href="#ref-dryer1989">1989</a>)</span> samples genera within areas, and <span class="citation">Jaeger et al. (<a href="#ref-jaeger2011">2011</a>)</span> give family a random intercept. Studies of single families could use dated Bayesian phylogenies, as <span class="citation">Dunn et al. (<a href="#ref-dunn2011">2011</a>)</span> did for word-order correlations in four families. Global studies need a global tree. <span class="citation"><span class="nocase">Skirgård et al.</span> (<a href="#ref-skirgard2023">2023</a>)</span> use one assembled from published family phylogenies and the Glottolog classification, and <span class="citation">Guzmán Naranjo and Becker (<a href="#ref-guzman2022">2022</a>)</span> use Glottolog family trees much as this book does. <span class="citation">Jäger (<a href="#ref-jager2018">2018</a>)</span> infers a worldwide tree directly from word lists.</p>
+<div id="further-reading-2" class="section level2" number="2.11">
+<h2>
+<span class="header-section-number">2.11</span> Further reading<a class="anchor" aria-label="anchor" href="#further-reading-2"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>How earlier studies obtained their trees.</strong> Most typological studies have had no tree at all and used the family, or the genus, as a grouping factor: <span class="citation">Dryer (<a href="references.html#ref-dryer1989">1989</a>)</span> samples genera within areas, and <span class="citation">Jaeger et al. (<a href="references.html#ref-jaeger2011">2011</a>)</span> give family a random intercept. Studies of single families could use dated Bayesian phylogenies, as <span class="citation">Dunn et al. (<a href="references.html#ref-dunn2011">2011</a>)</span> did for word-order correlations in four families. Global studies need a global tree. <span class="citation"><span class="nocase">Skirgård et al.</span> (<a href="references.html#ref-skirgard2023">2023</a>)</span> use one assembled from published family phylogenies and the Glottolog classification, and <span class="citation">Guzmán Naranjo and Becker (<a href="references.html#ref-guzman2022">2022</a>)</span> use Glottolog family trees much as this book does. <span class="citation">Jäger (<a href="references.html#ref-jager2018">2018</a>)</span> infers a worldwide tree directly from word lists.</p>
 <ul>
-<li>Phlorest <span class="citation">(<a href="#ref-phlorest">Phlorest, n.d.</a>)</span> and D-PLACE <span class="citation">(<a href="#ref-kirby2016"><span class="nocase">Kirby et al.</span> 2016</a>)</span> are the places to look for a dated tree of your family before settling for a classification.</li>
-<li><span class="citation">Grafen (<a href="#ref-grafen1989">1989</a>)</span> introduced phylogenetic regression for trees built from taxonomies, including the branch-length convention that bears his name.</li>
-<li><span class="citation">Münkemüller et al. (<a href="#ref-munkemuller2012">2012</a>)</span> compare the measures of phylogenetic signal, and <span class="citation">Fritz and Purvis (<a href="#ref-fritz2010">2010</a>)</span> give the D statistic for binary features (<code>caper::phylo.d()</code>).</li>
-<li>The Glottolog classification itself is documented by <span class="citation">Hammarström et al. (<a href="#ref-glottolog">n.d.</a>)</span>.</li>
+<li>Phlorest <span class="citation">(<a href="references.html#ref-phlorest">Phlorest, n.d.</a>)</span> and D-PLACE <span class="citation">(<a href="references.html#ref-kirby2016"><span class="nocase">Kirby et al.</span> 2016</a>)</span> are the places to look for a dated tree of your family before settling for a classification.</li>
+<li>
+<span class="citation">Grafen (<a href="references.html#ref-grafen1989">1989</a>)</span> introduced phylogenetic regression for trees built from taxonomies, including the branch-length convention that bears his name.</li>
+<li>
+<span class="citation">Münkemüller et al. (<a href="references.html#ref-munkemuller2012">2012</a>)</span> compare the measures of phylogenetic signal, and <span class="citation">Fritz and Purvis (<a href="references.html#ref-fritz2010">2010</a>)</span> give the D statistic for binary features (<code>caper::phylo.d()</code>).</li>
+<li>The Glottolog classification itself is documented by <span class="citation">Hammarström et al. (<a href="references.html#ref-glottolog">n.d.</a>)</span>.</li>
+</ul>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="the-problem.html"><span class="header-section-number">1</span> Seeing the problem</a></div>
+<div class="next"><a href="phylogeny.html"><span class="header-section-number">3</span> Phylogeny as a covariance matrix</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#trees"><span class="header-section-number">2</span> Trees: the raw material</a></li>
+<li><a class="nav-link" href="#set-up"><span class="header-section-number">2.1</span> Set up</a></li>
+<li><a class="nav-link" href="#what-a-tree-object-holds"><span class="header-section-number">2.2</span> What a tree object holds</a></li>
+<li><a class="nav-link" href="#does-the-tree-match-the-data"><span class="header-section-number">2.3</span> Does the tree match the data?</a></li>
+<li><a class="nav-link" href="#look-at-it"><span class="header-section-number">2.4</span> Look at it</a></li>
+<li><a class="nav-link" href="#what-the-branch-lengths-mean"><span class="header-section-number">2.5</span> What the branch lengths mean</a></li>
+<li><a class="nav-link" href="#build-a-tree-from-a-table"><span class="header-section-number">2.6</span> Build a tree from a table</a></li>
+<li><a class="nav-link" href="#where-trees-come-from"><span class="header-section-number">2.7</span> Where trees come from</a></li>
+<li><a class="nav-link" href="#a-dated-tree-from-phlorest"><span class="header-section-number">2.8</span> A dated tree from Phlorest</a></li>
+<li><a class="nav-link" href="#how-tree-like-is-a-feature"><span class="header-section-number">2.9</span> How tree-like is a feature?</a></li>
+<li><a class="nav-link" href="#what-to-carry-forward-1"><span class="header-section-number">2.10</span> What to carry forward</a></li>
+<li><a class="nav-link" href="#further-reading-2"><span class="header-section-number">2.11</span> Further reading</a></li>
 </ul>
 
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
 </div>
+    </nav>
 </div>
-<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-blomberg2003" class="csl-entry">
-Blomberg, Simon P., Theodore Garland Jr., and Anthony R. Ives. 2003. <span>“Testing for Phylogenetic Signal in Comparative Data: Behavioral Traits Are More Labile.”</span> <em>Evolution</em> 57 (4): 717–45.
-</div>
-<div id="ref-bouckaert2018" class="csl-entry">
-Bouckaert, Remco R., Claire Bowern, and Quentin D. Atkinson. 2018. <span>“The Origin and Expansion of <span>P</span>ama-<span>N</span>yungan Languages Across <span>A</span>ustralia.”</span> <em>Nature Ecology &amp; Evolution</em> 2: 741–49.
-</div>
-<div id="ref-bouckaert2012" class="csl-entry">
-Bouckaert, Remco, Philippe Lemey, Michael Dunn, et al. 2012. <span>“Mapping the Origins and Expansion of the <span>I</span>ndo-<span>E</span>uropean Language Family.”</span> <em>Science</em> 337 (6097): 957–60.
-</div>
-<div id="ref-bouckaert2022" class="csl-entry">
-Bouckaert, Remco, David Redding, Oliver Sheehan, et al. 2022. <em>Global Language Diversification Is Linked to Socio-Ecology and Threat Status</em>. SocArXiv preprint.
-</div>
-<div id="ref-chang2015" class="csl-entry">
-Chang, Will, Chundra Cathcart, David Hall, and Andrew Garrett. 2015. <span>“Ancestry-Constrained Phylogenetic Analysis Supports the <span>I</span>ndo-<span>E</span>uropean Steppe Hypothesis.”</span> <em>Language</em> 91 (1): 194–244.
-</div>
-<div id="ref-dryer1989" class="csl-entry">
-Dryer, Matthew S. 1989. <span>“Large Linguistic Areas and Language Sampling.”</span> <em>Studies in Language</em> 13 (2): 257–92.
-</div>
-<div id="ref-dunn2011" class="csl-entry">
-Dunn, Michael, Simon J. Greenhill, Stephen C. Levinson, and Russell D. Gray. 2011. <span>“Evolved Structure of Language Shows Lineage-Specific Trends in Word-Order Universals.”</span> <em>Nature</em> 473: 79–82.
-</div>
-<div id="ref-fritz2010" class="csl-entry">
-Fritz, Susanne A., and Andy Purvis. 2010. <span>“Selectivity in Mammalian Extinction Risk and Threat Types: A New Measure of Phylogenetic Signal Strength in Binary Traits.”</span> <em>Conservation Biology</em> 24 (4): 1042–51.
-</div>
-<div id="ref-grafen1989" class="csl-entry">
-Grafen, Alan. 1989. <span>“The Phylogenetic Regression.”</span> <em>Philosophical Transactions of the Royal Society of London B</em> 326 (1233): 119–57.
-</div>
-<div id="ref-gray2009" class="csl-entry">
-Gray, Russell D., Alexei J. Drummond, and Simon J. Greenhill. 2009. <span>“Language Phylogenies Reveal Expansion Pulses and Pauses in <span>P</span>acific Settlement.”</span> <em>Science</em> 323 (5913): 479–83.
-</div>
-<div id="ref-grollemund2015" class="csl-entry">
-Grollemund, Rebecca, Simon Branford, Koen Bostoen, Andrew Meade, Chris Venditti, and Mark Pagel. 2015. <span>“Bantu Expansion Shows That Habitat Alters the Route and Pace of Human Dispersals.”</span> <em>Proceedings of the National Academy of Sciences</em> 112 (43): 13296–301.
-</div>
-<div id="ref-guzman2022" class="csl-entry">
-Guzmán Naranjo, Matías, and Laura Becker. 2022. <span>“Statistical Bias Control in Typology.”</span> <em>Linguistic Typology</em> 26 (3): 605–70. <a href="https://doi.org/10.1515/lingty-2021-0002">https://doi.org/10.1515/lingty-2021-0002</a>.
-</div>
-<div id="ref-glottolog" class="csl-entry">
-Hammarström, Harald, Robert Forkel, Martin Haspelmath, and Sebastian Bank. n.d. <em>Glottolog</em>. Leipzig: Max Planck Institute for Evolutionary Anthropology. <a href="https://glottolog.org">https://glottolog.org</a>.
-</div>
-<div id="ref-jaeger2011" class="csl-entry">
-Jaeger, T. Florian, Peter Graff, William Croft, and Daniel Pontillo. 2011. <span>“Mixed Effect Models for Genetic and Areal Dependencies in Linguistic Typology.”</span> <em>Linguistic Typology</em> 15 (2): 281–319.
-</div>
-<div id="ref-jager2018" class="csl-entry">
-Jäger, Gerhard. 2018. <span>“Global-Scale Phylogenetic Linguistic Inference from Lexical Resources.”</span> <em>Scientific Data</em> 5: 180189.
-</div>
-<div id="ref-kirby2016" class="csl-entry">
-<span class="nocase">Kirby, Kathryn R., Russell D. Gray, Simon J. Greenhill, et al.</span> 2016. <span>“<span>D-PLACE</span>: A Global Database of Cultural, Linguistic and Environmental Diversity.”</span> <em>PLoS ONE</em> 11 (7): e0158391.
-</div>
-<div id="ref-kolipakam2018" class="csl-entry">
-Kolipakam, Vishnupriya, Fiona M. Jordan, Michael Dunn, et al. 2018. <span>“A <span>B</span>ayesian Phylogenetic Study of the <span>D</span>ravidian Language Family.”</span> <em>Royal Society Open Science</em> 5 (3): 171504.
-</div>
-<div id="ref-munkemuller2012" class="csl-entry">
-Münkemüller, Tamara, Sébastien Lavergne, Bruno Bzeznik, et al. 2012. <span>“How to Measure and Test Phylogenetic Signal.”</span> <em>Methods in Ecology and Evolution</em> 3 (4): 743–56.
-</div>
-<div id="ref-phlorest" class="csl-entry">
-Phlorest. n.d. <em>Phlorest: Published Language Phylogenies in a Common Format</em>. <a href="https://github.com/phlorest" class="uri">Https://github.com/phlorest</a>.
-</div>
-<div id="ref-sagart2019" class="csl-entry">
-Sagart, Laurent, Guillaume Jacques, Yunfan Lai, et al. 2019. <span>“Dated Language Phylogenies Shed Light on the Ancestry of <span>S</span>ino-<span>T</span>ibetan.”</span> <em>Proceedings of the National Academy of Sciences</em> 116 (21): 10317–22.
-</div>
-<div id="ref-skirgard2023" class="csl-entry">
-<span class="nocase">Skirgård, Hedvig, Hannah J. Haynie, Damián E. Blasi, et al.</span> 2023. <span>“Grambank Reveals the Importance of Genealogical Constraints on Linguistic Diversity and Highlights the Impact of Language Loss.”</span> <em>Science Advances</em> 9 (16): eadg6175. <a href="https://doi.org/10.1126/sciadv.adg6175">https://doi.org/10.1126/sciadv.adg6175</a>.
-</div>
-</div>
-            </section>
 
-          </div>
-        </div>
-      </div>
-<a href="the-problem.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="phylogeny.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Relatives and Neighbours</strong>: Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only" was written by Muhammad Rehan. </p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-  "sharing": null,
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": null,
-    "text": null
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": null,
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "section",
-    "scroll_highlight": true
-  },
-  "toolbar": {
-    "position": "fixed"
-  }
-});
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -739,7 +451,22 @@ gitbook.start({
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
 </script>
 </body>
-
 </html>

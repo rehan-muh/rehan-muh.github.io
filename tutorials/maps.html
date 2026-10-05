@@ -1,381 +1,132 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Maps: coordinates, distances and neighbours | Relatives and Neighbours</title>
-  <meta name="description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
-  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="5 Maps: coordinates, distances and neighbours | Relatives and Neighbours" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
-  
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Maps: coordinates, distances and neighbours | Relatives and Neighbours" />
-  
-  <meta name="twitter:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
-  
-
-<meta name="author" content="Muhammad Rehan" />
-
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="phylogeny-engines.html"/>
-<link rel="next" href="space-surface.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>5 Maps: coordinates, distances and neighbours | Relatives and Neighbours</title>
+<meta name="author" content="Muhammad Rehan">
+<meta name="description" content="Spatial models need one of two things from your coordinates: distances between languages, or a list of who neighbours whom. Build both, and learn what each choice assumes.  Fitted with sf,...">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="5 Maps: coordinates, distances and neighbours | Relatives and Neighbours">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Spatial models need one of two things from your coordinates: distances between languages, or a list of who neighbours whom. Build both, and learn what each choice assumes.  Fitted with sf,...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="5 Maps: coordinates, distances and neighbours | Relatives and Neighbours">
+<meta name="twitter:description" content="Spatial models need one of two things from your coordinates: distances between languages, or a list of who neighbours whom. Build both, and learn what each choice assumes.  Fitted with sf,...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.11.0/transition.js"></script><script src="libs/bs3compat-0.11.0/tabs.js"></script><script src="libs/bs3compat-0.11.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
 <style type="text/css">
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<link rel="stylesheet" href="style.css">
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./"><b>Relatives and Neighbours</b></a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
-<ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#before-you-start"><i class="fa fa-check"></i>Before you start</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-running-example"><i class="fa fa-check"></i>The running example</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#sources"><i class="fa fa-check"></i>Sources</a></li>
-</ul></li>
-<li class="part"><span><b>I The problem</b></span></li>
-<li class="chapter" data-level="1" data-path="the-problem.html"><a href="the-problem.html"><i class="fa fa-check"></i><b>1</b> Seeing the problem</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="the-problem.html"><a href="the-problem.html#the-data-and-the-first-model"><i class="fa fa-check"></i><b>1.1</b> The data and the first model</a></li>
-<li class="chapter" data-level="1.2" data-path="the-problem.html"><a href="the-problem.html#where-the-ejectives-are"><i class="fa fa-check"></i><b>1.2</b> Where the ejectives are</a></li>
-<li class="chapter" data-level="1.3" data-path="the-problem.html"><a href="the-problem.html#how-often-does-a-meaningless-predictor-pass"><i class="fa fa-check"></i><b>1.3</b> How often does a meaningless predictor pass?</a></li>
-<li class="chapter" data-level="1.4" data-path="the-problem.html"><a href="the-problem.html#measuring-spatial-dependence-morans-i"><i class="fa fa-check"></i><b>1.4</b> Measuring spatial dependence: Moran’s I</a></li>
-<li class="chapter" data-level="1.5" data-path="the-problem.html"><a href="the-problem.html#measuring-phylogenetic-signal"><i class="fa fa-check"></i><b>1.5</b> Measuring phylogenetic signal</a></li>
-<li class="chapter" data-level="1.6" data-path="the-problem.html"><a href="the-problem.html#what-to-carry-forward"><i class="fa fa-check"></i><b>1.6</b> What to carry forward</a></li>
-<li class="chapter" data-level="1.7" data-path="the-problem.html"><a href="the-problem.html#further-reading-1"><i class="fa fa-check"></i><b>1.7</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>II Phylogeny</b></span></li>
-<li class="chapter" data-level="2" data-path="trees.html"><a href="trees.html"><i class="fa fa-check"></i><b>2</b> Trees: the raw material</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="trees.html"><a href="trees.html#set-up"><i class="fa fa-check"></i><b>2.1</b> Set up</a></li>
-<li class="chapter" data-level="2.2" data-path="trees.html"><a href="trees.html#what-a-tree-object-holds"><i class="fa fa-check"></i><b>2.2</b> What a tree object holds</a></li>
-<li class="chapter" data-level="2.3" data-path="trees.html"><a href="trees.html#does-the-tree-match-the-data"><i class="fa fa-check"></i><b>2.3</b> Does the tree match the data?</a></li>
-<li class="chapter" data-level="2.4" data-path="trees.html"><a href="trees.html#look-at-it"><i class="fa fa-check"></i><b>2.4</b> Look at it</a></li>
-<li class="chapter" data-level="2.5" data-path="trees.html"><a href="trees.html#what-the-branch-lengths-mean"><i class="fa fa-check"></i><b>2.5</b> What the branch lengths mean</a></li>
-<li class="chapter" data-level="2.6" data-path="trees.html"><a href="trees.html#build-a-tree-from-a-table"><i class="fa fa-check"></i><b>2.6</b> Build a tree from a table</a></li>
-<li class="chapter" data-level="2.7" data-path="trees.html"><a href="trees.html#where-trees-come-from"><i class="fa fa-check"></i><b>2.7</b> Where trees come from</a></li>
-<li class="chapter" data-level="2.8" data-path="trees.html"><a href="trees.html#a-dated-tree-from-phlorest"><i class="fa fa-check"></i><b>2.8</b> A dated tree from Phlorest</a></li>
-<li class="chapter" data-level="2.9" data-path="trees.html"><a href="trees.html#how-tree-like-is-a-feature"><i class="fa fa-check"></i><b>2.9</b> How tree-like is a feature?</a></li>
-<li class="chapter" data-level="2.10" data-path="trees.html"><a href="trees.html#what-to-carry-forward-1"><i class="fa fa-check"></i><b>2.10</b> What to carry forward</a></li>
-<li class="chapter" data-level="2.11" data-path="trees.html"><a href="trees.html#further-reading-2"><i class="fa fa-check"></i><b>2.11</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="phylogeny.html"><a href="phylogeny.html"><i class="fa fa-check"></i><b>3</b> Phylogeny as a covariance matrix</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="phylogeny.html"><a href="phylogeny.html#set-up-1"><i class="fa fa-check"></i><b>3.1</b> Set up</a></li>
-<li class="chapter" data-level="3.2" data-path="phylogeny.html"><a href="phylogeny.html#from-a-tree-to-a-matrix"><i class="fa fa-check"></i><b>3.2</b> From a tree to a matrix</a></li>
-<li class="chapter" data-level="3.3" data-path="phylogeny.html"><a href="phylogeny.html#first-rung-family-as-a-random-intercept"><i class="fa fa-check"></i><b>3.3</b> First rung: family as a random intercept</a></li>
-<li class="chapter" data-level="3.4" data-path="phylogeny.html"><a href="phylogeny.html#the-phylogenetic-model"><i class="fa fa-check"></i><b>3.4</b> The phylogenetic model</a></li>
-<li class="chapter" data-level="3.5" data-path="phylogeny.html"><a href="phylogeny.html#reading-the-result"><i class="fa fa-check"></i><b>3.5</b> Reading the result</a>
-<ul>
-<li class="chapter" data-level="3.5.1" data-path="phylogeny.html"><a href="phylogeny.html#the-slope"><i class="fa fa-check"></i><b>3.5.1</b> The slope</a></li>
-<li class="chapter" data-level="3.5.2" data-path="phylogeny.html"><a href="phylogeny.html#the-regression-line"><i class="fa fa-check"></i><b>3.5.2</b> The regression line</a></li>
-<li class="chapter" data-level="3.5.3" data-path="phylogeny.html"><a href="phylogeny.html#phylogenetic-signal"><i class="fa fa-check"></i><b>3.5.3</b> Phylogenetic signal</a></li>
-<li class="chapter" data-level="3.5.4" data-path="phylogeny.html"><a href="phylogeny.html#where-the-model-put-the-lineage-effects"><i class="fa fa-check"></i><b>3.5.4</b> Where the model put the lineage effects</a></li>
-</ul></li>
-<li class="chapter" data-level="3.6" data-path="phylogeny.html"><a href="phylogeny.html#what-to-carry-forward-2"><i class="fa fa-check"></i><b>3.6</b> What to carry forward</a></li>
-<li class="chapter" data-level="3.7" data-path="phylogeny.html"><a href="phylogeny.html#further-reading-3"><i class="fa fa-check"></i><b>3.7</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html"><i class="fa fa-check"></i><b>4</b> Phylogeny in INLA, mgcv and by maximum likelihood</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#set-up-2"><i class="fa fa-check"></i><b>4.1</b> Set up</a></li>
-<li class="chapter" data-level="4.2" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#inla"><i class="fa fa-check"></i><b>4.2</b> INLA</a></li>
-<li class="chapter" data-level="4.3" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#mgcv"><i class="fa fa-check"></i><b>4.3</b> mgcv</a></li>
-<li class="chapter" data-level="4.4" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#maximum-likelihood-pgls"><i class="fa fa-check"></i><b>4.4</b> Maximum likelihood: PGLS</a></li>
-<li class="chapter" data-level="4.5" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#maximum-likelihood-phylogenetic-logistic-regression"><i class="fa fa-check"></i><b>4.5</b> Maximum likelihood: phylogenetic logistic regression</a></li>
-<li class="chapter" data-level="4.6" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#every-engine-one-figure"><i class="fa fa-check"></i><b>4.6</b> Every engine, one figure</a></li>
-<li class="chapter" data-level="4.7" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#what-to-carry-forward-3"><i class="fa fa-check"></i><b>4.7</b> What to carry forward</a></li>
-<li class="chapter" data-level="4.8" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#further-reading-4"><i class="fa fa-check"></i><b>4.8</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>III Space</b></span></li>
-<li class="chapter" data-level="5" data-path="maps.html"><a href="maps.html"><i class="fa fa-check"></i><b>5</b> Maps: coordinates, distances and neighbours</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="maps.html"><a href="maps.html#set-up-3"><i class="fa fa-check"></i><b>5.1</b> Set up</a></li>
-<li class="chapter" data-level="5.2" data-path="maps.html"><a href="maps.html#languages-as-points"><i class="fa fa-check"></i><b>5.2</b> Languages as points</a></li>
-<li class="chapter" data-level="5.3" data-path="maps.html"><a href="maps.html#distances"><i class="fa fa-check"></i><b>5.3</b> Distances</a></li>
-<li class="chapter" data-level="5.4" data-path="maps.html"><a href="maps.html#flat-maps-and-their-cost"><i class="fa fa-check"></i><b>5.4</b> Flat maps and their cost</a></li>
-<li class="chapter" data-level="5.5" data-path="maps.html"><a href="maps.html#neighbours"><i class="fa fa-check"></i><b>5.5</b> Neighbours</a></li>
-<li class="chapter" data-level="5.6" data-path="maps.html"><a href="maps.html#from-a-graph-to-weights"><i class="fa fa-check"></i><b>5.6</b> From a graph to weights</a></li>
-<li class="chapter" data-level="5.7" data-path="maps.html"><a href="maps.html#how-far-does-similarity-reach"><i class="fa fa-check"></i><b>5.7</b> How far does similarity reach?</a></li>
-<li class="chapter" data-level="5.8" data-path="maps.html"><a href="maps.html#where-locations-come-from"><i class="fa fa-check"></i><b>5.8</b> Where locations come from</a></li>
-<li class="chapter" data-level="5.9" data-path="maps.html"><a href="maps.html#speaker-areas-as-polygons"><i class="fa fa-check"></i><b>5.9</b> Speaker areas as polygons</a></li>
-<li class="chapter" data-level="5.10" data-path="maps.html"><a href="maps.html#what-a-location-leaves-out"><i class="fa fa-check"></i><b>5.10</b> What a location leaves out</a></li>
-<li class="chapter" data-level="5.11" data-path="maps.html"><a href="maps.html#what-to-carry-forward-4"><i class="fa fa-check"></i><b>5.11</b> What to carry forward</a></li>
-<li class="chapter" data-level="5.12" data-path="maps.html"><a href="maps.html#further-reading-5"><i class="fa fa-check"></i><b>5.12</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="space-surface.html"><a href="space-surface.html"><i class="fa fa-check"></i><b>6</b> Space as a smooth surface</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="space-surface.html"><a href="space-surface.html#set-up-4"><i class="fa fa-check"></i><b>6.1</b> Set up</a></li>
-<li class="chapter" data-level="6.2" data-path="space-surface.html"><a href="space-surface.html#the-idea"><i class="fa fa-check"></i><b>6.2</b> The idea</a></li>
-<li class="chapter" data-level="6.3" data-path="space-surface.html"><a href="space-surface.html#coordinates-the-model-can-measure-with"><i class="fa fa-check"></i><b>6.3</b> Coordinates the model can measure with</a></li>
-<li class="chapter" data-level="6.4" data-path="space-surface.html"><a href="space-surface.html#fitting-it"><i class="fa fa-check"></i><b>6.4</b> Fitting it</a></li>
-<li class="chapter" data-level="6.5" data-path="space-surface.html"><a href="space-surface.html#was-k-large-enough"><i class="fa fa-check"></i><b>6.5</b> Was <code>k</code> large enough?</a></li>
-<li class="chapter" data-level="6.6" data-path="space-surface.html"><a href="space-surface.html#what-the-surface-looks-like"><i class="fa fa-check"></i><b>6.6</b> What the surface looks like</a></li>
-<li class="chapter" data-level="6.7" data-path="space-surface.html"><a href="space-surface.html#did-it-work"><i class="fa fa-check"></i><b>6.7</b> Did it work?</a></li>
-<li class="chapter" data-level="6.8" data-path="space-surface.html"><a href="space-surface.html#the-regression-line-1"><i class="fa fa-check"></i><b>6.8</b> The regression line</a></li>
-<li class="chapter" data-level="6.9" data-path="space-surface.html"><a href="space-surface.html#variations"><i class="fa fa-check"></i><b>6.9</b> Variations</a></li>
-<li class="chapter" data-level="6.10" data-path="space-surface.html"><a href="space-surface.html#what-to-carry-forward-5"><i class="fa fa-check"></i><b>6.10</b> What to carry forward</a></li>
-<li class="chapter" data-level="6.11" data-path="space-surface.html"><a href="space-surface.html#further-reading-6"><i class="fa fa-check"></i><b>6.11</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="space-neighbours.html"><a href="space-neighbours.html"><i class="fa fa-check"></i><b>7</b> Space as a network of neighbours</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="space-neighbours.html"><a href="space-neighbours.html#set-up-5"><i class="fa fa-check"></i><b>7.1</b> Set up</a></li>
-<li class="chapter" data-level="7.2" data-path="space-neighbours.html"><a href="space-neighbours.html#the-idea-1"><i class="fa fa-check"></i><b>7.2</b> The idea</a></li>
-<li class="chapter" data-level="7.3" data-path="space-neighbours.html"><a href="space-neighbours.html#building-the-graph"><i class="fa fa-check"></i><b>7.3</b> Building the graph</a></li>
-<li class="chapter" data-level="7.4" data-path="space-neighbours.html"><a href="space-neighbours.html#icar"><i class="fa fa-check"></i><b>7.4</b> ICAR</a></li>
-<li class="chapter" data-level="7.5" data-path="space-neighbours.html"><a href="space-neighbours.html#bym2"><i class="fa fa-check"></i><b>7.5</b> BYM2</a></li>
-<li class="chapter" data-level="7.6" data-path="space-neighbours.html"><a href="space-neighbours.html#the-regression-line-2"><i class="fa fa-check"></i><b>7.6</b> The regression line</a></li>
-<li class="chapter" data-level="7.7" data-path="space-neighbours.html"><a href="space-neighbours.html#how-much-does-the-graph-matter"><i class="fa fa-check"></i><b>7.7</b> How much does the graph matter?</a></li>
-<li class="chapter" data-level="7.8" data-path="space-neighbours.html"><a href="space-neighbours.html#other-models-in-the-same-family"><i class="fa fa-check"></i><b>7.8</b> Other models in the same family</a></li>
-<li class="chapter" data-level="7.9" data-path="space-neighbours.html"><a href="space-neighbours.html#what-to-carry-forward-6"><i class="fa fa-check"></i><b>7.9</b> What to carry forward</a></li>
-<li class="chapter" data-level="7.10" data-path="space-neighbours.html"><a href="space-neighbours.html#further-reading-7"><i class="fa fa-check"></i><b>7.10</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="space-engines.html"><a href="space-engines.html"><i class="fa fa-check"></i><b>8</b> Space in INLA, mgcv and by maximum likelihood</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="space-engines.html"><a href="space-engines.html#set-up-6"><i class="fa fa-check"></i><b>8.1</b> Set up</a></li>
-<li class="chapter" data-level="8.2" data-path="space-engines.html"><a href="space-engines.html#neighbours-in-inla-bym2"><i class="fa fa-check"></i><b>8.2</b> Neighbours in INLA: BYM2</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="space-engines.html"><a href="space-engines.html#check-the-approximation"><i class="fa fa-check"></i><b>8.2.1</b> Check the approximation</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="space-engines.html"><a href="space-engines.html#a-surface-on-the-sphere-spde"><i class="fa fa-check"></i><b>8.3</b> A surface on the sphere: SPDE</a></li>
-<li class="chapter" data-level="8.4" data-path="space-engines.html"><a href="space-engines.html#a-surface-on-the-sphere-mgcv"><i class="fa fa-check"></i><b>8.4</b> A surface on the sphere: mgcv</a></li>
-<li class="chapter" data-level="8.5" data-path="space-engines.html"><a href="space-engines.html#maximum-likelihood-simultaneous-autoregressive-models"><i class="fa fa-check"></i><b>8.5</b> Maximum likelihood: simultaneous autoregressive models</a></li>
-<li class="chapter" data-level="8.6" data-path="space-engines.html"><a href="space-engines.html#every-engine-one-figure-1"><i class="fa fa-check"></i><b>8.6</b> Every engine, one figure</a></li>
-<li class="chapter" data-level="8.7" data-path="space-engines.html"><a href="space-engines.html#what-to-carry-forward-7"><i class="fa fa-check"></i><b>8.7</b> What to carry forward</a></li>
-<li class="chapter" data-level="8.8" data-path="space-engines.html"><a href="space-engines.html#further-reading-8"><i class="fa fa-check"></i><b>8.8</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>IV Space and phylogeny</b></span></li>
-<li class="chapter" data-level="9" data-path="joint.html"><a href="joint.html"><i class="fa fa-check"></i><b>9</b> Both at once</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="joint.html"><a href="joint.html#set-up-7"><i class="fa fa-check"></i><b>9.1</b> Set up</a></li>
-<li class="chapter" data-level="9.2" data-path="joint.html"><a href="joint.html#why-one-model-and-not-two"><i class="fa fa-check"></i><b>9.2</b> Why one model and not two</a></li>
-<li class="chapter" data-level="9.3" data-path="joint.html"><a href="joint.html#the-joint-model"><i class="fa fa-check"></i><b>9.3</b> The joint model</a></li>
-<li class="chapter" data-level="9.4" data-path="joint.html"><a href="joint.html#bring-back-the-earlier-models"><i class="fa fa-check"></i><b>9.4</b> Bring back the earlier models</a></li>
-<li class="chapter" data-level="9.5" data-path="joint.html"><a href="joint.html#who-gets-the-credit"><i class="fa fa-check"></i><b>9.5</b> Who gets the credit</a></li>
-<li class="chapter" data-level="9.6" data-path="joint.html"><a href="joint.html#every-slope-so-far"><i class="fa fa-check"></i><b>9.6</b> Every slope so far</a></li>
-<li class="chapter" data-level="9.7" data-path="joint.html"><a href="joint.html#every-regression-line-so-far"><i class="fa fa-check"></i><b>9.7</b> Every regression line so far</a></li>
-<li class="chapter" data-level="9.8" data-path="joint.html"><a href="joint.html#which-model-to-report"><i class="fa fa-check"></i><b>9.8</b> Which model to report</a></li>
-<li class="chapter" data-level="9.9" data-path="joint.html"><a href="joint.html#what-to-carry-forward-8"><i class="fa fa-check"></i><b>9.9</b> What to carry forward</a></li>
-<li class="chapter" data-level="9.10" data-path="joint.html"><a href="joint.html#further-reading-9"><i class="fa fa-check"></i><b>9.10</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="joint-engines.html"><a href="joint-engines.html"><i class="fa fa-check"></i><b>10</b> Both at once in INLA and mgcv</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="joint-engines.html"><a href="joint-engines.html#set-up-8"><i class="fa fa-check"></i><b>10.1</b> Set up</a></li>
-<li class="chapter" data-level="10.2" data-path="joint-engines.html"><a href="joint-engines.html#the-joint-model-in-inla"><i class="fa fa-check"></i><b>10.2</b> The joint model in INLA</a></li>
-<li class="chapter" data-level="10.3" data-path="joint-engines.html"><a href="joint-engines.html#the-joint-model-in-mgcv"><i class="fa fa-check"></i><b>10.3</b> The joint model in mgcv</a></li>
-<li class="chapter" data-level="10.4" data-path="joint-engines.html"><a href="joint-engines.html#the-joint-model-three-engines"><i class="fa fa-check"></i><b>10.4</b> The joint model, three engines</a></li>
-<li class="chapter" data-level="10.5" data-path="joint-engines.html"><a href="joint-engines.html#the-whole-book-in-one-figure"><i class="fa fa-check"></i><b>10.5</b> The whole book in one figure</a></li>
-<li class="chapter" data-level="10.6" data-path="joint-engines.html"><a href="joint-engines.html#what-to-carry-forward-9"><i class="fa fa-check"></i><b>10.6</b> What to carry forward</a></li>
-<li class="chapter" data-level="10.7" data-path="joint-engines.html"><a href="joint-engines.html#further-reading-10"><i class="fa fa-check"></i><b>10.7</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>V Sampling and simulation</b></span></li>
-<li class="chapter" data-level="11" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>11</b> Sampling instead of modelling</a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="sampling.html"><a href="sampling.html#set-up-9"><i class="fa fa-check"></i><b>11.1</b> Set up</a></li>
-<li class="chapter" data-level="11.2" data-path="sampling.html"><a href="sampling.html#the-sampling-tradition"><i class="fa fa-check"></i><b>11.2</b> The sampling tradition</a></li>
-<li class="chapter" data-level="11.3" data-path="sampling.html"><a href="sampling.html#three-designs"><i class="fa fa-check"></i><b>11.3</b> Three designs</a></li>
-<li class="chapter" data-level="11.4" data-path="sampling.html"><a href="sampling.html#one-sample-one-answer"><i class="fa fa-check"></i><b>11.4</b> One sample, one answer</a></li>
-<li class="chapter" data-level="11.5" data-path="sampling.html"><a href="sampling.html#a-thousand-samples"><i class="fa fa-check"></i><b>11.5</b> A thousand samples</a></li>
-<li class="chapter" data-level="11.6" data-path="sampling.html"><a href="sampling.html#the-regression-lines"><i class="fa fa-check"></i><b>11.6</b> The regression lines</a></li>
-<li class="chapter" data-level="11.7" data-path="sampling.html"><a href="sampling.html#does-sampling-remove-the-dependence"><i class="fa fa-check"></i><b>11.7</b> Does sampling remove the dependence?</a></li>
-<li class="chapter" data-level="11.8" data-path="sampling.html"><a href="sampling.html#what-to-carry-forward-10"><i class="fa fa-check"></i><b>11.8</b> What to carry forward</a></li>
-<li class="chapter" data-level="11.9" data-path="sampling.html"><a href="sampling.html#further-reading-11"><i class="fa fa-check"></i><b>11.9</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="simulation.html"><a href="simulation.html"><i class="fa fa-check"></i><b>12</b> Does it recover the truth?</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="simulation.html"><a href="simulation.html#why-simulate"><i class="fa fa-check"></i><b>12.1</b> Why simulate</a></li>
-<li class="chapter" data-level="12.2" data-path="simulation.html"><a href="simulation.html#set-up-10"><i class="fa fa-check"></i><b>12.2</b> Set up</a></li>
-<li class="chapter" data-level="12.3" data-path="simulation.html"><a href="simulation.html#a-world-with-a-known-slope"><i class="fa fa-check"></i><b>12.3</b> A world with a known slope</a></li>
-<li class="chapter" data-level="12.4" data-path="simulation.html"><a href="simulation.html#seven-methods"><i class="fa fa-check"></i><b>12.4</b> Seven methods</a></li>
-<li class="chapter" data-level="12.5" data-path="simulation.html"><a href="simulation.html#one-world-looked-at-closely"><i class="fa fa-check"></i><b>12.5</b> One world, looked at closely</a></li>
-<li class="chapter" data-level="12.6" data-path="simulation.html"><a href="simulation.html#three-hundred-worlds"><i class="fa fa-check"></i><b>12.6</b> Three hundred worlds</a></li>
-<li class="chapter" data-level="12.7" data-path="simulation.html"><a href="simulation.html#no-effect-who-cries-wolf"><i class="fa fa-check"></i><b>12.7</b> No effect: who cries wolf?</a></li>
-<li class="chapter" data-level="12.8" data-path="simulation.html"><a href="simulation.html#a-true-effect-who-finds-it-and-how-precisely"><i class="fa fa-check"></i><b>12.8</b> A true effect: who finds it, and how precisely?</a></li>
-<li class="chapter" data-level="12.9" data-path="simulation.html"><a href="simulation.html#shared-history-the-limit-of-every-method"><i class="fa fa-check"></i><b>12.9</b> Shared history: the limit of every method</a></li>
-<li class="chapter" data-level="12.10" data-path="simulation.html"><a href="simulation.html#make-it-your-own"><i class="fa fa-check"></i><b>12.10</b> Make it your own</a></li>
-<li class="chapter" data-level="12.11" data-path="simulation.html"><a href="simulation.html#what-to-carry-forward-11"><i class="fa fa-check"></i><b>12.11</b> What to carry forward</a></li>
-<li class="chapter" data-level="12.12" data-path="simulation.html"><a href="simulation.html#further-reading-12"><i class="fa fa-check"></i><b>12.12</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://rehan-muh.github.io/">Muhammad Rehan</a></li>
-
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only">Relatives and Neighbours</a>:
+        <small class="text-muted">Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Relatives and Neighbours</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">The problem</li>
+<li><a class="" href="the-problem.html"><span class="header-section-number">1</span> Seeing the problem</a></li>
+<li class="book-part">Phylogeny</li>
+<li><a class="" href="trees.html"><span class="header-section-number">2</span> Trees: the raw material</a></li>
+<li><a class="" href="phylogeny.html"><span class="header-section-number">3</span> Phylogeny as a covariance matrix</a></li>
+<li><a class="" href="phylogeny-engines.html"><span class="header-section-number">4</span> Phylogeny in INLA, mgcv and by maximum likelihood</a></li>
+<li class="book-part">Space</li>
+<li><a class="active" href="maps.html"><span class="header-section-number">5</span> Maps: coordinates, distances and neighbours</a></li>
+<li><a class="" href="space-surface.html"><span class="header-section-number">6</span> Space as a smooth surface</a></li>
+<li><a class="" href="space-neighbours.html"><span class="header-section-number">7</span> Space as a network of neighbours</a></li>
+<li><a class="" href="space-engines.html"><span class="header-section-number">8</span> Space in INLA, mgcv and by maximum likelihood</a></li>
+<li class="book-part">Space and phylogeny</li>
+<li><a class="" href="joint.html"><span class="header-section-number">9</span> Both at once</a></li>
+<li><a class="" href="joint-engines.html"><span class="header-section-number">10</span> Both at once in INLA and mgcv</a></li>
+<li><a class="" href="outcomes.html"><span class="header-section-number">11</span> Other kinds of outcome</a></li>
+<li class="book-part">Sampling and simulation</li>
+<li><a class="" href="sampling.html"><span class="header-section-number">12</span> Sampling instead of modelling</a></li>
+<li><a class="" href="simulation.html"><span class="header-section-number">13</span> Does it recover the truth?</a></li>
+<li class="book-part">Looking ahead</li>
+<li><a class="" href="where-next.html"><span class="header-section-number">14</span> Where next</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="maps" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">5</span> Maps: coordinates, distances and neighbours<a href="maps.html#maps" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="maps" class="section level1" number="5">
+<h1>
+<span class="header-section-number">5</span> Maps: coordinates, distances and neighbours<a class="anchor" aria-label="anchor" href="#maps"><i class="fas fa-link"></i></a>
+</h1>
 <p class="lede">
 Spatial models need one of two things from your coordinates: distances between languages, or a list of who neighbours whom. Build both, and learn what each choice assumes.
 </p>
 <p class="chapter-meta">
 <span><b>Fitted with</b> sf, spdep</span><span><b>Model fitting</b> about two minutes; the polygon section downloads 140 MB once</span><span><b>Packages</b> <code>sf</code> <code>spdep</code> <code>rnaturalearth</code> <code>ggplot2</code></span><span><a href="scripts/05-maps.R">Download the R script</a></span>
 </p>
-<div id="set-up-3" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Set up<a href="maps.html#set-up-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="maps.html#cb108-1" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb108-2"><a href="maps.html#cb108-2" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
-<span id="cb108-3"><a href="maps.html#cb108-3" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
-<span id="cb108-4"><a href="maps.html#cb108-4" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb108-5"><a href="maps.html#cb108-5" tabindex="-1"></a></span>
-<span id="cb108-6"><a href="maps.html#cb108-6" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
-<span id="cb108-7"><a href="maps.html#cb108-7" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
-<span id="cb108-8"><a href="maps.html#cb108-8" tabindex="-1"></a>d<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> d<span class="sc">$</span>elevation <span class="sc">/</span> <span class="dv">1000</span></span></code></pre></div>
+<div id="set-up-3" class="section level2" number="5.1">
+<h2>
+<span class="header-section-number">5.1</span> Set up<a class="anchor" aria-label="anchor" href="#set-up-3"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/">sf</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-spatial/spdep/">spdep</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/rnaturalearth/">rnaturalearth</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">base</span> <span class="op">&lt;-</span> <span class="st">"https://rehan-muh.github.io/tutorials/data/"</span></span>
+<span><span class="va">d</span>    <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">base</span>, <span class="st">"languages.csv"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">d</span><span class="op">$</span><span class="va">elev_km</span> <span class="op">&lt;-</span> <span class="va">d</span><span class="op">$</span><span class="va">elevation</span> <span class="op">/</span> <span class="fl">1000</span></span></code></pre></div>
 </div>
-<div id="languages-as-points" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Languages as points<a href="maps.html#languages-as-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The data give each language one longitude and one latitude. <code>st_as_sf()</code> turns those two columns into a spatial object, and <code>crs = 4326</code> says they are ordinary degrees on the globe.</p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="maps.html#cb109-1" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(d, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>), <span class="at">crs =</span> <span class="dv">4326</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb109-2"><a href="maps.html#cb109-2" tabindex="-1"></a>pts[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="fu">c</span>(<span class="st">&quot;name&quot;</span>, <span class="st">&quot;family&quot;</span>, <span class="st">&quot;geometry&quot;</span>)]</span></code></pre></div>
+<div id="languages-as-points" class="section level2" number="5.2">
+<h2>
+<span class="header-section-number">5.2</span> Languages as points<a class="anchor" aria-label="anchor" href="#languages-as-points"><i class="fas fa-link"></i></a>
+</h2>
+<p>The data give each language one longitude and one latitude. <code><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html">st_as_sf()</a></code> turns those two columns into a spatial object, and <code>crs = 4326</code> says they are ordinary degrees on the globe.</p>
+<div class="sourceCode" id="cb109"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">pts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html">st_as_sf</a></span><span class="op">(</span><span class="va">d</span>, coords <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"lon"</span>, <span class="st">"lat"</span><span class="op">)</span>, crs <span class="op">=</span> <span class="fl">4326</span>, remove <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">pts</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"name"</span>, <span class="st">"family"</span>, <span class="st">"geometry"</span><span class="op">)</span><span class="op">]</span></span></code></pre></div>
 <pre><code>## Simple feature collection with 3 features and 2 fields
 ## Geometry type: POINT
 ## Dimension:     XY
@@ -384,73 +135,84 @@ Spatial models need one of two things from your coordinates: distances between l
 ##              name       family          geometry
 ## 1 West Circassian Abkhaz-Adyge   POINT (39.3 44)
 ## 2            Beja Afro-Asiatic POINT (36.7 17.2)
-## 3  Alaba-K&#39;abeena Afro-Asiatic POINT (38.2 7.39)</code></pre>
+## 3  Alaba-K'abeena Afro-Asiatic POINT (38.2 7.39)</code></pre>
 <p>A point is a simplification. A language is spoken over an area, sometimes a discontinuous one, and Glottolog’s point is roughly its centre. For a world sample that is good enough. For a study of one region, speaker-area polygons are better if you can get them, and the last section of this chapter shows where they plug in.</p>
 </div>
-<div id="distances" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Distances<a href="maps.html#distances" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Distance on a globe is measured along great circles. <code>st_distance()</code> does it for <code>sf</code> points and <code>sp::spDists()</code> returns a plain matrix in kilometres, which is the more convenient form.</p>
-<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="maps.html#cb111-1" tabindex="-1"></a>coords <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)])</span>
-<span id="cb111-2"><a href="maps.html#cb111-2" tabindex="-1"></a>km <span class="ot">&lt;-</span> sp<span class="sc">::</span><span class="fu">spDists</span>(coords, <span class="at">longlat =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb111-3"><a href="maps.html#cb111-3" tabindex="-1"></a><span class="fu">dimnames</span>(km) <span class="ot">&lt;-</span> <span class="fu">list</span>(d<span class="sc">$</span>name, d<span class="sc">$</span>name)</span>
-<span id="cb111-4"><a href="maps.html#cb111-4" tabindex="-1"></a></span>
-<span id="cb111-5"><a href="maps.html#cb111-5" tabindex="-1"></a>show <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Tigrinya&quot;</span>, <span class="st">&quot;Harari&quot;</span>, <span class="st">&quot;Zulu&quot;</span>, <span class="st">&quot;Central Aymara&quot;</span>)</span>
-<span id="cb111-6"><a href="maps.html#cb111-6" tabindex="-1"></a><span class="fu">round</span>(km[show, show])</span></code></pre></div>
+<div id="distances" class="section level2" number="5.3">
+<h2>
+<span class="header-section-number">5.3</span> Distances<a class="anchor" aria-label="anchor" href="#distances"><i class="fas fa-link"></i></a>
+</h2>
+<p>Distance on a globe is measured along great circles. <code><a href="https://r-spatial.github.io/sf/reference/geos_measures.html">st_distance()</a></code> does it for <code>sf</code> points and <code><a href="https://edzer.github.io/sp/reference/spDistsN1.html">sp::spDists()</a></code> returns a plain matrix in kilometres, which is the more convenient form.</p>
+<div class="sourceCode" id="cb111"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">coords</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="va">d</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"lon"</span>, <span class="st">"lat"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">km</span> <span class="op">&lt;-</span> <span class="fu">sp</span><span class="fu">::</span><span class="fu"><a href="https://edzer.github.io/sp/reference/spDistsN1.html">spDists</a></span><span class="op">(</span><span class="va">coords</span>, longlat <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/dimnames.html">dimnames</a></span><span class="op">(</span><span class="va">km</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">name</span>, <span class="va">d</span><span class="op">$</span><span class="va">name</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">show</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Tigrinya"</span>, <span class="st">"Harari"</span>, <span class="st">"Zulu"</span>, <span class="st">"Central Aymara"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">km</span><span class="op">[</span><span class="va">show</span>, <span class="va">show</span><span class="op">]</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##                Tigrinya Harari Zulu Central Aymara
 ## Tigrinya              0    753 4984          12318
 ## Harari              753      0 4417          12500
 ## Zulu               4984   4417    0           9929
 ## Central Aymara    12318  12500 9929              0</code></pre>
 <p>Next, find how far each language is from its nearest neighbour in the sample.</p>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="maps.html#cb113-1" tabindex="-1"></a>nearest <span class="ot">&lt;-</span> <span class="fu">apply</span>(km <span class="sc">+</span> <span class="fu">diag</span>(<span class="cn">Inf</span>, <span class="fu">nrow</span>(km)), <span class="dv">1</span>, min)</span>
-<span id="cb113-2"><a href="maps.html#cb113-2" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(nearest, <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="dv">1</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">nearest</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/apply.html">apply</a></span><span class="op">(</span><span class="va">km</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/diag.html">diag</a></span><span class="op">(</span><span class="cn">Inf</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">km</span><span class="op">)</span><span class="op">)</span>, <span class="fl">1</span>, <span class="va">min</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">nearest</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##   0%  25%  50%  75% 100% 
 ##    5   75  138  275 1508</code></pre>
 <p>The sample is very uneven: half the languages have another within about 140 km, and the most isolated is 1,500 km from anything. Every spatial model has to cope with that, and they cope in different ways.</p>
 </div>
-<div id="flat-maps-and-their-cost" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Flat maps and their cost<a href="maps.html#flat-maps-and-their-cost" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="flat-maps-and-their-cost" class="section level2" number="5.4">
+<h2>
+<span class="header-section-number">5.4</span> Flat maps and their cost<a class="anchor" aria-label="anchor" href="#flat-maps-and-their-cost"><i class="fas fa-link"></i></a>
+</h2>
 <p>Some models (the Gaussian process of Chapter <a href="space-surface.html#space-surface">6</a>) want coordinates in which ordinary straight-line distance means something. Degrees will not do: a degree of longitude is 111 km at the equator and 56 km at 60° north. The fix is to project. Equal Earth is a reasonable projection for the whole world.</p>
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="maps.html#cb115-1" tabindex="-1"></a>xy <span class="ot">&lt;-</span> <span class="fu">st_coordinates</span>(<span class="fu">st_transform</span>(pts, <span class="st">&quot;+proj=eqearth&quot;</span>)) <span class="sc">/</span> <span class="dv">1000</span>   <span class="co"># km</span></span>
-<span id="cb115-2"><a href="maps.html#cb115-2" tabindex="-1"></a>flat_km <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">dist</span>(xy))</span>
-<span id="cb115-3"><a href="maps.html#cb115-3" tabindex="-1"></a></span>
-<span id="cb115-4"><a href="maps.html#cb115-4" tabindex="-1"></a>close <span class="ot">&lt;-</span> km <span class="sc">&lt;</span> <span class="dv">3000</span> <span class="sc">&amp;</span> <span class="fu">upper.tri</span>(km)</span>
-<span id="cb115-5"><a href="maps.html#cb115-5" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(flat_km[close] <span class="sc">/</span> km[close], <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.5</span>, <span class="fl">0.95</span>)), <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">xy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_coordinates.html">st_coordinates</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_transform.html">st_transform</a></span><span class="op">(</span><span class="va">pts</span>, <span class="st">"+proj=eqearth"</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="fl">1000</span>   <span class="co"># km</span></span>
+<span><span class="va">flat_km</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/dist.html">dist</a></span><span class="op">(</span><span class="va">xy</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">close</span> <span class="op">&lt;-</span> <span class="va">km</span> <span class="op">&lt;</span> <span class="fl">3000</span> <span class="op">&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/lower.tri.html">upper.tri</a></span><span class="op">(</span><span class="va">km</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">flat_km</span><span class="op">[</span><span class="va">close</span><span class="op">]</span> <span class="op">/</span> <span class="va">km</span><span class="op">[</span><span class="va">close</span><span class="op">]</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.05</span>, <span class="fl">0.5</span>, <span class="fl">0.95</span><span class="op">)</span><span class="op">)</span>, <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##   5%  50%  95% 
 ## 0.86 0.97 1.17</code></pre>
 <p>For pairs of languages within 3,000 km, the distance on the flat map is mostly within about 15% of the true one. The error comes mostly at high latitudes and across the cut at the 180th meridian, where Alaska and Chukotka end up on opposite edges.</p>
 <p>Methods that work on the sphere need no projection. They take either degrees directly or the position of each language as a point on a unit sphere:</p>
-<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="maps.html#cb117-1" tabindex="-1"></a>to_sphere <span class="ot">&lt;-</span> <span class="cf">function</span>(lon, lat) {</span>
-<span id="cb117-2"><a href="maps.html#cb117-2" tabindex="-1"></a>  rad <span class="ot">&lt;-</span> pi <span class="sc">/</span> <span class="dv">180</span></span>
-<span id="cb117-3"><a href="maps.html#cb117-3" tabindex="-1"></a>  <span class="fu">cbind</span>(<span class="at">x =</span> <span class="fu">cos</span>(lat <span class="sc">*</span> rad) <span class="sc">*</span> <span class="fu">cos</span>(lon <span class="sc">*</span> rad),</span>
-<span id="cb117-4"><a href="maps.html#cb117-4" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">cos</span>(lat <span class="sc">*</span> rad) <span class="sc">*</span> <span class="fu">sin</span>(lon <span class="sc">*</span> rad),</span>
-<span id="cb117-5"><a href="maps.html#cb117-5" tabindex="-1"></a>        <span class="at">z =</span> <span class="fu">sin</span>(lat <span class="sc">*</span> rad))</span>
-<span id="cb117-6"><a href="maps.html#cb117-6" tabindex="-1"></a>}</span>
-<span id="cb117-7"><a href="maps.html#cb117-7" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">round</span>(<span class="fu">to_sphere</span>(d<span class="sc">$</span>lon, d<span class="sc">$</span>lat), <span class="dv">3</span>), <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">to_sphere</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">rad</span> <span class="op">&lt;-</span> <span class="va">pi</span> <span class="op">/</span> <span class="fl">180</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Trig.html">cos</a></span><span class="op">(</span><span class="va">lat</span> <span class="op">*</span> <span class="va">rad</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Trig.html">cos</a></span><span class="op">(</span><span class="va">lon</span> <span class="op">*</span> <span class="va">rad</span><span class="op">)</span>,</span>
+<span>        y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Trig.html">cos</a></span><span class="op">(</span><span class="va">lat</span> <span class="op">*</span> <span class="va">rad</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Trig.html">sin</a></span><span class="op">(</span><span class="va">lon</span> <span class="op">*</span> <span class="va">rad</span><span class="op">)</span>,</span>
+<span>        z <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Trig.html">sin</a></span><span class="op">(</span><span class="va">lat</span> <span class="op">*</span> <span class="va">rad</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu">to_sphere</span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">lon</span>, <span class="va">d</span><span class="op">$</span><span class="va">lat</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##          x     y     z
 ## [1,] 0.556 0.456 0.695
 ## [2,] 0.766 0.570 0.296
 ## [3,] 0.780 0.613 0.129</code></pre>
 </div>
-<div id="neighbours" class="section level2 hasAnchor" number="5.5">
-<h2><span class="header-section-number">5.5</span> Neighbours<a href="maps.html#neighbours" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="neighbours" class="section level2" number="5.5">
+<h2>
+<span class="header-section-number">5.5</span> Neighbours<a class="anchor" aria-label="anchor" href="#neighbours"><i class="fas fa-link"></i></a>
+</h2>
 <p>The other family of models (Chapter <a href="space-neighbours.html#space-neighbours">7</a>) never looks at a distance. It needs a graph that says which languages count as neighbours. For points there is no natural answer, so you choose a rule. Three common ones:</p>
-<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="maps.html#cb119-1" tabindex="-1"></a><span class="co"># 1. the k nearest languages, made mutual</span></span>
-<span id="cb119-2"><a href="maps.html#cb119-2" tabindex="-1"></a>knn <span class="ot">&lt;-</span> <span class="fu">make.sym.nb</span>(<span class="fu">knn2nb</span>(<span class="fu">knearneigh</span>(coords, <span class="at">k =</span> <span class="dv">5</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>)))</span>
-<span id="cb119-3"><a href="maps.html#cb119-3" tabindex="-1"></a></span>
-<span id="cb119-4"><a href="maps.html#cb119-4" tabindex="-1"></a><span class="co"># 2. every language within a fixed distance</span></span>
-<span id="cb119-5"><a href="maps.html#cb119-5" tabindex="-1"></a>band <span class="ot">&lt;-</span> <span class="fu">dnearneigh</span>(coords, <span class="dv">0</span>, <span class="dv">500</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb119-6"><a href="maps.html#cb119-6" tabindex="-1"></a></span>
-<span id="cb119-7"><a href="maps.html#cb119-7" tabindex="-1"></a><span class="co"># 3. natural neighbours: a triangulation of the points</span></span>
-<span id="cb119-8"><a href="maps.html#cb119-8" tabindex="-1"></a>tri <span class="ot">&lt;-</span> <span class="fu">tri2nb</span>(coords)</span>
-<span id="cb119-9"><a href="maps.html#cb119-9" tabindex="-1"></a></span>
-<span id="cb119-10"><a href="maps.html#cb119-10" tabindex="-1"></a>compare <span class="ot">&lt;-</span> <span class="cf">function</span>(nb) {</span>
-<span id="cb119-11"><a href="maps.html#cb119-11" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">links_per_language =</span> <span class="fu">round</span>(<span class="fu">mean</span>(<span class="fu">card</span>(nb)), <span class="dv">1</span>),</span>
-<span id="cb119-12"><a href="maps.html#cb119-12" tabindex="-1"></a>    <span class="at">without_neighbours =</span> <span class="fu">sum</span>(<span class="fu">card</span>(nb) <span class="sc">==</span> <span class="dv">0</span>),</span>
-<span id="cb119-13"><a href="maps.html#cb119-13" tabindex="-1"></a>    <span class="at">separate_pieces    =</span> <span class="fu">n.comp.nb</span>(nb)<span class="sc">$</span>nc)</span>
-<span id="cb119-14"><a href="maps.html#cb119-14" tabindex="-1"></a>}</span>
-<span id="cb119-15"><a href="maps.html#cb119-15" tabindex="-1"></a><span class="fu">rbind</span>(<span class="st">&quot;5 nearest&quot;</span> <span class="ot">=</span> <span class="fu">compare</span>(knn), <span class="st">&quot;within 500 km&quot;</span> <span class="ot">=</span> <span class="fu">compare</span>(band),</span>
-<span id="cb119-16"><a href="maps.html#cb119-16" tabindex="-1"></a>      <span class="st">&quot;triangulation&quot;</span> <span class="ot">=</span> <span class="fu">compare</span>(tri))</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 1. the k nearest languages, made mutual</span></span>
+<span><span class="va">knn</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/testnb.html">make.sym.nb</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/spdep/reference/knn2nb.html">knn2nb</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/spdep/reference/knearneigh.html">knearneigh</a></span><span class="op">(</span><span class="va">coords</span>, k <span class="op">=</span> <span class="fl">5</span>, longlat <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 2. every language within a fixed distance</span></span>
+<span><span class="va">band</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/dnearneigh.html">dnearneigh</a></span><span class="op">(</span><span class="va">coords</span>, <span class="fl">0</span>, <span class="fl">500</span>, longlat <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 3. natural neighbours: a triangulation of the points</span></span>
+<span><span class="va">tri</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/tri2nb.html">tri2nb</a></span><span class="op">(</span><span class="va">coords</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">compare</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">nb</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>links_per_language <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/spdep/reference/card.html">card</a></span><span class="op">(</span><span class="va">nb</span><span class="op">)</span><span class="op">)</span>, <span class="fl">1</span><span class="op">)</span>,</span>
+<span>    without_neighbours <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/spdep/reference/card.html">card</a></span><span class="op">(</span><span class="va">nb</span><span class="op">)</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span>,</span>
+<span>    separate_pieces    <span class="op">=</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/compon.html">n.comp.nb</a></span><span class="op">(</span><span class="va">nb</span><span class="op">)</span><span class="op">$</span><span class="va">nc</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span><span class="st">"5 nearest"</span> <span class="op">=</span> <span class="fu">compare</span><span class="op">(</span><span class="va">knn</span><span class="op">)</span>, <span class="st">"within 500 km"</span> <span class="op">=</span> <span class="fu">compare</span><span class="op">(</span><span class="va">band</span><span class="op">)</span>,</span>
+<span>      <span class="st">"triangulation"</span> <span class="op">=</span> <span class="fu">compare</span><span class="op">(</span><span class="va">tri</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##               links_per_language without_neighbours separate_pieces
 ## 5 nearest                    6.4                  0               1
 ## within 500 km                9.1                 44              85
@@ -461,94 +223,105 @@ Spatial models need one of two things from your coordinates: distances between l
 <li>A distance band is the most natural idea and the most troublesome in a world sample. Languages in dense regions get dozens of links, isolated ones get none, and the graph falls into many pieces. The models of Chapter <a href="space-neighbours.html#space-neighbours">7</a> need one piece.</li>
 <li>A triangulation always gives one piece and needs no tuning. It also draws long links across oceans, and because it works on raw degrees it treats the map as flat.</li>
 </ul>
-<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="maps.html#cb121-1" tabindex="-1"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="st">&quot;small&quot;</span>, <span class="at">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span>
-<span id="cb121-2"><a href="maps.html#cb121-2" tabindex="-1"></a>wrap  <span class="ot">&lt;-</span> <span class="cf">function</span>(nb) <span class="fu">st_wrap_dateline</span>(<span class="fu">nb2lines</span>(nb, <span class="at">coords =</span> <span class="fu">st_geometry</span>(pts)),</span>
-<span id="cb121-3"><a href="maps.html#cb121-3" tabindex="-1"></a>                                       <span class="at">options =</span> <span class="fu">c</span>(<span class="st">&quot;WRAPDATELINE=YES&quot;</span>,</span>
-<span id="cb121-4"><a href="maps.html#cb121-4" tabindex="-1"></a>                                                   <span class="st">&quot;DATELINEOFFSET=60&quot;</span>))</span>
-<span id="cb121-5"><a href="maps.html#cb121-5" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb121-6"><a href="maps.html#cb121-6" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> world, <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
-<span id="cb121-7"><a href="maps.html#cb121-7" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">wrap</span>(knn), <span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.25</span>) <span class="sc">+</span></span>
-<span id="cb121-8"><a href="maps.html#cb121-8" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">wrap</span>(band), <span class="at">colour =</span> <span class="st">&quot;#EB6834&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.2</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb121-9"><a href="maps.html#cb121-9" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> pts, <span class="at">size =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
-<span id="cb121-10"><a href="maps.html#cb121-10" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=eqearth&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:maps-graph-map"></span>
+<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">world</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://docs.ropensci.org/rnaturalearth/reference/ne_countries.html">ne_countries</a></span><span class="op">(</span>scale <span class="op">=</span> <span class="st">"small"</span>, returnclass <span class="op">=</span> <span class="st">"sf"</span><span class="op">)</span></span>
+<span><span class="va">wrap</span>  <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">nb</span><span class="op">)</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_transform.html">st_wrap_dateline</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/spdep/reference/nb2lines.html">nb2lines</a></span><span class="op">(</span><span class="va">nb</span>, coords <span class="op">=</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_geometry.html">st_geometry</a></span><span class="op">(</span><span class="va">pts</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                                       options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"WRAPDATELINE=YES"</span>,</span>
+<span>                                                   <span class="st">"DATELINEOFFSET=60"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">world</span>, fill <span class="op">=</span> <span class="st">"grey94"</span>, colour <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu">wrap</span><span class="op">(</span><span class="va">knn</span><span class="op">)</span>, colour <span class="op">=</span> <span class="st">"#2A78D6"</span>, linewidth <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu">wrap</span><span class="op">(</span><span class="va">band</span><span class="op">)</span>, colour <span class="op">=</span> <span class="st">"#EB6834"</span>, linewidth <span class="op">=</span> <span class="fl">0.2</span>, alpha <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">pts</span>, size <span class="op">=</span> <span class="fl">0.4</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">coord_sf</a></span><span class="op">(</span>crs <span class="op">=</span> <span class="st">"+proj=eqearth"</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:maps-graph-map"></span>
 <span id="fig:maps-graph-map" style="display:block;"></span>
-<img src="figures/05-maps/graph-map-1.png" alt="Two neighbour graphs on the same languages: the five nearest (blue) and everything within 500 km (orange). The distance band leaves much of the world unconnected." width="710" />
-<p class="caption">
+<img src="figures/05-maps/graph-map-1.png" alt="Two neighbour graphs on the same languages: the five nearest (blue) and everything within 500 km (orange). The distance band leaves much of the world unconnected." width="710"><p class="caption">
 Figure 5.1: Two neighbour graphs on the same languages: the five nearest (blue) and everything within 500 km (orange). The distance band leaves much of the world unconnected.
 </p>
 </div>
 <blockquote>
-<p><strong>Watch out.</strong> No rule knows any linguistics. A link across the Sahara counts the same as a link between neighbouring villages, and two languages on either side of a mountain range are neighbours if they are close on the map. You can edit a graph by hand with <code>edit.nb()</code>, or build it from a table of known contact. Whatever you do, draw it, and try the analysis with a second graph.</p>
+<p><strong>Watch out.</strong> No rule knows any linguistics. A link across the Sahara counts the same as a link between neighbouring villages, and two languages on either side of a mountain range are neighbours if they are close on the map. You can edit a graph by hand with <code><a href="https://r-spatial.github.io/spdep/reference/edit.nb.html">edit.nb()</a></code>, or build it from a table of known contact. Whatever you do, draw it, and try the analysis with a second graph.</p>
 </blockquote>
 </div>
-<div id="from-a-graph-to-weights" class="section level2 hasAnchor" number="5.6">
-<h2><span class="header-section-number">5.6</span> From a graph to weights<a href="maps.html#from-a-graph-to-weights" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="from-a-graph-to-weights" class="section level2" number="5.6">
+<h2>
+<span class="header-section-number">5.6</span> From a graph to weights<a class="anchor" aria-label="anchor" href="#from-a-graph-to-weights"><i class="fas fa-link"></i></a>
+</h2>
 <p>Models use the graph as a matrix. There are two conventions and they are not interchangeable.</p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="maps.html#cb122-1" tabindex="-1"></a>W_binary <span class="ot">&lt;-</span> <span class="fu">nb2mat</span>(knn, <span class="at">style =</span> <span class="st">&quot;B&quot;</span>)   <span class="co"># 1 for a neighbour, 0 otherwise</span></span>
-<span id="cb122-2"><a href="maps.html#cb122-2" tabindex="-1"></a>W_rows   <span class="ot">&lt;-</span> <span class="fu">nb2mat</span>(knn, <span class="at">style =</span> <span class="st">&quot;W&quot;</span>)   <span class="co"># each row divided by its row sum</span></span>
-<span id="cb122-3"><a href="maps.html#cb122-3" tabindex="-1"></a></span>
-<span id="cb122-4"><a href="maps.html#cb122-4" tabindex="-1"></a>W_binary[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">W_binary</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/nb2mat.html">nb2mat</a></span><span class="op">(</span><span class="va">knn</span>, style <span class="op">=</span> <span class="st">"B"</span><span class="op">)</span>   <span class="co"># 1 for a neighbour, 0 otherwise</span></span>
+<span><span class="va">W_rows</span>   <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/nb2mat.html">nb2mat</a></span><span class="op">(</span><span class="va">knn</span>, style <span class="op">=</span> <span class="st">"W"</span><span class="op">)</span>   <span class="co"># each row divided by its row sum</span></span>
+<span></span>
+<span><span class="va">W_binary</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">]</span></span></code></pre></div>
 <pre><code>##   1 2 3 4
 ## 1 0 0 0 0
 ## 2 0 0 0 0
 ## 3 0 0 0 1
 ## 4 0 0 1 0</code></pre>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="maps.html#cb124-1" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">rowSums</span>(W_rows)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/Matrix/man/colSums-methods.html">rowSums</a></span><span class="op">(</span><span class="va">W_rows</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">]</span>, <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 1 2 3 4 
 ## 1 1 1 1</code></pre>
-<p>The binary matrix is what the conditional autoregressive models of Chapter <a href="space-neighbours.html#space-neighbours">7</a> take. The row-standardised one, usually stored as a list with <code>nb2listw()</code>, is what Moran’s I and the simultaneous autoregressive models of Chapter <a href="space-engines.html#space-engines">8</a> take. With row standardisation a language’s neighbours always sum to one, so a language with two neighbours listens to each of them more than a language with ten.</p>
+<p>The binary matrix is what the conditional autoregressive models of Chapter <a href="space-neighbours.html#space-neighbours">7</a> take. The row-standardised one, usually stored as a list with <code><a href="https://r-spatial.github.io/spdep/reference/nb2listw.html">nb2listw()</a></code>, is what Moran’s I and the simultaneous autoregressive models of Chapter <a href="space-engines.html#space-engines">8</a> take. With row standardisation a language’s neighbours always sum to one, so a language with two neighbours listens to each of them more than a language with ten.</p>
 </div>
-<div id="how-far-does-similarity-reach" class="section level2 hasAnchor" number="5.7">
-<h2><span class="header-section-number">5.7</span> How far does similarity reach?<a href="maps.html#how-far-does-similarity-reach" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="how-far-does-similarity-reach" class="section level2" number="5.7">
+<h2>
+<span class="header-section-number">5.7</span> How far does similarity reach?<a class="anchor" aria-label="anchor" href="#how-far-does-similarity-reach"><i class="fas fa-link"></i></a>
+</h2>
 <p>Chapter <a href="the-problem.html#the-problem">1</a> computed Moran’s I for immediate neighbours. A correlogram repeats the calculation for neighbours of neighbours, and theirs, and so on, which shows how quickly similarity fades with graph distance.</p>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="maps.html#cb126-1" tabindex="-1"></a>m0  <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> d)</span>
-<span id="cb126-2"><a href="maps.html#cb126-2" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">residuals</span>(m0, <span class="at">type =</span> <span class="st">&quot;pearson&quot;</span>)</span>
-<span id="cb126-3"><a href="maps.html#cb126-3" tabindex="-1"></a></span>
-<span id="cb126-4"><a href="maps.html#cb126-4" tabindex="-1"></a>cg <span class="ot">&lt;-</span> <span class="fu">sp.correlogram</span>(knn, res, <span class="at">order =</span> <span class="dv">6</span>, <span class="at">method =</span> <span class="st">&quot;I&quot;</span>, <span class="at">style =</span> <span class="st">&quot;W&quot;</span>)</span>
-<span id="cb126-5"><a href="maps.html#cb126-5" tabindex="-1"></a>steps <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">step =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">I =</span> cg<span class="sc">$</span>res[, <span class="dv">1</span>], <span class="at">se =</span> <span class="fu">sqrt</span>(cg<span class="sc">$</span>res[, <span class="dv">3</span>]))</span>
-<span id="cb126-6"><a href="maps.html#cb126-6" tabindex="-1"></a></span>
-<span id="cb126-7"><a href="maps.html#cb126-7" tabindex="-1"></a><span class="fu">ggplot</span>(steps, <span class="fu">aes</span>(step, I)) <span class="sc">+</span></span>
-<span id="cb126-8"><a href="maps.html#cb126-8" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">&quot;22&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;grey35&quot;</span>) <span class="sc">+</span></span>
-<span id="cb126-9"><a href="maps.html#cb126-9" tabindex="-1"></a>  <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> I <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> se, <span class="at">ymax =</span> I <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> se),</span>
-<span id="cb126-10"><a href="maps.html#cb126-10" tabindex="-1"></a>                 <span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb126-11"><a href="maps.html#cb126-11" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">size =</span> <span class="fl">2.6</span>) <span class="sc">+</span></span>
-<span id="cb126-12"><a href="maps.html#cb126-12" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) <span class="sc">+</span></span>
-<span id="cb126-13"><a href="maps.html#cb126-13" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;steps apart on the neighbour graph&quot;</span>,</span>
-<span id="cb126-14"><a href="maps.html#cb126-14" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Moran&#39;s I of the residuals&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:maps-correlogram"></span>
+<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">m0</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">ejectives</span> <span class="op">~</span> <span class="va">elev_km</span>, family <span class="op">=</span> <span class="va">binomial</span>, data <span class="op">=</span> <span class="va">d</span><span class="op">)</span></span>
+<span><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/residuals.html">residuals</a></span><span class="op">(</span><span class="va">m0</span>, type <span class="op">=</span> <span class="st">"pearson"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">cg</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/sp.correlogram.html">sp.correlogram</a></span><span class="op">(</span><span class="va">knn</span>, <span class="va">res</span>, order <span class="op">=</span> <span class="fl">6</span>, method <span class="op">=</span> <span class="st">"I"</span>, style <span class="op">=</span> <span class="st">"W"</span><span class="op">)</span></span>
+<span><span class="va">steps</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>step <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">6</span>, I <span class="op">=</span> <span class="va">cg</span><span class="op">$</span><span class="va">res</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>, se <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="va">cg</span><span class="op">$</span><span class="va">res</span><span class="op">[</span>, <span class="fl">3</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">steps</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">step</span>, <span class="va">I</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op">(</span>yintercept <span class="op">=</span> <span class="fl">0</span>, linetype <span class="op">=</span> <span class="st">"22"</span>, colour <span class="op">=</span> <span class="st">"grey35"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_linerange</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>ymin <span class="op">=</span> <span class="va">I</span> <span class="op">-</span> <span class="fl">2</span> <span class="op">*</span> <span class="va">se</span>, ymax <span class="op">=</span> <span class="va">I</span> <span class="op">+</span> <span class="fl">2</span> <span class="op">*</span> <span class="va">se</span><span class="op">)</span>,</span>
+<span>                 colour <span class="op">=</span> <span class="st">"#2A78D6"</span>, linewidth <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"#2A78D6"</span>, size <span class="op">=</span> <span class="fl">2.6</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"steps apart on the neighbour graph"</span>,</span>
+<span>       y <span class="op">=</span> <span class="st">"Moran's I of the residuals"</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:maps-correlogram"></span>
 <span id="fig:maps-correlogram" style="display:block;"></span>
-<img src="figures/05-maps/correlogram-1.png" alt="Moran's I of the naive model's residuals for neighbours one to six steps apart on the five-nearest-neighbour graph, with two standard errors either side. Similarity is strongest between direct neighbours and is still present several steps away." width="710" />
-<p class="caption">
+<img src="figures/05-maps/correlogram-1.png" alt="Moran's I of the naive model's residuals for neighbours one to six steps apart on the five-nearest-neighbour graph, with two standard errors either side. Similarity is strongest between direct neighbours and is still present several steps away." width="710"><p class="caption">
 Figure 5.2: Moran’s I of the naive model’s residuals for neighbours one to six steps apart on the five-nearest-neighbour graph, with two standard errors either side. Similarity is strongest between direct neighbours and is still present several steps away.
 </p>
 </div>
 <p>A correlogram that dies out within a step or two says that a neighbour model will capture the dependence. One that stays high for many steps, as here, says the patterns are regional, and a model with a smooth surface or a long reach is the better description.</p>
 <blockquote>
-<p><strong>With your own data.</strong> If your units are areas, read the polygons with <code>st_read()</code> and call <code>poly2nb()</code> to link areas that share a border; everything from <code>nb</code> onward is the same. If your sample covers one region, project to a local system (a UTM zone, or an equal-area projection centred on your region) and the flat-map error all but disappears.</p>
+<p><strong>With your own data.</strong> If your units are areas, read the polygons with <code><a href="https://r-spatial.github.io/sf/reference/st_read.html">st_read()</a></code> and call <code><a href="https://r-spatial.github.io/spdep/reference/poly2nb.html">poly2nb()</a></code> to link areas that share a border; everything from <code>nb</code> onward is the same. If your sample covers one region, project to a local system (a UTM zone, or an equal-area projection centred on your region) and the flat-map error all but disappears.</p>
 </blockquote>
 </div>
-<div id="where-locations-come-from" class="section level2 hasAnchor" number="5.8">
-<h2><span class="header-section-number">5.8</span> Where locations come from<a href="maps.html#where-locations-come-from" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="where-locations-come-from" class="section level2" number="5.8">
+<h2>
+<span class="header-section-number">5.8</span> Where locations come from<a class="anchor" aria-label="anchor" href="#where-locations-come-from"><i class="fas fa-link"></i></a>
+</h2>
 <p>The coordinates in this book are Glottolog’s. They are the usual choice, and there are others.</p>
-<table>
+<div class="inline-table"><table class="table table-sm">
 <colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
+<col width="33%">
+<col width="33%">
+<col width="33%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="left">Source</th>
 <th align="left">What it gives</th>
 <th align="left">How to get it</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">Glottolog <span class="citation">(<a href="#ref-glottolog">Hammarström et al., n.d.</a>)</span></td>
+<td align="left">Glottolog <span class="citation">(<a href="references.html#ref-glottolog">Hammarström et al., n.d.</a>)</span>
+</td>
 <td align="left">One point per language</td>
-<td align="left"><code>languages.csv</code> in its CLDF release; the <code>lingtypology</code> package <span class="citation">(<a href="#ref-moroz2017">Moroz 2017</a>)</span></td>
+<td align="left">
+<code>languages.csv</code> in its CLDF release; the <code>lingtypology</code> package <span class="citation">(<a href="references.html#ref-moroz2017">Moroz 2017</a>)</span>
+</td>
 </tr>
 <tr class="even">
 <td align="left">WALS, Grambank, PHOIBLE and other CLDF datasets</td>
@@ -556,242 +329,200 @@ Figure 5.2: Moran’s I of the naive model’s residuals for neighbours one to s
 <td align="left">The <code>languages.csv</code> of each dataset</td>
 </tr>
 <tr class="odd">
-<td align="left">Glottography <span class="citation">(<a href="#ref-glottography">Glottography, n.d.</a>)</span></td>
+<td align="left">Glottography <span class="citation">(<a href="references.html#ref-glottography">Glottography, n.d.</a>)</span>
+</td>
 <td align="left">Speaker-area polygons digitised from published atlases and matched to Glottocodes</td>
 <td align="left">The <code>Rglottography</code> package, or the GeoJSON files directly</td>
 </tr>
 <tr class="even">
-<td align="left">Ethnologue <span class="citation">(<a href="#ref-ethnologue">Eberhard et al. 2023</a>)</span></td>
+<td align="left">Ethnologue <span class="citation">(<a href="references.html#ref-ethnologue">Eberhard et al. 2023</a>)</span>
+</td>
 <td align="left">Polygons for most languages</td>
 <td align="left">Under licence only</td>
 </tr>
 <tr class="odd">
-<td align="left">Glottolog, AUTOTYP <span class="citation">(<a href="#ref-autotyp2023">Bickel et al. 2023</a>)</span>, WALS</td>
+<td align="left">Glottolog, AUTOTYP <span class="citation">(<a href="references.html#ref-autotyp2023">Bickel et al. 2023</a>)</span>, WALS</td>
 <td align="left">Areas as categories: macroareas and continental areas</td>
 <td align="left">A column in each database</td>
 </tr>
 </tbody>
-</table>
-<p>Glottography is the open source of polygons. Its largest dataset digitises the <em>Atlas of the World’s Languages</em> <span class="citation">(<a href="#ref-asher2007">Asher and Moseley 2007</a>)</span> and comes in two layers, the areas where languages are spoken now and the areas where they were spoken traditionally. Its other datasets cover single regions and families in more detail.</p>
+</table></div>
+<p>Glottography is the open source of polygons. Its largest dataset digitises the <em>Atlas of the World’s Languages</em> <span class="citation">(<a href="references.html#ref-asher2007">Asher and Moseley 2007</a>)</span> and comes in two layers, the areas where languages are spoken now and the areas where they were spoken traditionally. Its other datasets cover single regions and families in more detail.</p>
 </div>
-<div id="speaker-areas-as-polygons" class="section level2 hasAnchor" number="5.9">
-<h2><span class="header-section-number">5.9</span> Speaker areas as polygons<a href="maps.html#speaker-areas-as-polygons" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="speaker-areas-as-polygons" class="section level2" number="5.9">
+<h2>
+<span class="header-section-number">5.9</span> Speaker areas as polygons<a class="anchor" aria-label="anchor" href="#speaker-areas-as-polygons"><i class="fas fa-link"></i></a>
+</h2>
 <p>Read the contemporary layer of the atlas. The file is about 90 MB, so this takes a minute the first time.</p>
-<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="maps.html#cb127-1" tabindex="-1"></a>src   <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;https://raw.githubusercontent.com/Glottography/&quot;</span>,</span>
-<span id="cb127-2"><a href="maps.html#cb127-2" tabindex="-1"></a>                <span class="st">&quot;asher2007world/v2.0/cldf/&quot;</span>)</span>
-<span id="cb127-3"><a href="maps.html#cb127-3" tabindex="-1"></a>areas <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">paste0</span>(src, <span class="st">&quot;contemporary/languages.geojson&quot;</span>), <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb127-4"><a href="maps.html#cb127-4" tabindex="-1"></a><span class="fu">names</span>(areas)[<span class="fu">names</span>(areas) <span class="sc">==</span> <span class="st">&quot;cldf.languageReference&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;glottocode&quot;</span></span>
-<span id="cb127-5"><a href="maps.html#cb127-5" tabindex="-1"></a></span>
-<span id="cb127-6"><a href="maps.html#cb127-6" tabindex="-1"></a><span class="fu">sf_use_s2</span>(<span class="cn">FALSE</span>)                  <span class="co"># repair the shapes on the flat map</span></span>
-<span id="cb127-7"><a href="maps.html#cb127-7" tabindex="-1"></a>areas <span class="ot">&lt;-</span> <span class="fu">st_make_valid</span>(areas)</span>
-<span id="cb127-8"><a href="maps.html#cb127-8" tabindex="-1"></a><span class="fu">nrow</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">src</span>   <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/Glottography/"</span>,</span>
+<span>                <span class="st">"asher2007world/v2.0/cldf/"</span><span class="op">)</span></span>
+<span><span class="va">areas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">src</span>, <span class="st">"contemporary/languages.geojson"</span><span class="op">)</span>, quiet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">areas</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">areas</span><span class="op">)</span> <span class="op">==</span> <span class="st">"cldf.languageReference"</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="st">"glottocode"</span></span>
+<span></span>
+<span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/s2.html">sf_use_s2</a></span><span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span>                  <span class="co"># repair the shapes on the flat map</span></span>
+<span><span class="va">areas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/valid.html">st_make_valid</a></span><span class="op">(</span><span class="va">areas</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">areas</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## [1] 4062</code></pre>
 <p>Each row is one language with its area, possibly in several pieces. Match the areas to the sample by Glottocode.</p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="maps.html#cb129-1" tabindex="-1"></a>has  <span class="ot">&lt;-</span> <span class="fu">intersect</span>(d<span class="sc">$</span>glottocode, areas<span class="sc">$</span>glottocode)</span>
-<span id="cb129-2"><a href="maps.html#cb129-2" tabindex="-1"></a>mine <span class="ot">&lt;-</span> areas[<span class="fu">match</span>(has, areas<span class="sc">$</span>glottocode), ]</span>
-<span id="cb129-3"><a href="maps.html#cb129-3" tabindex="-1"></a>here <span class="ot">&lt;-</span> pts[<span class="fu">match</span>(has, pts<span class="sc">$</span>glottocode), ]</span>
-<span id="cb129-4"><a href="maps.html#cb129-4" tabindex="-1"></a></span>
-<span id="cb129-5"><a href="maps.html#cb129-5" tabindex="-1"></a><span class="fu">c</span>(<span class="at">sample =</span> <span class="fu">nrow</span>(d), <span class="at">with_an_area =</span> <span class="fu">length</span>(has))</span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">has</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sets.html">intersect</a></span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">glottocode</span>, <span class="va">areas</span><span class="op">$</span><span class="va">glottocode</span><span class="op">)</span></span>
+<span><span class="va">mine</span> <span class="op">&lt;-</span> <span class="va">areas</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/match.html">match</a></span><span class="op">(</span><span class="va">has</span>, <span class="va">areas</span><span class="op">$</span><span class="va">glottocode</span><span class="op">)</span>, <span class="op">]</span></span>
+<span><span class="va">here</span> <span class="op">&lt;-</span> <span class="va">pts</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/match.html">match</a></span><span class="op">(</span><span class="va">has</span>, <span class="va">pts</span><span class="op">$</span><span class="va">glottocode</span><span class="op">)</span>, <span class="op">]</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>sample <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">d</span><span class="op">)</span>, with_an_area <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">has</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##       sample with_an_area 
 ##          500          310</code></pre>
-<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="maps.html#cb131-1" tabindex="-1"></a><span class="fu">sf_use_s2</span>(<span class="cn">TRUE</span>)</span>
-<span id="cb131-2"><a href="maps.html#cb131-2" tabindex="-1"></a>km2 <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">st_area</span>(mine)) <span class="sc">/</span> <span class="fl">1e6</span></span>
-<span id="cb131-3"><a href="maps.html#cb131-3" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(km2, <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="dv">1</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/s2.html">sf_use_s2</a></span><span class="op">(</span><span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="va">km2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/geos_measures.html">st_area</a></span><span class="op">(</span><span class="va">mine</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="fl">1e6</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">km2</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##      0%     25%     50%     75%    100% 
 ##      25     842    3712   17604 2467678</code></pre>
 <p>Now ask how far each Glottolog point is from the area the atlas gives the same language. A distance of zero means the point is inside.</p>
-<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="maps.html#cb133-1" tabindex="-1"></a>gap <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">st_distance</span>(here, mine, <span class="at">by_element =</span> <span class="cn">TRUE</span>)) <span class="sc">/</span> <span class="dv">1000</span></span>
-<span id="cb133-2"><a href="maps.html#cb133-2" tabindex="-1"></a><span class="fu">c</span>(<span class="at">inside =</span> <span class="fu">sum</span>(gap <span class="sc">==</span> <span class="dv">0</span>), <span class="at">outside =</span> <span class="fu">sum</span>(gap <span class="sc">&gt;</span> <span class="dv">0</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb133"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">gap</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/geos_measures.html">st_distance</a></span><span class="op">(</span><span class="va">here</span>, <span class="va">mine</span>, by_element <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="fl">1000</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>inside <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">gap</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span>, outside <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">gap</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##  inside outside 
 ##     172     138</code></pre>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="maps.html#cb135-1" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(gap[gap <span class="sc">&gt;</span> <span class="dv">0</span>], <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.9</span>, <span class="dv">1</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">gap</span><span class="op">[</span><span class="va">gap</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">]</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">0.9</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##  50%  90% 100% 
 ##   18  142 1063</code></pre>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="maps.html#cb137-1" tabindex="-1"></a><span class="fu">sf_use_s2</span>(<span class="cn">FALSE</span>)</span>
-<span id="cb137-2"><a href="maps.html#cb137-2" tabindex="-1"></a>box  <span class="ot">&lt;-</span> <span class="fu">st_bbox</span>(<span class="fu">c</span>(<span class="at">xmin =</span> <span class="dv">32</span>, <span class="at">ymin =</span> <span class="dv">2</span>, <span class="at">xmax =</span> <span class="dv">49</span>, <span class="at">ymax =</span> <span class="dv">19</span>), <span class="at">crs =</span> <span class="dv">4326</span>)</span>
-<span id="cb137-3"><a href="maps.html#cb137-3" tabindex="-1"></a></span>
-<span id="cb137-4"><a href="maps.html#cb137-4" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb137-5"><a href="maps.html#cb137-5" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">st_crop</span>(world, box), <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
-<span id="cb137-6"><a href="maps.html#cb137-6" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">st_crop</span>(areas, box), <span class="at">fill =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.1</span>,</span>
-<span id="cb137-7"><a href="maps.html#cb137-7" tabindex="-1"></a>          <span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
-<span id="cb137-8"><a href="maps.html#cb137-8" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">st_crop</span>(pts, box), <span class="fu">aes</span>(<span class="at">fill =</span> <span class="fu">factor</span>(ejectives)),</span>
-<span id="cb137-9"><a href="maps.html#cb137-9" tabindex="-1"></a>          <span class="at">shape =</span> <span class="dv">21</span>, <span class="at">size =</span> <span class="fl">2.2</span>, <span class="at">stroke =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
-<span id="cb137-10"><a href="maps.html#cb137-10" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;0&quot;</span> <span class="ot">=</span> <span class="st">&quot;white&quot;</span>, <span class="st">&quot;1&quot;</span> <span class="ot">=</span> <span class="st">&quot;#EB6834&quot;</span>),</span>
-<span id="cb137-11"><a href="maps.html#cb137-11" tabindex="-1"></a>                    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;no ejectives&quot;</span>, <span class="st">&quot;ejectives&quot;</span>), <span class="at">name =</span> <span class="cn">NULL</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:maps-areas-map"></span>
+<div class="sourceCode" id="cb137"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/s2.html">sf_use_s2</a></span><span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">box</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_bbox.html">st_bbox</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>xmin <span class="op">=</span> <span class="fl">32</span>, ymin <span class="op">=</span> <span class="fl">2</span>, xmax <span class="op">=</span> <span class="fl">49</span>, ymax <span class="op">=</span> <span class="fl">19</span><span class="op">)</span>, crs <span class="op">=</span> <span class="fl">4326</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_crop.html">st_crop</a></span><span class="op">(</span><span class="va">world</span>, <span class="va">box</span><span class="op">)</span>, fill <span class="op">=</span> <span class="st">"grey94"</span>, colour <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_crop.html">st_crop</a></span><span class="op">(</span><span class="va">areas</span>, <span class="va">box</span><span class="op">)</span>, fill <span class="op">=</span> <span class="st">"#2A78D6"</span>, alpha <span class="op">=</span> <span class="fl">0.1</span>,</span>
+<span>          colour <span class="op">=</span> <span class="st">"#2A78D6"</span>, linewidth <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_crop.html">st_crop</a></span><span class="op">(</span><span class="va">pts</span>, <span class="va">box</span><span class="op">)</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">ejectives</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>          shape <span class="op">=</span> <span class="fl">21</span>, size <span class="op">=</span> <span class="fl">2.2</span>, stroke <span class="op">=</span> <span class="fl">0.3</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"0"</span> <span class="op">=</span> <span class="st">"white"</span>, <span class="st">"1"</span> <span class="op">=</span> <span class="st">"#EB6834"</span><span class="op">)</span>,</span>
+<span>                    labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"no ejectives"</span>, <span class="st">"ejectives"</span><span class="op">)</span>, name <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:maps-areas-map"></span>
 <span id="fig:maps-areas-map" style="display:block;"></span>
-<img src="figures/05-maps/areas-map-1.png" alt="Speaker areas from the atlas (blue) around the Horn of Africa, with the Glottolog points of the sample languages on top. Filled points have ejectives. The areas differ enormously in size, some land (grey) has no area at all, and each language is still a single point." width="614" />
-<p class="caption">
+<img src="figures/05-maps/areas-map-1.png" alt="Speaker areas from the atlas (blue) around the Horn of Africa, with the Glottolog points of the sample languages on top. Filled points have ejectives. The areas differ enormously in size, some land (grey) has no area at all, and each language is still a single point." width="614"><p class="caption">
 Figure 5.3: Speaker areas from the atlas (blue) around the Horn of Africa, with the Glottolog points of the sample languages on top. Filled points have ejectives. The areas differ enormously in size, some land (grey) has no area at all, and each language is still a single point.
 </p>
 </div>
-<p>With polygons, neighbours can be defined as areas that touch. <code>poly2nb()</code> builds that graph.</p>
-<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="maps.html#cb138-1" tabindex="-1"></a>touching <span class="ot">&lt;-</span> <span class="fu">poly2nb</span>(mine, <span class="at">snap =</span> <span class="fl">0.01</span>)</span>
-<span id="cb138-2"><a href="maps.html#cb138-2" tabindex="-1"></a><span class="fu">c</span>(<span class="at">links_per_language =</span> <span class="fu">round</span>(<span class="fu">mean</span>(<span class="fu">card</span>(touching)), <span class="dv">1</span>),</span>
-<span id="cb138-3"><a href="maps.html#cb138-3" tabindex="-1"></a>  <span class="at">without_neighbours =</span> <span class="fu">sum</span>(<span class="fu">card</span>(touching) <span class="sc">==</span> <span class="dv">0</span>),</span>
-<span id="cb138-4"><a href="maps.html#cb138-4" tabindex="-1"></a>  <span class="at">separate_pieces    =</span> <span class="fu">n.comp.nb</span>(touching)<span class="sc">$</span>nc)</span></code></pre></div>
+<p>With polygons, neighbours can be defined as areas that touch. <code><a href="https://r-spatial.github.io/spdep/reference/poly2nb.html">poly2nb()</a></code> builds that graph.</p>
+<div class="sourceCode" id="cb138"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">touching</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/poly2nb.html">poly2nb</a></span><span class="op">(</span><span class="va">mine</span>, snap <span class="op">=</span> <span class="fl">0.01</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>links_per_language <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/spdep/reference/card.html">card</a></span><span class="op">(</span><span class="va">touching</span><span class="op">)</span><span class="op">)</span>, <span class="fl">1</span><span class="op">)</span>,</span>
+<span>  without_neighbours <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/spdep/reference/card.html">card</a></span><span class="op">(</span><span class="va">touching</span><span class="op">)</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span>,</span>
+<span>  separate_pieces    <span class="op">=</span> <span class="fu"><a href="https://r-spatial.github.io/spdep/reference/compon.html">n.comp.nb</a></span><span class="op">(</span><span class="va">touching</span><span class="op">)</span><span class="op">$</span><span class="va">nc</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## links_per_language without_neighbours    separate_pieces 
 ##                0.9              161.0              194.0</code></pre>
 <p>The graph is nearly empty, and the reason is the sample. Two languages of the sample touch only if no unsampled language lies between them, and 500 languages out of several thousand rarely do. A contiguity graph is meaningful when you have every language of a region. For a sample, link by distance or by nearest neighbours, as above.</p>
 <p>The atlas has a second layer with traditional areas. Compare the centre of each language’s area in the two layers.</p>
-<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="maps.html#cb140-1" tabindex="-1"></a>past <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">paste0</span>(src, <span class="st">&quot;traditional/languages.geojson&quot;</span>), <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb140-2"><a href="maps.html#cb140-2" tabindex="-1"></a><span class="fu">names</span>(past)[<span class="fu">names</span>(past) <span class="sc">==</span> <span class="st">&quot;cldf.languageReference&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;glottocode&quot;</span></span>
-<span id="cb140-3"><a href="maps.html#cb140-3" tabindex="-1"></a>past <span class="ot">&lt;-</span> <span class="fu">st_make_valid</span>(past)</span>
-<span id="cb140-4"><a href="maps.html#cb140-4" tabindex="-1"></a></span>
-<span id="cb140-5"><a href="maps.html#cb140-5" tabindex="-1"></a>both <span class="ot">&lt;-</span> <span class="fu">intersect</span>(mine<span class="sc">$</span>glottocode, past<span class="sc">$</span>glottocode)</span>
-<span id="cb140-6"><a href="maps.html#cb140-6" tabindex="-1"></a>centre_now  <span class="ot">&lt;-</span> <span class="fu">st_centroid</span>(<span class="fu">st_geometry</span>(mine[<span class="fu">match</span>(both, mine<span class="sc">$</span>glottocode), ]))</span>
-<span id="cb140-7"><a href="maps.html#cb140-7" tabindex="-1"></a>centre_past <span class="ot">&lt;-</span> <span class="fu">st_centroid</span>(<span class="fu">st_geometry</span>(past[<span class="fu">match</span>(both, past<span class="sc">$</span>glottocode), ]))</span>
-<span id="cb140-8"><a href="maps.html#cb140-8" tabindex="-1"></a></span>
-<span id="cb140-9"><a href="maps.html#cb140-9" tabindex="-1"></a><span class="fu">sf_use_s2</span>(<span class="cn">TRUE</span>)</span>
-<span id="cb140-10"><a href="maps.html#cb140-10" tabindex="-1"></a>moved <span class="ot">&lt;-</span> <span class="fu">st_distance</span>(centre_now, centre_past, <span class="at">by_element =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb140-11"><a href="maps.html#cb140-11" tabindex="-1"></a>moved <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(moved) <span class="sc">/</span> <span class="dv">1000</span></span>
-<span id="cb140-12"><a href="maps.html#cb140-12" tabindex="-1"></a><span class="fu">c</span>(<span class="at">languages =</span> <span class="fu">length</span>(both), <span class="at">moved_over_100_km =</span> <span class="fu">sum</span>(moved <span class="sc">&gt;</span> <span class="dv">100</span>),</span>
-<span id="cb140-13"><a href="maps.html#cb140-13" tabindex="-1"></a>  <span class="at">furthest_km =</span> <span class="fu">round</span>(<span class="fu">max</span>(moved)))</span></code></pre></div>
+<div class="sourceCode" id="cb140"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">past</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">src</span>, <span class="st">"traditional/languages.geojson"</span><span class="op">)</span>, quiet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">past</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">past</span><span class="op">)</span> <span class="op">==</span> <span class="st">"cldf.languageReference"</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="st">"glottocode"</span></span>
+<span><span class="va">past</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/valid.html">st_make_valid</a></span><span class="op">(</span><span class="va">past</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">both</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sets.html">intersect</a></span><span class="op">(</span><span class="va">mine</span><span class="op">$</span><span class="va">glottocode</span>, <span class="va">past</span><span class="op">$</span><span class="va">glottocode</span><span class="op">)</span></span>
+<span><span class="va">centre_now</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/geos_unary.html">st_centroid</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_geometry.html">st_geometry</a></span><span class="op">(</span><span class="va">mine</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/match.html">match</a></span><span class="op">(</span><span class="va">both</span>, <span class="va">mine</span><span class="op">$</span><span class="va">glottocode</span><span class="op">)</span>, <span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">centre_past</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/geos_unary.html">st_centroid</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_geometry.html">st_geometry</a></span><span class="op">(</span><span class="va">past</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/match.html">match</a></span><span class="op">(</span><span class="va">both</span>, <span class="va">past</span><span class="op">$</span><span class="va">glottocode</span><span class="op">)</span>, <span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/s2.html">sf_use_s2</a></span><span class="op">(</span><span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="va">moved</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/geos_measures.html">st_distance</a></span><span class="op">(</span><span class="va">centre_now</span>, <span class="va">centre_past</span>, by_element <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="va">moved</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">moved</span><span class="op">)</span> <span class="op">/</span> <span class="fl">1000</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>languages <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">both</span><span class="op">)</span>, moved_over_100_km <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">moved</span> <span class="op">&gt;</span> <span class="fl">100</span><span class="op">)</span>,</span>
+<span>  furthest_km <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">moved</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##         languages moved_over_100_km       furthest_km 
 ##               294                26              4185</code></pre>
 </div>
-<div id="what-a-location-leaves-out" class="section level2 hasAnchor" number="5.10">
-<h2><span class="header-section-number">5.10</span> What a location leaves out<a href="maps.html#what-a-location-leaves-out" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-a-location-leaves-out" class="section level2" number="5.10">
+<h2>
+<span class="header-section-number">5.10</span> What a location leaves out<a class="anchor" aria-label="anchor" href="#what-a-location-leaves-out"><i class="fas fa-link"></i></a>
+</h2>
 <p>The numbers above are specific to this sample, and each points at a general problem.</p>
 <p>A point stands for an area. The areas of the sample languages run from 25 to 2,467,678 square kilometres, and a single point represents each of them equally. Where two sources can be compared, they disagree: 138 of the 310 Glottolog points fall outside the area the atlas draws for the same language, half of those by more than 18 km and one by 1,063 km.</p>
 <p>Coverage is incomplete. The atlas has a contemporary area for 310 of the 500 languages. A method that needs polygons would lose the rest, and the languages it loses are not a random subset: extinct and recently displaced languages are the ones without a present-day area.</p>
 <p>A location has a date. 26 of the 294 languages with both layers moved by more than 100 km between their traditional and their present area, and the furthest by 4,185 km. If a feature arose before a language moved, the place where its speakers live now is the wrong place to look for its neighbours or its climate. Glottolog’s points do not say which period they describe.</p>
-<p>A covariate measured at a point inherits all of this. The elevation in this book is the height of the ground at the Glottolog point. A language whose area runs from a coast to a plateau has no single elevation, and the point may sit at either end. With polygons you can take the mean or the range of elevation over the area, for example with <code>terra::extract()</code>, and with points you cannot.</p>
+<p>A covariate measured at a point inherits all of this. The elevation in this book is the height of the ground at the Glottolog point. A language whose area runs from a coast to a plateau has no single elevation, and the point may sit at either end. With polygons you can take the mean or the range of elevation over the area, for example with <code><a href="https://rspatial.github.io/terra/reference/extract.html">terra::extract()</a></code>, and with points you cannot.</p>
 <p>Distance is not contact. Great-circle distance ignores mountain ranges, seas, rivers and trade routes, and every model in the next three chapters treats 300 km across a desert like 300 km along a coast. The barrier models cited in Chapter <a href="space-engines.html#space-engines">8</a> are one response. Another is to compute distances that follow the terrain and to build the spatial matrix from those.</p>
 <p>Drawn areas do not overlap, and languages do. An atlas gives each patch of ground to one language. Multilingual regions, cities, and languages of wider communication laid over local ones are not represented, though they are where much contact happens.</p>
 <p>The map shows where linguists have worked. The sample is dense where description is dense. Two languages can be neighbours in the data because the languages between them have not been described, and a neighbour graph or a distance matrix will not show the difference.</p>
-<p>Areas as categories have borders that somebody chose. Whether a language of the Caucasus belongs to Europe or to Asia changes which languages it is compared with, and the choice is a convention <span class="citation">(<a href="#ref-hammarstrom2014">Hammarström and Donohue 2014</a>)</span>. Results that depend on where such a line is drawn are a known hazard of all analyses of areal units.</p>
+<p>Areas as categories have borders that somebody chose. Whether a language of the Caucasus belongs to Europe or to Asia changes which languages it is compared with, and the choice is a convention <span class="citation">(<a href="references.html#ref-hammarstrom2014">Hammarström and Donohue 2014</a>)</span>. Results that depend on where such a line is drawn are a known hazard of all analyses of areal units.</p>
 <p>None of this argues against spatial models. It argues for saying where your locations come from and what period they describe, and for trying a second representation when one is available.</p>
 </div>
-<div id="what-to-carry-forward-4" class="section level2 hasAnchor" number="5.11">
-<h2><span class="header-section-number">5.11</span> What to carry forward<a href="maps.html#what-to-carry-forward-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-to-carry-forward-4" class="section level2" number="5.11">
+<h2>
+<span class="header-section-number">5.11</span> What to carry forward<a class="anchor" aria-label="anchor" href="#what-to-carry-forward-4"><i class="fas fa-link"></i></a>
+</h2>
 <ul>
-<li>Great-circle distances come from <code>sp::spDists(coords, longlat = TRUE)</code>; projected coordinates from <code>st_transform()</code>; points on the sphere from three lines of trigonometry.</li>
-<li>A neighbour graph depends on the rule you choose. Check <code>n.comp.nb()</code> for pieces and <code>card()</code> for languages left alone, and draw the graph.</li>
+<li>Great-circle distances come from <code>sp::spDists(coords, longlat = TRUE)</code>; projected coordinates from <code><a href="https://r-spatial.github.io/sf/reference/st_transform.html">st_transform()</a></code>; points on the sphere from three lines of trigonometry.</li>
+<li>A neighbour graph depends on the rule you choose. Check <code><a href="https://r-spatial.github.io/spdep/reference/compon.html">n.comp.nb()</a></code> for pieces and <code><a href="https://r-spatial.github.io/spdep/reference/card.html">card()</a></code> for languages left alone, and draw the graph.</li>
 <li>Binary weights go to CAR models; row-standardised weights go to Moran’s I and SAR models.</li>
 <li>A correlogram tells you how far the dependence reaches before you choose a model for it.</li>
 </ul>
 </div>
-<div id="further-reading-5" class="section level2 hasAnchor" number="5.12">
-<h2><span class="header-section-number">5.12</span> Further reading<a href="maps.html#further-reading-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>How earlier studies represented space.</strong> For most of typology’s history, space meant a small number of large areas. <span class="citation">Dryer (<a href="#ref-dryer1989">1989</a>)</span> divides the world into five (later six) continental areas and requires a pattern to hold in each; <span class="citation">Jaeger et al. (<a href="#ref-jaeger2011">2011</a>)</span> make the same idea a random intercept for area beside the one for family. The step from areas to coordinates came later. <span class="citation">Wieling et al. (<a href="#ref-wieling2011">2011</a>)</span> fit a smooth function of longitude and latitude in a GAM for Dutch dialect data. <span class="citation">Guzmán Naranjo and Becker (<a href="#ref-guzman2022">2022</a>)</span> use a Gaussian process over coordinates for world samples, and <span class="citation"><span class="nocase">Skirgård et al.</span> (<a href="#ref-skirgard2023">2023</a>)</span> build a spatial covariance matrix from great-circle distances with a Matérn kernel. <span class="citation">Ranacher et al. (<a href="#ref-ranacher2021">2021</a>)</span> go the other way and infer discrete contact areas from the data.</p>
+<div id="further-reading-5" class="section level2" number="5.12">
+<h2>
+<span class="header-section-number">5.12</span> Further reading<a class="anchor" aria-label="anchor" href="#further-reading-5"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>How earlier studies represented space.</strong> For most of typology’s history, space meant a small number of large areas. <span class="citation">Dryer (<a href="references.html#ref-dryer1989">1989</a>)</span> divides the world into five (later six) continental areas and requires a pattern to hold in each; <span class="citation">Jaeger et al. (<a href="references.html#ref-jaeger2011">2011</a>)</span> make the same idea a random intercept for area beside the one for family. The step from areas to coordinates came later. <span class="citation">Wieling et al. (<a href="references.html#ref-wieling2011">2011</a>)</span> fit a smooth function of longitude and latitude in a GAM for Dutch dialect data. <span class="citation">Guzmán Naranjo and Becker (<a href="references.html#ref-guzman2022">2022</a>)</span> use a Gaussian process over coordinates for world samples, and <span class="citation"><span class="nocase">Skirgård et al.</span> (<a href="references.html#ref-skirgard2023">2023</a>)</span> build a spatial covariance matrix from great-circle distances with a Matérn kernel. <span class="citation">Ranacher et al. (<a href="references.html#ref-ranacher2021">2021</a>)</span> go the other way and infer discrete contact areas from the data.</p>
 <ul>
-<li>Glottography <span class="citation">(<a href="#ref-glottography">Glottography, n.d.</a>)</span> documents its datasets and the atlases behind them; the two layers of the world atlas come from <span class="citation">Asher and Moseley (<a href="#ref-asher2007">2007</a>)</span>.</li>
-<li><span class="citation">Hammarström and Donohue (<a href="#ref-hammarstrom2014">2014</a>)</span> set out how macro-areas should and should not be used in typological comparison.</li>
-<li><span class="citation">Bivand et al. (<a href="#ref-bivand2013">2013</a>)</span> is the standard account of spatial objects, neighbours and weights in R, by the authors of <code>spdep</code>.</li>
-<li><span class="citation"><span class="nocase">Dormann et al.</span> (<a href="#ref-dormann2007">2007</a>)</span> review how to account for spatial autocorrelation in regression, with a comparison of methods that maps closely onto the chapters that follow.</li>
-<li><span class="citation">Banerjee et al. (<a href="#ref-banerjee2014">2014</a>)</span> give the statistical theory behind both views of space, as a continuous surface and as a graph of areas.</li>
+<li>Glottography <span class="citation">(<a href="references.html#ref-glottography">Glottography, n.d.</a>)</span> documents its datasets and the atlases behind them; the two layers of the world atlas come from <span class="citation">Asher and Moseley (<a href="references.html#ref-asher2007">2007</a>)</span>.</li>
+<li>
+<span class="citation">Hammarström and Donohue (<a href="references.html#ref-hammarstrom2014">2014</a>)</span> set out how macro-areas should and should not be used in typological comparison.</li>
+<li>
+<span class="citation">Bivand et al. (<a href="references.html#ref-bivand2013">2013</a>)</span> is the standard account of spatial objects, neighbours and weights in R, by the authors of <code>spdep</code>.</li>
+<li>
+<span class="citation"><span class="nocase">Dormann et al.</span> (<a href="references.html#ref-dormann2007">2007</a>)</span> review how to account for spatial autocorrelation in regression, with a comparison of methods that maps closely onto the chapters that follow.</li>
+<li>
+<span class="citation">Banerjee et al. (<a href="references.html#ref-banerjee2014">2014</a>)</span> give the statistical theory behind both views of space, as a continuous surface and as a graph of areas.</li>
+</ul>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="phylogeny-engines.html"><span class="header-section-number">4</span> Phylogeny in INLA, mgcv and by maximum likelihood</a></div>
+<div class="next"><a href="space-surface.html"><span class="header-section-number">6</span> Space as a smooth surface</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#maps"><span class="header-section-number">5</span> Maps: coordinates, distances and neighbours</a></li>
+<li><a class="nav-link" href="#set-up-3"><span class="header-section-number">5.1</span> Set up</a></li>
+<li><a class="nav-link" href="#languages-as-points"><span class="header-section-number">5.2</span> Languages as points</a></li>
+<li><a class="nav-link" href="#distances"><span class="header-section-number">5.3</span> Distances</a></li>
+<li><a class="nav-link" href="#flat-maps-and-their-cost"><span class="header-section-number">5.4</span> Flat maps and their cost</a></li>
+<li><a class="nav-link" href="#neighbours"><span class="header-section-number">5.5</span> Neighbours</a></li>
+<li><a class="nav-link" href="#from-a-graph-to-weights"><span class="header-section-number">5.6</span> From a graph to weights</a></li>
+<li><a class="nav-link" href="#how-far-does-similarity-reach"><span class="header-section-number">5.7</span> How far does similarity reach?</a></li>
+<li><a class="nav-link" href="#where-locations-come-from"><span class="header-section-number">5.8</span> Where locations come from</a></li>
+<li><a class="nav-link" href="#speaker-areas-as-polygons"><span class="header-section-number">5.9</span> Speaker areas as polygons</a></li>
+<li><a class="nav-link" href="#what-a-location-leaves-out"><span class="header-section-number">5.10</span> What a location leaves out</a></li>
+<li><a class="nav-link" href="#what-to-carry-forward-4"><span class="header-section-number">5.11</span> What to carry forward</a></li>
+<li><a class="nav-link" href="#further-reading-5"><span class="header-section-number">5.12</span> Further reading</a></li>
 </ul>
 
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
 </div>
+    </nav>
 </div>
-<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-asher2007" class="csl-entry">
-Asher, R. E., and Christopher Moseley, eds. 2007. <em>Atlas of the World’s Languages</em>. 2nd ed. Routledge.
-</div>
-<div id="ref-banerjee2014" class="csl-entry">
-Banerjee, Sudipto, Bradley P. Carlin, and Alan E. Gelfand. 2014. <em>Hierarchical Modeling and Analysis for Spatial Data</em>. 2nd ed. Chapman; Hall/CRC.
-</div>
-<div id="ref-autotyp2023" class="csl-entry">
-Bickel, Balthasar, Johanna Nichols, Taras Zakharko, et al. 2023. <em>The <span>AUTOTYP</span> Database (V1.1.1)</em>. Zenodo.
-</div>
-<div id="ref-bivand2013" class="csl-entry">
-Bivand, Roger S., Edzer Pebesma, and Virgilio Gómez-Rubio. 2013. <em>Applied Spatial Data Analysis with <span>R</span></em>. 2nd ed. Springer.
-</div>
-<div id="ref-dormann2007" class="csl-entry">
-<span class="nocase">Dormann, Carsten F., Jana M. McPherson, Miguel B. Araújo, et al.</span> 2007. <span>“Methods to Account for Spatial Autocorrelation in the Analysis of Species Distributional Data: A Review.”</span> <em>Ecography</em> 30 (5): 609–28.
-</div>
-<div id="ref-dryer1989" class="csl-entry">
-Dryer, Matthew S. 1989. <span>“Large Linguistic Areas and Language Sampling.”</span> <em>Studies in Language</em> 13 (2): 257–92.
-</div>
-<div id="ref-ethnologue" class="csl-entry">
-Eberhard, David M., Gary F. Simons, and Charles D. Fennig, eds. 2023. <em>Ethnologue: Languages of the World</em>. 26th ed. SIL International.
-</div>
-<div id="ref-glottography" class="csl-entry">
-Glottography. n.d. <em>Glottography: Speaker-Area Polygons for the World’s Languages</em>. <a href="https://github.com/Glottography" class="uri">Https://github.com/Glottography</a>.
-</div>
-<div id="ref-guzman2022" class="csl-entry">
-Guzmán Naranjo, Matías, and Laura Becker. 2022. <span>“Statistical Bias Control in Typology.”</span> <em>Linguistic Typology</em> 26 (3): 605–70. <a href="https://doi.org/10.1515/lingty-2021-0002">https://doi.org/10.1515/lingty-2021-0002</a>.
-</div>
-<div id="ref-hammarstrom2014" class="csl-entry">
-Hammarström, Harald, and Mark Donohue. 2014. <span>“Some Principles on the Use of Macro-Areas in Typological Comparison.”</span> <em>Language Dynamics and Change</em> 4 (1): 167–87.
-</div>
-<div id="ref-glottolog" class="csl-entry">
-Hammarström, Harald, Robert Forkel, Martin Haspelmath, and Sebastian Bank. n.d. <em>Glottolog</em>. Leipzig: Max Planck Institute for Evolutionary Anthropology. <a href="https://glottolog.org">https://glottolog.org</a>.
-</div>
-<div id="ref-jaeger2011" class="csl-entry">
-Jaeger, T. Florian, Peter Graff, William Croft, and Daniel Pontillo. 2011. <span>“Mixed Effect Models for Genetic and Areal Dependencies in Linguistic Typology.”</span> <em>Linguistic Typology</em> 15 (2): 281–319.
-</div>
-<div id="ref-moroz2017" class="csl-entry">
-Moroz, George. 2017. <em>Lingtypology: Easy Mapping for Linguistic Typology</em>. R package, <a href="https://CRAN.R-project.org/package=lingtypology" class="uri">https://CRAN.R-project.org/package=lingtypology</a>.
-</div>
-<div id="ref-ranacher2021" class="csl-entry">
-Ranacher, Peter, Nico Neureiter, Rik van Gijn, et al. 2021. <span>“Contact-Tracing in Cultural Evolution: A <span>B</span>ayesian Mixture Model to Detect Geographic Areas of Language Contact.”</span> <em>Journal of the Royal Society Interface</em> 18 (181): 20201031.
-</div>
-<div id="ref-skirgard2023" class="csl-entry">
-<span class="nocase">Skirgård, Hedvig, Hannah J. Haynie, Damián E. Blasi, et al.</span> 2023. <span>“Grambank Reveals the Importance of Genealogical Constraints on Linguistic Diversity and Highlights the Impact of Language Loss.”</span> <em>Science Advances</em> 9 (16): eadg6175. <a href="https://doi.org/10.1126/sciadv.adg6175">https://doi.org/10.1126/sciadv.adg6175</a>.
-</div>
-<div id="ref-wieling2011" class="csl-entry">
-Wieling, Martijn, John Nerbonne, and R. Harald Baayen. 2011. <span>“Quantitative Social Dialectology: Explaining Linguistic Variation Geographically and Socially.”</span> <em>PLoS ONE</em> 6 (9): e23613.
-</div>
-</div>
-            </section>
 
-          </div>
-        </div>
-      </div>
-<a href="phylogeny-engines.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="space-surface.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Relatives and Neighbours</strong>: Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only" was written by Muhammad Rehan. </p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-  "sharing": null,
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": null,
-    "text": null
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": null,
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "section",
-    "scroll_highlight": true
-  },
-  "toolbar": {
-    "position": "fixed"
-  }
-});
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -803,7 +534,22 @@ gitbook.start({
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
 </script>
 </body>
-
 </html>
