@@ -1,427 +1,179 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 Does it recover the truth? | Relatives and Neighbours</title>
-  <meta name="description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
-  <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="12 Does it recover the truth? | Relatives and Neighbours" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
-  
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 Does it recover the truth? | Relatives and Neighbours" />
-  
-  <meta name="twitter:description" content="Follow-along R tutorials on modelling phylogenetic and spatial autocorrelation in cross-linguistic data. Every model is fitted with an existing package." />
-  
-
-<meta name="author" content="Muhammad Rehan" />
-
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="sampling.html"/>
-<link rel="next" href="references.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>13 Does it recover the truth? | Relatives and Neighbours</title>
+<meta name="author" content="Muhammad Rehan">
+<meta name="description" content="Real data cannot say which method is right, because nobody knows the true slope. Simulate data on the real tree and the real map where the slope is known, and see which methods find it.  Fitted...">
+<meta name="generator" content="bookdown 0.48 with bs4_book()">
+<meta property="og:title" content="13 Does it recover the truth? | Relatives and Neighbours">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Real data cannot say which method is right, because nobody knows the true slope. Simulate data on the real tree and the real map where the slope is known, and see which methods find it.  Fitted...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="13 Does it recover the truth? | Relatives and Neighbours">
+<meta name="twitter:description" content="Real data cannot say which method is right, because nobody knows the true slope. Simulate data on the real tree and the real map where the slope is known, and see which methods find it.  Fitted...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.11.0/transition.js"></script><script src="libs/bs3compat-0.11.0/tabs.js"></script><script src="libs/bs3compat-0.11.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
 <style type="text/css">
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<link rel="stylesheet" href="style.css">
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./"><b>Relatives and Neighbours</b></a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
-<ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#before-you-start"><i class="fa fa-check"></i>Before you start</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-running-example"><i class="fa fa-check"></i>The running example</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#further-reading"><i class="fa fa-check"></i>Further reading</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#sources"><i class="fa fa-check"></i>Sources</a></li>
-</ul></li>
-<li class="part"><span><b>I The problem</b></span></li>
-<li class="chapter" data-level="1" data-path="the-problem.html"><a href="the-problem.html"><i class="fa fa-check"></i><b>1</b> Seeing the problem</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="the-problem.html"><a href="the-problem.html#the-data-and-the-first-model"><i class="fa fa-check"></i><b>1.1</b> The data and the first model</a></li>
-<li class="chapter" data-level="1.2" data-path="the-problem.html"><a href="the-problem.html#where-the-ejectives-are"><i class="fa fa-check"></i><b>1.2</b> Where the ejectives are</a></li>
-<li class="chapter" data-level="1.3" data-path="the-problem.html"><a href="the-problem.html#how-often-does-a-meaningless-predictor-pass"><i class="fa fa-check"></i><b>1.3</b> How often does a meaningless predictor pass?</a></li>
-<li class="chapter" data-level="1.4" data-path="the-problem.html"><a href="the-problem.html#measuring-spatial-dependence-morans-i"><i class="fa fa-check"></i><b>1.4</b> Measuring spatial dependence: Moran’s I</a></li>
-<li class="chapter" data-level="1.5" data-path="the-problem.html"><a href="the-problem.html#measuring-phylogenetic-signal"><i class="fa fa-check"></i><b>1.5</b> Measuring phylogenetic signal</a></li>
-<li class="chapter" data-level="1.6" data-path="the-problem.html"><a href="the-problem.html#what-to-carry-forward"><i class="fa fa-check"></i><b>1.6</b> What to carry forward</a></li>
-<li class="chapter" data-level="1.7" data-path="the-problem.html"><a href="the-problem.html#further-reading-1"><i class="fa fa-check"></i><b>1.7</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>II Phylogeny</b></span></li>
-<li class="chapter" data-level="2" data-path="trees.html"><a href="trees.html"><i class="fa fa-check"></i><b>2</b> Trees: the raw material</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="trees.html"><a href="trees.html#set-up"><i class="fa fa-check"></i><b>2.1</b> Set up</a></li>
-<li class="chapter" data-level="2.2" data-path="trees.html"><a href="trees.html#what-a-tree-object-holds"><i class="fa fa-check"></i><b>2.2</b> What a tree object holds</a></li>
-<li class="chapter" data-level="2.3" data-path="trees.html"><a href="trees.html#does-the-tree-match-the-data"><i class="fa fa-check"></i><b>2.3</b> Does the tree match the data?</a></li>
-<li class="chapter" data-level="2.4" data-path="trees.html"><a href="trees.html#look-at-it"><i class="fa fa-check"></i><b>2.4</b> Look at it</a></li>
-<li class="chapter" data-level="2.5" data-path="trees.html"><a href="trees.html#what-the-branch-lengths-mean"><i class="fa fa-check"></i><b>2.5</b> What the branch lengths mean</a></li>
-<li class="chapter" data-level="2.6" data-path="trees.html"><a href="trees.html#build-a-tree-from-a-table"><i class="fa fa-check"></i><b>2.6</b> Build a tree from a table</a></li>
-<li class="chapter" data-level="2.7" data-path="trees.html"><a href="trees.html#where-trees-come-from"><i class="fa fa-check"></i><b>2.7</b> Where trees come from</a></li>
-<li class="chapter" data-level="2.8" data-path="trees.html"><a href="trees.html#a-dated-tree-from-phlorest"><i class="fa fa-check"></i><b>2.8</b> A dated tree from Phlorest</a></li>
-<li class="chapter" data-level="2.9" data-path="trees.html"><a href="trees.html#how-tree-like-is-a-feature"><i class="fa fa-check"></i><b>2.9</b> How tree-like is a feature?</a></li>
-<li class="chapter" data-level="2.10" data-path="trees.html"><a href="trees.html#what-to-carry-forward-1"><i class="fa fa-check"></i><b>2.10</b> What to carry forward</a></li>
-<li class="chapter" data-level="2.11" data-path="trees.html"><a href="trees.html#further-reading-2"><i class="fa fa-check"></i><b>2.11</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="phylogeny.html"><a href="phylogeny.html"><i class="fa fa-check"></i><b>3</b> Phylogeny as a covariance matrix</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="phylogeny.html"><a href="phylogeny.html#set-up-1"><i class="fa fa-check"></i><b>3.1</b> Set up</a></li>
-<li class="chapter" data-level="3.2" data-path="phylogeny.html"><a href="phylogeny.html#from-a-tree-to-a-matrix"><i class="fa fa-check"></i><b>3.2</b> From a tree to a matrix</a></li>
-<li class="chapter" data-level="3.3" data-path="phylogeny.html"><a href="phylogeny.html#first-rung-family-as-a-random-intercept"><i class="fa fa-check"></i><b>3.3</b> First rung: family as a random intercept</a></li>
-<li class="chapter" data-level="3.4" data-path="phylogeny.html"><a href="phylogeny.html#the-phylogenetic-model"><i class="fa fa-check"></i><b>3.4</b> The phylogenetic model</a></li>
-<li class="chapter" data-level="3.5" data-path="phylogeny.html"><a href="phylogeny.html#reading-the-result"><i class="fa fa-check"></i><b>3.5</b> Reading the result</a>
-<ul>
-<li class="chapter" data-level="3.5.1" data-path="phylogeny.html"><a href="phylogeny.html#the-slope"><i class="fa fa-check"></i><b>3.5.1</b> The slope</a></li>
-<li class="chapter" data-level="3.5.2" data-path="phylogeny.html"><a href="phylogeny.html#the-regression-line"><i class="fa fa-check"></i><b>3.5.2</b> The regression line</a></li>
-<li class="chapter" data-level="3.5.3" data-path="phylogeny.html"><a href="phylogeny.html#phylogenetic-signal"><i class="fa fa-check"></i><b>3.5.3</b> Phylogenetic signal</a></li>
-<li class="chapter" data-level="3.5.4" data-path="phylogeny.html"><a href="phylogeny.html#where-the-model-put-the-lineage-effects"><i class="fa fa-check"></i><b>3.5.4</b> Where the model put the lineage effects</a></li>
-</ul></li>
-<li class="chapter" data-level="3.6" data-path="phylogeny.html"><a href="phylogeny.html#what-to-carry-forward-2"><i class="fa fa-check"></i><b>3.6</b> What to carry forward</a></li>
-<li class="chapter" data-level="3.7" data-path="phylogeny.html"><a href="phylogeny.html#further-reading-3"><i class="fa fa-check"></i><b>3.7</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html"><i class="fa fa-check"></i><b>4</b> Phylogeny in INLA, mgcv and by maximum likelihood</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#set-up-2"><i class="fa fa-check"></i><b>4.1</b> Set up</a></li>
-<li class="chapter" data-level="4.2" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#inla"><i class="fa fa-check"></i><b>4.2</b> INLA</a></li>
-<li class="chapter" data-level="4.3" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#mgcv"><i class="fa fa-check"></i><b>4.3</b> mgcv</a></li>
-<li class="chapter" data-level="4.4" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#maximum-likelihood-pgls"><i class="fa fa-check"></i><b>4.4</b> Maximum likelihood: PGLS</a></li>
-<li class="chapter" data-level="4.5" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#maximum-likelihood-phylogenetic-logistic-regression"><i class="fa fa-check"></i><b>4.5</b> Maximum likelihood: phylogenetic logistic regression</a></li>
-<li class="chapter" data-level="4.6" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#every-engine-one-figure"><i class="fa fa-check"></i><b>4.6</b> Every engine, one figure</a></li>
-<li class="chapter" data-level="4.7" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#what-to-carry-forward-3"><i class="fa fa-check"></i><b>4.7</b> What to carry forward</a></li>
-<li class="chapter" data-level="4.8" data-path="phylogeny-engines.html"><a href="phylogeny-engines.html#further-reading-4"><i class="fa fa-check"></i><b>4.8</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>III Space</b></span></li>
-<li class="chapter" data-level="5" data-path="maps.html"><a href="maps.html"><i class="fa fa-check"></i><b>5</b> Maps: coordinates, distances and neighbours</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="maps.html"><a href="maps.html#set-up-3"><i class="fa fa-check"></i><b>5.1</b> Set up</a></li>
-<li class="chapter" data-level="5.2" data-path="maps.html"><a href="maps.html#languages-as-points"><i class="fa fa-check"></i><b>5.2</b> Languages as points</a></li>
-<li class="chapter" data-level="5.3" data-path="maps.html"><a href="maps.html#distances"><i class="fa fa-check"></i><b>5.3</b> Distances</a></li>
-<li class="chapter" data-level="5.4" data-path="maps.html"><a href="maps.html#flat-maps-and-their-cost"><i class="fa fa-check"></i><b>5.4</b> Flat maps and their cost</a></li>
-<li class="chapter" data-level="5.5" data-path="maps.html"><a href="maps.html#neighbours"><i class="fa fa-check"></i><b>5.5</b> Neighbours</a></li>
-<li class="chapter" data-level="5.6" data-path="maps.html"><a href="maps.html#from-a-graph-to-weights"><i class="fa fa-check"></i><b>5.6</b> From a graph to weights</a></li>
-<li class="chapter" data-level="5.7" data-path="maps.html"><a href="maps.html#how-far-does-similarity-reach"><i class="fa fa-check"></i><b>5.7</b> How far does similarity reach?</a></li>
-<li class="chapter" data-level="5.8" data-path="maps.html"><a href="maps.html#where-locations-come-from"><i class="fa fa-check"></i><b>5.8</b> Where locations come from</a></li>
-<li class="chapter" data-level="5.9" data-path="maps.html"><a href="maps.html#speaker-areas-as-polygons"><i class="fa fa-check"></i><b>5.9</b> Speaker areas as polygons</a></li>
-<li class="chapter" data-level="5.10" data-path="maps.html"><a href="maps.html#what-a-location-leaves-out"><i class="fa fa-check"></i><b>5.10</b> What a location leaves out</a></li>
-<li class="chapter" data-level="5.11" data-path="maps.html"><a href="maps.html#what-to-carry-forward-4"><i class="fa fa-check"></i><b>5.11</b> What to carry forward</a></li>
-<li class="chapter" data-level="5.12" data-path="maps.html"><a href="maps.html#further-reading-5"><i class="fa fa-check"></i><b>5.12</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="space-surface.html"><a href="space-surface.html"><i class="fa fa-check"></i><b>6</b> Space as a smooth surface</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="space-surface.html"><a href="space-surface.html#set-up-4"><i class="fa fa-check"></i><b>6.1</b> Set up</a></li>
-<li class="chapter" data-level="6.2" data-path="space-surface.html"><a href="space-surface.html#the-idea"><i class="fa fa-check"></i><b>6.2</b> The idea</a></li>
-<li class="chapter" data-level="6.3" data-path="space-surface.html"><a href="space-surface.html#coordinates-the-model-can-measure-with"><i class="fa fa-check"></i><b>6.3</b> Coordinates the model can measure with</a></li>
-<li class="chapter" data-level="6.4" data-path="space-surface.html"><a href="space-surface.html#fitting-it"><i class="fa fa-check"></i><b>6.4</b> Fitting it</a></li>
-<li class="chapter" data-level="6.5" data-path="space-surface.html"><a href="space-surface.html#was-k-large-enough"><i class="fa fa-check"></i><b>6.5</b> Was <code>k</code> large enough?</a></li>
-<li class="chapter" data-level="6.6" data-path="space-surface.html"><a href="space-surface.html#what-the-surface-looks-like"><i class="fa fa-check"></i><b>6.6</b> What the surface looks like</a></li>
-<li class="chapter" data-level="6.7" data-path="space-surface.html"><a href="space-surface.html#did-it-work"><i class="fa fa-check"></i><b>6.7</b> Did it work?</a></li>
-<li class="chapter" data-level="6.8" data-path="space-surface.html"><a href="space-surface.html#the-regression-line-1"><i class="fa fa-check"></i><b>6.8</b> The regression line</a></li>
-<li class="chapter" data-level="6.9" data-path="space-surface.html"><a href="space-surface.html#variations"><i class="fa fa-check"></i><b>6.9</b> Variations</a></li>
-<li class="chapter" data-level="6.10" data-path="space-surface.html"><a href="space-surface.html#what-to-carry-forward-5"><i class="fa fa-check"></i><b>6.10</b> What to carry forward</a></li>
-<li class="chapter" data-level="6.11" data-path="space-surface.html"><a href="space-surface.html#further-reading-6"><i class="fa fa-check"></i><b>6.11</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="space-neighbours.html"><a href="space-neighbours.html"><i class="fa fa-check"></i><b>7</b> Space as a network of neighbours</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="space-neighbours.html"><a href="space-neighbours.html#set-up-5"><i class="fa fa-check"></i><b>7.1</b> Set up</a></li>
-<li class="chapter" data-level="7.2" data-path="space-neighbours.html"><a href="space-neighbours.html#the-idea-1"><i class="fa fa-check"></i><b>7.2</b> The idea</a></li>
-<li class="chapter" data-level="7.3" data-path="space-neighbours.html"><a href="space-neighbours.html#building-the-graph"><i class="fa fa-check"></i><b>7.3</b> Building the graph</a></li>
-<li class="chapter" data-level="7.4" data-path="space-neighbours.html"><a href="space-neighbours.html#icar"><i class="fa fa-check"></i><b>7.4</b> ICAR</a></li>
-<li class="chapter" data-level="7.5" data-path="space-neighbours.html"><a href="space-neighbours.html#bym2"><i class="fa fa-check"></i><b>7.5</b> BYM2</a></li>
-<li class="chapter" data-level="7.6" data-path="space-neighbours.html"><a href="space-neighbours.html#the-regression-line-2"><i class="fa fa-check"></i><b>7.6</b> The regression line</a></li>
-<li class="chapter" data-level="7.7" data-path="space-neighbours.html"><a href="space-neighbours.html#how-much-does-the-graph-matter"><i class="fa fa-check"></i><b>7.7</b> How much does the graph matter?</a></li>
-<li class="chapter" data-level="7.8" data-path="space-neighbours.html"><a href="space-neighbours.html#other-models-in-the-same-family"><i class="fa fa-check"></i><b>7.8</b> Other models in the same family</a></li>
-<li class="chapter" data-level="7.9" data-path="space-neighbours.html"><a href="space-neighbours.html#what-to-carry-forward-6"><i class="fa fa-check"></i><b>7.9</b> What to carry forward</a></li>
-<li class="chapter" data-level="7.10" data-path="space-neighbours.html"><a href="space-neighbours.html#further-reading-7"><i class="fa fa-check"></i><b>7.10</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="space-engines.html"><a href="space-engines.html"><i class="fa fa-check"></i><b>8</b> Space in INLA, mgcv and by maximum likelihood</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="space-engines.html"><a href="space-engines.html#set-up-6"><i class="fa fa-check"></i><b>8.1</b> Set up</a></li>
-<li class="chapter" data-level="8.2" data-path="space-engines.html"><a href="space-engines.html#neighbours-in-inla-bym2"><i class="fa fa-check"></i><b>8.2</b> Neighbours in INLA: BYM2</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="space-engines.html"><a href="space-engines.html#check-the-approximation"><i class="fa fa-check"></i><b>8.2.1</b> Check the approximation</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="space-engines.html"><a href="space-engines.html#a-surface-on-the-sphere-spde"><i class="fa fa-check"></i><b>8.3</b> A surface on the sphere: SPDE</a></li>
-<li class="chapter" data-level="8.4" data-path="space-engines.html"><a href="space-engines.html#a-surface-on-the-sphere-mgcv"><i class="fa fa-check"></i><b>8.4</b> A surface on the sphere: mgcv</a></li>
-<li class="chapter" data-level="8.5" data-path="space-engines.html"><a href="space-engines.html#maximum-likelihood-simultaneous-autoregressive-models"><i class="fa fa-check"></i><b>8.5</b> Maximum likelihood: simultaneous autoregressive models</a></li>
-<li class="chapter" data-level="8.6" data-path="space-engines.html"><a href="space-engines.html#every-engine-one-figure-1"><i class="fa fa-check"></i><b>8.6</b> Every engine, one figure</a></li>
-<li class="chapter" data-level="8.7" data-path="space-engines.html"><a href="space-engines.html#what-to-carry-forward-7"><i class="fa fa-check"></i><b>8.7</b> What to carry forward</a></li>
-<li class="chapter" data-level="8.8" data-path="space-engines.html"><a href="space-engines.html#further-reading-8"><i class="fa fa-check"></i><b>8.8</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>IV Space and phylogeny</b></span></li>
-<li class="chapter" data-level="9" data-path="joint.html"><a href="joint.html"><i class="fa fa-check"></i><b>9</b> Both at once</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="joint.html"><a href="joint.html#set-up-7"><i class="fa fa-check"></i><b>9.1</b> Set up</a></li>
-<li class="chapter" data-level="9.2" data-path="joint.html"><a href="joint.html#why-one-model-and-not-two"><i class="fa fa-check"></i><b>9.2</b> Why one model and not two</a></li>
-<li class="chapter" data-level="9.3" data-path="joint.html"><a href="joint.html#the-joint-model"><i class="fa fa-check"></i><b>9.3</b> The joint model</a></li>
-<li class="chapter" data-level="9.4" data-path="joint.html"><a href="joint.html#bring-back-the-earlier-models"><i class="fa fa-check"></i><b>9.4</b> Bring back the earlier models</a></li>
-<li class="chapter" data-level="9.5" data-path="joint.html"><a href="joint.html#who-gets-the-credit"><i class="fa fa-check"></i><b>9.5</b> Who gets the credit</a></li>
-<li class="chapter" data-level="9.6" data-path="joint.html"><a href="joint.html#every-slope-so-far"><i class="fa fa-check"></i><b>9.6</b> Every slope so far</a></li>
-<li class="chapter" data-level="9.7" data-path="joint.html"><a href="joint.html#every-regression-line-so-far"><i class="fa fa-check"></i><b>9.7</b> Every regression line so far</a></li>
-<li class="chapter" data-level="9.8" data-path="joint.html"><a href="joint.html#which-model-to-report"><i class="fa fa-check"></i><b>9.8</b> Which model to report</a></li>
-<li class="chapter" data-level="9.9" data-path="joint.html"><a href="joint.html#what-to-carry-forward-8"><i class="fa fa-check"></i><b>9.9</b> What to carry forward</a></li>
-<li class="chapter" data-level="9.10" data-path="joint.html"><a href="joint.html#further-reading-9"><i class="fa fa-check"></i><b>9.10</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="joint-engines.html"><a href="joint-engines.html"><i class="fa fa-check"></i><b>10</b> Both at once in INLA and mgcv</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="joint-engines.html"><a href="joint-engines.html#set-up-8"><i class="fa fa-check"></i><b>10.1</b> Set up</a></li>
-<li class="chapter" data-level="10.2" data-path="joint-engines.html"><a href="joint-engines.html#the-joint-model-in-inla"><i class="fa fa-check"></i><b>10.2</b> The joint model in INLA</a></li>
-<li class="chapter" data-level="10.3" data-path="joint-engines.html"><a href="joint-engines.html#the-joint-model-in-mgcv"><i class="fa fa-check"></i><b>10.3</b> The joint model in mgcv</a></li>
-<li class="chapter" data-level="10.4" data-path="joint-engines.html"><a href="joint-engines.html#the-joint-model-three-engines"><i class="fa fa-check"></i><b>10.4</b> The joint model, three engines</a></li>
-<li class="chapter" data-level="10.5" data-path="joint-engines.html"><a href="joint-engines.html#the-whole-book-in-one-figure"><i class="fa fa-check"></i><b>10.5</b> The whole book in one figure</a></li>
-<li class="chapter" data-level="10.6" data-path="joint-engines.html"><a href="joint-engines.html#what-to-carry-forward-9"><i class="fa fa-check"></i><b>10.6</b> What to carry forward</a></li>
-<li class="chapter" data-level="10.7" data-path="joint-engines.html"><a href="joint-engines.html#further-reading-10"><i class="fa fa-check"></i><b>10.7</b> Further reading</a></li>
-</ul></li>
-<li class="part"><span><b>V Sampling and simulation</b></span></li>
-<li class="chapter" data-level="11" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>11</b> Sampling instead of modelling</a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="sampling.html"><a href="sampling.html#set-up-9"><i class="fa fa-check"></i><b>11.1</b> Set up</a></li>
-<li class="chapter" data-level="11.2" data-path="sampling.html"><a href="sampling.html#the-sampling-tradition"><i class="fa fa-check"></i><b>11.2</b> The sampling tradition</a></li>
-<li class="chapter" data-level="11.3" data-path="sampling.html"><a href="sampling.html#three-designs"><i class="fa fa-check"></i><b>11.3</b> Three designs</a></li>
-<li class="chapter" data-level="11.4" data-path="sampling.html"><a href="sampling.html#one-sample-one-answer"><i class="fa fa-check"></i><b>11.4</b> One sample, one answer</a></li>
-<li class="chapter" data-level="11.5" data-path="sampling.html"><a href="sampling.html#a-thousand-samples"><i class="fa fa-check"></i><b>11.5</b> A thousand samples</a></li>
-<li class="chapter" data-level="11.6" data-path="sampling.html"><a href="sampling.html#the-regression-lines"><i class="fa fa-check"></i><b>11.6</b> The regression lines</a></li>
-<li class="chapter" data-level="11.7" data-path="sampling.html"><a href="sampling.html#does-sampling-remove-the-dependence"><i class="fa fa-check"></i><b>11.7</b> Does sampling remove the dependence?</a></li>
-<li class="chapter" data-level="11.8" data-path="sampling.html"><a href="sampling.html#what-to-carry-forward-10"><i class="fa fa-check"></i><b>11.8</b> What to carry forward</a></li>
-<li class="chapter" data-level="11.9" data-path="sampling.html"><a href="sampling.html#further-reading-11"><i class="fa fa-check"></i><b>11.9</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="simulation.html"><a href="simulation.html"><i class="fa fa-check"></i><b>12</b> Does it recover the truth?</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="simulation.html"><a href="simulation.html#why-simulate"><i class="fa fa-check"></i><b>12.1</b> Why simulate</a></li>
-<li class="chapter" data-level="12.2" data-path="simulation.html"><a href="simulation.html#set-up-10"><i class="fa fa-check"></i><b>12.2</b> Set up</a></li>
-<li class="chapter" data-level="12.3" data-path="simulation.html"><a href="simulation.html#a-world-with-a-known-slope"><i class="fa fa-check"></i><b>12.3</b> A world with a known slope</a></li>
-<li class="chapter" data-level="12.4" data-path="simulation.html"><a href="simulation.html#seven-methods"><i class="fa fa-check"></i><b>12.4</b> Seven methods</a></li>
-<li class="chapter" data-level="12.5" data-path="simulation.html"><a href="simulation.html#one-world-looked-at-closely"><i class="fa fa-check"></i><b>12.5</b> One world, looked at closely</a></li>
-<li class="chapter" data-level="12.6" data-path="simulation.html"><a href="simulation.html#three-hundred-worlds"><i class="fa fa-check"></i><b>12.6</b> Three hundred worlds</a></li>
-<li class="chapter" data-level="12.7" data-path="simulation.html"><a href="simulation.html#no-effect-who-cries-wolf"><i class="fa fa-check"></i><b>12.7</b> No effect: who cries wolf?</a></li>
-<li class="chapter" data-level="12.8" data-path="simulation.html"><a href="simulation.html#a-true-effect-who-finds-it-and-how-precisely"><i class="fa fa-check"></i><b>12.8</b> A true effect: who finds it, and how precisely?</a></li>
-<li class="chapter" data-level="12.9" data-path="simulation.html"><a href="simulation.html#shared-history-the-limit-of-every-method"><i class="fa fa-check"></i><b>12.9</b> Shared history: the limit of every method</a></li>
-<li class="chapter" data-level="12.10" data-path="simulation.html"><a href="simulation.html#make-it-your-own"><i class="fa fa-check"></i><b>12.10</b> Make it your own</a></li>
-<li class="chapter" data-level="12.11" data-path="simulation.html"><a href="simulation.html#what-to-carry-forward-11"><i class="fa fa-check"></i><b>12.11</b> What to carry forward</a></li>
-<li class="chapter" data-level="12.12" data-path="simulation.html"><a href="simulation.html#further-reading-12"><i class="fa fa-check"></i><b>12.12</b> Further reading</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://rehan-muh.github.io/">Muhammad Rehan</a></li>
-
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only">Relatives and Neighbours</a>:
+        <small class="text-muted">Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Relatives and Neighbours</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">The problem</li>
+<li><a class="" href="the-problem.html"><span class="header-section-number">1</span> Seeing the problem</a></li>
+<li class="book-part">Phylogeny</li>
+<li><a class="" href="trees.html"><span class="header-section-number">2</span> Trees: the raw material</a></li>
+<li><a class="" href="phylogeny.html"><span class="header-section-number">3</span> Phylogeny as a covariance matrix</a></li>
+<li><a class="" href="phylogeny-engines.html"><span class="header-section-number">4</span> Phylogeny in INLA, mgcv and by maximum likelihood</a></li>
+<li class="book-part">Space</li>
+<li><a class="" href="maps.html"><span class="header-section-number">5</span> Maps: coordinates, distances and neighbours</a></li>
+<li><a class="" href="space-surface.html"><span class="header-section-number">6</span> Space as a smooth surface</a></li>
+<li><a class="" href="space-neighbours.html"><span class="header-section-number">7</span> Space as a network of neighbours</a></li>
+<li><a class="" href="space-engines.html"><span class="header-section-number">8</span> Space in INLA, mgcv and by maximum likelihood</a></li>
+<li class="book-part">Space and phylogeny</li>
+<li><a class="" href="joint.html"><span class="header-section-number">9</span> Both at once</a></li>
+<li><a class="" href="joint-engines.html"><span class="header-section-number">10</span> Both at once in INLA and mgcv</a></li>
+<li><a class="" href="outcomes.html"><span class="header-section-number">11</span> Other kinds of outcome</a></li>
+<li class="book-part">Sampling and simulation</li>
+<li><a class="" href="sampling.html"><span class="header-section-number">12</span> Sampling instead of modelling</a></li>
+<li><a class="active" href="simulation.html"><span class="header-section-number">13</span> Does it recover the truth?</a></li>
+<li class="book-part">Looking ahead</li>
+<li><a class="" href="where-next.html"><span class="header-section-number">14</span> Where next</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="simulation" class="section level1 hasAnchor" number="12">
-<h1><span class="header-section-number">12</span> Does it recover the truth?<a href="simulation.html#simulation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="simulation" class="section level1" number="13">
+<h1>
+<span class="header-section-number">13</span> Does it recover the truth?<a class="anchor" aria-label="anchor" href="#simulation"><i class="fas fa-link"></i></a>
+</h1>
 <p class="lede">
 Real data cannot say which method is right, because nobody knows the true slope. Simulate data on the real tree and the real map where the slope is known, and see which methods find it.
 </p>
 <p class="chapter-meta">
-<span><b>Fitted with</b> nlme, phylolm, mgcv</span><span><b>Model fitting</b> about 25 minutes for the full simulation</span><span><b>Packages</b> <code>ape</code> <code>nlme</code> <code>phylolm</code> <code>mgcv</code> <code>ggplot2</code></span><span><a href="scripts/12-simulation.R">Download the R script</a></span>
+<span><b>Fitted with</b> nlme, phylolm, mgcv</span><span><b>Model fitting</b> about 25 minutes for the full simulation</span><span><b>Packages</b> <code>ape</code> <code>nlme</code> <code>phylolm</code> <code>mgcv</code> <code>ggplot2</code></span><span><a href="scripts/13-simulation.R">Download the R script</a></span>
 </p>
-<div id="why-simulate" class="section level2 hasAnchor" number="12.1">
-<h2><span class="header-section-number">12.1</span> Why simulate<a href="simulation.html#why-simulate" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="why-simulate" class="section level2" number="13.1">
+<h2>
+<span class="header-section-number">13.1</span> Why simulate<a class="anchor" aria-label="anchor" href="#why-simulate"><i class="fas fa-link"></i></a>
+</h2>
 <p>Every chapter so far fitted a different model to the same 500 languages and got a somewhat different slope. The data cannot say which one is right, because the true effect of elevation on ejectives is the thing nobody knows.</p>
-<p>Simulation turns the question round <span class="citation">(<a href="#ref-morris2019sim">T. P. Morris et al. 2019</a>)</span>. Build an artificial world where you choose the slope, generate data from it, and hand the data to each method without telling it the answer. Do that a few hundred times and you can measure what no real data set can show: how often a method finds an effect that is not there, how far its estimates fall from the truth, and whether its intervals contain the truth as often as they claim.</p>
+<p>Simulation turns the question round <span class="citation">(<a href="references.html#ref-morris2019sim">T. P. Morris et al. 2019</a>)</span>. Build an artificial world where you choose the slope, generate data from it, and hand the data to each method without telling it the answer. Do that a few hundred times and you can measure what no real data set can show: how often a method finds an effect that is not there, how far its estimates fall from the truth, and whether its intervals contain the truth as often as they claim.</p>
 </div>
-<div id="set-up-10" class="section level2 hasAnchor" number="12.2">
-<h2><span class="header-section-number">12.2</span> Set up<a href="simulation.html#set-up-10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="set-up-11" class="section level2" number="13.2">
+<h2>
+<span class="header-section-number">13.2</span> Set up<a class="anchor" aria-label="anchor" href="#set-up-11"><i class="fas fa-link"></i></a>
+</h2>
 <p>The simulated worlds use the real tree and the real coordinates of the 500 languages, so they have the same lopsided families and the same crowded and empty regions as the real sample. Only the predictor and the outcome are invented.</p>
-<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="simulation.html#cb251-1" tabindex="-1"></a><span class="fu">library</span>(ape)</span>
-<span id="cb251-2"><a href="simulation.html#cb251-2" tabindex="-1"></a><span class="fu">library</span>(nlme)</span>
-<span id="cb251-3"><a href="simulation.html#cb251-3" tabindex="-1"></a><span class="fu">library</span>(phylolm)</span>
-<span id="cb251-4"><a href="simulation.html#cb251-4" tabindex="-1"></a><span class="fu">library</span>(mgcv)</span>
-<span id="cb251-5"><a href="simulation.html#cb251-5" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb251-6"><a href="simulation.html#cb251-6" tabindex="-1"></a></span>
-<span id="cb251-7"><a href="simulation.html#cb251-7" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
-<span id="cb251-8"><a href="simulation.html#cb251-8" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
-<span id="cb251-9"><a href="simulation.html#cb251-9" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">read.tree</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;glottolog_tree.nwk&quot;</span>))</span>
-<span id="cb251-10"><a href="simulation.html#cb251-10" tabindex="-1"></a>d<span class="sc">$</span>family    <span class="ot">&lt;-</span> <span class="fu">factor</span>(d<span class="sc">$</span>family)</span>
-<span id="cb251-11"><a href="simulation.html#cb251-11" tabindex="-1"></a><span class="fu">rownames</span>(d) <span class="ot">&lt;-</span> d<span class="sc">$</span>glottocode</span>
-<span id="cb251-12"><a href="simulation.html#cb251-12" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(d)</span>
-<span id="cb251-13"><a href="simulation.html#cb251-13" tabindex="-1"></a></span>
-<span id="cb251-14"><a href="simulation.html#cb251-14" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">&quot;fits&quot;</span>, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb273"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/emmanuelparadis/ape">ape</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://svn.r-project.org/R-packages/trunk/nlme/">nlme</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lamho86/phylolm">phylolm</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">mgcv</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">base</span> <span class="op">&lt;-</span> <span class="st">"https://rehan-muh.github.io/tutorials/data/"</span></span>
+<span><span class="va">d</span>    <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">base</span>, <span class="st">"languages.csv"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">tree</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/read.tree.html">read.tree</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">base</span>, <span class="st">"glottolog_tree.nwk"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">d</span><span class="op">$</span><span class="va">family</span>    <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">family</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">d</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">d</span><span class="op">$</span><span class="va">glottocode</span></span>
+<span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">d</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span><span class="op">(</span><span class="st">"fits"</span>, showWarnings <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>Two matrices describe how the languages depend on each other: the phylogenetic correlation matrix of Chapter <a href="phylogeny.html#phylogeny">3</a>, and a spatial correlation matrix in which correlation falls off exponentially with great-circle distance, reaching about a third at 1,000 km.</p>
-<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="simulation.html#cb252-1" tabindex="-1"></a>A  <span class="ot">&lt;-</span> <span class="fu">vcv</span>(tree, <span class="at">corr =</span> <span class="cn">TRUE</span>)[d<span class="sc">$</span>glottocode, d<span class="sc">$</span>glottocode]</span>
-<span id="cb252-2"><a href="simulation.html#cb252-2" tabindex="-1"></a>km <span class="ot">&lt;-</span> sp<span class="sc">::</span><span class="fu">spDists</span>(<span class="fu">as.matrix</span>(d[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)]), <span class="at">longlat =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb252-3"><a href="simulation.html#cb252-3" tabindex="-1"></a>S  <span class="ot">&lt;-</span> <span class="fu">exp</span>(<span class="sc">-</span>km <span class="sc">/</span> <span class="dv">1000</span>)</span>
-<span id="cb252-4"><a href="simulation.html#cb252-4" tabindex="-1"></a></span>
-<span id="cb252-5"><a href="simulation.html#cb252-5" tabindex="-1"></a><span class="co"># multiplying independent noise by these factors gives noise with the</span></span>
-<span id="cb252-6"><a href="simulation.html#cb252-6" tabindex="-1"></a><span class="co"># correlation structure of the tree (LA) or of the map (LS)</span></span>
-<span id="cb252-7"><a href="simulation.html#cb252-7" tabindex="-1"></a>LA <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">chol</span>(A))</span>
-<span id="cb252-8"><a href="simulation.html#cb252-8" tabindex="-1"></a>LS <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">chol</span>(S <span class="sc">+</span> <span class="fu">diag</span>(<span class="fl">1e-8</span>, n)))</span></code></pre></div>
+<div class="sourceCode" id="cb274"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">A</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/vcv.phylo.html">vcv</a></span><span class="op">(</span><span class="va">tree</span>, corr <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">[</span><span class="va">d</span><span class="op">$</span><span class="va">glottocode</span>, <span class="va">d</span><span class="op">$</span><span class="va">glottocode</span><span class="op">]</span></span>
+<span><span class="va">km</span> <span class="op">&lt;-</span> <span class="fu">sp</span><span class="fu">::</span><span class="fu"><a href="https://edzer.github.io/sp/reference/spDistsN1.html">spDists</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="va">d</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"lon"</span>, <span class="st">"lat"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span>, longlat <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="va">S</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">exp</a></span><span class="op">(</span><span class="op">-</span><span class="va">km</span> <span class="op">/</span> <span class="fl">1000</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># multiplying independent noise by these factors gives noise with the</span></span>
+<span><span class="co"># correlation structure of the tree (LA) or of the map (LS)</span></span>
+<span><span class="va">LA</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/Matrix/man/chol-methods.html">chol</a></span><span class="op">(</span><span class="va">A</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">LS</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/Matrix/man/chol-methods.html">chol</a></span><span class="op">(</span><span class="va">S</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/diag.html">diag</a></span><span class="op">(</span><span class="fl">1e-8</span>, <span class="va">n</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="a-world-with-a-known-slope" class="section level2 hasAnchor" number="12.3">
-<h2><span class="header-section-number">12.3</span> A world with a known slope<a href="simulation.html#a-world-with-a-known-slope" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="a-world-with-a-known-slope" class="section level2" number="13.3">
+<h2>
+<span class="header-section-number">13.3</span> A world with a known slope<a class="anchor" aria-label="anchor" href="#a-world-with-a-known-slope"><i class="fas fa-link"></i></a>
+</h2>
 <p>One function builds a world. Both the predictor <code>x</code> and the outcome <code>y</code> get a phylogenetic part, a spatial part and independent noise. The outcome also gets <code>beta</code> times the predictor. <code>beta</code> is the truth the methods have to recover.</p>
-<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="simulation.html#cb253-1" tabindex="-1"></a>simulate_world <span class="ot">&lt;-</span> <span class="cf">function</span>(beta, <span class="at">shared =</span> <span class="cn">FALSE</span>) {</span>
-<span id="cb253-2"><a href="simulation.html#cb253-2" tabindex="-1"></a>  field <span class="ot">&lt;-</span> <span class="cf">function</span>() <span class="fl">0.6</span> <span class="sc">*</span> LA <span class="sc">%*%</span> <span class="fu">rnorm</span>(n) <span class="sc">+</span> <span class="fl">0.6</span> <span class="sc">*</span> LS <span class="sc">%*%</span> <span class="fu">rnorm</span>(n)</span>
-<span id="cb253-3"><a href="simulation.html#cb253-3" tabindex="-1"></a>  fx <span class="ot">&lt;-</span> <span class="fu">field</span>()                          <span class="co"># what shapes the predictor</span></span>
-<span id="cb253-4"><a href="simulation.html#cb253-4" tabindex="-1"></a>  fy <span class="ot">&lt;-</span> <span class="cf">if</span> (shared) fx <span class="cf">else</span> <span class="fu">field</span>()      <span class="co"># what shapes the outcome</span></span>
-<span id="cb253-5"><a href="simulation.html#cb253-5" tabindex="-1"></a>  w  <span class="ot">&lt;-</span> d</span>
-<span id="cb253-6"><a href="simulation.html#cb253-6" tabindex="-1"></a>  w<span class="sc">$</span>x <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(fx <span class="sc">+</span> <span class="fl">0.5</span> <span class="sc">*</span> <span class="fu">rnorm</span>(n))</span>
-<span id="cb253-7"><a href="simulation.html#cb253-7" tabindex="-1"></a>  w<span class="sc">$</span>y <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(beta <span class="sc">*</span> w<span class="sc">$</span>x <span class="sc">+</span> fy <span class="sc">+</span> <span class="fl">0.5</span> <span class="sc">*</span> <span class="fu">rnorm</span>(n))</span>
-<span id="cb253-8"><a href="simulation.html#cb253-8" tabindex="-1"></a>  w</span>
-<span id="cb253-9"><a href="simulation.html#cb253-9" tabindex="-1"></a>}</span></code></pre></div>
-<p>The predictor is structured on purpose. If <code>x</code> were plain noise, ordinary regression would have honest standard errors whatever the outcome did. Galton’s problem <span class="citation">(<a href="#ref-naroll1961">Naroll 1961</a>)</span> needs both sides to follow the tree and the map, as elevation and ejectives both do.</p>
+<div class="sourceCode" id="cb275"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">simulate_world</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">beta</span>, <span class="va">shared</span> <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">field</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="fl">0.6</span> <span class="op">*</span> <span class="va">LA</span> <span class="op"><a href="https://rdrr.io/r/base/matmult.html">%*%</a></span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.6</span> <span class="op">*</span> <span class="va">LS</span> <span class="op"><a href="https://rdrr.io/r/base/matmult.html">%*%</a></span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span></span>
+<span>  <span class="va">fx</span> <span class="op">&lt;-</span> <span class="fu">field</span><span class="op">(</span><span class="op">)</span>                          <span class="co"># what shapes the predictor</span></span>
+<span>  <span class="va">fy</span> <span class="op">&lt;-</span> <span class="kw">if</span> <span class="op">(</span><span class="va">shared</span><span class="op">)</span> <span class="va">fx</span> <span class="kw">else</span> <span class="fu">field</span><span class="op">(</span><span class="op">)</span>      <span class="co"># what shapes the outcome</span></span>
+<span>  <span class="va">w</span>  <span class="op">&lt;-</span> <span class="va">d</span></span>
+<span>  <span class="va">w</span><span class="op">$</span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/vector.html">as.vector</a></span><span class="op">(</span><span class="va">fx</span> <span class="op">+</span> <span class="fl">0.5</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="va">w</span><span class="op">$</span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/vector.html">as.vector</a></span><span class="op">(</span><span class="va">beta</span> <span class="op">*</span> <span class="va">w</span><span class="op">$</span><span class="va">x</span> <span class="op">+</span> <span class="va">fy</span> <span class="op">+</span> <span class="fl">0.5</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="va">w</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p>The predictor is structured on purpose. If <code>x</code> were plain noise, ordinary regression would have honest standard errors whatever the outcome did. Galton’s problem <span class="citation">(<a href="references.html#ref-naroll1961">Naroll 1961</a>)</span> needs both sides to follow the tree and the map, as elevation and ejectives both do.</p>
 <p>The outcome is continuous. That keeps every method fast, puts all their slopes on one scale, and gives the sampling tradition its fairest hearing, since ordinary least squares on a balanced sample is exactly what it prescribes.</p>
 <p>Three scenarios cover the three ways a method can go wrong.</p>
-<table>
+<div class="inline-table"><table class="table table-sm">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="25%">
+<col width="25%">
+<col width="25%">
+<col width="25%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="left">Scenario</th>
 <th align="left"><code>beta</code></th>
 <th align="left"><code>shared</code></th>
 <th align="left">What it tests</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">no effect</td>
@@ -439,54 +191,61 @@ Real data cannot say which method is right, because nobody knows the true slope.
 <td align="left">shared history</td>
 <td align="left">0</td>
 <td align="left">yes</td>
-<td align="left"><code>x</code> and <code>y</code> follow the <em>same</em> tree and map pattern. Can any method tell that from an effect?</td>
+<td align="left">
+<code>x</code> and <code>y</code> follow the <em>same</em> tree and map pattern. Can any method tell that from an effect?</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div>
-<div id="seven-methods" class="section level2 hasAnchor" number="12.4">
-<h2><span class="header-section-number">12.4</span> Seven methods<a href="simulation.html#seven-methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="seven-methods" class="section level2" number="13.4">
+<h2>
+<span class="header-section-number">13.4</span> Seven methods<a class="anchor" aria-label="anchor" href="#seven-methods"><i class="fas fa-link"></i></a>
+</h2>
 <p>One function fits them all to a world and returns each slope with its standard error.</p>
-<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="simulation.html#cb254-1" tabindex="-1"></a>one_per_family <span class="ot">&lt;-</span> <span class="cf">function</span>(w) {</span>
-<span id="cb254-2"><a href="simulation.html#cb254-2" tabindex="-1"></a>  pick <span class="ot">&lt;-</span> <span class="fu">tapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(w)), w<span class="sc">$</span>family,</span>
-<span id="cb254-3"><a href="simulation.html#cb254-3" tabindex="-1"></a>                 <span class="cf">function</span>(i) i[<span class="fu">sample.int</span>(<span class="fu">length</span>(i), <span class="dv">1</span>)])</span>
-<span id="cb254-4"><a href="simulation.html#cb254-4" tabindex="-1"></a>  w[pick, ]</span>
-<span id="cb254-5"><a href="simulation.html#cb254-5" tabindex="-1"></a>}</span>
-<span id="cb254-6"><a href="simulation.html#cb254-6" tabindex="-1"></a>thinned <span class="ot">&lt;-</span> <span class="cf">function</span>(w, min_km) {</span>
-<span id="cb254-7"><a href="simulation.html#cb254-7" tabindex="-1"></a>  keep <span class="ot">&lt;-</span> <span class="fu">integer</span>()</span>
-<span id="cb254-8"><a href="simulation.html#cb254-8" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">sample.int</span>(<span class="fu">nrow</span>(w))) {</span>
-<span id="cb254-9"><a href="simulation.html#cb254-9" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">all</span>(km[i, keep] <span class="sc">&gt;=</span> min_km)) keep <span class="ot">&lt;-</span> <span class="fu">c</span>(keep, i)</span>
-<span id="cb254-10"><a href="simulation.html#cb254-10" tabindex="-1"></a>  }</span>
-<span id="cb254-11"><a href="simulation.html#cb254-11" tabindex="-1"></a>  w[keep, ]</span>
-<span id="cb254-12"><a href="simulation.html#cb254-12" tabindex="-1"></a>}</span>
-<span id="cb254-13"><a href="simulation.html#cb254-13" tabindex="-1"></a></span>
-<span id="cb254-14"><a href="simulation.html#cb254-14" tabindex="-1"></a>fit_all <span class="ot">&lt;-</span> <span class="cf">function</span>(w) {</span>
-<span id="cb254-15"><a href="simulation.html#cb254-15" tabindex="-1"></a>  ols <span class="ot">&lt;-</span> <span class="cf">function</span>(data) <span class="fu">summary</span>(<span class="fu">lm</span>(y <span class="sc">~</span> x, data))<span class="sc">$</span>coefficients[<span class="st">&quot;x&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
-<span id="cb254-16"><a href="simulation.html#cb254-16" tabindex="-1"></a>  fam <span class="ot">&lt;-</span> <span class="fu">lme</span>(y <span class="sc">~</span> x, <span class="at">random =</span> <span class="sc">~</span> <span class="dv">1</span> <span class="sc">|</span> family, <span class="at">data =</span> w)</span>
-<span id="cb254-17"><a href="simulation.html#cb254-17" tabindex="-1"></a>  phy <span class="ot">&lt;-</span> <span class="fu">phylolm</span>(y <span class="sc">~</span> x, <span class="at">data =</span> w, <span class="at">phy =</span> tree, <span class="at">model =</span> <span class="st">&quot;lambda&quot;</span>)</span>
-<span id="cb254-18"><a href="simulation.html#cb254-18" tabindex="-1"></a>  spa <span class="ot">&lt;-</span> <span class="fu">gam</span>(y <span class="sc">~</span> x <span class="sc">+</span> <span class="fu">s</span>(lat, lon, <span class="at">bs =</span> <span class="st">&quot;sos&quot;</span>, <span class="at">k =</span> <span class="dv">40</span>),</span>
-<span id="cb254-19"><a href="simulation.html#cb254-19" tabindex="-1"></a>             <span class="at">data =</span> w, <span class="at">method =</span> <span class="st">&quot;REML&quot;</span>)</span>
-<span id="cb254-20"><a href="simulation.html#cb254-20" tabindex="-1"></a>  jnt <span class="ot">&lt;-</span> <span class="fu">gam</span>(y <span class="sc">~</span> x <span class="sc">+</span> <span class="fu">s</span>(family, <span class="at">bs =</span> <span class="st">&quot;re&quot;</span>) <span class="sc">+</span> <span class="fu">s</span>(lat, lon, <span class="at">bs =</span> <span class="st">&quot;sos&quot;</span>, <span class="at">k =</span> <span class="dv">40</span>),</span>
-<span id="cb254-21"><a href="simulation.html#cb254-21" tabindex="-1"></a>             <span class="at">data =</span> w, <span class="at">method =</span> <span class="st">&quot;REML&quot;</span>)</span>
-<span id="cb254-22"><a href="simulation.html#cb254-22" tabindex="-1"></a>  est <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb254-23"><a href="simulation.html#cb254-23" tabindex="-1"></a>    <span class="st">&quot;naive OLS&quot;</span>         <span class="ot">=</span> <span class="fu">ols</span>(w),</span>
-<span id="cb254-24"><a href="simulation.html#cb254-24" tabindex="-1"></a>    <span class="st">&quot;one per family&quot;</span>    <span class="ot">=</span> <span class="fu">ols</span>(<span class="fu">one_per_family</span>(w)),</span>
-<span id="cb254-25"><a href="simulation.html#cb254-25" tabindex="-1"></a>    <span class="st">&quot;thinned to 500 km&quot;</span> <span class="ot">=</span> <span class="fu">ols</span>(<span class="fu">thinned</span>(w, <span class="dv">500</span>)),</span>
-<span id="cb254-26"><a href="simulation.html#cb254-26" tabindex="-1"></a>    <span class="st">&quot;family intercept&quot;</span>  <span class="ot">=</span> <span class="fu">summary</span>(fam)<span class="sc">$</span>tTable[<span class="st">&quot;x&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],</span>
-<span id="cb254-27"><a href="simulation.html#cb254-27" tabindex="-1"></a>    <span class="st">&quot;phylogeny (PGLS)&quot;</span>  <span class="ot">=</span> <span class="fu">summary</span>(phy)<span class="sc">$</span>coefficients[<span class="st">&quot;x&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],</span>
-<span id="cb254-28"><a href="simulation.html#cb254-28" tabindex="-1"></a>    <span class="st">&quot;space (spline)&quot;</span>    <span class="ot">=</span> <span class="fu">summary</span>(spa)<span class="sc">$</span>p.table[<span class="st">&quot;x&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],</span>
-<span id="cb254-29"><a href="simulation.html#cb254-29" tabindex="-1"></a>    <span class="st">&quot;family + space&quot;</span>    <span class="ot">=</span> <span class="fu">summary</span>(jnt)<span class="sc">$</span>p.table[<span class="st">&quot;x&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>])</span>
-<span id="cb254-30"><a href="simulation.html#cb254-30" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">method =</span> <span class="fu">rownames</span>(est), <span class="at">est =</span> est[, <span class="dv">1</span>], <span class="at">se =</span> est[, <span class="dv">2</span>])</span>
-<span id="cb254-31"><a href="simulation.html#cb254-31" tabindex="-1"></a>}</span></code></pre></div>
-<p>The first is the naive regression. The next two are the sampling designs of Chapter <a href="sampling.html#sampling">11</a>. The last four are dependence models from Chapters <a href="phylogeny-engines.html#phylogeny-engines">4</a> and <a href="space-engines.html#space-engines">8</a>, chosen because each fits in a second or two, which matters when it has to be done hundreds of times. None of them is told how the data were made: the phylogenetic model has to estimate λ, the spline has to find its own smoothness, and the joint model has only a family intercept to stand for the whole tree.</p>
+<div class="sourceCode" id="cb276"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">one_per_family</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">w</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">pick</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tapply.html">tapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">w</span><span class="op">)</span><span class="op">)</span>, <span class="va">w</span><span class="op">$</span><span class="va">family</span>,</span>
+<span>                 <span class="kw">function</span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="va">i</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample.int</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">i</span><span class="op">)</span>, <span class="fl">1</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span>
+<span>  <span class="va">w</span><span class="op">[</span><span class="va">pick</span>, <span class="op">]</span></span>
+<span><span class="op">}</span></span>
+<span><span class="va">thinned</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">w</span>, <span class="va">min_km</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">keep</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/integer.html">integer</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample.int</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">w</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/all.html">all</a></span><span class="op">(</span><span class="va">km</span><span class="op">[</span><span class="va">i</span>, <span class="va">keep</span><span class="op">]</span> <span class="op">&gt;=</span> <span class="va">min_km</span><span class="op">)</span><span class="op">)</span> <span class="va">keep</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">keep</span>, <span class="va">i</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  <span class="va">w</span><span class="op">[</span><span class="va">keep</span>, <span class="op">]</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">fit_all</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">w</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">ols</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">data</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span>, <span class="va">data</span><span class="op">)</span><span class="op">)</span><span class="op">$</span><span class="va">coefficients</span><span class="op">[</span><span class="st">"x"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span></span>
+<span>  <span class="va">fam</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/nlme/man/lme.html">lme</a></span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span>, random <span class="op">=</span> <span class="op">~</span> <span class="fl">1</span> <span class="op">|</span> <span class="va">family</span>, data <span class="op">=</span> <span class="va">w</span><span class="op">)</span></span>
+<span>  <span class="va">phy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/phylolm/man/phylolm.html">phylolm</a></span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span>, data <span class="op">=</span> <span class="va">w</span>, phy <span class="op">=</span> <span class="va">tree</span>, model <span class="op">=</span> <span class="st">"lambda"</span><span class="op">)</span></span>
+<span>  <span class="va">spa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/gam.html">gam</a></span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html">s</a></span><span class="op">(</span><span class="va">lat</span>, <span class="va">lon</span>, bs <span class="op">=</span> <span class="st">"sos"</span>, k <span class="op">=</span> <span class="fl">40</span><span class="op">)</span>,</span>
+<span>             data <span class="op">=</span> <span class="va">w</span>, method <span class="op">=</span> <span class="st">"REML"</span><span class="op">)</span></span>
+<span>  <span class="va">jnt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/gam.html">gam</a></span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html">s</a></span><span class="op">(</span><span class="va">family</span>, bs <span class="op">=</span> <span class="st">"re"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html">s</a></span><span class="op">(</span><span class="va">lat</span>, <span class="va">lon</span>, bs <span class="op">=</span> <span class="st">"sos"</span>, k <span class="op">=</span> <span class="fl">40</span><span class="op">)</span>,</span>
+<span>             data <span class="op">=</span> <span class="va">w</span>, method <span class="op">=</span> <span class="st">"REML"</span><span class="op">)</span></span>
+<span>  <span class="va">est</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span></span>
+<span>    <span class="st">"naive OLS"</span>         <span class="op">=</span> <span class="fu">ols</span><span class="op">(</span><span class="va">w</span><span class="op">)</span>,</span>
+<span>    <span class="st">"one per family"</span>    <span class="op">=</span> <span class="fu">ols</span><span class="op">(</span><span class="fu">one_per_family</span><span class="op">(</span><span class="va">w</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    <span class="st">"thinned to 500 km"</span> <span class="op">=</span> <span class="fu">ols</span><span class="op">(</span><span class="fu">thinned</span><span class="op">(</span><span class="va">w</span>, <span class="fl">500</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    <span class="st">"family intercept"</span>  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">fam</span><span class="op">)</span><span class="op">$</span><span class="va">tTable</span><span class="op">[</span><span class="st">"x"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span>,</span>
+<span>    <span class="st">"phylogeny (PGLS)"</span>  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">phy</span><span class="op">)</span><span class="op">$</span><span class="va">coefficients</span><span class="op">[</span><span class="st">"x"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span>,</span>
+<span>    <span class="st">"space (spline)"</span>    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">spa</span><span class="op">)</span><span class="op">$</span><span class="va">p.table</span><span class="op">[</span><span class="st">"x"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span>,</span>
+<span>    <span class="st">"family + space"</span>    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">jnt</span><span class="op">)</span><span class="op">$</span><span class="va">p.table</span><span class="op">[</span><span class="st">"x"</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">est</span><span class="op">)</span>, est <span class="op">=</span> <span class="va">est</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span>, se <span class="op">=</span> <span class="va">est</span><span class="op">[</span>, <span class="fl">2</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p>The first is the naive regression. The next two are the sampling designs of Chapter <a href="sampling.html#sampling">12</a>. The last four are dependence models from Chapters <a href="phylogeny-engines.html#phylogeny-engines">4</a> and <a href="space-engines.html#space-engines">8</a>, chosen because each fits in a second or two, which matters when it has to be done hundreds of times. None of them is told how the data were made: the phylogenetic model has to estimate λ, the spline has to find its own smoothness, and the joint model has only a family intercept to stand for the whole tree.</p>
 </div>
-<div id="one-world-looked-at-closely" class="section level2 hasAnchor" number="12.5">
-<h2><span class="header-section-number">12.5</span> One world, looked at closely<a href="simulation.html#one-world-looked-at-closely" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="one-world-looked-at-closely" class="section level2" number="13.5">
+<h2>
+<span class="header-section-number">13.5</span> One world, looked at closely<a class="anchor" aria-label="anchor" href="#one-world-looked-at-closely"><i class="fas fa-link"></i></a>
+</h2>
 <p>Before running hundreds, look at one. Build a world with a true slope of 0.3 and fit everything.</p>
-<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="simulation.html#cb255-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">10</span>)</span>
-<span id="cb255-2"><a href="simulation.html#cb255-2" tabindex="-1"></a>w   <span class="ot">&lt;-</span> <span class="fu">simulate_world</span>(<span class="at">beta =</span> <span class="fl">0.3</span>)</span>
-<span id="cb255-3"><a href="simulation.html#cb255-3" tabindex="-1"></a>one <span class="ot">&lt;-</span> <span class="fu">fit_all</span>(w)</span>
-<span id="cb255-4"><a href="simulation.html#cb255-4" tabindex="-1"></a><span class="fu">cbind</span>(one[<span class="st">&quot;method&quot;</span>], <span class="fu">round</span>(one[<span class="fu">c</span>(<span class="st">&quot;est&quot;</span>, <span class="st">&quot;se&quot;</span>)], <span class="dv">3</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb277"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span></span>
+<span><span class="va">w</span>   <span class="op">&lt;-</span> <span class="fu">simulate_world</span><span class="op">(</span>beta <span class="op">=</span> <span class="fl">0.3</span><span class="op">)</span></span>
+<span><span class="va">one</span> <span class="op">&lt;-</span> <span class="fu">fit_all</span><span class="op">(</span><span class="va">w</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">one</span><span class="op">[</span><span class="st">"method"</span><span class="op">]</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">one</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"est"</span>, <span class="st">"se"</span><span class="op">)</span><span class="op">]</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##                              method   est    se
 ## naive OLS                 naive OLS 0.343 0.043
 ## one per family       one per family 0.606 0.094
@@ -495,74 +254,82 @@ Real data cannot say which method is right, because nobody knows the true slope.
 ## phylogeny (PGLS)   phylogeny (PGLS) 0.355 0.045
 ## space (spline)       space (spline) 0.395 0.044
 ## family + space       family + space 0.361 0.045</code></pre>
-<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="simulation.html#cb257-1" tabindex="-1"></a>kind_of <span class="ot">&lt;-</span> <span class="cf">function</span>(method) {</span>
-<span id="cb257-2"><a href="simulation.html#cb257-2" tabindex="-1"></a>  <span class="fu">ifelse</span>(method <span class="sc">==</span> <span class="st">&quot;naive OLS&quot;</span>, <span class="st">&quot;naive&quot;</span>,</span>
-<span id="cb257-3"><a href="simulation.html#cb257-3" tabindex="-1"></a>  <span class="fu">ifelse</span>(method <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;one per family&quot;</span>, <span class="st">&quot;thinned to 500 km&quot;</span>), <span class="st">&quot;sampling&quot;</span>,</span>
-<span id="cb257-4"><a href="simulation.html#cb257-4" tabindex="-1"></a>  <span class="fu">ifelse</span>(<span class="fu">grepl</span>(<span class="st">&quot;+&quot;</span>, method, <span class="at">fixed =</span> <span class="cn">TRUE</span>), <span class="st">&quot;both&quot;</span>,</span>
-<span id="cb257-5"><a href="simulation.html#cb257-5" tabindex="-1"></a>  <span class="fu">ifelse</span>(<span class="fu">grepl</span>(<span class="st">&quot;space&quot;</span>, method), <span class="st">&quot;space&quot;</span>, <span class="st">&quot;ancestry&quot;</span>))))</span>
-<span id="cb257-6"><a href="simulation.html#cb257-6" tabindex="-1"></a>}</span>
-<span id="cb257-7"><a href="simulation.html#cb257-7" tabindex="-1"></a>hues <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">naive =</span> <span class="st">&quot;grey45&quot;</span>, <span class="at">sampling =</span> <span class="st">&quot;#EDA100&quot;</span>, <span class="at">ancestry =</span> <span class="st">&quot;#1BAF7A&quot;</span>,</span>
-<span id="cb257-8"><a href="simulation.html#cb257-8" tabindex="-1"></a>          <span class="at">space =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">both =</span> <span class="st">&quot;grey10&quot;</span>)</span>
-<span id="cb257-9"><a href="simulation.html#cb257-9" tabindex="-1"></a>one<span class="sc">$</span>kind <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">kind_of</span>(one<span class="sc">$</span>method), <span class="at">levels =</span> <span class="fu">names</span>(hues))</span>
-<span id="cb257-10"><a href="simulation.html#cb257-10" tabindex="-1"></a></span>
-<span id="cb257-11"><a href="simulation.html#cb257-11" tabindex="-1"></a><span class="fu">ggplot</span>(w, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
-<span id="cb257-12"><a href="simulation.html#cb257-12" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">&quot;grey80&quot;</span>, <span class="at">size =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb257-13"><a href="simulation.html#cb257-13" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">data =</span> one, <span class="fu">aes</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> est, <span class="at">colour =</span> kind),</span>
-<span id="cb257-14"><a href="simulation.html#cb257-14" tabindex="-1"></a>              <span class="at">linewidth =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb257-15"><a href="simulation.html#cb257-15" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="fl">0.3</span>, <span class="at">linewidth =</span> <span class="fl">1.1</span>) <span class="sc">+</span></span>
-<span id="cb257-16"><a href="simulation.html#cb257-16" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> hues, <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb257-17"><a href="simulation.html#cb257-17" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;simulated predictor&quot;</span>, <span class="at">y =</span> <span class="st">&quot;simulated outcome&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:simulation-one-world-plot"></span>
+<div class="sourceCode" id="cb279"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">kind_of</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">method</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">method</span> <span class="op">==</span> <span class="st">"naive OLS"</span>, <span class="st">"naive"</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">method</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"one per family"</span>, <span class="st">"thinned to 500 km"</span><span class="op">)</span>, <span class="st">"sampling"</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">grepl</a></span><span class="op">(</span><span class="st">"+"</span>, <span class="va">method</span>, fixed <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, <span class="st">"both"</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">grepl</a></span><span class="op">(</span><span class="st">"space"</span>, <span class="va">method</span><span class="op">)</span>, <span class="st">"space"</span>, <span class="st">"ancestry"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="va">hues</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>naive <span class="op">=</span> <span class="st">"grey45"</span>, sampling <span class="op">=</span> <span class="st">"#EDA100"</span>, ancestry <span class="op">=</span> <span class="st">"#1BAF7A"</span>,</span>
+<span>          space <span class="op">=</span> <span class="st">"#2A78D6"</span>, both <span class="op">=</span> <span class="st">"grey10"</span><span class="op">)</span></span>
+<span><span class="va">one</span><span class="op">$</span><span class="va">kind</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu">kind_of</span><span class="op">(</span><span class="va">one</span><span class="op">$</span><span class="va">method</span><span class="op">)</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">hues</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">w</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"grey80"</span>, size <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_abline</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">one</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>intercept <span class="op">=</span> <span class="fl">0</span>, slope <span class="op">=</span> <span class="va">est</span>, colour <span class="op">=</span> <span class="va">kind</span><span class="op">)</span>,</span>
+<span>              linewidth <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_abline</a></span><span class="op">(</span>intercept <span class="op">=</span> <span class="fl">0</span>, slope <span class="op">=</span> <span class="fl">0.3</span>, linewidth <span class="op">=</span> <span class="fl">1.1</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_colour_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="va">hues</span>, name <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"simulated predictor"</span>, y <span class="op">=</span> <span class="st">"simulated outcome"</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:simulation-one-world-plot"></span>
 <span id="fig:simulation-one-world-plot" style="display:block;"></span>
-<img src="figures/12-simulation/one-world-plot-1.png" alt="One simulated world with a true slope of 0.3. Each point is a language. The black line is the truth; the coloured lines are the seven estimates. In a single world every method lands near the truth, which is why one data set can never settle which method to trust." width="710" />
-<p class="caption">
-Figure 12.1: One simulated world with a true slope of 0.3. Each point is a language. The black line is the truth; the coloured lines are the seven estimates. In a single world every method lands near the truth, which is why one data set can never settle which method to trust.
+<img src="figures/13-simulation/one-world-plot-1.png" alt="One simulated world with a true slope of 0.3. Each point is a language. The black line is the truth; the coloured lines are the seven estimates. In a single world every method lands near the truth, which is why one data set can never settle which method to trust." width="710"><p class="caption">
+Figure 13.1: One simulated world with a true slope of 0.3. Each point is a language. The black line is the truth; the coloured lines are the seven estimates. In a single world every method lands near the truth, which is why one data set can never settle which method to trust.
 </p>
 </div>
 </div>
-<div id="three-hundred-worlds" class="section level2 hasAnchor" number="12.6">
-<h2><span class="header-section-number">12.6</span> Three hundred worlds<a href="simulation.html#three-hundred-worlds" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="three-hundred-worlds" class="section level2" number="13.6">
+<h2>
+<span class="header-section-number">13.6</span> Three hundred worlds<a class="anchor" aria-label="anchor" href="#three-hundred-worlds"><i class="fas fa-link"></i></a>
+</h2>
 <p>Now 100 worlds per scenario. This is the slow part, about five seconds a world, so the results are saved to a file and read back on later runs.</p>
-<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="simulation.html#cb258-1" tabindex="-1"></a>nsim <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb258-2"><a href="simulation.html#cb258-2" tabindex="-1"></a>scenarios <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb258-3"><a href="simulation.html#cb258-3" tabindex="-1"></a>  <span class="at">scenario =</span> <span class="fu">c</span>(<span class="st">&quot;no effect&quot;</span>, <span class="st">&quot;true effect&quot;</span>, <span class="st">&quot;shared history&quot;</span>),</span>
-<span id="cb258-4"><a href="simulation.html#cb258-4" tabindex="-1"></a>  <span class="at">beta     =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.3</span>, <span class="dv">0</span>),</span>
-<span id="cb258-5"><a href="simulation.html#cb258-5" tabindex="-1"></a>  <span class="at">shared   =</span> <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>))</span>
-<span id="cb258-6"><a href="simulation.html#cb258-6" tabindex="-1"></a></span>
-<span id="cb258-7"><a href="simulation.html#cb258-7" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(<span class="st">&quot;fits/simulation.rds&quot;</span>)) {</span>
-<span id="cb258-8"><a href="simulation.html#cb258-8" tabindex="-1"></a>  sims <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">&quot;fits/simulation.rds&quot;</span>)</span>
-<span id="cb258-9"><a href="simulation.html#cb258-9" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb258-10"><a href="simulation.html#cb258-10" tabindex="-1"></a>  <span class="fu">set.seed</span>(<span class="dv">2026</span>)</span>
-<span id="cb258-11"><a href="simulation.html#cb258-11" tabindex="-1"></a>  sims <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(scenarios)), <span class="cf">function</span>(i) {</span>
-<span id="cb258-12"><a href="simulation.html#cb258-12" tabindex="-1"></a>    <span class="fu">do.call</span>(rbind, <span class="fu">lapply</span>(<span class="fu">seq_len</span>(nsim), <span class="cf">function</span>(r) {</span>
-<span id="cb258-13"><a href="simulation.html#cb258-13" tabindex="-1"></a>      w <span class="ot">&lt;-</span> <span class="fu">simulate_world</span>(scenarios<span class="sc">$</span>beta[i], scenarios<span class="sc">$</span>shared[i])</span>
-<span id="cb258-14"><a href="simulation.html#cb258-14" tabindex="-1"></a>      <span class="fu">cbind</span>(<span class="at">scenario =</span> scenarios<span class="sc">$</span>scenario[i], <span class="at">truth =</span> scenarios<span class="sc">$</span>beta[i],</span>
-<span id="cb258-15"><a href="simulation.html#cb258-15" tabindex="-1"></a>            <span class="at">world =</span> r, <span class="fu">fit_all</span>(w))</span>
-<span id="cb258-16"><a href="simulation.html#cb258-16" tabindex="-1"></a>    }))</span>
-<span id="cb258-17"><a href="simulation.html#cb258-17" tabindex="-1"></a>  }))</span>
-<span id="cb258-18"><a href="simulation.html#cb258-18" tabindex="-1"></a>  <span class="fu">saveRDS</span>(sims, <span class="st">&quot;fits/simulation.rds&quot;</span>)</span>
-<span id="cb258-19"><a href="simulation.html#cb258-19" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb280"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">nsim</span> <span class="op">&lt;-</span> <span class="fl">100</span></span>
+<span><span class="va">scenarios</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>  scenario <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"no effect"</span>, <span class="st">"true effect"</span>, <span class="st">"shared history"</span><span class="op">)</span>,</span>
+<span>  beta     <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.3</span>, <span class="fl">0</span><span class="op">)</span>,</span>
+<span>  shared   <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">FALSE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/files.html">file.exists</a></span><span class="op">(</span><span class="st">"fits/simulation.rds"</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">sims</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html">readRDS</a></span><span class="op">(</span><span class="st">"fits/simulation.rds"</span><span class="op">)</span></span>
+<span><span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">2026</span><span class="op">)</span></span>
+<span>  <span class="va">sims</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/do.call.html">do.call</a></span><span class="op">(</span><span class="va">rbind</span>, <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">scenarios</span><span class="op">)</span><span class="op">)</span>, <span class="kw">function</span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/do.call.html">do.call</a></span><span class="op">(</span><span class="va">rbind</span>, <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq_len</a></span><span class="op">(</span><span class="va">nsim</span><span class="op">)</span>, <span class="kw">function</span><span class="op">(</span><span class="va">r</span><span class="op">)</span> <span class="op">{</span></span>
+<span>      <span class="va">w</span> <span class="op">&lt;-</span> <span class="fu">simulate_world</span><span class="op">(</span><span class="va">scenarios</span><span class="op">$</span><span class="va">beta</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, <span class="va">scenarios</span><span class="op">$</span><span class="va">shared</span><span class="op">[</span><span class="va">i</span><span class="op">]</span><span class="op">)</span></span>
+<span>      <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span>scenario <span class="op">=</span> <span class="va">scenarios</span><span class="op">$</span><span class="va">scenario</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, truth <span class="op">=</span> <span class="va">scenarios</span><span class="op">$</span><span class="va">beta</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>,</span>
+<span>            world <span class="op">=</span> <span class="va">r</span>, <span class="fu">fit_all</span><span class="op">(</span><span class="va">w</span><span class="op">)</span><span class="op">)</span></span>
+<span>    <span class="op">}</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">}</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html">saveRDS</a></span><span class="op">(</span><span class="va">sims</span>, <span class="st">"fits/simulation.rds"</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
 <blockquote>
 <p><strong>Run time.</strong> Three hundred worlds take about 25 minutes. To try the code first, set <code>nsim &lt;- 10</code>; the pattern is already visible, though the percentages will be rough.</p>
 </blockquote>
 <p>For every fit, build the 95% interval and record three facts: whether the interval excludes zero, whether it contains the truth, and how wide it is.</p>
-<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="simulation.html#cb259-1" tabindex="-1"></a>sims<span class="sc">$</span>method   <span class="ot">&lt;-</span> <span class="fu">factor</span>(sims<span class="sc">$</span>method, <span class="at">levels =</span> one<span class="sc">$</span>method)</span>
-<span id="cb259-2"><a href="simulation.html#cb259-2" tabindex="-1"></a>sims<span class="sc">$</span>scenario <span class="ot">&lt;-</span> <span class="fu">factor</span>(sims<span class="sc">$</span>scenario, <span class="at">levels =</span> scenarios<span class="sc">$</span>scenario)</span>
-<span id="cb259-3"><a href="simulation.html#cb259-3" tabindex="-1"></a>sims<span class="sc">$</span>lower    <span class="ot">&lt;-</span> sims<span class="sc">$</span>est <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> sims<span class="sc">$</span>se</span>
-<span id="cb259-4"><a href="simulation.html#cb259-4" tabindex="-1"></a>sims<span class="sc">$</span>upper    <span class="ot">&lt;-</span> sims<span class="sc">$</span>est <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> sims<span class="sc">$</span>se</span>
-<span id="cb259-5"><a href="simulation.html#cb259-5" tabindex="-1"></a>sims<span class="sc">$</span>reject   <span class="ot">&lt;-</span> sims<span class="sc">$</span>lower <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">|</span> sims<span class="sc">$</span>upper <span class="sc">&lt;</span> <span class="dv">0</span></span>
-<span id="cb259-6"><a href="simulation.html#cb259-6" tabindex="-1"></a>sims<span class="sc">$</span>covered  <span class="ot">&lt;-</span> sims<span class="sc">$</span>lower <span class="sc">&lt;=</span> sims<span class="sc">$</span>truth <span class="sc">&amp;</span> sims<span class="sc">$</span>truth <span class="sc">&lt;=</span> sims<span class="sc">$</span>upper</span>
-<span id="cb259-7"><a href="simulation.html#cb259-7" tabindex="-1"></a>sims<span class="sc">$</span>width    <span class="ot">&lt;-</span> sims<span class="sc">$</span>upper <span class="sc">-</span> sims<span class="sc">$</span>lower</span>
-<span id="cb259-8"><a href="simulation.html#cb259-8" tabindex="-1"></a></span>
-<span id="cb259-9"><a href="simulation.html#cb259-9" tabindex="-1"></a>score <span class="ot">&lt;-</span> <span class="fu">aggregate</span>(<span class="fu">cbind</span>(est, reject, covered, width) <span class="sc">~</span> method <span class="sc">+</span> scenario,</span>
-<span id="cb259-10"><a href="simulation.html#cb259-10" tabindex="-1"></a>                   <span class="at">data =</span> sims, <span class="at">FUN =</span> mean)</span>
-<span id="cb259-11"><a href="simulation.html#cb259-11" tabindex="-1"></a><span class="fu">names</span>(score)[<span class="dv">3</span><span class="sc">:</span><span class="dv">6</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;mean_estimate&quot;</span>, <span class="st">&quot;share_rejecting&quot;</span>, <span class="st">&quot;coverage&quot;</span>,</span>
-<span id="cb259-12"><a href="simulation.html#cb259-12" tabindex="-1"></a>                       <span class="st">&quot;mean_width&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb281"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">sims</span><span class="op">$</span><span class="va">method</span>   <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">sims</span><span class="op">$</span><span class="va">method</span>, levels <span class="op">=</span> <span class="va">one</span><span class="op">$</span><span class="va">method</span><span class="op">)</span></span>
+<span><span class="va">sims</span><span class="op">$</span><span class="va">scenario</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">sims</span><span class="op">$</span><span class="va">scenario</span>, levels <span class="op">=</span> <span class="va">scenarios</span><span class="op">$</span><span class="va">scenario</span><span class="op">)</span></span>
+<span><span class="va">sims</span><span class="op">$</span><span class="va">lower</span>    <span class="op">&lt;-</span> <span class="va">sims</span><span class="op">$</span><span class="va">est</span> <span class="op">-</span> <span class="fl">1.96</span> <span class="op">*</span> <span class="va">sims</span><span class="op">$</span><span class="va">se</span></span>
+<span><span class="va">sims</span><span class="op">$</span><span class="va">upper</span>    <span class="op">&lt;-</span> <span class="va">sims</span><span class="op">$</span><span class="va">est</span> <span class="op">+</span> <span class="fl">1.96</span> <span class="op">*</span> <span class="va">sims</span><span class="op">$</span><span class="va">se</span></span>
+<span><span class="va">sims</span><span class="op">$</span><span class="va">reject</span>   <span class="op">&lt;-</span> <span class="va">sims</span><span class="op">$</span><span class="va">lower</span> <span class="op">&gt;</span> <span class="fl">0</span> <span class="op">|</span> <span class="va">sims</span><span class="op">$</span><span class="va">upper</span> <span class="op">&lt;</span> <span class="fl">0</span></span>
+<span><span class="va">sims</span><span class="op">$</span><span class="va">covered</span>  <span class="op">&lt;-</span> <span class="va">sims</span><span class="op">$</span><span class="va">lower</span> <span class="op">&lt;=</span> <span class="va">sims</span><span class="op">$</span><span class="va">truth</span> <span class="op">&amp;</span> <span class="va">sims</span><span class="op">$</span><span class="va">truth</span> <span class="op">&lt;=</span> <span class="va">sims</span><span class="op">$</span><span class="va">upper</span></span>
+<span><span class="va">sims</span><span class="op">$</span><span class="va">width</span>    <span class="op">&lt;-</span> <span class="va">sims</span><span class="op">$</span><span class="va">upper</span> <span class="op">-</span> <span class="va">sims</span><span class="op">$</span><span class="va">lower</span></span>
+<span></span>
+<span><span class="va">score</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aggregate.html">aggregate</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">est</span>, <span class="va">reject</span>, <span class="va">covered</span>, <span class="va">width</span><span class="op">)</span> <span class="op">~</span> <span class="va">method</span> <span class="op">+</span> <span class="va">scenario</span>,</span>
+<span>                   data <span class="op">=</span> <span class="va">sims</span>, FUN <span class="op">=</span> <span class="va">mean</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">score</span><span class="op">)</span><span class="op">[</span><span class="fl">3</span><span class="op">:</span><span class="fl">6</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"mean_estimate"</span>, <span class="st">"share_rejecting"</span>, <span class="st">"coverage"</span>,</span>
+<span>                       <span class="st">"mean_width"</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="no-effect-who-cries-wolf" class="section level2 hasAnchor" number="12.7">
-<h2><span class="header-section-number">12.7</span> No effect: who cries wolf?<a href="simulation.html#no-effect-who-cries-wolf" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="simulation.html#cb260-1" tabindex="-1"></a>null <span class="ot">&lt;-</span> <span class="fu">subset</span>(score, scenario <span class="sc">==</span> <span class="st">&quot;no effect&quot;</span>)</span>
-<span id="cb260-2"><a href="simulation.html#cb260-2" tabindex="-1"></a><span class="fu">cbind</span>(null[<span class="st">&quot;method&quot;</span>], <span class="fu">round</span>(null[, <span class="dv">3</span><span class="sc">:</span><span class="dv">6</span>], <span class="dv">3</span>))</span></code></pre></div>
+<div id="no-effect-who-cries-wolf" class="section level2" number="13.7">
+<h2>
+<span class="header-section-number">13.7</span> No effect: who cries wolf?<a class="anchor" aria-label="anchor" href="#no-effect-who-cries-wolf"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb282"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">null</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">score</span>, <span class="va">scenario</span> <span class="op">==</span> <span class="st">"no effect"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">null</span><span class="op">[</span><span class="st">"method"</span><span class="op">]</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">null</span><span class="op">[</span>, <span class="fl">3</span><span class="op">:</span><span class="fl">6</span><span class="op">]</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##              method mean_estimate share_rejecting coverage mean_width
 ## 1         naive OLS         0.003            0.17     0.83      0.175
 ## 2    one per family         0.000            0.06     0.94      0.380
@@ -572,31 +339,35 @@ Figure 12.1: One simulated world with a true slope of 0.3. Each point is a langu
 ## 6    space (spline)         0.000            0.08     0.92      0.174
 ## 7    family + space        -0.001            0.06     0.94      0.174</code></pre>
 <p>The true slope is zero, so every rejection is a false alarm, and an honest method raises one in 5% of worlds.</p>
-<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="simulation.html#cb262-1" tabindex="-1"></a>null<span class="sc">$</span>kind <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">kind_of</span>(<span class="fu">as.character</span>(null<span class="sc">$</span>method)), <span class="at">levels =</span> <span class="fu">names</span>(hues))</span>
-<span id="cb262-2"><a href="simulation.html#cb262-2" tabindex="-1"></a>null<span class="sc">$</span>method <span class="ot">&lt;-</span> <span class="fu">factor</span>(null<span class="sc">$</span>method, <span class="at">levels =</span> <span class="fu">rev</span>(<span class="fu">levels</span>(sims<span class="sc">$</span>method)))</span>
-<span id="cb262-3"><a href="simulation.html#cb262-3" tabindex="-1"></a></span>
-<span id="cb262-4"><a href="simulation.html#cb262-4" tabindex="-1"></a><span class="fu">ggplot</span>(null, <span class="fu">aes</span>(share_rejecting, method, <span class="at">colour =</span> kind)) <span class="sc">+</span></span>
-<span id="cb262-5"><a href="simulation.html#cb262-5" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fl">0.05</span>, <span class="at">linetype =</span> <span class="st">&quot;22&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;grey35&quot;</span>) <span class="sc">+</span></span>
-<span id="cb262-6"><a href="simulation.html#cb262-6" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> share_rejecting, <span class="at">yend =</span> method),</span>
-<span id="cb262-7"><a href="simulation.html#cb262-7" tabindex="-1"></a>               <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb262-8"><a href="simulation.html#cb262-8" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.8</span>) <span class="sc">+</span></span>
-<span id="cb262-9"><a href="simulation.html#cb262-9" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> hues, <span class="at">guide =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb262-10"><a href="simulation.html#cb262-10" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="cf">function</span>(v) <span class="fu">paste0</span>(<span class="dv">100</span> <span class="sc">*</span> v, <span class="st">&quot;%&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb262-11"><a href="simulation.html#cb262-11" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;worlds with a false positive&quot;</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:simulation-null-plot"></span>
+<div class="sourceCode" id="cb284"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">null</span><span class="op">$</span><span class="va">kind</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu">kind_of</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">null</span><span class="op">$</span><span class="va">method</span><span class="op">)</span><span class="op">)</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">hues</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">null</span><span class="op">$</span><span class="va">method</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">null</span><span class="op">$</span><span class="va">method</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rev.html">rev</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/levels.html">levels</a></span><span class="op">(</span><span class="va">sims</span><span class="op">$</span><span class="va">method</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">null</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">share_rejecting</span>, <span class="va">method</span>, colour <span class="op">=</span> <span class="va">kind</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_vline</a></span><span class="op">(</span>xintercept <span class="op">=</span> <span class="fl">0.05</span>, linetype <span class="op">=</span> <span class="st">"22"</span>, colour <span class="op">=</span> <span class="st">"grey35"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html">geom_segment</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">0</span>, xend <span class="op">=</span> <span class="va">share_rejecting</span>, yend <span class="op">=</span> <span class="va">method</span><span class="op">)</span>,</span>
+<span>               linewidth <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">2.8</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_colour_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="va">hues</span>, guide <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">v</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="fl">100</span> <span class="op">*</span> <span class="va">v</span>, <span class="st">"%"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"worlds with a false positive"</span>, y <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:simulation-null-plot"></span>
 <span id="fig:simulation-null-plot" style="display:block;"></span>
-<img src="figures/12-simulation/null-plot-1.png" alt="Share of 100 worlds with no effect in which each method reported one at the 5% level. The dashed line is the 5% an honest test should give." width="710" />
-<p class="caption">
-Figure 12.2: Share of 100 worlds with no effect in which each method reported one at the 5% level. The dashed line is the 5% an honest test should give.
+<img src="figures/13-simulation/null-plot-1.png" alt="Share of 100 worlds with no effect in which each method reported one at the 5% level. The dashed line is the 5% an honest test should give." width="710"><p class="caption">
+Figure 13.2: Share of 100 worlds with no effect in which each method reported one at the 5% level. The dashed line is the 5% an honest test should give.
 </p>
 </div>
 <p>The naive regression reports an effect in 17% of worlds where there is none. That is Chapter <a href="the-problem.html#the-problem">1</a>’s warning, now measured against a known truth. One language per family brings the rate to 6% and thinning to 9%. The family intercept gives 7%, the phylogenetic regression 6%, the spatial spline 8%, and the model with both 6%.</p>
 <p>Compare each number with 5%, remembering that with 100 worlds a method that is exactly honest will show anything from about 1% to 10% by chance. Every method that does something about dependence, whether by sampling or by modelling, brings the rate back to the neighbourhood of 5%. That includes the models that handle only one kind of dependence, although these worlds have both. A likely reason is the overlap seen in Chapter <a href="joint.html#joint">9</a>: relatives live near each other, so a term for ancestry soaks up much of the spatial dependence and a term for space much of the genealogical.</p>
 </div>
-<div id="a-true-effect-who-finds-it-and-how-precisely" class="section level2 hasAnchor" number="12.8">
-<h2><span class="header-section-number">12.8</span> A true effect: who finds it, and how precisely?<a href="simulation.html#a-true-effect-who-finds-it-and-how-precisely" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="simulation.html#cb263-1" tabindex="-1"></a>effect <span class="ot">&lt;-</span> <span class="fu">subset</span>(score, scenario <span class="sc">==</span> <span class="st">&quot;true effect&quot;</span>)</span>
-<span id="cb263-2"><a href="simulation.html#cb263-2" tabindex="-1"></a><span class="fu">cbind</span>(effect[<span class="st">&quot;method&quot;</span>], <span class="fu">round</span>(effect[, <span class="dv">3</span><span class="sc">:</span><span class="dv">6</span>], <span class="dv">3</span>))</span></code></pre></div>
+<div id="a-true-effect-who-finds-it-and-how-precisely" class="section level2" number="13.8">
+<h2>
+<span class="header-section-number">13.8</span> A true effect: who finds it, and how precisely?<a class="anchor" aria-label="anchor" href="#a-true-effect-who-finds-it-and-how-precisely"><i class="fas fa-link"></i></a>
+</h2>
+<div class="sourceCode" id="cb285"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">effect</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">score</span>, <span class="va">scenario</span> <span class="op">==</span> <span class="st">"true effect"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">effect</span><span class="op">[</span><span class="st">"method"</span><span class="op">]</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">effect</span><span class="op">[</span>, <span class="fl">3</span><span class="op">:</span><span class="fl">6</span><span class="op">]</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##               method mean_estimate share_rejecting coverage mean_width
 ## 8          naive OLS         0.312            1.00     0.70      0.177
 ## 9     one per family         0.316            0.87     0.91      0.382
@@ -607,33 +378,37 @@ Figure 12.2: Share of 100 worlds with no effect in which each method reported on
 ## 14    family + space         0.302            1.00     0.89      0.174</code></pre>
 <p><code>mean_estimate</code> should be 0.3 and <code>coverage</code> should be 0.95. <code>mean_width</code> is the price: the narrower the interval, the more a method learns from the same world.</p>
 <p>The regression lines show all of this at once. Each thin line is one world’s estimate; the black line is the truth.</p>
-<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="simulation.html#cb265-1" tabindex="-1"></a>lines <span class="ot">&lt;-</span> <span class="fu">subset</span>(sims, scenario <span class="sc">==</span> <span class="st">&quot;true effect&quot;</span>)</span>
-<span id="cb265-2"><a href="simulation.html#cb265-2" tabindex="-1"></a>lines<span class="sc">$</span>kind <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">kind_of</span>(<span class="fu">as.character</span>(lines<span class="sc">$</span>method)), <span class="at">levels =</span> <span class="fu">names</span>(hues))</span>
-<span id="cb265-3"><a href="simulation.html#cb265-3" tabindex="-1"></a></span>
-<span id="cb265-4"><a href="simulation.html#cb265-4" tabindex="-1"></a><span class="fu">ggplot</span>(lines) <span class="sc">+</span></span>
-<span id="cb265-5"><a href="simulation.html#cb265-5" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="fu">aes</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> est, <span class="at">colour =</span> kind),</span>
-<span id="cb265-6"><a href="simulation.html#cb265-6" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="at">linewidth =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
-<span id="cb265-7"><a href="simulation.html#cb265-7" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="fl">0.3</span>, <span class="at">linewidth =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
-<span id="cb265-8"><a href="simulation.html#cb265-8" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> hues, <span class="at">guide =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb265-9"><a href="simulation.html#cb265-9" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
-<span id="cb265-10"><a href="simulation.html#cb265-10" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.2</span>, <span class="fl">1.2</span>)) <span class="sc">+</span></span>
-<span id="cb265-11"><a href="simulation.html#cb265-11" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>method, <span class="at">nrow =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb265-12"><a href="simulation.html#cb265-12" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;simulated predictor&quot;</span>, <span class="at">y =</span> <span class="st">&quot;simulated outcome&quot;</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:simulation-effect-lines"></span>
+<div class="sourceCode" id="cb287"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">lines</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">sims</span>, <span class="va">scenario</span> <span class="op">==</span> <span class="st">"true effect"</span><span class="op">)</span></span>
+<span><span class="va">lines</span><span class="op">$</span><span class="va">kind</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu">kind_of</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">lines</span><span class="op">$</span><span class="va">method</span><span class="op">)</span><span class="op">)</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">hues</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">lines</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_abline</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>intercept <span class="op">=</span> <span class="fl">0</span>, slope <span class="op">=</span> <span class="va">est</span>, colour <span class="op">=</span> <span class="va">kind</span><span class="op">)</span>,</span>
+<span>              alpha <span class="op">=</span> <span class="fl">0.3</span>, linewidth <span class="op">=</span> <span class="fl">0.3</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_abline</a></span><span class="op">(</span>intercept <span class="op">=</span> <span class="fl">0</span>, slope <span class="op">=</span> <span class="fl">0.3</span>, linewidth <span class="op">=</span> <span class="fl">0.9</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_colour_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="va">hues</span>, guide <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1.2</span>, <span class="fl">1.2</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">method</span>, nrow <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"simulated predictor"</span>, y <span class="op">=</span> <span class="st">"simulated outcome"</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:simulation-effect-lines"></span>
 <span id="fig:simulation-effect-lines" style="display:block;"></span>
-<img src="figures/12-simulation/effect-lines-1.png" alt="Regression lines estimated in 100 worlds with a true slope of 0.3 (black line), one panel per method. A good method gives a tight bundle centred on the black line. The sampling designs are centred but loose: each uses a fraction of the languages." width="710" />
-<p class="caption">
-Figure 12.3: Regression lines estimated in 100 worlds with a true slope of 0.3 (black line), one panel per method. A good method gives a tight bundle centred on the black line. The sampling designs are centred but loose: each uses a fraction of the languages.
+<img src="figures/13-simulation/effect-lines-1.png" alt="Regression lines estimated in 100 worlds with a true slope of 0.3 (black line), one panel per method. A good method gives a tight bundle centred on the black line. The sampling designs are centred but loose: each uses a fraction of the languages." width="710"><p class="caption">
+Figure 13.3: Regression lines estimated in 100 worlds with a true slope of 0.3 (black line), one panel per method. A good method gives a tight bundle centred on the black line. The sampling designs are centred but loose: each uses a fraction of the languages.
 </p>
 </div>
 <p>No method is biased here: every bundle is centred on the truth. They differ in how tight the bundle is and in whether the method knows how tight it is. The naive regression has a narrow stated interval, 0.18 wide on average, but it covers the truth only 70% of the time, so the uncertainty it states is too small. One language per family covers the truth 91% of the time with an interval 0.38 wide. The joint model covers it 89% of the time with an interval 0.17 wide, using every language.</p>
 <p>Balanced samples and dependence models are about equally honest, but the models’ intervals are less than half as wide, and sampling gets its honesty by giving up three quarters of the data. The models’ coverage sits a little under 95%, which is the cost of approximating the truth: none of them was told how these worlds were made.</p>
 </div>
-<div id="shared-history-the-limit-of-every-method" class="section level2 hasAnchor" number="12.9">
-<h2><span class="header-section-number">12.9</span> Shared history: the limit of every method<a href="simulation.html#shared-history-the-limit-of-every-method" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="shared-history-the-limit-of-every-method" class="section level2" number="13.9">
+<h2>
+<span class="header-section-number">13.9</span> Shared history: the limit of every method<a class="anchor" aria-label="anchor" href="#shared-history-the-limit-of-every-method"><i class="fas fa-link"></i></a>
+</h2>
 <p>In the last scenario there is still no effect, but the predictor and the outcome were shaped by the <em>same</em> inherited and areal pattern. Think of a feature and an environmental variable that both trace where a few big families happen to live.</p>
-<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="simulation.html#cb266-1" tabindex="-1"></a>shared <span class="ot">&lt;-</span> <span class="fu">subset</span>(score, scenario <span class="sc">==</span> <span class="st">&quot;shared history&quot;</span>)</span>
-<span id="cb266-2"><a href="simulation.html#cb266-2" tabindex="-1"></a><span class="fu">cbind</span>(shared[<span class="st">&quot;method&quot;</span>], <span class="fu">round</span>(shared[, <span class="dv">3</span><span class="sc">:</span><span class="dv">6</span>], <span class="dv">3</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb288"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">shared</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">score</span>, <span class="va">scenario</span> <span class="op">==</span> <span class="st">"shared history"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">shared</span><span class="op">[</span><span class="st">"method"</span><span class="op">]</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">shared</span><span class="op">[</span>, <span class="fl">3</span><span class="op">:</span><span class="fl">6</span><span class="op">]</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##               method mean_estimate share_rejecting coverage mean_width
 ## 15         naive OLS         0.728               1        0      0.120
 ## 16    one per family         0.726               1        0      0.254
@@ -642,42 +417,51 @@ Figure 12.3: Regression lines estimated in 100 worlds with a true slope of 0.3 (
 ## 19  phylogeny (PGLS)         0.701               1        0      0.124
 ## 20    space (spline)         0.710               1        0      0.122
 ## 21    family + space         0.701               1        0      0.124</code></pre>
-<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb268-1"><a href="simulation.html#cb268-1" tabindex="-1"></a>conf <span class="ot">&lt;-</span> <span class="fu">subset</span>(sims, scenario <span class="sc">==</span> <span class="st">&quot;shared history&quot;</span>)</span>
-<span id="cb268-2"><a href="simulation.html#cb268-2" tabindex="-1"></a>conf<span class="sc">$</span>kind <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">kind_of</span>(<span class="fu">as.character</span>(conf<span class="sc">$</span>method)), <span class="at">levels =</span> <span class="fu">names</span>(hues))</span>
-<span id="cb268-3"><a href="simulation.html#cb268-3" tabindex="-1"></a>conf<span class="sc">$</span>method <span class="ot">&lt;-</span> <span class="fu">factor</span>(conf<span class="sc">$</span>method, <span class="at">levels =</span> <span class="fu">rev</span>(<span class="fu">levels</span>(sims<span class="sc">$</span>method)))</span>
-<span id="cb268-4"><a href="simulation.html#cb268-4" tabindex="-1"></a></span>
-<span id="cb268-5"><a href="simulation.html#cb268-5" tabindex="-1"></a><span class="fu">ggplot</span>(conf, <span class="fu">aes</span>(est, method, <span class="at">colour =</span> kind)) <span class="sc">+</span></span>
-<span id="cb268-6"><a href="simulation.html#cb268-6" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">&quot;22&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;grey35&quot;</span>) <span class="sc">+</span></span>
-<span id="cb268-7"><a href="simulation.html#cb268-7" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">height =</span> <span class="fl">0.25</span>, <span class="at">width =</span> <span class="dv">0</span>, <span class="at">alpha =</span> <span class="fl">0.35</span>, <span class="at">size =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb268-8"><a href="simulation.html#cb268-8" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> hues, <span class="at">guide =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb268-9"><a href="simulation.html#cb268-9" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;estimated slope (truth is 0)&quot;</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:simulation-shared-plot"></span>
+<div class="sourceCode" id="cb290"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">conf</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">sims</span>, <span class="va">scenario</span> <span class="op">==</span> <span class="st">"shared history"</span><span class="op">)</span></span>
+<span><span class="va">conf</span><span class="op">$</span><span class="va">kind</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu">kind_of</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">conf</span><span class="op">$</span><span class="va">method</span><span class="op">)</span><span class="op">)</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">hues</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">conf</span><span class="op">$</span><span class="va">method</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">conf</span><span class="op">$</span><span class="va">method</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rev.html">rev</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/levels.html">levels</a></span><span class="op">(</span><span class="va">sims</span><span class="op">$</span><span class="va">method</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">conf</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">est</span>, <span class="va">method</span>, colour <span class="op">=</span> <span class="va">kind</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_vline</a></span><span class="op">(</span>xintercept <span class="op">=</span> <span class="fl">0</span>, linetype <span class="op">=</span> <span class="st">"22"</span>, colour <span class="op">=</span> <span class="st">"grey35"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_jitter.html">geom_jitter</a></span><span class="op">(</span>height <span class="op">=</span> <span class="fl">0.25</span>, width <span class="op">=</span> <span class="fl">0</span>, alpha <span class="op">=</span> <span class="fl">0.35</span>, size <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_colour_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="va">hues</span>, guide <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"estimated slope (truth is 0)"</span>, y <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:simulation-shared-plot"></span>
 <span id="fig:simulation-shared-plot" style="display:block;"></span>
-<img src="figures/12-simulation/shared-plot-1.png" alt="Slope estimates in 100 worlds where the true slope is zero (dashed line) but predictor and outcome share one history. Every method lands near 0.7. Neither sampling nor a dependence model moves it by more than a few hundredths." width="710" />
-<p class="caption">
-Figure 12.4: Slope estimates in 100 worlds where the true slope is zero (dashed line) but predictor and outcome share one history. Every method lands near 0.7. Neither sampling nor a dependence model moves it by more than a few hundredths.
+<img src="figures/13-simulation/shared-plot-1.png" alt="Slope estimates in 100 worlds where the true slope is zero (dashed line) but predictor and outcome share one history. Every method lands near 0.7. Neither sampling nor a dependence model moves it by more than a few hundredths." width="710"><p class="caption">
+Figure 13.4: Slope estimates in 100 worlds where the true slope is zero (dashed line) but predictor and outcome share one history. Every method lands near 0.7. Neither sampling nor a dependence model moves it by more than a few hundredths.
 </p>
 </div>
 <p>This figure shows a problem that none of these methods is built to solve. Every one of them, sampling or modelling, treats the dependence between languages as a nuisance that inflates confidence, and none treats it as a <em>common cause</em> of the predictor and the outcome. When it is one, the slope is biased, and no rearrangement of the standard error helps. Every method here reports an effect in every one of the 100 worlds, and none of their intervals ever contains the truth.</p>
 <blockquote>
-<p><strong>What this assumes.</strong> A dependence model assumes that whatever is shared along the tree and the map is unrelated to the predictor. If highland languages have ejectives because of who settled the highlands, a phylogenetic or spatial term will absorb some of that and leave the rest in the slope <span class="citation">(<a href="#ref-hodges2010">Hodges and Reich 2010</a>)</span>. The remedy is to measure the common cause and put it in the regression; a better covariance matrix will not help.</p>
+<p><strong>What this assumes.</strong> A dependence model assumes that whatever is shared along the tree and the map is unrelated to the predictor. If highland languages have ejectives because of who settled the highlands, a phylogenetic or spatial term will absorb some of that and leave the rest in the slope <span class="citation">(<a href="references.html#ref-hodges2010">Hodges and Reich 2010</a>)</span>. The remedy is to measure the common cause and put it in the regression; a better covariance matrix will not help.</p>
 </blockquote>
 </div>
-<div id="make-it-your-own" class="section level2 hasAnchor" number="12.10">
-<h2><span class="header-section-number">12.10</span> Make it your own<a href="simulation.html#make-it-your-own" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="make-it-your-own" class="section level2" number="13.10">
+<h2>
+<span class="header-section-number">13.10</span> Make it your own<a class="anchor" aria-label="anchor" href="#make-it-your-own"><i class="fas fa-link"></i></a>
+</h2>
 <p>The simulation is three short functions, and each choice in them is one you can change.</p>
 <ul>
-<li><strong>How strong is the dependence?</strong> The <code>0.6</code> and <code>0.5</code> in <code>simulate_world()</code> are the standard deviations of the phylogenetic part, the spatial part and the noise. Set the spatial part to zero and the phylogenetic methods should become honest in the first scenario; try it.</li>
-<li><strong>How far does space reach?</strong> The <code>1000</code> in <code>S &lt;- exp(-km / 1000)</code> is the distance, in kilometres, at which spatial correlation has fallen to about a third.</li>
-<li><strong>Which methods?</strong> Add a row to <code>fit_all()</code>. A brms or INLA model works too, at the cost of time; for brms, compile once and refit each world with <code>update(fit, newdata = w)</code>.</li>
-<li><strong>A binary outcome?</strong> Replace the last line of <code>simulate_world()</code> with <code>w$y &lt;- rbinom(n, 1, plogis(-2 + beta * w$x + fy))</code> and switch the models to their logistic versions. Remember from Chapter <a href="phylogeny.html#phylogeny">3</a> that logistic slopes from models with and without latent effects are on different scales, so compare false-positive rates and coverage, not raw estimates.</li>
+<li>
+<strong>How strong is the dependence?</strong> The <code>0.6</code> and <code>0.5</code> in <code>simulate_world()</code> are the standard deviations of the phylogenetic part, the spatial part and the noise. Set the spatial part to zero and the phylogenetic methods should become honest in the first scenario; try it.</li>
+<li>
+<strong>How far does space reach?</strong> The <code>1000</code> in <code>S &lt;- exp(-km / 1000)</code> is the distance, in kilometres, at which spatial correlation has fallen to about a third.</li>
+<li>
+<strong>Which methods?</strong> Add a row to <code>fit_all()</code>. A brms or INLA model works too, at the cost of time; for brms, compile once and refit each world with <code>update(fit, newdata = w)</code>.</li>
+<li>
+<strong>A binary outcome?</strong> Replace the last line of <code>simulate_world()</code> with <code>w$y &lt;- rbinom(n, 1, plogis(-2 + beta * w$x + fy))</code> and switch the models to their logistic versions. Remember from Chapter <a href="phylogeny.html#phylogeny">3</a> that logistic slopes from models with and without latent effects are on different scales, so compare false-positive rates and coverage, not raw estimates.</li>
 </ul>
 <blockquote>
 <p><strong>With your own data.</strong> Swap in your own tree and coordinates and nothing else changes. Running this on your own sample before you analyse it tells you how much to trust each method <em>for your languages</em>, with your family sizes and your geography. The result is worth reporting in a methods section.</p>
 </blockquote>
 </div>
-<div id="what-to-carry-forward-11" class="section level2 hasAnchor" number="12.11">
-<h2><span class="header-section-number">12.11</span> What to carry forward<a href="simulation.html#what-to-carry-forward-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-to-carry-forward-12" class="section level2" number="13.11">
+<h2>
+<span class="header-section-number">13.11</span> What to carry forward<a class="anchor" aria-label="anchor" href="#what-to-carry-forward-12"><i class="fas fa-link"></i></a>
+</h2>
 <ul>
 <li>Simulating on the real tree and map, with a slope you chose, is the only way to see a method’s error rate. It takes three functions.</li>
 <li>With dependence on both sides, the naive regression finds effects that are not there far more often than 5% of the time.</li>
@@ -685,111 +469,71 @@ Figure 12.4: Slope estimates in 100 worlds where the true slope is zero (dashed 
 <li>No method here can separate an effect from a shared history. That takes measured covariates and an argument.</li>
 </ul>
 </div>
-<div id="further-reading-12" class="section level2 hasAnchor" number="12.12">
-<h2><span class="header-section-number">12.12</span> Further reading<a href="simulation.html#further-reading-12" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>How earlier studies implemented it.</strong> Simulation on a known tree is how phylogenetic comparative methods were validated from the start: <span class="citation">Revell (<a href="#ref-revell2010">2010</a>)</span> for PGLS, <span class="citation">Kissling and Carl (<a href="#ref-kissling2008">2008</a>)</span> for spatial regressions, and <span class="citation">Maddison and FitzJohn (<a href="#ref-maddison2015">2015</a>)</span> for the cases where the tests fail. In linguistics the companion simulation study to this book follows the same design at larger scale, with a simulated world of families and locations and the full set of brms and INLA models.</p>
+<div id="further-reading-13" class="section level2" number="13.12">
+<h2>
+<span class="header-section-number">13.12</span> Further reading<a class="anchor" aria-label="anchor" href="#further-reading-13"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>How earlier studies implemented it.</strong> Simulation on a known tree is how phylogenetic comparative methods were validated from the start: <span class="citation">Revell (<a href="references.html#ref-revell2010">2010</a>)</span> for PGLS, <span class="citation">Kissling and Carl (<a href="references.html#ref-kissling2008">2008</a>)</span> for spatial regressions, and <span class="citation">Maddison and FitzJohn (<a href="references.html#ref-maddison2015">2015</a>)</span> for the cases where the tests fail. In linguistics the companion simulation study to this book follows the same design at larger scale, with a simulated world of families and locations and the full set of brms and INLA models.</p>
 <p>Simulation studies are a method with standards of their own.</p>
 <ul>
-<li><strong>Designing and reporting one.</strong> <span class="citation">T. P. Morris et al. (<a href="#ref-morris2019sim">2019</a>)</span> is the standard guide: state the aims, the data-generating mechanisms, the estimands, the methods and the performance measures, and report Monte Carlo error. The percentages in this chapter rest on 100 worlds each and would need more for publication.</li>
-<li><strong>Checking a Bayesian model against itself.</strong> Simulation-based calibration <span class="citation">(<a href="#ref-talts2018">Talts et al. 2018</a>)</span> draws parameters from the prior, simulates data, fits the model and checks that the posteriors are calibrated. It is the right test for the brms models of Chapters <a href="phylogeny.html#phylogeny">3</a> to <a href="joint.html#joint">9</a> and is part of the workflow of <span class="citation">Gelman et al. (<a href="#ref-gelman2020">2020</a>)</span>.</li>
-<li><strong>Earlier simulations of these methods.</strong> <span class="citation">Revell (<a href="#ref-revell2010">2010</a>)</span> simulates PGLS under different amounts of phylogenetic signal; <span class="citation">Kissling and Carl (<a href="#ref-kissling2008">2008</a>)</span> does the same for spatial regressions; <span class="citation">Maddison and FitzJohn (<a href="#ref-maddison2015">2015</a>)</span> and <span class="citation">Uyeda et al. (<a href="#ref-uyeda2018">2018</a>)</span> construct cases where phylogenetic tests fail.</li>
-<li><strong>Shared causes.</strong> The last scenario is spatial confounding in its plainest form. <span class="citation">Hodges and Reich (<a href="#ref-hodges2010">2010</a>)</span> describe it, and <span class="citation">Hanks et al. (<a href="#ref-hanks2015">2015</a>)</span> and <span class="citation">Dupont et al. (<a href="#ref-dupont2022">2022</a>)</span> discuss what can and cannot be done about it.</li>
+<li>
+<strong>Designing and reporting one.</strong> <span class="citation">T. P. Morris et al. (<a href="references.html#ref-morris2019sim">2019</a>)</span> is the standard guide: state the aims, the data-generating mechanisms, the estimands, the methods and the performance measures, and report Monte Carlo error. The percentages in this chapter rest on 100 worlds each and would need more for publication.</li>
+<li>
+<strong>Checking a Bayesian model against itself.</strong> Simulation-based calibration <span class="citation">(<a href="references.html#ref-talts2018">Talts et al. 2018</a>)</span> draws parameters from the prior, simulates data, fits the model and checks that the posteriors are calibrated. It is the right test for the brms models of Chapters <a href="phylogeny.html#phylogeny">3</a> to <a href="joint.html#joint">9</a> and is part of the workflow of <span class="citation">Gelman et al. (<a href="references.html#ref-gelman2020">2020</a>)</span>.</li>
+<li>
+<strong>Earlier simulations of these methods.</strong> <span class="citation">Revell (<a href="references.html#ref-revell2010">2010</a>)</span> simulates PGLS under different amounts of phylogenetic signal; <span class="citation">Kissling and Carl (<a href="references.html#ref-kissling2008">2008</a>)</span> does the same for spatial regressions; <span class="citation">Maddison and FitzJohn (<a href="references.html#ref-maddison2015">2015</a>)</span> and <span class="citation">Uyeda et al. (<a href="references.html#ref-uyeda2018">2018</a>)</span> construct cases where phylogenetic tests fail.</li>
+<li>
+<strong>Shared causes.</strong> The last scenario is spatial confounding in its plainest form. <span class="citation">Hodges and Reich (<a href="references.html#ref-hodges2010">2010</a>)</span> describe it, and <span class="citation">Hanks et al. (<a href="references.html#ref-hanks2015">2015</a>)</span> and <span class="citation">Dupont et al. (<a href="references.html#ref-dupont2022">2022</a>)</span> discuss what can and cannot be done about it.</li>
+</ul>
+</div>
+</div>
+
+
+
+  <div class="chapter-nav">
+<div class="prev"><a href="sampling.html"><span class="header-section-number">12</span> Sampling instead of modelling</a></div>
+<div class="next"><a href="where-next.html"><span class="header-section-number">14</span> Where next</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#simulation"><span class="header-section-number">13</span> Does it recover the truth?</a></li>
+<li><a class="nav-link" href="#why-simulate"><span class="header-section-number">13.1</span> Why simulate</a></li>
+<li><a class="nav-link" href="#set-up-11"><span class="header-section-number">13.2</span> Set up</a></li>
+<li><a class="nav-link" href="#a-world-with-a-known-slope"><span class="header-section-number">13.3</span> A world with a known slope</a></li>
+<li><a class="nav-link" href="#seven-methods"><span class="header-section-number">13.4</span> Seven methods</a></li>
+<li><a class="nav-link" href="#one-world-looked-at-closely"><span class="header-section-number">13.5</span> One world, looked at closely</a></li>
+<li><a class="nav-link" href="#three-hundred-worlds"><span class="header-section-number">13.6</span> Three hundred worlds</a></li>
+<li><a class="nav-link" href="#no-effect-who-cries-wolf"><span class="header-section-number">13.7</span> No effect: who cries wolf?</a></li>
+<li><a class="nav-link" href="#a-true-effect-who-finds-it-and-how-precisely"><span class="header-section-number">13.8</span> A true effect: who finds it, and how precisely?</a></li>
+<li><a class="nav-link" href="#shared-history-the-limit-of-every-method"><span class="header-section-number">13.9</span> Shared history: the limit of every method</a></li>
+<li><a class="nav-link" href="#make-it-your-own"><span class="header-section-number">13.10</span> Make it your own</a></li>
+<li><a class="nav-link" href="#what-to-carry-forward-12"><span class="header-section-number">13.11</span> What to carry forward</a></li>
+<li><a class="nav-link" href="#further-reading-13"><span class="header-section-number">13.12</span> Further reading</a></li>
 </ul>
 
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
 </div>
+    </nav>
 </div>
-<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-dupont2022" class="csl-entry">
-Dupont, Emiko, Simon N. Wood, and Nicole H. Augustin. 2022. <span>“Spatial+: A Novel Approach to Spatial Confounding.”</span> <em>Biometrics</em> 78 (4): 1279–90.
-</div>
-<div id="ref-gelman2020" class="csl-entry">
-Gelman, Andrew, Aki Vehtari, Daniel Simpson, et al. 2020. <em>Bayesian Workflow</em>. arXiv:2011.01808.
-</div>
-<div id="ref-hanks2015" class="csl-entry">
-Hanks, Ephraim M., Erin M. Schliep, Mevin B. Hooten, and Jennifer A. Hoeting. 2015. <span>“Restricted Spatial Regression in Practice: Geostatistical Models, Confounding, and Robustness Under Model Misspecification.”</span> <em>Environmetrics</em> 26 (4): 243–54.
-</div>
-<div id="ref-hodges2010" class="csl-entry">
-Hodges, James S., and Brian J. Reich. 2010. <span>“Adding Spatially-Correlated Errors Can Mess up the Fixed Effect You Love.”</span> <em>The American Statistician</em> 64 (4): 325–34.
-</div>
-<div id="ref-kissling2008" class="csl-entry">
-Kissling, W. Daniel, and Gudrun Carl. 2008. <span>“Spatial Autocorrelation and the Selection of Simultaneous Autoregressive Models.”</span> <em>Global Ecology and Biogeography</em> 17 (1): 59–71.
-</div>
-<div id="ref-maddison2015" class="csl-entry">
-Maddison, Wayne P., and Richard G. FitzJohn. 2015. <span>“The Unsolved Challenge to Phylogenetic Correlation Tests for Categorical Characters.”</span> <em>Systematic Biology</em> 64 (1): 127–36.
-</div>
-<div id="ref-morris2019sim" class="csl-entry">
-Morris, Tim P., Ian R. White, and Michael J. Crowther. 2019. <span>“Using Simulation Studies to Evaluate Statistical Methods.”</span> <em>Statistics in Medicine</em> 38 (11): 2074–102.
-</div>
-<div id="ref-naroll1961" class="csl-entry">
-Naroll, Raoul. 1961. <span>“Two Solutions to <span>G</span>alton’s Problem.”</span> <em>Philosophy of Science</em> 28 (1): 15–39.
-</div>
-<div id="ref-revell2010" class="csl-entry">
-Revell, Liam J. 2010. <span>“Phylogenetic Signal and Linear Regression on Species Data.”</span> <em>Methods in Ecology and Evolution</em> 1 (4): 319–29.
-</div>
-<div id="ref-talts2018" class="csl-entry">
-Talts, Sean, Michael Betancourt, Daniel Simpson, Aki Vehtari, and Andrew Gelman. 2018. <em>Validating <span>B</span>ayesian Inference Algorithms with Simulation-Based Calibration</em>. arXiv:1804.06788.
-</div>
-<div id="ref-uyeda2018" class="csl-entry">
-Uyeda, Josef C., Rosana Zenil-Ferguson, and Matthew W. Pennell. 2018. <span>“Rethinking Phylogenetic Comparative Methods.”</span> <em>Systematic Biology</em> 67 (6): 1091–109.
-</div>
-</div>
-            </section>
 
-          </div>
-        </div>
-      </div>
-<a href="sampling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Relatives and Neighbours</strong>: Modelling phylogenetic and spatial autocorrelation in cross-linguistic data, with R packages only" was written by Muhammad Rehan. </p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-  "sharing": null,
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": null,
-    "text": null
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": null,
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "section",
-    "scroll_highlight": true
-  },
-  "toolbar": {
-    "position": "fixed"
-  }
-});
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -801,7 +545,22 @@ gitbook.start({
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
 </script>
 </body>
-
 </html>

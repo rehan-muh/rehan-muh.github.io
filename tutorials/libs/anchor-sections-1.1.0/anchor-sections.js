@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("div.hasAnchor.section[class*='level'] > :first-child").forEach(function(n){n.classList.contains("hasAnchor")||n.classList.add("hasAnchor"),n.parentElement.classList.remove("hasAnchor")})});
