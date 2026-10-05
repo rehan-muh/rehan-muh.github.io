@@ -189,9 +189,11 @@ div.csl-indent {
 <li class="chapter" data-level="2.4" data-path="trees.html"><a href="trees.html#look-at-it"><i class="fa fa-check"></i><b>2.4</b> Look at it</a></li>
 <li class="chapter" data-level="2.5" data-path="trees.html"><a href="trees.html#what-the-branch-lengths-mean"><i class="fa fa-check"></i><b>2.5</b> What the branch lengths mean</a></li>
 <li class="chapter" data-level="2.6" data-path="trees.html"><a href="trees.html#build-a-tree-from-a-table"><i class="fa fa-check"></i><b>2.6</b> Build a tree from a table</a></li>
-<li class="chapter" data-level="2.7" data-path="trees.html"><a href="trees.html#how-tree-like-is-a-feature"><i class="fa fa-check"></i><b>2.7</b> How tree-like is a feature?</a></li>
-<li class="chapter" data-level="2.8" data-path="trees.html"><a href="trees.html#what-to-carry-forward-1"><i class="fa fa-check"></i><b>2.8</b> What to carry forward</a></li>
-<li class="chapter" data-level="2.9" data-path="trees.html"><a href="trees.html#further-reading-2"><i class="fa fa-check"></i><b>2.9</b> Further reading</a></li>
+<li class="chapter" data-level="2.7" data-path="trees.html"><a href="trees.html#where-trees-come-from"><i class="fa fa-check"></i><b>2.7</b> Where trees come from</a></li>
+<li class="chapter" data-level="2.8" data-path="trees.html"><a href="trees.html#a-dated-tree-from-phlorest"><i class="fa fa-check"></i><b>2.8</b> A dated tree from Phlorest</a></li>
+<li class="chapter" data-level="2.9" data-path="trees.html"><a href="trees.html#how-tree-like-is-a-feature"><i class="fa fa-check"></i><b>2.9</b> How tree-like is a feature?</a></li>
+<li class="chapter" data-level="2.10" data-path="trees.html"><a href="trees.html#what-to-carry-forward-1"><i class="fa fa-check"></i><b>2.10</b> What to carry forward</a></li>
+<li class="chapter" data-level="2.11" data-path="trees.html"><a href="trees.html#further-reading-2"><i class="fa fa-check"></i><b>2.11</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="phylogeny.html"><a href="phylogeny.html"><i class="fa fa-check"></i><b>3</b> Phylogeny as a covariance matrix</a>
 <ul>
@@ -230,8 +232,11 @@ div.csl-indent {
 <li class="chapter" data-level="5.5" data-path="maps.html"><a href="maps.html#neighbours"><i class="fa fa-check"></i><b>5.5</b> Neighbours</a></li>
 <li class="chapter" data-level="5.6" data-path="maps.html"><a href="maps.html#from-a-graph-to-weights"><i class="fa fa-check"></i><b>5.6</b> From a graph to weights</a></li>
 <li class="chapter" data-level="5.7" data-path="maps.html"><a href="maps.html#how-far-does-similarity-reach"><i class="fa fa-check"></i><b>5.7</b> How far does similarity reach?</a></li>
-<li class="chapter" data-level="5.8" data-path="maps.html"><a href="maps.html#what-to-carry-forward-4"><i class="fa fa-check"></i><b>5.8</b> What to carry forward</a></li>
-<li class="chapter" data-level="5.9" data-path="maps.html"><a href="maps.html#further-reading-5"><i class="fa fa-check"></i><b>5.9</b> Further reading</a></li>
+<li class="chapter" data-level="5.8" data-path="maps.html"><a href="maps.html#where-locations-come-from"><i class="fa fa-check"></i><b>5.8</b> Where locations come from</a></li>
+<li class="chapter" data-level="5.9" data-path="maps.html"><a href="maps.html#speaker-areas-as-polygons"><i class="fa fa-check"></i><b>5.9</b> Speaker areas as polygons</a></li>
+<li class="chapter" data-level="5.10" data-path="maps.html"><a href="maps.html#what-a-location-leaves-out"><i class="fa fa-check"></i><b>5.10</b> What a location leaves out</a></li>
+<li class="chapter" data-level="5.11" data-path="maps.html"><a href="maps.html#what-to-carry-forward-4"><i class="fa fa-check"></i><b>5.11</b> What to carry forward</a></li>
+<li class="chapter" data-level="5.12" data-path="maps.html"><a href="maps.html#further-reading-5"><i class="fa fa-check"></i><b>5.12</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="space-surface.html"><a href="space-surface.html"><i class="fa fa-check"></i><b>6</b> Space as a smooth surface</a>
 <ul>
@@ -353,24 +358,24 @@ div.csl-indent {
 Spatial models need one of two things from your coordinates: distances between languages, or a list of who neighbours whom. Build both, and learn what each choice assumes.
 </p>
 <p class="chapter-meta">
-<span><b>Fitted with</b> sf, spdep</span><span><b>Model fitting</b> a few seconds</span><span><b>Packages</b> <code>sf</code> <code>spdep</code> <code>rnaturalearth</code> <code>ggplot2</code></span><span><a href="scripts/05-maps.R">Download the R script</a></span>
+<span><b>Fitted with</b> sf, spdep</span><span><b>Model fitting</b> about two minutes; the polygon section downloads 140 MB once</span><span><b>Packages</b> <code>sf</code> <code>spdep</code> <code>rnaturalearth</code> <code>ggplot2</code></span><span><a href="scripts/05-maps.R">Download the R script</a></span>
 </p>
 <div id="set-up-3" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Set up<a href="maps.html#set-up-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="maps.html#cb95-1" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb95-2"><a href="maps.html#cb95-2" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
-<span id="cb95-3"><a href="maps.html#cb95-3" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
-<span id="cb95-4"><a href="maps.html#cb95-4" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb95-5"><a href="maps.html#cb95-5" tabindex="-1"></a></span>
-<span id="cb95-6"><a href="maps.html#cb95-6" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
-<span id="cb95-7"><a href="maps.html#cb95-7" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
-<span id="cb95-8"><a href="maps.html#cb95-8" tabindex="-1"></a>d<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> d<span class="sc">$</span>elevation <span class="sc">/</span> <span class="dv">1000</span></span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="maps.html#cb108-1" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb108-2"><a href="maps.html#cb108-2" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
+<span id="cb108-3"><a href="maps.html#cb108-3" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb108-4"><a href="maps.html#cb108-4" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb108-5"><a href="maps.html#cb108-5" tabindex="-1"></a></span>
+<span id="cb108-6"><a href="maps.html#cb108-6" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="st">&quot;https://rehan-muh.github.io/tutorials/data/&quot;</span></span>
+<span id="cb108-7"><a href="maps.html#cb108-7" tabindex="-1"></a>d    <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(base, <span class="st">&quot;languages.csv&quot;</span>))</span>
+<span id="cb108-8"><a href="maps.html#cb108-8" tabindex="-1"></a>d<span class="sc">$</span>elev_km <span class="ot">&lt;-</span> d<span class="sc">$</span>elevation <span class="sc">/</span> <span class="dv">1000</span></span></code></pre></div>
 </div>
 <div id="languages-as-points" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Languages as points<a href="maps.html#languages-as-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The data give each language one longitude and one latitude. <code>st_as_sf()</code> turns those two columns into a spatial object, and <code>crs = 4326</code> says they are ordinary degrees on the globe.</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="maps.html#cb96-1" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(d, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>), <span class="at">crs =</span> <span class="dv">4326</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb96-2"><a href="maps.html#cb96-2" tabindex="-1"></a>pts[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="fu">c</span>(<span class="st">&quot;name&quot;</span>, <span class="st">&quot;family&quot;</span>, <span class="st">&quot;geometry&quot;</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="maps.html#cb109-1" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(d, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>), <span class="at">crs =</span> <span class="dv">4326</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb109-2"><a href="maps.html#cb109-2" tabindex="-1"></a>pts[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="fu">c</span>(<span class="st">&quot;name&quot;</span>, <span class="st">&quot;family&quot;</span>, <span class="st">&quot;geometry&quot;</span>)]</span></code></pre></div>
 <pre><code>## Simple feature collection with 3 features and 2 fields
 ## Geometry type: POINT
 ## Dimension:     XY
@@ -385,20 +390,20 @@ Spatial models need one of two things from your coordinates: distances between l
 <div id="distances" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Distances<a href="maps.html#distances" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Distance on a globe is measured along great circles. <code>st_distance()</code> does it for <code>sf</code> points and <code>sp::spDists()</code> returns a plain matrix in kilometres, which is the more convenient form.</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="maps.html#cb98-1" tabindex="-1"></a>coords <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)])</span>
-<span id="cb98-2"><a href="maps.html#cb98-2" tabindex="-1"></a>km <span class="ot">&lt;-</span> sp<span class="sc">::</span><span class="fu">spDists</span>(coords, <span class="at">longlat =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb98-3"><a href="maps.html#cb98-3" tabindex="-1"></a><span class="fu">dimnames</span>(km) <span class="ot">&lt;-</span> <span class="fu">list</span>(d<span class="sc">$</span>name, d<span class="sc">$</span>name)</span>
-<span id="cb98-4"><a href="maps.html#cb98-4" tabindex="-1"></a></span>
-<span id="cb98-5"><a href="maps.html#cb98-5" tabindex="-1"></a>show <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Tigrinya&quot;</span>, <span class="st">&quot;Harari&quot;</span>, <span class="st">&quot;Zulu&quot;</span>, <span class="st">&quot;Central Aymara&quot;</span>)</span>
-<span id="cb98-6"><a href="maps.html#cb98-6" tabindex="-1"></a><span class="fu">round</span>(km[show, show])</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="maps.html#cb111-1" tabindex="-1"></a>coords <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d[, <span class="fu">c</span>(<span class="st">&quot;lon&quot;</span>, <span class="st">&quot;lat&quot;</span>)])</span>
+<span id="cb111-2"><a href="maps.html#cb111-2" tabindex="-1"></a>km <span class="ot">&lt;-</span> sp<span class="sc">::</span><span class="fu">spDists</span>(coords, <span class="at">longlat =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb111-3"><a href="maps.html#cb111-3" tabindex="-1"></a><span class="fu">dimnames</span>(km) <span class="ot">&lt;-</span> <span class="fu">list</span>(d<span class="sc">$</span>name, d<span class="sc">$</span>name)</span>
+<span id="cb111-4"><a href="maps.html#cb111-4" tabindex="-1"></a></span>
+<span id="cb111-5"><a href="maps.html#cb111-5" tabindex="-1"></a>show <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Tigrinya&quot;</span>, <span class="st">&quot;Harari&quot;</span>, <span class="st">&quot;Zulu&quot;</span>, <span class="st">&quot;Central Aymara&quot;</span>)</span>
+<span id="cb111-6"><a href="maps.html#cb111-6" tabindex="-1"></a><span class="fu">round</span>(km[show, show])</span></code></pre></div>
 <pre><code>##                Tigrinya Harari Zulu Central Aymara
 ## Tigrinya              0    753 4984          12318
 ## Harari              753      0 4417          12500
 ## Zulu               4984   4417    0           9929
 ## Central Aymara    12318  12500 9929              0</code></pre>
 <p>Next, find how far each language is from its nearest neighbour in the sample.</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="maps.html#cb100-1" tabindex="-1"></a>nearest <span class="ot">&lt;-</span> <span class="fu">apply</span>(km <span class="sc">+</span> <span class="fu">diag</span>(<span class="cn">Inf</span>, <span class="fu">nrow</span>(km)), <span class="dv">1</span>, min)</span>
-<span id="cb100-2"><a href="maps.html#cb100-2" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(nearest, <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="dv">1</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="maps.html#cb113-1" tabindex="-1"></a>nearest <span class="ot">&lt;-</span> <span class="fu">apply</span>(km <span class="sc">+</span> <span class="fu">diag</span>(<span class="cn">Inf</span>, <span class="fu">nrow</span>(km)), <span class="dv">1</span>, min)</span>
+<span id="cb113-2"><a href="maps.html#cb113-2" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(nearest, <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="dv">1</span>)))</span></code></pre></div>
 <pre><code>##   0%  25%  50%  75% 100% 
 ##    5   75  138  275 1508</code></pre>
 <p>The sample is very uneven: half the languages have another within about 140 km, and the most isolated is 1,500 km from anything. Every spatial model has to cope with that, and they cope in different ways.</p>
@@ -406,22 +411,22 @@ Spatial models need one of two things from your coordinates: distances between l
 <div id="flat-maps-and-their-cost" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Flat maps and their cost<a href="maps.html#flat-maps-and-their-cost" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Some models (the Gaussian process of Chapter <a href="space-surface.html#space-surface">6</a>) want coordinates in which ordinary straight-line distance means something. Degrees will not do: a degree of longitude is 111 km at the equator and 56 km at 60° north. The fix is to project. Equal Earth is a reasonable projection for the whole world.</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="maps.html#cb102-1" tabindex="-1"></a>xy <span class="ot">&lt;-</span> <span class="fu">st_coordinates</span>(<span class="fu">st_transform</span>(pts, <span class="st">&quot;+proj=eqearth&quot;</span>)) <span class="sc">/</span> <span class="dv">1000</span>   <span class="co"># km</span></span>
-<span id="cb102-2"><a href="maps.html#cb102-2" tabindex="-1"></a>flat_km <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">dist</span>(xy))</span>
-<span id="cb102-3"><a href="maps.html#cb102-3" tabindex="-1"></a></span>
-<span id="cb102-4"><a href="maps.html#cb102-4" tabindex="-1"></a>close <span class="ot">&lt;-</span> km <span class="sc">&lt;</span> <span class="dv">3000</span> <span class="sc">&amp;</span> <span class="fu">upper.tri</span>(km)</span>
-<span id="cb102-5"><a href="maps.html#cb102-5" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(flat_km[close] <span class="sc">/</span> km[close], <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.5</span>, <span class="fl">0.95</span>)), <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="maps.html#cb115-1" tabindex="-1"></a>xy <span class="ot">&lt;-</span> <span class="fu">st_coordinates</span>(<span class="fu">st_transform</span>(pts, <span class="st">&quot;+proj=eqearth&quot;</span>)) <span class="sc">/</span> <span class="dv">1000</span>   <span class="co"># km</span></span>
+<span id="cb115-2"><a href="maps.html#cb115-2" tabindex="-1"></a>flat_km <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(<span class="fu">dist</span>(xy))</span>
+<span id="cb115-3"><a href="maps.html#cb115-3" tabindex="-1"></a></span>
+<span id="cb115-4"><a href="maps.html#cb115-4" tabindex="-1"></a>close <span class="ot">&lt;-</span> km <span class="sc">&lt;</span> <span class="dv">3000</span> <span class="sc">&amp;</span> <span class="fu">upper.tri</span>(km)</span>
+<span id="cb115-5"><a href="maps.html#cb115-5" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(flat_km[close] <span class="sc">/</span> km[close], <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.5</span>, <span class="fl">0.95</span>)), <span class="dv">2</span>)</span></code></pre></div>
 <pre><code>##   5%  50%  95% 
 ## 0.86 0.97 1.17</code></pre>
 <p>For pairs of languages within 3,000 km, the distance on the flat map is mostly within about 15% of the true one. The error comes mostly at high latitudes and across the cut at the 180th meridian, where Alaska and Chukotka end up on opposite edges.</p>
 <p>Methods that work on the sphere need no projection. They take either degrees directly or the position of each language as a point on a unit sphere:</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="maps.html#cb104-1" tabindex="-1"></a>to_sphere <span class="ot">&lt;-</span> <span class="cf">function</span>(lon, lat) {</span>
-<span id="cb104-2"><a href="maps.html#cb104-2" tabindex="-1"></a>  rad <span class="ot">&lt;-</span> pi <span class="sc">/</span> <span class="dv">180</span></span>
-<span id="cb104-3"><a href="maps.html#cb104-3" tabindex="-1"></a>  <span class="fu">cbind</span>(<span class="at">x =</span> <span class="fu">cos</span>(lat <span class="sc">*</span> rad) <span class="sc">*</span> <span class="fu">cos</span>(lon <span class="sc">*</span> rad),</span>
-<span id="cb104-4"><a href="maps.html#cb104-4" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">cos</span>(lat <span class="sc">*</span> rad) <span class="sc">*</span> <span class="fu">sin</span>(lon <span class="sc">*</span> rad),</span>
-<span id="cb104-5"><a href="maps.html#cb104-5" tabindex="-1"></a>        <span class="at">z =</span> <span class="fu">sin</span>(lat <span class="sc">*</span> rad))</span>
-<span id="cb104-6"><a href="maps.html#cb104-6" tabindex="-1"></a>}</span>
-<span id="cb104-7"><a href="maps.html#cb104-7" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">round</span>(<span class="fu">to_sphere</span>(d<span class="sc">$</span>lon, d<span class="sc">$</span>lat), <span class="dv">3</span>), <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="maps.html#cb117-1" tabindex="-1"></a>to_sphere <span class="ot">&lt;-</span> <span class="cf">function</span>(lon, lat) {</span>
+<span id="cb117-2"><a href="maps.html#cb117-2" tabindex="-1"></a>  rad <span class="ot">&lt;-</span> pi <span class="sc">/</span> <span class="dv">180</span></span>
+<span id="cb117-3"><a href="maps.html#cb117-3" tabindex="-1"></a>  <span class="fu">cbind</span>(<span class="at">x =</span> <span class="fu">cos</span>(lat <span class="sc">*</span> rad) <span class="sc">*</span> <span class="fu">cos</span>(lon <span class="sc">*</span> rad),</span>
+<span id="cb117-4"><a href="maps.html#cb117-4" tabindex="-1"></a>        <span class="at">y =</span> <span class="fu">cos</span>(lat <span class="sc">*</span> rad) <span class="sc">*</span> <span class="fu">sin</span>(lon <span class="sc">*</span> rad),</span>
+<span id="cb117-5"><a href="maps.html#cb117-5" tabindex="-1"></a>        <span class="at">z =</span> <span class="fu">sin</span>(lat <span class="sc">*</span> rad))</span>
+<span id="cb117-6"><a href="maps.html#cb117-6" tabindex="-1"></a>}</span>
+<span id="cb117-7"><a href="maps.html#cb117-7" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">round</span>(<span class="fu">to_sphere</span>(d<span class="sc">$</span>lon, d<span class="sc">$</span>lat), <span class="dv">3</span>), <span class="dv">3</span>)</span></code></pre></div>
 <pre><code>##          x     y     z
 ## [1,] 0.556 0.456 0.695
 ## [2,] 0.766 0.570 0.296
@@ -430,22 +435,22 @@ Spatial models need one of two things from your coordinates: distances between l
 <div id="neighbours" class="section level2 hasAnchor" number="5.5">
 <h2><span class="header-section-number">5.5</span> Neighbours<a href="maps.html#neighbours" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The other family of models (Chapter <a href="space-neighbours.html#space-neighbours">7</a>) never looks at a distance. It needs a graph that says which languages count as neighbours. For points there is no natural answer, so you choose a rule. Three common ones:</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="maps.html#cb106-1" tabindex="-1"></a><span class="co"># 1. the k nearest languages, made mutual</span></span>
-<span id="cb106-2"><a href="maps.html#cb106-2" tabindex="-1"></a>knn <span class="ot">&lt;-</span> <span class="fu">make.sym.nb</span>(<span class="fu">knn2nb</span>(<span class="fu">knearneigh</span>(coords, <span class="at">k =</span> <span class="dv">5</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>)))</span>
-<span id="cb106-3"><a href="maps.html#cb106-3" tabindex="-1"></a></span>
-<span id="cb106-4"><a href="maps.html#cb106-4" tabindex="-1"></a><span class="co"># 2. every language within a fixed distance</span></span>
-<span id="cb106-5"><a href="maps.html#cb106-5" tabindex="-1"></a>band <span class="ot">&lt;-</span> <span class="fu">dnearneigh</span>(coords, <span class="dv">0</span>, <span class="dv">500</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb106-6"><a href="maps.html#cb106-6" tabindex="-1"></a></span>
-<span id="cb106-7"><a href="maps.html#cb106-7" tabindex="-1"></a><span class="co"># 3. natural neighbours: a triangulation of the points</span></span>
-<span id="cb106-8"><a href="maps.html#cb106-8" tabindex="-1"></a>tri <span class="ot">&lt;-</span> <span class="fu">tri2nb</span>(coords)</span>
-<span id="cb106-9"><a href="maps.html#cb106-9" tabindex="-1"></a></span>
-<span id="cb106-10"><a href="maps.html#cb106-10" tabindex="-1"></a>compare <span class="ot">&lt;-</span> <span class="cf">function</span>(nb) {</span>
-<span id="cb106-11"><a href="maps.html#cb106-11" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">links_per_language =</span> <span class="fu">round</span>(<span class="fu">mean</span>(<span class="fu">card</span>(nb)), <span class="dv">1</span>),</span>
-<span id="cb106-12"><a href="maps.html#cb106-12" tabindex="-1"></a>    <span class="at">without_neighbours =</span> <span class="fu">sum</span>(<span class="fu">card</span>(nb) <span class="sc">==</span> <span class="dv">0</span>),</span>
-<span id="cb106-13"><a href="maps.html#cb106-13" tabindex="-1"></a>    <span class="at">separate_pieces    =</span> <span class="fu">n.comp.nb</span>(nb)<span class="sc">$</span>nc)</span>
-<span id="cb106-14"><a href="maps.html#cb106-14" tabindex="-1"></a>}</span>
-<span id="cb106-15"><a href="maps.html#cb106-15" tabindex="-1"></a><span class="fu">rbind</span>(<span class="st">&quot;5 nearest&quot;</span> <span class="ot">=</span> <span class="fu">compare</span>(knn), <span class="st">&quot;within 500 km&quot;</span> <span class="ot">=</span> <span class="fu">compare</span>(band),</span>
-<span id="cb106-16"><a href="maps.html#cb106-16" tabindex="-1"></a>      <span class="st">&quot;triangulation&quot;</span> <span class="ot">=</span> <span class="fu">compare</span>(tri))</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="maps.html#cb119-1" tabindex="-1"></a><span class="co"># 1. the k nearest languages, made mutual</span></span>
+<span id="cb119-2"><a href="maps.html#cb119-2" tabindex="-1"></a>knn <span class="ot">&lt;-</span> <span class="fu">make.sym.nb</span>(<span class="fu">knn2nb</span>(<span class="fu">knearneigh</span>(coords, <span class="at">k =</span> <span class="dv">5</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb119-3"><a href="maps.html#cb119-3" tabindex="-1"></a></span>
+<span id="cb119-4"><a href="maps.html#cb119-4" tabindex="-1"></a><span class="co"># 2. every language within a fixed distance</span></span>
+<span id="cb119-5"><a href="maps.html#cb119-5" tabindex="-1"></a>band <span class="ot">&lt;-</span> <span class="fu">dnearneigh</span>(coords, <span class="dv">0</span>, <span class="dv">500</span>, <span class="at">longlat =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb119-6"><a href="maps.html#cb119-6" tabindex="-1"></a></span>
+<span id="cb119-7"><a href="maps.html#cb119-7" tabindex="-1"></a><span class="co"># 3. natural neighbours: a triangulation of the points</span></span>
+<span id="cb119-8"><a href="maps.html#cb119-8" tabindex="-1"></a>tri <span class="ot">&lt;-</span> <span class="fu">tri2nb</span>(coords)</span>
+<span id="cb119-9"><a href="maps.html#cb119-9" tabindex="-1"></a></span>
+<span id="cb119-10"><a href="maps.html#cb119-10" tabindex="-1"></a>compare <span class="ot">&lt;-</span> <span class="cf">function</span>(nb) {</span>
+<span id="cb119-11"><a href="maps.html#cb119-11" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">links_per_language =</span> <span class="fu">round</span>(<span class="fu">mean</span>(<span class="fu">card</span>(nb)), <span class="dv">1</span>),</span>
+<span id="cb119-12"><a href="maps.html#cb119-12" tabindex="-1"></a>    <span class="at">without_neighbours =</span> <span class="fu">sum</span>(<span class="fu">card</span>(nb) <span class="sc">==</span> <span class="dv">0</span>),</span>
+<span id="cb119-13"><a href="maps.html#cb119-13" tabindex="-1"></a>    <span class="at">separate_pieces    =</span> <span class="fu">n.comp.nb</span>(nb)<span class="sc">$</span>nc)</span>
+<span id="cb119-14"><a href="maps.html#cb119-14" tabindex="-1"></a>}</span>
+<span id="cb119-15"><a href="maps.html#cb119-15" tabindex="-1"></a><span class="fu">rbind</span>(<span class="st">&quot;5 nearest&quot;</span> <span class="ot">=</span> <span class="fu">compare</span>(knn), <span class="st">&quot;within 500 km&quot;</span> <span class="ot">=</span> <span class="fu">compare</span>(band),</span>
+<span id="cb119-16"><a href="maps.html#cb119-16" tabindex="-1"></a>      <span class="st">&quot;triangulation&quot;</span> <span class="ot">=</span> <span class="fu">compare</span>(tri))</span></code></pre></div>
 <pre><code>##               links_per_language without_neighbours separate_pieces
 ## 5 nearest                    6.4                  0               1
 ## within 500 km                9.1                 44              85
@@ -456,16 +461,16 @@ Spatial models need one of two things from your coordinates: distances between l
 <li>A distance band is the most natural idea and the most troublesome in a world sample. Languages in dense regions get dozens of links, isolated ones get none, and the graph falls into many pieces. The models of Chapter <a href="space-neighbours.html#space-neighbours">7</a> need one piece.</li>
 <li>A triangulation always gives one piece and needs no tuning. It also draws long links across oceans, and because it works on raw degrees it treats the map as flat.</li>
 </ul>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="maps.html#cb108-1" tabindex="-1"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="st">&quot;small&quot;</span>, <span class="at">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span>
-<span id="cb108-2"><a href="maps.html#cb108-2" tabindex="-1"></a>wrap  <span class="ot">&lt;-</span> <span class="cf">function</span>(nb) <span class="fu">st_wrap_dateline</span>(<span class="fu">nb2lines</span>(nb, <span class="at">coords =</span> <span class="fu">st_geometry</span>(pts)),</span>
-<span id="cb108-3"><a href="maps.html#cb108-3" tabindex="-1"></a>                                       <span class="at">options =</span> <span class="fu">c</span>(<span class="st">&quot;WRAPDATELINE=YES&quot;</span>,</span>
-<span id="cb108-4"><a href="maps.html#cb108-4" tabindex="-1"></a>                                                   <span class="st">&quot;DATELINEOFFSET=60&quot;</span>))</span>
-<span id="cb108-5"><a href="maps.html#cb108-5" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb108-6"><a href="maps.html#cb108-6" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> world, <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
-<span id="cb108-7"><a href="maps.html#cb108-7" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">wrap</span>(knn), <span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.25</span>) <span class="sc">+</span></span>
-<span id="cb108-8"><a href="maps.html#cb108-8" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">wrap</span>(band), <span class="at">colour =</span> <span class="st">&quot;#EB6834&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.2</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb108-9"><a href="maps.html#cb108-9" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> pts, <span class="at">size =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
-<span id="cb108-10"><a href="maps.html#cb108-10" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=eqearth&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="maps.html#cb121-1" tabindex="-1"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">scale =</span> <span class="st">&quot;small&quot;</span>, <span class="at">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span>
+<span id="cb121-2"><a href="maps.html#cb121-2" tabindex="-1"></a>wrap  <span class="ot">&lt;-</span> <span class="cf">function</span>(nb) <span class="fu">st_wrap_dateline</span>(<span class="fu">nb2lines</span>(nb, <span class="at">coords =</span> <span class="fu">st_geometry</span>(pts)),</span>
+<span id="cb121-3"><a href="maps.html#cb121-3" tabindex="-1"></a>                                       <span class="at">options =</span> <span class="fu">c</span>(<span class="st">&quot;WRAPDATELINE=YES&quot;</span>,</span>
+<span id="cb121-4"><a href="maps.html#cb121-4" tabindex="-1"></a>                                                   <span class="st">&quot;DATELINEOFFSET=60&quot;</span>))</span>
+<span id="cb121-5"><a href="maps.html#cb121-5" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb121-6"><a href="maps.html#cb121-6" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> world, <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb121-7"><a href="maps.html#cb121-7" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">wrap</span>(knn), <span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.25</span>) <span class="sc">+</span></span>
+<span id="cb121-8"><a href="maps.html#cb121-8" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">wrap</span>(band), <span class="at">colour =</span> <span class="st">&quot;#EB6834&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.2</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb121-9"><a href="maps.html#cb121-9" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> pts, <span class="at">size =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
+<span id="cb121-10"><a href="maps.html#cb121-10" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=eqearth&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:maps-graph-map"></span>
 <span id="fig:maps-graph-map" style="display:block;"></span>
 <img src="figures/05-maps/graph-map-1.png" alt="Two neighbour graphs on the same languages: the five nearest (blue) and everything within 500 km (orange). The distance band leaves much of the world unconnected." width="710" />
@@ -480,16 +485,16 @@ Figure 5.1: Two neighbour graphs on the same languages: the five nearest (blue) 
 <div id="from-a-graph-to-weights" class="section level2 hasAnchor" number="5.6">
 <h2><span class="header-section-number">5.6</span> From a graph to weights<a href="maps.html#from-a-graph-to-weights" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Models use the graph as a matrix. There are two conventions and they are not interchangeable.</p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="maps.html#cb109-1" tabindex="-1"></a>W_binary <span class="ot">&lt;-</span> <span class="fu">nb2mat</span>(knn, <span class="at">style =</span> <span class="st">&quot;B&quot;</span>)   <span class="co"># 1 for a neighbour, 0 otherwise</span></span>
-<span id="cb109-2"><a href="maps.html#cb109-2" tabindex="-1"></a>W_rows   <span class="ot">&lt;-</span> <span class="fu">nb2mat</span>(knn, <span class="at">style =</span> <span class="st">&quot;W&quot;</span>)   <span class="co"># each row divided by its row sum</span></span>
-<span id="cb109-3"><a href="maps.html#cb109-3" tabindex="-1"></a></span>
-<span id="cb109-4"><a href="maps.html#cb109-4" tabindex="-1"></a>W_binary[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="maps.html#cb122-1" tabindex="-1"></a>W_binary <span class="ot">&lt;-</span> <span class="fu">nb2mat</span>(knn, <span class="at">style =</span> <span class="st">&quot;B&quot;</span>)   <span class="co"># 1 for a neighbour, 0 otherwise</span></span>
+<span id="cb122-2"><a href="maps.html#cb122-2" tabindex="-1"></a>W_rows   <span class="ot">&lt;-</span> <span class="fu">nb2mat</span>(knn, <span class="at">style =</span> <span class="st">&quot;W&quot;</span>)   <span class="co"># each row divided by its row sum</span></span>
+<span id="cb122-3"><a href="maps.html#cb122-3" tabindex="-1"></a></span>
+<span id="cb122-4"><a href="maps.html#cb122-4" tabindex="-1"></a>W_binary[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span></code></pre></div>
 <pre><code>##   1 2 3 4
 ## 1 0 0 0 0
 ## 2 0 0 0 0
 ## 3 0 0 0 1
 ## 4 0 0 1 0</code></pre>
-<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="maps.html#cb111-1" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">rowSums</span>(W_rows)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="maps.html#cb124-1" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">rowSums</span>(W_rows)[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## 1 2 3 4 
 ## 1 1 1 1</code></pre>
 <p>The binary matrix is what the conditional autoregressive models of Chapter <a href="space-neighbours.html#space-neighbours">7</a> take. The row-standardised one, usually stored as a list with <code>nb2listw()</code>, is what Moran’s I and the simultaneous autoregressive models of Chapter <a href="space-engines.html#space-engines">8</a> take. With row standardisation a language’s neighbours always sum to one, so a language with two neighbours listens to each of them more than a language with ten.</p>
@@ -497,20 +502,20 @@ Figure 5.1: Two neighbour graphs on the same languages: the five nearest (blue) 
 <div id="how-far-does-similarity-reach" class="section level2 hasAnchor" number="5.7">
 <h2><span class="header-section-number">5.7</span> How far does similarity reach?<a href="maps.html#how-far-does-similarity-reach" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Chapter <a href="the-problem.html#the-problem">1</a> computed Moran’s I for immediate neighbours. A correlogram repeats the calculation for neighbours of neighbours, and theirs, and so on, which shows how quickly similarity fades with graph distance.</p>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="maps.html#cb113-1" tabindex="-1"></a>m0  <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> d)</span>
-<span id="cb113-2"><a href="maps.html#cb113-2" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">residuals</span>(m0, <span class="at">type =</span> <span class="st">&quot;pearson&quot;</span>)</span>
-<span id="cb113-3"><a href="maps.html#cb113-3" tabindex="-1"></a></span>
-<span id="cb113-4"><a href="maps.html#cb113-4" tabindex="-1"></a>cg <span class="ot">&lt;-</span> <span class="fu">sp.correlogram</span>(knn, res, <span class="at">order =</span> <span class="dv">6</span>, <span class="at">method =</span> <span class="st">&quot;I&quot;</span>, <span class="at">style =</span> <span class="st">&quot;W&quot;</span>)</span>
-<span id="cb113-5"><a href="maps.html#cb113-5" tabindex="-1"></a>steps <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">step =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">I =</span> cg<span class="sc">$</span>res[, <span class="dv">1</span>], <span class="at">se =</span> <span class="fu">sqrt</span>(cg<span class="sc">$</span>res[, <span class="dv">3</span>]))</span>
-<span id="cb113-6"><a href="maps.html#cb113-6" tabindex="-1"></a></span>
-<span id="cb113-7"><a href="maps.html#cb113-7" tabindex="-1"></a><span class="fu">ggplot</span>(steps, <span class="fu">aes</span>(step, I)) <span class="sc">+</span></span>
-<span id="cb113-8"><a href="maps.html#cb113-8" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">&quot;22&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;grey35&quot;</span>) <span class="sc">+</span></span>
-<span id="cb113-9"><a href="maps.html#cb113-9" tabindex="-1"></a>  <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> I <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> se, <span class="at">ymax =</span> I <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> se),</span>
-<span id="cb113-10"><a href="maps.html#cb113-10" tabindex="-1"></a>                 <span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb113-11"><a href="maps.html#cb113-11" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">size =</span> <span class="fl">2.6</span>) <span class="sc">+</span></span>
-<span id="cb113-12"><a href="maps.html#cb113-12" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) <span class="sc">+</span></span>
-<span id="cb113-13"><a href="maps.html#cb113-13" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;steps apart on the neighbour graph&quot;</span>,</span>
-<span id="cb113-14"><a href="maps.html#cb113-14" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Moran&#39;s I of the residuals&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="maps.html#cb126-1" tabindex="-1"></a>m0  <span class="ot">&lt;-</span> <span class="fu">glm</span>(ejectives <span class="sc">~</span> elev_km, <span class="at">family =</span> binomial, <span class="at">data =</span> d)</span>
+<span id="cb126-2"><a href="maps.html#cb126-2" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">residuals</span>(m0, <span class="at">type =</span> <span class="st">&quot;pearson&quot;</span>)</span>
+<span id="cb126-3"><a href="maps.html#cb126-3" tabindex="-1"></a></span>
+<span id="cb126-4"><a href="maps.html#cb126-4" tabindex="-1"></a>cg <span class="ot">&lt;-</span> <span class="fu">sp.correlogram</span>(knn, res, <span class="at">order =</span> <span class="dv">6</span>, <span class="at">method =</span> <span class="st">&quot;I&quot;</span>, <span class="at">style =</span> <span class="st">&quot;W&quot;</span>)</span>
+<span id="cb126-5"><a href="maps.html#cb126-5" tabindex="-1"></a>steps <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">step =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">I =</span> cg<span class="sc">$</span>res[, <span class="dv">1</span>], <span class="at">se =</span> <span class="fu">sqrt</span>(cg<span class="sc">$</span>res[, <span class="dv">3</span>]))</span>
+<span id="cb126-6"><a href="maps.html#cb126-6" tabindex="-1"></a></span>
+<span id="cb126-7"><a href="maps.html#cb126-7" tabindex="-1"></a><span class="fu">ggplot</span>(steps, <span class="fu">aes</span>(step, I)) <span class="sc">+</span></span>
+<span id="cb126-8"><a href="maps.html#cb126-8" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">&quot;22&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;grey35&quot;</span>) <span class="sc">+</span></span>
+<span id="cb126-9"><a href="maps.html#cb126-9" tabindex="-1"></a>  <span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> I <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> se, <span class="at">ymax =</span> I <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> se),</span>
+<span id="cb126-10"><a href="maps.html#cb126-10" tabindex="-1"></a>                 <span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb126-11"><a href="maps.html#cb126-11" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">size =</span> <span class="fl">2.6</span>) <span class="sc">+</span></span>
+<span id="cb126-12"><a href="maps.html#cb126-12" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) <span class="sc">+</span></span>
+<span id="cb126-13"><a href="maps.html#cb126-13" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;steps apart on the neighbour graph&quot;</span>,</span>
+<span id="cb126-14"><a href="maps.html#cb126-14" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Moran&#39;s I of the residuals&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:maps-correlogram"></span>
 <span id="fig:maps-correlogram" style="display:block;"></span>
 <img src="figures/05-maps/correlogram-1.png" alt="Moran's I of the naive model's residuals for neighbours one to six steps apart on the five-nearest-neighbour graph, with two standard errors either side. Similarity is strongest between direct neighbours and is still present several steps away." width="710" />
@@ -523,8 +528,143 @@ Figure 5.2: Moran’s I of the naive model’s residuals for neighbours one to s
 <p><strong>With your own data.</strong> If your units are areas, read the polygons with <code>st_read()</code> and call <code>poly2nb()</code> to link areas that share a border; everything from <code>nb</code> onward is the same. If your sample covers one region, project to a local system (a UTM zone, or an equal-area projection centred on your region) and the flat-map error all but disappears.</p>
 </blockquote>
 </div>
-<div id="what-to-carry-forward-4" class="section level2 hasAnchor" number="5.8">
-<h2><span class="header-section-number">5.8</span> What to carry forward<a href="maps.html#what-to-carry-forward-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="where-locations-come-from" class="section level2 hasAnchor" number="5.8">
+<h2><span class="header-section-number">5.8</span> Where locations come from<a href="maps.html#where-locations-come-from" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The coordinates in this book are Glottolog’s. They are the usual choice, and there are others.</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">What it gives</th>
+<th align="left">How to get it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Glottolog <span class="citation">(<a href="#ref-glottolog">Hammarström et al., n.d.</a>)</span></td>
+<td align="left">One point per language</td>
+<td align="left"><code>languages.csv</code> in its CLDF release; the <code>lingtypology</code> package <span class="citation">(<a href="#ref-moroz2017">Moroz 2017</a>)</span></td>
+</tr>
+<tr class="even">
+<td align="left">WALS, Grambank, PHOIBLE and other CLDF datasets</td>
+<td align="left">The same points, shipped with the data</td>
+<td align="left">The <code>languages.csv</code> of each dataset</td>
+</tr>
+<tr class="odd">
+<td align="left">Glottography <span class="citation">(<a href="#ref-glottography">Glottography, n.d.</a>)</span></td>
+<td align="left">Speaker-area polygons digitised from published atlases and matched to Glottocodes</td>
+<td align="left">The <code>Rglottography</code> package, or the GeoJSON files directly</td>
+</tr>
+<tr class="even">
+<td align="left">Ethnologue <span class="citation">(<a href="#ref-ethnologue">Eberhard et al. 2023</a>)</span></td>
+<td align="left">Polygons for most languages</td>
+<td align="left">Under licence only</td>
+</tr>
+<tr class="odd">
+<td align="left">Glottolog, AUTOTYP <span class="citation">(<a href="#ref-autotyp2023">Bickel et al. 2023</a>)</span>, WALS</td>
+<td align="left">Areas as categories: macroareas and continental areas</td>
+<td align="left">A column in each database</td>
+</tr>
+</tbody>
+</table>
+<p>Glottography is the open source of polygons. Its largest dataset digitises the <em>Atlas of the World’s Languages</em> <span class="citation">(<a href="#ref-asher2007">Asher and Moseley 2007</a>)</span> and comes in two layers, the areas where languages are spoken now and the areas where they were spoken traditionally. Its other datasets cover single regions and families in more detail.</p>
+</div>
+<div id="speaker-areas-as-polygons" class="section level2 hasAnchor" number="5.9">
+<h2><span class="header-section-number">5.9</span> Speaker areas as polygons<a href="maps.html#speaker-areas-as-polygons" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Read the contemporary layer of the atlas. The file is about 90 MB, so this takes a minute the first time.</p>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="maps.html#cb127-1" tabindex="-1"></a>src   <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;https://raw.githubusercontent.com/Glottography/&quot;</span>,</span>
+<span id="cb127-2"><a href="maps.html#cb127-2" tabindex="-1"></a>                <span class="st">&quot;asher2007world/v2.0/cldf/&quot;</span>)</span>
+<span id="cb127-3"><a href="maps.html#cb127-3" tabindex="-1"></a>areas <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">paste0</span>(src, <span class="st">&quot;contemporary/languages.geojson&quot;</span>), <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb127-4"><a href="maps.html#cb127-4" tabindex="-1"></a><span class="fu">names</span>(areas)[<span class="fu">names</span>(areas) <span class="sc">==</span> <span class="st">&quot;cldf.languageReference&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;glottocode&quot;</span></span>
+<span id="cb127-5"><a href="maps.html#cb127-5" tabindex="-1"></a></span>
+<span id="cb127-6"><a href="maps.html#cb127-6" tabindex="-1"></a><span class="fu">sf_use_s2</span>(<span class="cn">FALSE</span>)                  <span class="co"># repair the shapes on the flat map</span></span>
+<span id="cb127-7"><a href="maps.html#cb127-7" tabindex="-1"></a>areas <span class="ot">&lt;-</span> <span class="fu">st_make_valid</span>(areas)</span>
+<span id="cb127-8"><a href="maps.html#cb127-8" tabindex="-1"></a><span class="fu">nrow</span>(areas)</span></code></pre></div>
+<pre><code>## [1] 4062</code></pre>
+<p>Each row is one language with its area, possibly in several pieces. Match the areas to the sample by Glottocode.</p>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="maps.html#cb129-1" tabindex="-1"></a>has  <span class="ot">&lt;-</span> <span class="fu">intersect</span>(d<span class="sc">$</span>glottocode, areas<span class="sc">$</span>glottocode)</span>
+<span id="cb129-2"><a href="maps.html#cb129-2" tabindex="-1"></a>mine <span class="ot">&lt;-</span> areas[<span class="fu">match</span>(has, areas<span class="sc">$</span>glottocode), ]</span>
+<span id="cb129-3"><a href="maps.html#cb129-3" tabindex="-1"></a>here <span class="ot">&lt;-</span> pts[<span class="fu">match</span>(has, pts<span class="sc">$</span>glottocode), ]</span>
+<span id="cb129-4"><a href="maps.html#cb129-4" tabindex="-1"></a></span>
+<span id="cb129-5"><a href="maps.html#cb129-5" tabindex="-1"></a><span class="fu">c</span>(<span class="at">sample =</span> <span class="fu">nrow</span>(d), <span class="at">with_an_area =</span> <span class="fu">length</span>(has))</span></code></pre></div>
+<pre><code>##       sample with_an_area 
+##          500          310</code></pre>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="maps.html#cb131-1" tabindex="-1"></a><span class="fu">sf_use_s2</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb131-2"><a href="maps.html#cb131-2" tabindex="-1"></a>km2 <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">st_area</span>(mine)) <span class="sc">/</span> <span class="fl">1e6</span></span>
+<span id="cb131-3"><a href="maps.html#cb131-3" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(km2, <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="dv">1</span>)))</span></code></pre></div>
+<pre><code>##      0%     25%     50%     75%    100% 
+##      25     842    3712   17604 2467678</code></pre>
+<p>Now ask how far each Glottolog point is from the area the atlas gives the same language. A distance of zero means the point is inside.</p>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="maps.html#cb133-1" tabindex="-1"></a>gap <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">st_distance</span>(here, mine, <span class="at">by_element =</span> <span class="cn">TRUE</span>)) <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb133-2"><a href="maps.html#cb133-2" tabindex="-1"></a><span class="fu">c</span>(<span class="at">inside =</span> <span class="fu">sum</span>(gap <span class="sc">==</span> <span class="dv">0</span>), <span class="at">outside =</span> <span class="fu">sum</span>(gap <span class="sc">&gt;</span> <span class="dv">0</span>))</span></code></pre></div>
+<pre><code>##  inside outside 
+##     172     138</code></pre>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="maps.html#cb135-1" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">quantile</span>(gap[gap <span class="sc">&gt;</span> <span class="dv">0</span>], <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.9</span>, <span class="dv">1</span>)))</span></code></pre></div>
+<pre><code>##  50%  90% 100% 
+##   18  142 1063</code></pre>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="maps.html#cb137-1" tabindex="-1"></a><span class="fu">sf_use_s2</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb137-2"><a href="maps.html#cb137-2" tabindex="-1"></a>box  <span class="ot">&lt;-</span> <span class="fu">st_bbox</span>(<span class="fu">c</span>(<span class="at">xmin =</span> <span class="dv">32</span>, <span class="at">ymin =</span> <span class="dv">2</span>, <span class="at">xmax =</span> <span class="dv">49</span>, <span class="at">ymax =</span> <span class="dv">19</span>), <span class="at">crs =</span> <span class="dv">4326</span>)</span>
+<span id="cb137-3"><a href="maps.html#cb137-3" tabindex="-1"></a></span>
+<span id="cb137-4"><a href="maps.html#cb137-4" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb137-5"><a href="maps.html#cb137-5" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">st_crop</span>(world, box), <span class="at">fill =</span> <span class="st">&quot;grey94&quot;</span>, <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb137-6"><a href="maps.html#cb137-6" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">st_crop</span>(areas, box), <span class="at">fill =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.1</span>,</span>
+<span id="cb137-7"><a href="maps.html#cb137-7" tabindex="-1"></a>          <span class="at">colour =</span> <span class="st">&quot;#2A78D6&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb137-8"><a href="maps.html#cb137-8" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> <span class="fu">st_crop</span>(pts, box), <span class="fu">aes</span>(<span class="at">fill =</span> <span class="fu">factor</span>(ejectives)),</span>
+<span id="cb137-9"><a href="maps.html#cb137-9" tabindex="-1"></a>          <span class="at">shape =</span> <span class="dv">21</span>, <span class="at">size =</span> <span class="fl">2.2</span>, <span class="at">stroke =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb137-10"><a href="maps.html#cb137-10" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;0&quot;</span> <span class="ot">=</span> <span class="st">&quot;white&quot;</span>, <span class="st">&quot;1&quot;</span> <span class="ot">=</span> <span class="st">&quot;#EB6834&quot;</span>),</span>
+<span id="cb137-11"><a href="maps.html#cb137-11" tabindex="-1"></a>                    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;no ejectives&quot;</span>, <span class="st">&quot;ejectives&quot;</span>), <span class="at">name =</span> <span class="cn">NULL</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:maps-areas-map"></span>
+<span id="fig:maps-areas-map" style="display:block;"></span>
+<img src="figures/05-maps/areas-map-1.png" alt="Speaker areas from the atlas (blue) around the Horn of Africa, with the Glottolog points of the sample languages on top. Filled points have ejectives. The areas differ enormously in size, some land (grey) has no area at all, and each language is still a single point." width="614" />
+<p class="caption">
+Figure 5.3: Speaker areas from the atlas (blue) around the Horn of Africa, with the Glottolog points of the sample languages on top. Filled points have ejectives. The areas differ enormously in size, some land (grey) has no area at all, and each language is still a single point.
+</p>
+</div>
+<p>With polygons, neighbours can be defined as areas that touch. <code>poly2nb()</code> builds that graph.</p>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="maps.html#cb138-1" tabindex="-1"></a>touching <span class="ot">&lt;-</span> <span class="fu">poly2nb</span>(mine, <span class="at">snap =</span> <span class="fl">0.01</span>)</span>
+<span id="cb138-2"><a href="maps.html#cb138-2" tabindex="-1"></a><span class="fu">c</span>(<span class="at">links_per_language =</span> <span class="fu">round</span>(<span class="fu">mean</span>(<span class="fu">card</span>(touching)), <span class="dv">1</span>),</span>
+<span id="cb138-3"><a href="maps.html#cb138-3" tabindex="-1"></a>  <span class="at">without_neighbours =</span> <span class="fu">sum</span>(<span class="fu">card</span>(touching) <span class="sc">==</span> <span class="dv">0</span>),</span>
+<span id="cb138-4"><a href="maps.html#cb138-4" tabindex="-1"></a>  <span class="at">separate_pieces    =</span> <span class="fu">n.comp.nb</span>(touching)<span class="sc">$</span>nc)</span></code></pre></div>
+<pre><code>## links_per_language without_neighbours    separate_pieces 
+##                0.9              161.0              194.0</code></pre>
+<p>The graph is nearly empty, and the reason is the sample. Two languages of the sample touch only if no unsampled language lies between them, and 500 languages out of several thousand rarely do. A contiguity graph is meaningful when you have every language of a region. For a sample, link by distance or by nearest neighbours, as above.</p>
+<p>The atlas has a second layer with traditional areas. Compare the centre of each language’s area in the two layers.</p>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="maps.html#cb140-1" tabindex="-1"></a>past <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">paste0</span>(src, <span class="st">&quot;traditional/languages.geojson&quot;</span>), <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb140-2"><a href="maps.html#cb140-2" tabindex="-1"></a><span class="fu">names</span>(past)[<span class="fu">names</span>(past) <span class="sc">==</span> <span class="st">&quot;cldf.languageReference&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;glottocode&quot;</span></span>
+<span id="cb140-3"><a href="maps.html#cb140-3" tabindex="-1"></a>past <span class="ot">&lt;-</span> <span class="fu">st_make_valid</span>(past)</span>
+<span id="cb140-4"><a href="maps.html#cb140-4" tabindex="-1"></a></span>
+<span id="cb140-5"><a href="maps.html#cb140-5" tabindex="-1"></a>both <span class="ot">&lt;-</span> <span class="fu">intersect</span>(mine<span class="sc">$</span>glottocode, past<span class="sc">$</span>glottocode)</span>
+<span id="cb140-6"><a href="maps.html#cb140-6" tabindex="-1"></a>centre_now  <span class="ot">&lt;-</span> <span class="fu">st_centroid</span>(<span class="fu">st_geometry</span>(mine[<span class="fu">match</span>(both, mine<span class="sc">$</span>glottocode), ]))</span>
+<span id="cb140-7"><a href="maps.html#cb140-7" tabindex="-1"></a>centre_past <span class="ot">&lt;-</span> <span class="fu">st_centroid</span>(<span class="fu">st_geometry</span>(past[<span class="fu">match</span>(both, past<span class="sc">$</span>glottocode), ]))</span>
+<span id="cb140-8"><a href="maps.html#cb140-8" tabindex="-1"></a></span>
+<span id="cb140-9"><a href="maps.html#cb140-9" tabindex="-1"></a><span class="fu">sf_use_s2</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb140-10"><a href="maps.html#cb140-10" tabindex="-1"></a>moved <span class="ot">&lt;-</span> <span class="fu">st_distance</span>(centre_now, centre_past, <span class="at">by_element =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb140-11"><a href="maps.html#cb140-11" tabindex="-1"></a>moved <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(moved) <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb140-12"><a href="maps.html#cb140-12" tabindex="-1"></a><span class="fu">c</span>(<span class="at">languages =</span> <span class="fu">length</span>(both), <span class="at">moved_over_100_km =</span> <span class="fu">sum</span>(moved <span class="sc">&gt;</span> <span class="dv">100</span>),</span>
+<span id="cb140-13"><a href="maps.html#cb140-13" tabindex="-1"></a>  <span class="at">furthest_km =</span> <span class="fu">round</span>(<span class="fu">max</span>(moved)))</span></code></pre></div>
+<pre><code>##         languages moved_over_100_km       furthest_km 
+##               294                26              4185</code></pre>
+</div>
+<div id="what-a-location-leaves-out" class="section level2 hasAnchor" number="5.10">
+<h2><span class="header-section-number">5.10</span> What a location leaves out<a href="maps.html#what-a-location-leaves-out" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The numbers above are specific to this sample, and each points at a general problem.</p>
+<p>A point stands for an area. The areas of the sample languages run from 25 to 2,467,678 square kilometres, and a single point represents each of them equally. Where two sources can be compared, they disagree: 138 of the 310 Glottolog points fall outside the area the atlas draws for the same language, half of those by more than 18 km and one by 1,063 km.</p>
+<p>Coverage is incomplete. The atlas has a contemporary area for 310 of the 500 languages. A method that needs polygons would lose the rest, and the languages it loses are not a random subset: extinct and recently displaced languages are the ones without a present-day area.</p>
+<p>A location has a date. 26 of the 294 languages with both layers moved by more than 100 km between their traditional and their present area, and the furthest by 4,185 km. If a feature arose before a language moved, the place where its speakers live now is the wrong place to look for its neighbours or its climate. Glottolog’s points do not say which period they describe.</p>
+<p>A covariate measured at a point inherits all of this. The elevation in this book is the height of the ground at the Glottolog point. A language whose area runs from a coast to a plateau has no single elevation, and the point may sit at either end. With polygons you can take the mean or the range of elevation over the area, for example with <code>terra::extract()</code>, and with points you cannot.</p>
+<p>Distance is not contact. Great-circle distance ignores mountain ranges, seas, rivers and trade routes, and every model in the next three chapters treats 300 km across a desert like 300 km along a coast. The barrier models cited in Chapter <a href="space-engines.html#space-engines">8</a> are one response. Another is to compute distances that follow the terrain and to build the spatial matrix from those.</p>
+<p>Drawn areas do not overlap, and languages do. An atlas gives each patch of ground to one language. Multilingual regions, cities, and languages of wider communication laid over local ones are not represented, though they are where much contact happens.</p>
+<p>The map shows where linguists have worked. The sample is dense where description is dense. Two languages can be neighbours in the data because the languages between them have not been described, and a neighbour graph or a distance matrix will not show the difference.</p>
+<p>Areas as categories have borders that somebody chose. Whether a language of the Caucasus belongs to Europe or to Asia changes which languages it is compared with, and the choice is a convention <span class="citation">(<a href="#ref-hammarstrom2014">Hammarström and Donohue 2014</a>)</span>. Results that depend on where such a line is drawn are a known hazard of all analyses of areal units.</p>
+<p>None of this argues against spatial models. It argues for saying where your locations come from and what period they describe, and for trying a second representation when one is available.</p>
+</div>
+<div id="what-to-carry-forward-4" class="section level2 hasAnchor" number="5.11">
+<h2><span class="header-section-number">5.11</span> What to carry forward<a href="maps.html#what-to-carry-forward-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Great-circle distances come from <code>sp::spDists(coords, longlat = TRUE)</code>; projected coordinates from <code>st_transform()</code>; points on the sphere from three lines of trigonometry.</li>
 <li>A neighbour graph depends on the rule you choose. Check <code>n.comp.nb()</code> for pieces and <code>card()</code> for languages left alone, and draw the graph.</li>
@@ -532,10 +672,12 @@ Figure 5.2: Moran’s I of the naive model’s residuals for neighbours one to s
 <li>A correlogram tells you how far the dependence reaches before you choose a model for it.</li>
 </ul>
 </div>
-<div id="further-reading-5" class="section level2 hasAnchor" number="5.9">
-<h2><span class="header-section-number">5.9</span> Further reading<a href="maps.html#further-reading-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="further-reading-5" class="section level2 hasAnchor" number="5.12">
+<h2><span class="header-section-number">5.12</span> Further reading<a href="maps.html#further-reading-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>How earlier studies represented space.</strong> For most of typology’s history, space meant a small number of large areas. <span class="citation">Dryer (<a href="#ref-dryer1989">1989</a>)</span> divides the world into five (later six) continental areas and requires a pattern to hold in each; <span class="citation">Jaeger et al. (<a href="#ref-jaeger2011">2011</a>)</span> make the same idea a random intercept for area beside the one for family. The step from areas to coordinates came later. <span class="citation">Wieling et al. (<a href="#ref-wieling2011">2011</a>)</span> fit a smooth function of longitude and latitude in a GAM for Dutch dialect data. <span class="citation">Guzmán Naranjo and Becker (<a href="#ref-guzman2022">2022</a>)</span> use a Gaussian process over coordinates for world samples, and <span class="citation"><span class="nocase">Skirgård et al.</span> (<a href="#ref-skirgard2023">2023</a>)</span> build a spatial covariance matrix from great-circle distances with a Matérn kernel. <span class="citation">Ranacher et al. (<a href="#ref-ranacher2021">2021</a>)</span> go the other way and infer discrete contact areas from the data.</p>
 <ul>
+<li>Glottography <span class="citation">(<a href="#ref-glottography">Glottography, n.d.</a>)</span> documents its datasets and the atlases behind them; the two layers of the world atlas come from <span class="citation">Asher and Moseley (<a href="#ref-asher2007">2007</a>)</span>.</li>
+<li><span class="citation">Hammarström and Donohue (<a href="#ref-hammarstrom2014">2014</a>)</span> set out how macro-areas should and should not be used in typological comparison.</li>
 <li><span class="citation">Bivand et al. (<a href="#ref-bivand2013">2013</a>)</span> is the standard account of spatial objects, neighbours and weights in R, by the authors of <code>spdep</code>.</li>
 <li><span class="citation"><span class="nocase">Dormann et al.</span> (<a href="#ref-dormann2007">2007</a>)</span> review how to account for spatial autocorrelation in regression, with a comparison of methods that maps closely onto the chapters that follow.</li>
 <li><span class="citation">Banerjee et al. (<a href="#ref-banerjee2014">2014</a>)</span> give the statistical theory behind both views of space, as a continuous surface and as a graph of areas.</li>
@@ -545,8 +687,14 @@ Figure 5.2: Moran’s I of the naive model’s residuals for neighbours one to s
 </div>
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-asher2007" class="csl-entry">
+Asher, R. E., and Christopher Moseley, eds. 2007. <em>Atlas of the World’s Languages</em>. 2nd ed. Routledge.
+</div>
 <div id="ref-banerjee2014" class="csl-entry">
 Banerjee, Sudipto, Bradley P. Carlin, and Alan E. Gelfand. 2014. <em>Hierarchical Modeling and Analysis for Spatial Data</em>. 2nd ed. Chapman; Hall/CRC.
+</div>
+<div id="ref-autotyp2023" class="csl-entry">
+Bickel, Balthasar, Johanna Nichols, Taras Zakharko, et al. 2023. <em>The <span>AUTOTYP</span> Database (V1.1.1)</em>. Zenodo.
 </div>
 <div id="ref-bivand2013" class="csl-entry">
 Bivand, Roger S., Edzer Pebesma, and Virgilio Gómez-Rubio. 2013. <em>Applied Spatial Data Analysis with <span>R</span></em>. 2nd ed. Springer.
@@ -557,11 +705,26 @@ Bivand, Roger S., Edzer Pebesma, and Virgilio Gómez-Rubio. 2013. <em>Applied Sp
 <div id="ref-dryer1989" class="csl-entry">
 Dryer, Matthew S. 1989. <span>“Large Linguistic Areas and Language Sampling.”</span> <em>Studies in Language</em> 13 (2): 257–92.
 </div>
+<div id="ref-ethnologue" class="csl-entry">
+Eberhard, David M., Gary F. Simons, and Charles D. Fennig, eds. 2023. <em>Ethnologue: Languages of the World</em>. 26th ed. SIL International.
+</div>
+<div id="ref-glottography" class="csl-entry">
+Glottography. n.d. <em>Glottography: Speaker-Area Polygons for the World’s Languages</em>. <a href="https://github.com/Glottography" class="uri">Https://github.com/Glottography</a>.
+</div>
 <div id="ref-guzman2022" class="csl-entry">
 Guzmán Naranjo, Matías, and Laura Becker. 2022. <span>“Statistical Bias Control in Typology.”</span> <em>Linguistic Typology</em> 26 (3): 605–70. <a href="https://doi.org/10.1515/lingty-2021-0002">https://doi.org/10.1515/lingty-2021-0002</a>.
 </div>
+<div id="ref-hammarstrom2014" class="csl-entry">
+Hammarström, Harald, and Mark Donohue. 2014. <span>“Some Principles on the Use of Macro-Areas in Typological Comparison.”</span> <em>Language Dynamics and Change</em> 4 (1): 167–87.
+</div>
+<div id="ref-glottolog" class="csl-entry">
+Hammarström, Harald, Robert Forkel, Martin Haspelmath, and Sebastian Bank. n.d. <em>Glottolog</em>. Leipzig: Max Planck Institute for Evolutionary Anthropology. <a href="https://glottolog.org">https://glottolog.org</a>.
+</div>
 <div id="ref-jaeger2011" class="csl-entry">
 Jaeger, T. Florian, Peter Graff, William Croft, and Daniel Pontillo. 2011. <span>“Mixed Effect Models for Genetic and Areal Dependencies in Linguistic Typology.”</span> <em>Linguistic Typology</em> 15 (2): 281–319.
+</div>
+<div id="ref-moroz2017" class="csl-entry">
+Moroz, George. 2017. <em>Lingtypology: Easy Mapping for Linguistic Typology</em>. R package, <a href="https://CRAN.R-project.org/package=lingtypology" class="uri">https://CRAN.R-project.org/package=lingtypology</a>.
 </div>
 <div id="ref-ranacher2021" class="csl-entry">
 Ranacher, Peter, Nico Neureiter, Rik van Gijn, et al. 2021. <span>“Contact-Tracing in Cultural Evolution: A <span>B</span>ayesian Mixture Model to Detect Geographic Areas of Language Contact.”</span> <em>Journal of the Royal Society Interface</em> 18 (181): 20201031.

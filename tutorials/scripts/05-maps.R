@@ -82,3 +82,57 @@ ggplot(steps, aes(step, I)) +
   scale_x_continuous(breaks = 1:6) +
   labs(x = "steps apart on the neighbour graph",
        y = "Moran's I of the residuals")
+
+src   <- paste0("https://raw.githubusercontent.com/Glottography/",
+                "asher2007world/v2.0/cldf/")
+areas <- st_read(paste0(src, "contemporary/languages.geojson"), quiet = TRUE)
+names(areas)[names(areas) == "cldf.languageReference"] <- "glottocode"
+
+sf_use_s2(FALSE)                  # repair the shapes on the flat map
+areas <- st_make_valid(areas)
+nrow(areas)
+
+has  <- intersect(d$glottocode, areas$glottocode)
+mine <- areas[match(has, areas$glottocode), ]
+here <- pts[match(has, pts$glottocode), ]
+
+c(sample = nrow(d), with_an_area = length(has))
+
+sf_use_s2(TRUE)
+km2 <- as.numeric(st_area(mine)) / 1e6
+round(quantile(km2, c(0, 0.25, 0.5, 0.75, 1)))
+
+gap <- as.numeric(st_distance(here, mine, by_element = TRUE)) / 1000
+c(inside = sum(gap == 0), outside = sum(gap > 0))
+round(quantile(gap[gap > 0], c(0.5, 0.9, 1)))
+
+sf_use_s2(FALSE)
+box  <- st_bbox(c(xmin = 32, ymin = 2, xmax = 49, ymax = 19), crs = 4326)
+
+ggplot() +
+  geom_sf(data = st_crop(world, box), fill = "grey94", colour = NA) +
+  geom_sf(data = st_crop(areas, box), fill = "#2A78D6", alpha = 0.1,
+          colour = "#2A78D6", linewidth = 0.2) +
+  geom_sf(data = st_crop(pts, box), aes(fill = factor(ejectives)),
+          shape = 21, size = 2.2, stroke = 0.3) +
+  scale_fill_manual(values = c("0" = "white", "1" = "#EB6834"),
+                    labels = c("no ejectives", "ejectives"), name = NULL)
+
+touching <- poly2nb(mine, snap = 0.01)
+c(links_per_language = round(mean(card(touching)), 1),
+  without_neighbours = sum(card(touching) == 0),
+  separate_pieces    = n.comp.nb(touching)$nc)
+
+past <- st_read(paste0(src, "traditional/languages.geojson"), quiet = TRUE)
+names(past)[names(past) == "cldf.languageReference"] <- "glottocode"
+past <- st_make_valid(past)
+
+both <- intersect(mine$glottocode, past$glottocode)
+centre_now  <- st_centroid(st_geometry(mine[match(both, mine$glottocode), ]))
+centre_past <- st_centroid(st_geometry(past[match(both, past$glottocode), ]))
+
+sf_use_s2(TRUE)
+moved <- st_distance(centre_now, centre_past, by_element = TRUE)
+moved <- as.numeric(moved) / 1000
+c(languages = length(both), moved_over_100_km = sum(moved > 100),
+  furthest_km = round(max(moved)))

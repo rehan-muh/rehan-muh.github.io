@@ -189,9 +189,11 @@ div.csl-indent {
 <li class="chapter" data-level="2.4" data-path="trees.html"><a href="trees.html#look-at-it"><i class="fa fa-check"></i><b>2.4</b> Look at it</a></li>
 <li class="chapter" data-level="2.5" data-path="trees.html"><a href="trees.html#what-the-branch-lengths-mean"><i class="fa fa-check"></i><b>2.5</b> What the branch lengths mean</a></li>
 <li class="chapter" data-level="2.6" data-path="trees.html"><a href="trees.html#build-a-tree-from-a-table"><i class="fa fa-check"></i><b>2.6</b> Build a tree from a table</a></li>
-<li class="chapter" data-level="2.7" data-path="trees.html"><a href="trees.html#how-tree-like-is-a-feature"><i class="fa fa-check"></i><b>2.7</b> How tree-like is a feature?</a></li>
-<li class="chapter" data-level="2.8" data-path="trees.html"><a href="trees.html#what-to-carry-forward-1"><i class="fa fa-check"></i><b>2.8</b> What to carry forward</a></li>
-<li class="chapter" data-level="2.9" data-path="trees.html"><a href="trees.html#further-reading-2"><i class="fa fa-check"></i><b>2.9</b> Further reading</a></li>
+<li class="chapter" data-level="2.7" data-path="trees.html"><a href="trees.html#where-trees-come-from"><i class="fa fa-check"></i><b>2.7</b> Where trees come from</a></li>
+<li class="chapter" data-level="2.8" data-path="trees.html"><a href="trees.html#a-dated-tree-from-phlorest"><i class="fa fa-check"></i><b>2.8</b> A dated tree from Phlorest</a></li>
+<li class="chapter" data-level="2.9" data-path="trees.html"><a href="trees.html#how-tree-like-is-a-feature"><i class="fa fa-check"></i><b>2.9</b> How tree-like is a feature?</a></li>
+<li class="chapter" data-level="2.10" data-path="trees.html"><a href="trees.html#what-to-carry-forward-1"><i class="fa fa-check"></i><b>2.10</b> What to carry forward</a></li>
+<li class="chapter" data-level="2.11" data-path="trees.html"><a href="trees.html#further-reading-2"><i class="fa fa-check"></i><b>2.11</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="phylogeny.html"><a href="phylogeny.html"><i class="fa fa-check"></i><b>3</b> Phylogeny as a covariance matrix</a>
 <ul>
@@ -230,8 +232,11 @@ div.csl-indent {
 <li class="chapter" data-level="5.5" data-path="maps.html"><a href="maps.html#neighbours"><i class="fa fa-check"></i><b>5.5</b> Neighbours</a></li>
 <li class="chapter" data-level="5.6" data-path="maps.html"><a href="maps.html#from-a-graph-to-weights"><i class="fa fa-check"></i><b>5.6</b> From a graph to weights</a></li>
 <li class="chapter" data-level="5.7" data-path="maps.html"><a href="maps.html#how-far-does-similarity-reach"><i class="fa fa-check"></i><b>5.7</b> How far does similarity reach?</a></li>
-<li class="chapter" data-level="5.8" data-path="maps.html"><a href="maps.html#what-to-carry-forward-4"><i class="fa fa-check"></i><b>5.8</b> What to carry forward</a></li>
-<li class="chapter" data-level="5.9" data-path="maps.html"><a href="maps.html#further-reading-5"><i class="fa fa-check"></i><b>5.9</b> Further reading</a></li>
+<li class="chapter" data-level="5.8" data-path="maps.html"><a href="maps.html#where-locations-come-from"><i class="fa fa-check"></i><b>5.8</b> Where locations come from</a></li>
+<li class="chapter" data-level="5.9" data-path="maps.html"><a href="maps.html#speaker-areas-as-polygons"><i class="fa fa-check"></i><b>5.9</b> Speaker areas as polygons</a></li>
+<li class="chapter" data-level="5.10" data-path="maps.html"><a href="maps.html#what-a-location-leaves-out"><i class="fa fa-check"></i><b>5.10</b> What a location leaves out</a></li>
+<li class="chapter" data-level="5.11" data-path="maps.html"><a href="maps.html#what-to-carry-forward-4"><i class="fa fa-check"></i><b>5.11</b> What to carry forward</a></li>
+<li class="chapter" data-level="5.12" data-path="maps.html"><a href="maps.html#further-reading-5"><i class="fa fa-check"></i><b>5.12</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="space-surface.html"><a href="space-surface.html"><i class="fa fa-check"></i><b>6</b> Space as a smooth surface</a>
 <ul>
@@ -467,11 +472,110 @@ Figure 2.1: The Afro-Asiatic languages of the sample as the tree has them. Each 
 ## Unrooted; includes branch length(s).</code></pre>
 <p>With a genus or subgroup column you would write <code>~family / genus / language</code>, and each extra level adds structure. A tree with only the family level is the family random intercept of the next chapter drawn as a picture: all languages of a family equally close, and no information below that.</p>
 </div>
-<div id="how-tree-like-is-a-feature" class="section level2 hasAnchor" number="2.7">
-<h2><span class="header-section-number">2.7</span> How tree-like is a feature?<a href="trees.html#how-tree-like-is-a-feature" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="where-trees-come-from" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Where trees come from<a href="trees.html#where-trees-come-from" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Language trees come from three kinds of source, and the kinds differ in what a branch length means.</p>
+<p>Glottolog publishes its classification as one Newick tree per family <span class="citation">(<a href="#ref-glottolog">Hammarström et al., n.d.</a>)</span>. It covers every known language, so any sample can be given a tree. It has no branch lengths, which is why this book had to choose a convention for them.</p>
+<p>For a growing number of families there is a dated phylogeny, inferred by Bayesian methods from cognate-coded vocabulary. Its branch lengths are estimated years, and it comes with a posterior sample of trees that shows how uncertain the estimate is. Well-known examples cover Austronesian <span class="citation">(<a href="#ref-gray2009">Gray et al. 2009</a>)</span>, Indo-European <span class="citation">(<a href="#ref-bouckaert2012">Bouckaert et al. 2012</a>; <a href="#ref-chang2015">Chang et al. 2015</a>)</span>, Bantu <span class="citation">(<a href="#ref-grollemund2015">Grollemund et al. 2015</a>)</span>, Pama-Nyungan <span class="citation">(<a href="#ref-bouckaert2018">Bouckaert et al. 2018</a>)</span>, Sino-Tibetan <span class="citation">(<a href="#ref-sagart2019">Sagart et al. 2019</a>)</span> and Dravidian <span class="citation">(<a href="#ref-kolipakam2018">Kolipakam et al. 2018</a>)</span>. A dated tree is still an estimate: the two Indo-European studies cited here put the root of the family thousands of years apart.</p>
+<p>Phlorest collects published language phylogenies and distributes each in the same layout: a summary tree, the posterior sample, and a table that gives the Glottocode of every tip <span class="citation">(<a href="#ref-phlorest">Phlorest, n.d.</a>)</span>. It held about thirty studies when this chapter was written. D-PLACE distributes many of the same trees alongside cultural data <span class="citation">(<a href="#ref-kirby2016"><span class="nocase">Kirby et al.</span> 2016</a>)</span>.</p>
+<p>A world sample needs a tree that spans families, and two are in use. <span class="citation">Jäger (<a href="#ref-jager2018">2018</a>)</span> infers one for several thousand languages by automated comparison of the word lists in the ASJP database. <span class="citation">Bouckaert et al. (<a href="#ref-bouckaert2022">2022</a>)</span> build a global tree by joining dated family trees with Glottolog’s groupings and release a posterior sample of such trees; <span class="citation"><span class="nocase">Skirgård et al.</span> (<a href="#ref-skirgard2023">2023</a>)</span> use it for the Grambank analyses. In both trees the branches that join one family to another come from the method and its assumptions, because historical linguistics has not demonstrated those relationships. The tree in this book takes the cautious position and gives different families no shared history.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Your sample</th>
+<th align="left">A reasonable tree</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">One family with a published phylogeny</td>
+<td align="left">The dated tree from Phlorest, with its posterior sample if you can</td>
+</tr>
+<tr class="even">
+<td align="left">One family without one</td>
+<td align="left">Glottolog’s tree for the family and a stated branch-length convention</td>
+</tr>
+<tr class="odd">
+<td align="left">Many families</td>
+<td align="left">Glottolog trees joined at the root, as here, or a global tree. Fit both if you can.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="a-dated-tree-from-phlorest" class="section level2 hasAnchor" number="2.8">
+<h2><span class="header-section-number">2.8</span> A dated tree from Phlorest<a href="trees.html#a-dated-tree-from-phlorest" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The sample has 54 Pama-Nyungan languages, and Phlorest has the dated tree of <span class="citation">Bouckaert et al. (<a href="#ref-bouckaert2018">2018</a>)</span>. Read the summary tree and the table of tips from the repository.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="trees.html#cb49-1" tabindex="-1"></a>src   <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;https://raw.githubusercontent.com/phlorest/&quot;</span>,</span>
+<span id="cb49-2"><a href="trees.html#cb49-2" tabindex="-1"></a>                <span class="st">&quot;bouckaert_et_al2018/main/cldf/&quot;</span>)</span>
+<span id="cb49-3"><a href="trees.html#cb49-3" tabindex="-1"></a>taxa  <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(src, <span class="st">&quot;languages.csv&quot;</span>))</span>
+<span id="cb49-4"><a href="trees.html#cb49-4" tabindex="-1"></a>dated <span class="ot">&lt;-</span> <span class="fu">read.nexus</span>(<span class="fu">paste0</span>(src, <span class="st">&quot;summary.trees&quot;</span>))</span>
+<span id="cb49-5"><a href="trees.html#cb49-5" tabindex="-1"></a></span>
+<span id="cb49-6"><a href="trees.html#cb49-6" tabindex="-1"></a>dated</span></code></pre></div>
+<pre><code>## 
+## Phylogenetic tree with 306 tips and 305 internal nodes.
+## 
+## Tip labels:
+##   Adnyamathanha, Parnkala, Guyani, Kaurna, Narrungga, Nukunu, ...
+## 
+## Rooted; includes branch length(s).</code></pre>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="trees.html#cb51-1" tabindex="-1"></a><span class="fu">head</span>(taxa[, <span class="fu">c</span>(<span class="st">&quot;ID&quot;</span>, <span class="st">&quot;Glottocode&quot;</span>)], <span class="dv">4</span>)</span></code></pre></div>
+<pre><code>##                ID Glottocode
+## 1   Adnyamathanha   adny1235
+## 2 AghuTharrnggala   aghu1254
+## 3         Alngith   alng1239
+## 4        Alyawarr   alya1239</code></pre>
+<p>The tips carry the names the authors used. The <code>Glottocode</code> column of the table says which language each tip is, and that column is the link to your data.</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="trees.html#cb53-1" tabindex="-1"></a>code <span class="ot">&lt;-</span> taxa<span class="sc">$</span>Glottocode[<span class="fu">match</span>(dated<span class="sc">$</span>tip.label, taxa<span class="sc">$</span>ID)]</span>
+<span id="cb53-2"><a href="trees.html#cb53-2" tabindex="-1"></a><span class="fu">c</span>(<span class="at">tips =</span> <span class="fu">length</span>(code), <span class="at">distinct_glottocodes =</span> <span class="fu">length</span>(<span class="fu">unique</span>(code)))</span></code></pre></div>
+<pre><code>##                 tips distinct_glottocodes 
+##                  306                  226</code></pre>
+<p>Several tips share a Glottocode, because a phylogeny often includes dialects that Glottolog counts as one language. Keep the first tip of each language, keep only the Pama-Nyungan languages of the sample, and relabel the tips with their Glottocodes.</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="trees.html#cb55-1" tabindex="-1"></a>pn    <span class="ot">&lt;-</span> d<span class="sc">$</span>glottocode[d<span class="sc">$</span>family <span class="sc">==</span> <span class="st">&quot;Pama-Nyungan&quot;</span>]</span>
+<span id="cb55-2"><a href="trees.html#cb55-2" tabindex="-1"></a>keep  <span class="ot">&lt;-</span> <span class="sc">!</span><span class="fu">duplicated</span>(code) <span class="sc">&amp;</span> code <span class="sc">%in%</span> pn</span>
+<span id="cb55-3"><a href="trees.html#cb55-3" tabindex="-1"></a>dated <span class="ot">&lt;-</span> <span class="fu">keep.tip</span>(dated, dated<span class="sc">$</span>tip.label[keep])</span>
+<span id="cb55-4"><a href="trees.html#cb55-4" tabindex="-1"></a>dated<span class="sc">$</span>tip.label <span class="ot">&lt;-</span> taxa<span class="sc">$</span>Glottocode[<span class="fu">match</span>(dated<span class="sc">$</span>tip.label, taxa<span class="sc">$</span>ID)]</span>
+<span id="cb55-5"><a href="trees.html#cb55-5" tabindex="-1"></a></span>
+<span id="cb55-6"><a href="trees.html#cb55-6" tabindex="-1"></a><span class="fu">c</span>(<span class="at">in_sample =</span> <span class="fu">length</span>(pn), <span class="at">in_dated_tree =</span> <span class="fu">Ntip</span>(dated),</span>
+<span id="cb55-7"><a href="trees.html#cb55-7" tabindex="-1"></a>  <span class="at">missing =</span> <span class="fu">length</span>(<span class="fu">setdiff</span>(pn, dated<span class="sc">$</span>tip.label)))</span></code></pre></div>
+<pre><code>##     in_sample in_dated_tree       missing 
+##            54            48             6</code></pre>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="trees.html#cb57-1" tabindex="-1"></a>named <span class="ot">&lt;-</span> dated</span>
+<span id="cb57-2"><a href="trees.html#cb57-2" tabindex="-1"></a>named<span class="sc">$</span>tip.label <span class="ot">&lt;-</span> d<span class="sc">$</span>name[<span class="fu">match</span>(named<span class="sc">$</span>tip.label, d<span class="sc">$</span>glottocode)]</span>
+<span id="cb57-3"><a href="trees.html#cb57-3" tabindex="-1"></a></span>
+<span id="cb57-4"><a href="trees.html#cb57-4" tabindex="-1"></a><span class="fu">plot</span>(named, <span class="at">cex =</span> <span class="fl">0.7</span>)</span>
+<span id="cb57-5"><a href="trees.html#cb57-5" tabindex="-1"></a><span class="fu">axisPhylo</span>()</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:trees-phlorest-plot"></span>
+<span id="fig:trees-phlorest-plot" style="display:block;"></span>
+<img src="figures/02-trees/phlorest-plot-1.png" alt="The Pama-Nyungan languages of the sample on the dated tree of Bouckaert, Bowern and Atkinson (2018). The axis is in years before the present." width="634" />
+<p class="caption">
+Figure 2.2: The Pama-Nyungan languages of the sample on the dated tree of Bouckaert, Bowern and Atkinson (2018). The axis is in years before the present.
+</p>
+</div>
+<p>Now compare what the two trees say about the same languages. Build both correlation matrices for the languages the dated tree has, and compare them pair by pair.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="trees.html#cb58-1" tabindex="-1"></a>both   <span class="ot">&lt;-</span> dated<span class="sc">$</span>tip.label</span>
+<span id="cb58-2"><a href="trees.html#cb58-2" tabindex="-1"></a><span class="co"># from the full tree, so that the family&#39;s own stem is counted</span></span>
+<span id="cb58-3"><a href="trees.html#cb58-3" tabindex="-1"></a>ours   <span class="ot">&lt;-</span> <span class="fu">vcv</span>(tree, <span class="at">corr =</span> <span class="cn">TRUE</span>)[both, both]</span>
+<span id="cb58-4"><a href="trees.html#cb58-4" tabindex="-1"></a>theirs <span class="ot">&lt;-</span> <span class="fu">vcv</span>(dated, <span class="at">corr =</span> <span class="cn">TRUE</span>)[both, both]</span>
+<span id="cb58-5"><a href="trees.html#cb58-5" tabindex="-1"></a>pairs  <span class="ot">&lt;-</span> <span class="fu">upper.tri</span>(ours)</span>
+<span id="cb58-6"><a href="trees.html#cb58-6" tabindex="-1"></a></span>
+<span id="cb58-7"><a href="trees.html#cb58-7" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">cor</span>(ours[pairs], theirs[pairs]), <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 0.74</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="trees.html#cb60-1" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">c</span>(<span class="at">classification =</span> <span class="fu">mean</span>(ours[pairs]), <span class="at">dated =</span> <span class="fu">mean</span>(theirs[pairs])), <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## classification          dated 
+##           0.19           0.11</code></pre>
+<p>The first number is the correlation between the two matrices across all pairs of languages. The second line is the average correlation between two Pama-Nyungan languages under each tree. The two trees rank the pairs of languages similarly but not identically. The dated tree also makes the average pair less alike than the classification does, because in the dated tree most of the time since the family began lies on branches that the languages do not share.</p>
+<p>To use the dated tree in a model, pass its matrix wherever the next chapters pass <code>A</code>. In a world sample you would keep the classification tree for the other families and replace this family’s block of the matrix. The languages missing from the dated tree have to be dropped, or attached by hand with <code>bind.tip()</code> from <code>phytools</code>.</p>
+<p>The repository also holds <code>posterior.trees.zip</code>, a sample of trees from the posterior. Fitting the model to each of, say, 100 of them and pooling the draws carries the uncertainty of the tree into the slope. In brms, <code>brm_multiple()</code> does this when given one <code>data2</code> list per tree.</p>
+</div>
+<div id="how-tree-like-is-a-feature" class="section level2 hasAnchor" number="2.9">
+<h2><span class="header-section-number">2.9</span> How tree-like is a feature?<a href="trees.html#how-tree-like-is-a-feature" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>With a tree in hand, the first question about any feature is how closely it follows the tree. Chapter <a href="the-problem.html#the-problem">1</a> used Pagel’s λ. Blomberg’s K is the other standard measure: K near 1 means relatives resemble each other as much as Brownian motion on this tree predicts, K near 0 means the tree is irrelevant <span class="citation">(<a href="#ref-blomberg2003">Blomberg et al. 2003</a>)</span>.</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="trees.html#cb49-1" tabindex="-1"></a>log_cons <span class="ot">&lt;-</span> <span class="fu">setNames</span>(<span class="fu">log</span>(d<span class="sc">$</span>n_consonants), d<span class="sc">$</span>glottocode)</span>
-<span id="cb49-2"><a href="trees.html#cb49-2" tabindex="-1"></a><span class="fu">phylosig</span>(tree, log_cons, <span class="at">method =</span> <span class="st">&quot;K&quot;</span>, <span class="at">test =</span> <span class="cn">TRUE</span>, <span class="at">nsim =</span> <span class="dv">999</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="trees.html#cb62-1" tabindex="-1"></a>log_cons <span class="ot">&lt;-</span> <span class="fu">setNames</span>(<span class="fu">log</span>(d<span class="sc">$</span>n_consonants), d<span class="sc">$</span>glottocode)</span>
+<span id="cb62-2"><a href="trees.html#cb62-2" tabindex="-1"></a><span class="fu">phylosig</span>(tree, log_cons, <span class="at">method =</span> <span class="st">&quot;K&quot;</span>, <span class="at">test =</span> <span class="cn">TRUE</span>, <span class="at">nsim =</span> <span class="dv">999</span>)</span></code></pre></div>
 <pre><code>## 
 ## Phylogenetic signal K : 1.14463 
 ## P-value (based on 999 randomizations) : 0.001001</code></pre>
@@ -480,8 +584,8 @@ Figure 2.1: The Afro-Asiatic languages of the sample as the tree has them. Each 
 <p><strong>With your own data.</strong> Glottolog publishes its classification as Newick trees, one per family, and D-PLACE collects published dated phylogenies with Glottocodes on the tips. Whatever the source, run the two <code>setdiff()</code> lines first, prune with <code>keep.tip()</code>, and plot at least one family you know well, so that you can spot languages the tree puts somewhere you do not believe. The model takes the tree as given.</p>
 </blockquote>
 </div>
-<div id="what-to-carry-forward-1" class="section level2 hasAnchor" number="2.8">
-<h2><span class="header-section-number">2.8</span> What to carry forward<a href="trees.html#what-to-carry-forward-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-to-carry-forward-1" class="section level2 hasAnchor" number="2.10">
+<h2><span class="header-section-number">2.10</span> What to carry forward<a href="trees.html#what-to-carry-forward-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>A <code>phylo</code> object needs tip labels that match a column of your data exactly. Check both directions.</li>
 <li><code>keep.tip()</code> and <code>drop.tip()</code> prune; <code>match()</code> puts the data in tip order.</li>
@@ -490,10 +594,11 @@ Figure 2.1: The Afro-Asiatic languages of the sample as the tree has them. Each 
 </ul>
 <p>The next chapter turns the tree into a matrix, the form a regression can use.</p>
 </div>
-<div id="further-reading-2" class="section level2 hasAnchor" number="2.9">
-<h2><span class="header-section-number">2.9</span> Further reading<a href="trees.html#further-reading-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="further-reading-2" class="section level2 hasAnchor" number="2.11">
+<h2><span class="header-section-number">2.11</span> Further reading<a href="trees.html#further-reading-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>How earlier studies obtained their trees.</strong> Most typological studies have had no tree at all and used the family, or the genus, as a grouping factor: <span class="citation">Dryer (<a href="#ref-dryer1989">1989</a>)</span> samples genera within areas, and <span class="citation">Jaeger et al. (<a href="#ref-jaeger2011">2011</a>)</span> give family a random intercept. Studies of single families could use dated Bayesian phylogenies, as <span class="citation">Dunn et al. (<a href="#ref-dunn2011">2011</a>)</span> did for word-order correlations in four families. Global studies need a global tree. <span class="citation"><span class="nocase">Skirgård et al.</span> (<a href="#ref-skirgard2023">2023</a>)</span> use one assembled from published family phylogenies and the Glottolog classification, and <span class="citation">Guzmán Naranjo and Becker (<a href="#ref-guzman2022">2022</a>)</span> use Glottolog family trees much as this book does. <span class="citation">Jäger (<a href="#ref-jager2018">2018</a>)</span> infers a worldwide tree directly from word lists.</p>
 <ul>
+<li>Phlorest <span class="citation">(<a href="#ref-phlorest">Phlorest, n.d.</a>)</span> and D-PLACE <span class="citation">(<a href="#ref-kirby2016"><span class="nocase">Kirby et al.</span> 2016</a>)</span> are the places to look for a dated tree of your family before settling for a classification.</li>
 <li><span class="citation">Grafen (<a href="#ref-grafen1989">1989</a>)</span> introduced phylogenetic regression for trees built from taxonomies, including the branch-length convention that bears his name.</li>
 <li><span class="citation">Münkemüller et al. (<a href="#ref-munkemuller2012">2012</a>)</span> compare the measures of phylogenetic signal, and <span class="citation">Fritz and Purvis (<a href="#ref-fritz2010">2010</a>)</span> give the D statistic for binary features (<code>caper::phylo.d()</code>).</li>
 <li>The Glottolog classification itself is documented by <span class="citation">Hammarström et al. (<a href="#ref-glottolog">n.d.</a>)</span>.</li>
@@ -505,6 +610,18 @@ Figure 2.1: The Afro-Asiatic languages of the sample as the tree has them. Each 
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-blomberg2003" class="csl-entry">
 Blomberg, Simon P., Theodore Garland Jr., and Anthony R. Ives. 2003. <span>“Testing for Phylogenetic Signal in Comparative Data: Behavioral Traits Are More Labile.”</span> <em>Evolution</em> 57 (4): 717–45.
+</div>
+<div id="ref-bouckaert2018" class="csl-entry">
+Bouckaert, Remco R., Claire Bowern, and Quentin D. Atkinson. 2018. <span>“The Origin and Expansion of <span>P</span>ama-<span>N</span>yungan Languages Across <span>A</span>ustralia.”</span> <em>Nature Ecology &amp; Evolution</em> 2: 741–49.
+</div>
+<div id="ref-bouckaert2012" class="csl-entry">
+Bouckaert, Remco, Philippe Lemey, Michael Dunn, et al. 2012. <span>“Mapping the Origins and Expansion of the <span>I</span>ndo-<span>E</span>uropean Language Family.”</span> <em>Science</em> 337 (6097): 957–60.
+</div>
+<div id="ref-bouckaert2022" class="csl-entry">
+Bouckaert, Remco, David Redding, Oliver Sheehan, et al. 2022. <em>Global Language Diversification Is Linked to Socio-Ecology and Threat Status</em>. SocArXiv preprint.
+</div>
+<div id="ref-chang2015" class="csl-entry">
+Chang, Will, Chundra Cathcart, David Hall, and Andrew Garrett. 2015. <span>“Ancestry-Constrained Phylogenetic Analysis Supports the <span>I</span>ndo-<span>E</span>uropean Steppe Hypothesis.”</span> <em>Language</em> 91 (1): 194–244.
 </div>
 <div id="ref-dryer1989" class="csl-entry">
 Dryer, Matthew S. 1989. <span>“Large Linguistic Areas and Language Sampling.”</span> <em>Studies in Language</em> 13 (2): 257–92.
@@ -518,6 +635,12 @@ Fritz, Susanne A., and Andy Purvis. 2010. <span>“Selectivity in Mammalian Exti
 <div id="ref-grafen1989" class="csl-entry">
 Grafen, Alan. 1989. <span>“The Phylogenetic Regression.”</span> <em>Philosophical Transactions of the Royal Society of London B</em> 326 (1233): 119–57.
 </div>
+<div id="ref-gray2009" class="csl-entry">
+Gray, Russell D., Alexei J. Drummond, and Simon J. Greenhill. 2009. <span>“Language Phylogenies Reveal Expansion Pulses and Pauses in <span>P</span>acific Settlement.”</span> <em>Science</em> 323 (5913): 479–83.
+</div>
+<div id="ref-grollemund2015" class="csl-entry">
+Grollemund, Rebecca, Simon Branford, Koen Bostoen, Andrew Meade, Chris Venditti, and Mark Pagel. 2015. <span>“Bantu Expansion Shows That Habitat Alters the Route and Pace of Human Dispersals.”</span> <em>Proceedings of the National Academy of Sciences</em> 112 (43): 13296–301.
+</div>
 <div id="ref-guzman2022" class="csl-entry">
 Guzmán Naranjo, Matías, and Laura Becker. 2022. <span>“Statistical Bias Control in Typology.”</span> <em>Linguistic Typology</em> 26 (3): 605–70. <a href="https://doi.org/10.1515/lingty-2021-0002">https://doi.org/10.1515/lingty-2021-0002</a>.
 </div>
@@ -530,8 +653,20 @@ Jaeger, T. Florian, Peter Graff, William Croft, and Daniel Pontillo. 2011. <span
 <div id="ref-jager2018" class="csl-entry">
 Jäger, Gerhard. 2018. <span>“Global-Scale Phylogenetic Linguistic Inference from Lexical Resources.”</span> <em>Scientific Data</em> 5: 180189.
 </div>
+<div id="ref-kirby2016" class="csl-entry">
+<span class="nocase">Kirby, Kathryn R., Russell D. Gray, Simon J. Greenhill, et al.</span> 2016. <span>“<span>D-PLACE</span>: A Global Database of Cultural, Linguistic and Environmental Diversity.”</span> <em>PLoS ONE</em> 11 (7): e0158391.
+</div>
+<div id="ref-kolipakam2018" class="csl-entry">
+Kolipakam, Vishnupriya, Fiona M. Jordan, Michael Dunn, et al. 2018. <span>“A <span>B</span>ayesian Phylogenetic Study of the <span>D</span>ravidian Language Family.”</span> <em>Royal Society Open Science</em> 5 (3): 171504.
+</div>
 <div id="ref-munkemuller2012" class="csl-entry">
 Münkemüller, Tamara, Sébastien Lavergne, Bruno Bzeznik, et al. 2012. <span>“How to Measure and Test Phylogenetic Signal.”</span> <em>Methods in Ecology and Evolution</em> 3 (4): 743–56.
+</div>
+<div id="ref-phlorest" class="csl-entry">
+Phlorest. n.d. <em>Phlorest: Published Language Phylogenies in a Common Format</em>. <a href="https://github.com/phlorest" class="uri">Https://github.com/phlorest</a>.
+</div>
+<div id="ref-sagart2019" class="csl-entry">
+Sagart, Laurent, Guillaume Jacques, Yunfan Lai, et al. 2019. <span>“Dated Language Phylogenies Shed Light on the Ancestry of <span>S</span>ino-<span>T</span>ibetan.”</span> <em>Proceedings of the National Academy of Sciences</em> 116 (21): 10317–22.
 </div>
 <div id="ref-skirgard2023" class="csl-entry">
 <span class="nocase">Skirgård, Hedvig, Hannah J. Haynie, Damián E. Blasi, et al.</span> 2023. <span>“Grambank Reveals the Importance of Genealogical Constraints on Linguistic Diversity and Highlights the Impact of Language Loss.”</span> <em>Science Advances</em> 9 (16): eadg6175. <a href="https://doi.org/10.1126/sciadv.adg6175">https://doi.org/10.1126/sciadv.adg6175</a>.

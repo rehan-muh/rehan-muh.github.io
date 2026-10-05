@@ -4,6 +4,7 @@ fig:the-problem-map
 fig:the-problem-tree
 fig:the-problem-sim-plot
 fig:trees-family
+fig:trees-phlorest-plot
 fig:phylogeny-vcv-plot
 fig:phylogeny-lines
 fig:phylogeny-ranef-tree
@@ -11,6 +12,7 @@ fig:phylogeny-engines-pgls-lines
 fig:phylogeny-engines-lines
 fig:maps-graph-map
 fig:maps-correlogram
+fig:maps-areas-map
 fig:space-surface-surface
 fig:space-surface-lines
 fig:space-neighbours-graph-map
@@ -46,6 +48,8 @@ does-the-tree-match-the-data
 look-at-it
 what-the-branch-lengths-mean
 build-a-tree-from-a-table
+where-trees-come-from
+a-dated-tree-from-phlorest
 how-tree-like-is-a-feature
 what-to-carry-forward-1
 further-reading-2
@@ -78,6 +82,9 @@ flat-maps-and-their-cost
 neighbours
 from-a-graph-to-weights
 how-far-does-similarity-reach
+where-locations-come-from
+speaker-areas-as-polygons
+what-a-location-leaves-out
 what-to-carry-forward-4
 further-reading-5
 space-surface
