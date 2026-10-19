@@ -1,0 +1,79 @@
+p.caption { color: #555; font-size: 0.92em; }
+.rmdnote, .rmdcaution, .casestudy, .biobox, .keypoints, .objectives, .technical {
+  padding: 0.8em 1em 0.6em 1em; margin: 1.2em 0; border-left: 5px solid; border-radius: 4px;
+}
+.rmdnote    { background: #f2f6fc; border-color: #4a78c2; }
+.rmdcaution { background: #fdf2f2; border-color: #c24a4a; }
+.casestudy  { background: #f1f8f2; border-color: #3d8b4f; }
+.biobox     { background: #fdf6ec; border-color: #d18a2c; }
+.keypoints  { background: #f5f5f5; border-color: #777; }
+.rmdnote::before    { content: "Note"; font-weight: bold; display: block; margin-bottom: .3em; color: #4a78c2; }
+.rmdcaution::before { content: "Caution"; font-weight: bold; display: block; margin-bottom: .3em; color: #c24a4a; }
+.casestudy::before  { content: "Case study"; font-weight: bold; display: block; margin-bottom: .3em; color: #3d8b4f; }
+.biobox::before     { content: "From the biologist's toolbox"; font-weight: bold; display: block; margin-bottom: .3em; color: #b06d14; }
+.keypoints::before  { content: "Key points"; font-weight: bold; display: block; margin-bottom: .3em; color: #555; }
+table { font-size: 0.92em; }
+
+/* ---- Code: wrap long lines instead of overflowing ---- */
+.book .book-body .page-wrapper .page-inner section.normal pre,
+pre, pre code, .sourceCode pre, div.sourceCode {
+  white-space: pre-wrap !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  overflow-x: hidden;
+}
+
+/* ---- Tables: alternating gray and white rows, wrapped cells ---- */
+.book .book-body .page-wrapper .page-inner section.normal table,
+table {
+  border-collapse: collapse;
+  width: auto;
+  max-width: 100%;
+  display: table;
+  overflow-x: auto;
+}
+.book .book-body .page-wrapper .page-inner section.normal table tr,
+table tbody tr { background-color: #ffffff; }
+.book .book-body .page-wrapper .page-inner section.normal table tbody tr:nth-child(even),
+table tbody tr:nth-child(even) { background-color: #ebebeb; }
+.book .book-body .page-wrapper .page-inner section.normal table tbody tr:nth-child(odd),
+table tbody tr:nth-child(odd) { background-color: #ffffff; }
+.book .book-body .page-wrapper .page-inner section.normal table td,
+.book .book-body .page-wrapper .page-inner section.normal table th {
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+  vertical-align: top;
+  padding: 5px 9px;
+}
+.book .book-body .page-wrapper .page-inner section.normal table thead th {
+  background-color: #ebebeb;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+/* ---- Math: never wider than the text column ---- */
+.math.display, mjx-container[display="true"], .MathJax_Display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* ---- Figures ---- */
+.figure img, p img { max-width: 100%; height: auto; }
+
+.objectives { background: #f3f0fa; border-color: #6a4fb3; }
+.technical  { background: #f7f7f2; border-color: #8a8a5c; }
+.objectives::before { content: "Learning objectives"; font-weight: bold; display: block; margin-bottom: .3em; color: #6a4fb3; }
+.technical::before  { content: "Technical details"; font-weight: bold; display: block; margin-bottom: .3em; color: #6b6b40; }
+
+/* ---- Matrices are not striped: printed R matrices and matrices in equations ---- */
+.book .book-body .page-wrapper .page-inner section.normal .matrix-table table tbody tr,
+.book .book-body .page-wrapper .page-inner section.normal .matrix-table table thead th,
+.matrix-table table tbody tr, .matrix-table table thead th,
+.MathJax table tr, .MathJax_Display table tr, .math table tr, mjx-container table tr,
+.book .book-body .page-wrapper .page-inner section.normal .MathJax table tr,
+.book .book-body .page-wrapper .page-inner section.normal .math table tr {
+  background-color: transparent !important;
+}
+.MathJax table td, .math table td { padding: 0 !important; border: none !important; }
