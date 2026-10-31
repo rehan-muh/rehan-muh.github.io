@@ -56,7 +56,7 @@
     $("al-lang").value = langs.includes(lang) ? lang : "";
     $("al-about").innerHTML =
       `${a.sets.toLocaleString()} cognate sets, ${a.languages} descendants; ${esc(a.kind)}. ` +
-      (a.machine ? "Aligned by the neural aligner and reviewed. " : "Aligned by hand. ") +
+      (a.machine ? "Aligned by the neural CRF aligner and reviewed. " : "Aligned by hand. ") +
       `<a href="${BASE + a.slug}.tsv" download>Download the table (TSV)</a>.`;
     $("al-sources").innerHTML = a.sources.map((s) => "<li>" + (s.url
       ? `<a href="${esc(s.url)}" rel="noopener">${esc(s.text)}</a>` : esc(s.text)) + "</li>").join("");
