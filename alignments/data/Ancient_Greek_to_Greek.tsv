@@ -1,0 +1,411 @@
+Set	Concept	Language	Ancestor	Aligned	Changed
+iecor:Ancient Greek > Greek|iecor_131	STAR	Apulia-Calabrian Greek	á s t r o̞ n	a s t r o̞ -	.....x
+iecor:Ancient Greek > Greek|iecor_131	STAR	Cappadocian Greek	á s t r o̞ n	a s t r o s	.....x
+iecor:Ancient Greek > Greek|iecor_131	STAR	Cypriot Greek	á s t r o̞ n	ɐ s t r ɔ n	....x.
+iecor:Ancient Greek > Greek|iecor_131	STAR	Modern Greek	á s t r o̞ n	a s t r i -	....xx
+iecor:Ancient Greek > Greek|iecor_131	STAR	Pontic	á s t r o̞ n	a ʃ t r o̞ s	.x...x
+iecor:Ancient Greek > Greek|iecor_1456	BITE	Cappadocian Greek	d á k n o̞ː	ð a k n o	x....
+iecor:Ancient Greek > Greek|iecor_1456	BITE	Pontic	d á k n o̞ː	ð a k n o̞	x....
+iecor:Ancient Greek > Greek|iecor_1458	BLOOD	Apulia-Calabrian Greek	h âi m a	- e̞ m a	xx..
+iecor:Ancient Greek > Greek|iecor_1458	BLOOD	Cappadocian Greek	h âi m a	- o m a	xx..
+iecor:Ancient Greek > Greek|iecor_1458	BLOOD	Cypriot Greek	h âi m a	ʝ ɛ m ɐ	xx..
+iecor:Ancient Greek > Greek|iecor_1458	BLOOD	Modern Greek	h âi m a	- e̞ m a	xx..
+iecor:Ancient Greek > Greek|iecor_1458	BLOOD	Pontic	h âi m a	- e̞ m a	xx..
+iecor:Ancient Greek > Greek|iecor_146	THREE	Apulia-Calabrian Greek	t r êː s	t r i -	..xx
+iecor:Ancient Greek > Greek|iecor_146	THREE	Cypriot Greek	t r êː s	t r i s	..x.
+iecor:Ancient Greek > Greek|iecor_146	THREE	Pontic	t r êː s	t r i s	..x.
+iecor:Ancient Greek > Greek|iecor_1460	BREATHE	Modern Greek	p n ô̞ː	p n o̞	...
+iecor:Ancient Greek > Greek|iecor_1461	BURN	Apulia-Calabrian Greek	k ái o̞ː	tʃ e̞ o̞	xx.
+iecor:Ancient Greek > Greek|iecor_1461	BURN	Modern Greek	k ái o̞ː	k e̞ o̞	.x.
+iecor:Ancient Greek > Greek|iecor_1461	BURN	Pontic	k ái o̞ː	c e̞ o̞	xx.
+iecor:Ancient Greek > Greek|iecor_1464	COME	Apulia-Calabrian Greek	é̞ r kʰ o̞ m ai	e̞ r k o̞ m e̞	..x..x
+iecor:Ancient Greek > Greek|iecor_1464	COME	Cappadocian Greek	é̞ r kʰ o̞ m ai	e r x u m e	..xx.x
+iecor:Ancient Greek > Greek|iecor_1464	COME	Cypriot Greek	é̞ r kʰ o̞ m ai	ɛ r̥ k u m ɛ	x.xx.x
+iecor:Ancient Greek > Greek|iecor_1464	COME	Modern Greek	é̞ r kʰ o̞ m ai	e̞ r x o̞ m e̞	..x..x
+iecor:Ancient Greek > Greek|iecor_1464	COME	Pontic	é̞ r kʰ o̞ m ai	e̞ r x o̞ m ə	..x..x
+iecor:Ancient Greek > Greek|iecor_1467	DAY (NOT NIGHT)	Apulia-Calabrian Greek	h ɛː m é̞ r aː	- e̞ m e̞ r a	xx....
+iecor:Ancient Greek > Greek|iecor_1467	DAY (NOT NIGHT)	Cappadocian Greek	h ɛː m é̞ r aː	- i m e r a	xx....
+iecor:Ancient Greek > Greek|iecor_1467	DAY (NOT NIGHT)	Cypriot Greek	h ɛː m é̞ r aː	- - m ɛ r ɐ	xx.x..
+iecor:Ancient Greek > Greek|iecor_1467	DAY (NOT NIGHT)	Modern Greek	h ɛː m é̞ r aː	- - m e̞ r a	xx....
+iecor:Ancient Greek > Greek|iecor_1467	DAY (NOT NIGHT)	Pontic	h ɛː m é̞ r aː	- i m e̞ r ə	xx...x
+iecor:Ancient Greek > Greek|iecor_146~110~609975	THREE	Cappadocian Greek	t r í a	t r i a	....
+iecor:Ancient Greek > Greek|iecor_146~110~609975	THREE	Modern Greek	t r í a	t r i a	....
+iecor:Ancient Greek > Greek|iecor_1471	DRY	Cappadocian Greek	k s ɛː r ó̞ s	k s e r o -	..x..x
+iecor:Ancient Greek > Greek|iecor_1471	DRY	Cypriot Greek	k s ɛː r ó̞ s	k s ɛ r ɔ s	....x.
+iecor:Ancient Greek > Greek|iecor_1471	DRY	Modern Greek	k s ɛː r ó̞ s	k s e̞ r o̞ s	..x...
+iecor:Ancient Greek > Greek|iecor_1479	FEAR (BE AFRAID)	Cappadocian Greek	pʰ o̞ b û m ai	f o v u m e	x.x..x
+iecor:Ancient Greek > Greek|iecor_1479	FEAR (BE AFRAID)	Cypriot Greek	pʰ o̞ b û m ai	f ɔ - u m ɛ	xxx..x
+iecor:Ancient Greek > Greek|iecor_1479	FEAR (BE AFRAID)	Modern Greek	pʰ o̞ b û m ai	f o̞ v a m e̞	x.xx.x
+iecor:Ancient Greek > Greek|iecor_1479	FEAR (BE AFRAID)	Pontic	pʰ o̞ b û m ai	f o̞ v u m ə	x.x..x
+iecor:Ancient Greek > Greek|iecor_1486	FLY (MOVE THROUGH AIR)	Apulia-Calabrian Greek	p e̞ t á o̞ː	p e̞ t a o̞	.....
+iecor:Ancient Greek > Greek|iecor_1486	FLY (MOVE THROUGH AIR)	Cappadocian Greek	p e̞ t á o̞ː	p e t a o	.....
+iecor:Ancient Greek > Greek|iecor_1486	FLY (MOVE THROUGH AIR)	Cypriot Greek	p e̞ t á o̞ː	p ɛ t - ɔ	.x.xx
+iecor:Ancient Greek > Greek|iecor_1486	FLY (MOVE THROUGH AIR)	Modern Greek	p e̞ t á o̞ː	p e̞ t - o̞	...x.
+iecor:Ancient Greek > Greek|iecor_1486	FLY (MOVE THROUGH AIR)	Pontic	p e̞ t á o̞ː	p e̞ t - o̞	...x.
+iecor:Ancient Greek > Greek|iecor_1494	HEAD	Apulia-Calabrian Greek	k e̞ pʰ a l ɛ́ː	c e̞ f a l i	x.x..x
+iecor:Ancient Greek > Greek|iecor_1494	HEAD	Cappadocian Greek	k e̞ pʰ a l ɛ́ː	c e f a l̥ -	x.x..x
+iecor:Ancient Greek > Greek|iecor_1494	HEAD	Cypriot Greek	k e̞ pʰ a l ɛ́ː	tʃ ɛ f ɐ l i	xxx..x
+iecor:Ancient Greek > Greek|iecor_1494	HEAD	Modern Greek	k e̞ pʰ a l ɛ́ː	c e̞ f a l i	x.x..x
+iecor:Ancient Greek > Greek|iecor_1494	HEAD	Pontic	k e̞ pʰ a l ɛ́ː	c e̞ f a l i	x.x..x
+iecor:Ancient Greek > Greek|iecor_1503	LAKE	Cypriot Greek	l í m n ɛː	l i m n i	....x
+iecor:Ancient Greek > Greek|iecor_1503	LAKE	Modern Greek	l í m n ɛː	l i m n i	....x
+iecor:Ancient Greek > Greek|iecor_1503	LAKE	Pontic	l í m n ɛː	l i m n i	....x
+iecor:Ancient Greek > Greek|iecor_1504	LEFT	Modern Greek	a r i s t e̞ r ó̞ s	a r i s t e̞ r o s	.........
+iecor:Ancient Greek > Greek|iecor_1506	LONG	Apulia-Calabrian Greek	m a k r ó̞ s	m a k r - -	....xx
+iecor:Ancient Greek > Greek|iecor_1506	LONG	Cappadocian Greek	m a k r ó̞ s	m a k r - -	....xx
+iecor:Ancient Greek > Greek|iecor_1506	LONG	Cypriot Greek	m a k r ó̞ s	m ɐ k r - -	....xx
+iecor:Ancient Greek > Greek|iecor_1506	LONG	Modern Greek	m a k r ó̞ s	m a k r - -	....xx
+iecor:Ancient Greek > Greek|iecor_1506	LONG	Pontic	m a k r ó̞ s	m a k r - -	....xx
+iecor:Ancient Greek > Greek|iecor_1507	LOUSE	Apulia-Calabrian Greek	pʰ tʰ êː r a	θ t i r a	xxx..
+iecor:Ancient Greek > Greek|iecor_1507	LOUSE	Cappadocian Greek	pʰ tʰ êː r a	f t i r̥ -	xxx.x
+iecor:Ancient Greek > Greek|iecor_1507	LOUSE	Cypriot Greek	pʰ tʰ êː r a	f t i r ɐ	xxx..
+iecor:Ancient Greek > Greek|iecor_1507	LOUSE	Modern Greek	pʰ tʰ êː r a	p s i r a	xxx..
+iecor:Ancient Greek > Greek|iecor_1507	LOUSE	Pontic	pʰ tʰ êː r a	f t i r a	xxx..
+iecor:Ancient Greek > Greek|iecor_1508	MEAT	Apulia-Calabrian Greek	k r é̞ a s	k r e̞ a -	....x
+iecor:Ancient Greek > Greek|iecor_1508	MEAT	Cappadocian Greek	k r é̞ a s	c r j a s	x.x..
+iecor:Ancient Greek > Greek|iecor_1508	MEAT	Cypriot Greek	k r é̞ a s	k r i ɐ s	..x..
+iecor:Ancient Greek > Greek|iecor_1508	MEAT	Modern Greek	k r é̞ a s	k r e̞ a s	.....
+iecor:Ancient Greek > Greek|iecor_1508	MEAT	Pontic	k r é̞ a s	k r e a s	.....
+iecor:Ancient Greek > Greek|iecor_1510	MOUTH	Apulia-Calabrian Greek	s t ó̞ m a	s t o̞ m a	.....
+iecor:Ancient Greek > Greek|iecor_1510	MOUTH	Cappadocian Greek	s t ó̞ m a	s t o m a	.....
+iecor:Ancient Greek > Greek|iecor_1510	MOUTH	Cypriot Greek	s t ó̞ m a	s t ɔ m ɐ	..x..
+iecor:Ancient Greek > Greek|iecor_1510	MOUTH	Modern Greek	s t ó̞ m a	s t o̞ m a	.....
+iecor:Ancient Greek > Greek|iecor_1510	MOUTH	Pontic	s t ó̞ m a	s t o̞ m a	.....
+iecor:Ancient Greek > Greek|iecor_1511	NARROW	Apulia-Calabrian Greek	s t e̞ n ó̞ s	s t e̞ n o̞ -	.....x
+iecor:Ancient Greek > Greek|iecor_1511	NARROW	Cappadocian Greek	s t e̞ n ó̞ s	s t e n o -	.....x
+iecor:Ancient Greek > Greek|iecor_1511	NARROW	Cypriot Greek	s t e̞ n ó̞ s	s t ɛ n ɔ s	..x.x.
+iecor:Ancient Greek > Greek|iecor_1511	NARROW	Modern Greek	s t e̞ n ó̞ s	s t e̞ n o̞ s	......
+iecor:Ancient Greek > Greek|iecor_1511	NARROW	Pontic	s t e̞ n ó̞ s	s t e̞ n o̞ s	......
+iecor:Ancient Greek > Greek|iecor_1517	OLD	Apulia-Calabrian Greek	p a l ai ó̞ s	p a l e̞ o̞ -	...x.x
+iecor:Ancient Greek > Greek|iecor_1517	OLD	Cappadocian Greek	p a l ai ó̞ s	p a ʎ - o -	..xx.x
+iecor:Ancient Greek > Greek|iecor_1517	OLD	Cypriot Greek	p a l ai ó̞ s	p ɐ ʎː - ɔ s	..xxx.
+iecor:Ancient Greek > Greek|iecor_1517	OLD	Modern Greek	p a l ai ó̞ s	p a ʎ - o̞ s	..xx..
+iecor:Ancient Greek > Greek|iecor_1517	OLD	Pontic	p a l ai ó̞ s	p a l e̞ o̞ s	...x..
+iecor:Ancient Greek > Greek|iecor_1519	PLAY	Apulia-Calabrian Greek	p ái z d o̞ː	p e̞ - dz -	.xxxx
+iecor:Ancient Greek > Greek|iecor_1519	PLAY	Cappadocian Greek	p ái z d o̞ː	p e z - o	.x.x.
+iecor:Ancient Greek > Greek|iecor_1519	PLAY	Cypriot Greek	p ái z d o̞ː	p ɛ zː - o	.xxx.
+iecor:Ancient Greek > Greek|iecor_1519	PLAY	Modern Greek	p ái z d o̞ː	p e̞ z - o̞	.x.x.
+iecor:Ancient Greek > Greek|iecor_1519	PLAY	Pontic	p ái z d o̞ː	p e̞ z - o̞	.x.x.
+iecor:Ancient Greek > Greek|iecor_1525	RIVER	Apulia-Calabrian Greek	p o̞ t a m ó̞ s	p o̞ t a m o̞ -	......x
+iecor:Ancient Greek > Greek|iecor_1525	RIVER	Cappadocian Greek	p o̞ t a m ó̞ s	p o t a m̥ - -	.....xx
+iecor:Ancient Greek > Greek|iecor_1525	RIVER	Cypriot Greek	p o̞ t a m ó̞ s	p ɔ t ɐ m ɔ s	.x...x.
+iecor:Ancient Greek > Greek|iecor_1525	RIVER	Modern Greek	p o̞ t a m ó̞ s	p o̞ t a m - -	.....xx
+iecor:Ancient Greek > Greek|iecor_1525	RIVER	Pontic	p o̞ t a m ó̞ s	p o̞ t a m o̞ s	.......
+iecor:Ancient Greek > Greek|iecor_1529	SAY	Apulia-Calabrian Greek	l é̞ ɡ o̞ː	l e̞ ɣ o̞	..x.
+iecor:Ancient Greek > Greek|iecor_1529	SAY	Cappadocian Greek	l é̞ ɡ o̞ː	l e ɣ o	..x.
+iecor:Ancient Greek > Greek|iecor_1529	SAY	Modern Greek	l é̞ ɡ o̞ː	l e̞ - o̞	..x.
+iecor:Ancient Greek > Greek|iecor_1529	SAY	Pontic	l é̞ ɡ o̞ː	l e̞ ɣ o̞	..x.
+iecor:Ancient Greek > Greek|iecor_153	TWO	Apulia-Calabrian Greek	d ý o̞	ð i o̞	xx.
+iecor:Ancient Greek > Greek|iecor_153	TWO	Cappadocian Greek	d ý o̞	ð i o	xx.
+iecor:Ancient Greek > Greek|iecor_153	TWO	Cypriot Greek	d ý o̞	θ c ɔ	xxx
+iecor:Ancient Greek > Greek|iecor_153	TWO	Modern Greek	d ý o̞	ð i o̞	xx.
+iecor:Ancient Greek > Greek|iecor_153	TWO	Pontic	d ý o̞	ð i o̞	xx.
+iecor:Ancient Greek > Greek|iecor_1533	SEW	Apulia-Calabrian Greek	h r á p t o̞ː	- r a f t o̞	x..x..
+iecor:Ancient Greek > Greek|iecor_1533	SEW	Cappadocian Greek	h r á p t o̞ː	- r a f t o	x..x..
+iecor:Ancient Greek > Greek|iecor_1533	SEW	Cypriot Greek	h r á p t o̞ː	- r ɐ f k ɔ	x..xxx
+iecor:Ancient Greek > Greek|iecor_1533	SEW	Modern Greek	h r á p t o̞ː	- r a v - o̞	x..xx.
+iecor:Ancient Greek > Greek|iecor_1533	SEW	Pontic	h r á p t o̞ː	- r a f t o̞	x..x..
+iecor:Ancient Greek > Greek|iecor_1536	SIT	Cappadocian Greek	k á tʰ ɛː m ai	k a θ o m e	..xx.x
+iecor:Ancient Greek > Greek|iecor_1536	SIT	Cypriot Greek	k á tʰ ɛː m ai	k ɐ θ u m ɛ	..xx.x
+iecor:Ancient Greek > Greek|iecor_1536	SIT	Modern Greek	k á tʰ ɛː m ai	k a θ o̞ m e̞	..xx.x
+iecor:Ancient Greek > Greek|iecor_1536	SIT	Pontic	k á tʰ ɛː m ai	k a θ u m ə	..xx.x
+iecor:Ancient Greek > Greek|iecor_1537	SKIN	Apulia-Calabrian Greek	d é̞ r m a	ð e̞ r m a	x....
+iecor:Ancient Greek > Greek|iecor_1537	SKIN	Cappadocian Greek	d é̞ r m a	ð e r m a	x....
+iecor:Ancient Greek > Greek|iecor_1537	SKIN	Modern Greek	d é̞ r m a	ð e̞ r m a	x....
+iecor:Ancient Greek > Greek|iecor_1538	SKY	Cappadocian Greek	uː r a n ó̞ s	u r a n o s	......
+iecor:Ancient Greek > Greek|iecor_1538	SKY	Cypriot Greek	uː r a n ó̞ s	u r ɐ n ɔ s	....x.
+iecor:Ancient Greek > Greek|iecor_1538	SKY	Modern Greek	uː r a n ó̞ s	u r a n o̞ s	......
+iecor:Ancient Greek > Greek|iecor_1538	SKY	Pontic	uː r a n ó̞ s	u r a n o̞ s	......
+iecor:Ancient Greek > Greek|iecor_1551	TAIL	Cappadocian Greek	ou r á	u r a	x..
+iecor:Ancient Greek > Greek|iecor_1551	TAIL	Cypriot Greek	ou r á	u r ɔ	x.x
+iecor:Ancient Greek > Greek|iecor_1551	TAIL	Modern Greek	ou r á	u r a	x..
+iecor:Ancient Greek > Greek|iecor_1551	TAIL	Pontic	ou r á	u r a	x..
+iecor:Ancient Greek > Greek|iecor_1555	TIE	Apulia-Calabrian Greek	d é̞ o̞ː	ð e̞ o̞	x..
+iecor:Ancient Greek > Greek|iecor_1555	TIE	Cappadocian Greek	d é̞ o̞ː	ð e o	x..
+iecor:Ancient Greek > Greek|iecor_1555	TIE	Cypriot Greek	d é̞ o̞ː	ð i ɔ	xxx
+iecor:Ancient Greek > Greek|iecor_1555	TIE	Modern Greek	d é̞ o̞ː	ð e̞ o̞	x..
+iecor:Ancient Greek > Greek|iecor_1555	TIE	Pontic	d é̞ o̞ː	ð e̞ o̞	x..
+iecor:Ancient Greek > Greek|iecor_1556	TONGUE	Apulia-Calabrian Greek	ɡ l ô̞ː sː a	ɣ l o̞ sː a	x....
+iecor:Ancient Greek > Greek|iecor_1556	TONGUE	Cappadocian Greek	ɡ l ô̞ː sː a	ɣ l o s a	x..x.
+iecor:Ancient Greek > Greek|iecor_1556	TONGUE	Cypriot Greek	ɡ l ô̞ː sː a	ɣ l ɔ sː ɐ	x.x..
+iecor:Ancient Greek > Greek|iecor_1556	TONGUE	Modern Greek	ɡ l ô̞ː sː a	ɣ l o̞ s a	x..x.
+iecor:Ancient Greek > Greek|iecor_1556	TONGUE	Pontic	ɡ l ô̞ː sː a	ɣ l o̞ s ə	x..xx
+iecor:Ancient Greek > Greek|iecor_1566	WIND	Cappadocian Greek	á n e̞ m o̞ s	a n o m o s	..x...
+iecor:Ancient Greek > Greek|iecor_1567	WING	Apulia-Calabrian Greek	p t é̞ r y ɡ a	θ t e̞ r i ɣ a	x...xx.
+iecor:Ancient Greek > Greek|iecor_1567	WING	Modern Greek	p t é̞ r y ɡ a	f t e̞ r u ɣ a	x...xx.
+iecor:Ancient Greek > Greek|iecor_1567~110~a80da7	WING	Pontic	p t e̞ r ó̞ n	f t e̞ r o̞ n	x.....
+iecor:Ancient Greek > Greek|iecor_1570	WORM	Apulia-Calabrian Greek	s k o̞ː l ɛ́ː k i o̞ n	s k u l i tʃ i - -	..x.xx.xx
+iecor:Ancient Greek > Greek|iecor_1570	WORM	Cappadocian Greek	s k o̞ː l ɛ́ː k i o̞ n	ʃ c o l o tʃ - - -	xx..xxxxx
+iecor:Ancient Greek > Greek|iecor_1570	WORM	Cypriot Greek	s k o̞ː l ɛ́ː k i o̞ n	s k u l u tʃ i - n	..x.xx.x.
+iecor:Ancient Greek > Greek|iecor_1570	WORM	Modern Greek	s k o̞ː l ɛ́ː k i o̞ n	s k u l i c i - -	..x.xx.xx
+iecor:Ancient Greek > Greek|iecor_1570	WORM	Pontic	s k o̞ː l ɛ́ː k i o̞ n	s k o̞ l e̞ c i - n	....xx.x.
+iecor:Ancient Greek > Greek|iecor_1574	BARK	Modern Greek	pʰ l oi ó̞ s	f l i o̞ s	x.x..
+iecor:Ancient Greek > Greek|iecor_1583	SMOKE (EXHAUST)	Apulia-Calabrian Greek	k a p n ó̞ s	k a n n o̞ -	..x..x
+iecor:Ancient Greek > Greek|iecor_1583	SMOKE (EXHAUST)	Cappadocian Greek	k a p n ó̞ s	k a p n o s	......
+iecor:Ancient Greek > Greek|iecor_1583	SMOKE (EXHAUST)	Cypriot Greek	k a p n ó̞ s	k ɐ p n - -	....xx
+iecor:Ancient Greek > Greek|iecor_1583	SMOKE (EXHAUST)	Modern Greek	k a p n ó̞ s	k a p n o̞ s	......
+iecor:Ancient Greek > Greek|iecor_1583	SMOKE (EXHAUST)	Pontic	k a p n ó̞ s	k a p n o̞ s	......
+iecor:Ancient Greek > Greek|iecor_1585	THICK	Cappadocian Greek	p a kʰ ý s	p a ç i -	..xxx
+iecor:Ancient Greek > Greek|iecor_1585	THICK	Cypriot Greek	p a kʰ ý s	p ɐ ʃ i s	..xx.
+iecor:Ancient Greek > Greek|iecor_202	DIG	Apulia-Calabrian Greek	s k á p t o̞ː	s k a f t o̞	...x..
+iecor:Ancient Greek > Greek|iecor_202	DIG	Cappadocian Greek	s k á p t o̞ː	s k a f t o	...x..
+iecor:Ancient Greek > Greek|iecor_202	DIG	Cypriot Greek	s k á p t o̞ː	s k ɐ f k ɔ	...xxx
+iecor:Ancient Greek > Greek|iecor_202	DIG	Modern Greek	s k á p t o̞ː	s k a v - o̞	...xx.
+iecor:Ancient Greek > Greek|iecor_202	DIG	Pontic	s k á p t o̞ː	s k a f t o̞	...x..
+iecor:Ancient Greek > Greek|iecor_208	EAR	Apulia-Calabrian Greek	ɔː t í o̞ n	a t i - -	x..xx
+iecor:Ancient Greek > Greek|iecor_208	EAR	Cappadocian Greek	ɔː t í o̞ n	o t i - -	x..xx
+iecor:Ancient Greek > Greek|iecor_208	EAR	Cypriot Greek	ɔː t í o̞ n	ɐ t i - n	x..x.
+iecor:Ancient Greek > Greek|iecor_208	EAR	Modern Greek	ɔː t í o̞ n	a t i - -	x..xx
+iecor:Ancient Greek > Greek|iecor_208	EAR	Pontic	ɔː t í o̞ n	o̞ t i - n	x..x.
+iecor:Ancient Greek > Greek|iecor_225	FOOT	Apulia-Calabrian Greek	p ó̞ d i o̞ n	p o̞ ð i - -	..x.xx
+iecor:Ancient Greek > Greek|iecor_225	FOOT	Cypriot Greek	p ó̞ d i o̞ n	p ɔ - i - n	.xx.x.
+iecor:Ancient Greek > Greek|iecor_225	FOOT	Modern Greek	p ó̞ d i o̞ n	p o̞ ð i - -	..x.xx
+iecor:Ancient Greek > Greek|iecor_225~110~699130	FOOT	Pontic	p ó̞ d a	p o̞ ð a	..x.
+iecor:Ancient Greek > Greek|iecor_2268	FINGERNAIL OR TOENAIL	Apulia-Calabrian Greek	o̞ n ý kʰ i o̞ n	a n i ç i - -	x.xx.xx
+iecor:Ancient Greek > Greek|iecor_2268	FINGERNAIL OR TOENAIL	Cappadocian Greek	o̞ n ý kʰ i o̞ n	- n í ç i - -	x.xx.xx
+iecor:Ancient Greek > Greek|iecor_2268	FINGERNAIL OR TOENAIL	Cypriot Greek	o̞ n ý kʰ i o̞ n	- n i ʃ i - n	x.xx.x.
+iecor:Ancient Greek > Greek|iecor_2268	FINGERNAIL OR TOENAIL	Modern Greek	o̞ n ý kʰ i o̞ n	- n i ç i - -	x.xx.xx
+iecor:Ancient Greek > Greek|iecor_2268	FINGERNAIL OR TOENAIL	Pontic	o̞ n ý kʰ i o̞ n	o̞ n i ʃ i - n	..xx.x.
+iecor:Ancient Greek > Greek|iecor_2316	MAN	Apulia-Calabrian Greek	á n d r a	a n d r a	.....
+iecor:Ancient Greek > Greek|iecor_2316	MAN	Cappadocian Greek	á n d r a	a n d r a	.....
+iecor:Ancient Greek > Greek|iecor_2316	MAN	Modern Greek	á n d r a	a n d r a	.....
+iecor:Ancient Greek > Greek|iecor_2316	MAN	Pontic	á n d r a	a n d r a	.....
+iecor:Ancient Greek > Greek|iecor_237	HEAR	Apulia-Calabrian Greek	a k ú o̞ː	a k u o̞	....
+iecor:Ancient Greek > Greek|iecor_237	HEAR	Cappadocian Greek	a k ú o̞ː	a k u o	....
+iecor:Ancient Greek > Greek|iecor_237	HEAR	Cypriot Greek	a k ú o̞ː	ɐ k u ɔ	...x
+iecor:Ancient Greek > Greek|iecor_237	HEAR	Modern Greek	a k ú o̞ː	a k u o̞	....
+iecor:Ancient Greek > Greek|iecor_237	HEAR	Pontic	a k ú o̞ː	a k u o̞	....
+iecor:Ancient Greek > Greek|iecor_2456	KNEE	Apulia-Calabrian Greek	ɡ ó̞ n a t o̞ n	ɣ o̞ n a t o̞ -	x.....x
+iecor:Ancient Greek > Greek|iecor_2456	KNEE	Cappadocian Greek	ɡ ó̞ n a t o̞ n	ɣ o n a t o -	x.....x
+iecor:Ancient Greek > Greek|iecor_2456	KNEE	Cypriot Greek	ɡ ó̞ n a t o̞ n	ɣ ɔ n ɐ t ɔ n	xx...x.
+iecor:Ancient Greek > Greek|iecor_2456	KNEE	Modern Greek	ɡ ó̞ n a t o̞ n	ɣ o̞ n a t o̞ -	x.....x
+iecor:Ancient Greek > Greek|iecor_2456	KNEE	Pontic	ɡ ó̞ n a t o̞ n	ɣ o̞ n a t o̞ n	x......
+iecor:Ancient Greek > Greek|iecor_2457	HORN (ANATOMY)	Apulia-Calabrian Greek	k é̞ r a t o̞ n	tʃ e̞ r a t o̞ -	x.....x
+iecor:Ancient Greek > Greek|iecor_2457	HORN (ANATOMY)	Cappadocian Greek	k é̞ r a t o̞ n	c e r a t o -	x.....x
+iecor:Ancient Greek > Greek|iecor_2457	HORN (ANATOMY)	Cypriot Greek	k é̞ r a t o̞ n	tʃ ɛ r ɐ t ɔ n	xx...x.
+iecor:Ancient Greek > Greek|iecor_2457	HORN (ANATOMY)	Modern Greek	k é̞ r a t o̞ n	c e̞ r a t o̞ -	x.....x
+iecor:Ancient Greek > Greek|iecor_2457	HORN (ANATOMY)	Pontic	k é̞ r a t o̞ n	c e̞ r a t o̞ n	x......
+iecor:Ancient Greek > Greek|iecor_2484	COLD	Apulia-Calabrian Greek	p s yː kʰ r ó̞ s	p r i x - o̞ -	.xxxx.x
+iecor:Ancient Greek > Greek|iecor_252	LEAF	Apulia-Calabrian Greek	pʰ ý lː o̞ n	f i ɖː o̞ -	xxx.x
+iecor:Ancient Greek > Greek|iecor_252	LEAF	Cappadocian Greek	pʰ ý lː o̞ n	f i l o -	xxx.x
+iecor:Ancient Greek > Greek|iecor_252	LEAF	Cypriot Greek	pʰ ý lː o̞ n	f i lː ɔ n	xx.x.
+iecor:Ancient Greek > Greek|iecor_252	LEAF	Modern Greek	pʰ ý lː o̞ n	f i l o̞ -	xxx.x
+iecor:Ancient Greek > Greek|iecor_252	LEAF	Pontic	pʰ ý lː o̞ n	f i l o̞ n	xxx..
+iecor:Ancient Greek > Greek|iecor_2644	FLOWER	Apulia-Calabrian Greek	á n tʰ o̞ s	a - θː o̞ -	.xx.x
+iecor:Ancient Greek > Greek|iecor_2644	FLOWER	Pontic	á n tʰ o̞ s	a - θ o̞ s	.xx..
+iecor:Ancient Greek > Greek|iecor_2654	FRUIT	Pontic	k a r p ó̞ s	k a r p o̞ s	......
+iecor:Ancient Greek > Greek|iecor_266	NIGHT	Apulia-Calabrian Greek	n ý k t a	n i f t a	.xx..
+iecor:Ancient Greek > Greek|iecor_266	NIGHT	Cappadocian Greek	n ý k t a	n i x t a	.xx..
+iecor:Ancient Greek > Greek|iecor_266	NIGHT	Cypriot Greek	n ý k t a	n i x t ɐ	.xx..
+iecor:Ancient Greek > Greek|iecor_266	NIGHT	Modern Greek	n ý k t a	n i x t a	.xx..
+iecor:Ancient Greek > Greek|iecor_266	NIGHT	Pontic	n ý k t a	n i x t ə	.xx.x
+iecor:Ancient Greek > Greek|iecor_28	EGG	Apulia-Calabrian Greek	o̞ː j ó̞ n	a ɡʷ o̞ -	xx.x
+iecor:Ancient Greek > Greek|iecor_28	EGG	Cappadocian Greek	o̞ː j ó̞ n	o v o -	.x.x
+iecor:Ancient Greek > Greek|iecor_28	EGG	Cypriot Greek	o̞ː j ó̞ n	ɐ f ɔ n	xxx.
+iecor:Ancient Greek > Greek|iecor_28	EGG	Modern Greek	o̞ː j ó̞ n	a ɣ o̞ -	xx.x
+iecor:Ancient Greek > Greek|iecor_28	EGG	Pontic	o̞ː j ó̞ n	o̞ v o̞ n	.x..
+iecor:Ancient Greek > Greek|iecor_283	SALT	Apulia-Calabrian Greek	h á l a s	- a l a -	x...x
+iecor:Ancient Greek > Greek|iecor_283	SALT	Cappadocian Greek	h á l a s	- a l a s	x....
+iecor:Ancient Greek > Greek|iecor_283	SALT	Cypriot Greek	h á l a s	- ɐ l ɐ s	x....
+iecor:Ancient Greek > Greek|iecor_283	SALT	Modern Greek	h á l a s	- a l a -	x...x
+iecor:Ancient Greek > Greek|iecor_283	SALT	Pontic	h á l a s	- a l a s	x....
+iecor:Ancient Greek > Greek|iecor_309	STAND	Apulia-Calabrian Greek	s t ɛ́ː k o̞ː	s t e̞ k o̞	..x..
+iecor:Ancient Greek > Greek|iecor_309	STAND	Cappadocian Greek	s t ɛ́ː k o̞ː	s t e k o	..x..
+iecor:Ancient Greek > Greek|iecor_309	STAND	Cypriot Greek	s t ɛ́ː k o̞ː	s t ɛ k ɔ	....x
+iecor:Ancient Greek > Greek|iecor_309	STAND	Modern Greek	s t ɛ́ː k o̞ː	s t e̞ k o̞	..x..
+iecor:Ancient Greek > Greek|iecor_309	STAND	Pontic	s t ɛ́ː k o̞ː	s t e̞ k o̞	..x..
+iecor:Ancient Greek > Greek|iecor_314	SUN	Apulia-Calabrian Greek	h ɛ́ː l i o̞ s	- i ʎː - o̞ -	xxxx.x
+iecor:Ancient Greek > Greek|iecor_314	SUN	Cappadocian Greek	h ɛ́ː l i o̞ s	- e ʎ - o s	xxxx..
+iecor:Ancient Greek > Greek|iecor_314	SUN	Cypriot Greek	h ɛ́ː l i o̞ s	- i ʎː - ɔ s	xxxxx.
+iecor:Ancient Greek > Greek|iecor_314	SUN	Modern Greek	h ɛ́ː l i o̞ s	- i ʎ - o̞ s	xxxx..
+iecor:Ancient Greek > Greek|iecor_314	SUN	Pontic	h ɛ́ː l i o̞ s	ɣ i ʎ - ø̞ s	xxxxx.
+iecor:Ancient Greek > Greek|iecor_328	TOOTH	Apulia-Calabrian Greek	o̞ d ó̞ n t i o̞ n	- ð o̞ n d i - -	xx..x.xx
+iecor:Ancient Greek > Greek|iecor_328	TOOTH	Cappadocian Greek	o̞ d ó̞ n t i o̞ n	- ð o n t - - -	xx...xxx
+iecor:Ancient Greek > Greek|iecor_328	TOOTH	Cypriot Greek	o̞ d ó̞ n t i o̞ n	- ð ɔ n d i - n	xxx.x.x.
+iecor:Ancient Greek > Greek|iecor_328	TOOTH	Modern Greek	o̞ d ó̞ n t i o̞ n	- ð o̞ n d i - -	xx..x.xx
+iecor:Ancient Greek > Greek|iecor_328	TOOTH	Pontic	o̞ d ó̞ n t i o̞ n	o̞ ð o̞ n d i - n	.x..x.x.
+iecor:Ancient Greek > Greek|iecor_333	HOT	Pontic	tʰ e̞ r m ó̞ s	θ e̞ r m o̞ s	x.....
+iecor:Ancient Greek > Greek|iecor_3545	STICK	Apulia-Calabrian Greek	h r a b d í o̞ n	- r a v d i - -	x..x..xx
+iecor:Ancient Greek > Greek|iecor_3545	STICK	Cappadocian Greek	h r a b d í o̞ n	- r a v ʒ i - -	x..xx.xx
+iecor:Ancient Greek > Greek|iecor_3545	STICK	Modern Greek	h r a b d í o̞ n	- r a v ð i - -	x..xx.xx
+iecor:Ancient Greek > Greek|iecor_3545	STICK	Pontic	h r a b d í o̞ n	- r a v ð a - -	x..xxxxx
+iecor:Ancient Greek > Greek|iecor_360	BIG	Apulia-Calabrian Greek	m é̞ ɡ a s	m e̞ ɣ a -	..x.x
+iecor:Ancient Greek > Greek|iecor_360	BIG	Cappadocian Greek	m é̞ ɡ a s	m e ɣ a -	..x.x
+iecor:Ancient Greek > Greek|iecor_360	BIG	Pontic	m é̞ ɡ a s	m e̞ ɣ a s	..x..
+iecor:Ancient Greek > Greek|iecor_380	DRINK	Apulia-Calabrian Greek	p íː n o̞ː	p i nː o̞	..x.
+iecor:Ancient Greek > Greek|iecor_380	DRINK	Cappadocian Greek	p íː n o̞ː	p i n o	....
+iecor:Ancient Greek > Greek|iecor_380	DRINK	Cypriot Greek	p íː n o̞ː	p i nː ɔ	..xx
+iecor:Ancient Greek > Greek|iecor_380	DRINK	Modern Greek	p íː n o̞ː	p i n o̞	....
+iecor:Ancient Greek > Greek|iecor_380	DRINK	Pontic	p íː n o̞ː	p i n o̞	....
+iecor:Ancient Greek > Greek|iecor_39	FIVE	Apulia-Calabrian Greek	p é̞ n t e̞	p e̞ n d e̞	...x.
+iecor:Ancient Greek > Greek|iecor_39	FIVE	Cappadocian Greek	p é̞ n t e̞	p e n d e	...x.
+iecor:Ancient Greek > Greek|iecor_39	FIVE	Cypriot Greek	p é̞ n t e̞	p ɛ n d ɛ	.x.xx
+iecor:Ancient Greek > Greek|iecor_39	FIVE	Modern Greek	p é̞ n t e̞	p e̞ n d e̞	...x.
+iecor:Ancient Greek > Greek|iecor_39	FIVE	Pontic	p é̞ n t e̞	p e̞ n d ə	...xx
+iecor:Ancient Greek > Greek|iecor_411	HAND	Apulia-Calabrian Greek	kʰ éː r i o̞ n	ç e̞ r i - -	x...xx
+iecor:Ancient Greek > Greek|iecor_411	HAND	Cappadocian Greek	kʰ éː r i o̞ n	ç e r̥ - - -	x..xxx
+iecor:Ancient Greek > Greek|iecor_411	HAND	Cypriot Greek	kʰ éː r i o̞ n	ʃ ɛ r i - n	xx..x.
+iecor:Ancient Greek > Greek|iecor_411	HAND	Modern Greek	kʰ éː r i o̞ n	ç e̞ r i - -	x...xx
+iecor:Ancient Greek > Greek|iecor_411	HAND	Pontic	kʰ éː r i o̞ n	ʃ e̞ r i - n	x...x.
+iecor:Ancient Greek > Greek|iecor_4134	STONE	Apulia-Calabrian Greek	l i tʰ á r i o̞ n	l i θ a r i - -	..x...xx
+iecor:Ancient Greek > Greek|iecor_4134	STONE	Cappadocian Greek	l i tʰ á r i o̞ n	l i θ e r̥ - - -	..xx.xxx
+iecor:Ancient Greek > Greek|iecor_4134	STONE	Pontic	l i tʰ á r i o̞ n	l i θ a r i - n	..x...x.
+iecor:Ancient Greek > Greek|iecor_44	FOUR	Apulia-Calabrian Greek	t é̞ sː a r e̞ s	t e̞ sː e̞ r i -	...x.xx
+iecor:Ancient Greek > Greek|iecor_44	FOUR	Cappadocian Greek	t é̞ sː a r e̞ s	t e s e r a -	..xx.xx
+iecor:Ancient Greek > Greek|iecor_44	FOUR	Cypriot Greek	t é̞ sː a r e̞ s	t ɛ sː ɛ r i s	.x.x.x.
+iecor:Ancient Greek > Greek|iecor_44	FOUR	Modern Greek	t é̞ sː a r e̞ s	t e̞ s e̞ r a -	..xx.xx
+iecor:Ancient Greek > Greek|iecor_44	FOUR	Pontic	t é̞ sː a r e̞ s	t e̞ s a r i -	..x..xx
+iecor:Ancient Greek > Greek|iecor_4903	BIRD	Pontic	ó̞ r n i o̞ n	o̞ r n ø̞ - n	...xx.
+iecor:Ancient Greek > Greek|iecor_4907	SEA	Apulia-Calabrian Greek	tʰ á l a sː a	θ a l a sː i	x....x
+iecor:Ancient Greek > Greek|iecor_4907	SEA	Cypriot Greek	tʰ á l a sː a	θ ɐ l ɐ sː ɐ	x.....
+iecor:Ancient Greek > Greek|iecor_4907	SEA	Modern Greek	tʰ á l a sː a	θ a l a s a	x...x.
+iecor:Ancient Greek > Greek|iecor_4907	SEA	Pontic	tʰ á l a sː a	θ a l a s a	x...x.
+iecor:Ancient Greek > Greek|iecor_5007	ANT	Apulia-Calabrian Greek	m y r m ɛ́ː k i o̞ n	v e̞ r m i tʃ i - -	xx..xx.xx
+iecor:Ancient Greek > Greek|iecor_5007	ANT	Cappadocian Greek	m y r m ɛ́ː k i o̞ n	m u r m u c i - -	.x..xx.xx
+iecor:Ancient Greek > Greek|iecor_5007	ANT	Modern Greek	m y r m ɛ́ː k i o̞ n	m i r m i ɟ i - -	.x..xx.xx
+iecor:Ancient Greek > Greek|iecor_5007	ANT	Pontic	m y r m ɛ́ː k i o̞ n	m i r m i k ə - -	.x..x.xxx
+iecor:Ancient Greek > Greek|iecor_5015	YESTERDAY	Apulia-Calabrian Greek	kʰ tʰ é̞ s	- tʰː e̞ -	xx.x
+iecor:Ancient Greek > Greek|iecor_5015	YESTERDAY	Cappadocian Greek	kʰ tʰ é̞ s	x t e s	xx..
+iecor:Ancient Greek > Greek|iecor_5015	YESTERDAY	Cypriot Greek	kʰ tʰ é̞ s	x t ɛ s	xxx.
+iecor:Ancient Greek > Greek|iecor_5015	YESTERDAY	Modern Greek	kʰ tʰ é̞ s	x θ e s	xx..
+iecor:Ancient Greek > Greek|iecor_5015	YESTERDAY	Pontic	kʰ tʰ é̞ s	x t e̞ s	xx..
+iecor:Ancient Greek > Greek|iecor_5026	NAVEL	Apulia-Calabrian Greek	o̞ m pʰ a l ó̞ s	a - fː a l o̞ -	xxx...x
+iecor:Ancient Greek > Greek|iecor_5026	NAVEL	Cappadocian Greek	o̞ m pʰ a l ó̞ s	e - f a l o s	xxx....
+iecor:Ancient Greek > Greek|iecor_5026	NAVEL	Cypriot Greek	o̞ m pʰ a l ó̞ s	ɐ r f ɐ lː - -	xxx.xxx
+iecor:Ancient Greek > Greek|iecor_5026	NAVEL	Modern Greek	o̞ m pʰ a l ó̞ s	a - f a l o̞ s	xxx....
+iecor:Ancient Greek > Greek|iecor_5026	NAVEL	Pontic	o̞ m pʰ a l ó̞ s	o̞ - f a l o̞ s	.xx....
+iecor:Ancient Greek > Greek|iecor_5027	RUN	Apulia-Calabrian Greek	t r é̞ kʰ o̞ː	t r e̞ x o̞	...x.
+iecor:Ancient Greek > Greek|iecor_5027	RUN	Cappadocian Greek	t r é̞ kʰ o̞ː	t r e x o	...x.
+iecor:Ancient Greek > Greek|iecor_5027	RUN	Modern Greek	t r é̞ kʰ o̞ː	t r e̞ x o̞	...x.
+iecor:Ancient Greek > Greek|iecor_5027	RUN	Pontic	t r é̞ kʰ o̞ː	t r e̞ x o̞	...x.
+iecor:Ancient Greek > Greek|iecor_5028	HIDE (CONCEAL)	Apulia-Calabrian Greek	k r ý p t o̞ː	k r i f - o̞	..xxx.
+iecor:Ancient Greek > Greek|iecor_5028	HIDE (CONCEAL)	Cappadocian Greek	k r ý p t o̞ː	k r i f t o	..xx..
+iecor:Ancient Greek > Greek|iecor_5028	HIDE (CONCEAL)	Modern Greek	k r ý p t o̞ː	k r i v - o̞	..xxx.
+iecor:Ancient Greek > Greek|iecor_5028	HIDE (CONCEAL)	Pontic	k r ý p t o̞ː	k r i f t o̞	..xx..
+iecor:Ancient Greek > Greek|iecor_503	TREE	Cappadocian Greek	d é̞ n d r o̞ n	ð e n d r o -	x.....x
+iecor:Ancient Greek > Greek|iecor_503	TREE	Cypriot Greek	d é̞ n d r o̞ n	ð ɛ n d r ɔ n	xx...x.
+iecor:Ancient Greek > Greek|iecor_503	TREE	Modern Greek	d é̞ n d r o̞ n	ð e̞ n d r o̞ -	x.....x
+iecor:Ancient Greek > Greek|iecor_503	TREE	Pontic	d é̞ n d r o̞ n	ð e̞ n d r o̞ n	x......
+iecor:Ancient Greek > Greek|iecor_5030	HARD	Cypriot Greek	s k l ɛː r ó̞ s	s k l ɛ r ɔ s	.....x.
+iecor:Ancient Greek > Greek|iecor_5030	HARD	Modern Greek	s k l ɛː r ó̞ s	s k l i r o̞ s	...x...
+iecor:Ancient Greek > Greek|iecor_5031	FLY (INSECT)	Apulia-Calabrian Greek	m ŷː a	m i a	.x.
+iecor:Ancient Greek > Greek|iecor_5031	FLY (INSECT)	Cappadocian Greek	m ŷː a	m u a	.x.
+iecor:Ancient Greek > Greek|iecor_5031	FLY (INSECT)	Cypriot Greek	m ŷː a	m u ɐ	.x.
+iecor:Ancient Greek > Greek|iecor_5031	FLY (INSECT)	Modern Greek	m ŷː a	m i a	.x.
+iecor:Ancient Greek > Greek|iecor_5031	FLY (INSECT)	Pontic	m ŷː a	m i a	.x.
+iecor:Ancient Greek > Greek|iecor_5032	GRIND	Apulia-Calabrian Greek	a l ɛ́ː tʰ o̞ː	a l e̞ θ o̞	..xx.
+iecor:Ancient Greek > Greek|iecor_5032	GRIND	Cappadocian Greek	a l ɛ́ː tʰ o̞ː	a l e z o	..xx.
+iecor:Ancient Greek > Greek|iecor_5032	GRIND	Cypriot Greek	a l ɛ́ː tʰ o̞ː	ɐ l ɛ θ ɔ	...xx
+iecor:Ancient Greek > Greek|iecor_5032	GRIND	Modern Greek	a l ɛ́ː tʰ o̞ː	a l e θ o̞	..xx.
+iecor:Ancient Greek > Greek|iecor_5032	GRIND	Pontic	a l ɛ́ː tʰ o̞ː	a l e̞ θ o̞	..xx.
+iecor:Ancient Greek > Greek|iecor_5036	CARRY	Apulia-Calabrian Greek	pʰ é̞ r o̞ː	f e̞ rː o̞	x.x.
+iecor:Ancient Greek > Greek|iecor_5036	CARRY	Cappadocian Greek	pʰ é̞ r o̞ː	f e r o	x...
+iecor:Ancient Greek > Greek|iecor_5036	CARRY	Pontic	pʰ é̞ r o̞ː	f e̞ r o̞	x...
+iecor:Ancient Greek > Greek|iecor_5055	SWEET	Apulia-Calabrian Greek	ɡ l y k ý s	ɣ l i tʃ i -	x.xxxx
+iecor:Ancient Greek > Greek|iecor_5055	SWEET	Cappadocian Greek	ɡ l y k ý s	ɣ - ɯ c i -	xxxxxx
+iecor:Ancient Greek > Greek|iecor_5055	SWEET	Cypriot Greek	ɡ l y k ý s	ɣ l i tʃ i s	x.xxx.
+iecor:Ancient Greek > Greek|iecor_5055	SWEET	Modern Greek	ɡ l y k ý s	ɣ l i k - -	x.x.xx
+iecor:Ancient Greek > Greek|iecor_5055	SWEET	Pontic	ɡ l y k ý s	ɣ l i c i s	x.xxx.
+iecor:Ancient Greek > Greek|iecor_5056	BITTER	Apulia-Calabrian Greek	p i k r ó̞ s	p i tʃ i o̞ -	..xx.x
+iecor:Ancient Greek > Greek|iecor_5056	BITTER	Cappadocian Greek	p i k r ó̞ s	p i k r o -	.....x
+iecor:Ancient Greek > Greek|iecor_5056	BITTER	Cypriot Greek	p i k r ó̞ s	p i k r ɔ s	....x.
+iecor:Ancient Greek > Greek|iecor_5056	BITTER	Modern Greek	p i k r ó̞ s	p i k r o̞ s	......
+iecor:Ancient Greek > Greek|iecor_5056	BITTER	Pontic	p i k r ó̞ s	p i k r o̞ s	......
+iecor:Ancient Greek > Greek|iecor_5058	SHADOW	Apulia-Calabrian Greek	s k í aː	ʃː - i a	xx..
+iecor:Ancient Greek > Greek|iecor_5058	SHADOW	Cappadocian Greek	s k í aː	s c - a	.xx.
+iecor:Ancient Greek > Greek|iecor_5058	SHADOW	Cypriot Greek	s k í aː	ʃː - - ɐ	xxx.
+iecor:Ancient Greek > Greek|iecor_5058	SHADOW	Modern Greek	s k í aː	s c i a	.x..
+iecor:Ancient Greek > Greek|iecor_5058	SHADOW	Pontic	s k í aː	ʃ c - a	xxx.
+iecor:Ancient Greek > Greek|iecor_5107	THIGH	Modern Greek	m ɛː r ó̞ s	m i r o̞ s	.x...
+iecor:Ancient Greek > Greek|iecor_5107	THIGH	Pontic	m ɛː r ó̞ s	m e̞ r - -	.x.xx
+iecor:Ancient Greek > Greek|iecor_519	BONE	Cappadocian Greek	o s t ûː n	- s t u -	x...x
+iecor:Ancient Greek > Greek|iecor_519	BONE	Pontic	o s t ûː n	o̞ s t u -	....x
+iecor:Ancient Greek > Greek|iecor_519~110~3e4f2a	BONE	Apulia-Calabrian Greek	o̞ s t é̞ o̞ n	- s t e̞ o̞ -	x....x
+iecor:Ancient Greek > Greek|iecor_5276	WET	Pontic	h y ɡ r ó̞ s	- i ɣ r o̞ s	xxx...
+iecor:Ancient Greek > Greek|iecor_5318	SMALL	Cappadocian Greek	m i k r ó̞ s	m i k r o -	.....x
+iecor:Ancient Greek > Greek|iecor_5318	SMALL	Modern Greek	m i k r ó̞ s	m i k r o̞ s	......
+iecor:Ancient Greek > Greek|iecor_5318	SMALL	Pontic	m i k r ó̞ s	m i k r o̞ s	......
+iecor:Ancient Greek > Greek|iecor_5318~110~8c0b4e	SMALL	Cypriot Greek	m i kː ó̞ s	m i tsʰː - -	..xxx
+iecor:Ancient Greek > Greek|iecor_579	CLOUD	Apulia-Calabrian Greek	n é̞ pʰ o̞ s	nː o̞ f o̞ -	xxx.x
+iecor:Ancient Greek > Greek|iecor_579	CLOUD	Cappadocian Greek	n é̞ pʰ o̞ s	n e f a -	..xxx
+iecor:Ancient Greek > Greek|iecor_579	CLOUD	Cypriot Greek	n é̞ pʰ o̞ s	n ɛ f ɔ s	.xxx.
+iecor:Ancient Greek > Greek|iecor_579	CLOUD	Modern Greek	n é̞ pʰ o̞ s	n e̞ f o̞ -	..x.x
+iecor:Ancient Greek > Greek|iecor_579	CLOUD	Pontic	n é̞ pʰ o̞ s	n e̞ f æ -	..xxx
+iecor:Ancient Greek > Greek|iecor_6066	ONE	Apulia-Calabrian Greek	h é̞ n a	- e̞ n a	x...
+iecor:Ancient Greek > Greek|iecor_6066	ONE	Cypriot Greek	h é̞ n a	- ɛ n ɐ	xx..
+iecor:Ancient Greek > Greek|iecor_6066	ONE	Modern Greek	h é̞ n a	- e̞ n a	x...
+iecor:Ancient Greek > Greek|iecor_6066~110~eb60e7	ONE	Pontic	h êː s	- i s	xx.
+iecor:Ancient Greek > Greek|iecor_6166	DUST	Modern Greek	k ó̞ n iː s	k o̞ n i -	....x
+iecor:Ancient Greek > Greek|iecor_6332	GREEN	Apulia-Calabrian Greek	kʰ l o̞ː r ó̞ s	x l o̞ r o̞ -	x....x
+iecor:Ancient Greek > Greek|iecor_6458	HEART	Apulia-Calabrian Greek	k a r d í aː	k a r d i a	......
+iecor:Ancient Greek > Greek|iecor_6458	HEART	Cappadocian Greek	k a r d í aː	k a r ɣ j a	...xx.
+iecor:Ancient Greek > Greek|iecor_6458	HEART	Cypriot Greek	k a r d í aː	k ɐ r̥ c - ɐ	...xx.
+iecor:Ancient Greek > Greek|iecor_6458	HEART	Modern Greek	k a r d í aː	k a r ð ʝ a	...xx.
+iecor:Ancient Greek > Greek|iecor_6458	HEART	Pontic	k a r d í aː	k a r ð i ə	...x.x
+iecor:Ancient Greek > Greek|iecor_6470	HEAVY	Apulia-Calabrian Greek	b a r ý s	v a r i o̞	x..xx
+iecor:Ancient Greek > Greek|iecor_6470	HEAVY	Cappadocian Greek	b a r ý s	v a r i -	x..xx
+iecor:Ancient Greek > Greek|iecor_6470	HEAVY	Cypriot Greek	b a r ý s	v ɐ r - -	x..xx
+iecor:Ancient Greek > Greek|iecor_6470	HEAVY	Modern Greek	b a r ý s	v a r i s	x..x.
+iecor:Ancient Greek > Greek|iecor_6470	HEAVY	Pontic	b a r ý s	v a r i s	x..x.
+iecor:Ancient Greek > Greek|iecor_648	SNAKE	Apulia-Calabrian Greek	o̞ pʰ í d i o̞ n	- f i ð i - -	xx.x.xx
+iecor:Ancient Greek > Greek|iecor_648	SNAKE	Cappadocian Greek	o̞ pʰ í d i o̞ n	- f i θ - - -	xx.xxxx
+iecor:Ancient Greek > Greek|iecor_648	SNAKE	Modern Greek	o̞ pʰ í d i o̞ n	- f i ð i - -	xx.x.xx
+iecor:Ancient Greek > Greek|iecor_648	SNAKE	Pontic	o̞ pʰ í d i o̞ n	o̞ f i ð i - n	.x.x.x.
+iecor:Ancient Greek > Greek|iecor_649	SNOW	Apulia-Calabrian Greek	kʰ i ó̞ n i o̞ n	ç - o̞ n i - -	xx...xx
+iecor:Ancient Greek > Greek|iecor_649	SNOW	Cappadocian Greek	kʰ i ó̞ n i o̞ n	ç - o n̥ - - -	xx..xxx
+iecor:Ancient Greek > Greek|iecor_649	SNOW	Cypriot Greek	kʰ i ó̞ n i o̞ n	ʃ - ɔ n i - n	xxx..x.
+iecor:Ancient Greek > Greek|iecor_649	SNOW	Modern Greek	kʰ i ó̞ n i o̞ n	ç - o̞ n i - -	xx...xx
+iecor:Ancient Greek > Greek|iecor_649	SNOW	Pontic	kʰ i ó̞ n i o̞ n	ʃ - ø̞ n i - n	xxx..x.
+iecor:Ancient Greek > Greek|iecor_6595	RIGHT	Apulia-Calabrian Greek	d e̞ k s i ó̞ s	ð e̞ - ʃː i o̞ -	x.xx..x
+iecor:Ancient Greek > Greek|iecor_6595	RIGHT	Cappadocian Greek	d e̞ k s i ó̞ s	ð e k ʃ - o -	x..xx.x
+iecor:Ancient Greek > Greek|iecor_6595	RIGHT	Cypriot Greek	d e̞ k s i ó̞ s	ð ɛ k s i - s	xx...x.
+iecor:Ancient Greek > Greek|iecor_6595	RIGHT	Modern Greek	d e̞ k s i ó̞ s	ð e̞ k s i o̞ s	x......
+iecor:Ancient Greek > Greek|iecor_6595	RIGHT	Pontic	d e̞ k s i ó̞ s	ð e̞ k ʃ - ø̞ s	x..xxx.
+iecor:Ancient Greek > Greek|iecor_671	WOMAN	Apulia-Calabrian Greek	ɡ y n âi k a	j i n e̞ k a	xx.x..
+iecor:Ancient Greek > Greek|iecor_671	WOMAN	Cappadocian Greek	ɡ y n âi k a	- - n e k a	xx.x..
+iecor:Ancient Greek > Greek|iecor_671	WOMAN	Cypriot Greek	ɡ y n âi k a	ʝ ɛ n ɛ k ɐ	xx.x..
+iecor:Ancient Greek > Greek|iecor_671	WOMAN	Modern Greek	ɡ y n âi k a	ʝ i n e̞ k a	xx.x..
+iecor:Ancient Greek > Greek|iecor_671	WOMAN	Pontic	ɡ y n âi k a	ɣ i n e̞ k ə	xx.x.x
+iecor:Ancient Greek > Greek|iecor_680	LAUGH	Apulia-Calabrian Greek	ɡ e̞ l ô̞ː	ʝ e̞ l a	x..x
+iecor:Ancient Greek > Greek|iecor_680	LAUGH	Cappadocian Greek	ɡ e̞ l ô̞ː	ʝ e̞ l o	x...
+iecor:Ancient Greek > Greek|iecor_680	LAUGH	Cypriot Greek	ɡ e̞ l ô̞ː	ʝ ɛ l ɔ	xx.x
+iecor:Ancient Greek > Greek|iecor_680	LAUGH	Modern Greek	ɡ e̞ l ô̞ː	ʝ e̞ l o̞	x...
+iecor:Ancient Greek > Greek|iecor_680	LAUGH	Pontic	ɡ e̞ l ô̞ː	ʝ e̞ l o̞	x...
+iecor:Ancient Greek > Greek|iecor_718	LIVER	Pontic	h ɛ̂ː p a r	- i p a r	xx...
+iecor:Ancient Greek > Greek|iecor_72	LIVE	Apulia-Calabrian Greek	z d ô̞ː	dz - o̞	xx.
+iecor:Ancient Greek > Greek|iecor_72	LIVE	Cappadocian Greek	z d ô̞ː	z - o	.x.
+iecor:Ancient Greek > Greek|iecor_72	LIVE	Cypriot Greek	z d ô̞ː	ʒː - ɔ	xxx
+iecor:Ancient Greek > Greek|iecor_72	LIVE	Modern Greek	z d ô̞ː	z - o̞	.x.
+iecor:Ancient Greek > Greek|iecor_72	LIVE	Pontic	z d ô̞ː	z - o̞	.x.
+iecor:Ancient Greek > Greek|iecor_7332	BAD	Cypriot Greek	k a k ó̞ s	k ɐ k ɔ s	...x.
+iecor:Ancient Greek > Greek|iecor_7332	BAD	Modern Greek	k a k ó̞ s	k a k o̞ s	.....
+iecor:Ancient Greek > Greek|iecor_7332	BAD	Pontic	k a k ó̞ s	k a k o̞ s	.....
+iecor:Ancient Greek > Greek|iecor_7561	FALL	Apulia-Calabrian Greek	p í p t o̞ː	p e̞ - tʰː o̞	.xxx.
+iecor:Ancient Greek > Greek|iecor_7561	FALL	Cappadocian Greek	p í p t o̞ː	p e f t o	.xx..
+iecor:Ancient Greek > Greek|iecor_7561	FALL	Cypriot Greek	p í p t o̞ː	pʰː ɛ f t ɔ	xxx.x
+iecor:Ancient Greek > Greek|iecor_7561	FALL	Modern Greek	p í p t o̞ː	p e̞ f t o̞	.xx..
+iecor:Ancient Greek > Greek|iecor_7563	FEATHER	Apulia-Calabrian Greek	p t e̞ r ó̞ n	- tʰ e̞ r o̞ -	xx...x
+iecor:Ancient Greek > Greek|iecor_7563	FEATHER	Cappadocian Greek	p t e̞ r ó̞ n	f t e r o -	x....x
+iecor:Ancient Greek > Greek|iecor_7563	FEATHER	Cypriot Greek	p t e̞ r ó̞ n	f t ɛ r ɔ n	x.x.x.
+iecor:Ancient Greek > Greek|iecor_7563	FEATHER	Modern Greek	p t e̞ r ó̞ n	f t e̞ r o̞ -	x....x
+iecor:Ancient Greek > Greek|iecor_7563	FEATHER	Pontic	p t e̞ r ó̞ n	f t e̞ r o̞ n	x.....
+iecor:Ancient Greek > Greek|iecor_82	NAME	Apulia-Calabrian Greek	ó̞ n o̞ m a	- n o̞ m a	x....
+iecor:Ancient Greek > Greek|iecor_82	NAME	Cappadocian Greek	ó̞ n o̞ m a	o n o m a	.....
+iecor:Ancient Greek > Greek|iecor_82	NAME	Cypriot Greek	ó̞ n o̞ m a	ɔ n ɔ m ɐ	x.x..
+iecor:Ancient Greek > Greek|iecor_82	NAME	Modern Greek	ó̞ n o̞ m a	o̞ n o̞ m a	.....
+iecor:Ancient Greek > Greek|iecor_82	NAME	Pontic	ó̞ n o̞ m a	o̞ n o̞ m a	.....
+iecor:Ancient Greek > Greek|iecor_8233	ROOT	Apulia-Calabrian Greek	r í z d a	r i dz - a	..xx.
+iecor:Ancient Greek > Greek|iecor_8233	ROOT	Cappadocian Greek	r í z d a	r i z - a	...x.
+iecor:Ancient Greek > Greek|iecor_8233	ROOT	Cypriot Greek	r í z d a	r i zː - ɐ	..xx.
+iecor:Ancient Greek > Greek|iecor_8233	ROOT	Modern Greek	r í z d a	r i z - a	...x.
+iecor:Ancient Greek > Greek|iecor_8233	ROOT	Pontic	r í z d a	r i z - ə	...xx
+iecor:Ancient Greek > Greek|iecor_8234	THROW	Apulia-Calabrian Greek	h r í p t o̞ː	- r i f t o̞	x..x..
+iecor:Ancient Greek > Greek|iecor_8262	SAND	Apulia-Calabrian Greek	á mː o̞ s	a mː o̞ -	...x
+iecor:Ancient Greek > Greek|iecor_8262	SAND	Cappadocian Greek	á mː o̞ s	a m - -	.xxx
+iecor:Ancient Greek > Greek|iecor_8262	SAND	Cypriot Greek	á mː o̞ s	ɐ mː ɔ s	..x.
+iecor:Ancient Greek > Greek|iecor_8262	SAND	Modern Greek	á mː o̞ s	a m o̞ s	.x..
+iecor:Ancient Greek > Greek|iecor_8262	SAND	Pontic	á mː o̞ s	a m o̞ s	.x..
+iecor:Ancient Greek > Greek|iecor_8405	SMOOTH	Modern Greek	l êː o̞ s	l i o̞ s	.x..
+iecor:Ancient Greek > Greek|iecor_8545	CHEST	Cypriot Greek	s t ɛ̂ː tʰ o̞ s	s t i θ ɔ s	..xxx.
+iecor:Ancient Greek > Greek|iecor_8545	CHEST	Modern Greek	s t ɛ̂ː tʰ o̞ s	s t i θ o̞ s	..xx..
+iecor:Ancient Greek > Greek|iecor_8545	CHEST	Pontic	s t ɛ̂ː tʰ o̞ s	s t e̞ θ - -	..xxxx

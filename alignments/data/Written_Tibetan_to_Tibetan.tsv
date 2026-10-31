@@ -1,0 +1,348 @@
+Set	Concept	Language	Ancestor	Aligned	Changed
+gaotb:Written Tibetan > Tibetan|gaotb_1003_neg-1	NOT	Khams Tibetan	m i	m a	.x
+gaotb:Written Tibetan > Tibetan|gaotb_1003_neg-1	NOT	Tibetan	m i	m a	.x
+gaotb:Written Tibetan > Tibetan|gaotb_1003_neg-1	NOT	TibetanXiahe	m i	m ə	.x
+gaotb:Written Tibetan > Tibetan|gaotb_1003_neg-1	NOT	TibetanZeku	m i	m i	..
+gaotb:Written Tibetan > Tibetan|gaotb_105_night-1	NIGHT	Khams Tibetan	m tsʰ a n m o	- tsʰ ɛ n - -	x.x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_105_night-1	NIGHT	Tibetan	m tsʰ a n m o	- tsʰ ɛ n - -	x.x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_10_water-1	WATER	Khams Tibetan	tɕʰ u	tɕʰ u	..
+gaotb:Written Tibetan > Tibetan|gaotb_10_water-1	WATER	Tibetan	tɕʰ u	tɕʰ u	..
+gaotb:Written Tibetan > Tibetan|gaotb_10_water-1	WATER	TibetanXiahe	tɕʰ u	tɕʰ ə	.x
+gaotb:Written Tibetan > Tibetan|gaotb_10_water-1	WATER	TibetanZeku	tɕʰ u	tɕʰ ə	.x
+gaotb:Written Tibetan > Tibetan|gaotb_113_horse-1	HORSE	Khams Tibetan	r t a	- t a	x..
+gaotb:Written Tibetan > Tibetan|gaotb_113_horse-1	HORSE	Tibetan	r t a	- t a	x..
+gaotb:Written Tibetan > Tibetan|gaotb_113_horse-1	HORSE	TibetanXiahe	r t a	h t a	x..
+gaotb:Written Tibetan > Tibetan|gaotb_113_horse-1	HORSE	TibetanZeku	r t a	r t a	...
+gaotb:Written Tibetan > Tibetan|gaotb_115_pig-1	PIG	Khams Tibetan	pʰ a ɡ p a	pʰ ɑ - ʔ -	..xxx
+gaotb:Written Tibetan > Tibetan|gaotb_115_pig-1	PIG	Tibetan	pʰ a ɡ p a	pʰ a k p a	..x..
+gaotb:Written Tibetan > Tibetan|gaotb_115_pig-1	PIG	TibetanXiahe	pʰ a ɡ p a	h a k - -	x.xxx
+gaotb:Written Tibetan > Tibetan|gaotb_115_pig-1	PIG	TibetanZeku	pʰ a ɡ p a	h a k - -	x.xxx
+gaotb:Written Tibetan > Tibetan|gaotb_117_goat-1	GOAT	Khams Tibetan	r a	r a	..
+gaotb:Written Tibetan > Tibetan|gaotb_117_goat-1	GOAT	Tibetan	r a	r a	..
+gaotb:Written Tibetan > Tibetan|gaotb_117_goat-1	GOAT	TibetanXiahe	r a	r a	..
+gaotb:Written Tibetan > Tibetan|gaotb_117_goat-1	GOAT	TibetanZeku	r a	r a	..
+gaotb:Written Tibetan > Tibetan|gaotb_118_sheep-1	SHEEP	Khams Tibetan	l u ɡ	l u ʔ	..x
+gaotb:Written Tibetan > Tibetan|gaotb_118_sheep-1	SHEEP	Tibetan	l u ɡ	l u ʔ	..x
+gaotb:Written Tibetan > Tibetan|gaotb_118_sheep-1	SHEEP	TibetanXiahe	l u ɡ	l ə k	.xx
+gaotb:Written Tibetan > Tibetan|gaotb_118_sheep-1	SHEEP	TibetanZeku	l u ɡ	l ə k	.xx
+gaotb:Written Tibetan > Tibetan|gaotb_119_dog-1	DOG	Khams Tibetan	kʰ j i	tɕʰ - i	xx.
+gaotb:Written Tibetan > Tibetan|gaotb_119_dog-1	DOG	Tibetan	kʰ j i	cʰ - i	xx.
+gaotb:Written Tibetan > Tibetan|gaotb_119_dog-1	DOG	TibetanXiahe	kʰ j i	tɕʰ - ə	xxx
+gaotb:Written Tibetan > Tibetan|gaotb_119_dog-1	DOG	TibetanZeku	kʰ j i	cç h ə	xxx
+gaotb:Written Tibetan > Tibetan|gaotb_142_bird-1	BIRD	Khams Tibetan	b j a	ɕ - a	xx.
+gaotb:Written Tibetan > Tibetan|gaotb_142_bird-1	BIRD	Tibetan	b j a	tɕʰ - a	xx.
+gaotb:Written Tibetan > Tibetan|gaotb_142_bird-1	BIRD	TibetanZeku	b j a	w ɕ a	xx.
+gaotb:Written Tibetan > Tibetan|gaotb_151_fish-1	FISH	Khams Tibetan	ɲ a	ɲ a	..
+gaotb:Written Tibetan > Tibetan|gaotb_151_fish-1	FISH	Tibetan	ɲ a	ɲ a	..
+gaotb:Written Tibetan > Tibetan|gaotb_151_fish-1	FISH	TibetanXiahe	ɲ a	ɲ a	..
+gaotb:Written Tibetan > Tibetan|gaotb_151_fish-1	FISH	TibetanZeku	ɲ a	ɲ a	..
+gaotb:Written Tibetan > Tibetan|gaotb_152_snake-1	SNAKE	Khams Tibetan	s b r u l	- - r u -	xx..x
+gaotb:Written Tibetan > Tibetan|gaotb_152_snake-1	SNAKE	Tibetan	s b r u l	- - ʈʂ y -	xxxxx
+gaotb:Written Tibetan > Tibetan|gaotb_152_snake-1	SNAKE	TibetanXiahe	s b r u l	- - r u -	xx..x
+gaotb:Written Tibetan > Tibetan|gaotb_152_snake-1	SNAKE	TibetanZeku	s b r u l	- - r u -	xx..x
+gaotb:Written Tibetan > Tibetan|gaotb_162_louse-1	LOUSE	Khams Tibetan	ɕ i ɡ	xʰ i ʔ	x.x
+gaotb:Written Tibetan > Tibetan|gaotb_162_louse-1	LOUSE	Tibetan	ɕ i ɡ	ɕ i ʔ	..x
+gaotb:Written Tibetan > Tibetan|gaotb_162_louse-1	LOUSE	TibetanXiahe	ɕ i ɡ	ɕ ə k	.xx
+gaotb:Written Tibetan > Tibetan|gaotb_162_louse-1	LOUSE	TibetanZeku	ɕ i ɡ	ɕ ə k	.xx
+gaotb:Written Tibetan > Tibetan|gaotb_170_egg-1	EGG	Khams Tibetan	s ɡ o ŋ a	- ɡ o ŋ a	x....
+gaotb:Written Tibetan > Tibetan|gaotb_170_egg-1	EGG	Tibetan	s ɡ o ŋ a	- k o ŋ ɑ	xx...
+gaotb:Written Tibetan > Tibetan|gaotb_170_egg-1	EGG	TibetanXiahe	s ɡ o ŋ a	h ɡ o ŋ a	x....
+gaotb:Written Tibetan > Tibetan|gaotb_170_egg-1	EGG	TibetanZeku	s ɡ o ŋ a	r ɡ o ŋ a	x....
+gaotb:Written Tibetan > Tibetan|gaotb_172_hairfur-1	FEATHER OR FUR OR HAIR	Khams Tibetan	s p u	- p u	x..
+gaotb:Written Tibetan > Tibetan|gaotb_172_hairfur-1	FEATHER OR FUR OR HAIR	Tibetan	s p u	- p u	x..
+gaotb:Written Tibetan > Tibetan|gaotb_174_claw-1	CLAW	Tibetan	s d e r m o	- t e r m o	xx....
+gaotb:Written Tibetan > Tibetan|gaotb_174_claw-1	CLAW	TibetanXiahe	s d e r m o	h d e r m o	x.....
+gaotb:Written Tibetan > Tibetan|gaotb_174_claw-1	CLAW	TibetanZeku	s d e r m o	r d e r m o	x.....
+gaotb:Written Tibetan > Tibetan|gaotb_176_horn-1	HORN (INSTRUMENT)	Tibetan	r w a tɕ o	r - a k o	.x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_176_horn-1	HORN (INSTRUMENT)	TibetanXiahe	r w a tɕ o	r - a tɕ o	.x...
+gaotb:Written Tibetan > Tibetan|gaotb_176_horn-1	HORN (INSTRUMENT)	TibetanZeku	r w a tɕ o	r - a cç o	.x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_177_tail-1	TAIL	Khams Tibetan	r ŋ a m a	- ŋ a m a	x....
+gaotb:Written Tibetan > Tibetan|gaotb_177_tail-1	TAIL	Tibetan	r ŋ a m a	- ŋ a m a	x....
+gaotb:Written Tibetan > Tibetan|gaotb_177_tail-1	TAIL	TibetanXiahe	r ŋ a m a	h ŋ a m a	x....
+gaotb:Written Tibetan > Tibetan|gaotb_177_tail-1	TAIL	TibetanZeku	r ŋ a m a	r ŋ a m a	.....
+gaotb:Written Tibetan > Tibetan|gaotb_178_tree-1	TREE	Khams Tibetan	ɕ i ŋ s d o ŋ	ɕʰ i n - - - -	x.xxxxx
+gaotb:Written Tibetan > Tibetan|gaotb_178_tree-1	TREE	Tibetan	ɕ i ŋ s d o ŋ	ɕ i ŋ - - - -	...xxxx
+gaotb:Written Tibetan > Tibetan|gaotb_178_tree-1	TREE	TibetanZeku	ɕ i ŋ s d o ŋ	xʰ ə ŋ r d o ŋ	xx.x...
+gaotb:Written Tibetan > Tibetan|gaotb_17_earth-1	EARTH (SOIL)	Khams Tibetan	s a	ɕ a	x.
+gaotb:Written Tibetan > Tibetan|gaotb_17_earth-1	EARTH (SOIL)	Tibetan	s a	s a	..
+gaotb:Written Tibetan > Tibetan|gaotb_17_earth-1	EARTH (SOIL)	TibetanXiahe	s a	ɕ a	x.
+gaotb:Written Tibetan > Tibetan|gaotb_17_earth-1	EARTH (SOIL)	TibetanZeku	s a	ɕ a	x.
+gaotb:Written Tibetan > Tibetan|gaotb_219_mushroom-1	MUSHROOM	Khams Tibetan	ɕ a m o	xʰ e m u	xx.x
+gaotb:Written Tibetan > Tibetan|gaotb_219_mushroom-1	MUSHROOM	Tibetan	ɕ a m o	ɕ a m o	....
+gaotb:Written Tibetan > Tibetan|gaotb_219_mushroom-1	MUSHROOM	TibetanXiahe	ɕ a m o	xʰ a m o	x...
+gaotb:Written Tibetan > Tibetan|gaotb_220_seed-1	SEED	Khams Tibetan	s o n	ɕ e n	xx.
+gaotb:Written Tibetan > Tibetan|gaotb_220_seed-1	SEED	Tibetan	s o n	s ø -	.xx
+gaotb:Written Tibetan > Tibetan|gaotb_220_seed-1	SEED	TibetanZeku	s o n	s o -	..x
+gaotb:Written Tibetan > Tibetan|gaotb_222_root-1	ROOT	Tibetan	r ts a b a	- ts a - -	x..xx
+gaotb:Written Tibetan > Tibetan|gaotb_222_root-1	ROOT	TibetanXiahe	r ts a b a	h ts a p a	x..x.
+gaotb:Written Tibetan > Tibetan|gaotb_222_root-1	ROOT	TibetanZeku	r ts a b a	r ts a w a	...x.
+gaotb:Written Tibetan > Tibetan|gaotb_224_leaf-1	LEAF	Khams Tibetan	l o m a	l o m a	....
+gaotb:Written Tibetan > Tibetan|gaotb_224_leaf-1	LEAF	Tibetan	l o m a	l o m a	....
+gaotb:Written Tibetan > Tibetan|gaotb_224_leaf-1	LEAF	TibetanXiahe	l o m a	l o m a	....
+gaotb:Written Tibetan > Tibetan|gaotb_224_leaf-1	LEAF	TibetanZeku	l o m a	l o m a	....
+gaotb:Written Tibetan > Tibetan|gaotb_232_head-1	HEAD	Khams Tibetan	m ɡ o	n ɡ o	x..
+gaotb:Written Tibetan > Tibetan|gaotb_232_head-1	HEAD	Tibetan	m ɡ o	- k o	xx.
+gaotb:Written Tibetan > Tibetan|gaotb_232_head-1	HEAD	TibetanXiahe	m ɡ o	n ɡ o	x..
+gaotb:Written Tibetan > Tibetan|gaotb_232_head-1	HEAD	TibetanZeku	m ɡ o	n ɡ o	x..
+gaotb:Written Tibetan > Tibetan|gaotb_238_eye-1	EYE	Khams Tibetan	m i ɡ	ɲ i ʔ	x.x
+gaotb:Written Tibetan > Tibetan|gaotb_238_eye-1	EYE	Tibetan	m i ɡ	m i ʔ	..x
+gaotb:Written Tibetan > Tibetan|gaotb_238_eye-1	EYE	TibetanXiahe	m i ɡ	ȵ ə k	xxx
+gaotb:Written Tibetan > Tibetan|gaotb_238_eye-1	EYE	TibetanZeku	m i ɡ	ȵ ə k	xxx
+gaotb:Written Tibetan > Tibetan|gaotb_240_nose-1	NOSE	Khams Tibetan	s n a	- n a	x..
+gaotb:Written Tibetan > Tibetan|gaotb_240_nose-1	NOSE	Tibetan	s n a	- n a	x..
+gaotb:Written Tibetan > Tibetan|gaotb_240_nose-1	NOSE	TibetanXiahe	s n a	h n a	x..
+gaotb:Written Tibetan > Tibetan|gaotb_240_nose-1	NOSE	TibetanZeku	s n a	r n a	x..
+gaotb:Written Tibetan > Tibetan|gaotb_241_ear-1	EAR	Khams Tibetan	r n a	- n a	x..
+gaotb:Written Tibetan > Tibetan|gaotb_241_ear-1	EAR	Tibetan	r n a	- - a	xx.
+gaotb:Written Tibetan > Tibetan|gaotb_241_ear-1	EAR	TibetanXiahe	r n a	h n a	x..
+gaotb:Written Tibetan > Tibetan|gaotb_241_ear-1	EAR	TibetanZeku	r n a	h n a	x..
+gaotb:Written Tibetan > Tibetan|gaotb_242_mouth-1	MOUTH	Khams Tibetan	kʰ a	kʰ a	..
+gaotb:Written Tibetan > Tibetan|gaotb_242_mouth-1	MOUTH	Tibetan	kʰ a	kʰ a	..
+gaotb:Written Tibetan > Tibetan|gaotb_242_mouth-1	MOUTH	TibetanXiahe	kʰ a	kʰ a	..
+gaotb:Written Tibetan > Tibetan|gaotb_242_mouth-1	MOUTH	TibetanZeku	kʰ a	kʰ a	..
+gaotb:Written Tibetan > Tibetan|gaotb_244_tooth-1	TOOTH	Khams Tibetan	s o	ɕ o	x.
+gaotb:Written Tibetan > Tibetan|gaotb_244_tooth-1	TOOTH	Tibetan	s o	s o	..
+gaotb:Written Tibetan > Tibetan|gaotb_244_tooth-1	TOOTH	TibetanXiahe	s o	ɕ o	x.
+gaotb:Written Tibetan > Tibetan|gaotb_244_tooth-1	TOOTH	TibetanZeku	s o	ɕ o	x.
+gaotb:Written Tibetan > Tibetan|gaotb_245_tongue-1	TONGUE	Khams Tibetan	l tɕ e	- tɕ e	x..
+gaotb:Written Tibetan > Tibetan|gaotb_245_tongue-1	TONGUE	Tibetan	l tɕ e	- tɕ e	x..
+gaotb:Written Tibetan > Tibetan|gaotb_245_tongue-1	TONGUE	TibetanXiahe	l tɕ e	h tɕ e	x..
+gaotb:Written Tibetan > Tibetan|gaotb_245_tongue-1	TONGUE	TibetanZeku	l tɕ e	r tɕ i	x.x
+gaotb:Written Tibetan > Tibetan|gaotb_248_neck-1	NECK	Khams Tibetan	s k e	- k e	x..
+gaotb:Written Tibetan > Tibetan|gaotb_248_neck-1	NECK	Tibetan	s k e	- k e	x..
+gaotb:Written Tibetan > Tibetan|gaotb_248_neck-1	NECK	TibetanXiahe	s k e	h k e	x..
+gaotb:Written Tibetan > Tibetan|gaotb_248_neck-1	NECK	TibetanZeku	s k e	r k e	x..
+gaotb:Written Tibetan > Tibetan|gaotb_251_hand-1	HAND	Khams Tibetan	l a ɡ p a	l a - p a	..x..
+gaotb:Written Tibetan > Tibetan|gaotb_251_hand-1	HAND	Tibetan	l a ɡ p a	l a k p a	..x..
+gaotb:Written Tibetan > Tibetan|gaotb_251_hand-1	HAND	TibetanXiahe	l a ɡ p a	l a k kʷ a	..xx.
+gaotb:Written Tibetan > Tibetan|gaotb_251_hand-1	HAND	TibetanZeku	l a ɡ p a	l o k kʷ a	.xxx.
+gaotb:Written Tibetan > Tibetan|gaotb_259_breast-1	BREAST	Khams Tibetan	n u m a	n u m a	....
+gaotb:Written Tibetan > Tibetan|gaotb_259_breast-1	BREAST	TibetanXiahe	n u m a	n ə m a	.x..
+gaotb:Written Tibetan > Tibetan|gaotb_259_breast-1	BREAST	TibetanZeku	n u m a	n ə m a	.x..
+gaotb:Written Tibetan > Tibetan|gaotb_25_mountain-1	MOUNTAIN	Khams Tibetan	r i	r i	..
+gaotb:Written Tibetan > Tibetan|gaotb_25_mountain-1	MOUNTAIN	Tibetan	r i	r i	..
+gaotb:Written Tibetan > Tibetan|gaotb_25_mountain-1	MOUNTAIN	TibetanXiahe	r i	r ə	.x
+gaotb:Written Tibetan > Tibetan|gaotb_25_mountain-1	MOUNTAIN	TibetanZeku	r i	r ə	.x
+gaotb:Written Tibetan > Tibetan|gaotb_260_belly-1	BELLY	Khams Tibetan	ɡ r o d kʰ o ɡ	ʈʂ - ø - p a -	xxxxxxx
+gaotb:Written Tibetan > Tibetan|gaotb_260_belly-1	BELLY	Tibetan	ɡ r o d kʰ o ɡ	ʈʂʰ - o - k o ʔ	xx.xx.x
+gaotb:Written Tibetan > Tibetan|gaotb_263_foot-1	FOOT	Khams Tibetan	r k a ŋ p a	- k u ŋ b a	x.x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_263_foot-1	FOOT	Tibetan	r k a ŋ p a	- k a ŋ p a	x.....
+gaotb:Written Tibetan > Tibetan|gaotb_263_foot-1	FOOT	TibetanXiahe	r k a ŋ p a	h k a ŋ w a	x...x.
+gaotb:Written Tibetan > Tibetan|gaotb_263_foot-1	FOOT	TibetanZeku	r k a ŋ p a	r k o ŋ w a	..x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_266_skin-1	SKIN	Khams Tibetan	p a ɡ s p a	p a - - p a	..xx..
+gaotb:Written Tibetan > Tibetan|gaotb_266_skin-1	SKIN	Tibetan	p a ɡ s p a	p a k - p a	..xx..
+gaotb:Written Tibetan > Tibetan|gaotb_266_skin-1	SKIN	TibetanXiahe	p a ɡ s p a	w a k - kʷ a	x.xxx.
+gaotb:Written Tibetan > Tibetan|gaotb_266_skin-1	SKIN	TibetanZeku	p a ɡ s p a	w o k - kʷ a	xxxxx.
+gaotb:Written Tibetan > Tibetan|gaotb_268_blood-1	BLOOD	Khams Tibetan	kʰ r a ɡ	ʈʂʰ - ɑ ʔ	xx.x
+gaotb:Written Tibetan > Tibetan|gaotb_268_blood-1	BLOOD	Tibetan	kʰ r a ɡ	ʈʂʰ - a ʔ	xx.x
+gaotb:Written Tibetan > Tibetan|gaotb_268_blood-1	BLOOD	TibetanXiahe	kʰ r a ɡ	tɕʰ - a k	xx.x
+gaotb:Written Tibetan > Tibetan|gaotb_268_blood-1	BLOOD	TibetanZeku	kʰ r a ɡ	cç h a k	xx.x
+gaotb:Written Tibetan > Tibetan|gaotb_272_heart-1	HEART	Khams Tibetan	s ȵ i ŋ	- ɲ i n	xx.x
+gaotb:Written Tibetan > Tibetan|gaotb_272_heart-1	HEART	TibetanXiahe	s ȵ i ŋ	h ȵ a ŋ	x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_272_heart-1	HEART	TibetanZeku	s ȵ i ŋ	r ȵ a ŋ	x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_273_liver-1	LIVER	Khams Tibetan	m tɕʰ i n p a	- tɕʰ i n b a	x...x.
+gaotb:Written Tibetan > Tibetan|gaotb_273_liver-1	LIVER	Tibetan	m tɕʰ i n p a	- tɕʰ i - p a	x..x..
+gaotb:Written Tibetan > Tibetan|gaotb_273_liver-1	LIVER	TibetanXiahe	m tɕʰ i n p a	- tɕʰ ə m b a	x.xxx.
+gaotb:Written Tibetan > Tibetan|gaotb_273_liver-1	LIVER	TibetanZeku	m tɕʰ i n p a	m tɕʰ ə n ⁿb a	..x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_289_person-1	PERSON	Khams Tibetan	m i	ɲ i	x.
+gaotb:Written Tibetan > Tibetan|gaotb_289_person-1	PERSON	Tibetan	m i	m i	..
+gaotb:Written Tibetan > Tibetan|gaotb_289_person-1	PERSON	TibetanXiahe	m i	ɲ ə	xx
+gaotb:Written Tibetan > Tibetan|gaotb_289_person-1	PERSON	TibetanZeku	m i	m ə	.x
+gaotb:Written Tibetan > Tibetan|gaotb_290_manmaleperson-1	MAN	Tibetan	kʰ j o k a	cʰ - o k a	xx...
+gaotb:Written Tibetan > Tibetan|gaotb_291_woman-1	WOMAN	Tibetan	s k j e d m a n	- c - e - m ɛ -	xxx.x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_2_sun-1	SUN	Khams Tibetan	ɲ i m a	ɲ i m a	....
+gaotb:Written Tibetan > Tibetan|gaotb_2_sun-1	SUN	Tibetan	ɲ i m a	ɲ i m a	....
+gaotb:Written Tibetan > Tibetan|gaotb_2_sun-1	SUN	TibetanXiahe	ɲ i m a	ɲ ə m a	.x..
+gaotb:Written Tibetan > Tibetan|gaotb_2_sun-1	SUN	TibetanZeku	ɲ i m a	ɲ ə m a	.x..
+gaotb:Written Tibetan > Tibetan|gaotb_398_salt-1	SALT	Khams Tibetan	tsʰ w a	tsʰ - a	.x.
+gaotb:Written Tibetan > Tibetan|gaotb_398_salt-1	SALT	Tibetan	tsʰ w a	tsʰ - a	.x.
+gaotb:Written Tibetan > Tibetan|gaotb_398_salt-1	SALT	TibetanXiahe	tsʰ w a	tsʰ - a	.x.
+gaotb:Written Tibetan > Tibetan|gaotb_398_salt-1	SALT	TibetanZeku	tsʰ w a	tsʰ - a	.x.
+gaotb:Written Tibetan > Tibetan|gaotb_399_meatflesh-1	MEAT	Khams Tibetan	ɕ a	xʰ a	x.
+gaotb:Written Tibetan > Tibetan|gaotb_399_meatflesh-1	MEAT	Tibetan	ɕ a	ɕ a	..
+gaotb:Written Tibetan > Tibetan|gaotb_399_meatflesh-1	MEAT	TibetanXiahe	ɕ a	xʰ a	x.
+gaotb:Written Tibetan > Tibetan|gaotb_399_meatflesh-1	MEAT	TibetanZeku	ɕ a	xʰ a	x.
+gaotb:Written Tibetan > Tibetan|gaotb_3_moon-1	MOON	Khams Tibetan	z l a b a	d - a w a	xx.x.
+gaotb:Written Tibetan > Tibetan|gaotb_3_moon-1	MOON	Tibetan	z l a b a	t - a w a	xx.x.
+gaotb:Written Tibetan > Tibetan|gaotb_3_moon-1	MOON	TibetanXiahe	z l a b a	h d a w a	xx.x.
+gaotb:Written Tibetan > Tibetan|gaotb_3_moon-1	MOON	TibetanZeku	z l a b a	r d a w a	xx.x.
+gaotb:Written Tibetan > Tibetan|gaotb_42_stonerock-1	STONE	Khams Tibetan	r d o	- d o	x..
+gaotb:Written Tibetan > Tibetan|gaotb_42_stonerock-1	STONE	Tibetan	r d o	- t o	xx.
+gaotb:Written Tibetan > Tibetan|gaotb_42_stonerock-1	STONE	TibetanXiahe	r d o	h d o	x..
+gaotb:Written Tibetan > Tibetan|gaotb_42_stonerock-1	STONE	TibetanZeku	r d o	r d o	...
+gaotb:Written Tibetan > Tibetan|gaotb_43_sand-1	SAND	Khams Tibetan	b j e m a	ɕ - e m a	xx...
+gaotb:Written Tibetan > Tibetan|gaotb_43_sand-1	SAND	Tibetan	b j e m a	tɕʰ - e m a	xx...
+gaotb:Written Tibetan > Tibetan|gaotb_43_sand-1	SAND	TibetanXiahe	b j e m a	ɕ - e m a	xx...
+gaotb:Written Tibetan > Tibetan|gaotb_43_sand-1	SAND	TibetanZeku	b j e m a	w ɕ e m a	xx...
+gaotb:Written Tibetan > Tibetan|gaotb_45_fire-1	FIRE	Khams Tibetan	m e	ɲ e	x.
+gaotb:Written Tibetan > Tibetan|gaotb_45_fire-1	FIRE	Tibetan	m e	m e	..
+gaotb:Written Tibetan > Tibetan|gaotb_45_fire-1	FIRE	TibetanXiahe	m e	ɲ e	x.
+gaotb:Written Tibetan > Tibetan|gaotb_45_fire-1	FIRE	TibetanZeku	m e	m e	..
+gaotb:Written Tibetan > Tibetan|gaotb_46_smoke-1	SMOKE (EXHAUST)	Khams Tibetan	d u b a	t o - -	xxxx
+gaotb:Written Tibetan > Tibetan|gaotb_46_smoke-1	SMOKE (EXHAUST)	Tibetan	d u b a	tʰ o - -	xxxx
+gaotb:Written Tibetan > Tibetan|gaotb_46_smoke-1	SMOKE (EXHAUST)	TibetanXiahe	d u b a	t ə w a	xxx.
+gaotb:Written Tibetan > Tibetan|gaotb_46_smoke-1	SMOKE (EXHAUST)	TibetanZeku	d u b a	t o - -	xxxx
+gaotb:Written Tibetan > Tibetan|gaotb_472_ashes-1	ASH	Khams Tibetan	ɡ o tʰ a l	k o tʰ e -	x..xx
+gaotb:Written Tibetan > Tibetan|gaotb_472_ashes-1	ASH	Tibetan	ɡ o tʰ a l	kʰ o tʰ ɛ -	x..xx
+gaotb:Written Tibetan > Tibetan|gaotb_472_ashes-1	ASH	TibetanXiahe	ɡ o tʰ a l	- - tʰ a -	xx..x
+gaotb:Written Tibetan > Tibetan|gaotb_474_roadway-1	ROAD	Khams Tibetan	l a m	l ɑ ŋ	..x
+gaotb:Written Tibetan > Tibetan|gaotb_474_roadway-1	ROAD	Tibetan	l a m	l a -	..x
+gaotb:Written Tibetan > Tibetan|gaotb_474_roadway-1	ROAD	TibetanXiahe	l a m	l a m	...
+gaotb:Written Tibetan > Tibetan|gaotb_474_roadway-1	ROAD	TibetanZeku	l a m	l a m	...
+gaotb:Written Tibetan > Tibetan|gaotb_4_star-1	STAR	Khams Tibetan	s k a r m a	- k a - m a	x..x..
+gaotb:Written Tibetan > Tibetan|gaotb_4_star-1	STAR	Tibetan	s k a r m a	- k a - m a	x..x..
+gaotb:Written Tibetan > Tibetan|gaotb_4_star-1	STAR	TibetanXiahe	s k a r m a	h k a r m a	x.....
+gaotb:Written Tibetan > Tibetan|gaotb_4_star-1	STAR	TibetanZeku	s k a r m a	r k a r m a	x.....
+gaotb:Written Tibetan > Tibetan|gaotb_517_name-1	NAME	Khams Tibetan	m i ŋ	ɲ i n	x.x
+gaotb:Written Tibetan > Tibetan|gaotb_517_name-1	NAME	Tibetan	m i ŋ	m i ŋ	...
+gaotb:Written Tibetan > Tibetan|gaotb_517_name-1	NAME	TibetanXiahe	m i ŋ	ɲ a ŋ	xx.
+gaotb:Written Tibetan > Tibetan|gaotb_517_name-1	NAME	TibetanZeku	m i ŋ	m a ŋ	.x.
+gaotb:Written Tibetan > Tibetan|gaotb_529_see-1	SEE	Tibetan	m tʰ o ŋ	- tʰ o ŋ	x...
+gaotb:Written Tibetan > Tibetan|gaotb_532_listen-1	LISTEN	Khams Tibetan	ɲ a n	ɲ e n	.x.
+gaotb:Written Tibetan > Tibetan|gaotb_532_listen-1	LISTEN	Tibetan	ɲ a n	ɲ ɛ -	.xx
+gaotb:Written Tibetan > Tibetan|gaotb_532_listen-1	LISTEN	TibetanXiahe	ɲ a n	ɲ a n	...
+gaotb:Written Tibetan > Tibetan|gaotb_532_listen-1	LISTEN	TibetanZeku	ɲ a n	ɲ a n	...
+gaotb:Written Tibetan > Tibetan|gaotb_533_eat-1	EAT	Khams Tibetan	z a	s a	x.
+gaotb:Written Tibetan > Tibetan|gaotb_533_eat-1	EAT	Tibetan	z a	s a	x.
+gaotb:Written Tibetan > Tibetan|gaotb_533_eat-1	EAT	TibetanXiahe	z a	s a	x.
+gaotb:Written Tibetan > Tibetan|gaotb_533_eat-1	EAT	TibetanZeku	z a	s a	x.
+gaotb:Written Tibetan > Tibetan|gaotb_534_drink-1	DRINK	Khams Tibetan	ɦ tʰ u ŋ	- tʰ u ŋ	x...
+gaotb:Written Tibetan > Tibetan|gaotb_534_drink-1	DRINK	Tibetan	ɦ tʰ u ŋ	- tʰ u ŋ	x...
+gaotb:Written Tibetan > Tibetan|gaotb_534_drink-1	DRINK	TibetanXiahe	ɦ tʰ u ŋ	- tʰ o ŋ	x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_534_drink-1	DRINK	TibetanZeku	ɦ tʰ u ŋ	n tʰ o ŋ	x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_535_bite-1	BITE	Tibetan	s o b r ɡ j a b	s o - - c - a p	..xxxx.x
+gaotb:Written Tibetan > Tibetan|gaotb_535_bite-1	BITE	TibetanXiahe	s o b r ɡ j a b	ɕ o t - - - a p	x.xxxx.x
+gaotb:Written Tibetan > Tibetan|gaotb_535_bite-1	BITE	TibetanZeku	s o b r ɡ j a b	ɕ o - - ⁿd - e p	x.xxxxxx
+gaotb:Written Tibetan > Tibetan|gaotb_545_sayspeak-1	SPEAK	Khams Tibetan	b ɕ a d	- ɕ e ʔ	x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_545_sayspeak-1	SPEAK	Tibetan	b ɕ a d	- ɕ ɛ ʔ	x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_545_sayspeak-1	SPEAK	TibetanXiahe	b ɕ a d	- ɕ a l	x..x
+gaotb:Written Tibetan > Tibetan|gaotb_545_sayspeak-1	SPEAK	TibetanZeku	b ɕ a d	w ɕ a l	x..x
+gaotb:Written Tibetan > Tibetan|gaotb_569_stand-1	STAND	Khams Tibetan	l a ŋ	l u ŋ	.x.
+gaotb:Written Tibetan > Tibetan|gaotb_569_stand-1	STAND	Tibetan	l a ŋ	l a ŋ	...
+gaotb:Written Tibetan > Tibetan|gaotb_569_stand-1	STAND	TibetanXiahe	l a ŋ	l a ŋ	...
+gaotb:Written Tibetan > Tibetan|gaotb_569_stand-1	STAND	TibetanZeku	l a ŋ	l a ŋ	...
+gaotb:Written Tibetan > Tibetan|gaotb_572_walk-1	WALK	Khams Tibetan	ɦ ɡ r o	- ⁿd ʐ o	xxx.
+gaotb:Written Tibetan > Tibetan|gaotb_572_walk-1	WALK	Tibetan	ɦ ɡ r o	- ʈʂ - o	xxx.
+gaotb:Written Tibetan > Tibetan|gaotb_572_walk-1	WALK	TibetanXiahe	ɦ ɡ r o	- ⁿdʑ - o	xxx.
+gaotb:Written Tibetan > Tibetan|gaotb_572_walk-1	WALK	TibetanZeku	ɦ ɡ r o	- ⁿdʑ - o	xxx.
+gaotb:Written Tibetan > Tibetan|gaotb_574_sit-1	SIT	Khams Tibetan	s d o d	- ⁿd u ʔ	xxxx
+gaotb:Written Tibetan > Tibetan|gaotb_574_sit-1	SIT	Tibetan	s d o d	- t ɛ ʔ	xxxx
+gaotb:Written Tibetan > Tibetan|gaotb_574_sit-1	SIT	TibetanXiahe	s d o d	h d a l	x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_574_sit-1	SIT	TibetanZeku	s d o d	- ⁿd ə k	xxxx
+gaotb:Written Tibetan > Tibetan|gaotb_582_sleep-1	SLEEP	Khams Tibetan	ɲ a l	ɲ e -	.xx
+gaotb:Written Tibetan > Tibetan|gaotb_582_sleep-1	SLEEP	Tibetan	ɲ a l	ɲ ɛ -	.xx
+gaotb:Written Tibetan > Tibetan|gaotb_582_sleep-1	SLEEP	TibetanXiahe	ɲ a l	ɲ a l	...
+gaotb:Written Tibetan > Tibetan|gaotb_582_sleep-1	SLEEP	TibetanZeku	ɲ a l	ɲ a -	..x
+gaotb:Written Tibetan > Tibetan|gaotb_633_kill-1	KILL	Khams Tibetan	ɡ s o d	- s ɛ -	x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_633_kill-1	KILL	Tibetan	ɡ s o d	- s ɛ ʔ	x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_633_kill-1	KILL	TibetanXiahe	ɡ s o d	- s a l	x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_633_kill-1	KILL	TibetanZeku	ɡ s o d	ɣ s a l	x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_649_washclothes-1	LAUNDER (WASH CLOTHES)	Tibetan	s t e r	- t e -	x..x
+gaotb:Written Tibetan > Tibetan|gaotb_6_cloud-1	CLOUD	Khams Tibetan	s p r i n p a	- ʈʂ - i n - -	xxx..xx
+gaotb:Written Tibetan > Tibetan|gaotb_6_cloud-1	CLOUD	Tibetan	s p r i n p a	- ʈʂ - ĩ - p a	xxxxx..
+gaotb:Written Tibetan > Tibetan|gaotb_6_cloud-1	CLOUD	TibetanXiahe	s p r i n p a	- ʂ - ə n - -	xxxx.xx
+gaotb:Written Tibetan > Tibetan|gaotb_6_cloud-1	CLOUD	TibetanZeku	s p r i n p a	- ʂ - ə n - -	xxxx.xx
+gaotb:Written Tibetan > Tibetan|gaotb_722_know-1	KNOW (SOMETHING)	Khams Tibetan	ɕ e s	ɕʰ e -	x.x
+gaotb:Written Tibetan > Tibetan|gaotb_722_know-1	KNOW (SOMETHING)	Tibetan	ɕ e s	ɕ ẽ -	.xx
+gaotb:Written Tibetan > Tibetan|gaotb_722_know-1	KNOW (SOMETHING)	TibetanXiahe	ɕ e s	ɕ i -	.xx
+gaotb:Written Tibetan > Tibetan|gaotb_737_come-1	COME	Khams Tibetan	j o ŋ	ʔ o ŋ	x..
+gaotb:Written Tibetan > Tibetan|gaotb_737_come-1	COME	Tibetan	j o ŋ	j o ŋ	...
+gaotb:Written Tibetan > Tibetan|gaotb_737_come-1	COME	TibetanXiahe	j o ŋ	j o ŋ	...
+gaotb:Written Tibetan > Tibetan|gaotb_737_come-1	COME	TibetanZeku	j o ŋ	j o ŋ	...
+gaotb:Written Tibetan > Tibetan|gaotb_780_die-1	DIE	Khams Tibetan	ɦ ɕ i	- xʰ e	xxx
+gaotb:Written Tibetan > Tibetan|gaotb_780_die-1	DIE	Tibetan	ɦ ɕ i	- ɕ i	x..
+gaotb:Written Tibetan > Tibetan|gaotb_780_die-1	DIE	TibetanXiahe	ɦ ɕ i	- xʰ ə	xxx
+gaotb:Written Tibetan > Tibetan|gaotb_780_die-1	DIE	TibetanZeku	ɦ ɕ i	- xʰ ə	xxx
+gaotb:Written Tibetan > Tibetan|gaotb_782_fly-1	FLY (MOVE THROUGH AIR)	Khams Tibetan	ɦ pʰ u r	- pʰ i -	x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_782_fly-1	FLY (MOVE THROUGH AIR)	Tibetan	ɦ pʰ u r	- pʰ i r	x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_782_fly-1	FLY (MOVE THROUGH AIR)	TibetanXiahe	ɦ pʰ u r	- pʰ ə r	x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_782_fly-1	FLY (MOVE THROUGH AIR)	TibetanZeku	ɦ pʰ u r	m pʰ ə r	x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_7_wind-1	WIND	Tibetan	lʰ a ɡ p a	ɬ a k p a	x.x..
+gaotb:Written Tibetan > Tibetan|gaotb_800_big-1	BIG	Khams Tibetan	tɕʰ e n p o	tɕʰ e - b o	..xx.
+gaotb:Written Tibetan > Tibetan|gaotb_800_big-1	BIG	Tibetan	tɕʰ e n p o	tɕʰ ẽ - p o	.xx..
+gaotb:Written Tibetan > Tibetan|gaotb_800_big-1	BIG	TibetanXiahe	tɕʰ e n p o	tɕʰ e - p o	..x..
+gaotb:Written Tibetan > Tibetan|gaotb_800_big-1	BIG	TibetanZeku	tɕʰ e n p o	tɕʰ e - - -	..xxx
+gaotb:Written Tibetan > Tibetan|gaotb_801_small-1	SMALL	Khams Tibetan	tɕʰ u ŋ tɕʰ u ŋ	tɕʰ u ŋ tɕʰ u ŋ	......
+gaotb:Written Tibetan > Tibetan|gaotb_801_small-1	SMALL	Tibetan	tɕʰ u ŋ tɕʰ u ŋ	tɕʰ u ŋ tɕʰ u ŋ	......
+gaotb:Written Tibetan > Tibetan|gaotb_801_small-1	SMALL	TibetanXiahe	tɕʰ u ŋ tɕʰ u ŋ	tɕʰ o ŋ tɕʰ o ŋ	.x..x.
+gaotb:Written Tibetan > Tibetan|gaotb_801_small-1	SMALL	TibetanZeku	tɕʰ u ŋ tɕʰ u ŋ	tɕʰ o ŋ tɕʰ o ŋ	.x..x.
+gaotb:Written Tibetan > Tibetan|gaotb_807_round-1	ROUND	Khams Tibetan	r i l r i l	r u l - o -	.x.xxx
+gaotb:Written Tibetan > Tibetan|gaotb_807_round-1	ROUND	Tibetan	r i l r i l	r i - r i -	..x..x
+gaotb:Written Tibetan > Tibetan|gaotb_807_round-1	ROUND	TibetanZeku	r i l r i l	r o l - ə m	.x.xxx
+gaotb:Written Tibetan > Tibetan|gaotb_809_long-1	LONG	Khams Tibetan	r i ŋ p o	r i n b o	..xx.
+gaotb:Written Tibetan > Tibetan|gaotb_809_long-1	LONG	Tibetan	r i ŋ p o	r i ŋ k u	...xx
+gaotb:Written Tibetan > Tibetan|gaotb_809_long-1	LONG	TibetanXiahe	r i ŋ p o	r a ŋ w o	.x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_809_long-1	LONG	TibetanZeku	r i ŋ p o	r a ŋ - -	.x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_819_manymuch-1	MANY	Khams Tibetan	m a ŋ p o	m u ŋ b o	.x.x.
+gaotb:Written Tibetan > Tibetan|gaotb_819_manymuch-1	MANY	Tibetan	m a ŋ p o	m a ŋ k o	...x.
+gaotb:Written Tibetan > Tibetan|gaotb_819_manymuch-1	MANY	TibetanXiahe	m a ŋ p o	m a ŋ w o	...x.
+gaotb:Written Tibetan > Tibetan|gaotb_819_manymuch-1	MANY	TibetanZeku	m a ŋ p o	m a ŋ - -	...xx
+gaotb:Written Tibetan > Tibetan|gaotb_837_red-1	RED	Khams Tibetan	d m a r p o	- m a - b o	x..xx.
+gaotb:Written Tibetan > Tibetan|gaotb_837_red-1	RED	Tibetan	d m a r p o	- m a - p o	x..x..
+gaotb:Written Tibetan > Tibetan|gaotb_837_red-1	RED	TibetanXiahe	d m a r p o	h m a r - o	x...x.
+gaotb:Written Tibetan > Tibetan|gaotb_837_red-1	RED	TibetanZeku	d m a r p o	ɣ m a r - o	x...x.
+gaotb:Written Tibetan > Tibetan|gaotb_838_yellow-1	YELLOW	Khams Tibetan	s e r p o	ɕ e - b o	x.xx.
+gaotb:Written Tibetan > Tibetan|gaotb_838_yellow-1	YELLOW	Tibetan	s e r p o	s e - p o	..x..
+gaotb:Written Tibetan > Tibetan|gaotb_838_yellow-1	YELLOW	TibetanXiahe	s e r p o	ɕ e r - o	x..x.
+gaotb:Written Tibetan > Tibetan|gaotb_838_yellow-1	YELLOW	TibetanZeku	s e r p o	ɕ e r - o	x..x.
+gaotb:Written Tibetan > Tibetan|gaotb_840_white-1	WHITE	Khams Tibetan	d k a r p o	k k ɑ - - -	x..xxx
+gaotb:Written Tibetan > Tibetan|gaotb_840_white-1	WHITE	Tibetan	d k a r p o	- k a - p o	x..x..
+gaotb:Written Tibetan > Tibetan|gaotb_840_white-1	WHITE	TibetanXiahe	d k a r p o	h k a r - o	x...x.
+gaotb:Written Tibetan > Tibetan|gaotb_840_white-1	WHITE	TibetanZeku	d k a r p o	- k a r - o	x...x.
+gaotb:Written Tibetan > Tibetan|gaotb_841_black-1	BLACK	Khams Tibetan	n a ɡ p o	n ɑ ʔ - -	..xxx
+gaotb:Written Tibetan > Tibetan|gaotb_841_black-1	BLACK	Tibetan	n a ɡ p o	n a ʔ k o	..xx.
+gaotb:Written Tibetan > Tibetan|gaotb_841_black-1	BLACK	TibetanXiahe	n a ɡ p o	n a k kʷ o	..xx.
+gaotb:Written Tibetan > Tibetan|gaotb_841_black-1	BLACK	TibetanZeku	n a ɡ p o	n a k kʷ o	..xx.
+gaotb:Written Tibetan > Tibetan|gaotb_842_green-1	GREEN	Khams Tibetan	l dʑ a ŋ kʰ u	- ⁿdʑ u ŋ kʰ u	xxx...
+gaotb:Written Tibetan > Tibetan|gaotb_842_green-1	GREEN	Tibetan	l dʑ a ŋ kʰ u	- tɕ a ŋ k u	xx..x.
+gaotb:Written Tibetan > Tibetan|gaotb_842_green-1	GREEN	TibetanXiahe	l dʑ a ŋ kʰ u	h dʑ a ŋ kʰ ə	x....x
+gaotb:Written Tibetan > Tibetan|gaotb_842_green-1	GREEN	TibetanZeku	l dʑ a ŋ kʰ u	r dʑ a ŋ kʰ ə	x....x
+gaotb:Written Tibetan > Tibetan|gaotb_846_full-1	FULL	Khams Tibetan	ɡ a ŋ	ɡ ɑ ŋ	...
+gaotb:Written Tibetan > Tibetan|gaotb_846_full-1	FULL	Tibetan	ɡ a ŋ	kʰ a ŋ	x..
+gaotb:Written Tibetan > Tibetan|gaotb_846_full-1	FULL	TibetanXiahe	ɡ a ŋ	k a ŋ	x..
+gaotb:Written Tibetan > Tibetan|gaotb_846_full-1	FULL	TibetanZeku	ɡ a ŋ	k a ŋ	x..
+gaotb:Written Tibetan > Tibetan|gaotb_860_good-1	GOOD	Tibetan	j a ɡ p o	j a k - o	..xx.
+gaotb:Written Tibetan > Tibetan|gaotb_860_good-1	GOOD	TibetanZeku	j a ɡ p o	j a k - -	..xxx
+gaotb:Written Tibetan > Tibetan|gaotb_864_dry-1	DRY	Khams Tibetan	s k a m p o	- k ɑ ŋ b o	x..xx.
+gaotb:Written Tibetan > Tibetan|gaotb_864_dry-1	DRY	Tibetan	s k a m p o	- k a m p o	x.....
+gaotb:Written Tibetan > Tibetan|gaotb_864_dry-1	DRY	TibetanXiahe	s k a m p o	h k a m - -	x...xx
+gaotb:Written Tibetan > Tibetan|gaotb_864_dry-1	DRY	TibetanZeku	s k a m p o	r k a m - -	x...xx
+gaotb:Written Tibetan > Tibetan|gaotb_866_new-1	NEW	Khams Tibetan	ɡ s a r p a	- s a - b a	x..xx.
+gaotb:Written Tibetan > Tibetan|gaotb_866_new-1	NEW	Tibetan	ɡ s a r p a	- s a - p a	x..x..
+gaotb:Written Tibetan > Tibetan|gaotb_883_hot-1	HOT	Khams Tibetan	tsʰ a p o	tsʰ a - -	..xx
+gaotb:Written Tibetan > Tibetan|gaotb_883_hot-1	HOT	Tibetan	tsʰ a p o	tsʰ a p o	....
+gaotb:Written Tibetan > Tibetan|gaotb_883_hot-1	HOT	TibetanXiahe	tsʰ a p o	tsʰ a - -	..xx
+gaotb:Written Tibetan > Tibetan|gaotb_883_hot-1	HOT	TibetanZeku	tsʰ a p o	tsʰ a - -	..xx
+gaotb:Written Tibetan > Tibetan|gaotb_884_cold-1	COLD	Tibetan	ɡ r a ŋ m o	ʈʂʰ - a ŋ ŋ u	xx..xx
+gaotb:Written Tibetan > Tibetan|gaotb_884_cold-1	COLD	TibetanXiahe	ɡ r a ŋ m o	tɕ - a ŋ - -	xx..xx
+gaotb:Written Tibetan > Tibetan|gaotb_884_cold-1	COLD	TibetanZeku	ɡ r a ŋ m o	cç - a ŋ - -	xx..xx
+gaotb:Written Tibetan > Tibetan|gaotb_8_rain-1	RAIN (PRECIPITATION)	Khams Tibetan	tɕʰ a r p a	tɕʰ a - b a	..xx.
+gaotb:Written Tibetan > Tibetan|gaotb_8_rain-1	RAIN (PRECIPITATION)	Tibetan	tɕʰ a r p a	tɕʰ a - p a	..x..
+gaotb:Written Tibetan > Tibetan|gaotb_8_rain-1	RAIN (PRECIPITATION)	TibetanXiahe	tɕʰ a r p a	tɕʰ a r w a	...x.
+gaotb:Written Tibetan > Tibetan|gaotb_911_one-1	ONE	Khams Tibetan	ɡ tɕ i ɡ	- tɕ i -	x..x
+gaotb:Written Tibetan > Tibetan|gaotb_911_one-1	ONE	Tibetan	ɡ tɕ i ɡ	- tɕ i ʔ	x..x
+gaotb:Written Tibetan > Tibetan|gaotb_911_one-1	ONE	TibetanXiahe	ɡ tɕ i ɡ	h tɕ ə k	x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_911_one-1	ONE	TibetanZeku	ɡ tɕ i ɡ	ɣ tɕ e k	x.xx
+gaotb:Written Tibetan > Tibetan|gaotb_912_two-1	TWO	Khams Tibetan	ɡ ȵ i s	- ɲ i -	xx.x
+gaotb:Written Tibetan > Tibetan|gaotb_912_two-1	TWO	Tibetan	ɡ ȵ i s	- ɲ i -	xx.x
+gaotb:Written Tibetan > Tibetan|gaotb_912_two-1	TWO	TibetanXiahe	ɡ ȵ i s	h ȵ i -	x..x
+gaotb:Written Tibetan > Tibetan|gaotb_912_two-1	TWO	TibetanZeku	ɡ ȵ i s	ɣ ȵ i -	x..x
+gaotb:Written Tibetan > Tibetan|gaotb_969_i-1	I	Khams Tibetan	ŋ a	ŋ a	..
+gaotb:Written Tibetan > Tibetan|gaotb_969_i-1	I	Tibetan	ŋ a	ŋ a	..
+gaotb:Written Tibetan > Tibetan|gaotb_969_i-1	I	TibetanXiahe	ŋ a	ŋ a	..
+gaotb:Written Tibetan > Tibetan|gaotb_969_i-1	I	TibetanZeku	ŋ a	ŋ a	..
+gaotb:Written Tibetan > Tibetan|gaotb_971_we-1	WE (EXCLUSIVE)	Tibetan	ŋ a tsʰ o	ŋ ã tsʰ o	.x..
+gaotb:Written Tibetan > Tibetan|gaotb_971_we-1	WE (EXCLUSIVE)	TibetanXiahe	ŋ a tsʰ o	ŋ ə z o	.xx.
+gaotb:Written Tibetan > Tibetan|gaotb_971_we-1	WE (EXCLUSIVE)	TibetanZeku	ŋ a tsʰ o	ŋ ə z o	.xx.
+gaotb:Written Tibetan > Tibetan|gaotb_973_yousg-1	THOU	Tibetan	kʰ j e d r a ŋ	cʰ - e ʔ r a ŋ	xx.x...
+gaotb:Written Tibetan > Tibetan|gaotb_981_this-1	THIS	Khams Tibetan	ɦ d i	ʔ - i	xx.
+gaotb:Written Tibetan > Tibetan|gaotb_981_this-1	THIS	Tibetan	ɦ d i	- t i	xx.
+gaotb:Written Tibetan > Tibetan|gaotb_981_this-1	THIS	TibetanXiahe	ɦ d i	- ⁿd ə	xxx
+gaotb:Written Tibetan > Tibetan|gaotb_981_this-1	THIS	TibetanZeku	ɦ d i	- ⁿd ə	xxx
+gaotb:Written Tibetan > Tibetan|gaotb_983_that-1	THAT	Tibetan	d e	tʰ e	x.
+gaotb:Written Tibetan > Tibetan|gaotb_985_who-1	WHO	Khams Tibetan	s u	ɕ u	x.
+gaotb:Written Tibetan > Tibetan|gaotb_985_who-1	WHO	Tibetan	s u	s u	..
+gaotb:Written Tibetan > Tibetan|gaotb_985_who-1	WHO	TibetanXiahe	s u	ɕ ə	xx
+gaotb:Written Tibetan > Tibetan|gaotb_985_who-1	WHO	TibetanZeku	s u	ɕ ə	xx
+gaotb:Written Tibetan > Tibetan|gaotb_986_what-1	WHAT	Tibetan	ɡ a r e	kʰ a r e	x...
+gaotb:Written Tibetan > Tibetan|gaotb_999_alleven-1	ALL	Tibetan	ɡ a ŋ ɡ a	k a ŋ k a	x..x.

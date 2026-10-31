@@ -1,0 +1,102 @@
+---
+layout: page
+title: alignments
+permalink: /alignments/
+description: Ancestor–descendant segment alignments behind a cross-linguistic study of word position and sound change.
+nav: false
+---
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  .al { --al-mask: #dcefe9; --al-maskline: #009e73; --al-maskink: #00684c;
+        --al-unobs: #eceff3; --al-unobsline: #9aa5b1; --al-fix: #fff3c4; --al-fixline: #d4a500;
+        --al-lost: #b4457f; --al-faint: #9aa5b1; }
+  html[data-theme="dark"] .al { --al-mask: #123d33; --al-maskline: #3fbf98; --al-maskink: #8fe0c4;
+        --al-unobs: #2a2d33; --al-unobsline: #6b7480; --al-fix: #4a3d10; --al-fixline: #d5a63f;
+        --al-lost: #e58fbf; --al-faint: #6b7480; }
+  .al .intro { max-width: 70ch; }
+  .al .controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin: 1.2rem 0 0.6rem; }
+  .al select, .al input[type=search] {
+    font: inherit; font-size: 0.95rem; padding: 4px 8px; border-radius: 4px; color: var(--global-text-color);
+    background: var(--global-bg-color); border: 1px solid var(--global-divider-color); max-width: 100%; }
+  .al select#al-analysis { min-width: min(100%, 22rem); }
+  .al input[type=search] { width: 15rem; }
+  .al label { display: inline-flex; gap: 5px; align-items: center; font-size: 0.95rem; margin: 0; }
+  .al .about { font-size: 0.9rem; color: var(--global-text-color-light); margin: 0.4rem 0 0.4rem; }
+  .al .about a { color: var(--global-theme-color); }
+  .al .sources a { color: var(--global-theme-color); }
+  .al .sources { font-size: 0.85rem; color: var(--global-text-color-light); margin: 0 0 0.8rem; padding-left: 1.1rem; }
+  .al .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.85rem; color: var(--global-text-color-light);
+                padding: 8px 12px; border: 1px solid var(--global-divider-color); border-radius: 4px; margin: 0 0 1rem; }
+  .al .legend span { display: inline-flex; gap: 5px; align-items: center; }
+  .al .sw { display: inline-block; min-width: 1.3em; padding: 0 3px; text-align: center; border-radius: 3px;
+            font-family: "Charis SIL", serif; border: 1px solid transparent; }
+  .al .set { border: 1px solid var(--global-divider-color); border-radius: 4px; margin: 0 0 12px;
+             background: var(--global-card-bg-color); overflow-x: auto; }
+  .al .set h3 { font-size: 1rem; margin: 0; padding: 7px 12px; border-bottom: 1px solid var(--global-divider-color);
+                display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+  .al .set h3 .id { color: var(--global-text-color-light); font-weight: 400; font-size: 0.8rem; }
+  .al table { border-collapse: collapse; margin: 6px 10px 10px; width: auto; }
+  .al th, .al td { padding: 1px 4px; text-align: center; border: 0; }
+  .al .lang { text-align: left; padding-right: 14px; white-space: nowrap; color: var(--global-text-color-light);
+              font-size: 0.85rem; font-family: inherit; font-weight: 400; }
+  .al tr.anc th { font-family: "Charis SIL", serif; font-size: 1.15rem; font-weight: 700;
+                  border-bottom: 2px solid var(--global-divider-color); padding-bottom: 3px; }
+  .al tr.anc th.lang { font-family: inherit; font-size: 0.85rem; color: var(--global-theme-color); }
+  .al td.seg { font-family: "Charis SIL", serif; font-size: 1.05rem; color: var(--al-faint); min-width: 1.7em; }
+  .al td.seg.c, .al .sw.c { color: var(--global-text-color); font-weight: 700; }
+  .al td.seg.lost, .al .sw.lost { color: var(--al-lost); }
+  .al td.seg.m, .al th.m, .al .sw.m { background: var(--al-mask); color: var(--al-maskink); font-style: italic; font-weight: 400; border-radius: 3px; }
+  .al td.seg.u, .al th.u, .al .sw.u { background: var(--al-unobs); color: var(--global-text-color-light); outline: 1px dashed var(--al-unobsline);
+           outline-offset: -2px; border-radius: 3px; font-weight: 400; }
+  .al .fix { box-shadow: inset 0 -3px 0 var(--al-fixline); }
+  .al .sw.fix { background: var(--al-fix); box-shadow: none; border-color: var(--al-fixline); }
+  .al .pager { display: flex; gap: 10px; align-items: center; justify-content: center; margin: 1rem 0 2rem;
+               font-size: 0.9rem; color: var(--global-text-color-light); }
+  .al .pager button { font: inherit; padding: 4px 12px; border-radius: 4px; cursor: pointer;
+                      border: 1px solid var(--global-divider-color); background: var(--global-bg-color);
+                      color: var(--global-text-color); }
+  .al .pager button:hover:not(:disabled) { border-color: var(--global-theme-color); color: var(--global-theme-color); }
+  .al .pager button:disabled { opacity: 0.4; cursor: default; }
+  .al .empty { color: var(--global-text-color-light); text-align: center; padding: 2rem; }
+</style>
+
+<div class="al">
+  <p class="intro">
+    Each table is one cognate set. The top row is the ancestor word, divided into segments, with
+    <span style="font-family:'Charis SIL',serif">ˈ</span> before the stressed syllable where the stress is known.
+    Each row below gives, under every ancestor segment, the descendant segment that continues it, or
+    <span style="font-family:'Charis SIL',serif">-</span> where it was lost.
+    Segments a descendant added have no ancestor segment and are not shown.
+    Alignments of datasets that do not come with segment alignments were made by a neural aligner
+    trained on hand-aligned data and then reviewed by hand.
+  </p>
+
+  <div class="controls">
+    <select id="al-analysis" aria-label="Analysis"></select>
+    <input id="al-q" type="search" placeholder="Search meaning or ancestor word" aria-label="Search">
+    <select id="al-lang" aria-label="Descendant"><option value="">All descendants</option></select>
+    <label><input id="al-changed" type="checkbox"> only rows with a change</label>
+  </div>
+  <p class="about" id="al-about"></p>
+  <ul class="sources" id="al-sources"></ul>
+
+  <div class="legend">
+    <span><i class="sw">a</i> unchanged</span>
+    <span><i class="sw c">e</i> changed</span>
+    <span><i class="sw lost">-</i> lost</span>
+    <span><i class="sw m">s</i> morphology a descendant replaced (kept for positions, not counted)</span>
+    <span><i class="sw u">k</i> not observable in the source's transcription</span>
+    <span><i class="sw fix">e</i> corrected by hand (hover for the original)</span>
+  </div>
+
+  <div id="al-sets"><div class="empty">Loading…</div></div>
+  <div class="pager">
+    <button id="al-prev" type="button">Previous</button>
+    <span id="al-page"></span>
+    <button id="al-next" type="button">Next</button>
+  </div>
+</div>
+
+<script src="{{ '/alignments/viewer.js' | relative_url }}"></script>

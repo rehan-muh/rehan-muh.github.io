@@ -1,0 +1,1071 @@
+[
+ {
+  "analysis": "Ancient Greek > Greek",
+  "slug": "Ancient_Greek_to_Greek",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 110,
+  "languages": 5,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Ancient Greek > Greek (Wiktionary)",
+  "slug": "Ancient_Greek_to_Greek_Wiktionary",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 184,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Wiktionary (English edition), via the Kaikki.org extraction. Licensed CC BY-SA 4.0; these alignments are shared under the same licence.",
+    "url": "https://kaikki.org/"
+   }
+  ]
+ },
+ {
+  "analysis": "Church Slavic > South Slavic",
+  "slug": "Church_Slavic_to_South_Slavic",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 144,
+  "languages": 4,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Classical Armenian > Armenian",
+  "slug": "Classical_Armenian_to_Armenian",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 143,
+  "languages": 2,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Early Irish > Goidelic",
+  "slug": "Early_Irish_to_Goidelic",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 142,
+  "languages": 3,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Koine > Greek",
+  "slug": "Koine_to_Greek",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 105,
+  "languages": 5,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Latin > Romance (reviewed)",
+  "slug": "Latin_to_Romance_reviewed",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": false,
+  "sets": 424,
+  "languages": 21,
+  "sources": [
+   {
+    "text": "Goldstein, David M., McCreight, Shawn H., Buchi, Éva & Huelsenbeck, John P. (2026). Phylogenetic inference from cognate word forms. Journal of Language Evolution.",
+    "url": "https://doi.org/10.1093/jole/lzag001"
+   }
+  ]
+ },
+ {
+  "analysis": "Middle Breton > Breton",
+  "slug": "Middle_Breton_to_Breton",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 158,
+  "languages": 2,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Middle Dutch > Dutch",
+  "slug": "Middle_Dutch_to_Dutch",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 128,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Middle High German > German",
+  "slug": "Middle_High_German_to_German",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 160,
+  "languages": 3,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Middle Welsh > Welsh",
+  "slug": "Middle_Welsh_to_Welsh",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 149,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Catalan > Catalan",
+  "slug": "Old_Catalan_to_Catalan",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 148,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Czech > Czech",
+  "slug": "Old_Czech_to_Czech",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 155,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old English > English",
+  "slug": "Old_English_to_English",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 111,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old English > English (Wiktionary)",
+  "slug": "Old_English_to_English_Wiktionary",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 2180,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Wiktionary (English edition), via the Kaikki.org extraction. Licensed CC BY-SA 4.0; these alignments are shared under the same licence.",
+    "url": "https://kaikki.org/"
+   }
+  ]
+ },
+ {
+  "analysis": "Old French > French",
+  "slug": "Old_French_to_French",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 135,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Frisian > West Frisian",
+  "slug": "Old_Frisian_to_West_Frisian",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 87,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old High German > German",
+  "slug": "Old_High_German_to_German",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 152,
+  "languages": 3,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Indo-Aryan > Pali",
+  "slug": "Old_Indo-Aryan_to_Pali",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 1517,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Arora, Aryaman, Farris, Adam, Basu, Samopriya & Kolichala, Suresh (2023). Jambu: A historical linguistic database for South Asian languages. Proceedings of the 20th SIGMORPHON Workshop on Computational Research in Phonetics, Phonology, and Morphology.",
+    "url": "https://doi.org/10.18653/v1/2023.sigmorphon-1.8"
+   }
+  ]
+ },
+ {
+  "analysis": "Old Indo-Aryan > Prakrit",
+  "slug": "Old_Indo-Aryan_to_Prakrit",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 1888,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Arora, Aryaman, Farris, Adam, Basu, Samopriya & Kolichala, Suresh (2023). Jambu: A historical linguistic database for South Asian languages. Proceedings of the 20th SIGMORPHON Workshop on Computational Research in Phonetics, Phonology, and Morphology.",
+    "url": "https://doi.org/10.18653/v1/2023.sigmorphon-1.8"
+   }
+  ]
+ },
+ {
+  "analysis": "Old Indo-Aryan > modern Indo-Aryan",
+  "slug": "Old_Indo-Aryan_to_modern_Indo-Aryan",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 3037,
+  "languages": 87,
+  "sources": [
+   {
+    "text": "Arora, Aryaman, Farris, Adam, Basu, Samopriya & Kolichala, Suresh (2023). Jambu: A historical linguistic database for South Asian languages. Proceedings of the 20th SIGMORPHON Workshop on Computational Research in Phonetics, Phonology, and Morphology.",
+    "url": "https://doi.org/10.18653/v1/2023.sigmorphon-1.8"
+   }
+  ]
+ },
+ {
+  "analysis": "Old Norse > East Norse",
+  "slug": "Old_Norse_to_East_Norse",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 158,
+  "languages": 5,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Norse > Nordic (Wiktionary)",
+  "slug": "Old_Norse_to_Nordic_Wiktionary",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 2222,
+  "languages": 6,
+  "sources": [
+   {
+    "text": "Wiktionary (English edition), via the Kaikki.org extraction. Licensed CC BY-SA 4.0; these alignments are shared under the same licence.",
+    "url": "https://kaikki.org/"
+   }
+  ]
+ },
+ {
+  "analysis": "Old Norse > West Norse",
+  "slug": "Old_Norse_to_West_Norse",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 157,
+  "languages": 3,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Polish > Polish",
+  "slug": "Old_Polish_to_Polish",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 155,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Russian > East Slavic",
+  "slug": "Old_Russian_to_East_Slavic",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 90,
+  "languages": 3,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Spanish > Spanish",
+  "slug": "Old_Spanish_to_Spanish",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 147,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Swedish > Swedish",
+  "slug": "Old_Swedish_to_Swedish",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 125,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Welsh > Welsh",
+  "slug": "Old_Welsh_to_Welsh",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 50,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Pahlavi > Persian",
+  "slug": "Pahlavi_to_Persian",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 87,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Pali > Indo-Aryan",
+  "slug": "Pali_to_Indo-Aryan",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 110,
+  "languages": 10,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Prakrit > modern Indo-Aryan",
+  "slug": "Prakrit_to_modern_Indo-Aryan",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 2224,
+  "languages": 86,
+  "sources": [
+   {
+    "text": "Arora, Aryaman, Farris, Adam, Basu, Samopriya & Kolichala, Suresh (2023). Jambu: A historical linguistic database for South Asian languages. Proceedings of the 20th SIGMORPHON Workshop on Computational Research in Phonetics, Phonology, and Morphology.",
+    "url": "https://doi.org/10.18653/v1/2023.sigmorphon-1.8"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Germanic > Germanic",
+  "slug": "Proto-Germanic_to_Germanic",
+  "family": "Indo-European",
+  "kind": "reconstructed ancestor",
+  "machine": false,
+  "sets": 527,
+  "languages": 3,
+  "sources": [
+   {
+    "text": "Nieder, Jessica & List, Johann-Mattis (2024). A Computational Model for the Assessment of Mutual Intelligibility Among Closely Related Languages. Proceedings of the 6th Workshop on Research in Computational Linguistic Typology and Multilingual NLP (SIGTYP 2024).",
+    "url": "https://doi.org/10.18653/v1/2024.sigtyp-1.4"
+   }
+  ]
+ },
+ {
+  "analysis": "Reconstructed OIA > modern Indo-Aryan",
+  "slug": "Reconstructed_OIA_to_modern_Indo-Aryan",
+  "family": "Indo-European",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 2445,
+  "languages": 84,
+  "sources": [
+   {
+    "text": "Arora, Aryaman, Farris, Adam, Basu, Samopriya & Kolichala, Suresh (2023). Jambu: A historical linguistic database for South Asian languages. Proceedings of the 20th SIGMORPHON Workshop on Computational Research in Phonetics, Phonology, and Morphology.",
+    "url": "https://doi.org/10.18653/v1/2023.sigmorphon-1.8"
+   }
+  ]
+ },
+ {
+  "analysis": "Vedic > Indo-Aryan",
+  "slug": "Vedic_to_Indo-Aryan",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 92,
+  "languages": 10,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Ge'ez > Ethiosemitic",
+  "slug": "Geez_to_Ethiosemitic",
+  "family": "Afro-Asiatic",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 120,
+  "languages": 19,
+  "sources": [
+   {
+    "text": "Feleke, Tekabe Legesse (2021). Ethiosemitic languages: Classifications and classification determinants. Ampersand.",
+    "url": "https://doi.org/10.1016/j.amper.2021.100074"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Purus > Purus",
+  "slug": "Proto-Purus_to_Purus",
+  "family": "Arawakan",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 205,
+  "languages": 3,
+  "sources": [
+   {
+    "text": "de Carvalho, Fernando O. (2021). A comparative reconstruction of Proto-Purus (Arawakan) segmental phonology. International Journal of American Linguistics.",
+    "url": "https://doi.org/10.1086/711607"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Arawan > Arawan",
+  "slug": "Proto-Arawan_to_Arawan",
+  "family": "Arawan",
+  "kind": "reconstructed ancestor",
+  "machine": false,
+  "sets": 372,
+  "languages": 9,
+  "sources": [
+   {
+    "text": "Ferraz Gerardi, Fabrício, Aragon, Carolina Coelho & Reichert, Stanislav (2022). KAHD: Katukinan-Arawan-Harakmbut Database (Pre-release). Journal of Open Humanities Data.",
+    "url": "https://doi.org/10.5334/johd.80"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Micronesian > Micronesian",
+  "slug": "Proto-Micronesian_to_Micronesian",
+  "family": "Austronesian",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 575,
+  "languages": 16,
+  "sources": [
+   {
+    "text": "Bender, Byron W., Goodenough, Ward H., Jackson, Frederick H., Marck, Jeffrey C., Rehg, Kenneth L., Sohn, Ho-min, Trussel, Stephen & Wang, Judith W. (2003). Proto-Micronesian reconstructions: I. Oceanic Linguistics.",
+    "url": "https://doi.org/10.2307/3623449"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Polynesian > Polynesian",
+  "slug": "Proto-Polynesian_to_Polynesian",
+  "family": "Austronesian",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 180,
+  "languages": 30,
+  "sources": [
+   {
+    "text": "Walworth, Mary (2018). Polynesian Segmented Data (Version 1). Data set, Zenodo.",
+    "url": "https://doi.org/10.5281/zenodo.1689909"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Bora-Muinane > Boran",
+  "slug": "Proto-Bora-Muinane_to_Boran",
+  "family": "Boran",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 386,
+  "languages": 2,
+  "sources": [
+   {
+    "text": "Seifart, Frank & Echeverri, Juan Álvaro (2015). Proto Bora-Muinane. LIAMES: Línguas Indígenas Americanas.",
+    "url": "https://doi.org/10.20396/liames.v15i2.8642303"
+   }
+  ]
+ },
+ {
+  "analysis": "Middle Japanese > Japanese",
+  "slug": "Middle_Japanese_to_Japanese",
+  "family": "Japonic",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 189,
+  "languages": 45,
+  "sources": [
+   {
+    "text": "Lee, Sean & Hasegawa, Toshikazu (2011). Bayesian phylogenetic analysis supports an agricultural origin of Japonic languages. Proceedings of the Royal Society B."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Japanese > Japanese",
+  "slug": "Old_Japanese_to_Japanese",
+  "family": "Japonic",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 171,
+  "languages": 45,
+  "sources": [
+   {
+    "text": "Lee, Sean & Hasegawa, Toshikazu (2011). Bayesian phylogenetic analysis supports an agricultural origin of Japonic languages. Proceedings of the Royal Society B."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Japanese > Ryukyuan",
+  "slug": "Old_Japanese_to_Ryukyuan",
+  "family": "Japonic",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 170,
+  "languages": 12,
+  "sources": [
+   {
+    "text": "Lee, Sean & Hasegawa, Toshikazu (2011). Bayesian phylogenetic analysis supports an agricultural origin of Japonic languages. Proceedings of the Royal Society B."
+   }
+  ]
+ },
+ {
+  "analysis": "Middle Korean > Jeju",
+  "slug": "Middle_Korean_to_Jeju",
+  "family": "Koreanic",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 100,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Lee, Sean (2015). A Sketch of Language History in the Korean Peninsula. PLOS ONE.",
+    "url": "https://doi.org/10.1371/journal.pone.0128448"
+   }
+  ]
+ },
+ {
+  "analysis": "Middle Korean > Korean",
+  "slug": "Middle_Korean_to_Korean",
+  "family": "Koreanic",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 226,
+  "languages": 13,
+  "sources": [
+   {
+    "text": "Lee, Sean (2015). A Sketch of Language History in the Korean Peninsula. PLOS ONE.",
+    "url": "https://doi.org/10.1371/journal.pone.0128448"
+   }
+  ]
+ },
+ {
+  "analysis": "Middle Mongolian (Muqaddimat) > Mongolic",
+  "slug": "Middle_Mongolian_Muqaddimat_to_Mongolic",
+  "family": "Mongolic",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 213,
+  "languages": 13,
+  "sources": [
+   {
+    "text": "Robbeets, Martine et al. (2021). Triangulation supports agricultural spread of the Transeurasian languages. Nature."
+   }
+  ]
+ },
+ {
+  "analysis": "Middle Mongolian > Mongolic",
+  "slug": "Middle_Mongolian_to_Mongolic",
+  "family": "Mongolic",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 203,
+  "languages": 13,
+  "sources": [
+   {
+    "text": "Robbeets, Martine et al. (2021). Triangulation supports agricultural spread of the Transeurasian languages. Nature."
+   }
+  ]
+ },
+ {
+  "analysis": "Classical Quechua > Quechua",
+  "slug": "Classical_Quechua_to_Quechua",
+  "family": "Quechuan",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 157,
+  "languages": 30,
+  "sources": [
+   {
+    "text": "Blum, Frederic, Barrientos, Carlos, Ingunza, Adriano & Poirier, Zoe (2023). A phylolinguistic classification of the Quechua language family. INDIANA.",
+    "url": "https://doi.org/10.18441/ind.v40i1.29-54"
+   }
+  ]
+ },
+ {
+  "analysis": "Colonial Cuzco Quechua > Southern Quechua",
+  "slug": "Colonial_Cuzco_Quechua_to_Southern_Quechua",
+  "family": "Quechuan",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 149,
+  "languages": 7,
+  "sources": [
+   {
+    "text": "Blum, Frederic, Barrientos, Carlos, Ingunza, Adriano & Poirier, Zoe (2023). A phylolinguistic classification of the Quechua language family. INDIANA.",
+    "url": "https://doi.org/10.18441/ind.v40i1.29-54"
+   }
+  ]
+ },
+ {
+  "analysis": "Middle Chinese > Sinitic",
+  "slug": "Middle_Chinese_to_Sinitic",
+  "family": "Sino-Tibetan",
+  "kind": "philological ancestor",
+  "machine": true,
+  "sets": 2721,
+  "languages": 8,
+  "sources": [
+   {
+    "text": "Chang, Kalvin, Cui, Chenxuan, Kim, Youngmin & Mortensen, David R. (2022). WikiHan: a new comparative dataset for Chinese languages. Proceedings of the 29th International Conference on Computational Linguistics."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Burmese > Burmese",
+  "slug": "Old_Burmese_to_Burmese",
+  "family": "Sino-Tibetan",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 186,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Sagart, Laurent, Jacques, Guillaume, Lai, Yunfan, Ryder, Robin J., Thouzeau, Valentin, Greenhill, Simon J. & List, Johann-Mattis (2019). Dated language phylogenies shed light on the ancestry of Sino-Tibetan. Proceedings of the National Academy of Sciences."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Burmese > Burmish",
+  "slug": "Old_Burmese_to_Burmish",
+  "family": "Sino-Tibetan",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 140,
+  "languages": 5,
+  "sources": [
+   {
+    "text": "Sagart, Laurent, Jacques, Guillaume, Lai, Yunfan, Ryder, Robin J., Thouzeau, Valentin, Greenhill, Simon J. & List, Johann-Mattis (2019). Dated language phylogenies shed light on the ancestry of Sino-Tibetan. Proceedings of the National Academy of Sciences."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Chinese > Sinitic",
+  "slug": "Old_Chinese_to_Sinitic",
+  "family": "Sino-Tibetan",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 175,
+  "languages": 6,
+  "sources": [
+   {
+    "text": "Sagart, Laurent, Jacques, Guillaume, Lai, Yunfan, Ryder, Robin J., Thouzeau, Valentin, Greenhill, Simon J. & List, Johann-Mattis (2019). Dated language phylogenies shed light on the ancestry of Sino-Tibetan. Proceedings of the National Academy of Sciences."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Tibetan > Tibetic",
+  "slug": "Old_Tibetan_to_Tibetic",
+  "family": "Sino-Tibetan",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 129,
+  "languages": 12,
+  "sources": [
+   {
+    "text": "Dhakal, Dubi Nanda, List, Johann-Mattis & Roberts, Seán G. (2024). A phylogenetic study of South-Western Tibetic. Journal of Language Evolution.",
+    "url": "https://doi.org/10.1093/jole/lzae008"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Bizic > Bizic",
+  "slug": "Proto-Bizic_to_Bizic",
+  "family": "Sino-Tibetan",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 327,
+  "languages": 6,
+  "sources": [
+   {
+    "text": "Zhou, Yuhan (2020). Proto-Bizic: A study of Tujia historical phonology."
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Karen > Karen",
+  "slug": "Proto-Karen_to_Karen",
+  "family": "Sino-Tibetan",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 330,
+  "languages": 10,
+  "sources": [
+   {
+    "text": "Luangthongkum, Theraphan (2019). A view on Proto-Karen phonology and lexicon. Journal of the Southeast Asian Linguistics Society.",
+    "url": "http://hdl.handle.net/10524/52441"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Lalo > Lalo",
+  "slug": "Proto-Lalo_to_Lalo",
+  "family": "Sino-Tibetan",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 891,
+  "languages": 7,
+  "sources": [
+   {
+    "text": "Yang, Cathryn (2011). Lalo regional varieties: Phylogeny, dialectometry, and sociolinguistics. La Trobe University."
+   }
+  ]
+ },
+ {
+  "analysis": "Written Burmese > Burmese",
+  "slug": "Written_Burmese_to_Burmese",
+  "family": "Sino-Tibetan",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 94,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Gao, Tianjun (2020). Reconstruction and analysis of phylogenetic network on Tibeto-Burman languages in China. Journal of Chinese Linguistics.",
+    "url": "https://doi.org/10.1353/jcl.2020.0006"
+   }
+  ]
+ },
+ {
+  "analysis": "Written Burmese > Burmish",
+  "slug": "Written_Burmese_to_Burmish",
+  "family": "Sino-Tibetan",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 304,
+  "languages": 6,
+  "sources": [
+   {
+    "text": "Mann, Noel Walter (1998). A phonological reconstruction of Proto Northern Burmic. University of Texas at Arlington."
+   }
+  ]
+ },
+ {
+  "analysis": "Written Tibetan > Tibetan",
+  "slug": "Written_Tibetan_to_Tibetan",
+  "family": "Sino-Tibetan",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 100,
+  "languages": 4,
+  "sources": [
+   {
+    "text": "Gao, Tianjun (2020). Reconstruction and analysis of phylogenetic network on Tibeto-Burman languages in China. Journal of Chinese Linguistics.",
+    "url": "https://doi.org/10.1353/jcl.2020.0006"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Alor-Pantar > Alor-Pantar",
+  "slug": "Proto-Alor-Pantar_to_Alor-Pantar",
+  "family": "Timor-Alor-Pantar",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 92,
+  "languages": 12,
+  "sources": [
+   {
+    "text": "Robinson, Laura C. & Holton, Gary (2012). Internal classification of the Alor-Pantar language family using computational methods applied to the lexicon. Language Dynamics and Change.",
+    "url": "https://doi.org/10.1163/22105832-20120201"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Tukanoan > Tukanoan",
+  "slug": "Proto-Tukanoan_to_Tukanoan",
+  "family": "Tukanoan",
+  "kind": "reconstructed ancestor",
+  "machine": false,
+  "sets": 141,
+  "languages": 15,
+  "sources": [
+   {
+    "text": "Chacon, Thiago (2014). A revised proposal of Proto-Tukanoan consonants and Tukanoan family classification. International Journal of American Linguistics.",
+    "url": "https://doi.org/10.1086/676393"
+   }
+  ]
+ },
+ {
+  "analysis": "Manchu > Xibe",
+  "slug": "Manchu_to_Xibe",
+  "family": "Tungusic",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 194,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Robbeets, Martine et al. (2021). Triangulation supports agricultural spread of the Transeurasian languages. Nature."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Guarani > Guarani",
+  "slug": "Old_Guarani_to_Guarani",
+  "family": "Tupian",
+  "kind": "attested ancestor",
+  "machine": false,
+  "sets": 342,
+  "languages": 9,
+  "sources": [
+   {
+    "text": "Ferraz Gerardi, Fabrício, Reichert, Stanislav & Aragon, Carolina Coelho (2021). TuLeD (Tupían lexical database): introducing a database of a South American language family. Language Resources and Evaluation.",
+    "url": "https://doi.org/10.1007/s10579-020-09521-5"
+   }
+  ]
+ },
+ {
+  "analysis": "Old Guarani > Guarani (Tupi-Guarani data)",
+  "slug": "Old_Guarani_to_Guarani_Tupi-Guarani_data",
+  "family": "Tupian",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 81,
+  "languages": 3,
+  "sources": [
+   {
+    "text": "Ferraz Gerardi, Fabrício & Reichert, Stanislav (2021). The Tupí-Guaraní language family: A phylogenetic classification. Diachronica.",
+    "url": "https://doi.org/10.1075/dia.18032.fer"
+   }
+  ]
+ },
+ {
+  "analysis": "Tupinamba > Nheengatu",
+  "slug": "Tupinamba_to_Nheengatu",
+  "family": "Tupian",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 178,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Ferraz Gerardi, Fabrício & Reichert, Stanislav (2021). The Tupí-Guaraní language family: A phylogenetic classification. Diachronica.",
+    "url": "https://doi.org/10.1075/dia.18032.fer"
+   }
+  ]
+ },
+ {
+  "analysis": "Old Turkic > Common Turkic",
+  "slug": "Old_Turkic_to_Common_Turkic",
+  "family": "Turkic",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 251,
+  "languages": 29,
+  "sources": [
+   {
+    "text": "Robbeets, Martine et al. (2021). Triangulation supports agricultural spread of the Transeurasian languages. Nature."
+   }
+  ]
+ },
+ {
+  "analysis": "Classical Nahuatl > Central Nahuatl",
+  "slug": "Classical_Nahuatl_to_Central_Nahuatl",
+  "family": "Uto-Aztecan",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 92,
+  "languages": 2,
+  "sources": [
+   {
+    "text": "Davletshin, Albert (2012). Proto-Uto-Aztecans on their way to the Proto-Aztecan homeland: linguistic evidence. Journal of Language Relationship.",
+    "url": "https://doi.org/10.31826/jlr-2012-080106"
+   }
+  ]
+ },
+ {
+  "analysis": "Classical Nahuatl > Eastern Nahuatl",
+  "slug": "Classical_Nahuatl_to_Eastern_Nahuatl",
+  "family": "Uto-Aztecan",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 84,
+  "languages": 4,
+  "sources": [
+   {
+    "text": "Davletshin, Albert (2012). Proto-Uto-Aztecans on their way to the Proto-Aztecan homeland: linguistic evidence. Journal of Language Relationship.",
+    "url": "https://doi.org/10.31826/jlr-2012-080106"
+   }
+  ]
+ },
+ {
+  "analysis": "Classical Nahuatl > Nahuatl (UA)",
+  "slug": "Classical_Nahuatl_to_Nahuatl_UA",
+  "family": "Uto-Aztecan",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 86,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Greenhill, Simon J., Haynie, Hannah J., Ross, Robert M., Chira, Angela M., List, Johann-Mattis, Campbell, Lyle, Botero, Carlos A. & Gray, Russell D. (2023). A recent northern origin for the Uto-Aztecan family. Language.",
+    "url": "https://doi.org/10.1353/lan.2023.0006"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Aztecan > Aztecan",
+  "slug": "Proto-Aztecan_to_Aztecan",
+  "family": "Uto-Aztecan",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 87,
+  "languages": 8,
+  "sources": [
+   {
+    "text": "Davletshin, Albert (2012). Proto-Uto-Aztecans on their way to the Proto-Aztecan homeland: linguistic evidence. Journal of Language Relationship.",
+    "url": "https://doi.org/10.31826/jlr-2012-080106"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Sonoran > Sonoran",
+  "slug": "Proto-Sonoran_to_Sonoran",
+  "family": "Uto-Aztecan",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 378,
+  "languages": 9,
+  "sources": [
+   {
+    "text": "Lionnet, André (1985). Relaciones internas de la rama sonorense. Amerindia."
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Uto-Aztecan > Uto-Aztecan",
+  "slug": "Proto-Uto-Aztecan_to_Uto-Aztecan",
+  "family": "Uto-Aztecan",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 67,
+  "languages": 5,
+  "sources": [
+   {
+    "text": "Pharao Hansen, Magnus (2020). ¿Familia o vecinos? Investigando la relación entre el proto-náhuatl y el proto-corachol. Lenguas yutoaztecas: historia, estructuras y contacto lingüístico. Homenaje a Karen Dakin."
+   }
+  ]
+ }
+]

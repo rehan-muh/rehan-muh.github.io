@@ -1,0 +1,341 @@
+Set	Concept	Language	Ancestor	Aligned	Changed
+iecor:Early Irish > Goidelic|iecor_1001	FIRE	Irish	t̪ʲʰ ɛ nʲ ɛ	t̪ʲʰ ɪ nʲ ə	.x.x
+iecor:Early Irish > Goidelic|iecor_1001	FIRE	Scottish Gaelic	t̪ʲʰ ɛ nʲ ɛ	tʲ e n ə	..xx
+iecor:Early Irish > Goidelic|iecor_1011	GOOD	Irish	mˠ æ θʲ	mˠ a h	.xx
+iecor:Early Irish > Goidelic|iecor_1011	GOOD	Manx	mˠ æ θʲ	m a i	.xx
+iecor:Early Irish > Goidelic|iecor_1011	GOOD	Scottish Gaelic	mˠ æ θʲ	m a -	.xx
+iecor:Early Irish > Goidelic|iecor_1015	HEAD	Irish	kʲʰ ɛ n̪ˠ	cʰ a n̪ˠ	.x.
+iecor:Early Irish > Goidelic|iecor_1015	HEAD	Manx	kʲʰ ɛ n̪ˠ	kʲ oː n	.x.
+iecor:Early Irish > Goidelic|iecor_1015	HEAD	Scottish Gaelic	kʲʰ ɛ n̪ˠ	kʲ a n̪ˠ	.x.
+iecor:Early Irish > Goidelic|iecor_1025	LEAF	Irish	d̪ˠ u l̪ʲ e	d̪ˠ ɪ ʎ -	.x.x
+iecor:Early Irish > Goidelic|iecor_1025	LEAF	Manx	d̪ˠ u l̪ʲ e	d u lʲ -	...x
+iecor:Early Irish > Goidelic|iecor_1025	LEAF	Scottish Gaelic	d̪ˠ u l̪ʲ e	d̪ u ʎ -	...x
+iecor:Early Irish > Goidelic|iecor_1026	LEFT	Irish	kʲ l̥ʲ eː	c l̥ʲ eː	...
+iecor:Early Irish > Goidelic|iecor_1026	LEFT	Scottish Gaelic	kʲ l̥ʲ eː	k l iː	xxx
+iecor:Early Irish > Goidelic|iecor_1029	LIVER	Irish	ɔ a	eː -	xx
+iecor:Early Irish > Goidelic|iecor_1029	LIVER	Manx	ɔ a	ɛː n	xx
+iecor:Early Irish > Goidelic|iecor_1037	NOSE	Irish	sˠ rˠ oː nˠ	sˠ ɹˠ oː nˠ	....
+iecor:Early Irish > Goidelic|iecor_1037	NOSE	Manx	sˠ rˠ oː nˠ	s r oː nʲ	...x
+iecor:Early Irish > Goidelic|iecor_1037	NOSE	Scottish Gaelic	sˠ rˠ oː nˠ	s ɾ ɔː n̪ˠ	....
+iecor:Early Irish > Goidelic|iecor_1057	SKIN	Irish	kˠʰ r̥ ɔ kʲʰ ɛ n̪	kˠ ɹ̥ˠ a cʰ ə n̪ˠ	..x.x.
+iecor:Early Irish > Goidelic|iecor_1057	SKIN	Manx	kˠʰ r̥ ɔ kʲʰ ɛ n̪	k r a ɡ a n	..xxx.
+iecor:Early Irish > Goidelic|iecor_1057	SKIN	Scottish Gaelic	kˠʰ r̥ ɔ kʲʰ ɛ n̪	k ɾ a ɡʲ ə n̪ˠ	..xxx.
+iecor:Early Irish > Goidelic|iecor_1059	SMALL	Irish	bʲ ɛ ɡˠ	bʲ ʊ ɡ̥ˠ	.x.
+iecor:Early Irish > Goidelic|iecor_1059	SMALL	Manx	bʲ ɛ ɡˠ	b e ɡ	x..
+iecor:Early Irish > Goidelic|iecor_1059	SMALL	Scottish Gaelic	bʲ ɛ ɡˠ	b e ɡ	x..
+iecor:Early Irish > Goidelic|iecor_1062	SNAKE	Irish	n̪ˠ a θˠ æ rʲ	n̪ˠ a h ə ɹ̝	..xx.
+iecor:Early Irish > Goidelic|iecor_1062	SNAKE	Scottish Gaelic	n̪ˠ a θˠ æ rʲ	n̪ˠ a h ɪ ɾʲ	..xx.
+iecor:Early Irish > Goidelic|iecor_1075	VOMIT	Irish	sʲ kʲ ɛ ɪ ðʲ	ʃ c ɛ - -	...xx
+iecor:Early Irish > Goidelic|iecor_1075	VOMIT	Manx	sʲ kʲ ɛ ɪ ðʲ	s k eː - -	xx.xx
+iecor:Early Irish > Goidelic|iecor_1075	VOMIT	Scottish Gaelic	sʲ kʲ ɛ ɪ ðʲ	s ɡʲ e - -	xx.xx
+iecor:Early Irish > Goidelic|iecor_1080	WET	Irish	ɸʲ lʲ ʊ xˠ	fʲ l̥ʲ ʊ x	x...
+iecor:Early Irish > Goidelic|iecor_1080	WET	Manx	ɸʲ lʲ ʊ xˠ	f lʲ u x	x...
+iecor:Early Irish > Goidelic|iecor_1080	WET	Scottish Gaelic	ɸʲ lʲ ʊ xˠ	f l̪ˠ ʊ x	xx..
+iecor:Early Irish > Goidelic|iecor_1088	YEAR	Irish	bʲ lʲ i a ðˠ æ nʲ	bʲ lʲ i ə - - nʲ	...xxx.
+iecor:Early Irish > Goidelic|iecor_1088	YEAR	Manx	bʲ lʲ i a ðˠ æ nʲ	b lʲ eː - - - nʲ	x.xxxx.
+iecor:Early Irish > Goidelic|iecor_1088	YEAR	Scottish Gaelic	bʲ lʲ i a ðˠ æ nʲ	b l iə - - - n̪ˠ	xxxxxxx
+iecor:Early Irish > Goidelic|iecor_1094	MAN	Irish	ɸʲ ɛ rˠ	fʲ æ ɾˠ	xx.
+iecor:Early Irish > Goidelic|iecor_1218	BELLY	Scottish Gaelic	bˠ rˠ uː	b ɾ uː	...
+iecor:Early Irish > Goidelic|iecor_123	SMOKE (EXHAUST)	Irish	d̪ʲ eː	d̪ʲ æ	.x
+iecor:Early Irish > Goidelic|iecor_123	SMOKE (EXHAUST)	Manx	d̪ʲ eː	dʒ e	x.
+iecor:Early Irish > Goidelic|iecor_146	THREE	Irish	t̪ʲʰ r̥ʲ iː	t̪ʲ ɹ̝̥ iː	...
+iecor:Early Irish > Goidelic|iecor_146	THREE	Manx	t̪ʲʰ r̥ʲ iː	t r iː	xx.
+iecor:Early Irish > Goidelic|iecor_146	THREE	Scottish Gaelic	t̪ʲʰ r̥ʲ iː	t̪ ɾ iː	xx.
+iecor:Early Irish > Goidelic|iecor_153	TWO	Irish	d̪ˠ aː	d̪ˠ oː	.x
+iecor:Early Irish > Goidelic|iecor_153	TWO	Manx	d̪ˠ aː	d ɛː	.x
+iecor:Early Irish > Goidelic|iecor_153	TWO	Scottish Gaelic	d̪ˠ aː	d̪ aː	..
+iecor:Early Irish > Goidelic|iecor_1551	TAIL	Irish	ɛ rˠ bˠ ʊ l̪ˠ	ɛ ɹ̝ bˠ ə l̪ˠ	.x.x.
+iecor:Early Irish > Goidelic|iecor_1551	TAIL	Manx	ɛ rˠ bˠ ʊ l̪ˠ	a r b ə l	x..x.
+iecor:Early Irish > Goidelic|iecor_1567	WING	Irish	ɛ t̪ʲʰ ɛ	ɛ t̪ʲʰ -	..x
+iecor:Early Irish > Goidelic|iecor_1683	BACK	Irish	d̪ˠ rˠ ʊ mʲ	d̪ˠ ɹˠ ɪ mʲ	..x.
+iecor:Early Irish > Goidelic|iecor_1683	BACK	Manx	d̪ˠ rˠ ʊ mʲ	d r iː m	..xx
+iecor:Early Irish > Goidelic|iecor_1683	BACK	Scottish Gaelic	d̪ˠ rˠ ʊ mʲ	d̪ ɾ ɯ m	..xx
+iecor:Early Irish > Goidelic|iecor_1686	BIG	Irish	mˠ ɔː rˠ	mˠ oː ɾˠ	...
+iecor:Early Irish > Goidelic|iecor_1686	BIG	Manx	mˠ ɔː rˠ	m u ɹ	.x.
+iecor:Early Irish > Goidelic|iecor_1686	BIG	Scottish Gaelic	mˠ ɔː rˠ	m oː ɾ	...
+iecor:Early Irish > Goidelic|iecor_1687	BLOOD	Irish	ɸˠ ʊ lʲ	fʷ ɪ lʲ	.x.
+iecor:Early Irish > Goidelic|iecor_1687	BLOOD	Manx	ɸˠ ʊ lʲ	f u lʲ	...
+iecor:Early Irish > Goidelic|iecor_1687	BLOOD	Scottish Gaelic	ɸˠ ʊ lʲ	f u l	..x
+iecor:Early Irish > Goidelic|iecor_1688	BONE	Irish	kˠʰ nˠ aː ṽʲ	kˠ n̥ˠ ɑ̃ː vˠ	..xx
+iecor:Early Irish > Goidelic|iecor_1688	BONE	Manx	kˠʰ nˠ aː ṽʲ	k r ẽ ũ	.xxx
+iecor:Early Irish > Goidelic|iecor_1690	COLD	Irish	u a rˠ	u ə ɾˠ	.x.
+iecor:Early Irish > Goidelic|iecor_1690	COLD	Manx	u a rˠ	u ə r	.x.
+iecor:Early Irish > Goidelic|iecor_1690	COLD	Scottish Gaelic	u a rˠ	uə - ɾ	xx.
+iecor:Early Irish > Goidelic|iecor_1692	COUNT	Irish	a ð rʲ ɪ ṽʲ ɪ	ɑː - ɹ̝ ɪ ʝ -	.x..xx
+iecor:Early Irish > Goidelic|iecor_1694	DAY (NOT NIGHT)	Irish	l̪ˠ a e	l̪ˠ ɑː -	..x
+iecor:Early Irish > Goidelic|iecor_1694	DAY (NOT NIGHT)	Manx	l̪ˠ a e	l ɛː -	.xx
+iecor:Early Irish > Goidelic|iecor_1694	DAY (NOT NIGHT)	Scottish Gaelic	l̪ˠ a e	l̪ˠ aː -	..x
+iecor:Early Irish > Goidelic|iecor_1700	EYE	Irish	sˠ uː lʲ	s uː lʲ	...
+iecor:Early Irish > Goidelic|iecor_1700	EYE	Manx	sˠ uː lʲ	s uː lʲ	...
+iecor:Early Irish > Goidelic|iecor_1700	EYE	Scottish Gaelic	sˠ uː lʲ	s uː l	..x
+iecor:Early Irish > Goidelic|iecor_1701	FALL	Irish	d̪ˠ ɔ t̪ˠʰ u t̪ʲʰ	- - t̪ˠʰ ɪ t̪ʲʰ	xx.x.
+iecor:Early Irish > Goidelic|iecor_1701	FALL	Manx	d̪ˠ ɔ t̪ˠʰ u t̪ʲʰ	- - t u tʃ	xx..x
+iecor:Early Irish > Goidelic|iecor_1701	FALL	Scottish Gaelic	d̪ˠ ɔ t̪ˠʰ u t̪ʲʰ	- - t̪ u dʲ	xx..x
+iecor:Early Irish > Goidelic|iecor_1703	FEATHER	Irish	kʲʰ l̥ʲ ɛ t̪ʲʰ ɛ	c l̥ʲ ɛ t̪ʲʰ ə	....x
+iecor:Early Irish > Goidelic|iecor_1707	FOG	Irish	kʲʰ oː	cʰ oː	..
+iecor:Early Irish > Goidelic|iecor_1707	FOG	Manx	kʲʰ oː	kʲ eː	.x
+iecor:Early Irish > Goidelic|iecor_1707	FOG	Scottish Gaelic	kʲʰ oː	kʲ ɔː	..
+iecor:Early Irish > Goidelic|iecor_1708	FRUIT	Irish	t̪ˠʰ o rˠ ə ðˠ	t̪ˠʰ ʊ ɾˠ ə -	.x..x
+iecor:Early Irish > Goidelic|iecor_1710	GRASS	Irish	ɸ e ʊ r	fʲ eː - ɾˠ	x.x.
+iecor:Early Irish > Goidelic|iecor_1710	GRASS	Manx	ɸ e ʊ r	f eː - r	..x.
+iecor:Early Irish > Goidelic|iecor_1710	GRASS	Scottish Gaelic	ɸ e ʊ r	f iə - ɾ	.xx.
+iecor:Early Irish > Goidelic|iecor_1712	HAND	Irish	l̪ˠ a ṽˠ	l̪ˠ ɑ̃ː vˠ	.xx
+iecor:Early Irish > Goidelic|iecor_1712	HAND	Manx	l̪ˠ a ṽˠ	l e u	.xx
+iecor:Early Irish > Goidelic|iecor_1712	HAND	Scottish Gaelic	l̪ˠ a ṽˠ	l̪ˠ aː v	..x
+iecor:Early Irish > Goidelic|iecor_1713	HEAVY	Irish	t̪ˠʰ r ɔ mˠ	t̪ˠ ɹ̥ˠ ʊ mˠ	..x.
+iecor:Early Irish > Goidelic|iecor_1713	HEAVY	Manx	t̪ˠʰ r ɔ mˠ	t r oː m	....
+iecor:Early Irish > Goidelic|iecor_1713	HEAVY	Scottish Gaelic	t̪ˠʰ r ɔ mˠ	t̪ ɾ ɔ m	....
+iecor:Early Irish > Goidelic|iecor_1720	LONG	Irish	ɸ ɔ d̪ a	fˠ a d̪ˠ ə	.x.x
+iecor:Early Irish > Goidelic|iecor_1720	LONG	Manx	ɸ ɔ d̪ a	f o ð ə	..xx
+iecor:Early Irish > Goidelic|iecor_1720	LONG	Scottish Gaelic	ɸ ɔ d̪ a	f a d̪ ə	.x.x
+iecor:Early Irish > Goidelic|iecor_1721	LOUSE	Irish	mʲ iː lʲ	mʲ iː lˠ	..x
+iecor:Early Irish > Goidelic|iecor_1721	LOUSE	Manx	mʲ iː lʲ	m iː l	x.x
+iecor:Early Irish > Goidelic|iecor_1721	LOUSE	Scottish Gaelic	mʲ iː lʲ	m iə l̪ˠ	xxx
+iecor:Early Irish > Goidelic|iecor_1723	MEAT	Irish	ɸʲ e o lʲ	fʲ oː - lʲ	xxx.
+iecor:Early Irish > Goidelic|iecor_1723	MEAT	Manx	ɸʲ e o lʲ	f eː - lʲ	x.x.
+iecor:Early Irish > Goidelic|iecor_1723	MEAT	Scottish Gaelic	ɸʲ e o lʲ	f jɔː - l	xxxx
+iecor:Early Irish > Goidelic|iecor_1724	MOUNTAIN	Irish	sʲ lʲ i a β	ʃ l̥ʲ i ə vˠ	...xx
+iecor:Early Irish > Goidelic|iecor_1724	MOUNTAIN	Manx	sʲ lʲ i a β	s lʲ - uː -	x.xxx
+iecor:Early Irish > Goidelic|iecor_1728	NECK	Irish	mˠ u nʲ	mʷ ɪ nʲ	.x.
+iecor:Early Irish > Goidelic|iecor_1728	NECK	Manx	mˠ u nʲ	m a n	.xx
+iecor:Early Irish > Goidelic|iecor_1729	NIGHT	Irish	a ðʲ xʲ ɛ	iː - ç ə	xxxx
+iecor:Early Irish > Goidelic|iecor_1729	NIGHT	Manx	a ðʲ xʲ ɛ	iː - - -	xxxx
+iecor:Early Irish > Goidelic|iecor_1729	NIGHT	Scottish Gaelic	a ðʲ xʲ ɛ	ɤi - ç ə	xxxx
+iecor:Early Irish > Goidelic|iecor_1730	PLAY	Irish	ɪ mʲ bʲ ɛ rʲ	ɪ mʲ - ɪ ɹ̝	..xx.
+iecor:Early Irish > Goidelic|iecor_1731	PULL	Irish	sʲ rʲ ɛ ŋˠ ɡˠ æ ðʲ	- ɾˠ ə ŋʲ - - -	xxxxxxx
+iecor:Early Irish > Goidelic|iecor_1731	PULL	Manx	sʲ rʲ ɛ ŋˠ ɡˠ æ ðʲ	- r - n - - -	xxxxxxx
+iecor:Early Irish > Goidelic|iecor_1731	PULL	Scottish Gaelic	sʲ rʲ ɛ ŋˠ ɡˠ æ ðʲ	- r ɪ ɲ - - -	xxxxxxx
+iecor:Early Irish > Goidelic|iecor_1734	RED	Irish	d̪ʲ ɛ rˠ ɡˠ	d̪ʲ a ɾˠ ɡ̥ˠ	.x..
+iecor:Early Irish > Goidelic|iecor_1734	RED	Manx	d̪ʲ ɛ rˠ ɡˠ	dʒ a r ɡ	xx..
+iecor:Early Irish > Goidelic|iecor_1734	RED	Scottish Gaelic	d̪ʲ ɛ rˠ ɡˠ	dʲ ɛ ɾ ɡ	....
+iecor:Early Irish > Goidelic|iecor_1735	RIVER	Irish	a βˠ ɪ nʲ	a w ə ɲ	.xx.
+iecor:Early Irish > Goidelic|iecor_1735	RIVER	Manx	a βˠ ɪ nʲ	a u i nʲ	.x..
+iecor:Early Irish > Goidelic|iecor_1735	RIVER	Scottish Gaelic	a βˠ ɪ nʲ	a v ɪ ɲ	.x..
+iecor:Early Irish > Goidelic|iecor_1739	SAND	Irish	ɡˠ æ nʲ ɛ ṽˠ	ɡˠ a nʲ ə̃ vˠ	.x.xx
+iecor:Early Irish > Goidelic|iecor_1739	SAND	Manx	ɡˠ æ nʲ ɛ ṽˠ	ɡ e nʲ - -	.x.xx
+iecor:Early Irish > Goidelic|iecor_1742	SEW	Irish	u a ɣʲ ɪ ðʲ	u ə ʝ - -	.x.xx
+iecor:Early Irish > Goidelic|iecor_1742	SEW	Manx	u a ɣʲ ɪ ðʲ	w ɛː l - -	xxxxx
+iecor:Early Irish > Goidelic|iecor_1743	SHARP	Irish	ɡʲ eː rˠ	ɟ eː ɾˠ	...
+iecor:Early Irish > Goidelic|iecor_1743	SHARP	Manx	ɡʲ eː rˠ	ɡʲ eː r	...
+iecor:Early Irish > Goidelic|iecor_1743	SHARP	Scottish Gaelic	ɡʲ eː rˠ	ɡʲ iə ɾ	.x.
+iecor:Early Irish > Goidelic|iecor_1746	SLEEP	Irish	kˠʰ ɔ n t̪ˠʰ ʊ lʲ ɪ	kˠʰ ʊ - d̪ˠ ə lʲ -	.xxxx.x
+iecor:Early Irish > Goidelic|iecor_1746	SLEEP	Manx	kˠʰ ɔ n t̪ˠʰ ʊ lʲ ɪ	k a - d - l -	.xxxxxx
+iecor:Early Irish > Goidelic|iecor_1746	SLEEP	Scottish Gaelic	kˠʰ ɔ n t̪ˠʰ ʊ lʲ ɪ	k a - d̪ ə l̪ˠ -	.xxxxxx
+iecor:Early Irish > Goidelic|iecor_1750	STONE	Irish	kˠʰ l̥ o xˠ	kˠ l̥ˠ ʊ x	..x.
+iecor:Early Irish > Goidelic|iecor_1750	STONE	Manx	kˠʰ l̥ o xˠ	k l o x	....
+iecor:Early Irish > Goidelic|iecor_1750	STONE	Scottish Gaelic	kˠʰ l̥ o xˠ	k l̪ˠ a x	..x.
+iecor:Early Irish > Goidelic|iecor_1752	SWELL	Irish	a t̪ˠʰ æ ðʲ	a t̪ˠʰ - -	..xx
+iecor:Early Irish > Goidelic|iecor_1752	SWELL	Manx	a t̪ˠʰ æ ðʲ	a t - -	..xx
+iecor:Early Irish > Goidelic|iecor_1752	SWELL	Scottish Gaelic	a t̪ˠʰ æ ðʲ	a d̪ - -	.xxx
+iecor:Early Irish > Goidelic|iecor_1755	TIE	Irish	kʲʰ ɛ ŋˠ ɡˠ lˠ æ ðʲ	cʰ æ ŋˠ ɡˠ lˠ - -	.x...xx
+iecor:Early Irish > Goidelic|iecor_1755	TIE	Manx	kʲʰ ɛ ŋˠ ɡˠ lˠ æ ðʲ	kʲ a ŋ - l - -	.x.x.xx
+iecor:Early Irish > Goidelic|iecor_1757	TREE	Irish	kˠʰ r̥ˠ a n̪ˠ	kˠ ɹ̥ˠ a n̪ˠ	....
+iecor:Early Irish > Goidelic|iecor_1763	WHITE	Irish	bˠ aː nˠ	bˠ ɑː nˠ	...
+iecor:Early Irish > Goidelic|iecor_1763	WHITE	Manx	bˠ aː nˠ	b ɛː n	.x.
+iecor:Early Irish > Goidelic|iecor_1764	WIND	Irish	ɡˠ ai θ	ɡˠ iː h	.xx
+iecor:Early Irish > Goidelic|iecor_1764	WIND	Manx	ɡˠ ai θ	ɡ y ə	.xx
+iecor:Early Irish > Goidelic|iecor_1764	WIND	Scottish Gaelic	ɡˠ ai θ	ɡ ɯː -	.xx
+iecor:Early Irish > Goidelic|iecor_1768	YELLOW	Irish	bˠ ʊ ðʲ ɛ	bʷ iː - -	.xxx
+iecor:Early Irish > Goidelic|iecor_1768	YELLOW	Manx	bˠ ʊ ðʲ ɛ	b iː - -	.xxx
+iecor:Early Irish > Goidelic|iecor_1768	YELLOW	Scottish Gaelic	bˠ ʊ ðʲ ɛ	b ɯ j ə	.xxx
+iecor:Early Irish > Goidelic|iecor_21	DOG	Scottish Gaelic	kˠʰ uː	k uː	..
+iecor:Early Irish > Goidelic|iecor_210	EAT	Irish	ɪ θʲ ɪ ðʲ	ɪ h - -	.xxx
+iecor:Early Irish > Goidelic|iecor_210	EAT	Manx	ɪ θʲ ɪ ðʲ	iː - - -	.xxx
+iecor:Early Irish > Goidelic|iecor_210	EAT	Scottish Gaelic	ɪ θʲ ɪ ðʲ	i - - -	.xxx
+iecor:Early Irish > Goidelic|iecor_2156	LEG	Irish	kˠʰ ɔ sˠ	kˠʰ ʊ sˠ	.x.
+iecor:Early Irish > Goidelic|iecor_2156	LEG	Scottish Gaelic	kˠʰ ɔ sˠ	k a s	.x.
+iecor:Early Irish > Goidelic|iecor_2158	NEAR	Manx	ɔ ɡˠ ʊ sˠ	a ɣ ə s	xxx.
+iecor:Early Irish > Goidelic|iecor_2158	NEAR	Scottish Gaelic	ɔ ɡˠ ʊ sˠ	a ʃ - ɡ	xxxx
+iecor:Early Irish > Goidelic|iecor_220	FISH	Irish	i a sˠ kˠ	i ə sˠ kˠ	.x..
+iecor:Early Irish > Goidelic|iecor_220	FISH	Manx	i a sˠ kˠ	i ə s t	.x.x
+iecor:Early Irish > Goidelic|iecor_220	FISH	Scottish Gaelic	i a sˠ kˠ	iə - s ɡ	xx.x
+iecor:Early Irish > Goidelic|iecor_223	FLOWER	Irish	bˠ lˠ aː θˠ	bˠ lˠ ɑː h	...x
+iecor:Early Irish > Goidelic|iecor_223	FLOWER	Manx	bˠ lˠ aː θˠ	b l ɛː -	..xx
+iecor:Early Irish > Goidelic|iecor_2235	FULL	Irish	l̪ˠ aː nˠ	l̪ˠ ɑː nˠ	...
+iecor:Early Irish > Goidelic|iecor_2235	FULL	Manx	l̪ˠ aː nˠ	l ɛː n	.x.
+iecor:Early Irish > Goidelic|iecor_2235	FULL	Scottish Gaelic	l̪ˠ aː nˠ	l̪ˠ aː n̪ˠ	...
+iecor:Early Irish > Goidelic|iecor_2255	EAR	Irish	kˠʰ l̥ˠ u a sˠ	kʷ l̥ʷ u ə sˠ	...x.
+iecor:Early Irish > Goidelic|iecor_2255	EAR	Manx	kˠʰ l̥ˠ u a sˠ	k l - əː ʃ	..xxx
+iecor:Early Irish > Goidelic|iecor_2255	EAR	Scottish Gaelic	kˠʰ l̥ˠ u a sˠ	k l̪ˠ uə - s	..xx.
+iecor:Early Irish > Goidelic|iecor_2256	FAR	Irish	ɸ ɔ d̪ a	fˠ a d̪ˠ ə	.x.x
+iecor:Early Irish > Goidelic|iecor_2256	FAR	Manx	ɸ ɔ d̪ a	f o d ə	...x
+iecor:Early Irish > Goidelic|iecor_2256	FAR	Scottish Gaelic	ɸ ɔ d̪ a	f a d̪ ə	.x.x
+iecor:Early Irish > Goidelic|iecor_2268	FINGERNAIL OR TOENAIL	Irish	ɪ ŋʲ ɡʲ e n	ʊ ŋˠ ɡˠ ə -	xxxxx
+iecor:Early Irish > Goidelic|iecor_2268	FINGERNAIL OR TOENAIL	Manx	ɪ ŋʲ ɡʲ e n	i ŋ - ə n	.xxx.
+iecor:Early Irish > Goidelic|iecor_2268	FINGERNAIL OR TOENAIL	Scottish Gaelic	ɪ ŋʲ ɡʲ e n	iː n - ə -	.xxxx
+iecor:Early Irish > Goidelic|iecor_2299	SUN	Irish	ɡʲ rʲ i a nˠ	ɟ ɹ̝ i ə nˠ	...x.
+iecor:Early Irish > Goidelic|iecor_2299	SUN	Manx	ɡʲ rʲ i a nˠ	ɡ r i ə n	xx.x.
+iecor:Early Irish > Goidelic|iecor_2299	SUN	Scottish Gaelic	ɡʲ rʲ i a nˠ	ɡ ɾ iə - n	xxxx.
+iecor:Early Irish > Goidelic|iecor_2307~127~c379eb	KNOW (SOMETHING)	Manx	ɸʲ ɪ sʲ	f i s	x.x
+iecor:Early Irish > Goidelic|iecor_2404~127~2959ee	SAY	Irish	ɛ bʲ ɪ rʲ	a bˠ ə ɹ̝	xxx.
+iecor:Early Irish > Goidelic|iecor_2456	KNEE	Irish	ɡˠ lˠ uː nˠ	ɡʷ lʷ uː nʲ	...x
+iecor:Early Irish > Goidelic|iecor_2456	KNEE	Manx	ɡˠ lˠ uː nˠ	ɡ lʲ uː nʲ	.x.x
+iecor:Early Irish > Goidelic|iecor_2456	KNEE	Scottish Gaelic	ɡˠ lˠ uː nˠ	ɡ l̪ˠ uː n̪ˠ	....
+iecor:Early Irish > Goidelic|iecor_2459	HORN (ANATOMY)	Irish	a ðˠ ʊ rˠ kˠʰ	a ʝ ə ɾˠ kˠʰ	.xx..
+iecor:Early Irish > Goidelic|iecor_2459	HORN (ANATOMY)	Manx	a ðˠ ʊ rˠ kˠʰ	eː - - ɹ k	xxx..
+iecor:Early Irish > Goidelic|iecor_2513	EARTH (SOIL)	Irish	kʲʰ rʲ eː	c ɹ̝̥ eː	...
+iecor:Early Irish > Goidelic|iecor_263	NARROW	Irish	kˠ ʊ ṽˠ ʊ ŋˠ ɡˠ	kʷʰ uː - - ŋˠ -	..xx.x
+iecor:Early Irish > Goidelic|iecor_263	NARROW	Manx	kˠ ʊ ṽˠ ʊ ŋˠ ɡˠ	k uː - - n -	..xxxx
+iecor:Early Irish > Goidelic|iecor_2741	ICE	Scottish Gaelic	a ɣʲ	e j	xx
+iecor:Early Irish > Goidelic|iecor_2789	FOOT	Irish	kˠʰ ɔ sˠ	kʰ ʊ sˠ	.x.
+iecor:Early Irish > Goidelic|iecor_2789	FOOT	Manx	kˠʰ ɔ sˠ	k a s	.x.
+iecor:Early Irish > Goidelic|iecor_2789	FOOT	Scottish Gaelic	kˠʰ ɔ sˠ	k a s	.x.
+iecor:Early Irish > Goidelic|iecor_28	EGG	Irish	ɔ ɣˠ	ʊ vˠ	xx
+iecor:Early Irish > Goidelic|iecor_28	EGG	Manx	ɔ ɣˠ	uː -	xx
+iecor:Early Irish > Goidelic|iecor_28	EGG	Scottish Gaelic	ɔ ɣˠ	u -	xx
+iecor:Early Irish > Goidelic|iecor_283	SALT	Irish	sˠ a lˠ a n̪ˠ	sˠ a lˠ ə n̪ˠ	...x.
+iecor:Early Irish > Goidelic|iecor_283	SALT	Manx	sˠ a lˠ a n̪ˠ	s o l a n	.x...
+iecor:Early Irish > Goidelic|iecor_283	SALT	Scottish Gaelic	sˠ a lˠ a n̪ˠ	s a l̪ˠ ə n̪ˠ	...x.
+iecor:Early Irish > Goidelic|iecor_2881	ROTTEN	Irish	l̪ˠ o βˠ θˠ a	l̪ˠ ʊ fˠ - ə	.xxxx
+iecor:Early Irish > Goidelic|iecor_2881	ROTTEN	Manx	l̪ˠ o βˠ θˠ a	l o - - u	..xxx
+iecor:Early Irish > Goidelic|iecor_289	SEED	Irish	sʲ iː lˠ	ʃ iː lˠ	...
+iecor:Early Irish > Goidelic|iecor_289	SEED	Manx	sʲ iː lˠ	ʃ iː l	...
+iecor:Early Irish > Goidelic|iecor_289	SEED	Scottish Gaelic	sʲ iː lˠ	ʃ iə l̪ˠ	.x.
+iecor:Early Irish > Goidelic|iecor_2919	SMELL (PERCEIVE)	Irish	bˠ ɔ lˠ ʊ ðˠ	bˠ ʊ lˠ - -	.x.xx
+iecor:Early Irish > Goidelic|iecor_2930	SMOOTH	Irish	mʲ iː nʲ	mʲ iː nʲ	...
+iecor:Early Irish > Goidelic|iecor_2930	SMOOTH	Scottish Gaelic	mʲ iː nʲ	m iː n	x.x
+iecor:Early Irish > Goidelic|iecor_294	SIT	Manx	sˠ a ðʲ ɪ ðʲ	s ə i - -	.xxxx
+iecor:Early Irish > Goidelic|iecor_294	SIT	Scottish Gaelic	sˠ a ðʲ ɪ ðʲ	s ɯ j - -	.xxxx
+iecor:Early Irish > Goidelic|iecor_303	SNOW	Irish	sʲ nʲ ɛ xˠ t̪ˠ ɛ	ʃ nʲ ã x t̪ˠʰ ə	..x..x
+iecor:Early Irish > Goidelic|iecor_303	SNOW	Manx	sʲ nʲ ɛ xˠ t̪ˠ ɛ	s nʲ a x t ə	x.x..x
+iecor:Early Irish > Goidelic|iecor_3080	WASH	Irish	n̪ʲ ɪ ɣʲ ɪ ðʲ	ɲʲ ɪ ʝ - -	x..xx
+iecor:Early Irish > Goidelic|iecor_3080	WASH	Manx	n̪ʲ ɪ ɣʲ ɪ ðʲ	nʲ iː - - -	..xxx
+iecor:Early Irish > Goidelic|iecor_3080	WASH	Scottish Gaelic	n̪ʲ ɪ ɣʲ ɪ ðʲ	n̪ i - - -	x.xxx
+iecor:Early Irish > Goidelic|iecor_312	STRAIGHT	Irish	d̪ʲ iː rʲ ʊ xˠ	d̪ʲ iː ɹ̝ ə x	...x.
+iecor:Early Irish > Goidelic|iecor_312	STRAIGHT	Manx	d̪ʲ iː rʲ ʊ xˠ	dʒ iː r a x	x.xx.
+iecor:Early Irish > Goidelic|iecor_312	STRAIGHT	Scottish Gaelic	d̪ʲ iː rʲ ʊ xˠ	dʲ iː ɾʲ ə x	...x.
+iecor:Early Irish > Goidelic|iecor_320	THICK	Irish	t̪ʲʰ ɪ ɣˠ	t̪ʲʰ ʊ vˠ	.xx
+iecor:Early Irish > Goidelic|iecor_320	THICK	Manx	t̪ʲʰ ɪ ɣˠ	tʃ uː -	xxx
+iecor:Early Irish > Goidelic|iecor_320	THICK	Scottish Gaelic	t̪ʲʰ ɪ ɣˠ	tʲ u -	.xx
+iecor:Early Irish > Goidelic|iecor_327	TONGUE	Irish	t̪ʲʰ e ŋˠ ɡˠ e	t̪ʲʰ æ ŋˠ ɡˠ ə	.x..x
+iecor:Early Irish > Goidelic|iecor_327	TONGUE	Manx	t̪ʲʰ e ŋˠ ɡˠ e	tʃ e nʲ - ə	x.xxx
+iecor:Early Irish > Goidelic|iecor_327	TONGUE	Scottish Gaelic	t̪ʲʰ e ŋˠ ɡˠ e	tʲ ɛ ŋ ɡ ə	....x
+iecor:Early Irish > Goidelic|iecor_3294	MOON	Manx	eː sˠ kˠ e	eː s t -	..xx
+iecor:Early Irish > Goidelic|iecor_335	WATER	Irish	ʊ sʲ kʲ ɛ	ɪ ʃ c ə	x..x
+iecor:Early Irish > Goidelic|iecor_335	WATER	Manx	ʊ sʲ kʲ ɛ	u ʃ tʲ ə	..xx
+iecor:Early Irish > Goidelic|iecor_335	WATER	Scottish Gaelic	ʊ sʲ kʲ ɛ	u ʃ ɡʲ ə	..xx
+iecor:Early Irish > Goidelic|iecor_3504~127~aa3737	SEE	Irish	a kʲ ɪ	ɛ cʰ -	x.x
+iecor:Early Irish > Goidelic|iecor_3504~127~aa3737	SEE	Manx	a kʲ ɪ	a ɡ -	.xx
+iecor:Early Irish > Goidelic|iecor_3504~127~aa3737	SEE	Scottish Gaelic	a kʲ ɪ	a ɡʲ -	.xx
+iecor:Early Irish > Goidelic|iecor_380	DRINK	Manx	ɪ βʲ ɪ ðʲ	uː - - -	xxxx
+iecor:Early Irish > Goidelic|iecor_39	FIVE	Irish	kˠʰ oː ɡʲ	kʷʰ uː ɟ̥	.x.
+iecor:Early Irish > Goidelic|iecor_39	FIVE	Manx	kˠʰ oː ɡʲ	kʷ e ɡ	.xx
+iecor:Early Irish > Goidelic|iecor_39	FIVE	Scottish Gaelic	kˠʰ oː ɡʲ	k oː ɡʲ	...
+iecor:Early Irish > Goidelic|iecor_4015	CHEST	Irish	ʊ xˠ t̪ˠ	ʊ x t̪ˠ	...
+iecor:Early Irish > Goidelic|iecor_4344	FREEZE	Irish	sʲ ɛ kˠʰ æ ðʲ	ʃ ʊ kʰ - -	.x.xx
+iecor:Early Irish > Goidelic|iecor_44	FOUR	Irish	kʲʰ ɛ θˠ æ rʲ	cʰ æ h ə ɾˠ	.xxxx
+iecor:Early Irish > Goidelic|iecor_44	FOUR	Manx	kʲʰ ɛ θˠ æ rʲ	kʲ ɛː - - r	..xxx
+iecor:Early Irish > Goidelic|iecor_44	FOUR	Scottish Gaelic	kʲʰ ɛ θˠ æ rʲ	kʲ e h ɪ ɾʲ	..xx.
+iecor:Early Irish > Goidelic|iecor_5015	YESTERDAY	Irish	ɪ n̪ʲ eː	ɪ ɲ eː	...
+iecor:Early Irish > Goidelic|iecor_5015	YESTERDAY	Manx	ɪ n̪ʲ eː	- dʒ eː	xx.
+iecor:Early Irish > Goidelic|iecor_5026	NAVEL	Irish	ɪ mʲ bʲ lʲ ʊ	ɪ mʲ kˠʰ nˠ -	..xxx
+iecor:Early Irish > Goidelic|iecor_5026	NAVEL	Manx	ɪ mʲ bʲ lʲ ʊ	i m - lʲ -	.xx.x
+iecor:Early Irish > Goidelic|iecor_5036	CARRY	Irish	bʲ ɛ rʲ ɪ ðʲ	bʲ ɛ ɹ̝ - -	...xx
+iecor:Early Irish > Goidelic|iecor_5094	RUN	Irish	r̪ʲ ɛ θʲ ɪ ðʲ	ɹ̝ ɪ h - -	.xxxx
+iecor:Early Irish > Goidelic|iecor_5094	RUN	Manx	r̪ʲ ɛ θʲ ɪ ðʲ	r ə i - -	xxxxx
+iecor:Early Irish > Goidelic|iecor_5094	RUN	Scottish Gaelic	r̪ʲ ɛ θʲ ɪ ðʲ	r u j - -	xxxxx
+iecor:Early Irish > Goidelic|iecor_5097	CLAW	Irish	ɪ ŋʲ ɡʲ ɛ nˠ	ʊ ŋˠ - ə -	xxxxx
+iecor:Early Irish > Goidelic|iecor_5112	GRIND	Irish	mʲ ɛ lʲ ɪ ðʲ	mʲ ɛ lʲ - -	...xx
+iecor:Early Irish > Goidelic|iecor_5112	GRIND	Manx	mʲ ɛ lʲ ɪ ðʲ	b - lʲ - -	xx.xx
+iecor:Early Irish > Goidelic|iecor_5112	GRIND	Scottish Gaelic	mʲ ɛ lʲ ɪ ðʲ	m e l - -	x.xxx
+iecor:Early Irish > Goidelic|iecor_520	DRY	Irish	t̪ʲʰ iː rʲ ɪ mʲ	t̪ʲʰ ɪ ɹ̝ ɪ mʲ	.....
+iecor:Early Irish > Goidelic|iecor_520	DRY	Manx	t̪ʲʰ iː rʲ ɪ mʲ	tʃ i ɹ ə m	x.xxx
+iecor:Early Irish > Goidelic|iecor_520	DRY	Scottish Gaelic	t̪ʲʰ iː rʲ ɪ mʲ	tʲ ɪ ɾ ə m	..xxx
+iecor:Early Irish > Goidelic|iecor_5345	TAKE	Manx	ɡˠ æ βʲ ɪ ðʲ	ɡ oː - - lʲ	.xxxx
+iecor:Early Irish > Goidelic|iecor_5345	TAKE	Scottish Gaelic	ɡˠ æ βʲ ɪ ðʲ	ɡ a v - -	.xxxx
+iecor:Early Irish > Goidelic|iecor_535	SWIM	Irish	sˠ nˠ a ɪ ðʲ	sˠ nˠ ɑ̃ː - -	..xxx
+iecor:Early Irish > Goidelic|iecor_535	SWIM	Manx	sˠ nˠ a ɪ ðʲ	s n u - -	..xxx
+iecor:Early Irish > Goidelic|iecor_565	SING	Irish	kˠʰ a nˠ æ ðʲ	kˠʰ a nˠ - -	...xx
+iecor:Early Irish > Goidelic|iecor_5922	ROUND	Irish	kˠʰ r̥ˠ u n̪ʲ	kˠ ɹ̥ʷ ɪ ɲ	..x.
+iecor:Early Irish > Goidelic|iecor_5922	ROUND	Manx	kˠʰ r̥ˠ u n̪ʲ	k r u nʲ	....
+iecor:Early Irish > Goidelic|iecor_5922	ROUND	Scottish Gaelic	kˠʰ r̥ˠ u n̪ʲ	k ɾ ɯː ɲ	..x.
+iecor:Early Irish > Goidelic|iecor_598	HEAR	Irish	r̪ˠ ɔ kˠʰ l̥ˠ ʊ nʲ æ θ ʊ r	- - kˠ l̥ˠ ɪ ʃ - - - -	xx..xxxxxx
+iecor:Early Irish > Goidelic|iecor_598	HEAR	Manx	r̪ˠ ɔ kˠʰ l̥ˠ ʊ nʲ æ θ ʊ r	l a k l a ʃ - - - -	xxxxxxxxxx
+iecor:Early Irish > Goidelic|iecor_598	HEAR	Scottish Gaelic	r̪ˠ ɔ kˠʰ l̥ˠ ʊ nʲ æ θ ʊ r	- - k l̪ˠ ɯː ɲ - - - -	xx..x.xxxx
+iecor:Early Irish > Goidelic|iecor_6178	HOT	Irish	t̪ʲʰ e e	t̪ʲʰ ɛ h	..x
+iecor:Early Irish > Goidelic|iecor_6178	HOT	Manx	t̪ʲʰ e e	tʃ eː -	x.x
+iecor:Early Irish > Goidelic|iecor_6178	HOT	Scottish Gaelic	t̪ʲʰ e e	tʲ e -	..x
+iecor:Early Irish > Goidelic|iecor_622	OLD	Irish	sʲ ɛ n	ʃ æ nˠ	.x.
+iecor:Early Irish > Goidelic|iecor_622	OLD	Manx	sʲ ɛ n	ʃ e n	...
+iecor:Early Irish > Goidelic|iecor_622	OLD	Scottish Gaelic	sʲ ɛ n	ʃ ɛ n	...
+iecor:Early Irish > Goidelic|iecor_6297	SWEET	Irish	mʲ ɪ lʲ ɪ sʲ	mʲ ɪ lʲ ɪ ʃ	.....
+iecor:Early Irish > Goidelic|iecor_6297	SWEET	Manx	mʲ ɪ lʲ ɪ sʲ	m i lʲ i ʃ	x....
+iecor:Early Irish > Goidelic|iecor_6297	SWEET	Scottish Gaelic	mʲ ɪ lʲ ɪ sʲ	m i l ɪ ʃ	x.x..
+iecor:Early Irish > Goidelic|iecor_6332	GREEN	Irish	ɡˠ lˠ a sˠ	ɡˠ lˠ a sˠ	....
+iecor:Early Irish > Goidelic|iecor_6332	GREEN	Manx	ɡˠ lˠ a sˠ	ɡ l a s	....
+iecor:Early Irish > Goidelic|iecor_6364	ANT	Irish	sʲ a ŋˠ ɡˠ aː n	ʃ æ ŋˠ ɡˠ ɑː nˠ	.x....
+iecor:Early Irish > Goidelic|iecor_6364	ANT	Manx	sʲ a ŋˠ ɡˠ aː n	s e ŋ - a n	xx.x..
+iecor:Early Irish > Goidelic|iecor_6364	ANT	Scottish Gaelic	sʲ a ŋˠ ɡˠ aː n	ʃ ɛ ŋ ɡ a n	.x....
+iecor:Early Irish > Goidelic|iecor_6371	BITTER	Irish	sʲ ɛ rˠ βˠ	ʃ æ ɾˠ vˠ	.x.x
+iecor:Early Irish > Goidelic|iecor_6371	BITTER	Manx	sʲ ɛ rˠ βˠ	ʃ a r u	.x.x
+iecor:Early Irish > Goidelic|iecor_6371	BITTER	Scottish Gaelic	sʲ ɛ rˠ βˠ	ʃ ɛ ɾ v	...x
+iecor:Early Irish > Goidelic|iecor_6440~127~0ba5c9	DO	Irish	d̪ʲ eː nˠ ə	d̪ʲ eː nˠ -	...x
+iecor:Early Irish > Goidelic|iecor_6440~127~0ba5c9	DO	Manx	d̪ʲ eː nˠ ə	dʒ e n -	x..x
+iecor:Early Irish > Goidelic|iecor_6440~127~0ba5c9	DO	Scottish Gaelic	d̪ʲ eː nˠ ə	dʲ iə n -	.x.x
+iecor:Early Irish > Goidelic|iecor_6458	HEART	Irish	kʲʰ r̥ʲ ɪ ðʲ e	kˠ ɹ̥ˠ iː - -	xx.xx
+iecor:Early Irish > Goidelic|iecor_6458	HEART	Manx	kʲʰ r̥ʲ ɪ ðʲ e	k ɹ iː - -	xx.xx
+iecor:Early Irish > Goidelic|iecor_6458	HEART	Scottish Gaelic	kʲʰ r̥ʲ ɪ ðʲ e	k ɾ i j ə	xx.xx
+iecor:Early Irish > Goidelic|iecor_6532	FLY (INSECT)	Irish	kˠʰ ʊ lʲ	kˠʰ ɪ ʎ	.x.
+iecor:Early Irish > Goidelic|iecor_6532	FLY (INSECT)	Manx	kˠʰ ʊ lʲ	kʷ e lʲ	.x.
+iecor:Early Irish > Goidelic|iecor_6532	FLY (INSECT)	Scottish Gaelic	kˠʰ ʊ lʲ	k u l	..x
+iecor:Early Irish > Goidelic|iecor_6535	FOREST	Irish	kˠʰ ɔ l̪ʲ	kˠʰ ɪ ʎ	.x.
+iecor:Early Irish > Goidelic|iecor_6535	FOREST	Manx	kˠʰ ɔ l̪ʲ	k e lʲ	.x.
+iecor:Early Irish > Goidelic|iecor_6535	FOREST	Scottish Gaelic	kˠʰ ɔ l̪ʲ	k ɤ ʎ	.x.
+iecor:Early Irish > Goidelic|iecor_6551	GO	Irish	t̪ʲʰ eː d̪ʲ	t̪ʲʰ eː -	..x
+iecor:Early Irish > Goidelic|iecor_6595	RIGHT	Irish	d̪ʲ e sˠ	d̪ʲ a s	.x.
+iecor:Early Irish > Goidelic|iecor_6595	RIGHT	Manx	d̪ʲ e sˠ	dʒ e ʃ	x.x
+iecor:Early Irish > Goidelic|iecor_6595	RIGHT	Scottish Gaelic	d̪ʲ e sˠ	dʲ ɛ s	...
+iecor:Early Irish > Goidelic|iecor_667	WIDE	Irish	l̪ʲ e θˠ ʊ nˠ	l̪ʲ æ h ə nˠ	.xxx.
+iecor:Early Irish > Goidelic|iecor_667	WIDE	Manx	l̪ʲ e θˠ ʊ nˠ	lʲ eː - - n	..xx.
+iecor:Early Irish > Goidelic|iecor_667	WIDE	Scottish Gaelic	l̪ʲ e θˠ ʊ nˠ	ʎ ɛ h ə n̪ˠ	..xx.
+iecor:Early Irish > Goidelic|iecor_6673	HARD	Irish	kˠʰ r̥ˠ u a ðʲ	kʷ ɹ̥ʷ u ə -	...xx
+iecor:Early Irish > Goidelic|iecor_6673	HARD	Manx	kˠʰ r̥ˠ u a ðʲ	k r ə i -	..xxx
+iecor:Early Irish > Goidelic|iecor_6673	HARD	Scottish Gaelic	kˠʰ r̥ˠ u a ðʲ	k ɾ uə j -	..xxx
+iecor:Early Irish > Goidelic|iecor_671	WOMAN	Irish	bʲ ɛ nˠ	bʲ æ nˠ	.x.
+iecor:Early Irish > Goidelic|iecor_671	WOMAN	Manx	bʲ ɛ nˠ	b e n	x..
+iecor:Early Irish > Goidelic|iecor_6724	HOUSE	Irish	t̪ʲʰ e xˠ	t̪ʲʰ æ x	.x.
+iecor:Early Irish > Goidelic|iecor_6724	HOUSE	Manx	t̪ʲʰ e xˠ	t a i	xxx
+iecor:Early Irish > Goidelic|iecor_6724	HOUSE	Scottish Gaelic	t̪ʲʰ e xˠ	t̪ ɤ j	xxx
+iecor:Early Irish > Goidelic|iecor_6731	THIGH	Manx	sʲ lʲ i a sˠ æ d̪ʲ	ʃ lʲ i ə z i dʲ	...xxx.
+iecor:Early Irish > Goidelic|iecor_6731	THIGH	Scottish Gaelic	sʲ lʲ i a sˠ æ d̪ʲ	ʃ l iə - s ɪ dʲ	.xxx.x.
+iecor:Early Irish > Goidelic|iecor_72	LIVE	Irish	bʲ e o	bʲ oː -	.xx
+iecor:Early Irish > Goidelic|iecor_72	LIVE	Manx	bʲ e o	b j oː	xx.
+iecor:Early Irish > Goidelic|iecor_788	KILL	Irish	mˠ a rˠ βˠ æ ðʲ	mˠ a ɾ - - -	...xxx
+iecor:Early Irish > Goidelic|iecor_788	KILL	Manx	mˠ a rˠ βˠ æ ðʲ	m a ɹ u - -	...xxx
+iecor:Early Irish > Goidelic|iecor_788	KILL	Scottish Gaelic	mˠ a rˠ βˠ æ ðʲ	m a ɾ v - -	...xxx
+iecor:Early Irish > Goidelic|iecor_82	NAME	Irish	æ nʲ ɪ mʲ	a nʲ ə mʲ	x.x.
+iecor:Early Irish > Goidelic|iecor_82	NAME	Manx	æ nʲ ɪ mʲ	e n ə m	xxxx
+iecor:Early Irish > Goidelic|iecor_82	NAME	Scottish Gaelic	æ nʲ ɪ mʲ	a n a m	xxxx
+iecor:Early Irish > Goidelic|iecor_8233	ROOT	Irish	ɸʲ rʲ eː nˠ	fʲ ɹ̝̥ ẽː vˠ	x.xx
+iecor:Early Irish > Goidelic|iecor_8233	ROOT	Manx	ɸʲ rʲ eː nˠ	f r e u	xx.x
+iecor:Early Irish > Goidelic|iecor_8242	HAIR (HEAD)	Manx	ɸˠ ɔ lˠ tˠ	f o l t	....
+iecor:Early Irish > Goidelic|iecor_8242	HAIR (HEAD)	Scottish Gaelic	ɸˠ ɔ lˠ tˠ	f a l̪ˠ d̪	.x.x
+iecor:Early Irish > Goidelic|iecor_8246	LAKE	Irish	l̪ˠ a xˠ	l̪ˠ ʊ x	.x.
+iecor:Early Irish > Goidelic|iecor_8246	LAKE	Manx	l̪ˠ a xˠ	l o x	.x.
+iecor:Early Irish > Goidelic|iecor_8246	LAKE	Scottish Gaelic	l̪ˠ a xˠ	l̪ˠ ɔ x	.x.
+iecor:Early Irish > Goidelic|iecor_8269	SHADOW	Manx	sˠ kˠ aː θ	s k ɛː -	..xx
+iecor:Early Irish > Goidelic|iecor_8378	BIRD	Irish	eː nˠ	eː nˠ	..
+iecor:Early Irish > Goidelic|iecor_8378	BIRD	Scottish Gaelic	eː nˠ	iə n̪ˠ	x.
+iecor:Early Irish > Goidelic|iecor_86	NEW	Irish	n̪ˠ u e	n̪ˠ u ə	..x
+iecor:Early Irish > Goidelic|iecor_86	NEW	Manx	n̪ˠ u e	n oː -	.xx
+iecor:Early Irish > Goidelic|iecor_860	BREATHE	Irish	a nˠ aː lˠ	ə nˠ ɑː lˠ	x...
+iecor:Early Irish > Goidelic|iecor_8697	STAR	Irish	r̪ʲ eː d̪ l̪ˠ u	ɹ̝ eː t̪ˠʰ lˠ ə	..xxx
+iecor:Early Irish > Goidelic|iecor_8697	STAR	Manx	r̪ʲ eː d̪ l̪ˠ u	r o - l ɛː	xxx.x
+iecor:Early Irish > Goidelic|iecor_8697	STAR	Scottish Gaelic	r̪ʲ eː d̪ l̪ˠ u	r iə - l̪ˠ -	xxx.x
+iecor:Early Irish > Goidelic|iecor_91	ONE	Irish	oi nˠ	eː nˠ	x.
+iecor:Early Irish > Goidelic|iecor_91	ONE	Manx	oi nˠ	u n	x.
+iecor:Early Irish > Goidelic|iecor_91	ONE	Scottish Gaelic	oi nˠ	ɯː n̪ˠ	x.
+iecor:Early Irish > Goidelic|iecor_9424	DIRTY	Irish	sˠ a lˠ ʊ xˠ	sˠ a lˠ ə x	...x.
+iecor:Early Irish > Goidelic|iecor_9424	DIRTY	Scottish Gaelic	sˠ a lˠ ʊ xˠ	s a l̪ˠ ə x	...x.
+iecor:Early Irish > Goidelic|iecor_9437	SHORT	Irish	ɡʲ e r̪ˠ	ɟ æ ɾˠ	.x.
+iecor:Early Irish > Goidelic|iecor_9437	SHORT	Manx	ɡʲ e r̪ˠ	ɡʲ ɛː r	...
+iecor:Early Irish > Goidelic|iecor_968	ASH	Irish	l̪ˠ u a θʲ rʲ ɪ ðʲ	l̪ʷ u ə h - - -	..xxxxx
+iecor:Early Irish > Goidelic|iecor_968	ASH	Manx	l̪ˠ u a θʲ rʲ ɪ ðʲ	l ə i - - - -	.xxxxxx
+iecor:Early Irish > Goidelic|iecor_971	BARK	Irish	r̪ˠ uː sˠ kˠ	ɾʷ uː sˠ kˠ	....
+iecor:Early Irish > Goidelic|iecor_971	BARK	Manx	r̪ˠ uː sˠ kˠ	r uː s t	...x
+iecor:Early Irish > Goidelic|iecor_971	BARK	Scottish Gaelic	r̪ˠ uː sˠ kˠ	r uː s ɡ	...x
+iecor:Early Irish > Goidelic|iecor_976	BLACK	Irish	d̪ˠ ʊ βˠ	d̪ˠ ʊ vˠ	..x
+iecor:Early Irish > Goidelic|iecor_976	BLACK	Manx	d̪ˠ ʊ βˠ	d uː -	..x
+iecor:Early Irish > Goidelic|iecor_976	BLACK	Scottish Gaelic	d̪ˠ ʊ βˠ	d̪ u -	..x
+iecor:Early Irish > Goidelic|iecor_979	BURN	Manx	l̪ˠ ɔ sʲ kʲʰ ɪ ðʲ	l o s t - -	..xxxx
+iecor:Early Irish > Goidelic|iecor_979	BURN	Scottish Gaelic	l̪ˠ ɔ sʲ kʲʰ ɪ ðʲ	l̪ˠ ɔ ʃ ɡʲ - -	...xxx

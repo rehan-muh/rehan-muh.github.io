@@ -1,0 +1,578 @@
+Set	Concept	Language	Ancestor	Aligned	Changed
+sagartst:Old Burmese > Burmish|sagartst_1001-towipe	WIPE	Lashi	s u t	s uː t	...
+sagartst:Old Burmese > Burmish|sagartst_1001-towipe	WIPE	Longchuan Achang	s u t	s u t	...
+sagartst:Old Burmese > Burmish|sagartst_1001-towipe	WIPE	Maru	s u t	s a̰ t	.x.
+sagartst:Old Burmese > Burmish|sagartst_1001-towipe	WIPE	Pela	s u t	s ɔ t	.x.
+sagartst:Old Burmese > Burmish|sagartst_1001-towipe	WIPE	Zaiwa	s u t	s u t	...
+sagartst:Old Burmese > Burmish|sagartst_101-tolick	LICK	Lashi	l j a k	j - ɔː ʔ	xxxx
+sagartst:Old Burmese > Burmish|sagartst_101-tolick	LICK	Longchuan Achang	l j a k	l - e ʔ	.xxx
+sagartst:Old Burmese > Burmish|sagartst_101-tolick	LICK	Maru	l j a k	j - ɔ ʔ	xxxx
+sagartst:Old Burmese > Burmish|sagartst_101-tolick	LICK	Pela	l j a k	j - a ʔ	xx.x
+sagartst:Old Burmese > Burmish|sagartst_101-tolick	LICK	Zaiwa	l j a k	j - o ʔ	xxxx
+sagartst:Old Burmese > Burmish|sagartst_10186-thebreastfemale	BREAST	Lashi	n ui	n o	.x
+sagartst:Old Burmese > Burmish|sagartst_10186-thebreastfemale	BREAST	Longchuan Achang	n ui	n a	.x
+sagartst:Old Burmese > Burmish|sagartst_10186-thebreastfemale	BREAST	Maru	n ui	n u	.x
+sagartst:Old Burmese > Burmish|sagartst_10186-thebreastfemale	BREAST	Pela	n ui	n a	.x
+sagartst:Old Burmese > Burmish|sagartst_10186-thebreastfemale	BREAST	Zaiwa	n ui	n a	.x
+sagartst:Old Burmese > Burmish|sagartst_1021-theegg	EGG	Lashi	u	u̠	.
+sagartst:Old Burmese > Burmish|sagartst_1021-theegg	EGG	Longchuan Achang	u	u	.
+sagartst:Old Burmese > Burmish|sagartst_1021-theegg	EGG	Maru	u	a̰	x
+sagartst:Old Burmese > Burmish|sagartst_1021-theegg	EGG	Pela	u	ṵ	.
+sagartst:Old Burmese > Burmish|sagartst_1021-theegg	EGG	Zaiwa	u	a	x
+sagartst:Old Burmese > Burmish|sagartst_10217-thedream	DREAM	Lashi	i p m a k	ɔ̰ p m ɔ ʔ	x..xx
+sagartst:Old Burmese > Burmish|sagartst_10217-thedream	DREAM	Longchuan Achang	i p m a k	i t m ɔ ʔ	.x.xx
+sagartst:Old Burmese > Burmish|sagartst_10217-thedream	DREAM	Maru	i p m a k	a̰ p m ɔ ʔ	x..xx
+sagartst:Old Burmese > Burmish|sagartst_10217-thedream	DREAM	Pela	i p m a k	a̰ p m a ʔ	x...x
+sagartst:Old Burmese > Burmish|sagartst_10217-thedream	DREAM	Zaiwa	i p m a k	ṵ p m o ʔ	x..xx
+sagartst:Old Burmese > Burmish|sagartst_10227-themeat	MEAT	Lashi	ʔ a s aː	- - ʃ o	xxxx
+sagartst:Old Burmese > Burmish|sagartst_10227-themeat	MEAT	Longchuan Achang	ʔ a s aː	- - ʂ a	xxx.
+sagartst:Old Burmese > Burmish|sagartst_10227-themeat	MEAT	Maru	ʔ a s aː	- - ʃ ɔ	xxxx
+sagartst:Old Burmese > Burmish|sagartst_10227-themeat	MEAT	Pela	ʔ a s aː	- - ʃ a	xxx.
+sagartst:Old Burmese > Burmish|sagartst_10227-themeat	MEAT	Zaiwa	ʔ a s aː	- - ʃ o	xxxx
+sagartst:Old Burmese > Burmish|sagartst_10231-theneedleforsewing	NEEDLE (FOR SEWING)	Lashi	ʔ a p	ŋ a̰ p	x..
+sagartst:Old Burmese > Burmish|sagartst_10231-theneedleforsewing	NEEDLE (FOR SEWING)	Longchuan Achang	ʔ a p	- a p	x..
+sagartst:Old Burmese > Burmish|sagartst_10231-theneedleforsewing	NEEDLE (FOR SEWING)	Maru	ʔ a p	ŋ ɛ̰ ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_10231-theneedleforsewing	NEEDLE (FOR SEWING)	Pela	ʔ a p	ŋ ɛ̰ ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_10231-theneedleforsewing	NEEDLE (FOR SEWING)	Zaiwa	ʔ a p	- a p	x..
+sagartst:Old Burmese > Burmish|sagartst_1027-many	MANY	Lashi	m j aː	m j ɔː	..x
+sagartst:Old Burmese > Burmish|sagartst_1027-many	MANY	Longchuan Achang	m j aː	nʲ - ɔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_1027-many	MANY	Maru	m j aː	m j ɔ	..x
+sagartst:Old Burmese > Burmish|sagartst_1027-many	MANY	Pela	m j aː	m j a	...
+sagartst:Old Burmese > Burmish|sagartst_1027-many	MANY	Zaiwa	m j aː	m j o	..x
+sagartst:Old Burmese > Burmish|sagartst_1028-far	FAR	Lashi	w i	v ɛː	xx
+sagartst:Old Burmese > Burmish|sagartst_1028-far	FAR	Longchuan Achang	w i	v e	xx
+sagartst:Old Burmese > Burmish|sagartst_1028-far	FAR	Maru	w i	v a	xx
+sagartst:Old Burmese > Burmish|sagartst_1028-far	FAR	Pela	w i	v ɛ	xx
+sagartst:Old Burmese > Burmish|sagartst_1028-far	FAR	Zaiwa	w i	v e	xx
+sagartst:Old Burmese > Burmish|sagartst_1032-themother	MOTHER	Lashi	ʔ a m i	- a m ḭ	x...
+sagartst:Old Burmese > Burmish|sagartst_1032-themother	MOTHER	Maru	ʔ a m i	- a m ḭ	x...
+sagartst:Old Burmese > Burmish|sagartst_10357-five	FIVE	Lashi	n aː	ŋ -	xx
+sagartst:Old Burmese > Burmish|sagartst_10357-five	FIVE	Longchuan Achang	n aː	ŋ ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_10357-five	FIVE	Maru	n aː	ŋ ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_10357-five	FIVE	Pela	n aː	ŋ a	x.
+sagartst:Old Burmese > Burmish|sagartst_10357-five	FIVE	Zaiwa	n aː	ŋ o	xx
+sagartst:Old Burmese > Burmish|sagartst_10379-heavy	HEAVY	Lashi	l i	l aː	.x
+sagartst:Old Burmese > Burmish|sagartst_10379-heavy	HEAVY	Longchuan Achang	l i	l i	..
+sagartst:Old Burmese > Burmish|sagartst_10379-heavy	HEAVY	Maru	l i	l a	.x
+sagartst:Old Burmese > Burmish|sagartst_10379-heavy	HEAVY	Pela	l i	l i	..
+sagartst:Old Burmese > Burmish|sagartst_10379-heavy	HEAVY	Zaiwa	l i	l a	.x
+sagartst:Old Burmese > Burmish|sagartst_1038-toresidelive	DWELL (LIVE, RESIDE)	Longchuan Achang	n i	nʲ ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_1038-toresidelive	DWELL (LIVE, RESIDE)	Maru	n i	n a	.x
+sagartst:Old Burmese > Burmish|sagartst_1038-toresidelive	DWELL (LIVE, RESIDE)	Pela	n i	ŋ i	x.
+sagartst:Old Burmese > Burmish|sagartst_1038-toresidelive	DWELL (LIVE, RESIDE)	Zaiwa	n i	ŋ i	x.
+sagartst:Old Burmese > Burmish|sagartst_1042-tohear	HEAR	Lashi	k r aː	k j ɔː	.xx
+sagartst:Old Burmese > Burmish|sagartst_1042-tohear	HEAR	Longchuan Achang	k r aː	k ʐ a	.x.
+sagartst:Old Burmese > Burmish|sagartst_1042-tohear	HEAR	Maru	k r aː	k j ɔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_1042-tohear	HEAR	Pela	k r aː	k j a	.x.
+sagartst:Old Burmese > Burmish|sagartst_1042-tohear	HEAR	Zaiwa	k r aː	k j o	.xx
+sagartst:Old Burmese > Burmish|sagartst_10429-right	RIGHT	Lashi	j aː	j o	.x
+sagartst:Old Burmese > Burmish|sagartst_10429-right	RIGHT	Longchuan Achang	j aː	ʑ ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_10429-right	RIGHT	Maru	j aː	j ɔ	.x
+sagartst:Old Burmese > Burmish|sagartst_10429-right	RIGHT	Pela	j aː	j a	..
+sagartst:Old Burmese > Burmish|sagartst_10429-right	RIGHT	Zaiwa	j aː	j o	.x
+sagartst:Old Burmese > Burmish|sagartst_10464-tosteal	STEAL	Lashi	kʰ ui	kʰ aː	.x
+sagartst:Old Burmese > Burmish|sagartst_10464-tosteal	STEAL	Longchuan Achang	kʰ ui	x a	xx
+sagartst:Old Burmese > Burmish|sagartst_10464-tosteal	STEAL	Maru	kʰ ui	kʰ u	.x
+sagartst:Old Burmese > Burmish|sagartst_10464-tosteal	STEAL	Pela	kʰ ui	kʰ a	.x
+sagartst:Old Burmese > Burmish|sagartst_10464-tosteal	STEAL	Zaiwa	kʰ ui	kʰ a	.x
+sagartst:Old Burmese > Burmish|sagartst_10475-thousecondpersonsingular	THOU	Lashi	ɲː a ɲː	n a ŋ	x.x
+sagartst:Old Burmese > Burmish|sagartst_10475-thousecondpersonsingular	THOU	Longchuan Achang	ɲː a ɲː	n u ŋ	xxx
+sagartst:Old Burmese > Burmish|sagartst_10475-thousecondpersonsingular	THOU	Maru	ɲː a ɲː	n ɔ̃ -	xxx
+sagartst:Old Burmese > Burmish|sagartst_10475-thousecondpersonsingular	THOU	Pela	ɲː a ɲː	n ɔ̃ -	xxx
+sagartst:Old Burmese > Burmish|sagartst_10475-thousecondpersonsingular	THOU	Zaiwa	ɲː a ɲː	n a ŋ	x.x
+sagartst:Old Burmese > Burmish|sagartst_1053-thetiger	TIGER	Lashi	k l aː	- l ə̆	x.x
+sagartst:Old Burmese > Burmish|sagartst_1053-thetiger	TIGER	Longchuan Achang	k l aː	- l ɔ	x.x
+sagartst:Old Burmese > Burmish|sagartst_1053-thetiger	TIGER	Maru	k l aː	- l ɔ	x.x
+sagartst:Old Burmese > Burmish|sagartst_1053-thetiger	TIGER	Pela	k l aː	- l a	x..
+sagartst:Old Burmese > Burmish|sagartst_1053-thetiger	TIGER	Zaiwa	k l aː	- l o	x.x
+sagartst:Old Burmese > Burmish|sagartst_1068-todrink	DRINK	Lashi	s o k	ʃ uː k	xx.
+sagartst:Old Burmese > Burmish|sagartst_1068-todrink	DRINK	Longchuan Achang	s o k	ʂ o ʔ	x.x
+sagartst:Old Burmese > Burmish|sagartst_1068-todrink	DRINK	Maru	s o k	ʃ a k	xx.
+sagartst:Old Burmese > Burmish|sagartst_1068-todrink	DRINK	Pela	s o k	ʃ a ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_1068-todrink	DRINK	Zaiwa	s o k	ʃ u ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_107-thefather	FATHER	Lashi	a pʰ i	a pʰ o	..x
+sagartst:Old Burmese > Burmish|sagartst_107-thefather	FATHER	Maru	a pʰ i	a pʰ ɔ	..x
+sagartst:Old Burmese > Burmish|sagartst_107-thefather	FATHER	Pela	a pʰ i	a v a	.xx
+sagartst:Old Burmese > Burmish|sagartst_107-thefather	FATHER	Zaiwa	a pʰ i	a v a	.xx
+sagartst:Old Burmese > Burmish|sagartst_1073-thestar	STAR	Lashi	k r a	k j ḭ	.xx
+sagartst:Old Burmese > Burmish|sagartst_1073-thestar	STAR	Longchuan Achang	k r a	kʰ ʐ ə	xxx
+sagartst:Old Burmese > Burmish|sagartst_1073-thestar	STAR	Maru	k r a	k j ḭ	.xx
+sagartst:Old Burmese > Burmish|sagartst_1073-thestar	STAR	Pela	k r a	k j ḭ	.xx
+sagartst:Old Burmese > Burmish|sagartst_1073-thestar	STAR	Zaiwa	k r a	k j ḭ	.xx
+sagartst:Old Burmese > Burmish|sagartst_1074-theroot	ROOT	Longchuan Achang	m r j a t	m ʐ u a t	.xx..
+sagartst:Old Burmese > Burmish|sagartst_1089-toshootanarrow	SHOOT	Lashi	p a c	p əː k	.xx
+sagartst:Old Burmese > Burmish|sagartst_1089-toshootanarrow	SHOOT	Longchuan Achang	p a c	p ə k	.xx
+sagartst:Old Burmese > Burmish|sagartst_1089-toshootanarrow	SHOOT	Maru	p a c	p a k	..x
+sagartst:Old Burmese > Burmish|sagartst_1089-toshootanarrow	SHOOT	Pela	p a c	p a k	..x
+sagartst:Old Burmese > Burmish|sagartst_1089-toshootanarrow	SHOOT	Zaiwa	p a c	p i k	.xx
+sagartst:Old Burmese > Burmish|sagartst_1098-green	GREEN	Lashi	ɲː ui	ŋ aː	xx
+sagartst:Old Burmese > Burmish|sagartst_1098-green	GREEN	Longchuan Achang	ɲː ui	nʲ a	xx
+sagartst:Old Burmese > Burmish|sagartst_1098-green	GREEN	Maru	ɲː ui	ŋ u	xx
+sagartst:Old Burmese > Burmish|sagartst_1098-green	GREEN	Pela	ɲː ui	ŋ u	xx
+sagartst:Old Burmese > Burmish|sagartst_1098-green	GREEN	Zaiwa	ɲː ui	ŋ u	xx
+sagartst:Old Burmese > Burmish|sagartst_1121-themosquito	MOSQUITO	Lashi	kʰ r a n	k j a̰ ŋ	xx.x
+sagartst:Old Burmese > Burmish|sagartst_1121-themosquito	MOSQUITO	Maru	kʰ r a n	k j ɔ̰̃ -	xxxx
+sagartst:Old Burmese > Burmish|sagartst_1121-themosquito	MOSQUITO	Pela	kʰ r a n	k j ɔ̰̃ -	xxxx
+sagartst:Old Burmese > Burmish|sagartst_1121-themosquito	MOSQUITO	Zaiwa	kʰ r a n	k j a̰ ŋ	xx.x
+sagartst:Old Burmese > Burmish|sagartst_1127-tocryweep	CRY	Lashi	n ui	ŋ aː	xx
+sagartst:Old Burmese > Burmish|sagartst_1127-tocryweep	CRY	Longchuan Achang	n ui	ŋ a	xx
+sagartst:Old Burmese > Burmish|sagartst_1127-tocryweep	CRY	Maru	n ui	ŋ u	xx
+sagartst:Old Burmese > Burmish|sagartst_1127-tocryweep	CRY	Pela	n ui	ŋ a	xx
+sagartst:Old Burmese > Burmish|sagartst_1127-tocryweep	CRY	Zaiwa	n ui	ŋ a	xx
+sagartst:Old Burmese > Burmish|sagartst_1148-themouseorrat	MUROID (MOUSE OR RAT)	Lashi	k r o k	k j ĭ ʔ	.xxx
+sagartst:Old Burmese > Burmish|sagartst_1148-themouseorrat	MUROID (MOUSE OR RAT)	Longchuan Achang	k r o k	k ʐ o ʔ	.x.x
+sagartst:Old Burmese > Burmish|sagartst_1148-themouseorrat	MUROID (MOUSE OR RAT)	Maru	k r o k	ɣ - u k	xxx.
+sagartst:Old Burmese > Burmish|sagartst_1148-themouseorrat	MUROID (MOUSE OR RAT)	Pela	k r o k	ɣ - ɔ ʔ	xxxx
+sagartst:Old Burmese > Burmish|sagartst_1163-theskin	SKIN	Longchuan Achang	a r i	a ʐ -	.xx
+sagartst:Old Burmese > Burmish|sagartst_1174-thedew	DEW	Lashi	n̊ a n	ŋ a̰ n	x..
+sagartst:Old Burmese > Burmish|sagartst_1174-thedew	DEW	Maru	n̊ a n	ŋ a̰ ŋ	x.x
+sagartst:Old Burmese > Burmish|sagartst_1174-thedew	DEW	Pela	n̊ a n	ŋ ɛ̰̃ -	xxx
+sagartst:Old Burmese > Burmish|sagartst_1174-thedew	DEW	Zaiwa	n̊ a n	ŋ a̰ n	x..
+sagartst:Old Burmese > Burmish|sagartst_1191-salty	SALTY	Pela	n a n	ŋ ɛ̃ -	xxx
+sagartst:Old Burmese > Burmish|sagartst_1200-middle	MIDDLE	Lashi	k r aː	k j o	.xx
+sagartst:Old Burmese > Burmish|sagartst_122-theneck	NECK	Lashi	l a ɲ	l ə ŋ	.xx
+sagartst:Old Burmese > Burmish|sagartst_122-theneck	NECK	Longchuan Achang	l a ɲ	l a ŋ	..x
+sagartst:Old Burmese > Burmish|sagartst_122-theneck	NECK	Maru	l a ɲ	l a ŋ	..x
+sagartst:Old Burmese > Burmish|sagartst_122-theneck	NECK	Pela	l a ɲ	l a ŋ	..x
+sagartst:Old Burmese > Burmish|sagartst_122-theneck	NECK	Zaiwa	l a ɲ	l i ŋ	.xx
+sagartst:Old Burmese > Burmish|sagartst_1220-tochew	CHEW	Maru	w aː	v ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_1220-tochew	CHEW	Pela	w aː	v a	x.
+sagartst:Old Burmese > Burmish|sagartst_1254-thelipthelips	LIP	Lashi	n̊ u t	n u t	x..
+sagartst:Old Burmese > Burmish|sagartst_1254-thelipthelips	LIP	Longchuan Achang	n̊ u t	n̥ʲ o t	xx.
+sagartst:Old Burmese > Burmish|sagartst_1254-thelipthelips	LIP	Maru	n̊ u t	n a̰ t	xx.
+sagartst:Old Burmese > Burmish|sagartst_1254-thelipthelips	LIP	Pela	n̊ u t	n ɔ̰ t	xx.
+sagartst:Old Burmese > Burmish|sagartst_1254-thelipthelips	LIP	Zaiwa	n̊ u t	n ṵ t	x..
+sagartst:Old Burmese > Burmish|sagartst_1264-young	YOUNG	Maru	n a	ŋ a	x.
+sagartst:Old Burmese > Burmish|sagartst_1264-young	YOUNG	Pela	n a	ŋ a	x.
+sagartst:Old Burmese > Burmish|sagartst_127-theseed	SEED	Lashi	m j ui c i	m j o - u	..xxx
+sagartst:Old Burmese > Burmish|sagartst_127-theseed	SEED	Longchuan Achang	m j ui c i	nʲ - a - u	xxxxx
+sagartst:Old Burmese > Burmish|sagartst_127-theseed	SEED	Maru	m j ui c i	m j u k -	..xxx
+sagartst:Old Burmese > Burmish|sagartst_127-theseed	SEED	Pela	m j ui c i	m j u ŋ -	..xxx
+sagartst:Old Burmese > Burmish|sagartst_127-theseed	SEED	Zaiwa	m j ui c i	m j i - -	..xxx
+sagartst:Old Burmese > Burmish|sagartst_1276-themouth	MOUTH	Lashi	n̊ u t	n u t	x..
+sagartst:Old Burmese > Burmish|sagartst_1276-themouth	MOUTH	Longchuan Achang	n̊ u t	n̥ʲ o t	xx.
+sagartst:Old Burmese > Burmish|sagartst_1276-themouth	MOUTH	Maru	n̊ u t	n a̰ t	xx.
+sagartst:Old Burmese > Burmish|sagartst_1276-themouth	MOUTH	Pela	n̊ u t	n ɔ̰ t	xx.
+sagartst:Old Burmese > Burmish|sagartst_1276-themouth	MOUTH	Zaiwa	n̊ u t	n u̠ t	x..
+sagartst:Old Burmese > Burmish|sagartst_1290-theotter	OTTER	Lashi	pʰ j a m̩	- ʃ a̰ m	xx.x
+sagartst:Old Burmese > Burmish|sagartst_1290-theotter	OTTER	Longchuan Achang	pʰ j a m̩	- s a m	xx.x
+sagartst:Old Burmese > Burmish|sagartst_1290-theotter	OTTER	Maru	pʰ j a m̩	x - ɛ̃ -	xxxx
+sagartst:Old Burmese > Burmish|sagartst_1290-theotter	OTTER	Pela	pʰ j a m̩	x - ɛ̃ -	xxxx
+sagartst:Old Burmese > Burmish|sagartst_1290-theotter	OTTER	Zaiwa	pʰ j a m̩	- x a m	xx.x
+sagartst:Old Burmese > Burmish|sagartst_1301-topush	PUSH	Lashi	t o n	t uː n	.x.
+sagartst:Old Burmese > Burmish|sagartst_1301-topush	PUSH	Longchuan Achang	t o n	t u n	.x.
+sagartst:Old Burmese > Burmish|sagartst_1306-red	RED	Lashi	n iː	n ɛː	.x
+sagartst:Old Burmese > Burmish|sagartst_1306-red	RED	Longchuan Achang	n iː	n a	.x
+sagartst:Old Burmese > Burmish|sagartst_1306-red	RED	Maru	n iː	n ɛ	.x
+sagartst:Old Burmese > Burmish|sagartst_1306-red	RED	Pela	n iː	n ɛ	.x
+sagartst:Old Burmese > Burmish|sagartst_1306-red	RED	Zaiwa	n iː	n e	.x
+sagartst:Old Burmese > Burmish|sagartst_1329-tosee	SEE	Lashi	m r a n	m j aː ŋ	.x.x
+sagartst:Old Burmese > Burmish|sagartst_1329-tosee	SEE	Longchuan Achang	m r a n	m ʐ a ŋ	.x.x
+sagartst:Old Burmese > Burmish|sagartst_1329-tosee	SEE	Maru	m r a n	m j ɔ̃ -	.xxx
+sagartst:Old Burmese > Burmish|sagartst_1329-tosee	SEE	Pela	m r a n	m j ɔ̃ -	.xxx
+sagartst:Old Burmese > Burmish|sagartst_1329-tosee	SEE	Zaiwa	m r a n	m j a ŋ	.x.x
+sagartst:Old Burmese > Burmish|sagartst_1356-theearthsoil	EARTH (SOIL)	Lashi	m l i	m j ḭ	.x.
+sagartst:Old Burmese > Burmish|sagartst_1356-theearthsoil	EARTH (SOIL)	Longchuan Achang	m l i	m - i	.x.
+sagartst:Old Burmese > Burmish|sagartst_1356-theearthsoil	EARTH (SOIL)	Maru	m l i	m j i	.x.
+sagartst:Old Burmese > Burmish|sagartst_1356-theearthsoil	EARTH (SOIL)	Pela	m l i	m - i	.x.
+sagartst:Old Burmese > Burmish|sagartst_1356-theearthsoil	EARTH (SOIL)	Zaiwa	m l i	m j i	.x.
+sagartst:Old Burmese > Burmish|sagartst_141-thebodyhairhairorfur	HAIR OR FUR	Lashi	m u	m o	.x
+sagartst:Old Burmese > Burmish|sagartst_141-thebodyhairhairorfur	HAIR OR FUR	Longchuan Achang	m u	m u	..
+sagartst:Old Burmese > Burmish|sagartst_141-thebodyhairhairorfur	HAIR OR FUR	Maru	m u	m u	..
+sagartst:Old Burmese > Burmish|sagartst_141-thebodyhairhairorfur	HAIR OR FUR	Pela	m u	m a	.x
+sagartst:Old Burmese > Burmish|sagartst_141-thebodyhairhairorfur	HAIR OR FUR	Zaiwa	m u	m a	.x
+sagartst:Old Burmese > Burmish|sagartst_144-dark	DARK	Maru	m̥ o n	n ɔ ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_144-dark	DARK	Pela	m̥ o n	n a ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_144-dark	DARK	Zaiwa	m̥ o n	n o ʔ	x.x
+sagartst:Old Burmese > Burmish|sagartst_145-thefrog	FROG	Lashi	pʰ aː	p ɑ̰	x.
+sagartst:Old Burmese > Burmish|sagartst_145-thefrog	FROG	Longchuan Achang	pʰ aː	pʰ ɔ	.x
+sagartst:Old Burmese > Burmish|sagartst_145-thefrog	FROG	Maru	pʰ aː	p ɔ̰	xx
+sagartst:Old Burmese > Burmish|sagartst_145-thefrog	FROG	Pela	pʰ aː	p a̰	x.
+sagartst:Old Burmese > Burmish|sagartst_145-thefrog	FROG	Zaiwa	pʰ aː	p ŏ̰	xx
+sagartst:Old Burmese > Burmish|sagartst_149-full	FULL	Lashi	p l a ɲ	p j əː ŋ	.xxx
+sagartst:Old Burmese > Burmish|sagartst_149-full	FULL	Longchuan Achang	p l a ɲ	p ʐ ə ŋ	.xxx
+sagartst:Old Burmese > Burmish|sagartst_149-full	FULL	Maru	p l a ɲ	p j a ŋ	.x.x
+sagartst:Old Burmese > Burmish|sagartst_149-full	FULL	Pela	p l a ɲ	p j a ŋ	.x.x
+sagartst:Old Burmese > Burmish|sagartst_149-full	FULL	Zaiwa	p l a ɲ	p j i ŋ	.xxx
+sagartst:Old Burmese > Burmish|sagartst_1575-toforget	FORGET	Lashi	m i	m e̱ː	.x
+sagartst:Old Burmese > Burmish|sagartst_1575-toforget	FORGET	Longchuan Achang	m i	ȵ i	x.
+sagartst:Old Burmese > Burmish|sagartst_1575-toforget	FORGET	Maru	m i	m i̠	..
+sagartst:Old Burmese > Burmish|sagartst_1575-toforget	FORGET	Pela	m i	m ə̱	.x
+sagartst:Old Burmese > Burmish|sagartst_1575-toforget	FORGET	Zaiwa	m i	m -	.x
+sagartst:Old Burmese > Burmish|sagartst_159-thefeather	FEATHER	Lashi	a m u	ŏ m o	x.x
+sagartst:Old Burmese > Burmish|sagartst_159-thefeather	FEATHER	Longchuan Achang	a m u	a m u	...
+sagartst:Old Burmese > Burmish|sagartst_159-thefeather	FEATHER	Maru	a m u	ɔ̆ m u	x..
+sagartst:Old Burmese > Burmish|sagartst_163-todie	DIE	Lashi	s i	ʃ eː	xx
+sagartst:Old Burmese > Burmish|sagartst_163-todie	DIE	Longchuan Achang	s i	ʂ ɿ	xx
+sagartst:Old Burmese > Burmish|sagartst_163-todie	DIE	Maru	s i	ʃ i	x.
+sagartst:Old Burmese > Burmish|sagartst_163-todie	DIE	Pela	s i	ʃ ɿ	xx
+sagartst:Old Burmese > Burmish|sagartst_163-todie	DIE	Zaiwa	s i	ʃ i	x.
+sagartst:Old Burmese > Burmish|sagartst_1746-thefire	FIRE	Lashi	m iː	m i	..
+sagartst:Old Burmese > Burmish|sagartst_1746-thefire	FIRE	Maru	m iː	m i	..
+sagartst:Old Burmese > Burmish|sagartst_1746-thefire	FIRE	Pela	m iː	m i	..
+sagartst:Old Burmese > Burmish|sagartst_1746-thefire	FIRE	Zaiwa	m iː	m i	..
+sagartst:Old Burmese > Burmish|sagartst_18-thename	NAME	Lashi	ʔ a m a ɲ	- - m i ŋ	xx.xx
+sagartst:Old Burmese > Burmish|sagartst_18-thename	NAME	Longchuan Achang	ʔ a m a ɲ	- a nʲ i ŋ	x.xxx
+sagartst:Old Burmese > Burmish|sagartst_18-thename	NAME	Maru	ʔ a m a ɲ	- - m a ŋ	xx..x
+sagartst:Old Burmese > Burmish|sagartst_18-thename	NAME	Pela	ʔ a m a ɲ	- - m a ŋ	xx..x
+sagartst:Old Burmese > Burmish|sagartst_18-thename	NAME	Zaiwa	ʔ a m a ɲ	- - m i ŋ	xx.xx
+sagartst:Old Burmese > Burmish|sagartst_183-eight	EIGHT	Lashi	r̥ j a t	ʃ - ɛ̰ t	xxx.
+sagartst:Old Burmese > Burmish|sagartst_183-eight	EIGHT	Longchuan Achang	r̥ j a t	ɕ - e t	xxx.
+sagartst:Old Burmese > Burmish|sagartst_183-eight	EIGHT	Maru	r̥ j a t	ʃ - ɛ ʔ	xxxx
+sagartst:Old Burmese > Burmish|sagartst_183-eight	EIGHT	Pela	r̥ j a t	ʃ - ɛ ʔ	xxxx
+sagartst:Old Burmese > Burmish|sagartst_183-eight	EIGHT	Zaiwa	r̥ j a t	ʃ - i t	xxx.
+sagartst:Old Burmese > Burmish|sagartst_185-hundred	HUNDRED	Maru	r j aː	- j ɔ	x.x
+sagartst:Old Burmese > Burmish|sagartst_185-hundred	HUNDRED	Pela	r j aː	- j a	x..
+sagartst:Old Burmese > Burmish|sagartst_186-thefish	FISH	Lashi	n aː	ŋ ə̆	xx
+sagartst:Old Burmese > Burmish|sagartst_186-thefish	FISH	Longchuan Achang	n aː	ŋ a	x.
+sagartst:Old Burmese > Burmish|sagartst_186-thefish	FISH	Maru	n aː	ŋ ə̆	xx
+sagartst:Old Burmese > Burmish|sagartst_186-thefish	FISH	Pela	n aː	ŋ ə̆	xx
+sagartst:Old Burmese > Burmish|sagartst_186-thefish	FISH	Zaiwa	n aː	ŋ ŏ	xx
+sagartst:Old Burmese > Burmish|sagartst_1866-theyear	YEAR	Longchuan Achang	ʔ a n̊ a c	- - n̥ ə k	xx.xx
+sagartst:Old Burmese > Burmish|sagartst_1913-togive	GIVE	Lashi	p i	p eː	.x
+sagartst:Old Burmese > Burmish|sagartst_1913-togive	GIVE	Maru	p i	p i	..
+sagartst:Old Burmese > Burmish|sagartst_1913-togive	GIVE	Pela	p i	p i	..
+sagartst:Old Burmese > Burmish|sagartst_1913-togive	GIVE	Zaiwa	p i	p i	..
+sagartst:Old Burmese > Burmish|sagartst_1951-thehusband	HUSBAND	Lashi	l a n	l a ŋ	..x
+sagartst:Old Burmese > Burmish|sagartst_1951-thehusband	HUSBAND	Maru	l a n	l ɔ̃ -	.xx
+sagartst:Old Burmese > Burmish|sagartst_1951-thehusband	HUSBAND	Zaiwa	l a n	l a ŋ	..x
+sagartst:Old Burmese > Burmish|sagartst_2-thebone	BONE	Lashi	r ui	ʃ ŏ	xx
+sagartst:Old Burmese > Burmish|sagartst_2-thebone	BONE	Longchuan Achang	r ui	ʐ a	xx
+sagartst:Old Burmese > Burmish|sagartst_2-thebone	BONE	Maru	r ui	ʃ ŏ	xx
+sagartst:Old Burmese > Burmish|sagartst_2-thebone	BONE	Pela	r ui	ʃ ă	xx
+sagartst:Old Burmese > Burmish|sagartst_2-thebone	BONE	Zaiwa	r ui	ʃ ŏ	xx
+sagartst:Old Burmese > Burmish|sagartst_201-theflower	FLOWER	Maru	a p o n	- p ə ŋ	x.xx
+sagartst:Old Burmese > Burmish|sagartst_2065-thedog	DOG	Lashi	kʰ u	kʰ u	..
+sagartst:Old Burmese > Burmish|sagartst_2065-thedog	DOG	Longchuan Achang	kʰ u	x u	x.
+sagartst:Old Burmese > Burmish|sagartst_2065-thedog	DOG	Pela	kʰ u	kʰ u	..
+sagartst:Old Burmese > Burmish|sagartst_2065-thedog	DOG	Zaiwa	kʰ u	kʰ u	..
+sagartst:Old Burmese > Burmish|sagartst_2076-theliver	LIVER	Lashi	ʔ a s a ɲ	- - s ə ŋ	xx.xx
+sagartst:Old Burmese > Burmish|sagartst_2076-theliver	LIVER	Longchuan Achang	ʔ a s a ɲ	- a ʂ ə ŋ	x.xxx
+sagartst:Old Burmese > Burmish|sagartst_2076-theliver	LIVER	Maru	ʔ a s a ɲ	- - s a ŋ	xx..x
+sagartst:Old Burmese > Burmish|sagartst_2076-theliver	LIVER	Pela	ʔ a s a ɲ	- - s a ŋ	xx..x
+sagartst:Old Burmese > Burmish|sagartst_2076-theliver	LIVER	Zaiwa	ʔ a s a ɲ	- - s i ŋ	xx.xx
+sagartst:Old Burmese > Burmish|sagartst_2081-themoon	MOON	Lashi	l a	l o̰	.x
+sagartst:Old Burmese > Burmish|sagartst_2081-themoon	MOON	Longchuan Achang	l a	l ɔ	.x
+sagartst:Old Burmese > Burmish|sagartst_2081-themoon	MOON	Maru	l a	l ɔ̰	.x
+sagartst:Old Burmese > Burmish|sagartst_2081-themoon	MOON	Pela	l a	l ɛ̰̃	.x
+sagartst:Old Burmese > Burmish|sagartst_2081-themoon	MOON	Zaiwa	l a	l o̰	.x
+sagartst:Old Burmese > Burmish|sagartst_209-thehouse	HOUSE	Lashi	i m	ɔ̰ m	x.
+sagartst:Old Burmese > Burmish|sagartst_209-thehouse	HOUSE	Longchuan Achang	i m	i n	.x
+sagartst:Old Burmese > Burmish|sagartst_209-thehouse	HOUSE	Maru	i m	a̰ m	x.
+sagartst:Old Burmese > Burmish|sagartst_209-thehouse	HOUSE	Pela	i m	a̰ m	x.
+sagartst:Old Burmese > Burmish|sagartst_209-thehouse	HOUSE	Zaiwa	i m	ṵ m	x.
+sagartst:Old Burmese > Burmish|sagartst_2090-thenose	NOSE	Lashi	n̊ aː	n o̠	xx
+sagartst:Old Burmese > Burmish|sagartst_2090-thenose	NOSE	Longchuan Achang	n̊ aː	n̥ʲ ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_2090-thenose	NOSE	Maru	n̊ aː	n ɔ̰	xx
+sagartst:Old Burmese > Burmish|sagartst_2090-thenose	NOSE	Pela	n̊ aː	n a̰	x.
+sagartst:Old Burmese > Burmish|sagartst_2090-thenose	NOSE	Zaiwa	n̊ aː	n o̠	xx
+sagartst:Old Burmese > Burmish|sagartst_2092-thepig	PIG	Lashi	w a k	v u ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_2092-thepig	PIG	Longchuan Achang	w a k	- o ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_2092-thepig	PIG	Maru	w a k	v ɔ ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_2092-thepig	PIG	Pela	w a k	v a ʔ	x.x
+sagartst:Old Burmese > Burmish|sagartst_2092-thepig	PIG	Zaiwa	w a k	v a ʔ	x.x
+sagartst:Old Burmese > Burmish|sagartst_212-thesand	SAND	Lashi	s ai	s ə̆	.x
+sagartst:Old Burmese > Burmish|sagartst_212-thesand	SAND	Longchuan Achang	s ai	s ă	.x
+sagartst:Old Burmese > Burmish|sagartst_212-thesand	SAND	Maru	s ai	ʃ ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_212-thesand	SAND	Pela	s ai	ʃ a	xx
+sagartst:Old Burmese > Burmish|sagartst_212-thesand	SAND	Zaiwa	s ai	s ă	.x
+sagartst:Old Burmese > Burmish|sagartst_22-theknee	KNEE	Lashi	p u ts a c	p ɔ̰ t u ʔ	.xxxx
+sagartst:Old Burmese > Burmish|sagartst_22-theknee	KNEE	Maru	p u ts a c	p a̰ t a k	.xx.x
+sagartst:Old Burmese > Burmish|sagartst_22-theknee	KNEE	Pela	p u ts a c	p ɔ̰ t a ʔ	.xx.x
+sagartst:Old Burmese > Burmish|sagartst_220-dry	DRY	Lashi	kʰ r o k	k j ṵː ʔ	xxxx
+sagartst:Old Burmese > Burmish|sagartst_220-dry	DRY	Pela	kʰ r o k	k j a̰ ʔ	xxxx
+sagartst:Old Burmese > Burmish|sagartst_2244-tosleep	SLEEP	Lashi	ʔ i p	j ṵː p	xx.
+sagartst:Old Burmese > Burmish|sagartst_2244-tosleep	SLEEP	Longchuan Achang	ʔ i p	- e -	xxx
+sagartst:Old Burmese > Burmish|sagartst_2244-tosleep	SLEEP	Maru	ʔ i p	j a p	xx.
+sagartst:Old Burmese > Burmish|sagartst_2244-tosleep	SLEEP	Pela	ʔ i p	j a̰ p	xx.
+sagartst:Old Burmese > Burmish|sagartst_2244-tosleep	SLEEP	Zaiwa	ʔ i p	j ṵ p	xx.
+sagartst:Old Burmese > Burmish|sagartst_2246-tostand	STAND	Lashi	r j a p	j - aː p	xx..
+sagartst:Old Burmese > Burmish|sagartst_2246-tostand	STAND	Longchuan Achang	r j a p	ʑ - a p	xx..
+sagartst:Old Burmese > Burmish|sagartst_2246-tostand	STAND	Maru	r j a p	j - ɛ ʔ	xxxx
+sagartst:Old Burmese > Burmish|sagartst_2246-tostand	STAND	Pela	r j a p	j - ɛ ʔ	xxxx
+sagartst:Old Burmese > Burmish|sagartst_2246-tostand	STAND	Zaiwa	r j a p	- j a p	x...
+sagartst:Old Burmese > Burmish|sagartst_229-thehand	HAND	Lashi	l a k	l ɔ ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_229-thehand	HAND	Longchuan Achang	l a k	l ɔ ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_229-thehand	HAND	Maru	l a k	l ɔ ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_229-thehand	HAND	Pela	l a k	l a ʔ	..x
+sagartst:Old Burmese > Burmish|sagartst_229-thehand	HAND	Zaiwa	l a k	l o ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_233-thebranch	BRANCH	Lashi	a kʰ a k	ə̰ k ɔ̰ ʔ	xxxx
+sagartst:Old Burmese > Burmish|sagartst_233-thebranch	BRANCH	Maru	a kʰ a k	a̰ k ɔ̰ ʔ	.xxx
+sagartst:Old Burmese > Burmish|sagartst_233-thebranch	BRANCH	Pela	a kʰ a k	a k a̰ ʔ	.x.x
+sagartst:Old Burmese > Burmish|sagartst_24-nine	NINE	Lashi	k ui	k o	.x
+sagartst:Old Burmese > Burmish|sagartst_24-nine	NINE	Longchuan Achang	k ui	k a	.x
+sagartst:Old Burmese > Burmish|sagartst_24-nine	NINE	Maru	k ui	k u	.x
+sagartst:Old Burmese > Burmish|sagartst_24-nine	NINE	Pela	k ui	k a	.x
+sagartst:Old Burmese > Burmish|sagartst_24-nine	NINE	Zaiwa	k ui	k a	.x
+sagartst:Old Burmese > Burmish|sagartst_2478-shy	SHY	Lashi	r̥ a k	ʃ ɔ̰ː ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_2478-shy	SHY	Maru	r̥ a k	x ɔ ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_2478-shy	SHY	Pela	r̥ a k	x a ʔ	x.x
+sagartst:Old Burmese > Burmish|sagartst_2478-shy	SHY	Zaiwa	r̥ a k	x o ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_2693-that	THAT	Lashi	tʰ ui	tʰ ə	.x
+sagartst:Old Burmese > Burmish|sagartst_2693-that	THAT	Longchuan Achang	tʰ ui	tʰ e	.x
+sagartst:Old Burmese > Burmish|sagartst_2693-that	THAT	Maru	tʰ ui	tʰ ø	.x
+sagartst:Old Burmese > Burmish|sagartst_2787-thewater	WATER	Lashi	r i	k e	xx
+sagartst:Old Burmese > Burmish|sagartst_2787-thewater	WATER	Longchuan Achang	r i	t i	x.
+sagartst:Old Burmese > Burmish|sagartst_2787-thewater	WATER	Maru	r i	ɣ ə	xx
+sagartst:Old Burmese > Burmish|sagartst_2787-thewater	WATER	Pela	r i	ɣ ə	xx
+sagartst:Old Burmese > Burmish|sagartst_2787-thewater	WATER	Zaiwa	r i	v u	xx
+sagartst:Old Burmese > Burmish|sagartst_283-three	THREE	Lashi	s u m̩	s ɔ m	.xx
+sagartst:Old Burmese > Burmish|sagartst_283-three	THREE	Longchuan Achang	s u m̩	s u m	..x
+sagartst:Old Burmese > Burmish|sagartst_283-three	THREE	Maru	s u m̩	s a m	.xx
+sagartst:Old Burmese > Burmish|sagartst_283-three	THREE	Pela	s u m̩	s a m	.xx
+sagartst:Old Burmese > Burmish|sagartst_283-three	THREE	Zaiwa	s u m̩	s u m	..x
+sagartst:Old Burmese > Burmish|sagartst_2954-theant	ANT	Maru	p u r o k ts i p	pʰ ə̆ - - ɣ - u k	xxxxxxxx
+sagartst:Old Burmese > Burmish|sagartst_2954-theant	ANT	Pela	p u r o k ts i p	pʰ ə̆ - - ɣ - ɔ ʔ	xxxxxxxx
+sagartst:Old Burmese > Burmish|sagartst_2954-theant	ANT	Zaiwa	p u r o k ts i p	p a - u v - o ʔ	.xxxxxxx
+sagartst:Old Burmese > Burmish|sagartst_29700-theshit	FAECES (EXCREMENT)	Lashi	kʰ l i	kʰ j e	.xx
+sagartst:Old Burmese > Burmish|sagartst_29700-theshit	FAECES (EXCREMENT)	Longchuan Achang	kʰ l i	tɕʰ - i	xx.
+sagartst:Old Burmese > Burmish|sagartst_29700-theshit	FAECES (EXCREMENT)	Maru	kʰ l i	tɕʰ - i	xx.
+sagartst:Old Burmese > Burmish|sagartst_29700-theshit	FAECES (EXCREMENT)	Pela	kʰ l i	kʰ j i	.x.
+sagartst:Old Burmese > Burmish|sagartst_29700-theshit	FAECES (EXCREMENT)	Zaiwa	kʰ l i	kʰ j i	.x.
+sagartst:Old Burmese > Burmish|sagartst_29703-theblood	BLOOD	Lashi	s u	s u	..
+sagartst:Old Burmese > Burmish|sagartst_29703-theblood	BLOOD	Longchuan Achang	s u	s u	..
+sagartst:Old Burmese > Burmish|sagartst_29703-theblood	BLOOD	Maru	s u	s a	.x
+sagartst:Old Burmese > Burmish|sagartst_29703-theblood	BLOOD	Pela	s u	s u	..
+sagartst:Old Burmese > Burmish|sagartst_29703-theblood	BLOOD	Zaiwa	s u	s u	..
+sagartst:Old Burmese > Burmish|sagartst_29768-thewoman	WOMAN	Lashi	m i n m a	m i j - i	..xxx
+sagartst:Old Burmese > Burmish|sagartst_29768-thewoman	WOMAN	Maru	m i n m a	m i ɣ - ɛ	..xxx
+sagartst:Old Burmese > Burmish|sagartst_29768-thewoman	WOMAN	Pela	m i n m a	m i ɣ - ɛ	..xxx
+sagartst:Old Burmese > Burmish|sagartst_29768-thewoman	WOMAN	Zaiwa	m i n m a	m i - v e	..xxx
+sagartst:Old Burmese > Burmish|sagartst_302-one	ONE	Lashi	t a c	t a -	..x
+sagartst:Old Burmese > Burmish|sagartst_302-one	ONE	Longchuan Achang	t a c	t a -	..x
+sagartst:Old Burmese > Burmish|sagartst_302-one	ONE	Maru	t a c	t a -	..x
+sagartst:Old Burmese > Burmish|sagartst_302-one	ONE	Pela	t a c	t a -	..x
+sagartst:Old Burmese > Burmish|sagartst_302-one	ONE	Zaiwa	t a c	l ă -	x.x
+sagartst:Old Burmese > Burmish|sagartst_306-six	SIX	Lashi	kʰ r o k	kʰ j u k	.xx.
+sagartst:Old Burmese > Burmish|sagartst_306-six	SIX	Longchuan Achang	kʰ r o k	x ʐ o ʔ	xx.x
+sagartst:Old Burmese > Burmish|sagartst_306-six	SIX	Maru	kʰ r o k	kʰ j a k	.xx.
+sagartst:Old Burmese > Burmish|sagartst_306-six	SIX	Pela	kʰ r o k	kʰ j a ʔ	.xxx
+sagartst:Old Burmese > Burmish|sagartst_306-six	SIX	Zaiwa	kʰ r o k	kʰ j u ʔ	.xxx
+sagartst:Old Burmese > Burmish|sagartst_312-thehornkeratinizedskin	HORN (ANATOMY)	Lashi	kʰ j ui	kʰ j o	..x
+sagartst:Old Burmese > Burmish|sagartst_312-thehornkeratinizedskin	HORN (ANATOMY)	Longchuan Achang	kʰ j ui	kʰ ʐ a	.xx
+sagartst:Old Burmese > Burmish|sagartst_312-thehornkeratinizedskin	HORN (ANATOMY)	Maru	kʰ j ui	kʰ j u	..x
+sagartst:Old Burmese > Burmish|sagartst_312-thehornkeratinizedskin	HORN (ANATOMY)	Pela	kʰ j ui	kʰ j u	..x
+sagartst:Old Burmese > Burmish|sagartst_312-thehornkeratinizedskin	HORN (ANATOMY)	Zaiwa	kʰ j ui	kʰ j u	..x
+sagartst:Old Burmese > Burmish|sagartst_3125-tokill	KILL	Lashi	s a t	s a̰ː t	...
+sagartst:Old Burmese > Burmish|sagartst_3125-tokill	KILL	Longchuan Achang	s a t	s a t	...
+sagartst:Old Burmese > Burmish|sagartst_3125-tokill	KILL	Maru	s a t	s ɛ̰ ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_3125-tokill	KILL	Pela	s a t	s ɛ̰ ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_3125-tokill	KILL	Zaiwa	s a t	s a t	...
+sagartst:Old Burmese > Burmish|sagartst_3151-thehorse	HORSE	Lashi	m r a n	m j a ŋ	.x.x
+sagartst:Old Burmese > Burmish|sagartst_3151-thehorse	HORSE	Longchuan Achang	m r a n	m̥ ʐ a ŋ	xx.x
+sagartst:Old Burmese > Burmish|sagartst_3151-thehorse	HORSE	Maru	m r a n	m j ɔ̃ -	.xxx
+sagartst:Old Burmese > Burmish|sagartst_3151-thehorse	HORSE	Pela	m r a n	m j ɔ̃ -	.xxx
+sagartst:Old Burmese > Burmish|sagartst_3151-thehorse	HORSE	Zaiwa	m r a n	m j a ŋ	.x.x
+sagartst:Old Burmese > Burmish|sagartst_3196-thinobject	THIN (OF SHAPE OF OBJECT)	Lashi	p aː	p ɔ̱ː	.x
+sagartst:Old Burmese > Burmish|sagartst_3196-thinobject	THIN (OF SHAPE OF OBJECT)	Maru	p aː	p ɔ̱	.x
+sagartst:Old Burmese > Burmish|sagartst_3196-thinobject	THIN (OF SHAPE OF OBJECT)	Pela	p aː	p a̠	..
+sagartst:Old Burmese > Burmish|sagartst_32-theear	EAR	Lashi	n aː r o k	n a - - -	..xxx
+sagartst:Old Burmese > Burmish|sagartst_32-theear	EAR	Longchuan Achang	n aː r o k	n a - - -	..xxx
+sagartst:Old Burmese > Burmish|sagartst_32-theear	EAR	Maru	n aː r o k	n ə̆ - - -	.xxxx
+sagartst:Old Burmese > Burmish|sagartst_32-theear	EAR	Pela	n aː r o k	n ə̆ - - -	.xxxx
+sagartst:Old Burmese > Burmish|sagartst_32-theear	EAR	Zaiwa	n aː r o k	n ŏ - - -	.xxxx
+sagartst:Old Burmese > Burmish|sagartst_327-ifirstpersonsingular	I	Lashi	n aː	ŋ o	xx
+sagartst:Old Burmese > Burmish|sagartst_327-ifirstpersonsingular	I	Longchuan Achang	n aː	ŋ ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_327-ifirstpersonsingular	I	Maru	n aː	ŋ ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_327-ifirstpersonsingular	I	Pela	n aː	ŋ a	x.
+sagartst:Old Burmese > Burmish|sagartst_327-ifirstpersonsingular	I	Zaiwa	n aː	ŋ o	xx
+sagartst:Old Burmese > Burmish|sagartst_3396-thetree	TREE	Lashi	s a c p a n	s ə̰ k - - -	.xxxxx
+sagartst:Old Burmese > Burmish|sagartst_3396-thetree	TREE	Longchuan Achang	s a c p a n	s a ts - - -	..xxxx
+sagartst:Old Burmese > Burmish|sagartst_3396-thetree	TREE	Maru	s a c p a n	s a̰ k - - -	..xxxx
+sagartst:Old Burmese > Burmish|sagartst_3396-thetree	TREE	Pela	s a c p a n	s a k - - -	..xxxx
+sagartst:Old Burmese > Burmish|sagartst_3396-thetree	TREE	Zaiwa	s a c p a n	s i k - - -	.xxxxx
+sagartst:Old Burmese > Burmish|sagartst_3419-toeat	EAT	Lashi	c aː	ts ɔː	xx
+sagartst:Old Burmese > Burmish|sagartst_3419-toeat	EAT	Longchuan Achang	c aː	tɕ ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_3419-toeat	EAT	Maru	c aː	ts ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_3419-toeat	EAT	Pela	c aː	t a	x.
+sagartst:Old Burmese > Burmish|sagartst_3419-toeat	EAT	Zaiwa	c aː	ts o	xx
+sagartst:Old Burmese > Burmish|sagartst_3525-thefruit	FRUIT	Lashi	s a c s iː	- - - ʃ ɿ	xxxxx
+sagartst:Old Burmese > Burmish|sagartst_3525-thefruit	FRUIT	Longchuan Achang	s a c s iː	- - - ʂ ə	xxxxx
+sagartst:Old Burmese > Burmish|sagartst_3525-thefruit	FRUIT	Maru	s a c s iː	- - - ʃ i	xxxx.
+sagartst:Old Burmese > Burmish|sagartst_3525-thefruit	FRUIT	Pela	s a c s iː	- - - ʃ ɿ	xxxxx
+sagartst:Old Burmese > Burmish|sagartst_3525-thefruit	FRUIT	Zaiwa	s a c s iː	- - - ʃ i	xxxx.
+sagartst:Old Burmese > Burmish|sagartst_375-sharp	SHARP	Lashi	tʰ a k	tʰ ɔː ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_375-sharp	SHARP	Longchuan Achang	tʰ a k	tʰ ɔ ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_375-sharp	SHARP	Maru	tʰ a k	tʰ ɔ ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_375-sharp	SHARP	Pela	tʰ a k	tʰ a ʔ	..x
+sagartst:Old Burmese > Burmish|sagartst_375-sharp	SHARP	Zaiwa	tʰ a k	tʰ o ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_385-thehairofthehead	HAIR	Lashi	ts a m̩	tsʰ a m	x.x
+sagartst:Old Burmese > Burmish|sagartst_385-thehairofthehead	HAIR	Maru	ts a m̩	tsʰ ɛ̃ -	xxx
+sagartst:Old Burmese > Burmish|sagartst_385-thehairofthehead	HAIR	Pela	ts a m̩	tsʰ ɛ̃ -	xxx
+sagartst:Old Burmese > Burmish|sagartst_385-thehairofthehead	HAIR	Zaiwa	ts a m̩	tsʰ a m	x.x
+sagartst:Old Burmese > Burmish|sagartst_3872-firewood	FIREWOOD	Lashi	tʰ a n	tʰ a ŋ	..x
+sagartst:Old Burmese > Burmish|sagartst_3872-firewood	FIREWOOD	Longchuan Achang	tʰ a n	tʰ a ŋ	..x
+sagartst:Old Burmese > Burmish|sagartst_3872-firewood	FIREWOOD	Maru	tʰ a n	tʰ ɔ̃ -	.xx
+sagartst:Old Burmese > Burmish|sagartst_3872-firewood	FIREWOOD	Pela	tʰ a n	tʰ ɔ̃ -	.xx
+sagartst:Old Burmese > Burmish|sagartst_3872-firewood	FIREWOOD	Zaiwa	tʰ a n	tʰ a ŋ	..x
+sagartst:Old Burmese > Burmish|sagartst_4-theeye	EYE	Lashi	m j a k	m j ɔ ʔ	..xx
+sagartst:Old Burmese > Burmish|sagartst_4-theeye	EYE	Maru	m j a k	m j ɔ tʃ	..xx
+sagartst:Old Burmese > Burmish|sagartst_4-theeye	EYE	Pela	m j a k	m j a tʃ	...x
+sagartst:Old Burmese > Burmish|sagartst_4-theeye	EYE	Zaiwa	m j a k	m j o tʃ	..xx
+sagartst:Old Burmese > Burmish|sagartst_403-round	ROUND	Longchuan Achang	l u m̩	l u m	..x
+sagartst:Old Burmese > Burmish|sagartst_403-round	ROUND	Pela	l u m̩	l a m	.xx
+sagartst:Old Burmese > Burmish|sagartst_4160-thesalt	SALT	Lashi	ts aː	tsʰ o	xx
+sagartst:Old Burmese > Burmish|sagartst_4160-thesalt	SALT	Longchuan Achang	ts aː	tɕʰ ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_4160-thesalt	SALT	Maru	ts aː	tsʰ ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_4160-thesalt	SALT	Pela	ts aː	tʰ a	x.
+sagartst:Old Burmese > Burmish|sagartst_4160-thesalt	SALT	Zaiwa	ts aː	tsʰ o	xx
+sagartst:Old Burmese > Burmish|sagartst_4190-thetongue	TONGUE	Lashi	l̥ j aː	j - o̰	xxx
+sagartst:Old Burmese > Burmish|sagartst_4190-thetongue	TONGUE	Longchuan Achang	l̥ j aː	ɕ - ɔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_4190-thetongue	TONGUE	Maru	l̥ j aː	ʃ - ɔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_4190-thetongue	TONGUE	Pela	l̥ j aː	ʃ - a	xx.
+sagartst:Old Burmese > Burmish|sagartst_4190-thetongue	TONGUE	Zaiwa	l̥ j aː	ʃ - o	xxx
+sagartst:Old Burmese > Burmish|sagartst_4213-thefrontfrontside	FRONT (PART)	Lashi	r̥ e	ʃ ə̰	xx
+sagartst:Old Burmese > Burmish|sagartst_4213-thefrontfrontside	FRONT (PART)	Maru	r̥ e	x a	xx
+sagartst:Old Burmese > Burmish|sagartst_4213-thefrontfrontside	FRONT (PART)	Pela	r̥ e	x ə	xx
+sagartst:Old Burmese > Burmish|sagartst_4213-thefrontfrontside	FRONT (PART)	Zaiwa	r̥ e	x i	xx
+sagartst:Old Burmese > Burmish|sagartst_438-tolaugh	LAUGH	Lashi	r a	j iː	xx
+sagartst:Old Burmese > Burmish|sagartst_438-tolaugh	LAUGH	Longchuan Achang	r a	ʐ ə	xx
+sagartst:Old Burmese > Burmish|sagartst_438-tolaugh	LAUGH	Maru	r a	ɣ ə	xx
+sagartst:Old Burmese > Burmish|sagartst_438-tolaugh	LAUGH	Pela	r a	ɣ ə	xx
+sagartst:Old Burmese > Burmish|sagartst_460-white	WHITE	Lashi	pʰ l ū	pʰ j uː	.x.
+sagartst:Old Burmese > Burmish|sagartst_460-white	WHITE	Longchuan Achang	pʰ l ū	pʰ ʐ o	.xx
+sagartst:Old Burmese > Burmish|sagartst_460-white	WHITE	Maru	pʰ l ū	pʰ j u	.x.
+sagartst:Old Burmese > Burmish|sagartst_460-white	WHITE	Pela	pʰ l ū	pʰ j u	.x.
+sagartst:Old Burmese > Burmish|sagartst_460-white	WHITE	Zaiwa	pʰ l ū	pʰ j u	.x.
+sagartst:Old Burmese > Burmish|sagartst_49-above	ABOVE	Pela	ʔ a tʰ a k	- a tʰ a ʔ	x...x
+sagartst:Old Burmese > Burmish|sagartst_499-thesky	SKY	Lashi	m ui	m o	.x
+sagartst:Old Burmese > Burmish|sagartst_499-thesky	SKY	Longchuan Achang	m ui	m a	.x
+sagartst:Old Burmese > Burmish|sagartst_499-thesky	SKY	Maru	m ui	m u	.x
+sagartst:Old Burmese > Burmish|sagartst_499-thesky	SKY	Pela	m ui	m a	.x
+sagartst:Old Burmese > Burmish|sagartst_499-thesky	SKY	Zaiwa	m ui	m a	.x
+sagartst:Old Burmese > Burmish|sagartst_501-thebamboo	BAMBOO	Lashi	w aː	w o	.x
+sagartst:Old Burmese > Burmish|sagartst_501-thebamboo	BAMBOO	Longchuan Achang	w aː	- o	xx
+sagartst:Old Burmese > Burmish|sagartst_501-thebamboo	BAMBOO	Maru	w aː	v ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_501-thebamboo	BAMBOO	Pela	w aː	v a	x.
+sagartst:Old Burmese > Burmish|sagartst_501-thebamboo	BAMBOO	Zaiwa	w aː	v a	x.
+sagartst:Old Burmese > Burmish|sagartst_511-black	BLACK	Lashi	n a k	n ɔː ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_511-black	BLACK	Longchuan Achang	n a k	l ɔ k	xx.
+sagartst:Old Burmese > Burmish|sagartst_511-black	BLACK	Maru	n a k	n ɔ ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_511-black	BLACK	Pela	n a k	n a ʔ	..x
+sagartst:Old Burmese > Burmish|sagartst_511-black	BLACK	Zaiwa	n a k	n o ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_524-small	SMALL	Lashi	n a	ŋ ɛː	xx
+sagartst:Old Burmese > Burmish|sagartst_524-small	SMALL	Longchuan Achang	n a	nʲ i	xx
+sagartst:Old Burmese > Burmish|sagartst_524-small	SMALL	Maru	n a	ŋ a	x.
+sagartst:Old Burmese > Burmish|sagartst_524-small	SMALL	Pela	n a	ŋ a	x.
+sagartst:Old Burmese > Burmish|sagartst_539-theheart	HEART	Lashi	n̊ a l u m̩	n ə̰ l ɔ m	xx.xx
+sagartst:Old Burmese > Burmish|sagartst_539-theheart	HEART	Longchuan Achang	n̊ a l u m̩	n̥ʲ a l u m	x...x
+sagartst:Old Burmese > Burmish|sagartst_539-theheart	HEART	Maru	n̊ a l u m̩	n a̰ l a m	x..xx
+sagartst:Old Burmese > Burmish|sagartst_539-theheart	HEART	Pela	n̊ a l u m̩	n a̰ l a m	x..xx
+sagartst:Old Burmese > Burmish|sagartst_539-theheart	HEART	Zaiwa	n̊ a l u m̩	n ḭ l ṵ m	xx..x
+sagartst:Old Burmese > Burmish|sagartst_547-long	LONG	Lashi	r̥ a ɲ	ʃ ə̰ː ŋ	xxx
+sagartst:Old Burmese > Burmish|sagartst_547-long	LONG	Longchuan Achang	r̥ a ɲ	s ə ŋ	xxx
+sagartst:Old Burmese > Burmish|sagartst_547-long	LONG	Maru	r̥ a ɲ	x a ŋ	x.x
+sagartst:Old Burmese > Burmish|sagartst_547-long	LONG	Pela	r̥ a ɲ	x a ŋ	x.x
+sagartst:Old Burmese > Burmish|sagartst_547-long	LONG	Zaiwa	r̥ a ɲ	x i ŋ	xxx
+sagartst:Old Burmese > Burmish|sagartst_55-seven	SEVEN	Longchuan Achang	kʰ u n a c	- - nʲ i t	xxxxx
+sagartst:Old Burmese > Burmish|sagartst_55-seven	SEVEN	Maru	kʰ u n a c	- - n a̰ t	xx..x
+sagartst:Old Burmese > Burmish|sagartst_55-seven	SEVEN	Pela	kʰ u n a c	- - n ɔ̰ t	xx.xx
+sagartst:Old Burmese > Burmish|sagartst_666-thefrost	FROST	Lashi	n̊ a n	ŋ a̰ n	x..
+sagartst:Old Burmese > Burmish|sagartst_666-thefrost	FROST	Longchuan Achang	n̊ a n	ŋ̊ a n	x..
+sagartst:Old Burmese > Burmish|sagartst_666-thefrost	FROST	Maru	n̊ a n	ŋ a̰ ŋ	x.x
+sagartst:Old Burmese > Burmish|sagartst_666-thefrost	FROST	Pela	n̊ a n	ŋ ɛ̰̃ -	xxx
+sagartst:Old Burmese > Burmish|sagartst_666-thefrost	FROST	Zaiwa	n̊ a n	ŋ a̰ n	x..
+sagartst:Old Burmese > Burmish|sagartst_68-thesmoke	SMOKE (EXHAUST)	Lashi	kʰ ui	kʰ o	.x
+sagartst:Old Burmese > Burmish|sagartst_68-thesmoke	SMOKE (EXHAUST)	Longchuan Achang	kʰ ui	x a	xx
+sagartst:Old Burmese > Burmish|sagartst_68-thesmoke	SMOKE (EXHAUST)	Maru	kʰ ui	kʰ u	.x
+sagartst:Old Burmese > Burmish|sagartst_68-thesmoke	SMOKE (EXHAUST)	Zaiwa	kʰ ui	kʰ a	.x
+sagartst:Old Burmese > Burmish|sagartst_690-thehead	HEAD	Longchuan Achang	kʰ o n	k u ŋ	xxx
+sagartst:Old Burmese > Burmish|sagartst_692-thesnow	SNOW	Pela	n̊ a n	ŋ ɛ̰̃ -	xxx
+sagartst:Old Burmese > Burmish|sagartst_7-near	NEAR	Longchuan Achang	n iː	n e	.x
+sagartst:Old Burmese > Burmish|sagartst_70-thesnake	SNAKE	Lashi	m r u	m j u	.x.
+sagartst:Old Burmese > Burmish|sagartst_70-thesnake	SNAKE	Longchuan Achang	m r u	m ʐ u	.x.
+sagartst:Old Burmese > Burmish|sagartst_70-thesnake	SNAKE	Maru	m r u	m - ɔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_70-thesnake	SNAKE	Pela	m r u	m - ø	.xx
+sagartst:Old Burmese > Burmish|sagartst_70-thesnake	SNAKE	Zaiwa	m r u	m - u	.x.
+sagartst:Old Burmese > Burmish|sagartst_711-todig	DIG	Lashi	tʰ ū	t uː	x.
+sagartst:Old Burmese > Burmish|sagartst_711-todig	DIG	Longchuan Achang	tʰ ū	t u	x.
+sagartst:Old Burmese > Burmish|sagartst_711-todig	DIG	Maru	tʰ ū	t u	x.
+sagartst:Old Burmese > Burmish|sagartst_716-thelung	LUNG	Lashi	ʔ a ts u t	- - ts ɔ̰ t	xx.x.
+sagartst:Old Burmese > Burmish|sagartst_716-thelung	LUNG	Longchuan Achang	ʔ a ts u t	- a tɕʰ o t	x.xx.
+sagartst:Old Burmese > Burmish|sagartst_716-thelung	LUNG	Maru	ʔ a ts u t	- - ts a̰ t	xx.x.
+sagartst:Old Burmese > Burmish|sagartst_716-thelung	LUNG	Pela	ʔ a ts u t	- - ts ɔ̰ t	xx.x.
+sagartst:Old Burmese > Burmish|sagartst_716-thelung	LUNG	Zaiwa	ʔ a ts u t	- - ts ṵ t	xx...
+sagartst:Old Burmese > Burmish|sagartst_73-theson	SON	Longchuan Achang	s aː	ts ɔ	xx
+sagartst:Old Burmese > Burmish|sagartst_73-theson	SON	Maru	s aː	ts o	xx
+sagartst:Old Burmese > Burmish|sagartst_73-theson	SON	Pela	s aː	t a	x.
+sagartst:Old Burmese > Burmish|sagartst_73-theson	SON	Zaiwa	s aː	ts o	xx
+sagartst:Old Burmese > Burmish|sagartst_774-thegoat	GOAT	Maru	ts i t	tʃʰ a t	xx.
+sagartst:Old Burmese > Burmish|sagartst_807-thelouse	LOUSE	Lashi	s a n	ʃ ɛ̰ n	xx.
+sagartst:Old Burmese > Burmish|sagartst_807-thelouse	LOUSE	Longchuan Achang	s a n	ʂ a n	x..
+sagartst:Old Burmese > Burmish|sagartst_807-thelouse	LOUSE	Maru	s a n	ʃ i ŋ	xxx
+sagartst:Old Burmese > Burmish|sagartst_807-thelouse	LOUSE	Pela	s a n	ʃ ɔ n	xx.
+sagartst:Old Burmese > Burmish|sagartst_807-thelouse	LOUSE	Zaiwa	s a n	ʃ i n	xx.
+sagartst:Old Burmese > Burmish|sagartst_8175-thewoodmaterial	WOOD	Maru	s a c	s a k	..x
+sagartst:Old Burmese > Burmish|sagartst_83-thesun	SUN	Longchuan Achang	n i	n i	..
+sagartst:Old Burmese > Burmish|sagartst_84-thetail	TAIL	Lashi	m r iː	m j i	.x.
+sagartst:Old Burmese > Burmish|sagartst_84-thetail	TAIL	Maru	m r iː	m j i	.x.
+sagartst:Old Burmese > Burmish|sagartst_84-thetail	TAIL	Pela	m r iː	m - i	.x.
+sagartst:Old Burmese > Burmish|sagartst_84-thetail	TAIL	Zaiwa	m r iː	m j i	.x.
+sagartst:Old Burmese > Burmish|sagartst_88-thenailfingernailorclaw	CLAW OR NAIL	Lashi	l a k s a ɲ	l ɔ ʔ s ə̰ ŋ	.xx.xx
+sagartst:Old Burmese > Burmish|sagartst_88-thenailfingernailorclaw	CLAW OR NAIL	Longchuan Achang	l a k s a ɲ	l ɔ ʔ ʂ ə ŋ	.xxxxx
+sagartst:Old Burmese > Burmish|sagartst_88-thenailfingernailorclaw	CLAW OR NAIL	Maru	l a k s a ɲ	l ɔ ʔ s a ŋ	.xx..x
+sagartst:Old Burmese > Burmish|sagartst_88-thenailfingernailorclaw	CLAW OR NAIL	Pela	l a k s a ɲ	l a ʔ s a ŋ	..x..x
+sagartst:Old Burmese > Burmish|sagartst_88-thenailfingernailorclaw	CLAW OR NAIL	Zaiwa	l a k s a ɲ	l o ʔ s i ŋ	.xx.xx
+sagartst:Old Burmese > Burmish|sagartst_881-theleaf	LEAF	Longchuan Achang	ʔ a r o k	- a ʐ o ʔ	x.x.x
+sagartst:Old Burmese > Burmish|sagartst_881-theleaf	LEAF	Zaiwa	ʔ a r o k	- a x a ʔ	x.xxx
+sagartst:Old Burmese > Burmish|sagartst_883-tocome	COME	Lashi	l aː	l eː	.x
+sagartst:Old Burmese > Burmish|sagartst_883-tocome	COME	Longchuan Achang	l aː	ʐ ə	xx
+sagartst:Old Burmese > Burmish|sagartst_883-tocome	COME	Maru	l aː	l i	.x
+sagartst:Old Burmese > Burmish|sagartst_883-tocome	COME	Pela	l aː	l a	..
+sagartst:Old Burmese > Burmish|sagartst_883-tocome	COME	Zaiwa	l aː	l e	.x
+sagartst:Old Burmese > Burmish|sagartst_887-towalk	WALK	Lashi	s w aː	s - ɔ̰ː	.xx
+sagartst:Old Burmese > Burmish|sagartst_887-towalk	WALK	Longchuan Achang	s w aː	s - o	.xx
+sagartst:Old Burmese > Burmish|sagartst_887-towalk	WALK	Maru	s w aː	s - u	.xx
+sagartst:Old Burmese > Burmish|sagartst_887-towalk	WALK	Pela	s w aː	s - ɔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_887-towalk	WALK	Zaiwa	s w aː	s - o	.xx
+sagartst:Old Burmese > Burmish|sagartst_896-hightall	HIGH	Lashi	m r a n	m j a̰ː ŋ	.x.x
+sagartst:Old Burmese > Burmish|sagartst_896-hightall	HIGH	Longchuan Achang	m r a n	m̥ ʐ a ŋ	xx.x
+sagartst:Old Burmese > Burmish|sagartst_896-hightall	HIGH	Maru	m r a n	m j ɔ̃ -	.xxx
+sagartst:Old Burmese > Burmish|sagartst_896-hightall	HIGH	Pela	m r a n	m j ɔ̰̃ -	.xxx
+sagartst:Old Burmese > Burmish|sagartst_896-hightall	HIGH	Zaiwa	m r a n	m j a̰ ŋ	.x.x
+sagartst:Old Burmese > Burmish|sagartst_898-ten	TEN	Lashi	t a ts a	t ă tsʰ e	..xx
+sagartst:Old Burmese > Burmish|sagartst_898-ten	TEN	Longchuan Achang	t a ts a	tɕʰ e - -	xxxx
+sagartst:Old Burmese > Burmish|sagartst_898-ten	TEN	Maru	t a ts a	tsʰ ɛ - -	xxxx
+sagartst:Old Burmese > Burmish|sagartst_898-ten	TEN	Pela	t a ts a	t ă tʰ a	..x.
+sagartst:Old Burmese > Burmish|sagartst_898-ten	TEN	Zaiwa	t a ts a	tsʰ e - -	xxxx
+sagartst:Old Burmese > Burmish|sagartst_909-big	BIG	Lashi	k r iː	k j iː	.x.
+sagartst:Old Burmese > Burmish|sagartst_909-big	BIG	Longchuan Achang	k r iː	k ʐ ə	.xx
+sagartst:Old Burmese > Burmish|sagartst_909-big	BIG	Maru	k r iː	ɣ - ə	xxx
+sagartst:Old Burmese > Burmish|sagartst_909-big	BIG	Pela	k r iː	k - ɔ̰	.xx
+sagartst:Old Burmese > Burmish|sagartst_909-big	BIG	Zaiwa	k r iː	k - o̰	.xx
+sagartst:Old Burmese > Burmish|sagartst_910-thebird	BIRD	Lashi	ŋ̊ a k	ŋ ɔ̰ ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_910-thebird	BIRD	Longchuan Achang	ŋ̊ a k	m̥ ɔ ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_910-thebird	BIRD	Maru	ŋ̊ a k	ŋ ɔ̰ ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_910-thebird	BIRD	Pela	ŋ̊ a k	ŋ a̰ ʔ	x.x
+sagartst:Old Burmese > Burmish|sagartst_910-thebird	BIRD	Zaiwa	ŋ̊ a k	ŋ o̰ ʔ	xxx
+sagartst:Old Burmese > Burmish|sagartst_919-theforest	FOREST	Lashi	s a c t a u	s ə̰ k j o -	.xxxxx
+sagartst:Old Burmese > Burmish|sagartst_919-theforest	FOREST	Maru	s a c t a u	s a̰ k j ɔ -	..xxxx
+sagartst:Old Burmese > Burmish|sagartst_919-theforest	FOREST	Pela	s a c t a u	s a k j a -	..xx.x
+sagartst:Old Burmese > Burmish|sagartst_928-tothrow	THROW	Maru	p a c	p ɛ̰ ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_928-tothrow	THROW	Pela	p a c	p ɛ̰ ʔ	.xx
+sagartst:Old Burmese > Burmish|sagartst_932-toflow	FLOW	Longchuan Achang	c iː	s o	xx
+sagartst:Old Burmese > Burmish|sagartst_944-theflea	FLEA	Lashi	l̥ i	l ḛ	xx
+sagartst:Old Burmese > Burmish|sagartst_944-theflea	FLEA	Longchuan Achang	l̥ i	l̥ i	..
+sagartst:Old Burmese > Burmish|sagartst_944-theflea	FLEA	Maru	l̥ i	l a̰	xx
+sagartst:Old Burmese > Burmish|sagartst_944-theflea	FLEA	Pela	l̥ i	l ṵ	xx
+sagartst:Old Burmese > Burmish|sagartst_944-theflea	FLEA	Zaiwa	l̥ i	l a̰	xx
+sagartst:Old Burmese > Burmish|sagartst_947-tobuy	BUY	Lashi	w a	ɣ əː	xx
+sagartst:Old Burmese > Burmish|sagartst_947-tobuy	BUY	Longchuan Achang	w a	- o	xx
+sagartst:Old Burmese > Burmish|sagartst_947-tobuy	BUY	Maru	w a	v a	x.
+sagartst:Old Burmese > Burmish|sagartst_947-tobuy	BUY	Pela	w a	v ɛ	xx
+sagartst:Old Burmese > Burmish|sagartst_947-tobuy	BUY	Zaiwa	w a	v u	xx
+sagartst:Old Burmese > Burmish|sagartst_966-thefoot	FOOT	Lashi	kʰ r i	kʰ j e	.xx
+sagartst:Old Burmese > Burmish|sagartst_966-thefoot	FOOT	Longchuan Achang	kʰ r i	tɕʰ - i	xx.
+sagartst:Old Burmese > Burmish|sagartst_966-thefoot	FOOT	Maru	kʰ r i	kʰ j i	.x.
+sagartst:Old Burmese > Burmish|sagartst_966-thefoot	FOOT	Pela	kʰ r i	kʰ j i	.x.
+sagartst:Old Burmese > Burmish|sagartst_966-thefoot	FOOT	Zaiwa	kʰ r i	kʰ j i	.x.
+sagartst:Old Burmese > Burmish|sagartst_994-thewind	WIND	Lashi	l i	l e	.x
+sagartst:Old Burmese > Burmish|sagartst_994-thewind	WIND	Longchuan Achang	l i	l̥ i	x.
+sagartst:Old Burmese > Burmish|sagartst_994-thewind	WIND	Maru	l i	l a	.x
+sagartst:Old Burmese > Burmish|sagartst_994-thewind	WIND	Pela	l i	l i	..
+sagartst:Old Burmese > Burmish|sagartst_994-thewind	WIND	Zaiwa	l i	l a	.x
+sagartst:Old Burmese > Burmish|sagartst_997-new	NEW	Lashi	s a c	s ə̰ː k	.xx
+sagartst:Old Burmese > Burmish|sagartst_997-new	NEW	Longchuan Achang	s a c	ʂ ə k	xxx
+sagartst:Old Burmese > Burmish|sagartst_997-new	NEW	Maru	s a c	s a̰ k	..x
+sagartst:Old Burmese > Burmish|sagartst_997-new	NEW	Pela	s a c	s a k	..x
+sagartst:Old Burmese > Burmish|sagartst_997-new	NEW	Zaiwa	s a c	s i k	.xx
