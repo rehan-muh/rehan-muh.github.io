@@ -1,0 +1,495 @@
+Set	Concept	Language	Ancestor	Aligned	Changed
+iecor:Church Slavic > South Slavic|iecor_1105	ASH	Bulgarian	p ɔ p ɛ l ʊ̆	p ɛ p ɘ lˠ -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_1105	ASH	Macedonian	p ɔ p ɛ l ʊ̆	p e̞ p ɛ lˠ -	.x..xx
+iecor:Church Slavic > South Slavic|iecor_1105	ASH	Macedonian (253)	p ɔ p ɛ l ʊ̆	pʲ e̞ pʲ i l -	xxxx.x
+iecor:Church Slavic > South Slavic|iecor_1105	ASH	Macedonian (254)	p ɔ p ɛ l ʊ̆	p e̞ pʲ ɐ lˠ -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_1109	BIRD	Bulgarian	p ʊ̆ t i tsʲ a	p - tʲ i ts ə	.xx.xx
+iecor:Church Slavic > South Slavic|iecor_1109	BIRD	Macedonian	p ʊ̆ t i tsʲ a	p - t i ts ɑ̈	.x..x.
+iecor:Church Slavic > South Slavic|iecor_1110	BITE	Bulgarian	x ɑ p ɑ t i	x ɑ̈ pʲ - - -	..xxxx
+iecor:Church Slavic > South Slavic|iecor_1111	BLACK	Bulgarian	tʃ r̩ʲ n ʊ̆	tʃ ɛ n -	.x.x
+iecor:Church Slavic > South Slavic|iecor_1111	BLACK	Macedonian	tʃ r̩ʲ n ʊ̆	ts ə n -	xx.x
+iecor:Church Slavic > South Slavic|iecor_1111	BLACK	Macedonian (253)	tʃ r̩ʲ n ʊ̆	tʃ ɑ̈ n ɐ	.x.x
+iecor:Church Slavic > South Slavic|iecor_1111	BLACK	Macedonian (254)	tʃ r̩ʲ n ʊ̆	tʃ e̞ n ɐ	.x.x
+iecor:Church Slavic > South Slavic|iecor_1112	BLOOD	Bulgarian	k r ʊ ʋ ɪ̆	k ɾ ɤ f -	..xxx
+iecor:Church Slavic > South Slavic|iecor_1112	BLOOD	Macedonian	k r ʊ ʋ ɪ̆	k ɾ - f -	..xxx
+iecor:Church Slavic > South Slavic|iecor_1112	BLOOD	Macedonian (253)	k r ʊ ʋ ɪ̆	k ɾ ə̆ ɸ -	..xxx
+iecor:Church Slavic > South Slavic|iecor_1112	BLOOD	Macedonian (254)	k r ʊ ʋ ɪ̆	k ɾ ə̆ f -	..xxx
+iecor:Church Slavic > South Slavic|iecor_1114	BONE	Bulgarian	k ɔ s t ɪ̆	k ɔ s t -	....x
+iecor:Church Slavic > South Slavic|iecor_1114	BONE	Macedonian	k ɔ s t ɪ̆	k o̞ s k -	.x.xx
+iecor:Church Slavic > South Slavic|iecor_1115	BREATHE	Bulgarian	d ɯ x ɑ t i	dʲ i ʃ - - -	xxxxxx
+iecor:Church Slavic > South Slavic|iecor_1115	BREATHE	Macedonian	d ɯ x ɑ t i	d i ʃ - - -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_1115	BREATHE	Macedonian (253)	d ɯ x ɑ t i	d ə x - - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_1115	BREATHE	Macedonian (254)	d ɯ x ɑ t i	d ə x - - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_1117	CLOUD	Bulgarian	ɔ b l ɑ k ʊ̆	ɔ b lˠ ə k -	..xx.x
+iecor:Church Slavic > South Slavic|iecor_1117	CLOUD	Macedonian	ɔ b l ɑ k ʊ̆	o̞ b lˠ ɑ̈ k -	x.x..x
+iecor:Church Slavic > South Slavic|iecor_1117	CLOUD	Macedonian (253)	ɔ b l ɑ k ʊ̆	o̞ b l ɐ k -	x..x.x
+iecor:Church Slavic > South Slavic|iecor_1117	CLOUD	Macedonian (254)	ɔ b l ɑ k ʊ̆	o̞ b l ɐ k -	x..x.x
+iecor:Church Slavic > South Slavic|iecor_1125	DUST	Bulgarian	p r ɑ x ʊ̆	p ɾ ɑ̈ x -	....x
+iecor:Church Slavic > South Slavic|iecor_1125	DUST	Macedonian	p r ɑ x ʊ̆	p ɾ ɑ̈ f -	...xx
+iecor:Church Slavic > South Slavic|iecor_1125	DUST	Macedonian (253)	p r ɑ x ʊ̆	p ɾ ɑ̈ ʃ ɐ	...xx
+iecor:Church Slavic > South Slavic|iecor_1125	DUST	Macedonian (254)	p r ɑ x ʊ̆	p ɾ ɑ̈ ʃ ɐ	...xx
+iecor:Church Slavic > South Slavic|iecor_1126	FALL	Bulgarian	p ɑ s t i	p ɑ̈ - - -	..xxx
+iecor:Church Slavic > South Slavic|iecor_1126	FALL	Macedonian	p ɑ s t i	p ɑ̈ - - -	..xxx
+iecor:Church Slavic > South Slavic|iecor_1126	FALL	Macedonian (253)	p ɑ s t i	p ɑ̈ - - -	..xxx
+iecor:Church Slavic > South Slavic|iecor_1126	FALL	Macedonian (254)	p ɑ s t i	p ɑ̈ - - -	..xxx
+iecor:Church Slavic > South Slavic|iecor_1131	FISH	Bulgarian	r ɯ b ɑ	ɾʲ i b ə	xx.x
+iecor:Church Slavic > South Slavic|iecor_1131	FISH	Macedonian	r ɯ b ɑ	ɾ i b ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_1131	FISH	Macedonian (253)	r ɯ b ɑ	ɾʲ i b ɐ	xx.x
+iecor:Church Slavic > South Slavic|iecor_1131	FISH	Macedonian (254)	r ɯ b ɑ	ɾʲ i b ɐ	xx.x
+iecor:Church Slavic > South Slavic|iecor_1133	FLOWER	Bulgarian	tsʲ ʋ æ t ʊ̆	ts v ɛ t -	x.x.x
+iecor:Church Slavic > South Slavic|iecor_1133	FLOWER	Macedonian	tsʲ ʋ æ t ʊ̆	ts v e̞ c -	x.xxx
+iecor:Church Slavic > South Slavic|iecor_1134	FLY (MOVE THROUGH AIR)	Bulgarian	l ɛ t æ t i	l ɘ tʲ - - -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_1134	FLY (MOVE THROUGH AIR)	Macedonian	l ɛ t æ t i	l e̞ t - - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_1134	FLY (MOVE THROUGH AIR)	Macedonian (253)	l ɛ t æ t i	lʲ ɑ̈ t - - -	xx.xxx
+iecor:Church Slavic > South Slavic|iecor_1134	FLY (MOVE THROUGH AIR)	Macedonian (254)	l ɛ t æ t i	l ɑ̈ t - - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_1137	GOOD	Bulgarian	d ɔ b r ʊ̆	d u b ɾ -	.x..x
+iecor:Church Slavic > South Slavic|iecor_1137	GOOD	Macedonian	d ɔ b r ʊ̆	d o̞ b ɾ -	.x..x
+iecor:Church Slavic > South Slavic|iecor_1138	GRASS	Bulgarian	t r æ ʋ ɑ	t ɾ ɘ v ɑ̈	..x..
+iecor:Church Slavic > South Slavic|iecor_1138	GRASS	Macedonian	t r æ ʋ ɑ	t ɾ e̞ v ɑ̈	..x..
+iecor:Church Slavic > South Slavic|iecor_1138	GRASS	Macedonian (253)	t r æ ʋ ɑ	t rʲ æ β ɐ	.x.xx
+iecor:Church Slavic > South Slavic|iecor_1138	GRASS	Macedonian (254)	t r æ ʋ ɑ	t ɾʲ æ v ɐ	.x..x
+iecor:Church Slavic > South Slavic|iecor_1141	HAND	Bulgarian	r ɔ̃ k ɑ	ɾ ə k ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_1141	HAND	Macedonian	r ɔ̃ k ɑ	ɾ ɑ̈ k ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_1141	HAND	Macedonian (253)	r ɔ̃ k ɑ	ɾ ə k ɐ	.x.x
+iecor:Church Slavic > South Slavic|iecor_1141	HAND	Macedonian (254)	r ɔ̃ k ɑ	ɾ ə k ɐ	.x.x
+iecor:Church Slavic > South Slavic|iecor_1142	HEAD	Bulgarian	ɡ l ɑ ʋ ɑ	ɡ lˠ ə v ɑ̈	.xx..
+iecor:Church Slavic > South Slavic|iecor_1142	HEAD	Macedonian	ɡ l ɑ ʋ ɑ	ɡ lˠ ɑ̈ v ɑ̈	.x...
+iecor:Church Slavic > South Slavic|iecor_1142	HEAD	Macedonian (253)	ɡ l ɑ ʋ ɑ	ɡ l ɑ̈ β ɐ	...xx
+iecor:Church Slavic > South Slavic|iecor_1142	HEAD	Macedonian (254)	ɡ l ɑ ʋ ɑ	ɡ l ɑ̈ v ɐ	....x
+iecor:Church Slavic > South Slavic|iecor_1143	HEAVY	Bulgarian	t ɛ̃ ʒ ɪ k ʊ̆	t ɛ ʒ ə k -	.x.x.x
+iecor:Church Slavic > South Slavic|iecor_1143	HEAVY	Macedonian	t ɛ̃ ʒ ɪ k ʊ̆	t e̞ ʒ ɔ k -	.x.x.x
+iecor:Church Slavic > South Slavic|iecor_1143	HEAVY	Macedonian (253)	t ɛ̃ ʒ ɪ k ʊ̆	tʲ e̞ ʃ - k ɐ	xxxx.x
+iecor:Church Slavic > South Slavic|iecor_1143	HEAVY	Macedonian (254)	t ɛ̃ ʒ ɪ k ʊ̆	t ə dʒ i - -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_1144	HIT	Bulgarian	u d ɑ r i t i	u d ɑ̈ ɾʲ ə - -	...xxxx
+iecor:Church Slavic > South Slavic|iecor_1144	HIT	Macedonian	u d ɑ r i t i	u d - ɾ i - -	..x..xx
+iecor:Church Slavic > South Slavic|iecor_1144	HIT	Macedonian (253)	u d ɑ r i t i	u d - ɾʲ i - -	..xx.xx
+iecor:Church Slavic > South Slavic|iecor_1144	HIT	Macedonian (254)	u d ɑ r i t i	u d - ɾʲ i - -	..xx.xx
+iecor:Church Slavic > South Slavic|iecor_1145	HUNT	Bulgarian	l ɔ ʋ i t i	lˠ u v u - -	xx.xxx
+iecor:Church Slavic > South Slavic|iecor_1145	HUNT	Macedonian	l ɔ ʋ i t i	lˠ o̞ v i - -	xx..xx
+iecor:Church Slavic > South Slavic|iecor_1145	HUNT	Macedonian (253)	l ɔ ʋ i t i	l o̞ ɸ - - -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_1145	HUNT	Macedonian (254)	l ɔ ʋ i t i	l o̞ f - - -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_1146	ICE	Bulgarian	l ɛ d ʊ̆	l ɛ t -	..xx
+iecor:Church Slavic > South Slavic|iecor_1146	ICE	Macedonian (253)	l ɛ d ʊ̆	lʲ e̞ t -	xxxx
+iecor:Church Slavic > South Slavic|iecor_1146	ICE	Macedonian (254)	l ɛ d ʊ̆	lʲ e̞ t -	xxxx
+iecor:Church Slavic > South Slavic|iecor_1147	KILL	Bulgarian	u b i t i	u bʲ i - -	.x.xx
+iecor:Church Slavic > South Slavic|iecor_1147	KILL	Macedonian	u b i t i	u b i - -	...xx
+iecor:Church Slavic > South Slavic|iecor_1148	LAKE	Bulgarian	j ɛ z ɛ r ɔ	- ɛ z ɘ ɾ u	x..x.x
+iecor:Church Slavic > South Slavic|iecor_1148	LAKE	Macedonian	j ɛ z ɛ r ɔ	- e̞ z ɛ ɾ ɔ	xx....
+iecor:Church Slavic > South Slavic|iecor_1149	LAUGH	Bulgarian	s m i j a t i s ɛ̃	s m ɛ j ə - - - -	..x.xxxxx
+iecor:Church Slavic > South Slavic|iecor_1149	LAUGH	Macedonian	s m i j a t i s ɛ̃	s m e̞ - ɛ - - - -	..xxxxxxx
+iecor:Church Slavic > South Slavic|iecor_1149	LAUGH	Macedonian (253)	s m i j a t i s ɛ̃	s mʲ ɑ̈ j ɐ - - - -	.xx.xxxxx
+iecor:Church Slavic > South Slavic|iecor_1149	LAUGH	Macedonian (254)	s m i j a t i s ɛ̃	s mʲ ɑ̈ j ɐ - - - -	.xx.xxxxx
+iecor:Church Slavic > South Slavic|iecor_1150	LEAF	Bulgarian	l i s t ʊ̆	lʲ i s t -	x...x
+iecor:Church Slavic > South Slavic|iecor_1150	LEAF	Macedonian	l i s t ʊ̆	l i s t -	....x
+iecor:Church Slavic > South Slavic|iecor_1150	LEAF	Macedonian (253)	l i s t ʊ̆	lʲ i s t u	x...x
+iecor:Church Slavic > South Slavic|iecor_1150	LEAF	Macedonian (254)	l i s t ʊ̆	lʲ i s t u	x...x
+iecor:Church Slavic > South Slavic|iecor_1151	LEFT	Bulgarian	l æ ʋ ʊ̆	lʲ ɑ̈ f -	xxxx
+iecor:Church Slavic > South Slavic|iecor_1151	LEFT	Macedonian	l æ ʋ ʊ̆	l e̞ f -	.xxx
+iecor:Church Slavic > South Slavic|iecor_1151	LEFT	Macedonian (253)	l æ ʋ ʊ̆	lʲ ɑ̈ β ɐ	xxxx
+iecor:Church Slavic > South Slavic|iecor_1151	LEFT	Macedonian (254)	l æ ʋ ʊ̆	lʲ ɑ̈ v ɐ	xx.x
+iecor:Church Slavic > South Slavic|iecor_1157	NEAR	Bulgarian	b l i z ʊ̆	b lʲ i s u	.x.xx
+iecor:Church Slavic > South Slavic|iecor_1157	NEAR	Macedonian	b l i z ʊ̆	b l i z u	....x
+iecor:Church Slavic > South Slavic|iecor_1157	NEAR	Macedonian (253)	b l i z ʊ̆	b lʲ i zʲ ɐ	.x.xx
+iecor:Church Slavic > South Slavic|iecor_1157	NEAR	Macedonian (254)	b l i z ʊ̆	b lʲ i zʲ ɐ	.x.xx
+iecor:Church Slavic > South Slavic|iecor_1158	OLD	Bulgarian	s t ɑ r ʊ̆	s t ɑ̈ ɾ -	....x
+iecor:Church Slavic > South Slavic|iecor_1158	OLD	Macedonian	s t ɑ r ʊ̆	s t ɑ̈ ɾ̥ -	...xx
+iecor:Church Slavic > South Slavic|iecor_1158	OLD	Macedonian (253)	s t ɑ r ʊ̆	s t ɑ̈ ɾ -	....x
+iecor:Church Slavic > South Slavic|iecor_1158	OLD	Macedonian (254)	s t ɑ r ʊ̆	s t ɑ̈ ɾ -	....x
+iecor:Church Slavic > South Slavic|iecor_1161	PLAY	Bulgarian	i ɡ r ɑ t i	i ɡ ɾ ɑ̈ - -	....xx
+iecor:Church Slavic > South Slavic|iecor_1161	PLAY	Macedonian	i ɡ r ɑ t i	i ɡ ɾ ɑ̈ - -	....xx
+iecor:Church Slavic > South Slavic|iecor_1161	PLAY	Macedonian (253)	i ɡ r ɑ t i	i ɡ ɾ ɐ - -	...xxx
+iecor:Church Slavic > South Slavic|iecor_1161	PLAY	Macedonian (254)	i ɡ r ɑ t i	i ɡ ɾ ɐ - -	...xxx
+iecor:Church Slavic > South Slavic|iecor_1163	RED	Bulgarian	tʃ r̩ʲ ʋ ʎ ɛ n ʊ̆	tʃ ɘ - ɾ ɛ n -	.xxx..x
+iecor:Church Slavic > South Slavic|iecor_1163	RED	Macedonian	tʃ r̩ʲ ʋ ʎ ɛ n ʊ̆	ts ə - ɾ ɛ n -	xxxx..x
+iecor:Church Slavic > South Slavic|iecor_1163	RED	Macedonian (253)	tʃ r̩ʲ ʋ ʎ ɛ n ʊ̆	tʃ ɐ - ɾ e̞ n -	.xxxx.x
+iecor:Church Slavic > South Slavic|iecor_1163	RED	Macedonian (254)	tʃ r̩ʲ ʋ ʎ ɛ n ʊ̆	tʃ ɐ - ɾ e̞ n -	.xxxx.x
+iecor:Church Slavic > South Slavic|iecor_1165	ROOT	Bulgarian	k ɔ r ɛ n ɪ̆	k ɔ ɾ ɘ n -	...x.x
+iecor:Church Slavic > South Slavic|iecor_1165	ROOT	Macedonian	k ɔ r ɛ n ɪ̆	k o̞ ɾ ɛ n -	.x...x
+iecor:Church Slavic > South Slavic|iecor_1165	ROOT	Macedonian (253)	k ɔ r ɛ n ɪ̆	k o̞ ɾʲ i nʲ -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_1165	ROOT	Macedonian (254)	k ɔ r ɛ n ɪ̆	k o̞ ɾʲ i nʲ -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_1166	ROTTEN	Bulgarian	s ʊ̆ ɡ n i l ʊ̆	- - ɡ nʲ i lˠ -	xx.x.xx
+iecor:Church Slavic > South Slavic|iecor_1166	ROTTEN	Macedonian	s ʊ̆ ɡ n i l ʊ̆	- - ɡ n i lˠ -	xx...xx
+iecor:Church Slavic > South Slavic|iecor_1168	SAND	Bulgarian	p æ s ʊ k ʊ̆	pʲ ɑ̈ s ə k -	xx.x.x
+iecor:Church Slavic > South Slavic|iecor_1168	SAND	Macedonian	p æ s ʊ k ʊ̆	p e̞ s ɔ k -	.x.x.x
+iecor:Church Slavic > South Slavic|iecor_1168	SAND	Macedonian (253)	p æ s ʊ k ʊ̆	pʲ ɑ̈ s u k -	xx.x.x
+iecor:Church Slavic > South Slavic|iecor_1168	SAND	Macedonian (254)	p æ s ʊ k ʊ̆	pʲ ɑ̈ s u k -	xx.x.x
+iecor:Church Slavic > South Slavic|iecor_1169	SAY	Macedonian (253)	r ɛ ʃ tʲ i	ɾʲ e̞ - - -	xxxxx
+iecor:Church Slavic > South Slavic|iecor_1169	SAY	Macedonian (254)	r ɛ ʃ tʲ i	ɾʲ e̞ - - -	xxxxx
+iecor:Church Slavic > South Slavic|iecor_1170	SING	Bulgarian	p æ t i	p ɛ - -	.xxx
+iecor:Church Slavic > South Slavic|iecor_1170	SING	Macedonian	p æ t i	p e̞ - -	.xxx
+iecor:Church Slavic > South Slavic|iecor_1170	SING	Macedonian (253)	p æ t i	pʲ æ - -	x.xx
+iecor:Church Slavic > South Slavic|iecor_1170	SING	Macedonian (254)	p æ t i	pʲ æ - -	x.xx
+iecor:Church Slavic > South Slavic|iecor_1171	SKIN	Bulgarian	k ɔ ʒ a	k ɔ ʒ ə	...x
+iecor:Church Slavic > South Slavic|iecor_1171	SKIN	Macedonian	k ɔ ʒ a	k o̞ ʒ ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_1171	SKIN	Macedonian (253)	k ɔ ʒ a	k o̞ ʒ ɐ	.x.x
+iecor:Church Slavic > South Slavic|iecor_1171	SKIN	Macedonian (254)	k ɔ ʒ a	k o̞ ʒ ɐ	.x.x
+iecor:Church Slavic > South Slavic|iecor_1172	SKY	Bulgarian	n ɛ b ɔ	n ɘ b ɛ	.x.x
+iecor:Church Slavic > South Slavic|iecor_1172	SKY	Macedonian	n ɛ b ɔ	n e̞ b ɔ	.x..
+iecor:Church Slavic > South Slavic|iecor_1172	SKY	Macedonian (253)	n ɛ b ɔ	nʲ i bʲ e̞	xxxx
+iecor:Church Slavic > South Slavic|iecor_1172	SKY	Macedonian (254)	n ɛ b ɔ	nʲ i bʲ e̞	xxxx
+iecor:Church Slavic > South Slavic|iecor_1173	SMALL	Bulgarian	m ɑ l ʊ̆	m ɑ̈ lˠ ə	..xx
+iecor:Church Slavic > South Slavic|iecor_1173	SMALL	Macedonian	m ɑ l ʊ̆	m ɑ̈ lˠ -	..xx
+iecor:Church Slavic > South Slavic|iecor_1173	SMALL	Macedonian (253)	m ɑ l ʊ̆	m ɑ̈ l u	...x
+iecor:Church Slavic > South Slavic|iecor_1173	SMALL	Macedonian (254)	m ɑ l ʊ̆	m ɑ̈ l ɐ	...x
+iecor:Church Slavic > South Slavic|iecor_1175	SNAKE	Bulgarian	z m i j a	z mʲ i j ɑ̈	.x...
+iecor:Church Slavic > South Slavic|iecor_1175	SNAKE	Macedonian	z m i j a	z m i j a	.....
+iecor:Church Slavic > South Slavic|iecor_1177	STAR	Bulgarian	d zʲ ʋ æ z d ɑ	- z v ɘ z d ɑ̈	xx.x...
+iecor:Church Slavic > South Slavic|iecor_1177	STAR	Macedonian	d zʲ ʋ æ z d ɑ	d z v e̞ z d ɑ̈	.x.x...
+iecor:Church Slavic > South Slavic|iecor_1177	STAR	Macedonian (253)	d zʲ ʋ æ z d ɑ	- z βʲ æ z d ɐ	xxx...x
+iecor:Church Slavic > South Slavic|iecor_1177	STAR	Macedonian (254)	d zʲ ʋ æ z d ɑ	- z vʲ æ z d ɐ	xxx...x
+iecor:Church Slavic > South Slavic|iecor_1179	STONE	Bulgarian	k ɑ m ɯ	k ɑ̈ m ə	...x
+iecor:Church Slavic > South Slavic|iecor_1179~100~8a60e8	STONE	Macedonian	k ɑ m ɛ n ɪ̆	k ɑ̈ m ɛ n -	.....x
+iecor:Church Slavic > South Slavic|iecor_1179~100~8a60e8	STONE	Macedonian (253)	k ɑ m ɛ n ɪ̆	k ɑ̈ mʲ i nʲ -	..xxxx
+iecor:Church Slavic > South Slavic|iecor_1179~100~8a60e8	STONE	Macedonian (254)	k ɑ m ɛ n ɪ̆	k ɑ̈ mʲ i nʲ -	..xxxx
+iecor:Church Slavic > South Slavic|iecor_1180	STRAIGHT	Bulgarian	p r ɑ ʋ ʊ̆	p ɾ ɑ̈ f -	...xx
+iecor:Church Slavic > South Slavic|iecor_1180	STRAIGHT	Macedonian	p r ɑ ʋ ʊ̆	p ɾ ɑ̈ f -	...xx
+iecor:Church Slavic > South Slavic|iecor_1180	STRAIGHT	Macedonian (253)	p r ɑ ʋ ʊ̆	p ɾ ɑ̈ ɸ -	...xx
+iecor:Church Slavic > South Slavic|iecor_1180	STRAIGHT	Macedonian (254)	p r ɑ ʋ ʊ̆	p ɾ ɑ̈ f -	...xx
+iecor:Church Slavic > South Slavic|iecor_1181	SWIM	Bulgarian	p l ɑ ʋ ɑ t i	p lˠ u v ə - -	.xx.xxx
+iecor:Church Slavic > South Slavic|iecor_1181	SWIM	Macedonian	p l ɑ ʋ ɑ t i	p l i v ɑ̈ - -	..x..xx
+iecor:Church Slavic > South Slavic|iecor_1181	SWIM	Macedonian (253)	p l ɑ ʋ ɑ t i	p l ɑ̈ βʲ ɐ - -	...xxxx
+iecor:Church Slavic > South Slavic|iecor_1181	SWIM	Macedonian (254)	p l ɑ ʋ ɑ t i	p l ɐ vʲ e̞ - -	..xxxxx
+iecor:Church Slavic > South Slavic|iecor_1182	TAIL	Bulgarian	ɔ p ɑ ʃ ɪ̆	u p ɑ̈ ʃ -	x...x
+iecor:Church Slavic > South Slavic|iecor_1182	TAIL	Macedonian	ɔ p ɑ ʃ ɪ̆	o̞ p ɑ̈ ʃ -	x...x
+iecor:Church Slavic > South Slavic|iecor_1182	TAIL	Macedonian (253)	ɔ p ɑ ʃ ɪ̆	- p ɑ̈ ʃ -	x...x
+iecor:Church Slavic > South Slavic|iecor_1184	THINK (REFLECT)	Bulgarian	m ɯ s l i t i	mʲ i s lʲ ə - -	xx.xxxx
+iecor:Church Slavic > South Slavic|iecor_1184	THINK (REFLECT)	Macedonian	m ɯ s l i t i	m i s l i - -	.x...xx
+iecor:Church Slavic > South Slavic|iecor_1184	THINK (REFLECT)	Macedonian (254)	m ɯ s l i t i	mʲ i s lʲ ɐ - -	xx.xxxx
+iecor:Church Slavic > South Slavic|iecor_1186	TURN	Bulgarian	ɔ b r ɑ t i t i	u b ɾ ɤ t ə - -	x..x.xxx
+iecor:Church Slavic > South Slavic|iecor_1186	TURN	Macedonian	ɔ b r ɑ t i t i	- v ɾ - t i - -	xx.x..xx
+iecor:Church Slavic > South Slavic|iecor_1186	TURN	Macedonian (254)	ɔ b r ɑ t i t i	- v ɾ ə t u - -	xx.x.xxx
+iecor:Church Slavic > South Slavic|iecor_1187	VOMIT	Macedonian (253)	b ʎ ɪ̆ ʋ ɑ t i	b - ə β ɐ - -	.xxxxxx
+iecor:Church Slavic > South Slavic|iecor_1187	VOMIT	Macedonian (254)	b ʎ ɪ̆ ʋ ɑ t i	b l ə v ɐ - -	.xx.xxx
+iecor:Church Slavic > South Slavic|iecor_1188	WASH	Bulgarian	m ɯ t i	mʲ i - -	xxxx
+iecor:Church Slavic > South Slavic|iecor_1188	WASH	Macedonian	m ɯ t i	m i - -	.xxx
+iecor:Church Slavic > South Slavic|iecor_1188	WASH	Macedonian (253)	m ɯ t i	m u - -	.xxx
+iecor:Church Slavic > South Slavic|iecor_1188	WASH	Macedonian (254)	m ɯ t i	mʲ i - -	xxxx
+iecor:Church Slavic > South Slavic|iecor_1189	WET	Bulgarian	m ɔ k r ʊ̆	m ɔ k ɾ -	....x
+iecor:Church Slavic > South Slavic|iecor_1189	WET	Macedonian	m ɔ k r ʊ̆	m o̞ k ɾ̥ -	.x.xx
+iecor:Church Slavic > South Slavic|iecor_1189	WET	Macedonian (253)	m ɔ k r ʊ̆	m o̞ k ɾ ɐ	.x..x
+iecor:Church Slavic > South Slavic|iecor_1189	WET	Macedonian (254)	m ɔ k r ʊ̆	m o̞ k ɾ ɐ	.x..x
+iecor:Church Slavic > South Slavic|iecor_1190	WHITE	Bulgarian	b æ l ʊ̆	bʲ ɑ̈ lˠ -	xxxx
+iecor:Church Slavic > South Slavic|iecor_1190	WHITE	Macedonian	b æ l ʊ̆	b e̞ lˠ -	.xxx
+iecor:Church Slavic > South Slavic|iecor_1190	WHITE	Macedonian (253)	b æ l ʊ̆	bʲ æ lˠ -	x.xx
+iecor:Church Slavic > South Slavic|iecor_1190	WHITE	Macedonian (254)	b æ l ʊ̆	bʲ æ lˠ -	x.xx
+iecor:Church Slavic > South Slavic|iecor_1191	WIDE	Bulgarian	ʃ i r ɔ k ʊ̆	ʃ i ɾ o k -	...x.x
+iecor:Church Slavic > South Slavic|iecor_1191	WIDE	Macedonian	ʃ i r ɔ k ʊ̆	ʃ i ɾ ɔ k -	.....x
+iecor:Church Slavic > South Slavic|iecor_1191	WIDE	Macedonian (253)	ʃ i r ɔ k ʊ̆	ʃ ɐ ɾ ɔ k -	.x...x
+iecor:Church Slavic > South Slavic|iecor_1191	WIDE	Macedonian (254)	ʃ i r ɔ k ʊ̆	ʃ ɐ ɾ o̞ k -	.x.x.x
+iecor:Church Slavic > South Slavic|iecor_1192	WING	Bulgarian	k r i l ɔ	k ɾʲ i lˠ ɔ	.x.x.
+iecor:Church Slavic > South Slavic|iecor_1192	WING	Macedonian	k r i l ɔ	k ɾ i lˠ o	...xx
+iecor:Church Slavic > South Slavic|iecor_1192	WING	Macedonian (253)	k r i l ɔ	k ɾʲ i l u	.x..x
+iecor:Church Slavic > South Slavic|iecor_1192	WING	Macedonian (254)	k r i l ɔ	k ɾʲ i l u	.x..x
+iecor:Church Slavic > South Slavic|iecor_1201~100~16e765	FIGHT	Bulgarian	b ɔ r i t i s ɛ̃	b ɔ ɾʲ ə - - - -	..xxxxxx
+iecor:Church Slavic > South Slavic|iecor_1201~100~16e765	FIGHT	Macedonian	b ɔ r i t i s ɛ̃	b o̞ ɾ i - - - -	.x..xxxx
+iecor:Church Slavic > South Slavic|iecor_1201~100~16e765	FIGHT	Macedonian (253)	b ɔ r i t i s ɛ̃	b o̞ ɾʲ ɐ - - - -	.xxxxxxx
+iecor:Church Slavic > South Slavic|iecor_1201~100~16e765	FIGHT	Macedonian (254)	b ɔ r i t i s ɛ̃	b o̞ ɾʲ ɐ - - - -	.xxxxxxx
+iecor:Church Slavic > South Slavic|iecor_1206	RAIN (RAINING)	Bulgarian	d ʊ ʒ d ɪ̆	d ɤ ʃ t -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_1206	RAIN (RAINING)	Macedonian	d ʊ ʒ d ɪ̆	d o̞ ʃ t -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_1206	RAIN (RAINING)	Macedonian (253)	d ʊ ʒ d ɪ̆	d ə ʃ - -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_1206	RAIN (RAINING)	Macedonian (254)	d ʊ ʒ d ɪ̆	d ə ʃ - -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_1231	LEG	Macedonian	n ɔ ɡ ɑ	n o̞ ɡ ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_1231	LEG	Macedonian (253)	n ɔ ɡ ɑ	n o̞ ɡ ɐ	.x.x
+iecor:Church Slavic > South Slavic|iecor_1231	LEG	Macedonian (254)	n ɔ ɡ ɑ	n o̞ ɡ ɐ	.x.x
+iecor:Church Slavic > South Slavic|iecor_146	THREE	Bulgarian	t r ɪ̆ j ɛ	t ɾʲ i - -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_146	THREE	Macedonian	t r ɪ̆ j ɛ	t ɾ i - -	..xxx
+iecor:Church Slavic > South Slavic|iecor_146	THREE	Macedonian (253)	t r ɪ̆ j ɛ	t ɾʲ i - -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_146	THREE	Macedonian (254)	t r ɪ̆ j ɛ	t ɾʲ i - -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_153	TWO	Bulgarian	d ʊ̆ ʋ ɑ	d - v ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_153	TWO	Macedonian	d ʊ̆ ʋ ɑ	d - v ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_153	TWO	Macedonian (253)	d ʊ̆ ʋ ɑ	d - β ɑ̈	.xx.
+iecor:Church Slavic > South Slavic|iecor_153	TWO	Macedonian (254)	d ʊ̆ ʋ ɑ	d - v ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_172	WORM	Bulgarian	tʃ r̩ʲ ʋ ɪ̆	tʃ ɾ v ɘ	.x.x
+iecor:Church Slavic > South Slavic|iecor_172	WORM	Macedonian	tʃ r̩ʲ ʋ ɪ̆	ts ɾ f -	xxxx
+iecor:Church Slavic > South Slavic|iecor_172	WORM	Macedonian (253)	tʃ r̩ʲ ʋ ɪ̆	tʃ ɾ βʲ ɐ	.xxx
+iecor:Church Slavic > South Slavic|iecor_172	WORM	Macedonian (254)	tʃ r̩ʲ ʋ ɪ̆	tʃ ɾ vʲ ɐ	.xxx
+iecor:Church Slavic > South Slavic|iecor_18	DIE	Bulgarian	u m r æ t i	u m ɾ ɤ - -	...xxx
+iecor:Church Slavic > South Slavic|iecor_18	DIE	Macedonian	u m r æ t i	u m ɾ ɛ - -	...xxx
+iecor:Church Slavic > South Slavic|iecor_18	DIE	Macedonian (253)	u m r æ t i	u mʲ ɾ ɐ - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_18	DIE	Macedonian (254)	u m r æ t i	u mʲ ɾ ɐ - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_208	EAR	Bulgarian	u x ɔ	u x ɔ	...
+iecor:Church Slavic > South Slavic|iecor_208	EAR	Macedonian	u x ɔ	u v ɔ	.x.
+iecor:Church Slavic > South Slavic|iecor_208	EAR	Macedonian (253)	u x ɔ	u x u	..x
+iecor:Church Slavic > South Slavic|iecor_208	EAR	Macedonian (254)	u x ɔ	u x u	..x
+iecor:Church Slavic > South Slavic|iecor_210	EAT	Bulgarian	j a s t i	j ɑ̈ - - -	..xxx
+iecor:Church Slavic > South Slavic|iecor_210	EAT	Macedonian	j a s t i	j ɑ̈ - - -	..xxx
+iecor:Church Slavic > South Slavic|iecor_210	EAT	Macedonian (253)	j a s t i	j ɑ̈ - - -	..xxx
+iecor:Church Slavic > South Slavic|iecor_210	EAT	Macedonian (254)	j a s t i	j ɑ̈ - - -	..xxx
+iecor:Church Slavic > South Slavic|iecor_211	EYE	Bulgarian	ɔ k ɔ	u k ɔ	x..
+iecor:Church Slavic > South Slavic|iecor_211	EYE	Macedonian	ɔ k ɔ	o̞ k ɔ	x..
+iecor:Church Slavic > South Slavic|iecor_211	EYE	Macedonian (253)	ɔ k ɔ	o̞ k u	x.x
+iecor:Church Slavic > South Slavic|iecor_211	EYE	Macedonian (254)	ɔ k ɔ	o̞ k u	x.x
+iecor:Church Slavic > South Slavic|iecor_2232	MOON	Macedonian	m æ s ɛ̃ tsʲ ɪ̆	m ɛ s e̞ - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_2232	MOON	Macedonian (253)	m æ s ɛ̃ tsʲ ɪ̆	mʲ i sʲ i - -	xxxxxx
+iecor:Church Slavic > South Slavic|iecor_2232	MOON	Macedonian (254)	m æ s ɛ̃ tsʲ ɪ̆	mʲ i sʲ i - -	xxxxxx
+iecor:Church Slavic > South Slavic|iecor_2235	FULL	Bulgarian	p l̩ n ʊ̆	p ɤ n -	.x.x
+iecor:Church Slavic > South Slavic|iecor_2235	FULL	Macedonian	p l̩ n ʊ̆	p o̞ n -	.x.x
+iecor:Church Slavic > South Slavic|iecor_2235	FULL	Macedonian (253)	p l̩ n ʊ̆	p ə n -	.x.x
+iecor:Church Slavic > South Slavic|iecor_2235	FULL	Macedonian (254)	p l̩ n ʊ̆	p ə n -	.x.x
+iecor:Church Slavic > South Slavic|iecor_2243	BURN	Bulgarian	ɡ ɔ r æ t i	ɡ u ɾʲ - - -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_2243	BURN	Macedonian	ɡ ɔ r æ t i	ɡ o̞ ɾ - - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_2243	BURN	Macedonian (253)	ɡ ɔ r æ t i	ɡ u ɾʲ - - -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_2243	BURN	Macedonian (254)	ɡ ɔ r æ t i	ɡ u ɾʲ - - -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_2268	FINGERNAIL OR TOENAIL	Bulgarian	n ɔ ɡ ʊ t ɪ̆	n ɔ k ə t -	..xx.x
+iecor:Church Slavic > South Slavic|iecor_2268	FINGERNAIL OR TOENAIL	Macedonian	n ɔ ɡ ʊ t ɪ̆	n o̞ k ɔ t -	.xxx.x
+iecor:Church Slavic > South Slavic|iecor_2268	FINGERNAIL OR TOENAIL	Macedonian (253)	n ɔ ɡ ʊ t ɪ̆	n o̞ ɸ - tʲ -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_2268	FINGERNAIL OR TOENAIL	Macedonian (254)	n ɔ ɡ ʊ t ɪ̆	n o̞ f - tʲ -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_2444	ROUND	Bulgarian	ɔ k r ɔ̃ ɡ l ʊ̆	- k ɾ ɤ ɡ lˠ -	x..x.xx
+iecor:Church Slavic > South Slavic|iecor_2458	HORN (ANATOMY)	Bulgarian	r ɔ ɡ ʊ̆	ɾ ɔ k -	..xx
+iecor:Church Slavic > South Slavic|iecor_2458	HORN (ANATOMY)	Macedonian	r ɔ ɡ ʊ̆	ɾ o̞ k -	.xxx
+iecor:Church Slavic > South Slavic|iecor_2458	HORN (ANATOMY)	Macedonian (253)	r ɔ ɡ ʊ̆	ɾ o̞ k -	.xxx
+iecor:Church Slavic > South Slavic|iecor_2458	HORN (ANATOMY)	Macedonian (254)	r ɔ ɡ ʊ̆	ɾ o̞ k -	.xxx
+iecor:Church Slavic > South Slavic|iecor_2485	COLD	Bulgarian	s t u d ɛ n ʊ̆	s t u d ɛ n -	......x
+iecor:Church Slavic > South Slavic|iecor_2485	COLD	Macedonian	s t u d ɛ n ʊ̆	s t u d ɛ n -	......x
+iecor:Church Slavic > South Slavic|iecor_257	LONG	Bulgarian	d l̩ ɡ ʊ̆	d ɤ k -	.xxx
+iecor:Church Slavic > South Slavic|iecor_257	LONG	Macedonian	d l̩ ɡ ʊ̆	d o̞ k -	.xxx
+iecor:Church Slavic > South Slavic|iecor_257	LONG	Macedonian (253)	d l̩ ɡ ʊ̆	d ə k -	.xxx
+iecor:Church Slavic > South Slavic|iecor_257	LONG	Macedonian (254)	d l̩ ɡ ʊ̆	d ə k -	.xxx
+iecor:Church Slavic > South Slavic|iecor_266	NIGHT	Bulgarian	n ɔ ʃ tʲ ɪ̆	n ɔ ʃ t -	...xx
+iecor:Church Slavic > South Slavic|iecor_266	NIGHT	Macedonian	n ɔ ʃ tʲ ɪ̆	n o̞ - c -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_267	NOSE	Bulgarian	n ɔ s ʊ̆	n ɔ s -	...x
+iecor:Church Slavic > South Slavic|iecor_267	NOSE	Macedonian	n ɔ s ʊ̆	n o̞ s -	.x.x
+iecor:Church Slavic > South Slavic|iecor_267	NOSE	Macedonian (253)	n ɔ s ʊ̆	n o̞ s -	.x.x
+iecor:Church Slavic > South Slavic|iecor_267	NOSE	Macedonian (254)	n ɔ s ʊ̆	n o̞ s -	.x.x
+iecor:Church Slavic > South Slavic|iecor_2786	KNEE	Bulgarian	k ɔ l æ n ɔ	k u lʲ ɑ̈ n u	.xxx.x
+iecor:Church Slavic > South Slavic|iecor_2786	KNEE	Macedonian	k ɔ l æ n ɔ	k o̞ l ɛ n ɔ	.x.x..
+iecor:Church Slavic > South Slavic|iecor_2786	KNEE	Macedonian (253)	k ɔ l æ n ɔ	k u lʲ ɑ̈ n u	.xxx.x
+iecor:Church Slavic > South Slavic|iecor_2786	KNEE	Macedonian (254)	k ɔ l æ n ɔ	k u lʲ ɑ̈ n u	.xxx.x
+iecor:Church Slavic > South Slavic|iecor_28	EGG	Bulgarian	ɑ j ɪ̆ tsʲ ɛ	- j ə ts ɛ	x.xx.
+iecor:Church Slavic > South Slavic|iecor_28	EGG	Macedonian	ɑ j ɪ̆ tsʲ ɛ	ɑ̈ j - ts ɛ	..xx.
+iecor:Church Slavic > South Slavic|iecor_28	EGG	Macedonian (253)	ɑ j ɪ̆ tsʲ ɛ	- - i ts e̞	xxxxx
+iecor:Church Slavic > South Slavic|iecor_28	EGG	Macedonian (254)	ɑ j ɪ̆ tsʲ ɛ	- - i ts e̞	xxxxx
+iecor:Church Slavic > South Slavic|iecor_2806	NARROW	Bulgarian	t æ s n ʊ̆	t ɛ s n -	.x..x
+iecor:Church Slavic > South Slavic|iecor_2806	NARROW	Macedonian	t æ s n ʊ̆	t e̞ s n -	.x..x
+iecor:Church Slavic > South Slavic|iecor_283	SALT	Bulgarian	s ɔ l ɪ̆	s ɔ lˠ -	..xx
+iecor:Church Slavic > South Slavic|iecor_283	SALT	Macedonian	s ɔ l ɪ̆	s o̞ lˠ -	.xxx
+iecor:Church Slavic > South Slavic|iecor_283	SALT	Macedonian (253)	s ɔ l ɪ̆	s o̞ lʲ -	.xxx
+iecor:Church Slavic > South Slavic|iecor_283	SALT	Macedonian (254)	s ɔ l ɪ̆	s o̞ lʲ -	.xxx
+iecor:Church Slavic > South Slavic|iecor_287	SEA	Bulgarian	m ɔ rʲ ɛ	m u ɾ ɛ	.xx.
+iecor:Church Slavic > South Slavic|iecor_287	SEA	Macedonian	m ɔ rʲ ɛ	m o̞ ɾ ɛ	.xx.
+iecor:Church Slavic > South Slavic|iecor_287	SEA	Macedonian (253)	m ɔ rʲ ɛ	m o̞ ɾʲ i	.x.x
+iecor:Church Slavic > South Slavic|iecor_287	SEA	Macedonian (254)	m ɔ rʲ ɛ	m o̞ ɾʲ i	.x.x
+iecor:Church Slavic > South Slavic|iecor_289	SEED	Bulgarian	s æ m ɛ̃	s ɛ m ɘ	.x.x
+iecor:Church Slavic > South Slavic|iecor_289	SEED	Macedonian	s æ m ɛ̃	s e̞ m ɛ	.x.x
+iecor:Church Slavic > South Slavic|iecor_289	SEED	Macedonian (253)	s æ m ɛ̃	sʲ æ mʲ ɐ	x.xx
+iecor:Church Slavic > South Slavic|iecor_289	SEED	Macedonian (254)	s æ m ɛ̃	sʲ æ mʲ ɐ	x.xx
+iecor:Church Slavic > South Slavic|iecor_294	SIT	Bulgarian	s æ d æ t i	s ɘ dʲ - - -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_294	SIT	Macedonian	s æ d æ t i	s e̞ d - - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_294	SIT	Macedonian (253)	s æ d æ t i	sʲ æ dʲ - - -	x.xxxx
+iecor:Church Slavic > South Slavic|iecor_294	SIT	Macedonian (254)	s æ d æ t i	sʲ ɐ dʲ - - -	xxxxxx
+iecor:Church Slavic > South Slavic|iecor_301	SMOOTH	Bulgarian	ɡ l ɑ d ʊ k ʊ̆	ɡ lˠ ɑ̈ d ə k -	.x..x.x
+iecor:Church Slavic > South Slavic|iecor_303	SNOW	Bulgarian	s n æ ɡ ʊ̆	s nʲ ɑ̈ k -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_303	SNOW	Macedonian	s n æ ɡ ʊ̆	s n e̞ k -	..xxx
+iecor:Church Slavic > South Slavic|iecor_303	SNOW	Macedonian (253)	s n æ ɡ ʊ̆	s nʲ æ k -	.x.xx
+iecor:Church Slavic > South Slavic|iecor_303	SNOW	Macedonian (254)	s n æ ɡ ʊ̆	s nʲ æ k -	.x.xx
+iecor:Church Slavic > South Slavic|iecor_309	STAND	Bulgarian	s t ɔ j a t i	s t u j - - -	..x.xxx
+iecor:Church Slavic > South Slavic|iecor_309	STAND	Macedonian	s t ɔ j a t i	s t o̞ i - - -	..xxxxx
+iecor:Church Slavic > South Slavic|iecor_314	SUN	Bulgarian	s l̩ n ɪ̆ tsʲ ɛ	s ɤ n - ts ɘ	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_314	SUN	Macedonian	s l̩ n ɪ̆ tsʲ ɛ	s o̞ n - ts ɛ	.x.xx.
+iecor:Church Slavic > South Slavic|iecor_314	SUN	Macedonian (253)	s l̩ n ɪ̆ tsʲ ɛ	s ə n - tsʲ i	.x.x.x
+iecor:Church Slavic > South Slavic|iecor_314	SUN	Macedonian (254)	s l̩ n ɪ̆ tsʲ ɛ	s ə n - tsʲ i	.x.x.x
+iecor:Church Slavic > South Slavic|iecor_327	TONGUE	Bulgarian	j ɛ̃ z ɯ k ʊ̆	- ɘ zʲ i k -	xxxx.x
+iecor:Church Slavic > South Slavic|iecor_327	TONGUE	Macedonian	j ɛ̃ z ɯ k ʊ̆	j ɑ̈ z i k -	.x.x.x
+iecor:Church Slavic > South Slavic|iecor_327	TONGUE	Macedonian (253)	j ɛ̃ z ɯ k ʊ̆	- i zʲ i k -	xxxx.x
+iecor:Church Slavic > South Slavic|iecor_327	TONGUE	Macedonian (254)	j ɛ̃ z ɯ k ʊ̆	- i zʲ i k -	xxxx.x
+iecor:Church Slavic > South Slavic|iecor_335	WATER	Bulgarian	ʋ ɔ d ɑ	v u d ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_335	WATER	Macedonian	ʋ ɔ d ɑ	v o̞ d ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_335	WATER	Macedonian (253)	ʋ ɔ d ɑ	- o̞ d ɐ	xx.x
+iecor:Church Slavic > South Slavic|iecor_335	WATER	Macedonian (254)	ʋ ɔ d ɑ	v o̞ d ɐ	.x.x
+iecor:Church Slavic > South Slavic|iecor_342	WIND	Bulgarian	ʋ æ t r ʊ̆	vʲ ɑ̈ t ɾ -	xx..x
+iecor:Church Slavic > South Slavic|iecor_342	WIND	Macedonian	ʋ æ t r ʊ̆	v e̞ t ɾ̥ -	.x.xx
+iecor:Church Slavic > South Slavic|iecor_342	WIND	Macedonian (253)	ʋ æ t r ʊ̆	βʲ æ tʲ ɾ -	x.x.x
+iecor:Church Slavic > South Slavic|iecor_342	WIND	Macedonian (254)	ʋ æ t r ʊ̆	vʲ æ tʲ ɾ -	x.x.x
+iecor:Church Slavic > South Slavic|iecor_375	DAY (NOT NIGHT)	Bulgarian	d ɪ n ɪ̆	d ɛ n -	.x.x
+iecor:Church Slavic > South Slavic|iecor_375	DAY (NOT NIGHT)	Macedonian	d ɪ n ɪ̆	d e̞ n -	.x.x
+iecor:Church Slavic > South Slavic|iecor_375	DAY (NOT NIGHT)	Macedonian (253)	d ɪ n ɪ̆	dʲ e̞ nʲ -	xxxx
+iecor:Church Slavic > South Slavic|iecor_375	DAY (NOT NIGHT)	Macedonian (254)	d ɪ n ɪ̆	dʲ e̞ nʲ -	xxxx
+iecor:Church Slavic > South Slavic|iecor_380	DRINK	Bulgarian	p i t i	pʲ i - -	x.xx
+iecor:Church Slavic > South Slavic|iecor_380	DRINK	Macedonian	p i t i	p i - -	..xx
+iecor:Church Slavic > South Slavic|iecor_380	DRINK	Macedonian (253)	p i t i	pʲ i - -	x.xx
+iecor:Church Slavic > South Slavic|iecor_380	DRINK	Macedonian (254)	p i t i	pʲ i - -	x.xx
+iecor:Church Slavic > South Slavic|iecor_384	EARTH (SOIL)	Bulgarian	z ɛ m ʎ a	z ɘ mʲ - ɑ̈	.xxx.
+iecor:Church Slavic > South Slavic|iecor_384	EARTH (SOIL)	Macedonian	z ɛ m ʎ a	z e̞ m j ɑ̈	.x.x.
+iecor:Church Slavic > South Slavic|iecor_384	EARTH (SOIL)	Macedonian (253)	z ɛ m ʎ a	zʲ e̞ mʲ j ɐ	xxxxx
+iecor:Church Slavic > South Slavic|iecor_384	EARTH (SOIL)	Macedonian (254)	z ɛ m ʎ a	zʲ e̞ mʲ j ɐ	xxxxx
+iecor:Church Slavic > South Slavic|iecor_39	FIVE	Bulgarian	p ɛ̃ t ɪ̆	p ɛ t -	.x.x
+iecor:Church Slavic > South Slavic|iecor_39	FIVE	Macedonian	p ɛ̃ t ɪ̆	p e̞ t -	.x.x
+iecor:Church Slavic > South Slavic|iecor_39	FIVE	Macedonian (253)	p ɛ̃ t ɪ̆	pʲ e̞ tʲ -	xxxx
+iecor:Church Slavic > South Slavic|iecor_39	FIVE	Macedonian (254)	p ɛ̃ t ɪ̆	pʲ e̞ tʲ -	xxxx
+iecor:Church Slavic > South Slavic|iecor_403	FREEZE	Bulgarian	p ɔ m r̩ z n ɔ̃ t i	z ə m ɾ z - - - -	xx.x.xxxx
+iecor:Church Slavic > South Slavic|iecor_403	FREEZE	Macedonian	p ɔ m r̩ z n ɔ̃ t i	m ə m ɾ z n - - -	xx.x..xxx
+iecor:Church Slavic > South Slavic|iecor_403	FREEZE	Macedonian (253)	p ɔ m r̩ z n ɔ̃ t i	- - m ɾ̩ z nʲ - - -	xx...xxxx
+iecor:Church Slavic > South Slavic|iecor_403	FREEZE	Macedonian (254)	p ɔ m r̩ z n ɔ̃ t i	- - m ɾ̩ z n - - -	xx....xxx
+iecor:Church Slavic > South Slavic|iecor_405	GIVE	Bulgarian	d ɑ t i	d ɑ̈ - -	..xx
+iecor:Church Slavic > South Slavic|iecor_405	GIVE	Macedonian	d ɑ t i	d ɑ̈ - -	..xx
+iecor:Church Slavic > South Slavic|iecor_405	GIVE	Macedonian (253)	d ɑ t i	d ɑ̈ - -	..xx
+iecor:Church Slavic > South Slavic|iecor_405	GIVE	Macedonian (254)	d ɑ t i	d ɑ̈ - -	..xx
+iecor:Church Slavic > South Slavic|iecor_42	FOG	Bulgarian	m ɪ̆ ɡ l ɑ	m ə ɡ lˠ ɑ̈	.x.x.
+iecor:Church Slavic > South Slavic|iecor_42	FOG	Macedonian	m ɪ̆ ɡ l ɑ	m ɑ̈ ɡ l ɑ̈	.x...
+iecor:Church Slavic > South Slavic|iecor_42	FOG	Macedonian (253)	m ɪ̆ ɡ l ɑ	m ə ɡ l ɐ	.x..x
+iecor:Church Slavic > South Slavic|iecor_42	FOG	Macedonian (254)	m ɪ̆ ɡ l ɑ	m ə ɡ l ɐ	.x..x
+iecor:Church Slavic > South Slavic|iecor_437	MEAT	Bulgarian	m ɛ̃ s ɔ	m ɘ s ɔ	.x..
+iecor:Church Slavic > South Slavic|iecor_437	MEAT	Macedonian	m ɛ̃ s ɔ	m e̞ s ɔ	.x..
+iecor:Church Slavic > South Slavic|iecor_437	MEAT	Macedonian (253)	m ɛ̃ s ɔ	mʲ e̞ s u	xx.x
+iecor:Church Slavic > South Slavic|iecor_437	MEAT	Macedonian (254)	m ɛ̃ s ɔ	mʲ æ s u	xx.x
+iecor:Church Slavic > South Slavic|iecor_44	FOUR	Bulgarian	tʃ ɛ t ɯ r ɛ	tʃ ɛ tʲ i ɾʲ i	..xxxx
+iecor:Church Slavic > South Slavic|iecor_44	FOUR	Macedonian	tʃ ɛ t ɯ r ɛ	tʃ e̞ t i ɾ i	.x.x.x
+iecor:Church Slavic > South Slavic|iecor_44	FOUR	Macedonian (253)	tʃ ɛ t ɯ r ɛ	tʃ e̞ t - ɾʲ i	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_44	FOUR	Macedonian (254)	tʃ ɛ t ɯ r ɛ	tʃ e̞ tʲ i ɾ -	.xxx.x
+iecor:Church Slavic > South Slavic|iecor_468	SHARP	Bulgarian	ɔ s t r ʊ̆	ɔ s t ɾ -	....x
+iecor:Church Slavic > South Slavic|iecor_468	SHARP	Macedonian	ɔ s t r ʊ̆	o̞ s t ɾ̥ -	x..xx
+iecor:Church Slavic > South Slavic|iecor_468	SHARP	Macedonian (253)	ɔ s t r ʊ̆	o̞ s t ɾ ɐ	x...x
+iecor:Church Slavic > South Slavic|iecor_468	SHARP	Macedonian (254)	ɔ s t r ʊ̆	o̞ s t ɾ ɐ	x...x
+iecor:Church Slavic > South Slavic|iecor_4859	DIRTY	Macedonian	n ɛ tʃ i s t ʊ̆	n e̞ tʃ i s t -	.x....x
+iecor:Church Slavic > South Slavic|iecor_5007	ANT	Bulgarian	m r ɑ ʋ i j ɪ̆	m ɾ ɑ̈ f - - -	...xxxx
+iecor:Church Slavic > South Slavic|iecor_5007	ANT	Macedonian	m r ɑ ʋ i j ɪ̆	m ɾ ɑ̈ f - - -	...xxxx
+iecor:Church Slavic > South Slavic|iecor_5007	ANT	Macedonian (253)	m r ɑ ʋ i j ɪ̆	m ɾ ɑ̈ βʲ - - ɐ	...xxxx
+iecor:Church Slavic > South Slavic|iecor_5007	ANT	Macedonian (254)	m r ɑ ʋ i j ɪ̆	m ɾ ɑ̈ vʲ - - ɐ	...xxxx
+iecor:Church Slavic > South Slavic|iecor_502	TOOTH	Bulgarian	z ɔ̃ b ʊ̆	z ɤ p -	.xxx
+iecor:Church Slavic > South Slavic|iecor_502	TOOTH	Macedonian	z ɔ̃ b ʊ̆	z ɑ̈ p -	.xxx
+iecor:Church Slavic > South Slavic|iecor_502	TOOTH	Macedonian (253)	z ɔ̃ b ʊ̆	z ə p -	.xxx
+iecor:Church Slavic > South Slavic|iecor_502	TOOTH	Macedonian (254)	z ɔ̃ b ʊ̆	z ə p -	.xxx
+iecor:Church Slavic > South Slavic|iecor_503	TREE	Bulgarian	d r æ ʋ ɔ	d ɾ - v ɔ	..x..
+iecor:Church Slavic > South Slavic|iecor_503	TREE	Macedonian	d r æ ʋ ɔ	d ɾ - v ɔ	..x..
+iecor:Church Slavic > South Slavic|iecor_503	TREE	Macedonian (253)	d r æ ʋ ɔ	d ɾʲ æ β u	.x.xx
+iecor:Church Slavic > South Slavic|iecor_503	TREE	Macedonian (254)	d r æ ʋ ɔ	d ɾ - v u	..x.x
+iecor:Church Slavic > South Slavic|iecor_5031	FLY (INSECT)	Bulgarian	m u x ɑ	m u x ɑ̈	....
+iecor:Church Slavic > South Slavic|iecor_5031	FLY (INSECT)	Macedonian	m u x ɑ	m u v ɑ̈	..x.
+iecor:Church Slavic > South Slavic|iecor_5031	FLY (INSECT)	Macedonian (253)	m u x ɑ	m u x ɐ	...x
+iecor:Church Slavic > South Slavic|iecor_5031	FLY (INSECT)	Macedonian (254)	m u x ɑ	m u x ɐ	...x
+iecor:Church Slavic > South Slavic|iecor_5058	SHADOW	Bulgarian	s æ n ɪ̆	sʲ ɑ̈ ŋ -	xxxx
+iecor:Church Slavic > South Slavic|iecor_5058	SHADOW	Macedonian	s æ n ɪ̆	s e̞ ŋ -	.xxx
+iecor:Church Slavic > South Slavic|iecor_5058	SHADOW	Macedonian (253)	s æ n ɪ̆	sʲ æ ŋ -	x.xx
+iecor:Church Slavic > South Slavic|iecor_5058	SHADOW	Macedonian (254)	s æ n ɪ̆	sʲ æ ŋ -	x.xx
+iecor:Church Slavic > South Slavic|iecor_5097	CLAW	Bulgarian	n ɔ ɡ ʊ t ɪ̆	n ɔ k ə t -	..xx.x
+iecor:Church Slavic > South Slavic|iecor_5112	GRIND	Bulgarian	m l æ t i	m lʲ - - -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_5112	GRIND	Macedonian	m l æ t i	m l - - -	..xxx
+iecor:Church Slavic > South Slavic|iecor_5112	GRIND	Macedonian (253)	m l æ t i	mʲ lʲ - - -	xxxxx
+iecor:Church Slavic > South Slavic|iecor_5112	GRIND	Macedonian (254)	m l æ t i	mʲ lʲ - - -	xxxxx
+iecor:Church Slavic > South Slavic|iecor_5130	CARRY	Bulgarian	n ɔ s i t i	n ɔ sʲ ə - -	..xxxx
+iecor:Church Slavic > South Slavic|iecor_5130	CARRY	Macedonian	n ɔ s i t i	n o̞ s i - -	.x..xx
+iecor:Church Slavic > South Slavic|iecor_5139	HARD	Bulgarian	t ʋ r̩ʲ d ʊ̆	t v ɾ t -	..xxx
+iecor:Church Slavic > South Slavic|iecor_5139	HARD	Macedonian	t ʋ r̩ʲ d ʊ̆	t v ɾ t -	..xxx
+iecor:Church Slavic > South Slavic|iecor_5145	NAVEL	Bulgarian	p ɔ̃ p ʊ̆	p ɤ p -	.x.x
+iecor:Church Slavic > South Slavic|iecor_5145	NAVEL	Macedonian	p ɔ̃ p ʊ̆	p ɑ̈ p -	.x.x
+iecor:Church Slavic > South Slavic|iecor_5145	NAVEL	Macedonian (253)	p ɔ̃ p ʊ̆	p u p -	.x.x
+iecor:Church Slavic > South Slavic|iecor_5145	NAVEL	Macedonian (254)	p ɔ̃ p ʊ̆	p u p -	.x.x
+iecor:Church Slavic > South Slavic|iecor_5157	SWEET	Bulgarian	s l ɑ d ʊ k ʊ̆	s lˠ ɑ̈ d ə k -	.x..x.x
+iecor:Church Slavic > South Slavic|iecor_5157	SWEET	Macedonian	s l ɑ d ʊ k ʊ̆	s lˠ ɑ̈ d ɔ k -	.x..x.x
+iecor:Church Slavic > South Slavic|iecor_5158	TAKE	Bulgarian	v ʊ̆ z ɛ̃ t i	v - z - - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_5158	TAKE	Macedonian	v ʊ̆ z ɛ̃ t i	z e̞ m - - -	xxxxxx
+iecor:Church Slavic > South Slavic|iecor_5158	TAKE	Macedonian (253)	v ʊ̆ z ɛ̃ t i	βʲ e̞ z - - -	xx.xxx
+iecor:Church Slavic > South Slavic|iecor_5158	TAKE	Macedonian (254)	v ʊ̆ z ɛ̃ t i	vʲ e̞ n - - -	xxxxxx
+iecor:Church Slavic > South Slavic|iecor_5163	YESTERDAY	Bulgarian	ʋ ɪ̆ tʃ ɛ r ɑ	f - tʃ ɛ ɾ ə	xx...x
+iecor:Church Slavic > South Slavic|iecor_5163	YESTERDAY	Macedonian	ʋ ɪ̆ tʃ ɛ r ɑ	f - tʃ e̞ ɾ ɑ̈	xx.x..
+iecor:Church Slavic > South Slavic|iecor_5163	YESTERDAY	Macedonian (253)	ʋ ɪ̆ tʃ ɛ r ɑ	ɸ - tʃ ɑ̈ ɾ ɐ	xx.x.x
+iecor:Church Slavic > South Slavic|iecor_5163	YESTERDAY	Macedonian (254)	ʋ ɪ̆ tʃ ɛ r ɑ	x - tʃ ɑ̈ ɾʲ ɐ	xx.xxx
+iecor:Church Slavic > South Slavic|iecor_5232	DIRTY	Macedonian (253)	s k v r̩ʲ n ɑ ʋ ʊ̆	s k ə ɾ n ɐ ɸ -	..xx.xxx
+iecor:Church Slavic > South Slavic|iecor_5232	DIRTY	Macedonian (254)	s k v r̩ʲ n ɑ ʋ ʊ̆	s k ə ɾ n ɐ f -	..xx.xxx
+iecor:Church Slavic > South Slavic|iecor_5274	PULL	Macedonian	ʋ l æ ʃ tʲ i	v l e̞ - - -	..xxxx
+iecor:Church Slavic > South Slavic|iecor_5275	HIDE (CONCEAL)	Bulgarian	k r ɯ t i	k ɾʲ i - -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_5275	HIDE (CONCEAL)	Macedonian	k r ɯ t i	k ɾ i - -	..xxx
+iecor:Church Slavic > South Slavic|iecor_5275	HIDE (CONCEAL)	Macedonian (253)	k r ɯ t i	k ɾʲ i - -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_5275	HIDE (CONCEAL)	Macedonian (254)	k r ɯ t i	k ɾʲ i - -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_6086	BITTER	Bulgarian	ɡ ɔ r ɪ k ʊ̆	ɡ u ɾ - - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_6086	BITTER	Macedonian	ɡ ɔ r ɪ k ʊ̆	ɡ o̞ ɾ - - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_6086	BITTER	Macedonian (253)	ɡ ɔ r ɪ k ʊ̆	ɡ u ɾ - - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_6086	BITTER	Macedonian (254)	ɡ ɔ r ɪ k ʊ̆	ɡ u ɾ - - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_6178	HOT	Bulgarian	t ɔ p l ʊ̆	t ɔ p lˠ -	...xx
+iecor:Church Slavic > South Slavic|iecor_6178	HOT	Macedonian	t ɔ p l ʊ̆	t o̞ p lˠ -	.x.xx
+iecor:Church Slavic > South Slavic|iecor_6197	RIVER	Bulgarian	r æ k ɑ	ɾ ɘ k ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_6197	RIVER	Macedonian	r æ k ɑ	ɾ e̞ k ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_6197	RIVER	Macedonian (253)	r æ k ɑ	ɾʲ æ k ɐ	x..x
+iecor:Church Slavic > South Slavic|iecor_6197	RIVER	Macedonian (254)	r æ k ɑ	ɾʲ æ k ɐ	x..x
+iecor:Church Slavic > South Slavic|iecor_6332	GREEN	Bulgarian	z ɛ l ɛ n ʊ̆	z ɘ l ɛ n -	.x...x
+iecor:Church Slavic > South Slavic|iecor_6332	GREEN	Macedonian	z ɛ l ɛ n ʊ̆	z e̞ l ɛ n -	.x...x
+iecor:Church Slavic > South Slavic|iecor_6332	GREEN	Macedonian (253)	z ɛ l ɛ n ʊ̆	zʲ i lʲ e̞ n -	xxxx.x
+iecor:Church Slavic > South Slavic|iecor_6332	GREEN	Macedonian (254)	z ɛ l ɛ n ʊ̆	zʲ i lʲ e̞ n -	xxxx.x
+iecor:Church Slavic > South Slavic|iecor_6458	HEART	Bulgarian	s r̩ʲ d ɪ̆ tsʲ ɛ	s ɾ - - ts ɛ	.xxxx.
+iecor:Church Slavic > South Slavic|iecor_6458	HEART	Macedonian	s r̩ʲ d ɪ̆ tsʲ ɛ	s ɾ - - ts ɛ	.xxxx.
+iecor:Church Slavic > South Slavic|iecor_6458	HEART	Macedonian (253)	s r̩ʲ d ɪ̆ tsʲ ɛ	s - t ə tsʲ i	.xxx.x
+iecor:Church Slavic > South Slavic|iecor_6458	HEART	Macedonian (254)	s r̩ʲ d ɪ̆ tsʲ ɛ	s - t ə tsʲ i	.xxx.x
+iecor:Church Slavic > South Slavic|iecor_6484	CRY	Bulgarian	p l ɑ k a t i s ɛ̃	p lˠ ɑ̈ tʃ - - - - -	.x.xxxxxx
+iecor:Church Slavic > South Slavic|iecor_6484	CRY	Macedonian	p l ɑ k a t i s ɛ̃	p lˠ ɑ̈ tʃ - - - - -	.x.xxxxxx
+iecor:Church Slavic > South Slavic|iecor_6484	CRY	Macedonian (253)	p l ɑ k a t i s ɛ̃	p l ɑ̈ tʃ - - - - -	...xxxxxx
+iecor:Church Slavic > South Slavic|iecor_6484	CRY	Macedonian (254)	p l ɑ k a t i s ɛ̃	p l ɑ̈ tʃ - - - - -	...xxxxxx
+iecor:Church Slavic > South Slavic|iecor_6505	FAR	Bulgarian	d ɑ l ɛ tʃ ɛ	d ə l ɛ tʃ ɘ	.x...x
+iecor:Church Slavic > South Slavic|iecor_6505~100~b0d814	FAR	Macedonian	d ɑ l ɛ k ɔ	d ɑ̈ l ɛ k u	.....x
+iecor:Church Slavic > South Slavic|iecor_6505~100~b0d814	FAR	Macedonian (253)	d ɑ l ɛ k ɔ	d ɐ lʲ e̞ k u	.xxx.x
+iecor:Church Slavic > South Slavic|iecor_6505~100~b0d814	FAR	Macedonian (254)	d ɑ l ɛ k ɔ	d ɐ lʲ e̞ k u	.xxx.x
+iecor:Church Slavic > South Slavic|iecor_6595	RIGHT	Bulgarian	d ɛ s n ʊ̆	d ɘ s n -	.x..x
+iecor:Church Slavic > South Slavic|iecor_6595	RIGHT	Macedonian	d ɛ s n ʊ̆	d e̞ s n -	.x..x
+iecor:Church Slavic > South Slavic|iecor_671	WOMAN	Bulgarian	ʒ ɛ n ɑ	ʒ ɘ n ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_671	WOMAN	Macedonian	ʒ ɛ n ɑ	ʒ e̞ n ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_671	WOMAN	Macedonian (253)	ʒ ɛ n ɑ	ʒ e̞ n ɐ	.x.x
+iecor:Church Slavic > South Slavic|iecor_671	WOMAN	Macedonian (254)	ʒ ɛ n ɑ	ʒ e̞ n ɐ	.x.x
+iecor:Church Slavic > South Slavic|iecor_6879	FRUIT	Macedonian	ɔ ʋ ɔ ʃ tʲ ɛ	o̞ v ɔ ʃ j ɛ	x...x.
+iecor:Church Slavic > South Slavic|iecor_700	FEATHER	Bulgarian	p ɛ r ɔ	p ɘ ɾ ɔ	.x..
+iecor:Church Slavic > South Slavic|iecor_700	FEATHER	Macedonian	p ɛ r ɔ	p e̞ ɾ ɔ	.x..
+iecor:Church Slavic > South Slavic|iecor_700	FEATHER	Macedonian (253)	p ɛ r ɔ	pʲ e̞ ɾ u	xx.x
+iecor:Church Slavic > South Slavic|iecor_700	FEATHER	Macedonian (254)	p ɛ r ɔ	pʲ e̞ ɾ u	xx.x
+iecor:Church Slavic > South Slavic|iecor_72	LIVE	Bulgarian	ʒ i t i	ʒ i - -	..xx
+iecor:Church Slavic > South Slavic|iecor_72	LIVE	Macedonian	ʒ i t i	ʒ i - -	..xx
+iecor:Church Slavic > South Slavic|iecor_72	LIVE	Macedonian (253)	ʒ i t i	ʒ o̞ - -	.xxx
+iecor:Church Slavic > South Slavic|iecor_72	LIVE	Macedonian (254)	ʒ i t i	ʒ i - -	..xx
+iecor:Church Slavic > South Slavic|iecor_7318~100~588576	COME	Bulgarian	d ɔ i t i	d ɔ j - -	..xxx
+iecor:Church Slavic > South Slavic|iecor_7318~100~588576	COME	Macedonian	d ɔ i t i	d o̞ j - -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_7318~100~588576	COME	Macedonian (253)	d ɔ i t i	d o̞ j - -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_7318~100~588576	COME	Macedonian (254)	d ɔ i t i	d o̞ j - -	.xxxx
+iecor:Church Slavic > South Slavic|iecor_7523	SLEEP	Bulgarian	s ʊ̆ p ɑ t i	s - pʲ ɤ - -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_7523	SLEEP	Macedonian	s ʊ̆ p ɑ t i	s - p ɛ - -	.x.xxx
+iecor:Church Slavic > South Slavic|iecor_7523	SLEEP	Macedonian (253)	s ʊ̆ p ɑ t i	s - pʲ i - -	.xxxxx
+iecor:Church Slavic > South Slavic|iecor_7523	SLEEP	Macedonian (254)	s ʊ̆ p ɑ t i	s - p ɑ̈ - -	.x..xx
+iecor:Church Slavic > South Slavic|iecor_7535	YELLOW	Bulgarian	ʒ l̩ʲ t ʊ̆	ʒ ɤ t -	.x.x
+iecor:Church Slavic > South Slavic|iecor_7535	YELLOW	Macedonian	ʒ l̩ʲ t ʊ̆	ʒ o̞ t -	.x.x
+iecor:Church Slavic > South Slavic|iecor_7535	YELLOW	Macedonian (253)	ʒ l̩ʲ t ʊ̆	ʒ ə t -	.x.x
+iecor:Church Slavic > South Slavic|iecor_7535	YELLOW	Macedonian (254)	ʒ l̩ʲ t ʊ̆	ʒ ə t -	.x.x
+iecor:Church Slavic > South Slavic|iecor_7551	DRY	Bulgarian	s u x ʊ̆	s u x -	...x
+iecor:Church Slavic > South Slavic|iecor_7551	DRY	Macedonian	s u x ʊ̆	s u f -	..xx
+iecor:Church Slavic > South Slavic|iecor_7551	DRY	Macedonian (253)	s u x ʊ̆	s u x -	...x
+iecor:Church Slavic > South Slavic|iecor_7551	DRY	Macedonian (254)	s u x ʊ̆	s u x -	...x
+iecor:Church Slavic > South Slavic|iecor_7567	GO	Macedonian (253)	i t i	i - -	.xx
+iecor:Church Slavic > South Slavic|iecor_7567	GO	Macedonian (254)	i t i	i - -	.xx
+iecor:Church Slavic > South Slavic|iecor_76	MAN	Bulgarian	m ɔ̃ ʒ ɪ̆	m ɤ ʃ -	.xxx
+iecor:Church Slavic > South Slavic|iecor_76	MAN	Macedonian	m ɔ̃ ʒ ɪ̆	m ɑ̈ ʃ -	.xxx
+iecor:Church Slavic > South Slavic|iecor_76	MAN	Macedonian (253)	m ɔ̃ ʒ ɪ̆	m ə tʃ -	.xxx
+iecor:Church Slavic > South Slavic|iecor_76	MAN	Macedonian (254)	m ɔ̃ ʒ ɪ̆	m ə tʃ -	.xxx
+iecor:Church Slavic > South Slavic|iecor_7700	DIG	Bulgarian	k ɔ p ɑ t i	k u p ɑ̈ - -	.x..xx
+iecor:Church Slavic > South Slavic|iecor_7700	DIG	Macedonian	k ɔ p ɑ t i	k o̞ p ɑ̈ - -	.x..xx
+iecor:Church Slavic > South Slavic|iecor_7700	DIG	Macedonian (253)	k ɔ p ɑ t i	k u p a - -	.x..xx
+iecor:Church Slavic > South Slavic|iecor_7700	DIG	Macedonian (254)	k ɔ p ɑ t i	k u p ɑ̈ - -	.x..xx
+iecor:Church Slavic > South Slavic|iecor_774	FIRE	Bulgarian	ɔ ɡ ɲ ɪ̆	ɔ ɡ n -	..xx
+iecor:Church Slavic > South Slavic|iecor_774	FIRE	Macedonian	ɔ ɡ ɲ ɪ̆	o̞ ɡ n -	x.xx
+iecor:Church Slavic > South Slavic|iecor_774	FIRE	Macedonian (253)	ɔ ɡ ɲ ɪ̆	o̞ ɡ nʲ i	x.xx
+iecor:Church Slavic > South Slavic|iecor_774	FIRE	Macedonian (254)	ɔ ɡ ɲ ɪ̆	o̞ ɡ nʲ i	x.xx
+iecor:Church Slavic > South Slavic|iecor_7796	BARK	Bulgarian	k ɔ r ɑ	k u ɾ ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_7796	BARK	Macedonian	k ɔ r ɑ	k o̞ ɾ ɑ̈	.x..
+iecor:Church Slavic > South Slavic|iecor_7796	BARK	Macedonian (253)	k ɔ r ɑ	k o̞ ɾ ɐ	.x.x
+iecor:Church Slavic > South Slavic|iecor_7796	BARK	Macedonian (254)	k ɔ r ɑ	k o̞ ɾ ɐ	.x.x
+iecor:Church Slavic > South Slavic|iecor_815	SEW	Bulgarian	ʃ i t i	ʃ i - -	..xx
+iecor:Church Slavic > South Slavic|iecor_815	SEW	Macedonian	ʃ i t i	ʃ i - -	..xx
+iecor:Church Slavic > South Slavic|iecor_815	SEW	Macedonian (253)	ʃ i t i	ʃ i - -	..xx
+iecor:Church Slavic > South Slavic|iecor_815	SEW	Macedonian (254)	ʃ i t i	ʃ i - -	..xx
+iecor:Church Slavic > South Slavic|iecor_82	NAME	Bulgarian	i m ɛ̃	i m ɘ	..x
+iecor:Church Slavic > South Slavic|iecor_82	NAME	Macedonian	i m ɛ̃	i m ɛ	..x
+iecor:Church Slavic > South Slavic|iecor_82	NAME	Macedonian (253)	i m ɛ̃	i mʲ ɐ	.xx
+iecor:Church Slavic > South Slavic|iecor_82	NAME	Macedonian (254)	i m ɛ̃	i mʲ ɐ	.xx
+iecor:Church Slavic > South Slavic|iecor_8251	MOUTH	Bulgarian	u s t ɑ	u s t ɑ̈	....
+iecor:Church Slavic > South Slavic|iecor_8251	MOUTH	Macedonian	u s t ɑ	u s t ä	....
+iecor:Church Slavic > South Slavic|iecor_8251	MOUTH	Macedonian (253)	u s t ɑ	u s t ɐ	...x
+iecor:Church Slavic > South Slavic|iecor_8251	MOUTH	Macedonian (254)	u s t ɑ	u s t ɐ	...x
+iecor:Church Slavic > South Slavic|iecor_8276	SHORT	Macedonian	k r ɑ t ʊ k ʊ̆	k ɾ ɑ̈ t ɔ k -	....x.x
+iecor:Church Slavic > South Slavic|iecor_86	NEW	Bulgarian	n ɔ ʋ ʊ̆	n ɔ f -	..xx
+iecor:Church Slavic > South Slavic|iecor_86	NEW	Macedonian	n ɔ ʋ ʊ̆	n o̞ f -	.xxx
+iecor:Church Slavic > South Slavic|iecor_86	NEW	Macedonian (253)	n ɔ ʋ ʊ̆	n o̞ ɸ -	.xxx
+iecor:Church Slavic > South Slavic|iecor_86	NEW	Macedonian (254)	n ɔ ʋ ʊ̆	n o̞ f -	.xxx
+iecor:Church Slavic > South Slavic|iecor_91	ONE	Bulgarian	j ɛ d i n ʊ̆	- ɘ dʲ i n -	xxx..x
+iecor:Church Slavic > South Slavic|iecor_91	ONE	Macedonian	j ɛ d i n ʊ̆	- e̞ d ɛ n -	xx.x.x
+iecor:Church Slavic > South Slavic|iecor_91	ONE	Macedonian (253)	j ɛ d i n ʊ̆	- i dʲ i n -	xxx..x
+iecor:Church Slavic > South Slavic|iecor_91	ONE	Macedonian (254)	j ɛ d i n ʊ̆	- i dʲ i n -	xxx..x
+iecor:Church Slavic > South Slavic|iecor_929	SEE	Bulgarian	ʋ i d æ t i	v i d - - -	...xxx
+iecor:Church Slavic > South Slavic|iecor_929	SEE	Macedonian (253)	ʋ i d æ t i	βʲ i d - - -	x..xxx
+iecor:Church Slavic > South Slavic|iecor_929	SEE	Macedonian (254)	ʋ i d æ t i	vʲ i d - - -	x..xxx
+iecor:Church Slavic > South Slavic|iecor_9905	SWELL	Bulgarian	d ɔ̃ t i s ɛ̃	p u - - - -	xxxxxx
+iecor:Church Slavic > South Slavic|iecor_9905	SWELL	Macedonian (253)	d ɔ̃ t i s ɛ̃	s ɐ - - - -	xxxxxx
+iecor:Church Slavic > South Slavic|iecor_9905	SWELL	Macedonian (254)	d ɔ̃ t i s ɛ̃	s u - - - -	xxxxxx

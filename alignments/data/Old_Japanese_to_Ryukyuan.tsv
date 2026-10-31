@@ -1,0 +1,1361 @@
+Set	Concept	Language	Ancestor	Aligned	Changed
+leejaponic:Old Japanese > Ryukyuan|leejaponic_1-1	GREEN	Hachijo	a w o k i	a j a - -	.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_1-1	GREEN	Hateruma	a w o k i	o h a - -	xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_1-1	GREEN	Ikema-Jima	a w o k i	a u a - -	.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_1-1	GREEN	Irabu-Jima	a w o k i	a u a - -	.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_1-1	GREEN	Ishigaki	a w o k i	a u aː - -	.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_1-1	GREEN	Miyako-Jima	a w o k i	oː k a - -	xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_1-1	GREEN	Naze	a w o k i	oː ʃ a - -	xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_1-1	GREEN	Northern Amami-Oshima	a w o k i	a - o k a	.x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_1-1	GREEN	Okinawa	a w o k i	oː ʃ e - -	xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_1-1	GREEN	Taketomi	a w o k i	a - oː - -	.x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_1-1	GREEN	Tarama-Minna	a w o k i	oː ʃ aː - -	xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_101-1	STAND	Hachijo	t a t u	t a ts u	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_101-1	STAND	Hateruma	t a t u	t a ts -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_101-1	STAND	Ikema-Jima	t a t u	t a ts ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_101-1	STAND	Irabu-Jima	t a t u	t a β u	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_101-1	STAND	Ishigaki	t a t u	t a ts -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_101-1	STAND	Miyako-Jima	t a t u	t a ts ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_101-1	STAND	Naze	t a t u	t a tʃ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_101-1	STAND	Northern Amami-Oshima	t a t u	t a ʔ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_101-1	STAND	Okinawa	t a t u	t a t -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_101-1	STAND	Taketomi	t a t u	t a t -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_101-1	STAND	Tarama-Minna	t a t u	t a ts ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_101-1	STAND	Yonaguni	t a t u	t a t -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_103-1	BLOOD	Hachijo	t i	tʃ i	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_103-1	BLOOD	Hateruma	t i	dz ɨː	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_103-1	BLOOD	Ikema-Jima	t i	k a	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_103-1	BLOOD	Irabu-Jima	t i	k a	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_103-1	BLOOD	Ishigaki	t i	ts ɨː	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_103-1	BLOOD	Miyako-Jima	t i	k a	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_103-1	BLOOD	Naze	t i	ts ɨ	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_103-1	BLOOD	Northern Amami-Oshima	t i	tʃ iː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_103-1	BLOOD	Okinawa	t i	tʃ iː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_103-1	BLOOD	Taketomi	t i	ʃ iː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_103-1	BLOOD	Tarama-Minna	t i	k a	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_103-1	BLOOD	Yonaguni	t i	tʃ i	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_104-1	SMALL	Naze	t i ç i s a k i	ts ɨ b i m u - -	xxx.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_105-1	NEAR	Hachijo	t i k a k i	tʃ i k a - -	x...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_105-1	NEAR	Hateruma	t i k a k i	s ɨ k a - -	xx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_105-1	NEAR	Irabu-Jima	t i k a k i	ts ɨ k a - -	xx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_105-1	NEAR	Ishigaki	t i k a k i	ts ɨ k aː - -	xx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_105-1	NEAR	Miyako-Jima	t i k a k i	ts ɨ k a - -	xx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_105-1	NEAR	Naze	t i k a k i	ts ɨ k a - -	xx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_105-1	NEAR	Northern Amami-Oshima	t i k a k i	tʃ i k e - -	x..xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_105-1	NEAR	Okinawa	t i k a k i	ʃ i k a - -	x...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_105-1	NEAR	Taketomi	t i k a k i	ʃ i k aː - -	x...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_107-1	MOON	Hachijo	t u k ɨ	ts u k i	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_107-1	MOON	Ishigaki	t u k ɨ	ts ɨ k ɨ	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_107-1	MOON	Miyako-Jima	t u k ɨ	ts ɨ k ɨ	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_107-1	MOON	Naze	t u k ɨ	ts ɨ k i	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_107-1	MOON	Northern Amami-Oshima	t u k ɨ	ts u s a	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_107-1	MOON	Taketomi	t u k ɨ	ʃ i k i	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_107-1	MOON	Tarama-Minna	t u k ɨ	ts ɨ k ɨ	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_108-1	EARTH (SOIL)	Hachijo	t u t i	ts u ʃ i	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_108-1	EARTH (SOIL)	Northern Amami-Oshima	t u t i	ts u ʔ -	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_110-1	HAND	Hachijo	t ə	t e	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_110-1	HAND	Hateruma	t ə	s ɨː	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_110-1	HAND	Ikema-Jima	t ə	t iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_110-1	HAND	Irabu-Jima	t ə	t iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_110-1	HAND	Ishigaki	t ə	t iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_110-1	HAND	Miyako-Jima	t ə	t iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_110-1	HAND	Naze	t ə	t iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_110-1	HAND	Northern Amami-Oshima	t ə	t ɨ	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_110-1	HAND	Okinawa	t ə	t iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_110-1	HAND	Taketomi	t ə	t iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_110-1	HAND	Tarama-Minna	t ə	t iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_110-1	HAND	Yonaguni	t ə	t i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_111-1	AT	Hachijo	t e	d e	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_111-1	AT	Northern Amami-Oshima	t e	d e	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_112-1	AND	Hateruma	t ö	t u	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_112-1	AND	Ishigaki	t ö	t u	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_112-1	AND	Yonaguni	t ö	t u	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_114-1	TEN	Hachijo	t o	t o	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_114-1	TEN	Hateruma	t o	t uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_114-1	TEN	Ikema-Jima	t o	t uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_114-1	TEN	Irabu-Jima	t o	t uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_114-1	TEN	Ishigaki	t o	t uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_114-1	TEN	Miyako-Jima	t o	t uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_114-1	TEN	Naze	t o	t uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_114-1	TEN	Northern Amami-Oshima	t o	t oː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_114-1	TEN	Okinawa	t o	t uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_114-1	TEN	Taketomi	t o	t uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_114-1	TEN	Tarama-Minna	t o	t uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_114-1	TEN	Yonaguni	t o	t u	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_115-1	FAR	Hachijo	t ø h ø k i	t oː k a - -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_115-1	FAR	Hateruma	t ø h ø k i	t uː s a - -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_115-1	FAR	Irabu-Jima	t ø h ø k i	t uː k a - -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_115-1	FAR	Ishigaki	t ø h ø k i	t uː s aː - -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_115-1	FAR	Naze	t ø h ø k i	t uː ʃ a - -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_115-1	FAR	Northern Amami-Oshima	t ø h ø k i	t o - e - -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_115-1	FAR	Okinawa	t ø h ø k i	t uː ʃ e - -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_115-1	FAR	Taketomi	t ø h ø k i	t uː w a - -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_115-1	FAR	Yonaguni	t ø h ø k i	t u ɴ - - -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_116-1	WHERE	Hachijo	i d u k u	- d o k o	x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_116-1	WHERE	Northern Amami-Oshima	i d u k u	- d o k o	x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_117-1	YEAR	Hachijo	t ø ʃ i	t o ʃ i	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_117-1	YEAR	Hateruma	t ø ʃ i	t u s ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_117-1	YEAR	Ikema-Jima	t ø ʃ i	t u s ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_117-1	YEAR	Irabu-Jima	t ø ʃ i	t u s ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_117-1	YEAR	Ishigaki	t ø ʃ i	t u s ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_117-1	YEAR	Miyako-Jima	t ø ʃ i	t u s ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_117-1	YEAR	Naze	t ø ʃ i	t u ʃ i	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_117-1	YEAR	Northern Amami-Oshima	t ø ʃ i	t o ʃ ĭ	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_117-1	YEAR	Okinawa	t ø ʃ i	t u ʃ iː	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_117-1	YEAR	Taketomi	t ø ʃ i	t u ʃ i	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_117-1	YEAR	Tarama-Minna	t ø ʃ i	t u s ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_117-1	YEAR	Yonaguni	t ø ʃ i	t u tʃ i	.xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_118-3	WHAT	Hateruma	n a n i	n uː j a	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_118-3	WHAT	Ishigaki	n a n i	n oː - -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_118-3	WHAT	Okinawa	n a n i	n uː n u	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_118-3	WHAT	Taketomi	n a n i	n uː n u	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_118-3	WHAT	Yonaguni	n a n i	n u ɴ -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_119-2	WHO	Hachijo	t a	d a	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_12-1	FAT (ORGANIC SUBSTANCE)	Hachijo	a b u r a	a b u r a	.....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_12-1	FAT (ORGANIC SUBSTANCE)	Hateruma	a b u r a	a b - - a	..xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_12-1	FAT (ORGANIC SUBSTANCE)	Ikema-Jima	a b u r a	a v - - a	.xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_12-1	FAT (ORGANIC SUBSTANCE)	Irabu-Jima	a b u r a	a v - - a	.xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_12-1	FAT (ORGANIC SUBSTANCE)	Ishigaki	a b u r a	a b - - a	..xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_12-1	FAT (ORGANIC SUBSTANCE)	Miyako-Jima	a b u r a	a v - - a	.xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_12-1	FAT (ORGANIC SUBSTANCE)	Naze	a b u r a	a b u r a	.....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_12-1	FAT (ORGANIC SUBSTANCE)	Northern Amami-Oshima	a b u r a	a b u r a	.....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_12-1	FAT (ORGANIC SUBSTANCE)	Okinawa	a b u r a	a ɴ - r a	.xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_12-1	FAT (ORGANIC SUBSTANCE)	Taketomi	a b u r a	a b - - a	..xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_12-1	FAT (ORGANIC SUBSTANCE)	Tarama-Minna	a b u r a	a v - - a	.xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_12-1	FAT (ORGANIC SUBSTANCE)	Yonaguni	a b u r a	a d - - a	.xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_120-1	FLY (MOVE THROUGH AIR)	Hachijo	t ö b u	t o b u	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_120-1	FLY (MOVE THROUGH AIR)	Miyako-Jima	t ö b u	t u b ɨ	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_120-1	FLY (MOVE THROUGH AIR)	Northern Amami-Oshima	t ö b u	t o ʔ -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_120-1	FLY (MOVE THROUGH AIR)	Taketomi	t ö b u	t u b -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_120-1	FLY (MOVE THROUGH AIR)	Yonaguni	t ö b u	t u b -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_121-1	BIRD	Hachijo	t ö r i	t o r i	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_121-1	BIRD	Hateruma	t ö r i	t u r ɨ	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_121-1	BIRD	Ikema-Jima	t ö r i	t u - i	.xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_121-1	BIRD	Irabu-Jima	t ö r i	t u l -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_121-1	BIRD	Ishigaki	t ö r i	t u r ɨ	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_121-1	BIRD	Miyako-Jima	t ö r i	t u - ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_121-1	BIRD	Naze	t ö r i	t u r i	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_121-1	BIRD	Northern Amami-Oshima	t ö r i	t o - i	.xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_121-1	BIRD	Okinawa	t ö r i	t u - i	.xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_121-1	BIRD	Taketomi	t ö r i	t u l -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_121-1	BIRD	Tarama-Minna	t ö r i	t u l -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_121-1	BIRD	Yonaguni	t ö r i	t u - -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_122-1	NO OR NOT	Hachijo	n u	n a	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_122-1	NO OR NOT	Hateruma	n u	n u	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_122-1	NO OR NOT	Ikema-Jima	n u	ɲ aː	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_122-1	NO OR NOT	Irabu-Jima	n u	ɲ aː	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_122-1	NO OR NOT	Ishigaki	n u	n u	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_122-1	NO OR NOT	Miyako-Jima	n u	ɲ aː	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_122-1	NO OR NOT	Naze	n u	n ə	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_122-1	NO OR NOT	Northern Amami-Oshima	n u	n e	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_122-1	NO OR NOT	Okinawa	n u	n eː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_122-1	NO OR NOT	Taketomi	n u	n aː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_122-1	NO OR NOT	Tarama-Minna	n u	n eː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_122-1	NO OR NOT	Yonaguni	n u	n u	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_123-1	IN	Hachijo	n a k a	n a k a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_123-1	IN	Hateruma	n a k a	n a ɡ a	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_123-1	IN	Ikema-Jima	n a k a	n a k a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_123-1	IN	Irabu-Jima	n a k a	n a k a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_123-1	IN	Ishigaki	n a k a	n a k a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_123-1	IN	Miyako-Jima	n a k a	n a k a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_123-1	IN	Naze	n a k a	n aː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_123-1	IN	Northern Amami-Oshima	n a k a	n a k a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_123-1	IN	Okinawa	n a k a	n a h a	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_123-1	IN	Taketomi	n a k a	n a k a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_123-1	IN	Tarama-Minna	n a k a	n a k a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_123-1	IN	Yonaguni	n a k a	n a ɡ a	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_124-1	LONG	Hachijo	n a ɡ a k i	n a ɡ a - -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_124-1	LONG	Hateruma	n a ɡ a k i	n aː h a - -	..x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_124-1	LONG	Ikema-Jima	n a ɡ a k i	n a ɡ a - -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_124-1	LONG	Irabu-Jima	n a ɡ a k i	n a ɡ a - -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_124-1	LONG	Ishigaki	n a ɡ a k i	n aː s aː - -	..x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_124-1	LONG	Miyako-Jima	n a ɡ a k i	n a ɡ a - -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_124-1	LONG	Naze	n a ɡ a k i	n a ɡ a - -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_124-1	LONG	Northern Amami-Oshima	n a ɡ a k i	n a ɡ e - -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_124-1	LONG	Okinawa	n a ɡ a k i	n a ɡ a - -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_124-1	LONG	Taketomi	n a ɡ a k i	n aː ɴ - - -	..xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_124-1	LONG	Tarama-Minna	n a ɡ a k i	n a ɡ aː - -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_124-1	LONG	Yonaguni	n a ɡ a k i	n a s a - -	..x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_126-1	CRY	Hachijo	n a k u	n a k u	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_126-1	CRY	Hateruma	n a k u	n aː ɡ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_126-1	CRY	Ikema-Jima	n a k u	n a ts ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_126-1	CRY	Irabu-Jima	n a k u	n a ts ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_126-1	CRY	Ishigaki	n a k u	n a k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_126-1	CRY	Miyako-Jima	n a k u	n a k ɨ	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_126-1	CRY	Naze	n a k u	n a k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_126-1	CRY	Northern Amami-Oshima	n a k u	n a ʔ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_126-1	CRY	Okinawa	n a k u	n a k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_126-1	CRY	Taketomi	n a k u	n a k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_126-1	CRY	Tarama-Minna	n a k u	n a k ɨ	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_126-1	CRY	Yonaguni	n a k u	n a ɡ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_127-3	HIT	Hachijo	u t u	u ts u	.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_127-3	HIT	Irabu-Jima	u t u	u ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_127-3	HIT	Northern Amami-Oshima	u t u	u ʔ -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_127-3	HIT	Yonaguni	u t u	u t -	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_128-1	THROW	Hachijo	n a ɡ u r u	n a ŋ e r u	...x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_128-1	THROW	Hateruma	n a ɡ u r u	n a ɡ i r -	...x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_128-1	THROW	Ishigaki	n a ɡ u r u	n a ɡ i r -	...x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_128-1	THROW	Naze	n a ɡ u r u	n a ɡ u ɴ -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_128-1	THROW	Northern Amami-Oshima	n a ɡ u r u	n a ɡ u ʔ -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_128-1	THROW	Okinawa	n a ɡ u r u	n a ɡ iː ɴ -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_128-1	THROW	Taketomi	n a ɡ u r u	n a ɡ u ɴ -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_128-1	THROW	Yonaguni	n a ɡ u r u	n a ŋ i - -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_129-1	SEVEN	Hachijo	n a n a	n a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_129-1	SEVEN	Hateruma	n a n a	n a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_129-1	SEVEN	Ikema-Jima	n a n a	n a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_129-1	SEVEN	Irabu-Jima	n a n a	n a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_129-1	SEVEN	Ishigaki	n a n a	n a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_129-1	SEVEN	Miyako-Jima	n a n a	n a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_129-1	SEVEN	Naze	n a n a	n a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_129-1	SEVEN	Northern Amami-Oshima	n a n a	n a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_129-1	SEVEN	Okinawa	n a n a	n a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_129-1	SEVEN	Taketomi	n a n a	n a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_129-1	SEVEN	Tarama-Minna	n a n a	n a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_129-1	SEVEN	Yonaguni	n a n a	n a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_13-1	RAIN (PRECIPITATION)	Hachijo	a m ə	a m e	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_13-1	RAIN (PRECIPITATION)	Hateruma	a m ə	a m i	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_13-1	RAIN (PRECIPITATION)	Ikema-Jima	a m ə	a m i	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_13-1	RAIN (PRECIPITATION)	Irabu-Jima	a m ə	a m i	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_13-1	RAIN (PRECIPITATION)	Ishigaki	a m ə	aː m i	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_13-1	RAIN (PRECIPITATION)	Miyako-Jima	a m ə	a m i	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_13-1	RAIN (PRECIPITATION)	Naze	a m ə	a m ɨ	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_13-1	RAIN (PRECIPITATION)	Northern Amami-Oshima	a m ə	a m e	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_13-1	RAIN (PRECIPITATION)	Okinawa	a m ə	a m iː	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_13-1	RAIN (PRECIPITATION)	Taketomi	a m ə	a m i	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_13-1	RAIN (PRECIPITATION)	Tarama-Minna	a m ə	a m i	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_13-1	RAIN (PRECIPITATION)	Yonaguni	a m ə	a m i	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_130-1	NAME	Hachijo	n a	n a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_130-1	NAME	Hateruma	n a	n a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_130-1	NAME	Ikema-Jima	n a	n aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_130-1	NAME	Irabu-Jima	n a	n aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_130-1	NAME	Ishigaki	n a	n aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_130-1	NAME	Miyako-Jima	n a	n aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_130-1	NAME	Naze	n a	n aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_130-1	NAME	Northern Amami-Oshima	n a	n a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_130-1	NAME	Okinawa	n a	n aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_130-1	NAME	Taketomi	n a	n aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_130-1	NAME	Tarama-Minna	n a	n aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_130-1	NAME	Yonaguni	n a	n a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_131-1	ROPE	Hateruma	t u n a	s ɨ n aː	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_131-1	ROPE	Ikema-Jima	t u n a	ɴ - n a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_131-1	ROPE	Irabu-Jima	t u n a	ts ɨ n a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_131-1	ROPE	Ishigaki	t u n a	ts ɨ n a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_131-1	ROPE	Miyako-Jima	t u n a	- - n a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_131-1	ROPE	Naze	t u n a	- - n aː	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_131-1	ROPE	Okinawa	t u n a	- - n aː	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_131-1	ROPE	Taketomi	t u n a	- - n a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_131-1	ROPE	Tarama-Minna	t u n a	ɴ - n a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_131-1	ROPE	Yonaguni	t u n a	ɴ - n a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_133-1	AT	Hachijo	n i	n i	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_134-3	FLESH OR MEAT	Ikema-Jima	ʃ i ʃ i	s ɨː s ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_134-3	FLESH OR MEAT	Irabu-Jima	ʃ i ʃ i	s ɨː s ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_134-3	FLESH OR MEAT	Okinawa	ʃ i ʃ i	ʃ i ʃ iː	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_134-3	FLESH OR MEAT	Taketomi	ʃ i ʃ i	ʃ iː ʃ i	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_134-3	FLESH OR MEAT	Tarama-Minna	ʃ i ʃ i	s ɨː s ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_136-1	BLUNT	Hachijo	n i b u k i	n i b u - -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_136-1	BLUNT	Hateruma	n i b u k i	n i β u - -	..x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_136-1	BLUNT	Irabu-Jima	n i b u k i	n i v ŭ - -	..x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_136-1	BLUNT	Miyako-Jima	n i b u k i	n i v ŭ - -	..x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_136-1	BLUNT	Northern Amami-Oshima	n i b u k i	n i b i - -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_136-1	BLUNT	Tarama-Minna	n i b u k i	n i β aː - -	..xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_137-1	SEW	Hateruma	n u β u	n uː ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_137-1	SEW	Ikema-Jima	n u β u	n uː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_137-1	SEW	Irabu-Jima	n u β u	n uː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_137-1	SEW	Ishigaki	n u β u	n oː ɴ -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_137-1	SEW	Miyako-Jima	n u β u	n uː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_137-1	SEW	Naze	n u β u	n o j -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_137-1	SEW	Northern Amami-Oshima	n u β u	n uː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_137-1	SEW	Okinawa	n u β u	n oː j -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_137-1	SEW	Taketomi	n u β u	n uː ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_137-1	SEW	Tarama-Minna	n u β u	n uː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_137-1	SEW	Yonaguni	n u β u	n u ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_138-1	STEAL	Hachijo	n u s u m u	n u s u m u	......
+leejaponic:Old Japanese > Ryukyuan|leejaponic_138-1	STEAL	Hateruma	n u s u m u	n u s ɨ m -	...x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_138-1	STEAL	Ikema-Jima	n u s u m u	n u s ɨ ɴ -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_138-1	STEAL	Irabu-Jima	n u s u m u	n i s ɨ m -	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_138-1	STEAL	Ishigaki	n u s u m u	n u s u m -	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_138-1	STEAL	Miyako-Jima	n u s u m u	n u s ɨ m -	...x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_138-1	STEAL	Naze	n u s u m u	n u s u m -	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_138-1	STEAL	Okinawa	n u s u m u	n u s u m -	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_138-1	STEAL	Taketomi	n u s u m u	n u s u m -	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_138-1	STEAL	Tarama-Minna	n u s u m u	n u s ɨ m u	...x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_138-1	STEAL	Yonaguni	n u s u m u	n u tʃ i m -	..xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_139-1	WET	Naze	n u r u r u	n ə r u ɴ -	.x..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_139-1	WET	Northern Amami-Oshima	n u r u r u	n u r u ʔ -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_14-3	WALK	Northern Amami-Oshima	a j u m e	a j u ɴ -	...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_140-1	ROOT	Hachijo	n e	n e	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_140-1	ROOT	Hateruma	n e	n i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_140-1	ROOT	Ikema-Jima	n e	n iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_140-1	ROOT	Irabu-Jima	n e	n iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_140-1	ROOT	Ishigaki	n e	n iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_140-1	ROOT	Miyako-Jima	n e	n iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_140-1	ROOT	Naze	n e	n ɨ	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_140-1	ROOT	Northern Amami-Oshima	n e	n e	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_140-1	ROOT	Okinawa	n e	n iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_140-1	ROOT	Taketomi	n e	n iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_140-1	ROOT	Tarama-Minna	n e	n i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_140-1	ROOT	Yonaguni	n e	n i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_141-1	RAT	Hachijo	n e dz u m i	n e dz u m i	......
+leejaponic:Old Japanese > Ryukyuan|leejaponic_141-1	RAT	Naze	n e dz u m i	n ɨː dʒ ɨ ɴ -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_141-1	RAT	Northern Amami-Oshima	n e dz u m i	n e dz u ɴ -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_142-2	SLEEP	Hateruma	i n u	u ɴ -	xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_144-1	CLIMB	Hachijo	n o b o r u	n o b o r o	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_144-1	CLIMB	Hateruma	n o b o r u	n u b u r -	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_144-1	CLIMB	Ikema-Jima	n o b o r u	n uː - - r iː	.xxx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_144-1	CLIMB	Irabu-Jima	n o b o r u	n uː - - l -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_144-1	CLIMB	Ishigaki	n o b o r u	n u b u r -	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_144-1	CLIMB	Miyako-Jima	n o b o r u	n uː - ɨ - -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_144-1	CLIMB	Naze	n o b o r u	n oː j u ɴ -	..xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_144-1	CLIMB	Northern Amami-Oshima	n o b o r u	n o n o ʔ -	..x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_144-1	CLIMB	Okinawa	n o b o r u	n u b u ɴ -	.x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_144-1	CLIMB	Taketomi	n o b o r u	n uː r u ɴ -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_144-1	CLIMB	Tarama-Minna	n o b o r u	n uː - - l -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_144-1	CLIMB	Yonaguni	n o b o r u	n u r u ɴ -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_145-1	DRINK	Hachijo	n ö m u	n o m u	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_145-1	DRINK	Hateruma	n ö m u	n u m -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_145-1	DRINK	Ikema-Jima	n ö m u	n u m -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_145-1	DRINK	Irabu-Jima	n ö m u	n u m -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_145-1	DRINK	Ishigaki	n ö m u	n u m -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_145-1	DRINK	Miyako-Jima	n ö m u	n u m -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_145-1	DRINK	Naze	n ö m u	n u m -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_145-1	DRINK	Northern Amami-Oshima	n ö m u	n o ɴ -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_145-1	DRINK	Okinawa	n ö m u	n u m -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_145-1	DRINK	Taketomi	n ö m u	n u m -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_145-1	DRINK	Tarama-Minna	n ö m u	n u m -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_145-1	DRINK	Yonaguni	n ö m u	n u m -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_146-1	LEAF	Hachijo	h a	p a	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_146-1	LEAF	Hateruma	h a	p aː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_146-1	LEAF	Ikema-Jima	h a	h aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_146-1	LEAF	Irabu-Jima	h a	p aː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_146-1	LEAF	Ishigaki	h a	p aː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_146-1	LEAF	Miyako-Jima	h a	p aː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_146-1	LEAF	Naze	h a	h aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_146-1	LEAF	Northern Amami-Oshima	h a	h a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_146-1	LEAF	Okinawa	h a	f aː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_146-1	LEAF	Taketomi	h a	p aː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_146-1	LEAF	Tarama-Minna	h a	p aː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_146-1	LEAF	Yonaguni	h a	h a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_147-1	TOOTH	Hachijo	h a	k a	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_147-1	TOOTH	Hateruma	h a	β a	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_147-1	TOOTH	Ikema-Jima	h a	h aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_147-1	TOOTH	Irabu-Jima	h a	p aː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_147-1	TOOTH	Ishigaki	h a	h aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_147-1	TOOTH	Miyako-Jima	h a	p aː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_147-1	TOOTH	Naze	h a	h a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_147-1	TOOTH	Northern Amami-Oshima	h a	h a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_147-1	TOOTH	Okinawa	h a	β aː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_147-1	TOOTH	Taketomi	h a	p aː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_147-1	TOOTH	Tarama-Minna	h a	p aː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_147-1	TOOTH	Yonaguni	h a	h a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_148-2	ASH	Hachijo	h a ç i	h eː - -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_148-2	ASH	Hateruma	h a ç i	p eː - -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_148-2	ASH	Ikema-Jima	h a ç i	k a p i	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_148-2	ASH	Irabu-Jima	h a ç i	p a - ɨ	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_148-2	ASH	Ishigaki	h a ç i	h a - i	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_148-2	ASH	Miyako-Jima	h a ç i	p a - ɨ	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_148-2	ASH	Naze	h a ç i	h ə - -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_148-2	ASH	Northern Amami-Oshima	h a ç i	h eː - -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_148-2	ASH	Okinawa	h a ç i	h eː - -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_148-2	ASH	Taketomi	h a ç i	p a - i	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_148-2	ASH	Tarama-Minna	h a ç i	p a - ɨ	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_149-1	SPIT	Hachijo	h a k u	h a k u	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_149-1	SPIT	Hateruma	h a k u	p a k -	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_149-1	SPIT	Ikema-Jima	h a k u	t a β u	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_149-1	SPIT	Ishigaki	h a k u	h a k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_149-1	SPIT	Miyako-Jima	h a k u	p a k ɨ	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_149-1	SPIT	Naze	h a k u	h a k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_149-1	SPIT	Northern Amami-Oshima	h a k u	h a ʔ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_149-1	SPIT	Taketomi	h a k u	p a k -	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_149-1	SPIT	Yonaguni	h a k u	h a ɡ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_15-3	THAT	Ikema-Jima	k a r e	k a - i	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_15-3	THAT	Irabu-Jima	k a r e	k a r i	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_15-3	THAT	Miyako-Jima	k a r e	k a - i	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_15-3	THAT	Taketomi	k a r e	k a r i	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_15-3	THAT	Tarama-Minna	k a r e	k a l -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_150-1	VOMIT	Hachijo	h a k u	h a k u	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_150-1	VOMIT	Ikema-Jima	h a k u	h a β u	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_150-1	VOMIT	Irabu-Jima	h a k u	p a t i	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_150-1	VOMIT	Miyako-Jima	h a k u	p a k ɨ	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_150-1	VOMIT	Naze	h a k u	h a k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_150-1	VOMIT	Okinawa	h a k u	β a k -	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_150-1	VOMIT	Taketomi	h a k u	p a k -	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_150-1	VOMIT	Tarama-Minna	h a k u	p a k ɨ	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_150-1	VOMIT	Yonaguni	h a k u	h a ɡ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_151-1	SHY OR ASHAMED	Hachijo	h a d z u k a ʃ i k i	h a - dʒ i ɡ a ʃ i - -	..xxxx...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_151-1	SHY OR ASHAMED	Hateruma	h a d z u k a ʃ i k i	p a - s ɨ k a h a - -	x.xxx..xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_151-1	SHY OR ASHAMED	Ikema-Jima	h a d z u k a ʃ i k i	b a k s ɨ k a - i - -	x.xxx..x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_151-1	SHY OR ASHAMED	Irabu-Jima	h a d z u k a ʃ i k i	p a - dz ɨ k a s ɨ - -	x.xxx..xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_151-1	SHY OR ASHAMED	Ishigaki	h a d z u k a ʃ i k i	b a - - ʔ k a ʃ a - -	x.xxx...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_151-1	SHY OR ASHAMED	Miyako-Jima	h a d z u k a ʃ i k i	p a - dz ɨ k a s ɨ - -	x.xxx..xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_151-1	SHY OR ASHAMED	Naze	h a d z u k a ʃ i k i	h a - ts ɨ k a ʃ a - -	..xxx...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_151-1	SHY OR ASHAMED	Northern Amami-Oshima	h a d z u k a ʃ i k i	h a - - ʔ k a ʃ i k a	..xxx.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_151-1	SHY OR ASHAMED	Okinawa	h a d z u k a ʃ i k i	β a - dʒ i k a ʃ e - -	x.xxx...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_151-1	SHY OR ASHAMED	Taketomi	h a d z u k a ʃ i k i	h a - k a j a ɴ - - -	..xxxx.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_153-1	FLOWER	Hachijo	h a n a	h a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_153-1	FLOWER	Hateruma	h a n a	p a n a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_153-1	FLOWER	Ikema-Jima	h a n a	h a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_153-1	FLOWER	Irabu-Jima	h a n a	p a n a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_153-1	FLOWER	Ishigaki	h a n a	p a n a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_153-1	FLOWER	Miyako-Jima	h a n a	p a n a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_153-1	FLOWER	Naze	h a n a	h a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_153-1	FLOWER	Northern Amami-Oshima	h a n a	h a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_153-1	FLOWER	Okinawa	h a n a	β a n aː	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_153-1	FLOWER	Taketomi	h a n a	p a n a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_153-1	FLOWER	Tarama-Minna	h a n a	p a n a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_153-1	FLOWER	Yonaguni	h a n a	h a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_154-1	NOSE	Hachijo	h a n a	h a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_154-1	NOSE	Hateruma	h a n a	p a n a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_154-1	NOSE	Ikema-Jima	h a n a	h a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_154-1	NOSE	Irabu-Jima	h a n a	p a n a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_154-1	NOSE	Ishigaki	h a n a	p a n a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_154-1	NOSE	Miyako-Jima	h a n a	p a n a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_154-1	NOSE	Naze	h a n a	h a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_154-1	NOSE	Northern Amami-Oshima	h a n a	h a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_154-1	NOSE	Okinawa	h a n a	β a n a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_154-1	NOSE	Taketomi	h a n a	p a n a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_154-1	NOSE	Tarama-Minna	h a n a	p a n a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_154-1	NOSE	Yonaguni	h a n a	h a n a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_155-2	FEATHER	Hachijo	h a n e	h a n e	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_155-2	FEATHER	Naze	h a n e	h a n ə	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_155-2	FEATHER	Northern Amami-Oshima	h a n e	h a n e	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_155-2	FEATHER	Okinawa	h a n e	β a n i	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_155-2	FEATHER	Taketomi	h a n e	p a n i	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_156-1	WING	Hachijo	h a n e	h a n e	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_156-1	WING	Hateruma	h a n e	p a n i	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_156-1	WING	Ikema-Jima	h a n e	h a n i	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_156-1	WING	Irabu-Jima	h a n e	p a n i	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_156-1	WING	Ishigaki	h a n e	p a n i	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_156-1	WING	Miyako-Jima	h a n e	p a n i	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_156-1	WING	Naze	h a n e	h a n ə	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_156-1	WING	Northern Amami-Oshima	h a n e	h a n e	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_156-1	WING	Okinawa	h a n e	β a n i	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_156-1	WING	Taketomi	h a n e	p a n i	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_156-1	WING	Tarama-Minna	h a n e	p a n i	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_156-1	WING	Yonaguni	h a n e	p a n i	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_159-3	BELLY	Hateruma	w a t a	b a t a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_159-3	BELLY	Ikema-Jima	w a t a	b a t a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_159-3	BELLY	Irabu-Jima	w a t a	b a t a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_159-3	BELLY	Ishigaki	w a t a	b a d a	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_159-3	BELLY	Miyako-Jima	w a t a	b a t a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_159-3	BELLY	Naze	w a t a	w a t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_159-3	BELLY	Okinawa	w a t a	w a t aː	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_159-3	BELLY	Taketomi	w a t a	b a t a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_159-3	BELLY	Tarama-Minna	w a t a	b a t a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_159-3	BELLY	Yonaguni	w a t a	b a t a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_16-1	SAY	Hachijo	i β u	j - uː	xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_16-1	SAY	Ikema-Jima	i β u	a - i	xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_16-1	SAY	Irabu-Jima	i β u	a - ɨ	xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_16-1	SAY	Miyako-Jima	i β u	a - ɨ	xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_16-1	SAY	Naze	i β u	ʔ j -	xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_16-1	SAY	Northern Amami-Oshima	i β u	j - u	xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_16-1	SAY	Okinawa	i β u	ʔ j -	xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_16-1	SAY	Tarama-Minna	i β u	ɨː - -	xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_160-1	INTESTINES	Hateruma	w a t a	b a t a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_160-1	INTESTINES	Ishigaki	w a t a	b a d a	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_160-1	INTESTINES	Northern Amami-Oshima	w a t a	dz o t a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_160-1	INTESTINES	Okinawa	w a t a	w a t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_160-1	INTESTINES	Taketomi	w a t a	b a t a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_160-1	INTESTINES	Yonaguni	w a t a	b a t a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_161-1	NEEDLE (FOR SEWING)	Hachijo	h a r i	h a r i	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_161-1	NEEDLE (FOR SEWING)	Hateruma	h a r i	p a r ɨ	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_161-1	NEEDLE (FOR SEWING)	Ikema-Jima	h a r i	h a - i	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_161-1	NEEDLE (FOR SEWING)	Irabu-Jima	h a r i	p a l -	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_161-1	NEEDLE (FOR SEWING)	Ishigaki	h a r i	p a r ɨ	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_161-1	NEEDLE (FOR SEWING)	Naze	h a r i	h a r i	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_161-1	NEEDLE (FOR SEWING)	Northern Amami-Oshima	h a r i	h a - i	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_161-1	NEEDLE (FOR SEWING)	Okinawa	h a r i	β a - i	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_161-1	NEEDLE (FOR SEWING)	Taketomi	h a r i	p a r u	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_161-1	NEEDLE (FOR SEWING)	Tarama-Minna	h a r i	p a l -	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_161-1	NEEDLE (FOR SEWING)	Yonaguni	h a r i	h a - i	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_162-1	FIRE	Hachijo	ç ɨ	ç i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_162-1	FIRE	Hateruma	ç ɨ	s ɨ	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_162-1	FIRE	Ishigaki	ç ɨ	s ɨː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_162-1	FIRE	Northern Amami-Oshima	ç ɨ	ç i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_162-1	FIRE	Okinawa	ç ɨ	p iː	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_162-1	FIRE	Taketomi	ç ɨ	p iː	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_163-1	LEFT	Hachijo	ç i d a r i	ç i d a r i	......
+leejaponic:Old Japanese > Ryukyuan|leejaponic_163-1	LEFT	Hateruma	ç i d a r i	s ɨ n a r ɨ	xxx..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_163-1	LEFT	Ikema-Jima	ç i d a r i	ç i d a - i	....x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_163-1	LEFT	Irabu-Jima	ç i d a r i	p i d a l -	x...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_163-1	LEFT	Ishigaki	ç i d a r i	s ɨ d a r ɨ	xx...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_163-1	LEFT	Miyako-Jima	ç i d a r i	p ɨ d a - ɨ	xx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_163-1	LEFT	Naze	ç i d a r i	ç i dʒ a r i	..x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_163-1	LEFT	Northern Amami-Oshima	ç i d a r i	ç i d a - i	....x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_163-1	LEFT	Taketomi	ç i d a r i	p i d a r i	x.....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_163-1	LEFT	Tarama-Minna	ç i d a r i	p i d aː l -	x...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_164-1	PERSON	Hachijo	ç i t ö	ʃ i t o	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_164-1	PERSON	Hateruma	ç i t ö	s ɨ t u	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_164-1	PERSON	Ikema-Jima	ç i t ö	s ɨ t u	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_164-1	PERSON	Irabu-Jima	ç i t ö	s ɨ t u	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_164-1	PERSON	Ishigaki	ç i t ö	s ɨ t u	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_164-1	PERSON	Miyako-Jima	ç i t ö	s ɨ t u	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_164-1	PERSON	Northern Amami-Oshima	ç i t ö	ç i t o	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_164-1	PERSON	Tarama-Minna	ç i t ö	s ɨ t u	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_164-1	PERSON	Yonaguni	ç i t ö	t - ʔ u	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_165-1	ONE	Hachijo	ç i t ö	t e ts u	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_165-1	ONE	Hateruma	ç i t ö	s ɨ ts ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_165-1	ONE	Ikema-Jima	ç i t ö	s ɨ t ɨ	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_165-1	ONE	Irabu-Jima	ç i t ö	s ɨ t ɨ	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_165-1	ONE	Ishigaki	ç i t ö	s ɨ t ɨ	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_165-1	ONE	Miyako-Jima	ç i t ö	s ɨ t ɨ	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_165-1	ONE	Naze	ç i t ö	t ɨː ts ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_165-1	ONE	Northern Amami-Oshima	ç i t ö	ç i t o	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_165-1	ONE	Okinawa	ç i t ö	t iː tʃ i	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_165-1	ONE	Taketomi	ç i t ö	p iː tʃ i	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_165-1	ONE	Tarama-Minna	ç i t ö	s ɨ t ɨ	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_165-1	ONE	Yonaguni	ç i t ö	t u tʃ i	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_167-1	OPEN	Hachijo	ç i r a k u	ç i r a k u	......
+leejaponic:Old Japanese > Ryukyuan|leejaponic_167-1	OPEN	Hateruma	ç i r a k u	p u r a ɡ -	xx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_167-1	OPEN	Ikema-Jima	ç i r a k u	β u r a β u	xx..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_167-1	OPEN	Irabu-Jima	ç i r a k u	p u r a β u	xx..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_167-1	OPEN	Ishigaki	ç i r a k u	p u r a ɡ ɨ	xx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_167-1	OPEN	Miyako-Jima	ç i r a k u	p u r a k ɨ	xx...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_167-1	OPEN	Taketomi	ç i r a k u	p u r a k -	xx...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_167-1	OPEN	Tarama-Minna	ç i r a k u	p ɨ r a k ɨ	xx...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_168-1	DAY (NOT NIGHT)	Hachijo	ç i r u	ç i r u	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_168-1	DAY (NOT NIGHT)	Hateruma	ç i r u	s ɨ s uː	xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_168-1	DAY (NOT NIGHT)	Ikema-Jima	ç i r u	ç iː m a	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_168-1	DAY (NOT NIGHT)	Irabu-Jima	ç i r u	s ɨ lː a	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_168-1	DAY (NOT NIGHT)	Ishigaki	ç i r u	s ɨ r a	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_168-1	DAY (NOT NIGHT)	Miyako-Jima	ç i r u	s ɨː m a	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_168-1	DAY (NOT NIGHT)	Naze	ç i r u	ç i ɴ a	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_168-1	DAY (NOT NIGHT)	Northern Amami-Oshima	ç i r u	ç iː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_168-1	DAY (NOT NIGHT)	Okinawa	ç i r u	p i r u	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_168-1	DAY (NOT NIGHT)	Taketomi	ç i r u	p u s a	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_168-1	DAY (NOT NIGHT)	Tarama-Minna	ç i r u	s ɨː m a	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_169-1	WIDE	Hachijo	ç i r ø k i	ç i r o - -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_169-1	WIDE	Naze	ç i r ø k i	ç i r u - -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_169-1	WIDE	Northern Amami-Oshima	ç i r ø k i	ç i r e - -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_169-1	WIDE	Okinawa	ç i r ø k i	ç i r u - -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_17-2	HOUSE	Hachijo	i e	e -	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_17-2	HOUSE	Northern Amami-Oshima	i e	i e	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_170-1	BLOW (OF WIND)	Hachijo	β u k u	β u k o	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_170-1	BLOW (OF WIND)	Ikema-Jima	β u k u	β u k ɨ	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_170-1	BLOW (OF WIND)	Irabu-Jima	β u k u	β u k ɨ	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_170-1	BLOW (OF WIND)	Miyako-Jima	β u k u	β u k ɨ	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_170-1	BLOW (OF WIND)	Naze	β u k u	β u k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_170-1	BLOW (OF WIND)	Northern Amami-Oshima	β u k u	β u ʔ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_170-1	BLOW (OF WIND)	Okinawa	β u k u	β u k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_170-1	BLOW (OF WIND)	Taketomi	β u k u	β u k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_170-1	BLOW (OF WIND)	Tarama-Minna	β u k u	β u k ɨ	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_171-1	THATCH OR ROOF	Hachijo	β u k u	β u k u	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_171-1	THATCH OR ROOF	Ikema-Jima	β u k u	β u ts ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_171-1	THATCH OR ROOF	Naze	β u k u	β u k u	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_171-1	THATCH OR ROOF	Northern Amami-Oshima	β u k u	β u ʔ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_171-1	THATCH OR ROOF	Okinawa	β u k u	β u k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_171-1	THATCH OR ROOF	Taketomi	β u k u	β u k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_172-1	SWELL	Hachijo	h a r u r u	h a r e r u	...x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_172-1	SWELL	Naze	h a r u r u	h a r ə r -	...x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_172-1	SWELL	Northern Amami-Oshima	h a r u r u	h a r u ʔ -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_173-1	TWO	Hachijo	β u t a	β u t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_173-1	TWO	Hateruma	β u t a	β u t aː	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_173-1	TWO	Ikema-Jima	β u t a	β u t aː	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_173-1	TWO	Irabu-Jima	β u t a	β u t aː	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_173-1	TWO	Ishigaki	β u t a	β u t aː	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_173-1	TWO	Miyako-Jima	β u t a	β u t aː	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_173-1	TWO	Naze	β u t a	t aː ts ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_173-1	TWO	Northern Amami-Oshima	β u t a	β u t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_173-1	TWO	Okinawa	β u t a	t aː tʃ i	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_173-1	TWO	Taketomi	β u t a	β u t aː	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_173-1	TWO	Tarama-Minna	β u t a	β u t aː	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_173-1	TWO	Yonaguni	β u t a	t a tʃ i	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_174-1	OLD	Hachijo	β u r u k i	β u r u - -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_174-1	OLD	Ishigaki	β u r u k i	β u r u - -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_174-1	OLD	Miyako-Jima	β u r u k i	β u k a - -	..xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_174-1	OLD	Naze	β u r u k i	β u r u - -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_174-1	OLD	Northern Amami-Oshima	β u r u k i	β u r i - -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_174-1	OLD	Okinawa	β u r u k i	β u r u - -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_174-1	OLD	Yonaguni	β u r u k i	β u r u m u	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_175-1	SNAKE	Hachijo	h ə m i	h e m e	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_175-1	SNAKE	Northern Amami-Oshima	h ə m i	h e ʔ -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_179-1	STAR	Hachijo	h ø ʃ i	h o ʃ i	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_179-1	STAR	Hateruma	h ø ʃ i	p u ts ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_179-1	STAR	Ikema-Jima	h ø ʃ i	β u s ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_179-1	STAR	Irabu-Jima	h ø ʃ i	p u s ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_179-1	STAR	Ishigaki	h ø ʃ i	p u s ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_179-1	STAR	Miyako-Jima	h ø ʃ i	p u s ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_179-1	STAR	Naze	h ø ʃ i	β u s ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_179-1	STAR	Northern Amami-Oshima	h ø ʃ i	h o ʃ ĭ	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_179-1	STAR	Okinawa	h ø ʃ i	β u ʃ iː	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_179-1	STAR	Taketomi	h ø ʃ i	p u ʃ i	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_179-1	STAR	Tarama-Minna	h ø ʃ i	p u s ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_179-1	STAR	Yonaguni	h ø ʃ i	β u tʃ i	xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_18-1	BREATHE	Hachijo	i k i d u k u	i k i - - - -	...xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_18-1	BREATHE	Hateruma	i k i d u k u	ɨ s ɨ - - - -	xxxxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_18-1	BREATHE	Ikema-Jima	i k i d u k u	i ts ɨ - - - -	.xxxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_18-1	BREATHE	Irabu-Jima	i k i d u k u	i k ɨ - - - -	..xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_18-1	BREATHE	Ishigaki	i k i d u k u	i k i - - - -	...xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_18-1	BREATHE	Miyako-Jima	i k i d u k u	i k ɨ - - - -	..xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_18-1	BREATHE	Naze	i k i d u k u	i k i - - - -	...xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_18-1	BREATHE	Northern Amami-Oshima	i k i d u k u	i - ʔ - - - -	.xxxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_18-1	BREATHE	Okinawa	i k i d u k u	i k i - - - -	...xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_18-1	BREATHE	Taketomi	i k i d u k u	i k i - - - -	...xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_18-1	BREATHE	Tarama-Minna	i k i d u k u	i k ɨ - - - -	..xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_18-1	BREATHE	Yonaguni	i k i d u k u	i t i - - - -	.x.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_180-1	BONE	Hachijo	h ö n e	h o n e	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_180-1	BONE	Hateruma	h ö n e	p u n i	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_180-1	BONE	Ikema-Jima	h ö n e	β u n i	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_180-1	BONE	Irabu-Jima	h ö n e	p u n i	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_180-1	BONE	Ishigaki	h ö n e	β u n i	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_180-1	BONE	Miyako-Jima	h ö n e	p u n i	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_180-1	BONE	Naze	h ö n e	β u n ɨ	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_180-1	BONE	Northern Amami-Oshima	h ö n e	h o n e	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_180-1	BONE	Okinawa	h ö n e	β u n i	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_180-1	BONE	Taketomi	h ö n e	p u n i	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_180-1	BONE	Tarama-Minna	h ö n e	p u n i	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_180-1	BONE	Yonaguni	h ö n e	β u n i	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_181-1	DIG	Hachijo	h o r u	h o r u	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_181-1	DIG	Hateruma	h o r u	p u r -	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_181-1	DIG	Ikema-Jima	h o r u	β u - i	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_181-1	DIG	Irabu-Jima	h o r u	p u l -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_181-1	DIG	Ishigaki	h o r u	p u r ɨ	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_181-1	DIG	Miyako-Jima	h o r u	p u - ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_181-1	DIG	Naze	h o r u	β u r -	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_181-1	DIG	Northern Amami-Oshima	h o r u	h o ʔ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_181-1	DIG	Okinawa	h o r u	β u ɴ -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_181-1	DIG	Taketomi	h o r u	p u r -	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_181-1	DIG	Tarama-Minna	h o r u	p u l -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_181-1	DIG	Yonaguni	h o r u	β u - i	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_183-1	TURN	Hachijo	m a ɡ a r u	m a ɡ a r u	......
+leejaponic:Old Japanese > Ryukyuan|leejaponic_183-1	TURN	Hateruma	m a ɡ a r u	m aː r u ɴ -	..xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_183-1	TURN	Ikema-Jima	m a ɡ a r u	m a ɡ a - i	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_183-1	TURN	Irabu-Jima	m a ɡ a r u	m a ɡ a l -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_183-1	TURN	Ishigaki	m a ɡ a r u	m a ɡ a r -	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_183-1	TURN	Miyako-Jima	m a ɡ a r u	m a ɡ a - ɨ	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_183-1	TURN	Naze	m a ɡ a r u	m a ɡ a r -	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_183-1	TURN	Northern Amami-Oshima	m a ɡ a r u	m a ɡ a ʔ -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_183-1	TURN	Okinawa	m a ɡ a r u	m a ɡ a ɴ -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_183-1	TURN	Taketomi	m a ɡ a r u	m a ɡ a r -	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_183-1	TURN	Tarama-Minna	m a ɡ a r u	m a ɡ a l -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_184-1	FRUIT	Hachijo	m ɨ	m i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_184-1	FRUIT	Northern Amami-Oshima	m ɨ	m i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_185-1	RIGHT	Hachijo	m i ɡ i	m i ɡ i	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_185-1	RIGHT	Ikema-Jima	m i ɡ i	ɴ - ts ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_185-1	RIGHT	Irabu-Jima	m i ɡ i	ɴ - ts ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_185-1	RIGHT	Miyako-Jima	m i ɡ i	ɴ ɡ z ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_185-1	RIGHT	Northern Amami-Oshima	m i ɡ i	m i - ʔ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_185-1	RIGHT	Okinawa	m i ɡ i	ɴ iː r i	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_185-1	RIGHT	Tarama-Minna	m i ɡ i	m ɨː ɡ ɨ	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_185-1	RIGHT	Yonaguni	m i ɡ i	m i ɡ i	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_186-1	SHORT	Hachijo	m i dʒ i k a k i	m i tʃ i k a - -	..x...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_186-1	SHORT	Northern Amami-Oshima	m i dʒ i k a k i	m i ç i k e - -	..x..xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_187-1	WATER	Hachijo	m i d u	m i dz u	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_187-1	WATER	Hateruma	m i d u	m i dz ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_187-1	WATER	Ikema-Jima	m i d u	m i dz ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_187-1	WATER	Irabu-Jima	m i d u	m i dz ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_187-1	WATER	Ishigaki	m i d u	m i dz ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_187-1	WATER	Miyako-Jima	m i d u	m i dz ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_187-1	WATER	Naze	m i d u	m ɨ dz ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_187-1	WATER	Northern Amami-Oshima	m i d u	m i ʔ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_187-1	WATER	Okinawa	m i d u	m i dʒ i	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_187-1	WATER	Taketomi	m i d u	m i dʒ i	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_187-1	WATER	Tarama-Minna	m i d u	m i dz ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_187-1	WATER	Yonaguni	m i d u	m i ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_189-1	PATH OR ROAD	Hachijo	m i t i	m i tʃ i	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_189-1	PATH OR ROAD	Hateruma	m i t i	m ɨ ts ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_189-1	PATH OR ROAD	Ikema-Jima	m i t i	ɴ - ts ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_189-1	PATH OR ROAD	Irabu-Jima	m i t i	m - ts ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_189-1	PATH OR ROAD	Ishigaki	m i t i	m ɨ ts ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_189-1	PATH OR ROAD	Miyako-Jima	m i t i	m - ts ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_189-1	PATH OR ROAD	Naze	m i t i	m ɨ ts ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_189-1	PATH OR ROAD	Northern Amami-Oshima	m i t i	m i ʔ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_189-1	PATH OR ROAD	Okinawa	m i t i	m i tʃ i	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_189-1	PATH OR ROAD	Taketomi	m i t i	m i tʃ i	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_189-1	PATH OR ROAD	Tarama-Minna	m i t i	m - ts ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_189-1	PATH OR ROAD	Yonaguni	m i t i	m i t i	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_19-1	BE ALIVE	Hachijo	i k u r u	i k i r u	..x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_19-1	BE ALIVE	Hateruma	i k u r u	i ɡ u ɴ -	.x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_19-1	BE ALIVE	Ikema-Jima	i k u r u	i k iː ɴ u	..xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_19-1	BE ALIVE	Miyako-Jima	i k u r u	i k ɨ ɴ u	..xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_19-1	BE ALIVE	Naze	i k u r u	i k i r -	..x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_19-1	BE ALIVE	Northern Amami-Oshima	i k u r u	i ɡ i ʔ -	.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_19-1	BE ALIVE	Okinawa	i k u r u	i k i ɴ -	..xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_19-1	BE ALIVE	Taketomi	i k u r u	i k i r -	..x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_19-1	BE ALIVE	Tarama-Minna	i k u r u	i k i l -	..xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_19-1	BE ALIVE	Yonaguni	i k u r u	i ɡ u ɴ -	.x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_190-1	THREE	Hachijo	m i	m i	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_190-1	THREE	Hateruma	m i	m ɨː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_190-1	THREE	Ikema-Jima	m i	m iː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_190-1	THREE	Irabu-Jima	m i	m ɨː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_190-1	THREE	Ishigaki	m i	m iː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_190-1	THREE	Miyako-Jima	m i	m ɨː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_190-1	THREE	Naze	m i	m iː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_190-1	THREE	Northern Amami-Oshima	m i	m i	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_190-1	THREE	Okinawa	m i	m iː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_190-1	THREE	Taketomi	m i	m iː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_190-1	THREE	Tarama-Minna	m i	m ɨː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_190-1	THREE	Yonaguni	m i	m i	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_191-1	EAR	Hachijo	m i m i	m i m i	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_191-1	EAR	Hateruma	m i m i	m i m i	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_191-1	EAR	Ikema-Jima	m i m i	m i ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_191-1	EAR	Irabu-Jima	m i m i	m i m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_191-1	EAR	Ishigaki	m i m i	m i ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_191-1	EAR	Miyako-Jima	m i m i	m i m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_191-1	EAR	Naze	m i m i	m i ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_191-1	EAR	Northern Amami-Oshima	m i m i	m i ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_191-1	EAR	Okinawa	m i m i	m i m iː	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_191-1	EAR	Taketomi	m i m i	m i ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_191-1	EAR	Tarama-Minna	m i m i	m i m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_191-1	EAR	Yonaguni	m i m i	m i ɴ a	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_193-1	SEE	Hachijo	m i r u	m i r u	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_193-1	SEE	Hateruma	m i r u	m i r -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_193-1	SEE	Ikema-Jima	m i r u	m iː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_193-1	SEE	Irabu-Jima	m i r u	m iː l -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_193-1	SEE	Ishigaki	m i r u	m i r -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_193-1	SEE	Miyako-Jima	m i r u	m iː - ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_193-1	SEE	Northern Amami-Oshima	m i r u	m i ʔ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_193-1	SEE	Okinawa	m i r u	m iː ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_193-1	SEE	Taketomi	m i r u	m i r -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_193-1	SEE	Tarama-Minna	m i r u	m iː l -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_194-1	ALL	Hachijo	m ɨ n a	m e n a	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_194-1	ALL	Northern Amami-Oshima	m ɨ n a	m i n a	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_195-1	FASTEN	Hachijo	m u s u b u	m u s u b u	......
+leejaponic:Old Japanese > Ryukyuan|leejaponic_195-1	FASTEN	Hateruma	m u s u b u	m u s ɨ p -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_195-1	FASTEN	Ishigaki	m u s u b u	m u s u b ɨ	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_195-1	FASTEN	Taketomi	m u s u b u	m u s u b -	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_195-1	FASTEN	Tarama-Minna	m u s u b u	m u s ɨ b ɨ	...x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_196-1	SIX	Hachijo	m u	m u	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_196-1	SIX	Hateruma	m u	ɴː ɨ	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_196-1	SIX	Ikema-Jima	m u	mː ɨ	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_196-1	SIX	Irabu-Jima	m u	mː ɨ	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_196-1	SIX	Ishigaki	m u	ɴː ɨ	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_196-1	SIX	Miyako-Jima	m u	mː ɨ	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_196-1	SIX	Naze	m u	m oː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_196-1	SIX	Northern Amami-Oshima	m u	m u	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_196-1	SIX	Okinawa	m u	m uː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_196-1	SIX	Taketomi	m u	m uː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_196-1	SIX	Tarama-Minna	m u	mː ɨ	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_196-1	SIX	Yonaguni	m u	m u	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_197-1	BREAST	Hachijo	m u n e	m u n e	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_197-1	BREAST	Naze	m u n e	m o n ə	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_197-1	BREAST	Northern Amami-Oshima	m u n e	m u n e	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_198-1	EYE	Hateruma	m ə	m i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_198-1	EYE	Ikema-Jima	m ə	m iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_198-1	EYE	Irabu-Jima	m ə	m iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_198-1	EYE	Ishigaki	m ə	m iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_198-1	EYE	Miyako-Jima	m ə	m iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_198-1	EYE	Naze	m ə	m ɨ	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_198-1	EYE	Northern Amami-Oshima	m ə	m e	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_198-1	EYE	Okinawa	m ə	m iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_198-1	EYE	Taketomi	m ə	m iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_198-1	EYE	Tarama-Minna	m ə	m iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_198-1	EYE	Yonaguni	m ə	m i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_2-1	RED	Hachijo	a k a k i	a k a - -	...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_2-1	RED	Hateruma	a k a k i	a ɡ a - -	.x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_2-1	RED	Ikema-Jima	a k a k i	a k a - -	...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_2-1	RED	Irabu-Jima	a k a k i	a k a - -	...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_2-1	RED	Ishigaki	a k a k i	a k a - -	...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_2-1	RED	Miyako-Jima	a k a k i	a k a - -	...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_2-1	RED	Northern Amami-Oshima	a k a k i	a k e - -	..xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_2-1	RED	Okinawa	a k a k i	a k a - -	...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_2-1	RED	Taketomi	a k a k i	a ɡ aː - -	.x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_2-1	RED	Tarama-Minna	a k a k i	a k aː - -	...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_2-1	RED	Yonaguni	a k a k i	a ɡ a t i	.x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_20-1	STONE	Hachijo	i ʃ i	i ʃ i	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_20-1	STONE	Hateruma	i ʃ i	i ʃ i	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_20-1	STONE	Ikema-Jima	i ʃ i	i s ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_20-1	STONE	Irabu-Jima	i ʃ i	i s ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_20-1	STONE	Ishigaki	i ʃ i	i ʃ i	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_20-1	STONE	Miyako-Jima	i ʃ i	i s ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_20-1	STONE	Naze	i ʃ i	i s ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_20-1	STONE	Northern Amami-Oshima	i ʃ i	i ʃ -	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_20-1	STONE	Okinawa	i ʃ i	i ʃ i	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_20-1	STONE	Taketomi	i ʃ i	i ʃ i	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_20-1	STONE	Tarama-Minna	i ʃ i	i ʃ i	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_20-1	STONE	Yonaguni	i ʃ i	i tʃ i	.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_200-1	HOLD	Hateruma	m ö t u	m u ts -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_200-1	HOLD	Ikema-Jima	m ö t u	m u ts ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_200-1	HOLD	Irabu-Jima	m ö t u	m u ts ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_200-1	HOLD	Ishigaki	m ö t u	m u ts -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_200-1	HOLD	Miyako-Jima	m ö t u	m u ts ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_200-1	HOLD	Naze	m ö t u	m u tʃ -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_200-1	HOLD	Northern Amami-Oshima	m ö t u	m o ʔ -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_200-1	HOLD	Okinawa	m ö t u	m u t -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_200-1	HOLD	Taketomi	m ö t u	m u t -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_200-1	HOLD	Tarama-Minna	m ö t u	m u ts ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_200-1	HOLD	Yonaguni	m ö t u	m u t -	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_202-1	EIGHT	Hachijo	j a	j a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_202-1	EIGHT	Hateruma	j a	j aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_202-1	EIGHT	Ikema-Jima	j a	j aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_202-1	EIGHT	Irabu-Jima	j a	j aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_202-1	EIGHT	Ishigaki	j a	j aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_202-1	EIGHT	Miyako-Jima	j a	j aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_202-1	EIGHT	Naze	j a	j aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_202-1	EIGHT	Northern Amami-Oshima	j a	j a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_202-1	EIGHT	Okinawa	j a	j aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_202-1	EIGHT	Taketomi	j a	j aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_202-1	EIGHT	Tarama-Minna	j a	j aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_202-1	EIGHT	Yonaguni	j a	d a	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_203-1	DREAM (SOMETHING)	Hachijo	i m e	u m i	x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_203-1	DREAM (SOMETHING)	Hateruma	i m e	i m i	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_203-1	DREAM (SOMETHING)	Ishigaki	i m e	i m i	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_203-1	DREAM (SOMETHING)	Naze	i m e	i m ɨ	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_203-1	DREAM (SOMETHING)	Okinawa	i m e	i m iː	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_203-1	DREAM (SOMETHING)	Taketomi	i m e	i m i	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_203-1	DREAM (SOMETHING)	Yonaguni	i m e	i m i	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_204-1	GOOD	Hachijo	j ø k i	j o - -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_204-1	GOOD	Naze	j ø k i	ʔ a - -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_204-1	GOOD	Northern Amami-Oshima	j ø k i	j o k a	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_205-1	FOUR	Hachijo	j ö	j o	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_205-1	FOUR	Hateruma	j ö	j uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_205-1	FOUR	Ikema-Jima	j ö	j uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_205-1	FOUR	Irabu-Jima	j ö	j uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_205-1	FOUR	Ishigaki	j ö	j uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_205-1	FOUR	Miyako-Jima	j ö	j uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_205-1	FOUR	Naze	j ö	j uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_205-1	FOUR	Northern Amami-Oshima	j ö	j o	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_205-1	FOUR	Okinawa	j ö	j uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_205-1	FOUR	Taketomi	j ö	j uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_205-1	FOUR	Tarama-Minna	j ö	j uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_205-1	FOUR	Yonaguni	j ö	d u	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_206-1	NIGHT	Hachijo	j o	b a	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_206-1	NIGHT	Hateruma	j o	j u	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_206-1	NIGHT	Ikema-Jima	j o	j u	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_206-1	NIGHT	Irabu-Jima	j o	j u	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_206-1	NIGHT	Ishigaki	j o	j uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_206-1	NIGHT	Miyako-Jima	j o	j u	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_206-1	NIGHT	Naze	j o	j u	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_206-1	NIGHT	Northern Amami-Oshima	j o	j o	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_206-1	NIGHT	Okinawa	j o	j u	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_206-1	NIGHT	Taketomi	j o	j uː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_206-1	NIGHT	Tarama-Minna	j o	j u	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_206-1	NIGHT	Yonaguni	j o	d u	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_208-1	I	Hachijo	w a r e	w a - i	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_208-1	I	Ikema-Jima	w a r e	b a ɴ -	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_208-1	I	Irabu-Jima	w a r e	b a ɴ -	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_208-1	I	Miyako-Jima	w a r e	b a ɴ -	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_208-1	I	Naze	w a r e	w a ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_208-1	I	Okinawa	w a r e	w a ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_208-1	I	Taketomi	w a r e	b a ɴ -	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_208-1	I	Tarama-Minna	w a r e	b a ɴ -	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_209-1	WE	Hachijo	w a r e	w a r a	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_209-1	WE	Ikema-Jima	w a r e	b a ɴ i	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_209-1	WE	Irabu-Jima	w a r e	b a ɴ i	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_209-1	WE	Miyako-Jima	w a r e	b a t a	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_209-1	WE	Naze	w a r e	w a j a	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_209-1	WE	Okinawa	w a r e	w a t aː	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_209-1	WE	Taketomi	w a r e	b a t aː	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_209-1	WE	Tarama-Minna	w a r e	- a t a	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_21-1	PAINFUL OR SICK	Northern Amami-Oshima	i t a m u	i t a ɴ -	...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_21-1	PAINFUL OR SICK	Yonaguni	i t a m u	- d a m -	xx..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_210-1	LAUGH	Hachijo	w a t a β u	w a r oː w a	..xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_210-1	LAUGH	Hateruma	w a t a β u	b aː r u ɴ -	x.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_210-1	LAUGH	Ikema-Jima	w a t a β u	b a r a - iː	x.x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_210-1	LAUGH	Irabu-Jima	w a t a β u	b a r a - ɨ	x.x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_210-1	LAUGH	Ishigaki	w a t a β u	b aː r - - oː	x.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_210-1	LAUGH	Naze	w a t a β u	w a r a j u	..x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_210-1	LAUGH	Northern Amami-Oshima	w a t a β u	w a r - - u	..xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_210-1	LAUGH	Okinawa	w a t a β u	w a r a j -	..x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_210-1	LAUGH	Taketomi	w a t a β u	b a r a u -	x.x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_210-1	LAUGH	Tarama-Minna	w a t a β u	b a r - - uː	x.xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_210-1	LAUGH	Yonaguni	w a t a β u	b a r u ɴ -	x.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_211-3	BAD	Ikema-Jima	a ʃ i	a k a	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_211-3	BAD	Irabu-Jima	a ʃ i	a k a	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_211-3	BAD	Miyako-Jima	a ʃ i	a k a	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_22-1	WHEN	Hachijo	i t u	i ts u	.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_22-1	WHEN	Hateruma	i t u	i ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_22-1	WHEN	Ikema-Jima	i t u	i ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_22-1	WHEN	Irabu-Jima	i t u	i ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_22-1	WHEN	Ishigaki	i t u	i ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_22-1	WHEN	Miyako-Jima	i t u	i ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_22-1	WHEN	Naze	i t u	i ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_22-1	WHEN	Northern Amami-Oshima	i t u	i ʔ -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_22-1	WHEN	Okinawa	i t u	i tʃ i	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_22-1	WHEN	Taketomi	i t u	i tʃ i	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_22-1	WHEN	Tarama-Minna	i t u	i ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_22-1	WHEN	Yonaguni	i t u	i tʃ i	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_23-1	FIVE	Hachijo	i t u	i ts u	.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_23-1	FIVE	Hateruma	i t u	i s ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_23-1	FIVE	Ikema-Jima	i t u	i ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_23-1	FIVE	Irabu-Jima	i t u	i ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_23-1	FIVE	Ishigaki	i t u	i ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_23-1	FIVE	Miyako-Jima	i t u	i ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_23-1	FIVE	Naze	i t u	i ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_23-1	FIVE	Northern Amami-Oshima	i t u	i ts u	.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_23-1	FIVE	Okinawa	i t u	i tʃ iː	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_23-1	FIVE	Taketomi	i t u	i tʃ i	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_23-1	FIVE	Tarama-Minna	i t u	i ts ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_23-1	FIVE	Yonaguni	i t u	i tʃ i	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_24-1	LIGHTNING	Hachijo	i n a b i k a r i	i n a b i k a r i	.........
+leejaponic:Old Japanese > Ryukyuan|leejaponic_24-1	LIGHTNING	Ikema-Jima	i n a b i k a r i	ɴ n a b i k a - i	x......x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_24-1	LIGHTNING	Irabu-Jima	i n a b i k a r i	m n a p ɨ k a l -	x..xx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_24-1	LIGHTNING	Miyako-Jima	i n a b i k a r i	m n a p ɨ k a - ɨ	x..xx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_24-1	LIGHTNING	Naze	i n a b i k a r i	- - - ç i k a r a	xxxx....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_24-1	LIGHTNING	Northern Amami-Oshima	i n a b i k a r i	i n a b i k a - i	.......x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_24-1	LIGHTNING	Tarama-Minna	i n a b i k a r i	m n a p ɨ k a l -	x..xx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_25-1	DOG	Hachijo	i n u	i n u	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_25-1	DOG	Hateruma	i n u	i n u	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_25-1	DOG	Ikema-Jima	i n u	i ɴ -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_25-1	DOG	Irabu-Jima	i n u	i ɴ -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_25-1	DOG	Ishigaki	i n u	i ɴ -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_25-1	DOG	Miyako-Jima	i n u	i ɴ -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_25-1	DOG	Naze	i n u	i ɴ -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_25-1	DOG	Northern Amami-Oshima	i n u	i ɴ -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_25-1	DOG	Okinawa	i n u	i ɴ aː	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_25-1	DOG	Taketomi	i n u	i ɴ -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_25-1	DOG	Tarama-Minna	i n u	i n a	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_25-1	DOG	Yonaguni	i n u	i n u	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_26-1	ABOVE	Hachijo	u h e	u - e	.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_26-1	ABOVE	Hateruma	u h e	u - i	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_26-1	ABOVE	Ishigaki	u h e	u - i	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_26-1	ABOVE	Naze	u h e	u - ɨ	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_26-1	ABOVE	Northern Amami-Oshima	u h e	u - e	.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_26-1	ABOVE	Okinawa	u h e	u - i	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_26-1	ABOVE	Taketomi	u h e	u - i	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_27-1	PLANT (SOMETHING)	Naze	uː	ɨ	x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_27-1	PLANT (SOMETHING)	Northern Amami-Oshima	uː	u	.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_27-1	PLANT (SOMETHING)	Okinawa	uː	u	.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_27-1	PLANT (SOMETHING)	Tarama-Minna	uː	u	.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_28-1	THIN	Hachijo	u s u k i	u s u - -	...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_28-1	THIN	Ikema-Jima	u s u k i	u k a - -	.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_28-1	THIN	Miyako-Jima	u s u k i	u s a - -	..xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_28-1	THIN	Northern Amami-Oshima	u s u k i	u ʃ - - i	.xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_28-1	THIN	Okinawa	u s u k i	u s u - -	...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_28-1	THIN	Yonaguni	u s u k i	i ts a - -	xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_29-1	SHOOT	Hachijo	u ts u	u ts u	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_29-1	SHOOT	Hateruma	u ts u	u ts -	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_29-1	SHOOT	Ikema-Jima	u ts u	u ts ɨ	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_29-1	SHOOT	Ishigaki	u ts u	u ts -	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_29-1	SHOOT	Miyako-Jima	u ts u	ŭ t -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_29-1	SHOOT	Naze	u ts u	u tʃ -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_29-1	SHOOT	Northern Amami-Oshima	u ts u	u ʔ -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_29-1	SHOOT	Okinawa	u ts u	u t -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_29-1	SHOOT	Yonaguni	u ts u	u t -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_30-1	SEA	Hachijo	u m i	u m i	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_30-1	SEA	Ikema-Jima	u m i	i m -	x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_30-1	SEA	Irabu-Jima	u m i	i m -	x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_30-1	SEA	Miyako-Jima	u m i	i m -	x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_30-1	SEA	Naze	u m i	u m i	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_30-1	SEA	Northern Amami-Oshima	u m i	u ɴ -	.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_30-1	SEA	Okinawa	u m i	u m i	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_30-1	SEA	Tarama-Minna	u m i	i m -	x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_31-1	BRANCH	Hachijo	e d a	e d a	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_31-1	BRANCH	Hateruma	e d a	u d a	x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_31-1	BRANCH	Ikema-Jima	e d a	u d a	x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_31-1	BRANCH	Irabu-Jima	e d a	u d a	x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_31-1	BRANCH	Ishigaki	e d a	u d a	x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_31-1	BRANCH	Miyako-Jima	e d a	u d a	x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_31-1	BRANCH	Naze	e d a	u d a	x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_31-1	BRANCH	Northern Amami-Oshima	e d a	e d a	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_31-1	BRANCH	Okinawa	e d a	u r a	xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_31-1	BRANCH	Taketomi	e d a	u d a	x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_31-1	BRANCH	Tarama-Minna	e d a	u d a	x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_31-1	BRANCH	Yonaguni	e d a	u d a	x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_33-1	TAIL	Hachijo	w o	o o	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_33-1	TAIL	Northern Amami-Oshima	w o	b o	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_36-1	FALL	Hachijo	ö t u r u	o t e r u	x.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_36-1	FALL	Hateruma	ö t u r u	u tʃ i r -	xxx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_36-1	FALL	Ikema-Jima	ö t u r u	u t iː - -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_36-1	FALL	Irabu-Jima	ö t u r u	u t i l -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_36-1	FALL	Ishigaki	ö t u r u	u t i r -	x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_36-1	FALL	Miyako-Jima	ö t u r u	u t i - ɨ	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_36-1	FALL	Naze	ö t u r u	u t ɨ r -	x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_36-1	FALL	Northern Amami-Oshima	ö t u r u	o ts u - ʔ	xx.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_36-1	FALL	Okinawa	ö t u r u	u t ɨː ɴ -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_36-1	FALL	Taketomi	ö t u r u	u t i r -	x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_36-1	FALL	Tarama-Minna	ö t u r u	u t i l -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_36-1	FALL	Yonaguni	ö t u r u	u t i r -	x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_37-1	HUSBAND	Hachijo	w o	- o	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_38-1	MALE PERSON	Hachijo	w o	- o	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_38-1	MALE PERSON	Northern Amami-Oshima	w o	- o	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_39-1	HEAVY	Hachijo	o m o k i	o m o - -	...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_39-1	HEAVY	Northern Amami-Oshima	o m o k i	o b - - i	.xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_4-1	FOOT OR LEG	Hachijo	a ʃ i	a ʃ i	...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_4-1	FOOT OR LEG	Northern Amami-Oshima	a ʃ i	a ʃ -	..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_40-1	THINK	Hachijo	ö m ö β u	o m oː w a	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_40-1	THINK	Hateruma	ö m ö β u	- m u ɴ -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_40-1	THINK	Ikema-Jima	ö m ö β u	u m uː - -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_40-1	THINK	Irabu-Jima	ö m ö β u	u m uː - -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_40-1	THINK	Ishigaki	ö m ö β u	u m u ɴ -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_40-1	THINK	Miyako-Jima	ö m ö β u	u m uː - -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_40-1	THINK	Naze	ö m ö β u	o m o j u	x.xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_40-1	THINK	Northern Amami-Oshima	ö m ö β u	o m oː - -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_40-1	THINK	Okinawa	ö m ö β u	u m u ɴ -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_40-1	THINK	Taketomi	ö m ö β u	u m uː ɴ -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_40-1	THINK	Tarama-Minna	ö m ö β u	u m uː - -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_40-1	THINK	Yonaguni	ö m ö β u	u m u ɴ -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_41-1	SWIM	Hachijo	ö j ö ɡ u	o j o ɡ u	x.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_41-1	SWIM	Hateruma	ö j ö ɡ u	u ɴ - - -	xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_41-1	SWIM	Ikema-Jima	ö j ö ɡ u	uː - - dz ɨ	xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_41-1	SWIM	Irabu-Jima	ö j ö ɡ u	uː - - dz ɨ	xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_41-1	SWIM	Ishigaki	ö j ö ɡ u	u m u ɴ -	xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_41-1	SWIM	Miyako-Jima	ö j ö ɡ u	u j u ɡ ɨ	x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_41-1	SWIM	Naze	ö j ö ɡ u	u j u ɴ -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_41-1	SWIM	Northern Amami-Oshima	ö j ö ɡ u	o j o ʔ -	x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_41-1	SWIM	Okinawa	ö j ö ɡ u	u - i ɡ -	xxx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_41-1	SWIM	Taketomi	ö j ö ɡ u	uː ɴ - - -	xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_41-1	SWIM	Tarama-Minna	ö j ö ɡ u	u - i ɡ ɨ	xxx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_41-1	SWIM	Yonaguni	ö j ö ɡ u	u ɡ u ɴ -	xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_42-2	FEMALE PERSON	Hateruma	m e	m i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_42-2	FEMALE PERSON	Ikema-Jima	m e	m i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_42-2	FEMALE PERSON	Irabu-Jima	m e	m i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_42-2	FEMALE PERSON	Ishigaki	m e	m i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_42-2	FEMALE PERSON	Miyako-Jima	m e	m i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_42-2	FEMALE PERSON	Taketomi	m e	m i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_42-2	FEMALE PERSON	Tarama-Minna	m e	m i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_42-2	FEMALE PERSON	Yonaguni	m e	m i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_43-1	MOSQUITO	Hachijo	k a	k a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_43-1	MOSQUITO	Hateruma	k a	ɡ a	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_43-1	MOSQUITO	Ikema-Jima	k a	ɡ a	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_43-1	MOSQUITO	Irabu-Jima	k a	k a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_43-1	MOSQUITO	Ishigaki	k a	ɡ a	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_43-1	MOSQUITO	Miyako-Jima	k a	ɡ a	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_43-1	MOSQUITO	Naze	k a	ɡ a	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_43-1	MOSQUITO	Northern Amami-Oshima	k a	k aː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_43-1	MOSQUITO	Okinawa	k a	ɡ a	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_43-1	MOSQUITO	Taketomi	k a	ɡ a	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_43-1	MOSQUITO	Tarama-Minna	k a	ɡ a	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_43-1	MOSQUITO	Yonaguni	k a	k a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_44-1	BUY	Hachijo	k a β u	k a - u	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_44-1	BUY	Hateruma	k a β u	k oː ɴ -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_44-1	BUY	Ikema-Jima	k a β u	k a - u	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_44-1	BUY	Irabu-Jima	k a β u	k a - u	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_44-1	BUY	Ishigaki	k a β u	k a ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_44-1	BUY	Miyako-Jima	k a β u	k oː - -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_44-1	BUY	Naze	k a β u	k o j -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_44-1	BUY	Northern Amami-Oshima	k a β u	k oː - -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_44-1	BUY	Okinawa	k a β u	h oː j -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_44-1	BUY	Taketomi	k a β u	k a ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_44-1	BUY	Tarama-Minna	k a β u	k oː - -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_44-1	BUY	Yonaguni	k a β u	k u ɴ -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_45-1	SMELL (PERCEIVE)	Hachijo	k a ɡ u	k a r u	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_46-1	SCRATCH	Hachijo	k a k u	k a k u	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_46-1	SCRATCH	Hateruma	k a k u	h a k -	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_46-1	SCRATCH	Ikema-Jima	k a k u	k a β u	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_46-1	SCRATCH	Irabu-Jima	k a k u	k a β u	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_46-1	SCRATCH	Ishigaki	k a k u	k a k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_46-1	SCRATCH	Miyako-Jima	k a k u	k a k ɨ	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_46-1	SCRATCH	Naze	k a k u	k a k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_46-1	SCRATCH	Northern Amami-Oshima	k a k u	k a k i	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_46-1	SCRATCH	Okinawa	k a k u	h a k -	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_46-1	SCRATCH	Taketomi	k a k u	ɡ a dz -	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_46-1	SCRATCH	Tarama-Minna	k a k u	k a k ɨ	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_46-1	SCRATCH	Yonaguni	k a k u	k a ɡ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_47-1	HIDE	Ikema-Jima	k a k u s u	k a β a s ɨ	..xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_47-1	HIDE	Irabu-Jima	k a k u s u	k a β i r u	..xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_47-1	HIDE	Miyako-Jima	k a k u s u	k a β u s ɨ	..x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_47-1	HIDE	Northern Amami-Oshima	k a k u s u	k a k u s ŭ	......
+leejaponic:Old Japanese > Ryukyuan|leejaponic_47-1	HIDE	Okinawa	k a k u s u	h a k u s -	x....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_47-1	HIDE	Taketomi	k a k u s u	k a k u s -	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_47-1	HIDE	Tarama-Minna	k a k u s u	k a β a s ɨ	..xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_48-1	WIND	Hachijo	k a dz e	k a dz e	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_48-1	WIND	Hateruma	k a dz e	k a dʒ i	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_48-1	WIND	Ikema-Jima	k a dz e	k a d i	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_48-1	WIND	Irabu-Jima	k a dz e	k a dʒ i	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_48-1	WIND	Ishigaki	k a dz e	k a dʒ i	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_48-1	WIND	Miyako-Jima	k a dz e	k a dʒ i	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_48-1	WIND	Naze	k a dz e	k a dʒ ə	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_48-1	WIND	Northern Amami-Oshima	k a dz e	k a dz e	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_48-1	WIND	Okinawa	k a dz e	h a dʒ i	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_48-1	WIND	Taketomi	k a dz e	k a dʒ i	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_48-1	WIND	Tarama-Minna	k a dz e	k a d i	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_48-1	WIND	Yonaguni	k a dz e	k a d i	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_50-1	SHOULDER	Hateruma	k a t a	k a t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_50-1	SHOULDER	Ikema-Jima	k a t a	k a t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_50-1	SHOULDER	Irabu-Jima	k a t a	k a t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_50-1	SHOULDER	Ishigaki	k a t a	k a t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_50-1	SHOULDER	Miyako-Jima	k a t a	k a t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_50-1	SHOULDER	Naze	k a t a	k a t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_50-1	SHOULDER	Northern Amami-Oshima	k a t a	k a t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_50-1	SHOULDER	Okinawa	k a t a	h a t aː	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_50-1	SHOULDER	Taketomi	k a t a	k a t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_50-1	SHOULDER	Tarama-Minna	k a t a	k a t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_50-1	SHOULDER	Yonaguni	k a t a	k a j a	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_51-1	BITE	Hateruma	k a m u	k a m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_51-1	BITE	Ishigaki	k a m u	k a m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_52-1	THUNDER	Hachijo	n a r u k a m i	k a m i n a r i	x.xxx.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_52-1	THUNDER	Hateruma	n a r u k a m i	- - - - k a n aː	xxxx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_52-1	THUNDER	Ikema-Jima	n a r u k a m i	- - - - k a m i	xxxx....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_52-1	THUNDER	Irabu-Jima	n a r u k a m i	- - - - k a m a	xxxx...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_52-1	THUNDER	Ishigaki	n a r u k a m i	- - - - k a n a	xxxx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_52-1	THUNDER	Naze	n a r u k a m i	- - - - k a n a	xxxx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_52-1	THUNDER	Northern Amami-Oshima	n a r u k a m i	- - - - k a ɴ a	xxxx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_52-1	THUNDER	Okinawa	n a r u k a m i	- - - - k a n a	xxxx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_52-1	THUNDER	Taketomi	n a r u k a m i	- - - - k a n aː	xxxx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_52-1	THUNDER	Tarama-Minna	n a r u k a m i	- - - - k a m a	xxxx...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_52-1	THUNDER	Yonaguni	n a r u k a m i	- - - - k a n a	xxxx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_53-1	CHEW	Hachijo	k a m u	k a m u	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_53-1	CHEW	Hateruma	k a m u	k a m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_53-1	CHEW	Ikema-Jima	k a m u	k a m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_53-1	CHEW	Irabu-Jima	k a m u	k a m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_53-1	CHEW	Ishigaki	k a m u	k a m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_53-1	CHEW	Miyako-Jima	k a m u	k a m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_53-1	CHEW	Naze	k a m u	k a m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_53-1	CHEW	Northern Amami-Oshima	k a m u	k a ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_53-1	CHEW	Okinawa	k a m u	h a m -	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_53-1	CHEW	Taketomi	k a m u	k a m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_53-1	CHEW	Tarama-Minna	k a m u	k a m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_53-1	CHEW	Yonaguni	k a m u	k a m -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_54-1	HUNT	Naze	k a r u	k a r i	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_55-1	SKIN	Hachijo	k a h a	k a w a	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_55-1	SKIN	Hateruma	k a h a	k aː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_55-1	SKIN	Ikema-Jima	k a h a	k aː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_55-1	SKIN	Irabu-Jima	k a h a	k aː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_55-1	SKIN	Ishigaki	k a h a	k aː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_55-1	SKIN	Miyako-Jima	k a h a	k aː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_55-1	SKIN	Naze	k a h a	k oː - -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_55-1	SKIN	Northern Amami-Oshima	k a h a	k aː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_55-1	SKIN	Okinawa	k a h a	h aː - -	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_55-1	SKIN	Taketomi	k a h a	k aː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_55-1	SKIN	Tarama-Minna	k a h a	k aː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_55-1	SKIN	Yonaguni	k a h a	k a - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_56-1	DRY	Hachijo	k a w a k u	k a w a k u	......
+leejaponic:Old Japanese > Ryukyuan|leejaponic_56-1	DRY	Hateruma	k a w a k u	k a r u ɡ -	..xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_56-1	DRY	Miyako-Jima	k a w a k u	k aː - - k ɨ	..xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_57-1	YELLOW	Hachijo	k i	k iː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_57-1	YELLOW	Hateruma	k i	k ɨ	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_57-1	YELLOW	Ikema-Jima	k i	ts ɨː	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_57-1	YELLOW	Irabu-Jima	k i	k iː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_57-1	YELLOW	Ishigaki	k i	k ɨ	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_57-1	YELLOW	Miyako-Jima	k i	k ɨː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_57-1	YELLOW	Naze	k i	k i	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_57-1	YELLOW	Northern Amami-Oshima	k i	k i	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_57-1	YELLOW	Okinawa	k i	k iː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_57-1	YELLOW	Taketomi	k i	k iː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_57-1	YELLOW	Tarama-Minna	k i	k iː	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_57-1	YELLOW	Yonaguni	k i	k i	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_58-1	HEAR	Hachijo	k i k u	k i k u	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_58-1	HEAR	Hateruma	k i k u	s ɨ k -	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_58-1	HEAR	Ikema-Jima	k i k u	tʃ iː β u	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_58-1	HEAR	Irabu-Jima	k i k u	ts ɨ ts ɨ	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_58-1	HEAR	Ishigaki	k i k u	s ɨ k -	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_58-1	HEAR	Miyako-Jima	k i k u	ts ɨ k ɨ	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_58-1	HEAR	Naze	k i k u	k i k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_58-1	HEAR	Northern Amami-Oshima	k i k u	k i - ʔ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_58-1	HEAR	Okinawa	k i k u	k i k -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_58-1	HEAR	Taketomi	k i k u	s ɨ k -	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_58-1	HEAR	Tarama-Minna	k i k u	k ɨ k ɨ	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_58-1	HEAR	Yonaguni	k i k u	k u ɴ -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_59-1	DIRTY	Hachijo	k i t a n a k i	k i t a n a - -	......xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_59-1	DIRTY	Northern Amami-Oshima	k i t a n a k i	k i s a n a k a	..x....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_6-1	NEW	Hachijo	a t a r a ʃ i k i	a d a r a ʃ i - -	.x.....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_6-1	NEW	Yonaguni	a t a r a ʃ i k i	a t a r a s a - -	.....xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_61-1	FOG	Hachijo	k ɨ r i	k i r i	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_61-1	FOG	Hateruma	k ɨ r i	k ɨ s ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_61-1	FOG	Ikema-Jima	k ɨ r i	ts ɨː - -	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_61-1	FOG	Irabu-Jima	k ɨ r i	ts ɨː - -	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_61-1	FOG	Ishigaki	k ɨ r i	k ɨ r ɨ	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_61-1	FOG	Miyako-Jima	k ɨ r i	k ɨː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_61-1	FOG	Naze	k ɨ r i	k i r i	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_61-1	FOG	Northern Amami-Oshima	k ɨ r i	k iː - -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_61-1	FOG	Okinawa	k ɨ r i	k i r i	.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_61-1	FOG	Taketomi	k ɨ r i	k i r u	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_61-1	FOG	Tarama-Minna	k ɨ r i	k ɨː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_61-1	FOG	Yonaguni	k ɨ r i	tʃ i r i	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_62-1	CUT OR HACK	Hachijo	k i r u	k i r u	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_62-1	CUT OR HACK	Ikema-Jima	k i r u	s ɨː ts ɨː	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_62-1	CUT OR HACK	Irabu-Jima	k i r u	ts ɨː - -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_62-1	CUT OR HACK	Ishigaki	k i r u	k i s -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_62-1	CUT OR HACK	Miyako-Jima	k i r u	k ɨ s ɨ	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_62-1	CUT OR HACK	Naze	k i r u	k i r -	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_62-1	CUT OR HACK	Northern Amami-Oshima	k i r u	k i - ʔ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_62-1	CUT OR HACK	Okinawa	k i r u	k iː ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_62-1	CUT OR HACK	Taketomi	k i r u	k i s -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_62-1	CUT OR HACK	Tarama-Minna	k i r u	k ɨː - -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_65-1	GRASS	Hachijo	k u s a	k u s a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_65-1	GRASS	Hateruma	k u s a	β u ts a	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_65-1	GRASS	Ikema-Jima	k u s a	β u s a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_65-1	GRASS	Irabu-Jima	k u s a	β u s a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_65-1	GRASS	Ishigaki	k u s a	β u s a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_65-1	GRASS	Miyako-Jima	k u s a	β u s a	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_65-1	GRASS	Naze	k u s a	k u s a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_65-1	GRASS	Northern Amami-Oshima	k u s a	k u s a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_65-1	GRASS	Okinawa	k u s a	k u s aː	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_65-1	GRASS	Taketomi	k u s a	ʔ - s a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_65-1	GRASS	Tarama-Minna	k u s a	β u ʃ a	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_65-1	GRASS	Yonaguni	k u s a	ts - - a	xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_66-1	ROTTEN	Hachijo	k u s a r u	k u s a r u	......
+leejaponic:Old Japanese > Ryukyuan|leejaponic_66-1	ROTTEN	Hateruma	k u s a r u	β u ts a r -	x.x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_66-1	ROTTEN	Irabu-Jima	k u s a r u	β u s a r i	x....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_66-1	ROTTEN	Ishigaki	k u s a r u	β u s a r -	x....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_66-1	ROTTEN	Miyako-Jima	k u s a r u	k u s a r ɨ	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_66-1	ROTTEN	Naze	k u s a r u	k u s a r -	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_66-1	ROTTEN	Okinawa	k u s a r u	k u s a r -	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_66-1	ROTTEN	Taketomi	k u s a r u	ʔ - s a r -	xx...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_66-1	ROTTEN	Tarama-Minna	k u s a r u	β u ʃ a r u	x.x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_66-1	ROTTEN	Yonaguni	k u s a r u	ts a r i r -	xxxx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_67-1	MOUTH	Hachijo	k u t i	k u tʃ i	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_67-1	MOUTH	Hateruma	k u t i	β u ts ɨ	x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_67-1	MOUTH	Ikema-Jima	k u t i	k u ts ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_67-1	MOUTH	Irabu-Jima	k u t i	k u ts ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_67-1	MOUTH	Ishigaki	k u t i	β u tʃ i	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_67-1	MOUTH	Miyako-Jima	k u t i	k u ts ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_67-1	MOUTH	Naze	k u t i	k u tʃ i	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_67-1	MOUTH	Northern Amami-Oshima	k u t i	k u ʔ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_67-1	MOUTH	Okinawa	k u t i	k u tʃ i	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_67-1	MOUTH	Taketomi	k u t i	β u tʃ i	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_67-1	MOUTH	Tarama-Minna	k u t i	k u ts ɨ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_67-1	MOUTH	Yonaguni	k u t i	t ʔ - i	xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_68-1	NECK	Hachijo	k u b i	k u b i	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_68-1	NECK	Naze	k u b i	k u b i	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_68-1	NECK	Northern Amami-Oshima	k u b i	k u ʔ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_68-1	NECK	Okinawa	k u b i	k u b i	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_69-1	CLOUD	Hachijo	k u m o	k u m o	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_69-1	CLOUD	Hateruma	k u m o	β u m o	x...
+leejaponic:Old Japanese > Ryukyuan|leejaponic_69-1	CLOUD	Irabu-Jima	k u m o	β u m u	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_69-1	CLOUD	Ishigaki	k u m o	k u m u	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_69-1	CLOUD	Miyako-Jima	k u m o	β u m u	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_69-1	CLOUD	Naze	k u m o	k u m u	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_69-1	CLOUD	Northern Amami-Oshima	k u m o	k u m o	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_69-1	CLOUD	Okinawa	k u m o	k u m uː	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_69-1	CLOUD	Taketomi	k u m o	β u m u	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_69-1	CLOUD	Tarama-Minna	k u m o	β u m u	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_7-1	THICK	Hateruma	a t u k i	a ts a - -	.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_7-1	THICK	Ishigaki	a t u k i	a ts a - -	.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_7-1	THICK	Yonaguni	a t u k i	a ts a - -	.xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_70-1	SPIDER	Hachijo	k u m o	k u m o	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_70-1	SPIDER	Ikema-Jima	k u m o	k uː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_70-1	SPIDER	Irabu-Jima	k u m o	k u v ŭ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_70-1	SPIDER	Ishigaki	k u m o	β u m u	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_70-1	SPIDER	Miyako-Jima	k u m o	k u v ŭ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_70-1	SPIDER	Taketomi	k u m o	k u m u	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_70-1	SPIDER	Tarama-Minna	k u m o	k u v u	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_70-1	SPIDER	Yonaguni	k u m o	k u b u	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_71-1	COME	Hachijo	k u	k u	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_71-1	COME	Hateruma	k u	k -	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_71-1	COME	Ikema-Jima	k u	β uː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_71-1	COME	Irabu-Jima	k u	β uː	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_71-1	COME	Ishigaki	k u	k ɨː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_71-1	COME	Miyako-Jima	k u	k ɨ	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_71-1	COME	Naze	k u	k -	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_71-1	COME	Northern Amami-Oshima	k u	k u	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_71-1	COME	Taketomi	k u	k -	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_71-1	COME	Tarama-Minna	k u	k ɨː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_71-1	COME	Yonaguni	k u	k -	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_72-1	BLACK	Hachijo	k u r o k i	k u r a - -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_72-1	BLACK	Naze	k u r o k i	k u r a - -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_72-1	BLACK	Northern Amami-Oshima	k u r o k i	k u r - - e	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_72-1	BLACK	Okinawa	k u r o k i	k u r u - -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_73-1	HAIR	Hachijo	k ə	k e	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_73-1	HAIR	Hateruma	k ə	k iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_73-1	HAIR	Ikema-Jima	k ə	k iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_73-1	HAIR	Irabu-Jima	k ə	p ɨ	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_73-1	HAIR	Ishigaki	k ə	k iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_73-1	HAIR	Miyako-Jima	k ə	p ɨ	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_73-1	HAIR	Naze	k ə	k ɨ	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_73-1	HAIR	Northern Amami-Oshima	k ə	k e	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_73-1	HAIR	Okinawa	k ə	k iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_73-1	HAIR	Taketomi	k ə	k iː	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_73-1	HAIR	Tarama-Minna	k ə	p ɨ	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_73-1	HAIR	Yonaguni	k ə	k i	.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_74-1	SMOKE (EXHAUST)	Hachijo	k e b u r i	k e m u - -	..x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_74-1	SMOKE (EXHAUST)	Hateruma	k e b u r i	k i p u s ɨː	.xx.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_74-1	SMOKE (EXHAUST)	Ikema-Jima	k e b u r i	k j - uː s ɨ	.xx.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_74-1	SMOKE (EXHAUST)	Irabu-Jima	k e b u r i	k i v ŭ s ɨ	.xx.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_74-1	SMOKE (EXHAUST)	Ishigaki	k e b u r i	k i f uː - -	.xx.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_74-1	SMOKE (EXHAUST)	Miyako-Jima	k e b u r i	k i v ŭ s ɨ	.xx.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_74-1	SMOKE (EXHAUST)	Naze	k e b u r i	k ɨ b u ʃ i	.x..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_74-1	SMOKE (EXHAUST)	Northern Amami-Oshima	k e b u r i	k e m u - i	..x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_74-1	SMOKE (EXHAUST)	Okinawa	k e b u r i	k i b u - i	.x..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_74-1	SMOKE (EXHAUST)	Taketomi	k e b u r i	k i b oː ʃ i	.x.xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_74-1	SMOKE (EXHAUST)	Tarama-Minna	k e b u r i	k i β u s ɨ	.xx.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_74-1	SMOKE (EXHAUST)	Yonaguni	k e b u r i	k i b u tʃ i	.x..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_75-1	NINE	Hachijo	k o k o n o	k o k o n o	......
+leejaponic:Old Japanese > Ryukyuan|leejaponic_75-1	NINE	Hateruma	k o k o n o	h a k o n u	xx...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_75-1	NINE	Ikema-Jima	k o k o n o	k ʔ - u n u	.xxx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_75-1	NINE	Irabu-Jima	k o k o n o	k u k u n u	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_75-1	NINE	Ishigaki	k o k o n o	k u k u n u	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_75-1	NINE	Miyako-Jima	k o k o n o	k u k u n u	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_75-1	NINE	Naze	k o k o n o	k u - - n u	.xxx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_75-1	NINE	Northern Amami-Oshima	k o k o n o	k o k o n o	......
+leejaponic:Old Japanese > Ryukyuan|leejaponic_75-1	NINE	Okinawa	k o k o n o	k u k u n u	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_75-1	NINE	Taketomi	k o k o n o	k u k u n u	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_75-1	NINE	Tarama-Minna	k o k o n o	k u k u n u	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_75-1	NINE	Yonaguni	k o k o n o	k u ɡ u n u	.xxx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_77-2	CHILD	Naze	w a r a h a	w a r a b ɨ	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_77-2	CHILD	Okinawa	w a r a h a	w a r aː b i	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_77-2	CHILD	Taketomi	w a r a h a	j a r a b i	x...xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_78-1	THIS	Hachijo	k ö r e	k o - i	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_78-1	THIS	Ikema-Jima	k ö r e	k u - i	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_78-1	THIS	Irabu-Jima	k ö r e	k u r i	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_78-1	THIS	Miyako-Jima	k ö r e	k u - i	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_78-1	THIS	Naze	k ö r e	k u r ɨ	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_78-1	THIS	Northern Amami-Oshima	k ö r e	k o - i	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_78-1	THIS	Okinawa	k ö r e	β u r i	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_78-1	THIS	Taketomi	k ö r e	k u r i	.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_78-1	THIS	Tarama-Minna	k ö r e	k u l -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_79-1	KILL	Hachijo	k ö r ø s u	k o r o s u	.x.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_79-1	KILL	Hateruma	k ö r ø s u	k u r a s -	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_79-1	KILL	Ikema-Jima	k ö r ø s u	k u r a s ɨ	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_79-1	KILL	Irabu-Jima	k ö r ø s u	k u r u s ɨ	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_79-1	KILL	Ishigaki	k ö r ø s u	k u r a s -	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_79-1	KILL	Miyako-Jima	k ö r ø s u	k u r u s ɨ	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_79-1	KILL	Naze	k ö r ø s u	k u tʃ u ɴ -	.xxxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_79-1	KILL	Northern Amami-Oshima	k ö r ø s u	k o r o s ŭ	.x.x..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_79-1	KILL	Okinawa	k ö r ø s u	k u r u s -	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_79-1	KILL	Taketomi	k ö r ø s u	k u r a s -	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_79-1	KILL	Tarama-Minna	k ö r ø s u	k u r u s ɨ	.x.x.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_79-1	KILL	Yonaguni	k ö r ø s u	k u r u ɴ -	.x.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_80-2	FISH	Hachijo	u w o	- j o	xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_80-2	FISH	Hateruma	u w o	- j uː	xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_80-2	FISH	Naze	u w o	ʔ j u	xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_80-2	FISH	Northern Amami-Oshima	u w o	i j o	xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_80-2	FISH	Okinawa	u w o	ʔ j uː	xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_80-2	FISH	Yonaguni	u w o	i - u	xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_81-1	SPLIT	Hachijo	s a k u	s a k e	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_81-1	SPLIT	Ikema-Jima	s a k u	s a k iː	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_81-1	SPLIT	Miyako-Jima	s a k u	s a k ɨ	...x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_81-1	SPLIT	Northern Amami-Oshima	s a k u	s a k u	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_81-1	SPLIT	Tarama-Minna	s a k u	ʃ a k i	x..x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_82-2	STAB	Irabu-Jima	t u k u	ts ɨ β u	xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_82-2	STAB	Miyako-Jima	t u k u	ts ɨ k ɨ	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_84-1	SALT	Hachijo	ʃ i h ö	ʃ i - o	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_84-1	SALT	Northern Amami-Oshima	ʃ i h ö	ʃ i - o	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_85-1	BELOW OR UNDER	Hachijo	ʃ i t a	ʃ i t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_85-1	BELOW OR UNDER	Hateruma	ʃ i t a	s ɨ t a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_85-1	BELOW OR UNDER	Ikema-Jima	ʃ i t a	s ɨ t a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_85-1	BELOW OR UNDER	Irabu-Jima	ʃ i t a	s ɨ t a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_85-1	BELOW OR UNDER	Ishigaki	ʃ i t a	ʃ i t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_85-1	BELOW OR UNDER	Miyako-Jima	ʃ i t a	s ɨ t a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_85-1	BELOW OR UNDER	Naze	ʃ i t a	ʃ - - a	.xx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_85-1	BELOW OR UNDER	Northern Amami-Oshima	ʃ i t a	ʃ i t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_85-1	BELOW OR UNDER	Okinawa	ʃ i t a	ç i tʃ a	x.x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_85-1	BELOW OR UNDER	Tarama-Minna	ʃ i t a	s ɨ t a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_86-1	TONGUE	Hachijo	ʃ i t a	ʃ i t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_86-1	TONGUE	Hateruma	ʃ i t a	s ɨ t a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_86-1	TONGUE	Ikema-Jima	ʃ i t a	t ʔ - a	xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_86-1	TONGUE	Irabu-Jima	ʃ i t a	s ɨ t a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_86-1	TONGUE	Ishigaki	ʃ i t a	s ɨ t a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_86-1	TONGUE	Miyako-Jima	ʃ i t a	s ɨ d a	xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_86-1	TONGUE	Naze	ʃ i t a	s ɨ b a	xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_86-1	TONGUE	Northern Amami-Oshima	ʃ i t a	ʃ i t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_86-1	TONGUE	Okinawa	ʃ i t a	ʃ i tʃ aː	..x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_86-1	TONGUE	Taketomi	ʃ i t a	ʃ i t a	....
+leejaponic:Old Japanese > Ryukyuan|leejaponic_86-1	TONGUE	Tarama-Minna	ʃ i t a	s ɨ t a	xx..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_86-1	TONGUE	Yonaguni	ʃ i t a	t ʔ - a	xxx.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_87-1	BE DEAD OR DIE	Ikema-Jima	ʃ i n u	s ɨ ɴ -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_87-1	BE DEAD OR DIE	Irabu-Jima	ʃ i n u	s ɨ ɴ -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_87-1	BE DEAD OR DIE	Miyako-Jima	ʃ i n u	s ɨ ɴ -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_87-1	BE DEAD OR DIE	Naze	ʃ i n u	s ɨ ɲ -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_87-1	BE DEAD OR DIE	Northern Amami-Oshima	ʃ i n u	k e ɴ -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_87-1	BE DEAD OR DIE	Tarama-Minna	ʃ i n u	s ɨ ɴ -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_89-1	LOUSE	Hachijo	ʃ i r a m i	ʃ a ɴ - m e	.xxx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_89-1	LOUSE	Naze	ʃ i r a m i	s ɨ r a ɴ -	xx..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_89-1	LOUSE	Northern Amami-Oshima	ʃ i r a m i	ʃ i r a m e	.....x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_89-1	LOUSE	Okinawa	ʃ i r a m i	ʃ i r a ɴ -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_9-5	YOU	Naze	n a	n a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_9-5	YOU	Okinawa	n a	n a	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_90-1	KNOW (SOMETHING)	Ikema-Jima	ʃ i r u	s ɨː - -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_90-1	KNOW (SOMETHING)	Irabu-Jima	ʃ i r u	s ɨː - -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_90-1	KNOW (SOMETHING)	Ishigaki	ʃ i r u	ʃ i ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_90-1	KNOW (SOMETHING)	Miyako-Jima	ʃ i r u	s ɨ - -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_90-1	KNOW (SOMETHING)	Naze	ʃ i r u	s ɨ r i	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_90-1	KNOW (SOMETHING)	Northern Amami-Oshima	ʃ i r u	ʃ i - ʔ	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_90-1	KNOW (SOMETHING)	Tarama-Minna	ʃ i r u	s ɨː - -	xxxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_91-1	WHITE	Hachijo	ʃ i r o k i	ʃ i r o - -	....xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_91-1	WHITE	Naze	ʃ i r o k i	s ɨ r u - -	xx.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_91-1	WHITE	Northern Amami-Oshima	ʃ i r o k i	ʃ i r e - -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_91-1	WHITE	Okinawa	ʃ i r o k i	ʃ i r u - -	...xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_92-1	SUCK	Hachijo	s u h u	s uː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_92-1	SUCK	Hateruma	s u h u	s u ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_92-1	SUCK	Ishigaki	s u h u	s uː ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_92-1	SUCK	Naze	s u h u	s ɨː j -	.xxx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_92-1	SUCK	Northern Amami-Oshima	s u h u	s uː - -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_92-1	SUCK	Taketomi	s u h u	s uː ɴ -	..xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_94-7	SIT	Yonaguni	w i r u	ɴ u r -	xx.x
+leejaponic:Old Japanese > Ryukyuan|leejaponic_95-1	BACK	Hachijo	s e	h e	x.
+leejaponic:Old Japanese > Ryukyuan|leejaponic_95-1	BACK	Hateruma	s e	ʃ i	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_95-1	BACK	Northern Amami-Oshima	s e	s e	..
+leejaponic:Old Japanese > Ryukyuan|leejaponic_95-1	BACK	Okinawa	s e	ɡ aː	xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_96-1	NARROW	Hachijo	s e b a k i	s e m a - -	..x.xx
+leejaponic:Old Japanese > Ryukyuan|leejaponic_96-1	NARROW	Northern Amami-Oshima	s e b a k i	s e b e - -	...xxx

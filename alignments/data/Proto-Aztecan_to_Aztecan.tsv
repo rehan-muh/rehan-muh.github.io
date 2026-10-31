@@ -1,0 +1,560 @@
+Set	Concept	Language	Ancestor	Aligned	Changed
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_1	ALL	Classical Nahuatl	m o tʃ ɨ m	m o tʃ i n	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_1	ALL	Isthmus-Mecayapan Nahuatl	m o tʃ ɨ m	n o tʃ i -	x..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_1	ALL	Isthmus-Pajapan Nahuatl	m o tʃ ɨ m	n o tʃ i -	x..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_1	ALL	Northern Puebla Nahuatl	m o tʃ ɨ m	n o tʃ i n	x..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_1	ALL	Pipil	m o tʃ ɨ m	m u tʃ i -	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_1	ALL	Pochutec	m o tʃ ɨ m	n o tʃ o -	x..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_1	ALL	Tabasco Nahuatl	m o tʃ ɨ m	m u tʃ i -	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_1	ALL	Tetelcingo Nahuatl	m o tʃ ɨ m	n o tʃ iː -	x..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_101	HAIR	Classical Nahuatl	ts o m	ts o n	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_101	HAIR	Northern Puebla Nahuatl	ts o m	ts o n	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_101	HAIR	Pochutec	ts o m	ts o n	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_101	HAIR	Tabasco Nahuatl	ts o m	ts u n	.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_101	HAIR	Tetelcingo Nahuatl	ts o m	ts o n	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_103	HAND	Classical Nahuatl	m a h	m aː -	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_103	HAND	Isthmus-Mecayapan Nahuatl	m a h	m a -	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_103	HAND	Isthmus-Pajapan Nahuatl	m a h	m aː -	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_103	HAND	Northern Puebla Nahuatl	m a h	m a -	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_103	HAND	Pipil	m a h	m e -	.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_103	HAND	Pochutec	m a h	m a -	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_103	HAND	Tabasco Nahuatl	m a h	m aː -	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_103	HAND	Tetelcingo Nahuatl	m a h	m ø -	.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_106	HEAR	Classical Nahuatl	k a k i	k a k -	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_106	HEAR	Isthmus-Mecayapan Nahuatl	k a k i	k a k i	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_106	HEAR	Isthmus-Pajapan Nahuatl	k a k i	ɡ a ɡ i	x.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_106	HEAR	Northern Puebla Nahuatl	k a k i	k a k i	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_106	HEAR	Pipil	k a k i	k aː k i	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_106	HEAR	Pochutec	k a k i	k e k i	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_106	HEAR	Tabasco Nahuatl	k a k i	k a - i	..x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_106	HEAR	Tetelcingo Nahuatl	k a k i	k a k iː	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_107	HEART	Classical Nahuatl	j oː l	j oː l	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_107	HEART	Northern Puebla Nahuatl	j oː l	j o l	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_107	HEART	Tetelcingo Nahuatl	j oː l	j u l	.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_13	BLACK	Classical Nahuatl	tɬ iː l t ɨ k	tɬ iː l t i k	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_13	BLACK	Northern Puebla Nahuatl	tɬ iː l t ɨ k	tɬ i l t i k	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_13	BLACK	Pipil	tɬ iː l t ɨ k	t iː l t i k	x...x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_13	BLACK	Tetelcingo Nahuatl	tɬ iː l t ɨ k	tɬ i l t iː k	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_138	I	Classical Nahuatl	n a h a	n e ʔ aː	.xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_138	I	Isthmus-Mecayapan Nahuatl	n a h a	n e h -	.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_138	I	Isthmus-Pajapan Nahuatl	n a h a	n e h a	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_138	I	Northern Puebla Nahuatl	n a h a	n e h a	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_138	I	Pipil	n a h a	n a - -	..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_138	I	Pochutec	n a h a	n e n -	.xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_138	I	Tabasco Nahuatl	n a h a	n e h e	.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_139	KILL	Classical Nahuatl	m ɨ k t ɨ h a	m i k t i - aː	.x..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_139	KILL	Isthmus-Mecayapan Nahuatl	m ɨ k t ɨ h a	m i k t i - a	.x..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_139	KILL	Isthmus-Pajapan Nahuatl	m ɨ k t ɨ h a	m i k t i - a	.x..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_139	KILL	Northern Puebla Nahuatl	m ɨ k t ɨ h a	m i k t i - a	.x..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_139	KILL	Pipil	m ɨ k t ɨ h a	m i k t i - a	.x..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_139	KILL	Pochutec	m ɨ k t ɨ h a	m o k t i - -	.x..xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_139	KILL	Tabasco Nahuatl	m ɨ k t ɨ h a	m i k t i - -	.x..xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_139	KILL	Tetelcingo Nahuatl	m ɨ k t ɨ h a	m iː k t iː - a	.x..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_140	KNEE	Classical Nahuatl	tɬ a n kʷ a h	tɬ a n kʷ a i	.....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_140	KNEE	Isthmus-Mecayapan Nahuatl	tɬ a n kʷ a h	t a n kʷ aː ʔ	x....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_140	KNEE	Isthmus-Pajapan Nahuatl	tɬ a n kʷ a h	t a m b a -	x.xx.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_140	KNEE	Northern Puebla Nahuatl	tɬ a n kʷ a h	tɬ a n kʷ a -	.....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_140	KNEE	Tabasco Nahuatl	tɬ a n kʷ a h	t a m b a -	x.xx.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_140	KNEE	Tetelcingo Nahuatl	tɬ a n kʷ a h	tɬ a n kʷ a -	.....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_142	KNOW (SOMETHING)	Classical Nahuatl	m a t i	m a t -	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_142	KNOW (SOMETHING)	Isthmus-Mecayapan Nahuatl	m a t i	m a t i	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_142	KNOW (SOMETHING)	Isthmus-Pajapan Nahuatl	m a t i	m a t i	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_142	KNOW (SOMETHING)	Northern Puebla Nahuatl	m a t i	m a t i	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_142	KNOW (SOMETHING)	Pipil	m a t i	m a t i	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_142	KNOW (SOMETHING)	Pochutec	m a t i	m e t i	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_142	KNOW (SOMETHING)	Tabasco Nahuatl	m a t i	m a - -	..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_142	KNOW (SOMETHING)	Tetelcingo Nahuatl	m a t i	m a t iː	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_143	LEAF	Classical Nahuatl	ɨ s w a tɬ	i s w a tɬ	x....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_143	LEAF	Isthmus-Mecayapan Nahuatl	ɨ s w a tɬ	i s w a ʔ	x...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_143	LEAF	Isthmus-Pajapan Nahuatl	ɨ s w a tɬ	i s w a t	x...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_143	LEAF	Pipil	ɨ s w a tɬ	i s w a t	x...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_143	LEAF	Tabasco Nahuatl	ɨ s w a tɬ	i s w a t	x...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_145	LIE (REST)	Classical Nahuatl	m o t eː k a	m o t eː k a	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_145	LIE (REST)	Isthmus-Mecayapan Nahuatl	m o t eː k a	m o t eː c a	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_145	LIE (REST)	Isthmus-Pajapan Nahuatl	m o t eː k a	m o t e ɡ a	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_145	LIE (REST)	Northern Puebla Nahuatl	m o t eː k a	m o t e k a	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_145	LIE (REST)	Pipil	m o t eː k a	m u t eː k a	.x....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_145	LIE (REST)	Pochutec	m o t eː k a	- - t e k e	xx...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_145	LIE (REST)	Tabasco Nahuatl	m o t eː k a	m u r e k a	.xx...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_145	LIE (REST)	Tetelcingo Nahuatl	m o t eː k a	m o t e k a	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_158	LONG	Classical Nahuatl	w e h e j a k	w eː - i j a k	..xx...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_158	LONG	Isthmus-Mecayapan Nahuatl	w e h e j a k	w eː - - j a k	..xx...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_158	LONG	Isthmus-Pajapan Nahuatl	w e h e j a k	w eː - - j a k	..xx...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_158	LONG	Northern Puebla Nahuatl	w e h e j a k	w e - - j a k	..xx...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_158	LONG	Pipil	w e h e j a k	w e - - j a k	..xx...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_158	LONG	Tabasco Nahuatl	w e h e j a k	w e - - j a k	..xx...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_158	LONG	Tetelcingo Nahuatl	w e h e j a k	b e - - j a k	x.xx...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_159	LOUSE	Classical Nahuatl	a t ɨ m ɨ tɬ	a t e m i tɬ	..x.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_159	LOUSE	Tetelcingo Nahuatl	a t ɨ m ɨ tɬ	a t iː m iː tɬ	..x.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_16	BLOOD	Classical Nahuatl	ɨ s tɬ ɨ	e s tɬ i	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_16	BLOOD	Isthmus-Mecayapan Nahuatl	ɨ s tɬ ɨ	e s t i	x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_16	BLOOD	Isthmus-Pajapan Nahuatl	ɨ s tɬ ɨ	e s t i	x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_16	BLOOD	Northern Puebla Nahuatl	ɨ s tɬ ɨ	e s tɬ i	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_16	BLOOD	Pipil	ɨ s tɬ ɨ	e s t i	x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_16	BLOOD	Pochutec	ɨ s tɬ ɨ	e s t -	x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_16	BLOOD	Tabasco Nahuatl	ɨ s tɬ ɨ	e s t i	x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_16	BLOOD	Tetelcingo Nahuatl	ɨ s tɬ ɨ	e s tɬ iː	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_17	BONE	Classical Nahuatl	oː m ɨ tɬ	o m i tɬ	..x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_17	BONE	Isthmus-Mecayapan Nahuatl	oː m ɨ tɬ	o m i ʔ	..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_17	BONE	Isthmus-Pajapan Nahuatl	oː m ɨ tɬ	o m i t	..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_17	BONE	Northern Puebla Nahuatl	oː m ɨ tɬ	o m i tɬ	..x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_17	BONE	Pipil	oː m ɨ tɬ	uː m i t	x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_17	BONE	Pochutec	oː m ɨ tɬ	o - - t	.xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_17	BONE	Tabasco Nahuatl	oː m ɨ tɬ	u m i t	x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_176	MAN	Classical Nahuatl	tɬ aː k a tɬ	t aː k a tɬ	x....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_176	MAN	Isthmus-Mecayapan Nahuatl	tɬ aː k a tɬ	t aː ɡ a ʔ	x.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_176	MAN	Isthmus-Pajapan Nahuatl	tɬ aː k a tɬ	t aː ɡ a t	x.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_176	MAN	Northern Puebla Nahuatl	tɬ aː k a tɬ	tɬ a k a tɬ	.....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_176	MAN	Pipil	tɬ aː k a tɬ	t aː k a t	x...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_176	MAN	Pochutec	tɬ aː k a tɬ	- o k o t	xx.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_176	MAN	Tabasco Nahuatl	tɬ aː k a tɬ	t aː k a t	x...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_177	MANY	Classical Nahuatl	m ɨ j a k	m i - a k	.xx..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_177	MANY	Isthmus-Mecayapan Nahuatl	m ɨ j a k	m i - a ʔ	.xx.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_177	MANY	Isthmus-Pajapan Nahuatl	m ɨ j a k	m i - a k	.xx..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_177	MANY	Northern Puebla Nahuatl	m ɨ j a k	m i - a k	.xx..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_177	MANY	Pipil	m ɨ j a k	m i j a k	.x...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_177	MANY	Tabasco Nahuatl	m ɨ j a k	m i - a k	.xx..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_177	MANY	Tetelcingo Nahuatl	m ɨ j a k	m e j a k	.x...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_179	FLESH OR MEAT	Classical Nahuatl	n a k a tɬ	n a k a tɬ	.....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_179	FLESH OR MEAT	Isthmus-Mecayapan Nahuatl	n a k a tɬ	n a k a ʔ	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_179	FLESH OR MEAT	Isthmus-Pajapan Nahuatl	n a k a tɬ	n a ɡ a t	..x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_179	FLESH OR MEAT	Northern Puebla Nahuatl	n a k a tɬ	n a k a tɬ	.....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_179	FLESH OR MEAT	Pipil	n a k a tɬ	n a k a t	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_179	FLESH OR MEAT	Pochutec	n a k a tɬ	n e k e t	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_179	FLESH OR MEAT	Tabasco Nahuatl	n a k a tɬ	n a k a t	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_179	FLESH OR MEAT	Tetelcingo Nahuatl	n a k a tɬ	n a k a tɬ	.....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_180	MOON	Classical Nahuatl	m eː ts tɬ ɨ	m eː ts tɬ i	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_180	MOON	Isthmus-Mecayapan Nahuatl	m eː ts tɬ ɨ	m eː ts t i	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_180	MOON	Isthmus-Pajapan Nahuatl	m eː ts tɬ ɨ	m eː s t i	..xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_180	MOON	Northern Puebla Nahuatl	m eː ts tɬ ɨ	m e ts tɬ i	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_180	MOON	Pipil	m eː ts tɬ ɨ	m eː ts t i	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_180	MOON	Pochutec	m eː ts tɬ ɨ	m e s t -	..xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_180	MOON	Tabasco Nahuatl	m eː ts tɬ ɨ	m eː ts t i	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_180	MOON	Tetelcingo Nahuatl	m eː ts tɬ ɨ	m e ts tɬ iː	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_181	MOUNTAIN	Classical Nahuatl	t ɨ p eː tɬ	t e p eː tɬ	.x...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_181	MOUNTAIN	Isthmus-Mecayapan Nahuatl	t ɨ p eː tɬ	t e p eː ʔ	.x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_181	MOUNTAIN	Isthmus-Pajapan Nahuatl	t ɨ p eː tɬ	t e p eː t	.x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_181	MOUNTAIN	Northern Puebla Nahuatl	t ɨ p eː tɬ	t e p e tɬ	.x...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_181	MOUNTAIN	Pipil	t ɨ p eː tɬ	t e p eː t	.x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_181	MOUNTAIN	Tetelcingo Nahuatl	t ɨ p eː tɬ	t e p e tɬ	.x...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_183	MOUTH	Isthmus-Mecayapan Nahuatl	t eː n tɬ ɨ	t eː n - -	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_183	MOUTH	Isthmus-Pajapan Nahuatl	t eː n tɬ ɨ	t eː n - -	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_183	MOUTH	Pipil	t eː n tɬ ɨ	t eː n - -	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_183	MOUTH	Pochutec	t eː n tɬ ɨ	t e n - -	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_183	MOUTH	Tabasco Nahuatl	t eː n tɬ ɨ	t eː n - -	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_184	NAME	Classical Nahuatl	t oː k aː h ɨ tɬ	t oː k aː - - tɬ	....xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_184	NAME	Isthmus-Mecayapan Nahuatl	t oː k aː h ɨ tɬ	t oː k aː - - ʔ	....xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_184	NAME	Isthmus-Pajapan Nahuatl	t oː k aː h ɨ tɬ	t o ɡ a - - -	..x.xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_184	NAME	Northern Puebla Nahuatl	t oː k aː h ɨ tɬ	t o k a h - tɬ	.....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_184	NAME	Pipil	t oː k aː h ɨ tɬ	t uː k e - j -	.x.xxxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_184	NAME	Tabasco Nahuatl	t oː k aː h ɨ tɬ	t u w a - - n	.xx.xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_184	NAME	Tetelcingo Nahuatl	t oː k aː h ɨ tɬ	t u k ø - - -	.x.xxxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_186	NECK	Classical Nahuatl	k ə tʃ tɬ ɨ	k e tʃ tɬ i	.x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_186	NECK	Isthmus-Mecayapan Nahuatl	k ə tʃ tɬ ɨ	k e tʃ - -	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_186	NECK	Isthmus-Pajapan Nahuatl	k ə tʃ tɬ ɨ	ɡ eː tʃ - -	xx.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_186	NECK	Northern Puebla Nahuatl	k ə tʃ tɬ ɨ	k e tʃ - -	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_186	NECK	Pipil	k ə tʃ tɬ ɨ	k e tʃ - -	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_186	NECK	Pochutec	k ə tʃ tɬ ɨ	k o x t -	.xxxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_186	NECK	Tabasco Nahuatl	k ə tʃ tɬ ɨ	k e tʃ - -	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_186	NECK	Tetelcingo Nahuatl	k ə tʃ tɬ ɨ	k e tʃ - -	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_187	NEW	Classical Nahuatl	j a n kʷ i k	j a n kʷ i k	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_187	NEW	Isthmus-Mecayapan Nahuatl	j a n kʷ i k	j a m kʷ i ʔ	..x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_187	NEW	Isthmus-Pajapan Nahuatl	j a n kʷ i k	j a m b i k	..xx..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_187	NEW	Northern Puebla Nahuatl	j a n kʷ i k	j a n kʷ i k	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_187	NEW	Pipil	j a n kʷ i k	j a n kʷ i k	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_187	NEW	Tabasco Nahuatl	j a n kʷ i k	j a m b i k	..xx..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_187	NEW	Tetelcingo Nahuatl	j a n kʷ i k	j a n kʷ iː k	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_188	NIGHT	Classical Nahuatl	j o w a l l ɨ	j o w a l l i	......x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_188	NIGHT	Isthmus-Mecayapan Nahuatl	j o w a l l ɨ	j o w a l - -	.....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_188	NIGHT	Northern Puebla Nahuatl	j o w a l l ɨ	j o w a l - i	.....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_188	NIGHT	Pochutec	j o w a l l ɨ	- o w e l - -	x..x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_188	NIGHT	Tetelcingo Nahuatl	j o w a l l ɨ	j o w a l - iː	.....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_19	BREAST	Classical Nahuatl	tʃ iː tʃ iː w a l	tʃ iː tʃ iː w a l	.......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_19	BREAST	Isthmus-Mecayapan Nahuatl	tʃ iː tʃ iː w a l	tʃ iː tʃ i w a l	.......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_19	BREAST	Isthmus-Pajapan Nahuatl	tʃ iː tʃ iː w a l	tʃ i tʃ i w a l	.......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_19	BREAST	Northern Puebla Nahuatl	tʃ iː tʃ iː w a l	tʃ i tʃ i w a l	.......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_19	BREAST	Tetelcingo Nahuatl	tʃ iː tʃ iː w a l	tʃ i tʃ iː w a l	.......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_190	NOSE	Classical Nahuatl	j a k a tɬ	j a k - tɬ	...x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_190	NOSE	Isthmus-Mecayapan Nahuatl	j a k a tɬ	j a k - t	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_190	NOSE	Isthmus-Pajapan Nahuatl	j a k a tɬ	j a ɡ a t	..x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_190	NOSE	Northern Puebla Nahuatl	j a k a tɬ	j e k a -	.x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_190	NOSE	Pipil	j a k a tɬ	j a k - -	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_190	NOSE	Pochutec	j a k a tɬ	j e k e t	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_190	NOSE	Tabasco Nahuatl	j a k a tɬ	j a k - -	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_190	NOSE	Tetelcingo Nahuatl	j a k a tɬ	j e k a -	.x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_194	ONE	Classical Nahuatl	s eː	s eː	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_194	ONE	Isthmus-Mecayapan Nahuatl	s eː	s eː	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_194	ONE	Isthmus-Pajapan Nahuatl	s eː	s e	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_194	ONE	Northern Puebla Nahuatl	s eː	s e	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_194	ONE	Pipil	s eː	s eː	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_194	ONE	Pochutec	s eː	s e	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_194	ONE	Tabasco Nahuatl	s eː	s e	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_194	ONE	Tetelcingo Nahuatl	s eː	s i	.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_2	ASH	Classical Nahuatl	n ɨ x tɬ ɨ	n e x tɬ i	.x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_2	ASH	Isthmus-Mecayapan Nahuatl	n ɨ x tɬ ɨ	n eː x - -	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_2	ASH	Isthmus-Pajapan Nahuatl	n ɨ x tɬ ɨ	n eː x - -	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_2	ASH	Northern Puebla Nahuatl	n ɨ x tɬ ɨ	n e x tɬ i	.x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_2	ASH	Pipil	n ɨ x tɬ ɨ	n e x t i	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_2	ASH	Pochutec	n ɨ x tɬ ɨ	n o x t -	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_2	ASH	Tabasco Nahuatl	n ɨ x tɬ ɨ	n e x t i	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_2	ASH	Tetelcingo Nahuatl	n ɨ x tɬ ɨ	n e x tɬ iː	.x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_218	RED	Classical Nahuatl	tʃ iː l t ɨ k	tʃ iː l t i k	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_218	RED	Isthmus-Mecayapan Nahuatl	tʃ iː l t ɨ k	tʃ iː l t i ʔ	....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_218	RED	Northern Puebla Nahuatl	tʃ iː l t ɨ k	tʃ i l t i k	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_218	RED	Pipil	tʃ iː l t ɨ k	tʃ iː l t i k	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_218	RED	Tetelcingo Nahuatl	tʃ iː l t ɨ k	tʃ i l t iː k	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_22	BURN (SOMETHING)	Classical Nahuatl	tɬ a t ɨ h a	tɬ a t i - aː	...xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_22	BURN (SOMETHING)	Isthmus-Mecayapan Nahuatl	tɬ a t ɨ h a	t a t i - a	x..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_22	BURN (SOMETHING)	Isthmus-Pajapan Nahuatl	tɬ a t ɨ h a	t a t - - a	x..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_22	BURN (SOMETHING)	Pipil	tɬ a t ɨ h a	t a t i - a	x..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_22	BURN (SOMETHING)	Pochutec	tɬ a t ɨ h a	t a t i - -	x..xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_22	BURN (SOMETHING)	Tabasco Nahuatl	tɬ a t ɨ h a	t a t i - -	x..xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_22	BURN (SOMETHING)	Tetelcingo Nahuatl	tɬ a t ɨ h a	tɬ a t i - a	...xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_220	ROAD	Classical Nahuatl	o h tɬ ɨ	o ʔ tɬ i	.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_220	ROAD	Isthmus-Mecayapan Nahuatl	o h tɬ ɨ	o h t i	..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_220	ROAD	Isthmus-Pajapan Nahuatl	o h tɬ ɨ	o h t i	..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_220	ROAD	Northern Puebla Nahuatl	o h tɬ ɨ	o h tɬ i	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_220	ROAD	Pipil	o h tɬ ɨ	u h t i	x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_220	ROAD	Pochutec	o h tɬ ɨ	o - tʼ a	.xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_220	ROAD	Tabasco Nahuatl	o h tɬ ɨ	u h t i	x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_220	ROAD	Tetelcingo Nahuatl	o h tɬ ɨ	o h tɬ iː	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_221	ROOT	Classical Nahuatl	n e l w a tɬ	n e l w a tɬ	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_221	ROOT	Isthmus-Mecayapan Nahuatl	n e l w a tɬ	n e l w a ʔ	.....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_221	ROOT	Northern Puebla Nahuatl	n e l w a tɬ	n e l w a tɬ	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_221	ROOT	Pipil	n e l w a tɬ	n e l w a t	.....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_221	ROOT	Tetelcingo Nahuatl	n e l w a tɬ	n e l w a tɬ	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_224	ROUND	Classical Nahuatl	j a w a l t ɨ k	j a w a l t i k	......x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_224	ROUND	Isthmus-Mecayapan Nahuatl	j a w a l t ɨ k	j a w a l t i ʔ	......xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_224	ROUND	Northern Puebla Nahuatl	j a w a l t ɨ k	j e w a l t i k	.x....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_224	ROUND	Pipil	j a w a l t ɨ k	j a w a l - - -	.....xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_224	ROUND	Tetelcingo Nahuatl	j a w a l t ɨ k	j e w a l t iː k	.x....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_227	SAND	Classical Nahuatl	x aː l l ɨ	x aː l l i	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_227	SAND	Isthmus-Mecayapan Nahuatl	x aː l l ɨ	x aː h l i	..x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_227	SAND	Isthmus-Pajapan Nahuatl	x aː l l ɨ	x aː h l i	..x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_227	SAND	Northern Puebla Nahuatl	x aː l l ɨ	x a l - i	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_227	SAND	Pipil	x aː l l ɨ	x aː l - -	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_227	SAND	Tabasco Nahuatl	x aː l l ɨ	x aː h l i	..x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_227	SAND	Tetelcingo Nahuatl	x aː l l ɨ	x ø l - iː	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_231	SEE	Classical Nahuatl	ɨ h t a	i t t a	xx..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_231	SEE	Isthmus-Mecayapan Nahuatl	ɨ h t a	i - t a	xx..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_231	SEE	Isthmus-Pajapan Nahuatl	ɨ h t a	i - t a	xx..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_231	SEE	Northern Puebla Nahuatl	ɨ h t a	i - t a	xx..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_231	SEE	Pipil	ɨ h t a	i - t a	xx..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_231	SEE	Pochutec	ɨ h t a	i - t a	xx..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_231	SEE	Tabasco Nahuatl	ɨ h t a	i - r a	xxx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_231	SEE	Tetelcingo Nahuatl	ɨ h t a	- - ʰt a	xxx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_232	SEED	Classical Nahuatl	aː tʃ tɬ ɨ	a tʃ tɬ i	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_232	SEED	Northern Puebla Nahuatl	aː tʃ tɬ ɨ	a tʃ tɬ i	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_232	SEED	Pochutec	aː tʃ tɬ ɨ	a x t -	.xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_232	SEED	Tetelcingo Nahuatl	aː tʃ tɬ ɨ	ø tʃ tɬ iː	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_235	SIT	Classical Nahuatl	m o tɬ a l ɨ h a	m o tɬ aː l i - aː	.....xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_235	SIT	Isthmus-Mecayapan Nahuatl	m o tɬ a l ɨ h a	m o t aː l i - a	..x..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_235	SIT	Isthmus-Pajapan Nahuatl	m o tɬ a l ɨ h a	m o t aː l i - -	..x..xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_235	SIT	Northern Puebla Nahuatl	m o tɬ a l ɨ h a	m o tɬ a l i - a	.....xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_235	SIT	Pipil	m o tɬ a l ɨ h a	m u t aː l i - a	.xx..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_235	SIT	Tabasco Nahuatl	m o tɬ a l ɨ h a	m u r a l i h u	.xx..x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_235	SIT	Tetelcingo Nahuatl	m o tɬ a l ɨ h a	m o tɬ ø l iː - a	...x.xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_237	SKIN	Classical Nahuatl	eː w a tɬ	eː w a tɬ	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_237	SKIN	Northern Puebla Nahuatl	eː w a tɬ	e w a -	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_237	SKIN	Pipil	eː w a tɬ	eː w a -	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_237	SKIN	Tetelcingo Nahuatl	eː w a tɬ	e w a -	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_24	CLAW OR NAIL	Classical Nahuatl	ɨ s t ɨ	i s t e	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_24	CLAW OR NAIL	Isthmus-Mecayapan Nahuatl	ɨ s t ɨ	i s t i	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_24	CLAW OR NAIL	Isthmus-Pajapan Nahuatl	ɨ s t ɨ	i s t i	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_24	CLAW OR NAIL	Northern Puebla Nahuatl	ɨ s t ɨ	i s t n	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_24	CLAW OR NAIL	Pipil	ɨ s t ɨ	i s t i	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_24	CLAW OR NAIL	Pochutec	ɨ s t ɨ	o x t -	xx.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_24	CLAW OR NAIL	Tabasco Nahuatl	ɨ s t ɨ	i s t i	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_24	CLAW OR NAIL	Tetelcingo Nahuatl	ɨ s t ɨ	i s t e	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_240	SLEEP	Classical Nahuatl	k o tʃ ɨ	k o tʃ -	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_240	SLEEP	Isthmus-Mecayapan Nahuatl	k o tʃ ɨ	k o tʃ i	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_240	SLEEP	Isthmus-Pajapan Nahuatl	k o tʃ ɨ	ɡ o tʃ i	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_240	SLEEP	Northern Puebla Nahuatl	k o tʃ ɨ	k o tʃ i	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_240	SLEEP	Pipil	k o tʃ ɨ	k u tʃ i	.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_240	SLEEP	Pochutec	k o tʃ ɨ	k o tʃ i	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_240	SLEEP	Tabasco Nahuatl	k o tʃ ɨ	k u tʃ i	.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_240	SLEEP	Tetelcingo Nahuatl	k o tʃ ɨ	k o tʃ iː	...x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_249	SMOKE (EXHAUST)	Classical Nahuatl	p oː k tɬ ɨ	p oː k tɬ i	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_249	SMOKE (EXHAUST)	Isthmus-Mecayapan Nahuatl	p oː k tɬ ɨ	p oː k t i	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_249	SMOKE (EXHAUST)	Isthmus-Pajapan Nahuatl	p oː k tɬ ɨ	p oː k t i	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_249	SMOKE (EXHAUST)	Northern Puebla Nahuatl	p oː k tɬ ɨ	p o k tɬ i	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_249	SMOKE (EXHAUST)	Pipil	p oː k tɬ ɨ	p u k t i	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_249	SMOKE (EXHAUST)	Tabasco Nahuatl	p oː k tɬ ɨ	p uː k t i	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_249	SMOKE (EXHAUST)	Tetelcingo Nahuatl	p oː k tɬ ɨ	p u k tɬ iː	.x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_25	CLOUD	Classical Nahuatl	m i x tɬ ɨ	m i x tɬ i	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_25	CLOUD	Isthmus-Mecayapan Nahuatl	m i x tɬ ɨ	m i x t i	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_25	CLOUD	Isthmus-Pajapan Nahuatl	m i x tɬ ɨ	m iː x t i	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_25	CLOUD	Northern Puebla Nahuatl	m i x tɬ ɨ	m e x tɬ i	.x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_25	CLOUD	Pipil	m i x tɬ ɨ	m i x t i	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_25	CLOUD	Tetelcingo Nahuatl	m i x tɬ ɨ	m e x tɬ iː	.x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_251	STAND	Classical Nahuatl	k ɨ ts a	k e ts a	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_251	STAND	Isthmus-Mecayapan Nahuatl	k ɨ ts a	k e ts a	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_251	STAND	Isthmus-Pajapan Nahuatl	k ɨ ts a	ɡ e ts a	xx..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_251	STAND	Northern Puebla Nahuatl	k ɨ ts a	k e ts a	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_251	STAND	Tetelcingo Nahuatl	k ɨ ts a	k e ts a	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_268	STAR	Classical Nahuatl	s i tɬ a l ɨ m	s iː tɬ a l i n	.....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_268	STAR	Isthmus-Mecayapan Nahuatl	s i tɬ a l ɨ m	s iː t a l i n	..x..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_268	STAR	Northern Puebla Nahuatl	s i tɬ a l ɨ m	s i tɬ a l i -	.....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_268	STAR	Tetelcingo Nahuatl	s i tɬ a l ɨ m	s i tɬ a l iː -	.....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_28	COLD	Isthmus-Mecayapan Nahuatl	s e s e k	s e s eː ʔ	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_28	COLD	Isthmus-Pajapan Nahuatl	s e s e k	s e s eː k	.....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_28	COLD	Pipil	s e s e k	s e s e k	.....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_28	COLD	Tabasco Nahuatl	s e s e k	s e s e k	.....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_283	STONE	Classical Nahuatl	t ə tɬ	t e tɬ	.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_283	STONE	Isthmus-Mecayapan Nahuatl	t ə tɬ	t e t	.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_283	STONE	Isthmus-Pajapan Nahuatl	t ə tɬ	t e t	.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_283	STONE	Northern Puebla Nahuatl	t ə tɬ	t e tɬ	.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_283	STONE	Pipil	t ə tɬ	t e t	.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_283	STONE	Pochutec	t ə tɬ	t o t	.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_283	STONE	Tabasco Nahuatl	t ə tɬ	t e t	.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_289	TAIL	Classical Nahuatl	kʷ i tɬ a p ɨ l	kʷ i tɬ a p i l	.....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_289	TAIL	Isthmus-Mecayapan Nahuatl	kʷ i tɬ a p ɨ l	kʷ i t a p iː l	..x..x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_289	TAIL	Isthmus-Pajapan Nahuatl	kʷ i tɬ a p ɨ l	b i t a p i l	x.x..x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_289	TAIL	Northern Puebla Nahuatl	kʷ i tɬ a p ɨ l	kʷ i tɬ a p i l	.....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_289	TAIL	Pipil	kʷ i tɬ a p ɨ l	kʷ i tɬ a p i l	.....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_289	TAIL	Tabasco Nahuatl	kʷ i tɬ a p ɨ l	b i r a p i l	x.x..x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_289	TAIL	Tetelcingo Nahuatl	kʷ i tɬ a p ɨ l	kʷ iː tɬ a p iː l	.....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_290	THAT	Classical Nahuatl	oː n	oː n	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_290	THAT	Isthmus-Pajapan Nahuatl	oː n	oː n	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_290	THAT	Northern Puebla Nahuatl	oː n	o n	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_290	THAT	Pipil	oː n	u n	x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_290	THAT	Tabasco Nahuatl	oː n	uː n	x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_290	THAT	Tetelcingo Nahuatl	oː n	iː n	x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_293	THIS	Classical Nahuatl	i n	iː n	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_293	THIS	Isthmus-Mecayapan Nahuatl	i n	iː n	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_293	THIS	Isthmus-Pajapan Nahuatl	i n	iː n	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_293	THIS	Northern Puebla Nahuatl	i n	i n	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_293	THIS	Pipil	i n	i n	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_293	THIS	Pochutec	i n	i n	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_293	THIS	Tabasco Nahuatl	i n	iː n	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_293	THIS	Tetelcingo Nahuatl	i n	i n	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_294	THOU	Classical Nahuatl	t ə h a	t e ʔ aː	.xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_294	THOU	Isthmus-Mecayapan Nahuatl	t ə h a	t e h -	.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_294	THOU	Isthmus-Pajapan Nahuatl	t ə h a	t e h a	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_294	THOU	Northern Puebla Nahuatl	t ə h a	t e h a	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_294	THOU	Pipil	t ə h a	t a - -	.xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_294	THOU	Tabasco Nahuatl	t ə h a	t e h e	.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_296	TONGUE	Classical Nahuatl	n ɨ n ɨ p ɨ l	n e n e p i l	.x.x.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_296	TONGUE	Northern Puebla Nahuatl	n ɨ n ɨ p ɨ l	n e n e p i l	.x.x.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_296	TONGUE	Tetelcingo Nahuatl	n ɨ n ɨ p ɨ l	n e n e p iː l	.x.x.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_3	BARK	Northern Puebla Nahuatl	ɨ w aː j oː tɬ	e w a j o -	x....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_3	BARK	Pipil	ɨ w aː j oː tɬ	eː w a j u -	x...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_3	BARK	Tetelcingo Nahuatl	ɨ w aː j oː tɬ	e w a j u tɬ	x...x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_30	COME	Classical Nahuatl	w iː ts	w i ts	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_30	COME	Isthmus-Mecayapan Nahuatl	w iː ts	w iː ʔ	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_30	COME	Isthmus-Pajapan Nahuatl	w iː ts	w iː ts	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_30	COME	Northern Puebla Nahuatl	w iː ts	w i ts	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_30	COME	Pipil	w iː ts	w iː ts	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_30	COME	Pochutec	w iː ts	w i ts	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_30	COME	Tetelcingo Nahuatl	w iː ts	b i ts	x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_313	TOOTH	Classical Nahuatl	tɬ a n	tɬ a n	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_313	TOOTH	Isthmus-Mecayapan Nahuatl	tɬ a n	t a n	x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_313	TOOTH	Isthmus-Pajapan Nahuatl	tɬ a n	t a n	x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_313	TOOTH	Northern Puebla Nahuatl	tɬ a n	tɬ a n	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_313	TOOTH	Pipil	tɬ a n	t a n	x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_313	TOOTH	Tabasco Nahuatl	tɬ a n	t aː n	x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_313	TOOTH	Tetelcingo Nahuatl	tɬ a n	tɬ a n	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_314	TREE	Classical Nahuatl	kʷ a w ɨ tɬ	kʷ a w - tɬ	...x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_314	TREE	Isthmus-Mecayapan Nahuatl	kʷ a w ɨ tɬ	kʷ a w i ʔ	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_314	TREE	Isthmus-Pajapan Nahuatl	kʷ a w ɨ tɬ	b a w i t	x..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_314	TREE	Northern Puebla Nahuatl	kʷ a w ɨ tɬ	k o w i tɬ	xx.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_314	TREE	Pipil	kʷ a w ɨ tɬ	kʷ a w i t	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_314	TREE	Pochutec	kʷ a w ɨ tɬ	kʷ a ɡ u t	..xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_314	TREE	Tabasco Nahuatl	kʷ a w ɨ tɬ	k o - i t	xxxxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_314	TREE	Tetelcingo Nahuatl	kʷ a w ɨ tɬ	kʷ a b iː tɬ	..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_315	TWO	Classical Nahuatl	oː m ə	oː m e	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_315	TWO	Isthmus-Mecayapan Nahuatl	oː m ə	oː m e	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_315	TWO	Isthmus-Pajapan Nahuatl	oː m ə	oː m e	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_315	TWO	Northern Puebla Nahuatl	oː m ə	o m e	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_315	TWO	Pipil	oː m ə	uː m e	x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_315	TWO	Pochutec	oː m ə	o m e	..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_315	TWO	Tabasco Nahuatl	oː m ə	uː m e	x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_315	TWO	Tetelcingo Nahuatl	oː m ə	u m e	x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_316	WALK	Classical Nahuatl	n ɨ h n ɨ m i	n e ʔ n e m i	.xx.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_316	WALK	Isthmus-Mecayapan Nahuatl	n ɨ h n ɨ m i	n e h n e m i	.x..x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_316	WALK	Isthmus-Pajapan Nahuatl	n ɨ h n ɨ m i	n e h n e m i	.x..x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_316	WALK	Northern Puebla Nahuatl	n ɨ h n ɨ m i	n e h n e m i	.x..x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_316	WALK	Pipil	n ɨ h n ɨ m i	n e h n e m i	.x..x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_316	WALK	Tabasco Nahuatl	n ɨ h n ɨ m i	n e h n e m i	.x..x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_316	WALK	Tetelcingo Nahuatl	n ɨ h n ɨ m i	n e h n e m iː	.x..x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_318	HOT OR WARM	Classical Nahuatl	t o t oː n ɨ k	t o t oː n - k	.....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_318	HOT OR WARM	Isthmus-Mecayapan Nahuatl	t o t oː n ɨ k	t o t oː n i ʔ	.....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_318	HOT OR WARM	Isthmus-Pajapan Nahuatl	t o t oː n ɨ k	t o t oː n i k	.....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_318	HOT OR WARM	Northern Puebla Nahuatl	t o t oː n ɨ k	t o t o n - k	.....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_318	HOT OR WARM	Pipil	t o t oː n ɨ k	t u t uː n i k	.x.x.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_318	HOT OR WARM	Tabasco Nahuatl	t o t oː n ɨ k	t - r uː n i k	.xxx.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_318	HOT OR WARM	Tetelcingo Nahuatl	t o t oː n ɨ k	t o t u n - k	...x.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_32	DIE	Classical Nahuatl	m ɨ k i	m i k -	.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_32	DIE	Isthmus-Mecayapan Nahuatl	m ɨ k i	m i k i	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_32	DIE	Isthmus-Pajapan Nahuatl	m ɨ k i	m i ɡ i	.xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_32	DIE	Northern Puebla Nahuatl	m ɨ k i	m i k i	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_32	DIE	Pipil	m ɨ k i	m i k i	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_32	DIE	Pochutec	m ɨ k i	m o k -	.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_32	DIE	Tabasco Nahuatl	m ɨ k i	m i k i	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_32	DIE	Tetelcingo Nahuatl	m ɨ k i	m iː k iː	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_320	WATER	Classical Nahuatl	aː tɬ	aː tɬ	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_320	WATER	Isthmus-Mecayapan Nahuatl	aː tɬ	aː t	.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_320	WATER	Isthmus-Pajapan Nahuatl	aː tɬ	aː t	.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_320	WATER	Northern Puebla Nahuatl	aː tɬ	a tɬ	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_320	WATER	Pipil	aː tɬ	aː t	.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_320	WATER	Pochutec	aː tɬ	a t	.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_320	WATER	Tetelcingo Nahuatl	aː tɬ	ø tɬ	x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_322	WE	Classical Nahuatl	t ə h a m ɨ t	t e ʔ aː - - -	.xx.xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_322	WE	Isthmus-Mecayapan Nahuatl	t ə h a m ɨ t	t e h a m e h	.x...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_322	WE	Isthmus-Pajapan Nahuatl	t ə h a m ɨ t	t e h a m e h	.x...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_322	WE	Northern Puebla Nahuatl	t ə h a m ɨ t	t e h a - - -	.x..xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_322	WE	Pipil	t ə h a m ɨ t	t e h e m e t	.x.x.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_322	WE	Pochutec	t ə h a m ɨ t	t - w e - - -	.xxxxxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_322	WE	Tabasco Nahuatl	t ə h a m ɨ t	t o h o m e n	.x.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_322	WE	Tetelcingo Nahuatl	t ə h a m ɨ t	t e h a - - -	.x..xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_323	WHAT	Classical Nahuatl	tɬ a	tɬ e	.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_323	WHAT	Isthmus-Mecayapan Nahuatl	tɬ a	t eː	xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_323	WHAT	Isthmus-Pajapan Nahuatl	tɬ a	t eː	xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_323	WHAT	Northern Puebla Nahuatl	tɬ a	tɬ e	.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_323	WHAT	Pipil	tɬ a	t aː	x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_323	WHAT	Pochutec	tɬ a	t e	xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_323	WHAT	Tabasco Nahuatl	tɬ a	t a	x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_323	WHAT	Tetelcingo Nahuatl	tɬ a	tɬ i	.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_324	WHITE	Classical Nahuatl	i s t aː k ɨ	i s t aː k -	.....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_324	WHITE	Isthmus-Mecayapan Nahuatl	i s t aː k ɨ	i s t aː ʔ -	....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_324	WHITE	Isthmus-Pajapan Nahuatl	i s t aː k ɨ	i s t aː k -	.....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_324	WHITE	Northern Puebla Nahuatl	i s t aː k ɨ	i s t a k -	.....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_324	WHITE	Pipil	i s t aː k ɨ	i s t a k -	.....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_324	WHITE	Tabasco Nahuatl	i s t aː k ɨ	i s t aː k -	.....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_326	WHO	Classical Nahuatl	aː k	aː k	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_326	WHO	Isthmus-Mecayapan Nahuatl	aː k	aː ʔ	.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_326	WHO	Isthmus-Pajapan Nahuatl	aː k	aː k	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_326	WHO	Northern Puebla Nahuatl	aː k	a k	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_326	WHO	Pochutec	aː k	a k	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_326	WHO	Tabasco Nahuatl	aː k	a k	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_326	WHO	Tetelcingo Nahuatl	aː k	ø k	x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_328	WOMAN	Classical Nahuatl	s i	s i	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_328	WOMAN	Isthmus-Mecayapan Nahuatl	s i	s i	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_328	WOMAN	Isthmus-Pajapan Nahuatl	s i	s o	.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_328	WOMAN	Northern Puebla Nahuatl	s i	s i	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_328	WOMAN	Pipil	s i	s i	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_328	WOMAN	Tabasco Nahuatl	s i	s u	.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_328	WOMAN	Tetelcingo Nahuatl	s i	s o	.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_330	YELLOW	Classical Nahuatl	k o s t ɨ k	k o s t i k	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_330	YELLOW	Isthmus-Mecayapan Nahuatl	k o s t ɨ k	k o s t i ʔ	....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_330	YELLOW	Isthmus-Pajapan Nahuatl	k o s t ɨ k	ɡ o s t i k	x...x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_330	YELLOW	Northern Puebla Nahuatl	k o s t ɨ k	k o s t i k	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_330	YELLOW	Tetelcingo Nahuatl	k o s t ɨ k	k o s t iː k	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_3~ProtoAztecan~f40a86	BARK	Classical Nahuatl	eː w a tɬ	eː w a tɬ	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_51	DRINK	Classical Nahuatl	i h i	o n iː	xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_51	DRINK	Isthmus-Mecayapan Nahuatl	i h i	o n i	xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_51	DRINK	Isthmus-Pajapan Nahuatl	i h i	o n i	xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_51	DRINK	Northern Puebla Nahuatl	i h i	o n i	xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_51	DRINK	Pipil	i h i	u n i	xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_51	DRINK	Tetelcingo Nahuatl	i h i	o n i	xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_52	DRY	Classical Nahuatl	w aː k	w aː k	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_52	DRY	Isthmus-Mecayapan Nahuatl	w aː k	w aː k	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_52	DRY	Isthmus-Pajapan Nahuatl	w aː k	w aː k	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_52	DRY	Northern Puebla Nahuatl	w aː k	w a k	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_52	DRY	Pipil	w aː k	w aː k	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_52	DRY	Pochutec	w aː k	w a k	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_52	DRY	Tabasco Nahuatl	w aː k	w a k	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_52	DRY	Tetelcingo Nahuatl	w aː k	w a k	...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_53	EAR	Classical Nahuatl	n a k a s tɬ ɨ	n a k a s tɬ i	......x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_53	EAR	Isthmus-Mecayapan Nahuatl	n a k a s tɬ ɨ	n a k a s - -	.....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_53	EAR	Isthmus-Pajapan Nahuatl	n a k a s tɬ ɨ	n a ɡ a s - -	..x..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_53	EAR	Northern Puebla Nahuatl	n a k a s tɬ ɨ	n a k a s - -	.....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_53	EAR	Pipil	n a k a s tɬ ɨ	n a k a s - -	.....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_53	EAR	Pochutec	n a k a s tɬ ɨ	n e k e s t -	.x.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_53	EAR	Tabasco Nahuatl	n a k a s tɬ ɨ	n a k a s - -	.....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_53	EAR	Tetelcingo Nahuatl	n a k a s tɬ ɨ	n a k a s - -	.....xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_54	EARTH (SOIL)	Classical Nahuatl	tɬ aː l l ɨ	tɬ aː l l i	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_54	EARTH (SOIL)	Isthmus-Mecayapan Nahuatl	tɬ aː l l ɨ	t aː h l i	x.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_54	EARTH (SOIL)	Isthmus-Pajapan Nahuatl	tɬ aː l l ɨ	t aː h l i	x.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_54	EARTH (SOIL)	Northern Puebla Nahuatl	tɬ aː l l ɨ	tɬ a l - i	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_54	EARTH (SOIL)	Pipil	tɬ aː l l ɨ	t aː l - -	x..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_54	EARTH (SOIL)	Pochutec	tɬ aː l l ɨ	t a l - -	x..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_54	EARTH (SOIL)	Tabasco Nahuatl	tɬ aː l l ɨ	t a h l i	x.x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_54	EARTH (SOIL)	Tetelcingo Nahuatl	tɬ aː l l ɨ	tɬ ø l - iː	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_55	EAT	Classical Nahuatl	kʷ a h aː	kʷ aː - -	..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_55	EAT	Isthmus-Mecayapan Nahuatl	kʷ a h aː	kʷ a - -	..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_55	EAT	Isthmus-Pajapan Nahuatl	kʷ a h aː	b aː - -	x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_55	EAT	Northern Puebla Nahuatl	kʷ a h aː	kʷ a - -	..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_55	EAT	Pipil	kʷ a h aː	kʷ a - -	..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_55	EAT	Pochutec	kʷ a h aː	kʷ a - -	..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_55	EAT	Tabasco Nahuatl	kʷ a h aː	b aː - -	x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_55	EAT	Tetelcingo Nahuatl	kʷ a h aː	kʷ a - -	..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_6	BELLY	Classical Nahuatl	ɨ h t ɨ	i ʔ t e	xx.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_6	BELLY	Isthmus-Pajapan Nahuatl	ɨ h t ɨ	i h t i	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_6	BELLY	Northern Puebla Nahuatl	ɨ h t ɨ	i h t e	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_6	BELLY	Pipil	ɨ h t ɨ	i h t i	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_6	BELLY	Tabasco Nahuatl	ɨ h t ɨ	i h t i	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_6	BELLY	Tetelcingo Nahuatl	ɨ h t ɨ	i h t e	x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_60	EYE	Classical Nahuatl	iː x	iː x	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_60	EYE	Isthmus-Mecayapan Nahuatl	iː x	iː x	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_60	EYE	Isthmus-Pajapan Nahuatl	iː x	iː x	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_60	EYE	Northern Puebla Nahuatl	iː x	i x	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_60	EYE	Pipil	iː x	iː x	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_60	EYE	Pochutec	iː x	i x	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_60	EYE	Tabasco Nahuatl	iː x	iː x	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_60	EYE	Tetelcingo Nahuatl	iː x	i x	..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_79	FEATHER	Classical Nahuatl	ɨ w ɨ	i w i	x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_79	FEATHER	Northern Puebla Nahuatl	ɨ w ɨ	i w i	x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_79	FEATHER	Tabasco Nahuatl	ɨ w ɨ	i w i	x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_8	BIG	Classical Nahuatl	w e h e j	w eː - - -	..xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_8	BIG	Isthmus-Mecayapan Nahuatl	w e h e j	w e j i -	..xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_8	BIG	Isthmus-Pajapan Nahuatl	w e h e j	w eː - - j	..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_8	BIG	Northern Puebla Nahuatl	w e h e j	w e j i -	..xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_8	BIG	Pipil	w e h e j	w eː - - j	..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_8	BIG	Pochutec	w e h e j	h u h i o	xx.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_8	BIG	Tabasco Nahuatl	w e h e j	w e - - j	..xx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_8	BIG	Tetelcingo Nahuatl	w e h e j	b e j iː -	x.xxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_83	FIRE	Classical Nahuatl	tɬ a h i tɬ	tɬ e - - tɬ	.xxx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_83	FIRE	Isthmus-Mecayapan Nahuatl	tɬ a h i tɬ	t i - ʔ t	xxxxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_83	FIRE	Isthmus-Pajapan Nahuatl	tɬ a h i tɬ	t i - - t	xxxxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_83	FIRE	Northern Puebla Nahuatl	tɬ a h i tɬ	tɬ e - - tɬ	.xxx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_83	FIRE	Pipil	tɬ a h i tɬ	t iː - - t	xxxxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_83	FIRE	Pochutec	tɬ a h i tɬ	t e - - t	xxxxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_83	FIRE	Tabasco Nahuatl	tɬ a h i tɬ	t i - - t	xxxxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_83	FIRE	Tetelcingo Nahuatl	tɬ a h i tɬ	tɬ e - - tɬ	.xxx.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_84	FISH	Classical Nahuatl	m ɨ tʃ ɨ m	m i tʃ i n	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_84	FISH	Northern Puebla Nahuatl	m ɨ tʃ ɨ m	m i tʃ i -	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_84	FISH	Pipil	m ɨ tʃ ɨ m	m i tʃ i n	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_84	FISH	Pochutec	m ɨ tʃ ɨ m	m i tʃ o m	.x.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_84	FISH	Tetelcingo Nahuatl	m ɨ tʃ ɨ m	m iː tʃ iː -	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_87	FLY (MOVE THROUGH AIR)	Classical Nahuatl	p a tɬ aː n i	p a tɬ aː n -	.....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_87	FLY (MOVE THROUGH AIR)	Isthmus-Mecayapan Nahuatl	p a tɬ aː n i	p a t aː n i	..x...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_87	FLY (MOVE THROUGH AIR)	Isthmus-Pajapan Nahuatl	p a tɬ aː n i	p a t aː n i	..x...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_87	FLY (MOVE THROUGH AIR)	Northern Puebla Nahuatl	p a tɬ aː n i	p a tɬ a n i	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_87	FLY (MOVE THROUGH AIR)	Pipil	p a tɬ aː n i	p a t aː n i	..x...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_87	FLY (MOVE THROUGH AIR)	Pochutec	p a tɬ aː n i	p a t a n -	..x..x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_87	FLY (MOVE THROUGH AIR)	Tabasco Nahuatl	p a tɬ aː n i	p a r a n i	..x...
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_87	FLY (MOVE THROUGH AIR)	Tetelcingo Nahuatl	p a tɬ aː n i	p a tɬ ø n i	...x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_88	FOOT	Classical Nahuatl	ɨ kx ɨ	i kx i	x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_88	FOOT	Isthmus-Mecayapan Nahuatl	ɨ kx ɨ	i kx i	x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_88	FOOT	Isthmus-Pajapan Nahuatl	ɨ kx ɨ	i kx i	x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_88	FOOT	Northern Puebla Nahuatl	ɨ kx ɨ	i kx i	x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_88	FOOT	Pipil	ɨ kx ɨ	- kx i	x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_88	FOOT	Tabasco Nahuatl	ɨ kx ɨ	i kx i	x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_88	FOOT	Tetelcingo Nahuatl	ɨ kx ɨ	i kx iː	x.x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_9	BIRD	Classical Nahuatl	t oː t oː tɬ	t oː t oː tɬ	.....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_9	BIRD	Isthmus-Mecayapan Nahuatl	t oː t oː tɬ	t oː t oː ʔ	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_9	BIRD	Isthmus-Pajapan Nahuatl	t oː t oː tɬ	t oː t o t	....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_9	BIRD	Northern Puebla Nahuatl	t oː t oː tɬ	t o t o tɬ	.....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_9	BIRD	Pipil	t oː t oː tɬ	t uː t u t	.x.xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_9	BIRD	Tabasco Nahuatl	t oː t oː tɬ	t uː r u t	.xxxx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_9	BIRD	Tetelcingo Nahuatl	t oː t oː tɬ	t u t u tɬ	.x.x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_90	FULL	Classical Nahuatl	t eː n t o k	t eː n t o k	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_90	FULL	Isthmus-Mecayapan Nahuatl	t eː n t o k	t eː n t o ʔ	.....x
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_90	FULL	Isthmus-Pajapan Nahuatl	t eː n t o k	t eː n t o k	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_90	FULL	Northern Puebla Nahuatl	t eː n t o k	t e n t o k	......
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_90	FULL	Pipil	t eː n t o k	t eː n t u k	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_90	FULL	Tetelcingo Nahuatl	t eː n t o k	t e n t iː k	....x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_92	GIVE	Classical Nahuatl	m a k a	m a k a	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_92	GIVE	Isthmus-Mecayapan Nahuatl	m a k a	m a k a	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_92	GIVE	Isthmus-Pajapan Nahuatl	m a k a	m a ɡ a	..x.
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_92	GIVE	Northern Puebla Nahuatl	m a k a	m a k a	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_92	GIVE	Pipil	m a k a	m a k a	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_92	GIVE	Pochutec	m a k a	m e k a	.x..
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_92	GIVE	Tabasco Nahuatl	m a k a	m a - -	..xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_92	GIVE	Tetelcingo Nahuatl	m a k a	m a k a	....
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_94	GOOD	Isthmus-Mecayapan Nahuatl	j eː k tɬ ɨ	j eː k t i	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_94	GOOD	Isthmus-Pajapan Nahuatl	j eː k tɬ ɨ	j e k t i	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_94	GOOD	Pipil	j eː k tɬ ɨ	j eː k - -	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_94	GOOD	Tabasco Nahuatl	j eː k tɬ ɨ	j e k t i	...xx
+davletshinaztecan:Proto-Aztecan > Aztecan|davletshinaztecan_97	GOOD	Classical Nahuatl	j eː k tɬ ɨ	j e k tɬ i	....x
