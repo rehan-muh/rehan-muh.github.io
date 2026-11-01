@@ -71,6 +71,34 @@
   ]
  },
  {
+  "analysis": "Early Slovenian > Kostel",
+  "slug": "Early_Slovenian_to_Kostel",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 148,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Early Slovenian > Slovene",
+  "slug": "Early_Slovenian_to_Slovene",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 157,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
   "analysis": "Koine > Greek",
   "slug": "Koine_to_Greek",
   "family": "Indo-European",
@@ -90,7 +118,7 @@
   "family": "Indo-European",
   "kind": "attested ancestor",
   "machine": false,
-  "sets": 424,
+  "sets": 419,
   "languages": 21,
   "sources": [
    {
@@ -107,6 +135,20 @@
   "machine": true,
   "sets": 158,
   "languages": 2,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Middle Cornish > Late Cornish",
+  "slug": "Middle_Cornish_to_Late_Cornish",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 121,
+  "languages": 1,
   "sources": [
    {
     "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
@@ -149,6 +191,20 @@
   "machine": true,
   "sets": 149,
   "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Breton > Breton",
+  "slug": "Old_Breton_to_Breton",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 64,
+  "languages": 2,
   "sources": [
    {
     "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
@@ -486,6 +542,20 @@
   ]
  },
  {
+  "analysis": "Sogdian > Yaghnobi",
+  "slug": "Sogdian_to_Yaghnobi",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 65,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
   "analysis": "Vedic > Indo-Aryan",
   "slug": "Vedic_to_Indo-Aryan",
   "family": "Indo-European",
@@ -541,6 +611,25 @@
    {
     "text": "Ferraz Gerardi, Fabrício, Aragon, Carolina Coelho & Reichert, Stanislav (2022). KAHD: Katukinan-Arawan-Harakmbut Database (Pre-release). Journal of Open Humanities Data.",
     "url": "https://doi.org/10.5334/johd.80"
+   }
+  ]
+ },
+ {
+  "analysis": "Old Javanese > Javanese",
+  "slug": "Old_Javanese_to_Javanese",
+  "family": "Austronesian",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 605,
+  "languages": 3,
+  "sources": [
+   {
+    "text": "Blust, Robert & Trussel, Stephen (2010). The Austronesian Comparative Dictionary. Online at acd.clld.org.",
+    "url": "https://acd.clld.org"
+   },
+   {
+    "text": "Greenhill, Simon J., Blust, Robert & Gray, Russell D. (2008). The Austronesian Basic Vocabulary Database: From Bioinformatics to Lexomics. Evolutionary Bioinformatics.",
+    "url": "https://doi.org/10.4137/EBO.S893"
    }
   ]
  },
@@ -796,7 +885,7 @@
   "family": "Sino-Tibetan",
   "kind": "reconstructed ancestor",
   "machine": true,
-  "sets": 327,
+  "sets": 312,
   "languages": 6,
   "sources": [
    {
@@ -874,6 +963,21 @@
    {
     "text": "Gao, Tianjun (2020). Reconstruction and analysis of phylogenetic network on Tibeto-Burman languages in China. Journal of Chinese Linguistics.",
     "url": "https://doi.org/10.1353/jcl.2020.0006"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Siouan > Siouan",
+  "slug": "Proto-Siouan_to_Siouan",
+  "family": "Siouan",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 633,
+  "languages": 13,
+  "sources": [
+   {
+    "text": "Rankin, Robert L., Carter, Richard T., Jones, A. Wesley, Koontz, John E., Rood, David S. & Hartmann, Iren (2015). Comparative Siouan Dictionary. Leipzig: Max Planck Institute for Evolutionary Anthropology.",
+    "url": "https://csd.clld.org"
    }
   ]
  },
@@ -963,6 +1067,21 @@
    {
     "text": "Ferraz Gerardi, Fabrício & Reichert, Stanislav (2021). The Tupí-Guaraní language family: A phylogenetic classification. Diachronica.",
     "url": "https://doi.org/10.1075/dia.18032.fer"
+   }
+  ]
+ },
+ {
+  "analysis": "Tupinamba > Omagua and Kokama",
+  "slug": "Tupinamba_to_Omagua_and_Kokama",
+  "family": "Tupian",
+  "kind": "attested relative of the ancestor",
+  "machine": false,
+  "sets": 173,
+  "languages": 2,
+  "sources": [
+   {
+    "text": "Lundgren, Olof (2020). A phonological reconstruction of Proto-Omagua-Kokama-Tupinambá. Lund University.",
+    "url": "https://lup.lub.lu.se/student-papers/search/publication/9007022"
    }
   ]
  },
