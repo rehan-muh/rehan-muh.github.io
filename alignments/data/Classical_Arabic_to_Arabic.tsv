@@ -1,0 +1,955 @@
+Set	Concept	Language	Ancestor	Aligned	Changed
+ratcliffearabic:Classical Arabic > Arabic|100_yellow	YELLOW	Aqra-Arbil (Judeo-Iraqi) Arabic	ʔ a sˤ f a r	- a sˤ f a r	x.....
+ratcliffearabic:Classical Arabic > Arabic|100_yellow	YELLOW	Bukhari Arabic	ʔ a sˤ f a r	ʔ a s f a r	..x...
+ratcliffearabic:Classical Arabic > Arabic|100_yellow	YELLOW	Cairene (Egyptian) Arabic	ʔ a sˤ f a r	- a sˤ f a r	x.....
+ratcliffearabic:Classical Arabic > Arabic|100_yellow	YELLOW	Cypriot Arabic	ʔ a sˤ f a r	- - sˤ f - r	xx..x.
+ratcliffearabic:Classical Arabic > Arabic|100_yellow	YELLOW	Damascene (Levantine) Arabic	ʔ a sˤ f a r	ʔ a sˤ f a r	......
+ratcliffearabic:Classical Arabic > Arabic|100_yellow	YELLOW	Gulf Arabic	ʔ a sˤ f a r	ʔ a sˤ f a r	......
+ratcliffearabic:Classical Arabic > Arabic|100_yellow	YELLOW	Iraqi (Judeo-Iraqi) Arabic	ʔ a sˤ f a r	ʔ a sˤ f a r	......
+ratcliffearabic:Classical Arabic > Arabic|100_yellow	YELLOW	Maltese	ʔ a sˤ f a r	- - s f a r	xxx...
+ratcliffearabic:Classical Arabic > Arabic|100_yellow	YELLOW	Moroccan Arabic	ʔ a sˤ f a r	- - sˤ f e r	xx..x.
+ratcliffearabic:Classical Arabic > Arabic|100_yellow	YELLOW	Nigerian (Chadian) Arabic	ʔ a sˤ f a r	- a sˤ f a r	x.....
+ratcliffearabic:Classical Arabic > Arabic|100_yellow	YELLOW	Soukhne Arabic	ʔ a sˤ f a r	ʔ a sˤ f a r	......
+ratcliffearabic:Classical Arabic > Arabic|100_yellow	YELLOW	Yemenite (Judeo-Yemeni) Arabic	ʔ a sˤ f a r	ʔ a sˤ f a r	......
+ratcliffearabic:Classical Arabic > Arabic|10_bone	BONE	Aqra-Arbil (Judeo-Iraqi) Arabic	ʕ a ð mˤ	ʕ a dˤ m	..xx
+ratcliffearabic:Classical Arabic > Arabic|10_bone	BONE	Bukhari Arabic	ʕ a ð mˤ	ʕ a z m	..xx
+ratcliffearabic:Classical Arabic > Arabic|10_bone	BONE	Cairene (Egyptian) Arabic	ʕ a ð mˤ	ʕ a d m	..xx
+ratcliffearabic:Classical Arabic > Arabic|10_bone	BONE	Damascene (Levantine) Arabic	ʕ a ð mˤ	ʕ a dˤ m	..xx
+ratcliffearabic:Classical Arabic > Arabic|10_bone	BONE	Gulf Arabic	ʕ a ð mˤ	ʕ a ðˤ m	..xx
+ratcliffearabic:Classical Arabic > Arabic|10_bone	BONE	Iraqi (Judeo-Iraqi) Arabic	ʕ a ð mˤ	ʕ a ðˤ m	..xx
+ratcliffearabic:Classical Arabic > Arabic|10_bone	BONE	Ki-Nubi	ʕ a ð mˤ	l a d m	x.xx
+ratcliffearabic:Classical Arabic > Arabic|10_bone	BONE	Maltese	ʕ a ð mˤ	ʕ a d m	..xx
+ratcliffearabic:Classical Arabic > Arabic|10_bone	BONE	Moroccan Arabic	ʕ a ð mˤ	ʕ - dˤ m	.xxx
+ratcliffearabic:Classical Arabic > Arabic|10_bone	BONE	Nigerian (Chadian) Arabic	ʕ a ð mˤ	- a dˤ m	x.xx
+ratcliffearabic:Classical Arabic > Arabic|10_bone	BONE	Soukhne Arabic	ʕ a ð mˤ	ʕ a ðˤ m	..xx
+ratcliffearabic:Classical Arabic > Arabic|10_bone	BONE	Yemenite (Judeo-Yemeni) Arabic	ʕ a ð mˤ	ʕ a ðˤ m	..xx
+ratcliffearabic:Classical Arabic > Arabic|11_breast	BREAST	Bukhari Arabic	sˤ a d r	s a d r	x...
+ratcliffearabic:Classical Arabic > Arabic|11_breast	BREAST	Cairene (Egyptian) Arabic	sˤ a d r	s i d r	xx..
+ratcliffearabic:Classical Arabic > Arabic|11_breast	BREAST	Damascene (Levantine) Arabic	sˤ a d r	sˤ ə dˤ r	.xx.
+ratcliffearabic:Classical Arabic > Arabic|11_breast	BREAST	Gulf Arabic	sˤ a d r	d a d r	x...
+ratcliffearabic:Classical Arabic > Arabic|11_breast	BREAST	Ki-Nubi	sˤ a d r	s u d r	xx..
+ratcliffearabic:Classical Arabic > Arabic|11_breast	BREAST	Maltese	sˤ a d r	s i d r	xx..
+ratcliffearabic:Classical Arabic > Arabic|11_breast	BREAST	Soukhne Arabic	sˤ a d r	θ i d r	xx..
+ratcliffearabic:Classical Arabic > Arabic|11_breast	BREAST	Yemenite (Judeo-Yemeni) Arabic	sˤ a d r	sˤ a d r	....
+ratcliffearabic:Classical Arabic > Arabic|12_burnvt	BURN (SOMETHING)	Aqra-Arbil (Judeo-Iraqi) Arabic	ħ a r a q a	ħ - r - q -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|12_burnvt	BURN (SOMETHING)	Cairene (Egyptian) Arabic	ħ a r a q a	ħ a r a ʔ -	....xx
+ratcliffearabic:Classical Arabic > Arabic|12_burnvt	BURN (SOMETHING)	Cypriot Arabic	ħ a r a q a	ħ - r - q -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|12_burnvt	BURN (SOMETHING)	Damascene (Levantine) Arabic	ħ a r a q a	ħ a r a ʔ -	....xx
+ratcliffearabic:Classical Arabic > Arabic|12_burnvt	BURN (SOMETHING)	Gulf Arabic	ħ a r a q a	ħ a r a ɡ -	....xx
+ratcliffearabic:Classical Arabic > Arabic|12_burnvt	BURN (SOMETHING)	Iraqi (Judeo-Iraqi) Arabic	ħ a r a q a	ħ i r a ɡ -	.x..xx
+ratcliffearabic:Classical Arabic > Arabic|12_burnvt	BURN (SOMETHING)	Ki-Nubi	ħ a r a q a	h a r a ɡ u	x...xx
+ratcliffearabic:Classical Arabic > Arabic|12_burnvt	BURN (SOMETHING)	Maltese	ħ a r a q a	ħ a r a ʔ -	....xx
+ratcliffearabic:Classical Arabic > Arabic|12_burnvt	BURN (SOMETHING)	Moroccan Arabic	ħ a r a q a	ħ - r e q -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|12_burnvt	BURN (SOMETHING)	Nigerian (Chadian) Arabic	ħ a r a q a	h i r i ɡ -	xx.xxx
+ratcliffearabic:Classical Arabic > Arabic|12_burnvt	BURN (SOMETHING)	Soukhne Arabic	ħ a r a q a	ħ a r a k -	....xx
+ratcliffearabic:Classical Arabic > Arabic|12_burnvt	BURN (SOMETHING)	Yemenite (Judeo-Yemeni) Arabic	ħ a r a q a	ħ a r a ɡ -	....xx
+ratcliffearabic:Classical Arabic > Arabic|13_claw	CLAW	Aqra-Arbil (Judeo-Iraqi) Arabic	ðˤ u f r	dˤ ə f r	xx..
+ratcliffearabic:Classical Arabic > Arabic|13_claw	CLAW	Cairene (Egyptian) Arabic	ðˤ u f r	dˤ i f rˤ	xx.x
+ratcliffearabic:Classical Arabic > Arabic|13_claw	CLAW	Cypriot Arabic	ðˤ u f r	ðˤ - f r	.x..
+ratcliffearabic:Classical Arabic > Arabic|13_claw	CLAW	Damascene (Levantine) Arabic	ðˤ u f r	dˤ ə f r	xx..
+ratcliffearabic:Classical Arabic > Arabic|13_claw	CLAW	Iraqi (Judeo-Iraqi) Arabic	ðˤ u f r	ðˤ i f r	.x..
+ratcliffearabic:Classical Arabic > Arabic|13_claw	CLAW	Ki-Nubi	ðˤ u f r	d u f r	x...
+ratcliffearabic:Classical Arabic > Arabic|13_claw	CLAW	Maltese	ðˤ u f r	d i f r	xx..
+ratcliffearabic:Classical Arabic > Arabic|13_claw	CLAW	Moroccan Arabic	ðˤ u f r	dˤ - f rˤ	xx.x
+ratcliffearabic:Classical Arabic > Arabic|13_claw	CLAW	Soukhne Arabic	ðˤ u f r	- i f r	xx..
+ratcliffearabic:Classical Arabic > Arabic|13_claw	CLAW	Yemenite (Judeo-Yemeni) Arabic	ðˤ u f r	θˤ u f r	x...
+ratcliffearabic:Classical Arabic > Arabic|15_cold	COLD	Aqra-Arbil (Judeo-Iraqi) Arabic	b aː r i d	b eː r ə d	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|15_cold	COLD	Bukhari Arabic	b aː r i d	b a r - d	...x.
+ratcliffearabic:Classical Arabic > Arabic|15_cold	COLD	Cairene (Egyptian) Arabic	b aː r i d	b a r - d	...x.
+ratcliffearabic:Classical Arabic > Arabic|15_cold	COLD	Cypriot Arabic	b aː r i d	p e r e t	xx.xx
+ratcliffearabic:Classical Arabic > Arabic|15_cold	COLD	Damascene (Levantine) Arabic	b aː r i d	b a r ə d	...x.
+ratcliffearabic:Classical Arabic > Arabic|15_cold	COLD	Gulf Arabic	b aː r i d	b aː r i d	.....
+ratcliffearabic:Classical Arabic > Arabic|15_cold	COLD	Iraqi (Judeo-Iraqi) Arabic	b aː r i d	b a r - d	...x.
+ratcliffearabic:Classical Arabic > Arabic|15_cold	COLD	Ki-Nubi	b aː r i d	b a r i -	....x
+ratcliffearabic:Classical Arabic > Arabic|15_cold	COLD	Maltese	b aː r i d	b iː r e d	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|15_cold	COLD	Moroccan Arabic	b aː r i d	b a r e d	...x.
+ratcliffearabic:Classical Arabic > Arabic|15_cold	COLD	Nigerian (Chadian) Arabic	b aː r i d	b a r - d	...x.
+ratcliffearabic:Classical Arabic > Arabic|15_cold	COLD	Soukhne Arabic	b aː r i d	b iː r i d	.x...
+ratcliffearabic:Classical Arabic > Arabic|15_cold	COLD	Yemenite (Judeo-Yemeni) Arabic	b aː r i d	b aː r i d	.....
+ratcliffearabic:Classical Arabic > Arabic|16_come	COME	Aqra-Arbil (Judeo-Iraqi) Arabic	dʒ aː ʔ a	dʒ aː - -	..xx
+ratcliffearabic:Classical Arabic > Arabic|16_come	COME	Bukhari Arabic	dʒ aː ʔ a	ʒ a kː i	x.xx
+ratcliffearabic:Classical Arabic > Arabic|16_come	COME	Cairene (Egyptian) Arabic	dʒ aː ʔ a	ɡ a - -	x.xx
+ratcliffearabic:Classical Arabic > Arabic|16_come	COME	Cypriot Arabic	dʒ aː ʔ a	dʒ y - y	.xxx
+ratcliffearabic:Classical Arabic > Arabic|16_come	COME	Damascene (Levantine) Arabic	dʒ aː ʔ a	dʒ a - -	..xx
+ratcliffearabic:Classical Arabic > Arabic|16_come	COME	Gulf Arabic	dʒ aː ʔ a	dʒ a - -	..xx
+ratcliffearabic:Classical Arabic > Arabic|16_come	COME	Iraqi (Judeo-Iraqi) Arabic	dʒ aː ʔ a	dʒ aː - -	..xx
+ratcliffearabic:Classical Arabic > Arabic|16_come	COME	Ki-Nubi	dʒ aː ʔ a	dʒ a - -	..xx
+ratcliffearabic:Classical Arabic > Arabic|16_come	COME	Maltese	dʒ aː ʔ a	dʒ iː - -	.xxx
+ratcliffearabic:Classical Arabic > Arabic|16_come	COME	Moroccan Arabic	dʒ aː ʔ a	ʒ a - -	x.xx
+ratcliffearabic:Classical Arabic > Arabic|16_come	COME	Nigerian (Chadian) Arabic	dʒ aː ʔ a	dʒ a - -	..xx
+ratcliffearabic:Classical Arabic > Arabic|16_come	COME	Soukhne Arabic	dʒ aː ʔ a	ts a - -	x.xx
+ratcliffearabic:Classical Arabic > Arabic|16_come	COME	Yemenite (Judeo-Yemeni) Arabic	dʒ aː ʔ a	dʒ aː ʔ -	...x
+ratcliffearabic:Classical Arabic > Arabic|17_die	DIE	Aqra-Arbil (Judeo-Iraqi) Arabic	m aː t a	m aː t -	...x
+ratcliffearabic:Classical Arabic > Arabic|17_die	DIE	Bukhari Arabic	m aː t a	m aː t -	...x
+ratcliffearabic:Classical Arabic > Arabic|17_die	DIE	Cairene (Egyptian) Arabic	m aː t a	m aː t -	...x
+ratcliffearabic:Classical Arabic > Arabic|17_die	DIE	Cypriot Arabic	m aː t a	m w t -	.x.x
+ratcliffearabic:Classical Arabic > Arabic|17_die	DIE	Damascene (Levantine) Arabic	m aː t a	m aː t -	...x
+ratcliffearabic:Classical Arabic > Arabic|17_die	DIE	Gulf Arabic	m aː t a	m aː t -	...x
+ratcliffearabic:Classical Arabic > Arabic|17_die	DIE	Iraqi (Judeo-Iraqi) Arabic	m aː t a	m aː t -	...x
+ratcliffearabic:Classical Arabic > Arabic|17_die	DIE	Ki-Nubi	m aː t a	m u t u	.x.x
+ratcliffearabic:Classical Arabic > Arabic|17_die	DIE	Maltese	m aː t a	m iː t -	.x.x
+ratcliffearabic:Classical Arabic > Arabic|17_die	DIE	Moroccan Arabic	m aː t a	m a t -	...x
+ratcliffearabic:Classical Arabic > Arabic|17_die	DIE	Nigerian (Chadian) Arabic	m aː t a	m aː t -	...x
+ratcliffearabic:Classical Arabic > Arabic|17_die	DIE	Soukhne Arabic	m aː t a	m aː t -	...x
+ratcliffearabic:Classical Arabic > Arabic|17_die	DIE	Yemenite (Judeo-Yemeni) Arabic	m aː t a	m aː t -	...x
+ratcliffearabic:Classical Arabic > Arabic|18_dog	DOG	Aqra-Arbil (Judeo-Iraqi) Arabic	k a l b	k a l b	....
+ratcliffearabic:Classical Arabic > Arabic|18_dog	DOG	Bukhari Arabic	k a l b	k a l b	....
+ratcliffearabic:Classical Arabic > Arabic|18_dog	DOG	Cairene (Egyptian) Arabic	k a l b	k a l b	....
+ratcliffearabic:Classical Arabic > Arabic|18_dog	DOG	Cypriot Arabic	k a l b	k - l b	.x..
+ratcliffearabic:Classical Arabic > Arabic|18_dog	DOG	Damascene (Levantine) Arabic	k a l b	k a l b	....
+ratcliffearabic:Classical Arabic > Arabic|18_dog	DOG	Gulf Arabic	k a l b	tʃ a l b	x...
+ratcliffearabic:Classical Arabic > Arabic|18_dog	DOG	Iraqi (Judeo-Iraqi) Arabic	k a l b	tʃ a l b	x...
+ratcliffearabic:Classical Arabic > Arabic|18_dog	DOG	Ki-Nubi	k a l b	k e l i	.x.x
+ratcliffearabic:Classical Arabic > Arabic|18_dog	DOG	Maltese	k a l b	k e l b	.x..
+ratcliffearabic:Classical Arabic > Arabic|18_dog	DOG	Moroccan Arabic	k a l b	k e l b	.x..
+ratcliffearabic:Classical Arabic > Arabic|18_dog	DOG	Nigerian (Chadian) Arabic	k a l b	k a l b	....
+ratcliffearabic:Classical Arabic > Arabic|18_dog	DOG	Soukhne Arabic	k a l b	tʃ a l b	x...
+ratcliffearabic:Classical Arabic > Arabic|18_dog	DOG	Yemenite (Judeo-Yemeni) Arabic	k a l b	k a l b	....
+ratcliffearabic:Classical Arabic > Arabic|19_drink	DRINK	Aqra-Arbil (Judeo-Iraqi) Arabic	ʃ a r i b a	ʃ ə r ə b -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|19_drink	DRINK	Bukhari Arabic	ʃ a r i b a	ʃ a r a b -	...x.x
+ratcliffearabic:Classical Arabic > Arabic|19_drink	DRINK	Cairene (Egyptian) Arabic	ʃ a r i b a	ʃ i r i b -	.x...x
+ratcliffearabic:Classical Arabic > Arabic|19_drink	DRINK	Cypriot Arabic	ʃ a r i b a	ʃ - r - b -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|19_drink	DRINK	Damascene (Levantine) Arabic	ʃ a r i b a	ʃ ə r e b -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|19_drink	DRINK	Gulf Arabic	ʃ a r i b a	ʃ a r a b -	...x.x
+ratcliffearabic:Classical Arabic > Arabic|19_drink	DRINK	Iraqi (Judeo-Iraqi) Arabic	ʃ a r i b a	ʃ i r a b -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|19_drink	DRINK	Ki-Nubi	ʃ a r i b a	ʔ a r u b u	x..x.x
+ratcliffearabic:Classical Arabic > Arabic|19_drink	DRINK	Maltese	ʃ a r i b a	ʃ o r o b -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|19_drink	DRINK	Moroccan Arabic	ʃ a r i b a	ʃ - r e b -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|19_drink	DRINK	Nigerian (Chadian) Arabic	ʃ a r i b a	ʃ a r a b -	...x.x
+ratcliffearabic:Classical Arabic > Arabic|19_drink	DRINK	Soukhne Arabic	ʃ a r i b a	- i r i b -	xx...x
+ratcliffearabic:Classical Arabic > Arabic|19_drink	DRINK	Yemenite (Judeo-Yemeni) Arabic	ʃ a r i b a	ʃ i r i b -	.x...x
+ratcliffearabic:Classical Arabic > Arabic|1_all	ALL	Aqra-Arbil (Judeo-Iraqi) Arabic	k u lː	k ə lː	.x.
+ratcliffearabic:Classical Arabic > Arabic|1_all	ALL	Bukhari Arabic	k u lː	k u lː	...
+ratcliffearabic:Classical Arabic > Arabic|1_all	ALL	Cairene (Egyptian) Arabic	k u lː	k u lː	...
+ratcliffearabic:Classical Arabic > Arabic|1_all	ALL	Cypriot Arabic	k u lː	k u lː	...
+ratcliffearabic:Classical Arabic > Arabic|1_all	ALL	Damascene (Levantine) Arabic	k u lː	k ə lː	.x.
+ratcliffearabic:Classical Arabic > Arabic|1_all	ALL	Gulf Arabic	k u lː	k i l	.xx
+ratcliffearabic:Classical Arabic > Arabic|1_all	ALL	Iraqi (Judeo-Iraqi) Arabic	k u lː	k u lː	...
+ratcliffearabic:Classical Arabic > Arabic|1_all	ALL	Ki-Nubi	k u lː	k u l	..x
+ratcliffearabic:Classical Arabic > Arabic|1_all	ALL	Maltese	k u lː	k o lː	.x.
+ratcliffearabic:Classical Arabic > Arabic|1_all	ALL	Moroccan Arabic	k u lː	k o lː	.x.
+ratcliffearabic:Classical Arabic > Arabic|1_all	ALL	Soukhne Arabic	k u lː	tʃ i lː	xx.
+ratcliffearabic:Classical Arabic > Arabic|1_all	ALL	Yemenite (Judeo-Yemeni) Arabic	k u lː	k u lː	...
+ratcliffearabic:Classical Arabic > Arabic|20_dry	DRY	Aqra-Arbil (Judeo-Iraqi) Arabic	j aː b i s	j eː b ə s	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|20_dry	DRY	Bukhari Arabic	j aː b i s	j a b - s	...x.
+ratcliffearabic:Classical Arabic > Arabic|20_dry	DRY	Gulf Arabic	j aː b i s	j aː b i s	.....
+ratcliffearabic:Classical Arabic > Arabic|20_dry	DRY	Ki-Nubi	j aː b i s	- a b i s	x....
+ratcliffearabic:Classical Arabic > Arabic|20_dry	DRY	Moroccan Arabic	j aː b i s	j a b e s	...x.
+ratcliffearabic:Classical Arabic > Arabic|20_dry	DRY	Nigerian (Chadian) Arabic	j aː b i s	j aː b i s	.....
+ratcliffearabic:Classical Arabic > Arabic|20_dry	DRY	Soukhne Arabic	j aː b i s	j iː b i s	.x...
+ratcliffearabic:Classical Arabic > Arabic|20_dry	DRY	Yemenite (Judeo-Yemeni) Arabic	j aː b i s	j aː b i s	.....
+ratcliffearabic:Classical Arabic > Arabic|21_ear	EAR	Aqra-Arbil (Judeo-Iraqi) Arabic	ʔ u ð n	- ə d n	xxx.
+ratcliffearabic:Classical Arabic > Arabic|21_ear	EAR	Bukhari Arabic	ʔ u ð n	ʔ i z n	.xx.
+ratcliffearabic:Classical Arabic > Arabic|21_ear	EAR	Cairene (Egyptian) Arabic	ʔ u ð n	w i d n	xxx.
+ratcliffearabic:Classical Arabic > Arabic|21_ear	EAR	Cypriot Arabic	ʔ u ð n	- i ð n	xx..
+ratcliffearabic:Classical Arabic > Arabic|21_ear	EAR	Damascene (Levantine) Arabic	ʔ u ð n	ʔ ə d n	.xx.
+ratcliffearabic:Classical Arabic > Arabic|21_ear	EAR	Gulf Arabic	ʔ u ð n	- i ð n	xx..
+ratcliffearabic:Classical Arabic > Arabic|21_ear	EAR	Iraqi (Judeo-Iraqi) Arabic	ʔ u ð n	ʔ i ð n	.x..
+ratcliffearabic:Classical Arabic > Arabic|21_ear	EAR	Ki-Nubi	ʔ u ð n	- a dˤ n	xxx.
+ratcliffearabic:Classical Arabic > Arabic|21_ear	EAR	Maltese	ʔ u ð n	w i d n	xxx.
+ratcliffearabic:Classical Arabic > Arabic|21_ear	EAR	Moroccan Arabic	ʔ u ð n	w - d n	xxx.
+ratcliffearabic:Classical Arabic > Arabic|21_ear	EAR	Nigerian (Chadian) Arabic	ʔ u ð n	dˤ a - n	xxx.
+ratcliffearabic:Classical Arabic > Arabic|21_ear	EAR	Soukhne Arabic	ʔ u ð n	- i ð n	xx..
+ratcliffearabic:Classical Arabic > Arabic|21_ear	EAR	Yemenite (Judeo-Yemeni) Arabic	ʔ u ð n	ʔ i ð n	.x..
+ratcliffearabic:Classical Arabic > Arabic|22_earthdirt	EARTH (SOIL)	Cypriot Arabic	t u r aː b	t - r a b	.x...
+ratcliffearabic:Classical Arabic > Arabic|22_earthdirt	EARTH (SOIL)	Damascene (Levantine) Arabic	t u r aː b	tˤ - rˤ aː b	xxx..
+ratcliffearabic:Classical Arabic > Arabic|22_earthdirt	EARTH (SOIL)	Gulf Arabic	t u r aː b	t - r aː b	.x...
+ratcliffearabic:Classical Arabic > Arabic|22_earthdirt	EARTH (SOIL)	Iraqi (Judeo-Iraqi) Arabic	t u r aː b	t - r aː b	.x...
+ratcliffearabic:Classical Arabic > Arabic|22_earthdirt	EARTH (SOIL)	Ki-Nubi	t u r aː b	t u r a -	....x
+ratcliffearabic:Classical Arabic > Arabic|22_earthdirt	EARTH (SOIL)	Maltese	t u r aː b	t - r a b	.x...
+ratcliffearabic:Classical Arabic > Arabic|22_earthdirt	EARTH (SOIL)	Moroccan Arabic	t u r aː b	t - rˤ a b	.xx..
+ratcliffearabic:Classical Arabic > Arabic|23_eat	EAT	Aqra-Arbil (Judeo-Iraqi) Arabic	ʔ a k a l a	- a k a l -	x....x
+ratcliffearabic:Classical Arabic > Arabic|23_eat	EAT	Bukhari Arabic	ʔ a k a l a	ʔ u k u l -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|23_eat	EAT	Cairene (Egyptian) Arabic	ʔ a k a l a	- a k a l -	x....x
+ratcliffearabic:Classical Arabic > Arabic|23_eat	EAT	Cypriot Arabic	ʔ a k a l a	ʔ - k - l -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|23_eat	EAT	Damascene (Levantine) Arabic	ʔ a k a l a	ʔ a k a l -	.....x
+ratcliffearabic:Classical Arabic > Arabic|23_eat	EAT	Gulf Arabic	ʔ a k a l a	ʔ a k a l -	.....x
+ratcliffearabic:Classical Arabic > Arabic|23_eat	EAT	Iraqi (Judeo-Iraqi) Arabic	ʔ a k a l a	ʔ a k a l -	.....x
+ratcliffearabic:Classical Arabic > Arabic|23_eat	EAT	Ki-Nubi	ʔ a k a l a	ʔ a k u l u	...x.x
+ratcliffearabic:Classical Arabic > Arabic|23_eat	EAT	Maltese	ʔ a k a l a	- - k iː l -	xx.x.x
+ratcliffearabic:Classical Arabic > Arabic|23_eat	EAT	Moroccan Arabic	ʔ a k a l a	- - k - l a	xx.x..
+ratcliffearabic:Classical Arabic > Arabic|23_eat	EAT	Nigerian (Chadian) Arabic	ʔ a k a l a	- a k a l -	x....x
+ratcliffearabic:Classical Arabic > Arabic|23_eat	EAT	Soukhne Arabic	ʔ a k a l a	- a tʃ a l -	x.x..x
+ratcliffearabic:Classical Arabic > Arabic|23_eat	EAT	Yemenite (Judeo-Yemeni) Arabic	ʔ a k a l a	ʔ a k a l -	.....x
+ratcliffearabic:Classical Arabic > Arabic|24_egg	EGG	Aqra-Arbil (Judeo-Iraqi) Arabic	b ai̯ dˤ a t	b a dˤ a -	.x..x
+ratcliffearabic:Classical Arabic > Arabic|24_egg	EGG	Bukhari Arabic	b ai̯ dˤ a t	b ai̯ d a -	..x.x
+ratcliffearabic:Classical Arabic > Arabic|24_egg	EGG	Cairene (Egyptian) Arabic	b ai̯ dˤ a t	b eː dˤ a -	.x..x
+ratcliffearabic:Classical Arabic > Arabic|24_egg	EGG	Cypriot Arabic	b ai̯ dˤ a t	b y dˤ - -	.x.xx
+ratcliffearabic:Classical Arabic > Arabic|24_egg	EGG	Damascene (Levantine) Arabic	b ai̯ dˤ a t	b eː dˤ a -	.x..x
+ratcliffearabic:Classical Arabic > Arabic|24_egg	EGG	Gulf Arabic	b ai̯ dˤ a t	b eː dˤ a -	.x..x
+ratcliffearabic:Classical Arabic > Arabic|24_egg	EGG	Iraqi (Judeo-Iraqi) Arabic	b ai̯ dˤ a t	b eː ðˤ a -	.xx.x
+ratcliffearabic:Classical Arabic > Arabic|24_egg	EGG	Maltese	b ai̯ dˤ a t	b a d a -	.xx.x
+ratcliffearabic:Classical Arabic > Arabic|24_egg	EGG	Moroccan Arabic	b ai̯ dˤ a t	b i dˤ a -	.x..x
+ratcliffearabic:Classical Arabic > Arabic|24_egg	EGG	Nigerian (Chadian) Arabic	b ai̯ dˤ a t	b eː dˤ e -	.x.xx
+ratcliffearabic:Classical Arabic > Arabic|24_egg	EGG	Soukhne Arabic	b ai̯ dˤ a t	b eː ðˤ a -	.xx.x
+ratcliffearabic:Classical Arabic > Arabic|24_egg	EGG	Yemenite (Judeo-Yemeni) Arabic	b ai̯ dˤ a t	b a ðˤ a h	.xx.x
+ratcliffearabic:Classical Arabic > Arabic|25_eye	EYE	Aqra-Arbil (Judeo-Iraqi) Arabic	ʕ ai̯ n	ʕ a n	.x.
+ratcliffearabic:Classical Arabic > Arabic|25_eye	EYE	Bukhari Arabic	ʕ ai̯ n	ʔ ai̯ n	x..
+ratcliffearabic:Classical Arabic > Arabic|25_eye	EYE	Cairene (Egyptian) Arabic	ʕ ai̯ n	ʕ eː n	.x.
+ratcliffearabic:Classical Arabic > Arabic|25_eye	EYE	Cypriot Arabic	ʕ ai̯ n	ʕ ai̯ n	...
+ratcliffearabic:Classical Arabic > Arabic|25_eye	EYE	Damascene (Levantine) Arabic	ʕ ai̯ n	ʕ eː n	.x.
+ratcliffearabic:Classical Arabic > Arabic|25_eye	EYE	Gulf Arabic	ʕ ai̯ n	ʕ eː n	.x.
+ratcliffearabic:Classical Arabic > Arabic|25_eye	EYE	Iraqi (Judeo-Iraqi) Arabic	ʕ ai̯ n	ʕ eː n	.x.
+ratcliffearabic:Classical Arabic > Arabic|25_eye	EYE	Ki-Nubi	ʕ ai̯ n	ʔ e n	xx.
+ratcliffearabic:Classical Arabic > Arabic|25_eye	EYE	Maltese	ʕ ai̯ n	ʕ a n	.x.
+ratcliffearabic:Classical Arabic > Arabic|25_eye	EYE	Moroccan Arabic	ʕ ai̯ n	ʕ e n	.x.
+ratcliffearabic:Classical Arabic > Arabic|25_eye	EYE	Nigerian (Chadian) Arabic	ʕ ai̯ n	- eː n	xx.
+ratcliffearabic:Classical Arabic > Arabic|25_eye	EYE	Soukhne Arabic	ʕ ai̯ n	ʕ eː n	.x.
+ratcliffearabic:Classical Arabic > Arabic|25_eye	EYE	Yemenite (Judeo-Yemeni) Arabic	ʕ ai̯ n	ʕ a n	.x.
+ratcliffearabic:Classical Arabic > Arabic|26_fatn	FAT (ORGANIC SUBSTANCE)	Cairene (Egyptian) Arabic	ʃ a ħ m	ʃ a ħ m	....
+ratcliffearabic:Classical Arabic > Arabic|26_fatn	FAT (ORGANIC SUBSTANCE)	Damascene (Levantine) Arabic	ʃ a ħ m	ʃ a ħ m	....
+ratcliffearabic:Classical Arabic > Arabic|26_fatn	FAT (ORGANIC SUBSTANCE)	Iraqi (Judeo-Iraqi) Arabic	ʃ a ħ m	ʃ a ħ m	....
+ratcliffearabic:Classical Arabic > Arabic|26_fatn	FAT (ORGANIC SUBSTANCE)	Maltese	ʃ a ħ m	ʃ a ħ m	....
+ratcliffearabic:Classical Arabic > Arabic|26_fatn	FAT (ORGANIC SUBSTANCE)	Moroccan Arabic	ʃ a ħ m	ʃ - ħ m	.x..
+ratcliffearabic:Classical Arabic > Arabic|26_fatn	FAT (ORGANIC SUBSTANCE)	Nigerian (Chadian) Arabic	ʃ a ħ m	ʃ a h m	..x.
+ratcliffearabic:Classical Arabic > Arabic|26_fatn	FAT (ORGANIC SUBSTANCE)	Soukhne Arabic	ʃ a ħ m	ʃ a ħ m	....
+ratcliffearabic:Classical Arabic > Arabic|27_feather	FEATHER	Cairene (Egyptian) Arabic	r iː ʃ a t	r iː ʃ a -	....x
+ratcliffearabic:Classical Arabic > Arabic|27_feather	FEATHER	Damascene (Levantine) Arabic	r iː ʃ a t	r iː ʃ e -	...xx
+ratcliffearabic:Classical Arabic > Arabic|27_feather	FEATHER	Gulf Arabic	r iː ʃ a t	r iː ʃ a -	....x
+ratcliffearabic:Classical Arabic > Arabic|27_feather	FEATHER	Iraqi (Judeo-Iraqi) Arabic	r iː ʃ a t	r iː ʃ a -	....x
+ratcliffearabic:Classical Arabic > Arabic|27_feather	FEATHER	Maltese	r iː ʃ a t	r i ʃ a -	....x
+ratcliffearabic:Classical Arabic > Arabic|27_feather	FEATHER	Moroccan Arabic	r iː ʃ a t	r i ʃ a -	....x
+ratcliffearabic:Classical Arabic > Arabic|27_feather	FEATHER	Soukhne Arabic	r iː ʃ a t	r iː ʃ i -	...xx
+ratcliffearabic:Classical Arabic > Arabic|27_feather	FEATHER	Yemenite (Judeo-Yemeni) Arabic	r iː ʃ a t	r iː ʃ e h	...xx
+ratcliffearabic:Classical Arabic > Arabic|28_fire	FIRE	Aqra-Arbil (Judeo-Iraqi) Arabic	n aː r	n aː rˤ	..x
+ratcliffearabic:Classical Arabic > Arabic|28_fire	FIRE	Bukhari Arabic	n aː r	n aː r	...
+ratcliffearabic:Classical Arabic > Arabic|28_fire	FIRE	Cairene (Egyptian) Arabic	n aː r	n aː r	...
+ratcliffearabic:Classical Arabic > Arabic|28_fire	FIRE	Damascene (Levantine) Arabic	n aː r	n aː rˤ	..x
+ratcliffearabic:Classical Arabic > Arabic|28_fire	FIRE	Iraqi (Judeo-Iraqi) Arabic	n aː r	n aː r	...
+ratcliffearabic:Classical Arabic > Arabic|28_fire	FIRE	Ki-Nubi	n aː r	n a r	...
+ratcliffearabic:Classical Arabic > Arabic|28_fire	FIRE	Maltese	n aː r	n a r	...
+ratcliffearabic:Classical Arabic > Arabic|28_fire	FIRE	Nigerian (Chadian) Arabic	n aː r	n aː r	...
+ratcliffearabic:Classical Arabic > Arabic|28_fire	FIRE	Soukhne Arabic	n aː r	n aː rˤ	..x
+ratcliffearabic:Classical Arabic > Arabic|28_fire	FIRE	Yemenite (Judeo-Yemeni) Arabic	n aː r	n aː r	...
+ratcliffearabic:Classical Arabic > Arabic|29_fish	FISH	Aqra-Arbil (Judeo-Iraqi) Arabic	s a m a k	s a m a k	.....
+ratcliffearabic:Classical Arabic > Arabic|29_fish	FISH	Bukhari Arabic	s a m a k	s a m a k	.....
+ratcliffearabic:Classical Arabic > Arabic|29_fish	FISH	Cairene (Egyptian) Arabic	s a m a k	s a m a k	.....
+ratcliffearabic:Classical Arabic > Arabic|29_fish	FISH	Gulf Arabic	s a m a k	s i m a tʃ	.x..x
+ratcliffearabic:Classical Arabic > Arabic|29_fish	FISH	Ki-Nubi	s a m a k	s a m a ɡ	....x
+ratcliffearabic:Classical Arabic > Arabic|29_fish	FISH	Nigerian (Chadian) Arabic	s a m a k	s a m a k	.....
+ratcliffearabic:Classical Arabic > Arabic|29_fish	FISH	Soukhne Arabic	s a m a k	s a m a tʃ	....x
+ratcliffearabic:Classical Arabic > Arabic|2_ash	ASH	Aqra-Arbil (Judeo-Iraqi) Arabic	r a m aː d	rˤ a m aː d	x....
+ratcliffearabic:Classical Arabic > Arabic|2_ash	ASH	Bukhari Arabic	r a m aː d	r a mˤ a tː	..x.x
+ratcliffearabic:Classical Arabic > Arabic|2_ash	ASH	Cairene (Egyptian) Arabic	r a m aː d	r a m aː dˤ	....x
+ratcliffearabic:Classical Arabic > Arabic|2_ash	ASH	Cypriot Arabic	r a m aː d	r a m a d	.....
+ratcliffearabic:Classical Arabic > Arabic|2_ash	ASH	Damascene (Levantine) Arabic	r a m aː d	r a m aː d	.....
+ratcliffearabic:Classical Arabic > Arabic|2_ash	ASH	Gulf Arabic	r a m aː d	r a m a d	.....
+ratcliffearabic:Classical Arabic > Arabic|2_ash	ASH	Iraqi (Judeo-Iraqi) Arabic	r a m aː d	r u m aː d	.x...
+ratcliffearabic:Classical Arabic > Arabic|2_ash	ASH	Ki-Nubi	r a m aː d	r u m a n	.x..x
+ratcliffearabic:Classical Arabic > Arabic|2_ash	ASH	Maltese	r a m aː d	r - m iː d	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|2_ash	ASH	Moroccan Arabic	r a m aː d	rˤ - m a dˤ	xx..x
+ratcliffearabic:Classical Arabic > Arabic|30_fly	FLY (MOVE THROUGH AIR)	Aqra-Arbil (Judeo-Iraqi) Arabic	tˤ aː r a	tˤ y r -	.x.x
+ratcliffearabic:Classical Arabic > Arabic|30_fly	FLY (MOVE THROUGH AIR)	Cairene (Egyptian) Arabic	tˤ aː r a	tˤ aː rˤ -	..xx
+ratcliffearabic:Classical Arabic > Arabic|30_fly	FLY (MOVE THROUGH AIR)	Damascene (Levantine) Arabic	tˤ aː r a	tˤ aː r -	...x
+ratcliffearabic:Classical Arabic > Arabic|30_fly	FLY (MOVE THROUGH AIR)	Gulf Arabic	tˤ aː r a	tˤ aː r -	...x
+ratcliffearabic:Classical Arabic > Arabic|30_fly	FLY (MOVE THROUGH AIR)	Iraqi (Judeo-Iraqi) Arabic	tˤ aː r a	tˤ aː r -	...x
+ratcliffearabic:Classical Arabic > Arabic|30_fly	FLY (MOVE THROUGH AIR)	Maltese	tˤ aː r a	t a r -	x..x
+ratcliffearabic:Classical Arabic > Arabic|30_fly	FLY (MOVE THROUGH AIR)	Moroccan Arabic	tˤ aː r a	tˤ a r -	...x
+ratcliffearabic:Classical Arabic > Arabic|30_fly	FLY (MOVE THROUGH AIR)	Nigerian (Chadian) Arabic	tˤ aː r a	tˤ aː r -	...x
+ratcliffearabic:Classical Arabic > Arabic|30_fly	FLY (MOVE THROUGH AIR)	Soukhne Arabic	tˤ aː r a	tˤ aː r -	...x
+ratcliffearabic:Classical Arabic > Arabic|30_fly	FLY (MOVE THROUGH AIR)	Yemenite (Judeo-Yemeni) Arabic	tˤ aː r a	tˤ aː r -	...x
+ratcliffearabic:Classical Arabic > Arabic|31_foot	FOOT	Aqra-Arbil (Judeo-Iraqi) Arabic	r i dʒ l	- ə dʒ r	xx.x
+ratcliffearabic:Classical Arabic > Arabic|31_foot	FOOT	Bukhari Arabic	r i dʒ l	r i d l	..x.
+ratcliffearabic:Classical Arabic > Arabic|31_foot	FOOT	Cairene (Egyptian) Arabic	r i dʒ l	r i ɡ l	..x.
+ratcliffearabic:Classical Arabic > Arabic|31_foot	FOOT	Cypriot Arabic	r i dʒ l	- i ʒ r	x.xx
+ratcliffearabic:Classical Arabic > Arabic|31_foot	FOOT	Damascene (Levantine) Arabic	r i dʒ l	r ə dʒ l	.x..
+ratcliffearabic:Classical Arabic > Arabic|31_foot	FOOT	Gulf Arabic	r i dʒ l	r iː - l	..x.
+ratcliffearabic:Classical Arabic > Arabic|31_foot	FOOT	Iraqi (Judeo-Iraqi) Arabic	r i dʒ l	r i dʒ l	....
+ratcliffearabic:Classical Arabic > Arabic|31_foot	FOOT	Moroccan Arabic	r i dʒ l	r - ʒ l	.xx.
+ratcliffearabic:Classical Arabic > Arabic|31_foot	FOOT	Nigerian (Chadian) Arabic	r i dʒ l	r i dʒ l	....
+ratcliffearabic:Classical Arabic > Arabic|31_foot	FOOT	Soukhne Arabic	r i dʒ l	- i ts l	x.x.
+ratcliffearabic:Classical Arabic > Arabic|31_foot	FOOT	Yemenite (Judeo-Yemeni) Arabic	r i dʒ l	r i dʒ l	....
+ratcliffearabic:Classical Arabic > Arabic|32_full	FULL	Aqra-Arbil (Judeo-Iraqi) Arabic	m a l ʔ aː n	mː a l - a -	x..x.x
+ratcliffearabic:Classical Arabic > Arabic|32_full	FULL	Cairene (Egyptian) Arabic	m a l ʔ aː n	m a l j aː n	...x..
+ratcliffearabic:Classical Arabic > Arabic|32_full	FULL	Cypriot Arabic	m a l ʔ aː n	m p l - a n	.x.x..
+ratcliffearabic:Classical Arabic > Arabic|32_full	FULL	Damascene (Levantine) Arabic	m a l ʔ aː n	m a l - aː n	...x..
+ratcliffearabic:Classical Arabic > Arabic|32_full	FULL	Ki-Nubi	m a l ʔ aː n	m a l j a n	...x..
+ratcliffearabic:Classical Arabic > Arabic|32_full	FULL	Maltese	m a l ʔ aː n	m i l - i -	.x.xxx
+ratcliffearabic:Classical Arabic > Arabic|32_full	FULL	Nigerian (Chadian) Arabic	m a l ʔ aː n	m a l ʔ a n	......
+ratcliffearabic:Classical Arabic > Arabic|32_full	FULL	Soukhne Arabic	m a l ʔ aː n	m a l j aː n	...x..
+ratcliffearabic:Classical Arabic > Arabic|33_give	GIVE	Aqra-Arbil (Judeo-Iraqi) Arabic	ʔ a ʕ tˤ aː	ʕ a - tˤ a	x.x..
+ratcliffearabic:Classical Arabic > Arabic|33_give	GIVE	Cypriot Arabic	ʔ a ʕ tˤ aː	- - ʕ tˤ y	xx..x
+ratcliffearabic:Classical Arabic > Arabic|33_give	GIVE	Damascene (Levantine) Arabic	ʔ a ʕ tˤ aː	ʕ a - tˤ a	x.x..
+ratcliffearabic:Classical Arabic > Arabic|33_give	GIVE	Maltese	ʔ a ʕ tˤ aː	- - - t a	xxxx.
+ratcliffearabic:Classical Arabic > Arabic|33_give	GIVE	Moroccan Arabic	ʔ a ʕ tˤ aː	- - ʕ tˤ a	xx...
+ratcliffearabic:Classical Arabic > Arabic|33_give	GIVE	Nigerian (Chadian) Arabic	ʔ a ʕ tˤ aː	tˤ a - ʔ a	x.xx.
+ratcliffearabic:Classical Arabic > Arabic|34_goodadj	GOOD	Maltese	tˤ a jː i b	t a jː e b	x..x.
+ratcliffearabic:Classical Arabic > Arabic|34_goodadj	GOOD	Yemenite (Judeo-Yemeni) Arabic	tˤ a jː i b	tˤ a jː i b	.....
+ratcliffearabic:Classical Arabic > Arabic|35_green	GREEN	Aqra-Arbil (Judeo-Iraqi) Arabic	ʔ a x dˤ a r	- a x dˤ a r	x.....
+ratcliffearabic:Classical Arabic > Arabic|35_green	GREEN	Bukhari Arabic	ʔ a x dˤ a r	ʔ a x z a r	...x..
+ratcliffearabic:Classical Arabic > Arabic|35_green	GREEN	Cairene (Egyptian) Arabic	ʔ a x dˤ a r	ʔ a x dˤ a r	......
+ratcliffearabic:Classical Arabic > Arabic|35_green	GREEN	Cypriot Arabic	ʔ a x dˤ a r	- - x dˤ - r	xx..x.
+ratcliffearabic:Classical Arabic > Arabic|35_green	GREEN	Damascene (Levantine) Arabic	ʔ a x dˤ a r	ʔ a x dˤ a r	......
+ratcliffearabic:Classical Arabic > Arabic|35_green	GREEN	Gulf Arabic	ʔ a x dˤ a r	ʔ a x dˤ a r	......
+ratcliffearabic:Classical Arabic > Arabic|35_green	GREEN	Iraqi (Judeo-Iraqi) Arabic	ʔ a x dˤ a r	ʔ a x ðˤ a r	...x..
+ratcliffearabic:Classical Arabic > Arabic|35_green	GREEN	Maltese	ʔ a x dˤ a r	- a ħ d a r	x.xx..
+ratcliffearabic:Classical Arabic > Arabic|35_green	GREEN	Moroccan Arabic	ʔ a x dˤ a r	- - x dˤ e r	xx..x.
+ratcliffearabic:Classical Arabic > Arabic|35_green	GREEN	Nigerian (Chadian) Arabic	ʔ a x dˤ a r	- a x dˤ a r	x.....
+ratcliffearabic:Classical Arabic > Arabic|35_green	GREEN	Soukhne Arabic	ʔ a x dˤ a r	ʔ a x ðˤ a r	...x..
+ratcliffearabic:Classical Arabic > Arabic|35_green	GREEN	Yemenite (Judeo-Yemeni) Arabic	ʔ a x dˤ a r	ʔ a x ðˤ a r	...x..
+ratcliffearabic:Classical Arabic > Arabic|36_hair	HAIR	Cairene (Egyptian) Arabic	ʃ a ʕ r	ʃ a ʕ r	....
+ratcliffearabic:Classical Arabic > Arabic|36_hair	HAIR	Cypriot Arabic	ʃ a ʕ r	ʃ a x ʕ	..xx
+ratcliffearabic:Classical Arabic > Arabic|36_hair	HAIR	Damascene (Levantine) Arabic	ʃ a ʕ r	ʃ a ʕ r	....
+ratcliffearabic:Classical Arabic > Arabic|36_hair	HAIR	Gulf Arabic	ʃ a ʕ r	ʃ a ʕ r	....
+ratcliffearabic:Classical Arabic > Arabic|36_hair	HAIR	Iraqi (Judeo-Iraqi) Arabic	ʃ a ʕ r	ʃ a ʕ r	....
+ratcliffearabic:Classical Arabic > Arabic|36_hair	HAIR	Maltese	ʃ a ʕ r	ʃ a ʕ r	....
+ratcliffearabic:Classical Arabic > Arabic|36_hair	HAIR	Moroccan Arabic	ʃ a ʕ r	ʃ - ʕ r	.x..
+ratcliffearabic:Classical Arabic > Arabic|36_hair	HAIR	Nigerian (Chadian) Arabic	ʃ a ʕ r	ʃ i ʔ r	.xx.
+ratcliffearabic:Classical Arabic > Arabic|36_hair	HAIR	Soukhne Arabic	ʃ a ʕ r	ʃ a ʕ r	....
+ratcliffearabic:Classical Arabic > Arabic|36_hair	HAIR	Yemenite (Judeo-Yemeni) Arabic	ʃ a ʕ r	ʃ a ʕ r	....
+ratcliffearabic:Classical Arabic > Arabic|37_hand	HAND	Aqra-Arbil (Judeo-Iraqi) Arabic	j a d	- iː d	xx.
+ratcliffearabic:Classical Arabic > Arabic|37_hand	HAND	Bukhari Arabic	j a d	j a d	...
+ratcliffearabic:Classical Arabic > Arabic|37_hand	HAND	Cairene (Egyptian) Arabic	j a d	- iː d	xx.
+ratcliffearabic:Classical Arabic > Arabic|37_hand	HAND	Cypriot Arabic	j a d	- i t	xxx
+ratcliffearabic:Classical Arabic > Arabic|37_hand	HAND	Damascene (Levantine) Arabic	j a d	ʔ iː d	xx.
+ratcliffearabic:Classical Arabic > Arabic|37_hand	HAND	Gulf Arabic	j a d	j a d	...
+ratcliffearabic:Classical Arabic > Arabic|37_hand	HAND	Iraqi (Judeo-Iraqi) Arabic	j a d	ʔ iː d	xx.
+ratcliffearabic:Classical Arabic > Arabic|37_hand	HAND	Ki-Nubi	j a d	- i d	xx.
+ratcliffearabic:Classical Arabic > Arabic|37_hand	HAND	Maltese	j a d	- i d	xx.
+ratcliffearabic:Classical Arabic > Arabic|37_hand	HAND	Moroccan Arabic	j a d	- i dː	xxx
+ratcliffearabic:Classical Arabic > Arabic|37_hand	HAND	Nigerian (Chadian) Arabic	j a d	- iː d	xx.
+ratcliffearabic:Classical Arabic > Arabic|37_hand	HAND	Soukhne Arabic	j a d	- eː d	xx.
+ratcliffearabic:Classical Arabic > Arabic|37_hand	HAND	Yemenite (Judeo-Yemeni) Arabic	j a d	j a d	...
+ratcliffearabic:Classical Arabic > Arabic|38_head	HEAD	Aqra-Arbil (Judeo-Iraqi) Arabic	r a ʔ s	rˤ aː - s	x.x.
+ratcliffearabic:Classical Arabic > Arabic|38_head	HEAD	Bukhari Arabic	r a ʔ s	r aː - s	..x.
+ratcliffearabic:Classical Arabic > Arabic|38_head	HEAD	Cairene (Egyptian) Arabic	r a ʔ s	rˤ aː - s	x.x.
+ratcliffearabic:Classical Arabic > Arabic|38_head	HEAD	Damascene (Levantine) Arabic	r a ʔ s	r aː - s	..x.
+ratcliffearabic:Classical Arabic > Arabic|38_head	HEAD	Gulf Arabic	r a ʔ s	r aː - s	..x.
+ratcliffearabic:Classical Arabic > Arabic|38_head	HEAD	Iraqi (Judeo-Iraqi) Arabic	r a ʔ s	r aː - s	..x.
+ratcliffearabic:Classical Arabic > Arabic|38_head	HEAD	Ki-Nubi	r a ʔ s	r a - s	..x.
+ratcliffearabic:Classical Arabic > Arabic|38_head	HEAD	Maltese	r a ʔ s	r a - s	..x.
+ratcliffearabic:Classical Arabic > Arabic|38_head	HEAD	Moroccan Arabic	r a ʔ s	rˤ a - sˤ	x.xx
+ratcliffearabic:Classical Arabic > Arabic|38_head	HEAD	Nigerian (Chadian) Arabic	r a ʔ s	r aː - s	..x.
+ratcliffearabic:Classical Arabic > Arabic|38_head	HEAD	Soukhne Arabic	r a ʔ s	rˤ aː - s	x.x.
+ratcliffearabic:Classical Arabic > Arabic|38_head	HEAD	Yemenite (Judeo-Yemeni) Arabic	r a ʔ s	r a ʔ s	....
+ratcliffearabic:Classical Arabic > Arabic|39_hear	HEAR	Aqra-Arbil (Judeo-Iraqi) Arabic	s a m i ʕ a	s ə m ə ʕ -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|39_hear	HEAR	Bukhari Arabic	s a m i ʕ a	s a m a ʕ -	...x.x
+ratcliffearabic:Classical Arabic > Arabic|39_hear	HEAR	Cairene (Egyptian) Arabic	s a m i ʕ a	s i m i ʕ -	.x...x
+ratcliffearabic:Classical Arabic > Arabic|39_hear	HEAR	Cypriot Arabic	s a m i ʕ a	s - m - ʕ -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|39_hear	HEAR	Damascene (Levantine) Arabic	s a m i ʕ a	s ə m e ʕ -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|39_hear	HEAR	Gulf Arabic	s a m i ʕ a	s i m a ʕ -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|39_hear	HEAR	Iraqi (Judeo-Iraqi) Arabic	s a m i ʕ a	s i m a ʕ -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|39_hear	HEAR	Ki-Nubi	s a m i ʕ a	s - m a - -	.x.xxx
+ratcliffearabic:Classical Arabic > Arabic|39_hear	HEAR	Maltese	s a m i ʕ a	s a m a ʔ -	...xxx
+ratcliffearabic:Classical Arabic > Arabic|39_hear	HEAR	Moroccan Arabic	s a m i ʕ a	s - m e ʕ -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|39_hear	HEAR	Nigerian (Chadian) Arabic	s a m i ʕ a	s i m i - -	.x..xx
+ratcliffearabic:Classical Arabic > Arabic|39_hear	HEAR	Soukhne Arabic	s a m i ʕ a	s - m i ʕ -	.x...x
+ratcliffearabic:Classical Arabic > Arabic|39_hear	HEAR	Yemenite (Judeo-Yemeni) Arabic	s a m i ʕ a	s i m i ʕ -	.x...x
+ratcliffearabic:Classical Arabic > Arabic|40_heart	HEART	Bukhari Arabic	q a l b	q a l b	....
+ratcliffearabic:Classical Arabic > Arabic|40_heart	HEART	Cairene (Egyptian) Arabic	q a l b	ʔ a l b	x...
+ratcliffearabic:Classical Arabic > Arabic|40_heart	HEART	Cypriot Arabic	q a l b	k i l p	xx.x
+ratcliffearabic:Classical Arabic > Arabic|40_heart	HEART	Damascene (Levantine) Arabic	q a l b	ʔ a l b	x...
+ratcliffearabic:Classical Arabic > Arabic|40_heart	HEART	Gulf Arabic	q a l b	ɡ a l b	x...
+ratcliffearabic:Classical Arabic > Arabic|40_heart	HEART	Ki-Nubi	q a l b	ɡ e l b	xx..
+ratcliffearabic:Classical Arabic > Arabic|40_heart	HEART	Maltese	q a l b	ʔ a l b	x...
+ratcliffearabic:Classical Arabic > Arabic|40_heart	HEART	Moroccan Arabic	q a l b	q e l b	.x..
+ratcliffearabic:Classical Arabic > Arabic|40_heart	HEART	Nigerian (Chadian) Arabic	q a l b	ɡ a l b	x...
+ratcliffearabic:Classical Arabic > Arabic|40_heart	HEART	Soukhne Arabic	q a l b	k a lˤ b	x.x.
+ratcliffearabic:Classical Arabic > Arabic|40_heart	HEART	Yemenite (Judeo-Yemeni) Arabic	q a l b	ɡ a l b	x...
+ratcliffearabic:Classical Arabic > Arabic|41_horn	HORN (ANATOMY)	Cairene (Egyptian) Arabic	q a r n	ʔ a r n	x...
+ratcliffearabic:Classical Arabic > Arabic|41_horn	HORN (ANATOMY)	Cypriot Arabic	q a r n	k o r n	xx..
+ratcliffearabic:Classical Arabic > Arabic|41_horn	HORN (ANATOMY)	Damascene (Levantine) Arabic	q a r n	ʔ a r n	x...
+ratcliffearabic:Classical Arabic > Arabic|41_horn	HORN (ANATOMY)	Gulf Arabic	q a r n	ɡ a r n	x...
+ratcliffearabic:Classical Arabic > Arabic|41_horn	HORN (ANATOMY)	Iraqi (Judeo-Iraqi) Arabic	q a r n	ɡ i r n	xx..
+ratcliffearabic:Classical Arabic > Arabic|41_horn	HORN (ANATOMY)	Ki-Nubi	q a r n	ɡ u r n	xx..
+ratcliffearabic:Classical Arabic > Arabic|41_horn	HORN (ANATOMY)	Maltese	q a r n	ʔ a r n	x...
+ratcliffearabic:Classical Arabic > Arabic|41_horn	HORN (ANATOMY)	Moroccan Arabic	q a r n	q e rˤ n	.xx.
+ratcliffearabic:Classical Arabic > Arabic|41_horn	HORN (ANATOMY)	Nigerian (Chadian) Arabic	q a r n	ɡ a r n	x...
+ratcliffearabic:Classical Arabic > Arabic|41_horn	HORN (ANATOMY)	Soukhne Arabic	q a r n	ɡ i r n	xx..
+ratcliffearabic:Classical Arabic > Arabic|41_horn	HORN (ANATOMY)	Yemenite (Judeo-Yemeni) Arabic	q a r n	ɡ a r n	x...
+ratcliffearabic:Classical Arabic > Arabic|42_i	I	Aqra-Arbil (Judeo-Iraqi) Arabic	ʔ a n aː	- a n a	x...
+ratcliffearabic:Classical Arabic > Arabic|42_i	I	Bukhari Arabic	ʔ a n aː	- a n aː	x...
+ratcliffearabic:Classical Arabic > Arabic|42_i	I	Cairene (Egyptian) Arabic	ʔ a n aː	- a n a	x...
+ratcliffearabic:Classical Arabic > Arabic|42_i	I	Cypriot Arabic	ʔ a n aː	ʔ - n a	.x..
+ratcliffearabic:Classical Arabic > Arabic|42_i	I	Damascene (Levantine) Arabic	ʔ a n aː	ʔ a n a	....
+ratcliffearabic:Classical Arabic > Arabic|42_i	I	Gulf Arabic	ʔ a n aː	- a n a	x...
+ratcliffearabic:Classical Arabic > Arabic|42_i	I	Iraqi (Judeo-Iraqi) Arabic	ʔ a n aː	ʔ aː n i	...x
+ratcliffearabic:Classical Arabic > Arabic|42_i	I	Ki-Nubi	ʔ a n aː	ʔ a n a	....
+ratcliffearabic:Classical Arabic > Arabic|42_i	I	Maltese	ʔ a n aː	j iː n -	xx.x
+ratcliffearabic:Classical Arabic > Arabic|42_i	I	Moroccan Arabic	ʔ a n aː	- a n a	x...
+ratcliffearabic:Classical Arabic > Arabic|42_i	I	Nigerian (Chadian) Arabic	ʔ a n aː	- a n a	x...
+ratcliffearabic:Classical Arabic > Arabic|42_i	I	Soukhne Arabic	ʔ a n aː	- a n a	x...
+ratcliffearabic:Classical Arabic > Arabic|42_i	I	Yemenite (Judeo-Yemeni) Arabic	ʔ a n aː	ʔ a n a	....
+ratcliffearabic:Classical Arabic > Arabic|43_kill	KILL	Aqra-Arbil (Judeo-Iraqi) Arabic	q a t a l a	q a t a l -	.....x
+ratcliffearabic:Classical Arabic > Arabic|43_kill	KILL	Bukhari Arabic	q a t a l a	q a tˤ a l -	..x..x
+ratcliffearabic:Classical Arabic > Arabic|43_kill	KILL	Cypriot Arabic	q a t a l a	q - t - l -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|43_kill	KILL	Damascene (Levantine) Arabic	q a t a l a	ʔ a t a l -	x....x
+ratcliffearabic:Classical Arabic > Arabic|43_kill	KILL	Gulf Arabic	q a t a l a	ɡ i t a l -	xx...x
+ratcliffearabic:Classical Arabic > Arabic|43_kill	KILL	Iraqi (Judeo-Iraqi) Arabic	q a t a l a	k i t a l -	xx...x
+ratcliffearabic:Classical Arabic > Arabic|43_kill	KILL	Ki-Nubi	q a t a l a	k a t u l -	x..x.x
+ratcliffearabic:Classical Arabic > Arabic|43_kill	KILL	Maltese	q a t a l a	ʔ a t e l -	x..x.x
+ratcliffearabic:Classical Arabic > Arabic|43_kill	KILL	Moroccan Arabic	q a t a l a	q - t e l -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|43_kill	KILL	Nigerian (Chadian) Arabic	q a t a l a	k a t a l -	x....x
+ratcliffearabic:Classical Arabic > Arabic|43_kill	KILL	Soukhne Arabic	q a t a l a	k a t a l -	x....x
+ratcliffearabic:Classical Arabic > Arabic|43_kill	KILL	Yemenite (Judeo-Yemeni) Arabic	q a t a l a	ɡ a t a l -	x....x
+ratcliffearabic:Classical Arabic > Arabic|44_knee	KNEE	Cairene (Egyptian) Arabic	r u k b a t	r u k b a -	.....x
+ratcliffearabic:Classical Arabic > Arabic|44_knee	KNEE	Damascene (Levantine) Arabic	r u k b a t	r ə k b e -	.x..xx
+ratcliffearabic:Classical Arabic > Arabic|44_knee	KNEE	Gulf Arabic	r u k b a t	r i k b a -	.x...x
+ratcliffearabic:Classical Arabic > Arabic|44_knee	KNEE	Iraqi (Judeo-Iraqi) Arabic	r u k b a t	r u k b a -	.....x
+ratcliffearabic:Classical Arabic > Arabic|44_knee	KNEE	Ki-Nubi	r u k b a t	r u k b a -	.....x
+ratcliffearabic:Classical Arabic > Arabic|44_knee	KNEE	Maltese	r u k b a t	r - k bː a -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|44_knee	KNEE	Moroccan Arabic	r u k b a t	r o k b a -	.x...x
+ratcliffearabic:Classical Arabic > Arabic|44_knee	KNEE	Nigerian (Chadian) Arabic	r u k b a t	r u k b a -	.....x
+ratcliffearabic:Classical Arabic > Arabic|44_knee	KNEE	Soukhne Arabic	r u k b a t	rˤ u tʃ b i -	x.x.xx
+ratcliffearabic:Classical Arabic > Arabic|44_knee	KNEE	Yemenite (Judeo-Yemeni) Arabic	r u k b a t	r u k b i h	....xx
+ratcliffearabic:Classical Arabic > Arabic|45_know	KNOW (SOMETHING)	Aqra-Arbil (Judeo-Iraqi) Arabic	ʕ a r a f a	ʕ ə r ə f -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|45_know	KNOW (SOMETHING)	Cairene (Egyptian) Arabic	ʕ a r a f a	ʕ i r i f -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|45_know	KNOW (SOMETHING)	Cypriot Arabic	ʕ a r a f a	ʕ - r - f -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|45_know	KNOW (SOMETHING)	Damascene (Levantine) Arabic	ʕ a r a f a	ʕ ə r e f -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|45_know	KNOW (SOMETHING)	Gulf Arabic	ʕ a r a f a	ʕ a r a f -	.....x
+ratcliffearabic:Classical Arabic > Arabic|45_know	KNOW (SOMETHING)	Iraqi (Judeo-Iraqi) Arabic	ʕ a r a f a	ʕ i r a f -	.x...x
+ratcliffearabic:Classical Arabic > Arabic|45_know	KNOW (SOMETHING)	Ki-Nubi	ʕ a r a f a	ʔ a r u f u	x..x.x
+ratcliffearabic:Classical Arabic > Arabic|45_know	KNOW (SOMETHING)	Maltese	ʕ a r a f a	j a - - f -	x.xx.x
+ratcliffearabic:Classical Arabic > Arabic|45_know	KNOW (SOMETHING)	Moroccan Arabic	ʕ a r a f a	ʕ - rˤ e f -	.xxx.x
+ratcliffearabic:Classical Arabic > Arabic|45_know	KNOW (SOMETHING)	Nigerian (Chadian) Arabic	ʕ a r a f a	ʕ i r i f -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|45_know	KNOW (SOMETHING)	Soukhne Arabic	ʕ a r a f a	ʕ a rˤ a f -	..x..x
+ratcliffearabic:Classical Arabic > Arabic|46_leaf	LEAF	Aqra-Arbil (Judeo-Iraqi) Arabic	w a r a q a t	w a r a q a -	......x
+ratcliffearabic:Classical Arabic > Arabic|46_leaf	LEAF	Bukhari Arabic	w a r a q a t	v a r a q - -	x....xx
+ratcliffearabic:Classical Arabic > Arabic|46_leaf	LEAF	Cairene (Egyptian) Arabic	w a r a q a t	w a r - ʔ a -	...xx.x
+ratcliffearabic:Classical Arabic > Arabic|46_leaf	LEAF	Damascene (Levantine) Arabic	w a r a q a t	w a r a ʔ a -	....x.x
+ratcliffearabic:Classical Arabic > Arabic|46_leaf	LEAF	Gulf Arabic	w a r a q a t	w - r i ɡ a -	.x.xx.x
+ratcliffearabic:Classical Arabic > Arabic|46_leaf	LEAF	Iraqi (Judeo-Iraqi) Arabic	w a r a q a t	w a r - ɡ a -	...xx.x
+ratcliffearabic:Classical Arabic > Arabic|46_leaf	LEAF	Maltese	w a r a q a t	w e r - ʔ a -	.x.xx.x
+ratcliffearabic:Classical Arabic > Arabic|46_leaf	LEAF	Moroccan Arabic	w a r a q a t	w e r - q a -	.x.x..x
+ratcliffearabic:Classical Arabic > Arabic|46_leaf	LEAF	Nigerian (Chadian) Arabic	w a r a q a t	w a r a ɡ a -	....x.x
+ratcliffearabic:Classical Arabic > Arabic|46_leaf	LEAF	Soukhne Arabic	w a r a q a t	w a r a k a -	....x.x
+ratcliffearabic:Classical Arabic > Arabic|46_leaf	LEAF	Yemenite (Judeo-Yemeni) Arabic	w a r a q a t	w a r a ɡ i h	....xxx
+ratcliffearabic:Classical Arabic > Arabic|47_lie	LIE (REST)	Nigerian (Chadian) Arabic	r a q a d a	r a ɡ a d -	..x..x
+ratcliffearabic:Classical Arabic > Arabic|47_lie	LIE (REST)	Yemenite (Judeo-Yemeni) Arabic	r a q a d a	r a ɡ a d -	..x..x
+ratcliffearabic:Classical Arabic > Arabic|48_liver	LIVER	Bukhari Arabic	k a b i d	k a b - d	...x.
+ratcliffearabic:Classical Arabic > Arabic|48_liver	LIVER	Cairene (Egyptian) Arabic	k a b i d	k i b - d	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|48_liver	LIVER	Damascene (Levantine) Arabic	k a b i d	k ə b ə d	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|48_liver	LIVER	Gulf Arabic	k a b i d	tʃ i b - d	xx.x.
+ratcliffearabic:Classical Arabic > Arabic|48_liver	LIVER	Iraqi (Judeo-Iraqi) Arabic	k a b i d	k a b - d	...x.
+ratcliffearabic:Classical Arabic > Arabic|48_liver	LIVER	Ki-Nubi	k a b i d	k oː b - d	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|48_liver	LIVER	Moroccan Arabic	k a b i d	k e b - d	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|48_liver	LIVER	Nigerian (Chadian) Arabic	k a b i d	k i b - d	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|48_liver	LIVER	Yemenite (Judeo-Yemeni) Arabic	k a b i d	k a b - d	...x.
+ratcliffearabic:Classical Arabic > Arabic|49_long	LONG	Aqra-Arbil (Judeo-Iraqi) Arabic	tˤ a w iː l	tˤ - w - l	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|49_long	LONG	Bukhari Arabic	tˤ a w iː l	t a v iː l	x.x..
+ratcliffearabic:Classical Arabic > Arabic|49_long	LONG	Cairene (Egyptian) Arabic	tˤ a w iː l	tˤ a w iː l	.....
+ratcliffearabic:Classical Arabic > Arabic|49_long	LONG	Cypriot Arabic	tˤ a w iː l	tˤ - w - l	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|49_long	LONG	Damascene (Levantine) Arabic	tˤ a w iː l	tˤ a w iː l	.....
+ratcliffearabic:Classical Arabic > Arabic|49_long	LONG	Gulf Arabic	tˤ a w iː l	tˤ a w iː l	.....
+ratcliffearabic:Classical Arabic > Arabic|49_long	LONG	Iraqi (Judeo-Iraqi) Arabic	tˤ a w iː l	tˤ u w iː l	.x...
+ratcliffearabic:Classical Arabic > Arabic|49_long	LONG	Ki-Nubi	tˤ a w iː l	t o w i l	xx...
+ratcliffearabic:Classical Arabic > Arabic|49_long	LONG	Maltese	tˤ a w iː l	t - w i l	xx...
+ratcliffearabic:Classical Arabic > Arabic|49_long	LONG	Moroccan Arabic	tˤ a w iː l	tˤ - w i l	.x...
+ratcliffearabic:Classical Arabic > Arabic|49_long	LONG	Nigerian (Chadian) Arabic	tˤ a w iː l	tˤ a w i l	.....
+ratcliffearabic:Classical Arabic > Arabic|49_long	LONG	Soukhne Arabic	tˤ a w iː l	tˤ a w iː l	.....
+ratcliffearabic:Classical Arabic > Arabic|49_long	LONG	Yemenite (Judeo-Yemeni) Arabic	tˤ a w iː l	tˤ a w iː l	.....
+ratcliffearabic:Classical Arabic > Arabic|4_belly	BELLY	Bukhari Arabic	b a tˤ n	b a t n	..x.
+ratcliffearabic:Classical Arabic > Arabic|4_belly	BELLY	Cairene (Egyptian) Arabic	b a tˤ n	b a tˤ n	....
+ratcliffearabic:Classical Arabic > Arabic|4_belly	BELLY	Cypriot Arabic	b a tˤ n	p a tˤ n	x...
+ratcliffearabic:Classical Arabic > Arabic|4_belly	BELLY	Damascene (Levantine) Arabic	b a tˤ n	b a tˤ n	....
+ratcliffearabic:Classical Arabic > Arabic|4_belly	BELLY	Gulf Arabic	b a tˤ n	b a tˤ n	....
+ratcliffearabic:Classical Arabic > Arabic|4_belly	BELLY	Iraqi (Judeo-Iraqi) Arabic	b a tˤ n	b a tˤ n	....
+ratcliffearabic:Classical Arabic > Arabic|4_belly	BELLY	Ki-Nubi	b a tˤ n	b a t n	..x.
+ratcliffearabic:Classical Arabic > Arabic|4_belly	BELLY	Soukhne Arabic	b a tˤ n	b a tˤ n	....
+ratcliffearabic:Classical Arabic > Arabic|4_belly	BELLY	Yemenite (Judeo-Yemeni) Arabic	b a tˤ n	b a tˤ n	....
+ratcliffearabic:Classical Arabic > Arabic|50_louse	LOUSE	Bukhari Arabic	q a m l a h	q a m l a -	.....x
+ratcliffearabic:Classical Arabic > Arabic|50_louse	LOUSE	Cairene (Egyptian) Arabic	q a m l a h	ʔ a m l a -	x....x
+ratcliffearabic:Classical Arabic > Arabic|50_louse	LOUSE	Cypriot Arabic	q a m l a h	q - m l - -	.x..xx
+ratcliffearabic:Classical Arabic > Arabic|50_louse	LOUSE	Damascene (Levantine) Arabic	q a m l a h	ʔ a m l e -	x...xx
+ratcliffearabic:Classical Arabic > Arabic|50_louse	LOUSE	Gulf Arabic	q a m l a h	ɡ a m l a -	x....x
+ratcliffearabic:Classical Arabic > Arabic|50_louse	LOUSE	Iraqi (Judeo-Iraqi) Arabic	q a m l a h	ɡ a m lˤ a -	x..x.x
+ratcliffearabic:Classical Arabic > Arabic|50_louse	LOUSE	Maltese	q a m l a h	ʔ a m l a -	x....x
+ratcliffearabic:Classical Arabic > Arabic|50_louse	LOUSE	Moroccan Arabic	q a m l a h	q e m l a -	.x...x
+ratcliffearabic:Classical Arabic > Arabic|50_louse	LOUSE	Soukhne Arabic	q a m l a h	k a m lˤ - -	x..xxx
+ratcliffearabic:Classical Arabic > Arabic|50_louse	LOUSE	Yemenite (Judeo-Yemeni) Arabic	q a m l a h	ɡ a m l e h	x...x.
+ratcliffearabic:Classical Arabic > Arabic|51_man	MAN	Aqra-Arbil (Judeo-Iraqi) Arabic	r a dʒ u l	r a dʒ ə l	...x.
+ratcliffearabic:Classical Arabic > Arabic|51_man	MAN	Cairene (Egyptian) Arabic	r a dʒ u l	rˤ aː ɡ i l	x.xx.
+ratcliffearabic:Classical Arabic > Arabic|51_man	MAN	Damascene (Levantine) Arabic	r a dʒ u l	r ə dʒː aː l	.xxx.
+ratcliffearabic:Classical Arabic > Arabic|51_man	MAN	Gulf Arabic	r a dʒ u l	r a jː a l	..xx.
+ratcliffearabic:Classical Arabic > Arabic|51_man	MAN	Iraqi (Judeo-Iraqi) Arabic	r a dʒ u l	r i dʒː aː l	.xxx.
+ratcliffearabic:Classical Arabic > Arabic|51_man	MAN	Ki-Nubi	r a dʒ u l	r a ɡ i -	..xxx
+ratcliffearabic:Classical Arabic > Arabic|51_man	MAN	Maltese	r a dʒ u l	r a dʒ e l	...x.
+ratcliffearabic:Classical Arabic > Arabic|51_man	MAN	Moroccan Arabic	r a dʒ u l	rˤ a ʒ e l	x.xx.
+ratcliffearabic:Classical Arabic > Arabic|51_man	MAN	Nigerian (Chadian) Arabic	r a dʒ u l	r a dʒ i l	...x.
+ratcliffearabic:Classical Arabic > Arabic|51_man	MAN	Yemenite (Judeo-Yemeni) Arabic	r a dʒ u l	r a dʒː aː l	..xx.
+ratcliffearabic:Classical Arabic > Arabic|52_many	MANY	Aqra-Arbil (Judeo-Iraqi) Arabic	k a θ iː r	k ə t iː r	.xx..
+ratcliffearabic:Classical Arabic > Arabic|52_many	MANY	Bukhari Arabic	k a θ iː r	k a ʔ iː r	..x..
+ratcliffearabic:Classical Arabic > Arabic|52_many	MANY	Cairene (Egyptian) Arabic	k a θ iː r	k i t iː r	.xx..
+ratcliffearabic:Classical Arabic > Arabic|52_many	MANY	Cypriot Arabic	k a θ iː r	x - t i r	xxx..
+ratcliffearabic:Classical Arabic > Arabic|52_many	MANY	Damascene (Levantine) Arabic	k a θ iː r	k - t iː r	.xx..
+ratcliffearabic:Classical Arabic > Arabic|52_many	MANY	Nigerian (Chadian) Arabic	k a θ iː r	k a t iː r	..x..
+ratcliffearabic:Classical Arabic > Arabic|52_many	MANY	Soukhne Arabic	k a θ iː r	tʃ - θ iː r	xx...
+ratcliffearabic:Classical Arabic > Arabic|52_many	MANY	Yemenite (Judeo-Yemeni) Arabic	k a θ iː r	k a θ iː r	.....
+ratcliffearabic:Classical Arabic > Arabic|53_meat	MEAT	Aqra-Arbil (Judeo-Iraqi) Arabic	l a ħ m	l a ħ m	....
+ratcliffearabic:Classical Arabic > Arabic|53_meat	MEAT	Bukhari Arabic	l a ħ m	l æ ħ m	.x..
+ratcliffearabic:Classical Arabic > Arabic|53_meat	MEAT	Cairene (Egyptian) Arabic	l a ħ m	l a ħ m	....
+ratcliffearabic:Classical Arabic > Arabic|53_meat	MEAT	Cypriot Arabic	l a ħ m	l - ħ m	.x..
+ratcliffearabic:Classical Arabic > Arabic|53_meat	MEAT	Gulf Arabic	l a ħ m	l a ħ m	....
+ratcliffearabic:Classical Arabic > Arabic|53_meat	MEAT	Iraqi (Judeo-Iraqi) Arabic	l a ħ m	l a ħ m	....
+ratcliffearabic:Classical Arabic > Arabic|53_meat	MEAT	Ki-Nubi	l a ħ m	l aː - m	..x.
+ratcliffearabic:Classical Arabic > Arabic|53_meat	MEAT	Maltese	l a ħ m	l a ħ m	....
+ratcliffearabic:Classical Arabic > Arabic|53_meat	MEAT	Moroccan Arabic	l a ħ m	l - ħ m	.x..
+ratcliffearabic:Classical Arabic > Arabic|53_meat	MEAT	Nigerian (Chadian) Arabic	l a ħ m	l aː - m	..x.
+ratcliffearabic:Classical Arabic > Arabic|53_meat	MEAT	Soukhne Arabic	l a ħ m	l a ħ m	....
+ratcliffearabic:Classical Arabic > Arabic|53_meat	MEAT	Yemenite (Judeo-Yemeni) Arabic	l a ħ m	l a ħ m	....
+ratcliffearabic:Classical Arabic > Arabic|54_moon	MOON	Bukhari Arabic	q a m a r	q a m a r	.....
+ratcliffearabic:Classical Arabic > Arabic|54_moon	MOON	Cairene (Egyptian) Arabic	q a m a r	ʔ a m a r	x....
+ratcliffearabic:Classical Arabic > Arabic|54_moon	MOON	Cypriot Arabic	q a m a r	q - m - r	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|54_moon	MOON	Damascene (Levantine) Arabic	q a m a r	ʔ a m a rˤ	x...x
+ratcliffearabic:Classical Arabic > Arabic|54_moon	MOON	Gulf Arabic	q a m a r	ɡ a m a r	x....
+ratcliffearabic:Classical Arabic > Arabic|54_moon	MOON	Iraqi (Judeo-Iraqi) Arabic	q a m a r	ɡ u m a r	xx...
+ratcliffearabic:Classical Arabic > Arabic|54_moon	MOON	Maltese	q a m a r	ʔ a m a r	x....
+ratcliffearabic:Classical Arabic > Arabic|54_moon	MOON	Moroccan Arabic	q a m a r	ɡ a m - rˤ	x..xx
+ratcliffearabic:Classical Arabic > Arabic|54_moon	MOON	Nigerian (Chadian) Arabic	q a m a r	ɡ a m a r	x....
+ratcliffearabic:Classical Arabic > Arabic|54_moon	MOON	Soukhne Arabic	q a m a r	k a m a rˤ	x...x
+ratcliffearabic:Classical Arabic > Arabic|54_moon	MOON	Yemenite (Judeo-Yemeni) Arabic	q a m a r	ɡ a m a r	x....
+ratcliffearabic:Classical Arabic > Arabic|55_mountain	MOUNTAIN	Aqra-Arbil (Judeo-Iraqi) Arabic	dʒ a b a l	dʒ a b a l	.....
+ratcliffearabic:Classical Arabic > Arabic|55_mountain	MOUNTAIN	Bukhari Arabic	dʒ a b a l	ʒ a b a l	x....
+ratcliffearabic:Classical Arabic > Arabic|55_mountain	MOUNTAIN	Cairene (Egyptian) Arabic	dʒ a b a l	ɡ a b a l	x....
+ratcliffearabic:Classical Arabic > Arabic|55_mountain	MOUNTAIN	Cypriot Arabic	dʒ a b a l	ʒ i p e l	xxxx.
+ratcliffearabic:Classical Arabic > Arabic|55_mountain	MOUNTAIN	Damascene (Levantine) Arabic	dʒ a b a l	dʒ a b a l	.....
+ratcliffearabic:Classical Arabic > Arabic|55_mountain	MOUNTAIN	Gulf Arabic	dʒ a b a l	dʒ i b a l	.x...
+ratcliffearabic:Classical Arabic > Arabic|55_mountain	MOUNTAIN	Iraqi (Judeo-Iraqi) Arabic	dʒ a b a l	dʒ i b a l	.x...
+ratcliffearabic:Classical Arabic > Arabic|55_mountain	MOUNTAIN	Ki-Nubi	dʒ a b a l	dʒ e b e l	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|55_mountain	MOUNTAIN	Moroccan Arabic	dʒ a b a l	ʒ - b e l	xx.x.
+ratcliffearabic:Classical Arabic > Arabic|55_mountain	MOUNTAIN	Soukhne Arabic	dʒ a b a l	ts a b a l	x....
+ratcliffearabic:Classical Arabic > Arabic|55_mountain	MOUNTAIN	Yemenite (Judeo-Yemeni) Arabic	dʒ a b a l	dʒ a b a l	.....
+ratcliffearabic:Classical Arabic > Arabic|56_mouth	MOUTH	Moroccan Arabic	f a m	f o mː	.xx
+ratcliffearabic:Classical Arabic > Arabic|56_mouth	MOUTH	Yemenite (Judeo-Yemeni) Arabic	f a m	f u m	.x.
+ratcliffearabic:Classical Arabic > Arabic|57_name	NAME	Aqra-Arbil (Judeo-Iraqi) Arabic	i s m	ə s m	x..
+ratcliffearabic:Classical Arabic > Arabic|57_name	NAME	Bukhari Arabic	i s m	i s m	...
+ratcliffearabic:Classical Arabic > Arabic|57_name	NAME	Cairene (Egyptian) Arabic	i s m	i s m	...
+ratcliffearabic:Classical Arabic > Arabic|57_name	NAME	Cypriot Arabic	i s m	ʔ s m	x..
+ratcliffearabic:Classical Arabic > Arabic|57_name	NAME	Damascene (Levantine) Arabic	i s m	ə s m	x..
+ratcliffearabic:Classical Arabic > Arabic|57_name	NAME	Gulf Arabic	i s m	i s m	...
+ratcliffearabic:Classical Arabic > Arabic|57_name	NAME	Iraqi (Judeo-Iraqi) Arabic	i s m	i s m	...
+ratcliffearabic:Classical Arabic > Arabic|57_name	NAME	Ki-Nubi	i s m	a s m	x..
+ratcliffearabic:Classical Arabic > Arabic|57_name	NAME	Maltese	i s m	i s m	...
+ratcliffearabic:Classical Arabic > Arabic|57_name	NAME	Moroccan Arabic	i s m	- s m	x..
+ratcliffearabic:Classical Arabic > Arabic|57_name	NAME	Nigerian (Chadian) Arabic	i s m	i s m	...
+ratcliffearabic:Classical Arabic > Arabic|57_name	NAME	Soukhne Arabic	i s m	i s m	...
+ratcliffearabic:Classical Arabic > Arabic|57_name	NAME	Yemenite (Judeo-Yemeni) Arabic	i s m	i s m	...
+ratcliffearabic:Classical Arabic > Arabic|58_neck	NECK	Maltese	ʕ u n q	ʕ o n ʔ	.x.x
+ratcliffearabic:Classical Arabic > Arabic|58_neck	NECK	Moroccan Arabic	ʕ u n q	ʕ e n q	.x..
+ratcliffearabic:Classical Arabic > Arabic|59_new	NEW	Aqra-Arbil (Judeo-Iraqi) Arabic	dʒ a d iː d	dʒ ə d iː d	.x...
+ratcliffearabic:Classical Arabic > Arabic|59_new	NEW	Bukhari Arabic	dʒ a d iː d	d a d iː d	x....
+ratcliffearabic:Classical Arabic > Arabic|59_new	NEW	Cairene (Egyptian) Arabic	dʒ a d iː d	ɡ i d iː d	xx...
+ratcliffearabic:Classical Arabic > Arabic|59_new	NEW	Cypriot Arabic	dʒ a d iː d	ʒ - t i d	xxx..
+ratcliffearabic:Classical Arabic > Arabic|59_new	NEW	Damascene (Levantine) Arabic	dʒ a d iː d	dʒ - d iː d	.x...
+ratcliffearabic:Classical Arabic > Arabic|59_new	NEW	Gulf Arabic	dʒ a d iː d	dʒ a d i d	.....
+ratcliffearabic:Classical Arabic > Arabic|59_new	NEW	Iraqi (Judeo-Iraqi) Arabic	dʒ a d iː d	dʒ i d iː d	.x...
+ratcliffearabic:Classical Arabic > Arabic|59_new	NEW	Ki-Nubi	dʒ a d iː d	dʒ e d i d	.x...
+ratcliffearabic:Classical Arabic > Arabic|59_new	NEW	Maltese	dʒ a d iː d	dʒ - d i d	.x...
+ratcliffearabic:Classical Arabic > Arabic|59_new	NEW	Moroccan Arabic	dʒ a d iː d	ʒ - d i d	xx...
+ratcliffearabic:Classical Arabic > Arabic|59_new	NEW	Nigerian (Chadian) Arabic	dʒ a d iː d	dʒ a d iː d	.....
+ratcliffearabic:Classical Arabic > Arabic|59_new	NEW	Soukhne Arabic	dʒ a d iː d	ts a d iː d	x....
+ratcliffearabic:Classical Arabic > Arabic|59_new	NEW	Yemenite (Judeo-Yemeni) Arabic	dʒ a d iː d	dʒ a d iː d	.....
+ratcliffearabic:Classical Arabic > Arabic|5_big	BIG	Aqra-Arbil (Judeo-Iraqi) Arabic	k a b iː r	ɡ ə b iː r	xx...
+ratcliffearabic:Classical Arabic > Arabic|5_big	BIG	Bukhari Arabic	k a b iː r	k a b iː r	.....
+ratcliffearabic:Classical Arabic > Arabic|5_big	BIG	Cairene (Egyptian) Arabic	k a b iː r	k i b iː r	.x...
+ratcliffearabic:Classical Arabic > Arabic|5_big	BIG	Cypriot Arabic	k a b iː r	k - b - r	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|5_big	BIG	Damascene (Levantine) Arabic	k a b iː r	k - b iː r	.x...
+ratcliffearabic:Classical Arabic > Arabic|5_big	BIG	Iraqi (Judeo-Iraqi) Arabic	k a b iː r	tʃ - b iː r	xx...
+ratcliffearabic:Classical Arabic > Arabic|5_big	BIG	Ki-Nubi	k a b iː r	k - b i r	.x...
+ratcliffearabic:Classical Arabic > Arabic|5_big	BIG	Maltese	k a b iː r	k i b i r	.x...
+ratcliffearabic:Classical Arabic > Arabic|5_big	BIG	Moroccan Arabic	k a b iː r	k - b i r	.x...
+ratcliffearabic:Classical Arabic > Arabic|5_big	BIG	Nigerian (Chadian) Arabic	k a b iː r	k a b iː r	.....
+ratcliffearabic:Classical Arabic > Arabic|5_big	BIG	Soukhne Arabic	k a b iː r	tʃ a b iː r	x....
+ratcliffearabic:Classical Arabic > Arabic|5_big	BIG	Yemenite (Judeo-Yemeni) Arabic	k a b iː r	k a b iː r	.....
+ratcliffearabic:Classical Arabic > Arabic|60_night	NIGHT	Aqra-Arbil (Judeo-Iraqi) Arabic	l ai̯ l a h	l a l - -	.x.xx
+ratcliffearabic:Classical Arabic > Arabic|60_night	NIGHT	Bukhari Arabic	l ai̯ l a h	l ai̯ l - -	...xx
+ratcliffearabic:Classical Arabic > Arabic|60_night	NIGHT	Cairene (Egyptian) Arabic	l ai̯ l a h	l eː l a -	.x..x
+ratcliffearabic:Classical Arabic > Arabic|60_night	NIGHT	Cypriot Arabic	l ai̯ l a h	l y l - -	.x.xx
+ratcliffearabic:Classical Arabic > Arabic|60_night	NIGHT	Damascene (Levantine) Arabic	l ai̯ l a h	l eː l e -	.x.xx
+ratcliffearabic:Classical Arabic > Arabic|60_night	NIGHT	Gulf Arabic	l ai̯ l a h	l eː l - -	.x.xx
+ratcliffearabic:Classical Arabic > Arabic|60_night	NIGHT	Iraqi (Judeo-Iraqi) Arabic	l ai̯ l a h	l eː l a -	.x..x
+ratcliffearabic:Classical Arabic > Arabic|60_night	NIGHT	Maltese	l ai̯ l a h	l e l - -	.x.xx
+ratcliffearabic:Classical Arabic > Arabic|60_night	NIGHT	Moroccan Arabic	l ai̯ l a h	l i l a -	.x..x
+ratcliffearabic:Classical Arabic > Arabic|60_night	NIGHT	Nigerian (Chadian) Arabic	l ai̯ l a h	l eː l e -	.x.xx
+ratcliffearabic:Classical Arabic > Arabic|60_night	NIGHT	Soukhne Arabic	l ai̯ l a h	l eː l i -	.x.xx
+ratcliffearabic:Classical Arabic > Arabic|60_night	NIGHT	Yemenite (Judeo-Yemeni) Arabic	l ai̯ l a h	l a l - -	.x.xx
+ratcliffearabic:Classical Arabic > Arabic|61_nose	NOSE	Aqra-Arbil (Judeo-Iraqi) Arabic	ʔ u n f	- ə n f	xx..
+ratcliffearabic:Classical Arabic > Arabic|61_nose	NOSE	Bukhari Arabic	ʔ u n f	ʔ a n f	.x..
+ratcliffearabic:Classical Arabic > Arabic|61_nose	NOSE	Damascene (Levantine) Arabic	ʔ u n f	ʔ ə n f	.x..
+ratcliffearabic:Classical Arabic > Arabic|61_nose	NOSE	Moroccan Arabic	ʔ u n f	n i - f	xxx.
+ratcliffearabic:Classical Arabic > Arabic|62_not	NOT	Cypriot Arabic	l aː	l ʔ	.x
+ratcliffearabic:Classical Arabic > Arabic|63_one	ONE	Aqra-Arbil (Judeo-Iraqi) Arabic	ʔ a ħ a d	w eː ħ ə d	xx.x.
+ratcliffearabic:Classical Arabic > Arabic|63_one	ONE	Bukhari Arabic	ʔ a ħ a d	w aː ħ i d	x..x.
+ratcliffearabic:Classical Arabic > Arabic|63_one	ONE	Cairene (Egyptian) Arabic	ʔ a ħ a d	w aː ħ i d	x..x.
+ratcliffearabic:Classical Arabic > Arabic|63_one	ONE	Damascene (Levantine) Arabic	ʔ a ħ a d	w aː ħ e d	x..x.
+ratcliffearabic:Classical Arabic > Arabic|63_one	ONE	Gulf Arabic	ʔ a ħ a d	w aː ħ i d	x..x.
+ratcliffearabic:Classical Arabic > Arabic|63_one	ONE	Iraqi (Judeo-Iraqi) Arabic	ʔ a ħ a d	w aː ħ i d	x..x.
+ratcliffearabic:Classical Arabic > Arabic|63_one	ONE	Maltese	ʔ a ħ a d	w iː ħ e d	xx.x.
+ratcliffearabic:Classical Arabic > Arabic|63_one	ONE	Moroccan Arabic	ʔ a ħ a d	w a ħ e d	x..x.
+ratcliffearabic:Classical Arabic > Arabic|63_one	ONE	Nigerian (Chadian) Arabic	ʔ a ħ a d	w aː h i d	x.xx.
+ratcliffearabic:Classical Arabic > Arabic|63_one	ONE	Soukhne Arabic	ʔ a ħ a d	w eː ħ - d	xx.x.
+ratcliffearabic:Classical Arabic > Arabic|63_one	ONE	Yemenite (Judeo-Yemeni) Arabic	ʔ a ħ a d	w aː ħ i d	x..x.
+ratcliffearabic:Classical Arabic > Arabic|64_person	PERSON	Cypriot Arabic	ʔ i n s aː n	- i n s a n	x.....
+ratcliffearabic:Classical Arabic > Arabic|64_person	PERSON	Soukhne Arabic	ʔ i n s aː n	- i n s aː n	x.....
+ratcliffearabic:Classical Arabic > Arabic|65_rain	RAINING OR RAIN	Aqra-Arbil (Judeo-Iraqi) Arabic	m a t ʕ a r	m a tˤ - a r	..xx..
+ratcliffearabic:Classical Arabic > Arabic|65_rain	RAINING OR RAIN	Bukhari Arabic	m a t ʕ a r	m a t - a rˤ	...x.x
+ratcliffearabic:Classical Arabic > Arabic|65_rain	RAINING OR RAIN	Cairene (Egyptian) Arabic	m a t ʕ a r	m a t ʕ a r	......
+ratcliffearabic:Classical Arabic > Arabic|65_rain	RAINING OR RAIN	Damascene (Levantine) Arabic	m a t ʕ a r	mˤ a tˤ - a rˤ	x.xx.x
+ratcliffearabic:Classical Arabic > Arabic|65_rain	RAINING OR RAIN	Gulf Arabic	m a t ʕ a r	m a tˤ - a r	..xx..
+ratcliffearabic:Classical Arabic > Arabic|65_rain	RAINING OR RAIN	Iraqi (Judeo-Iraqi) Arabic	m a t ʕ a r	m u tˤ - a r	.xxx..
+ratcliffearabic:Classical Arabic > Arabic|65_rain	RAINING OR RAIN	Ki-Nubi	m a t ʕ a r	m a t - a r	...x..
+ratcliffearabic:Classical Arabic > Arabic|65_rain	RAINING OR RAIN	Nigerian (Chadian) Arabic	m a t ʕ a r	m a tˤ - a r	..xx..
+ratcliffearabic:Classical Arabic > Arabic|65_rain	RAINING OR RAIN	Soukhne Arabic	m a t ʕ a r	m a tˤ - a r	..xx..
+ratcliffearabic:Classical Arabic > Arabic|65_rain	RAINING OR RAIN	Yemenite (Judeo-Yemeni) Arabic	m a t ʕ a r	m a tˤ - a r	..xx..
+ratcliffearabic:Classical Arabic > Arabic|66_red	RED	Aqra-Arbil (Judeo-Iraqi) Arabic	ʔ a ħ m a r	- a ħ m a r	x.....
+ratcliffearabic:Classical Arabic > Arabic|66_red	RED	Bukhari Arabic	ʔ a ħ m a r	ʔ a ħ m a r	......
+ratcliffearabic:Classical Arabic > Arabic|66_red	RED	Cairene (Egyptian) Arabic	ʔ a ħ m a r	- a ħ m a r	x.....
+ratcliffearabic:Classical Arabic > Arabic|66_red	RED	Cypriot Arabic	ʔ a ħ m a r	- a x m a r	x.x...
+ratcliffearabic:Classical Arabic > Arabic|66_red	RED	Damascene (Levantine) Arabic	ʔ a ħ m a r	ʔ a ħ m a r	......
+ratcliffearabic:Classical Arabic > Arabic|66_red	RED	Gulf Arabic	ʔ a ħ m a r	ʔ a ħ m a r	......
+ratcliffearabic:Classical Arabic > Arabic|66_red	RED	Iraqi (Judeo-Iraqi) Arabic	ʔ a ħ m a r	ʔ a ħ m a r	......
+ratcliffearabic:Classical Arabic > Arabic|66_red	RED	Ki-Nubi	ʔ a ħ m a r	ʔ a - m e r	..x.x.
+ratcliffearabic:Classical Arabic > Arabic|66_red	RED	Maltese	ʔ a ħ m a r	- a ħ m a r	x.....
+ratcliffearabic:Classical Arabic > Arabic|66_red	RED	Moroccan Arabic	ʔ a ħ m a r	- - ħ m e rˤ	xx..xx
+ratcliffearabic:Classical Arabic > Arabic|66_red	RED	Nigerian (Chadian) Arabic	ʔ a ħ m a r	- eː - m a r	xxx...
+ratcliffearabic:Classical Arabic > Arabic|66_red	RED	Soukhne Arabic	ʔ a ħ m a r	ʔ a ħ m a rˤ	.....x
+ratcliffearabic:Classical Arabic > Arabic|66_red	RED	Yemenite (Judeo-Yemeni) Arabic	ʔ a ħ m a r	ʔ a ħ m a r	......
+ratcliffearabic:Classical Arabic > Arabic|67_road	ROAD	Aqra-Arbil (Judeo-Iraqi) Arabic	tˤ a r iː q	tˤ a r eː q	...x.
+ratcliffearabic:Classical Arabic > Arabic|67_road	ROAD	Cairene (Egyptian) Arabic	tˤ a r iː q	tˤ a r iː ʔ	....x
+ratcliffearabic:Classical Arabic > Arabic|67_road	ROAD	Damascene (Levantine) Arabic	tˤ a r iː q	tˤ a r iː ʔ	....x
+ratcliffearabic:Classical Arabic > Arabic|67_road	ROAD	Gulf Arabic	tˤ a r iː q	tˤ a r iː ɡ	....x
+ratcliffearabic:Classical Arabic > Arabic|67_road	ROAD	Maltese	tˤ a r iː q	t - r i ʔ	xx..x
+ratcliffearabic:Classical Arabic > Arabic|67_road	ROAD	Moroccan Arabic	tˤ a r iː q	tˤ - rˤ i q	.xx..
+ratcliffearabic:Classical Arabic > Arabic|67_road	ROAD	Soukhne Arabic	tˤ a r iː q	tˤ a r iː k	....x
+ratcliffearabic:Classical Arabic > Arabic|67_road	ROAD	Yemenite (Judeo-Yemeni) Arabic	tˤ a r iː q	tˤ a r iː ɡ	....x
+ratcliffearabic:Classical Arabic > Arabic|68_root	ROOT	Gulf Arabic	dʒ a ð r	j i ð r	xx..
+ratcliffearabic:Classical Arabic > Arabic|68_root	ROOT	Moroccan Arabic	dʒ a ð r	ʒ - d r	xxx.
+ratcliffearabic:Classical Arabic > Arabic|69_round	ROUND	Aqra-Arbil (Judeo-Iraqi) Arabic	m u d a wː a r	m ə d a wː ə rˤ	.x...xx
+ratcliffearabic:Classical Arabic > Arabic|69_round	ROUND	Cairene (Egyptian) Arabic	m u d a wː a r	m i d a wː a r	.x.....
+ratcliffearabic:Classical Arabic > Arabic|69_round	ROUND	Damascene (Levantine) Arabic	m u d a wː a r	m - d a w a r	.x..x..
+ratcliffearabic:Classical Arabic > Arabic|69_round	ROUND	Gulf Arabic	m u d a wː a r	m u d a wː a r	.......
+ratcliffearabic:Classical Arabic > Arabic|69_round	ROUND	Iraqi (Judeo-Iraqi) Arabic	m u d a wː a r	m - d a w a r	.x..x..
+ratcliffearabic:Classical Arabic > Arabic|69_round	ROUND	Moroccan Arabic	m u d a wː a r	m - dˤ u wː e r	.xxx.x.
+ratcliffearabic:Classical Arabic > Arabic|69_round	ROUND	Nigerian (Chadian) Arabic	m u d a wː a r	- - d aː j i r	xx..xx.
+ratcliffearabic:Classical Arabic > Arabic|69_round	ROUND	Soukhne Arabic	m u d a wː a r	m - d a wː a rˤ	.x....x
+ratcliffearabic:Classical Arabic > Arabic|69_round	ROUND	Yemenite (Judeo-Yemeni) Arabic	m u d a wː a r	m u d a wː a r	.......
+ratcliffearabic:Classical Arabic > Arabic|6_bird	BIRD	Bukhari Arabic	tˤ aː ʔ i r	t ai̯ - - r	xxxx.
+ratcliffearabic:Classical Arabic > Arabic|6_bird	BIRD	Cairene (Egyptian) Arabic	tˤ aː ʔ i r	tˤ eː - - r	.xxx.
+ratcliffearabic:Classical Arabic > Arabic|6_bird	BIRD	Damascene (Levantine) Arabic	tˤ aː ʔ i r	tˤ eː - - r	.xxx.
+ratcliffearabic:Classical Arabic > Arabic|6_bird	BIRD	Gulf Arabic	tˤ aː ʔ i r	tˤ eː - - r	.xxx.
+ratcliffearabic:Classical Arabic > Arabic|6_bird	BIRD	Iraqi (Judeo-Iraqi) Arabic	tˤ aː ʔ i r	tˤ eː - - r	.xxx.
+ratcliffearabic:Classical Arabic > Arabic|6_bird	BIRD	Ki-Nubi	tˤ aː ʔ i r	t e - - r	xxxx.
+ratcliffearabic:Classical Arabic > Arabic|6_bird	BIRD	Moroccan Arabic	tˤ aː ʔ i r	tˤ i - - r	.xxx.
+ratcliffearabic:Classical Arabic > Arabic|6_bird	BIRD	Nigerian (Chadian) Arabic	tˤ aː ʔ i r	tˤ eː - - r	.xxx.
+ratcliffearabic:Classical Arabic > Arabic|6_bird	BIRD	Soukhne Arabic	tˤ aː ʔ i r	tˤ eː - - r	.xxx.
+ratcliffearabic:Classical Arabic > Arabic|6_bird	BIRD	Yemenite (Judeo-Yemeni) Arabic	tˤ aː ʔ i r	tˤ a - j r	..xx.
+ratcliffearabic:Classical Arabic > Arabic|70_sand	SAND	Cairene (Egyptian) Arabic	r a m l	r a m l	....
+ratcliffearabic:Classical Arabic > Arabic|70_sand	SAND	Damascene (Levantine) Arabic	r a m l	r a m l	....
+ratcliffearabic:Classical Arabic > Arabic|70_sand	SAND	Gulf Arabic	r a m l	r a m l	....
+ratcliffearabic:Classical Arabic > Arabic|70_sand	SAND	Iraqi (Judeo-Iraqi) Arabic	r a m l	r a m lˤ	...x
+ratcliffearabic:Classical Arabic > Arabic|70_sand	SAND	Ki-Nubi	r a m l	l u m r	xx.x
+ratcliffearabic:Classical Arabic > Arabic|70_sand	SAND	Maltese	r a m l	r a m l	....
+ratcliffearabic:Classical Arabic > Arabic|70_sand	SAND	Moroccan Arabic	r a m l	rˤ e m l	xx..
+ratcliffearabic:Classical Arabic > Arabic|70_sand	SAND	Soukhne Arabic	r a m l	r a m lˤ	...x
+ratcliffearabic:Classical Arabic > Arabic|71_say	SAY	Aqra-Arbil (Judeo-Iraqi) Arabic	q aː l a	q aː l -	...x
+ratcliffearabic:Classical Arabic > Arabic|71_say	SAY	Bukhari Arabic	q aː l a	q ɔː l -	.x.x
+ratcliffearabic:Classical Arabic > Arabic|71_say	SAY	Cairene (Egyptian) Arabic	q aː l a	ʔ aː l -	x..x
+ratcliffearabic:Classical Arabic > Arabic|71_say	SAY	Cypriot Arabic	q aː l a	q w l -	.x.x
+ratcliffearabic:Classical Arabic > Arabic|71_say	SAY	Damascene (Levantine) Arabic	q aː l a	ʔ aː l -	x..x
+ratcliffearabic:Classical Arabic > Arabic|71_say	SAY	Gulf Arabic	q aː l a	ɡ aː l -	x..x
+ratcliffearabic:Classical Arabic > Arabic|71_say	SAY	Iraqi (Judeo-Iraqi) Arabic	q aː l a	ɡ aː l -	x..x
+ratcliffearabic:Classical Arabic > Arabic|71_say	SAY	Maltese	q aː l a	ʔ a l -	x..x
+ratcliffearabic:Classical Arabic > Arabic|71_say	SAY	Moroccan Arabic	q aː l a	q a l -	...x
+ratcliffearabic:Classical Arabic > Arabic|71_say	SAY	Nigerian (Chadian) Arabic	q aː l a	ɡ aː l -	x..x
+ratcliffearabic:Classical Arabic > Arabic|71_say	SAY	Soukhne Arabic	q aː l a	k aː lˤ -	x.xx
+ratcliffearabic:Classical Arabic > Arabic|71_say	SAY	Yemenite (Judeo-Yemeni) Arabic	q aː l a	ɡ aː l -	x..x
+ratcliffearabic:Classical Arabic > Arabic|72_see	SEE	Aqra-Arbil (Judeo-Iraqi) Arabic	r a ʔ aː	- a rˤ a	x.x.
+ratcliffearabic:Classical Arabic > Arabic|72_see	SEE	Maltese	r a ʔ aː	r a - -	..xx
+ratcliffearabic:Classical Arabic > Arabic|73_seed	SEED	Aqra-Arbil (Judeo-Iraqi) Arabic	b i z r	b a z r	.x..
+ratcliffearabic:Classical Arabic > Arabic|73_seed	SEED	Cypriot Arabic	b i z r	p a z r	xx..
+ratcliffearabic:Classical Arabic > Arabic|73_seed	SEED	Damascene (Levantine) Arabic	b i z r	b ə z r	.x..
+ratcliffearabic:Classical Arabic > Arabic|73_seed	SEED	Gulf Arabic	b i z r	b a ð r	.xx.
+ratcliffearabic:Classical Arabic > Arabic|73_seed	SEED	Iraqi (Judeo-Iraqi) Arabic	b i z r	b a z r	.x..
+ratcliffearabic:Classical Arabic > Arabic|73_seed	SEED	Soukhne Arabic	b i z r	b i ð r	..x.
+ratcliffearabic:Classical Arabic > Arabic|74_sit	SIT	Aqra-Arbil (Judeo-Iraqi) Arabic	q a ʕ a d a	q ə ʕ ə d -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|74_sit	SIT	Bukhari Arabic	q a ʕ a d a	q a ʕ a d -	.....x
+ratcliffearabic:Classical Arabic > Arabic|74_sit	SIT	Cairene (Egyptian) Arabic	q a ʕ a d a	ʔ a ʕ a d -	x....x
+ratcliffearabic:Classical Arabic > Arabic|74_sit	SIT	Cypriot Arabic	q a ʕ a d a	q - ʕ - d -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|74_sit	SIT	Damascene (Levantine) Arabic	q a ʕ a d a	ʔ a ʕ a d -	x....x
+ratcliffearabic:Classical Arabic > Arabic|74_sit	SIT	Gulf Arabic	q a ʕ a d a	ɡ a ʕ a d -	x....x
+ratcliffearabic:Classical Arabic > Arabic|74_sit	SIT	Iraqi (Judeo-Iraqi) Arabic	q a ʕ a d a	ɡ i ʕ a d -	xx...x
+ratcliffearabic:Classical Arabic > Arabic|74_sit	SIT	Maltese	q a ʕ a d a	ʔ a ʕ a d -	x....x
+ratcliffearabic:Classical Arabic > Arabic|74_sit	SIT	Nigerian (Chadian) Arabic	q a ʕ a d a	ɡ a ʔ a d -	x.x..x
+ratcliffearabic:Classical Arabic > Arabic|74_sit	SIT	Soukhne Arabic	q a ʕ a d a	k a ʕ a d -	x....x
+ratcliffearabic:Classical Arabic > Arabic|75_skin	SKIN	Aqra-Arbil (Judeo-Iraqi) Arabic	dʒ i l d	dʒ ə l d	.x..
+ratcliffearabic:Classical Arabic > Arabic|75_skin	SKIN	Bukhari Arabic	dʒ i l d	d i l d	x...
+ratcliffearabic:Classical Arabic > Arabic|75_skin	SKIN	Cairene (Egyptian) Arabic	dʒ i l d	ɡ i l d	x...
+ratcliffearabic:Classical Arabic > Arabic|75_skin	SKIN	Damascene (Levantine) Arabic	dʒ i l d	dʒ ə l d	.x..
+ratcliffearabic:Classical Arabic > Arabic|75_skin	SKIN	Gulf Arabic	dʒ i l d	dʒ i l d	....
+ratcliffearabic:Classical Arabic > Arabic|75_skin	SKIN	Iraqi (Judeo-Iraqi) Arabic	dʒ i l d	dʒ i l d	....
+ratcliffearabic:Classical Arabic > Arabic|75_skin	SKIN	Ki-Nubi	dʒ i l d	ɡ i l d	x...
+ratcliffearabic:Classical Arabic > Arabic|75_skin	SKIN	Maltese	dʒ i l d	dʒ i l d	....
+ratcliffearabic:Classical Arabic > Arabic|75_skin	SKIN	Moroccan Arabic	dʒ i l d	ʒ e l d	xx..
+ratcliffearabic:Classical Arabic > Arabic|75_skin	SKIN	Nigerian (Chadian) Arabic	dʒ i l d	dʒ i l d	....
+ratcliffearabic:Classical Arabic > Arabic|75_skin	SKIN	Soukhne Arabic	dʒ i l d	ts i l d	x...
+ratcliffearabic:Classical Arabic > Arabic|75_skin	SKIN	Yemenite (Judeo-Yemeni) Arabic	dʒ i l d	dʒ i l d	....
+ratcliffearabic:Classical Arabic > Arabic|76_sleep	SLEEP	Aqra-Arbil (Judeo-Iraqi) Arabic	n aː m a	n aː m -	...x
+ratcliffearabic:Classical Arabic > Arabic|76_sleep	SLEEP	Bukhari Arabic	n aː m a	n au̯ m -	.x.x
+ratcliffearabic:Classical Arabic > Arabic|76_sleep	SLEEP	Cairene (Egyptian) Arabic	n aː m a	n aː m -	...x
+ratcliffearabic:Classical Arabic > Arabic|76_sleep	SLEEP	Cypriot Arabic	n aː m a	n w m -	.x.x
+ratcliffearabic:Classical Arabic > Arabic|76_sleep	SLEEP	Damascene (Levantine) Arabic	n aː m a	n aː m -	...x
+ratcliffearabic:Classical Arabic > Arabic|76_sleep	SLEEP	Gulf Arabic	n aː m a	n aː m -	...x
+ratcliffearabic:Classical Arabic > Arabic|76_sleep	SLEEP	Iraqi (Judeo-Iraqi) Arabic	n aː m a	n aː m -	...x
+ratcliffearabic:Classical Arabic > Arabic|76_sleep	SLEEP	Ki-Nubi	n aː m a	n u m -	.x.x
+ratcliffearabic:Classical Arabic > Arabic|76_sleep	SLEEP	Nigerian (Chadian) Arabic	n aː m a	n oː m -	.x.x
+ratcliffearabic:Classical Arabic > Arabic|76_sleep	SLEEP	Soukhne Arabic	n aː m a	n aː m -	...x
+ratcliffearabic:Classical Arabic > Arabic|77_small	SMALL	Cairene (Egyptian) Arabic	sˤ a ɣ iː r	sˤ u ɣ a r	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|77_small	SMALL	Cypriot Arabic	sˤ a ɣ iː r	sˤ - ɣ - r	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|77_small	SMALL	Damascene (Levantine) Arabic	sˤ a ɣ iː r	zˤ - ɣ iː r	xx...
+ratcliffearabic:Classical Arabic > Arabic|77_small	SMALL	Gulf Arabic	sˤ a ɣ iː r	sˤ a ɣ iː r	.....
+ratcliffearabic:Classical Arabic > Arabic|77_small	SMALL	Iraqi (Judeo-Iraqi) Arabic	sˤ a ɣ iː r	sˤ a jː i r	..x..
+ratcliffearabic:Classical Arabic > Arabic|77_small	SMALL	Ki-Nubi	sˤ a ɣ iː r	s a k a r	x.xx.
+ratcliffearabic:Classical Arabic > Arabic|77_small	SMALL	Maltese	sˤ a ɣ iː r	z - ɣ i r	xx...
+ratcliffearabic:Classical Arabic > Arabic|77_small	SMALL	Moroccan Arabic	sˤ a ɣ iː r	sˤ - ɣ i rˤ	.x..x
+ratcliffearabic:Classical Arabic > Arabic|77_small	SMALL	Soukhne Arabic	sˤ a ɣ iː r	sˤ a ɣ iː r	.....
+ratcliffearabic:Classical Arabic > Arabic|77_small	SMALL	Yemenite (Judeo-Yemeni) Arabic	sˤ a ɣ iː r	sˤ a ɣ iː r	.....
+ratcliffearabic:Classical Arabic > Arabic|78_smoke	SMOKE (EXHAUST)	Cairene (Egyptian) Arabic	d u x aː n	d u x aː n	.....
+ratcliffearabic:Classical Arabic > Arabic|78_smoke	SMOKE (EXHAUST)	Cypriot Arabic	d u x aː n	d - x - n	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|78_smoke	SMOKE (EXHAUST)	Damascene (Levantine) Arabic	d u x aː n	d ə xː aː n	.xx..
+ratcliffearabic:Classical Arabic > Arabic|78_smoke	SMOKE (EXHAUST)	Gulf Arabic	d u x aː n	d u x a n	.....
+ratcliffearabic:Classical Arabic > Arabic|78_smoke	SMOKE (EXHAUST)	Iraqi (Judeo-Iraqi) Arabic	d u x aː n	d u xː aː n	..x..
+ratcliffearabic:Classical Arabic > Arabic|78_smoke	SMOKE (EXHAUST)	Ki-Nubi	d u x aː n	d u k a n	..x..
+ratcliffearabic:Classical Arabic > Arabic|78_smoke	SMOKE (EXHAUST)	Maltese	d u x aː n	d u ħ a n	..x..
+ratcliffearabic:Classical Arabic > Arabic|78_smoke	SMOKE (EXHAUST)	Moroccan Arabic	d u x aː n	d o x a n	.x...
+ratcliffearabic:Classical Arabic > Arabic|78_smoke	SMOKE (EXHAUST)	Nigerian (Chadian) Arabic	d u x aː n	d u x aː n	.....
+ratcliffearabic:Classical Arabic > Arabic|78_smoke	SMOKE (EXHAUST)	Soukhne Arabic	d u x aː n	d a x a n	.x...
+ratcliffearabic:Classical Arabic > Arabic|78_smoke	SMOKE (EXHAUST)	Yemenite (Judeo-Yemeni) Arabic	d u x aː n	d u xː aː n	..x..
+ratcliffearabic:Classical Arabic > Arabic|79_stand	STAND	Bukhari Arabic	q aː m a	q ɔ m -	.x.x
+ratcliffearabic:Classical Arabic > Arabic|79_stand	STAND	Ki-Nubi	q aː m a	ɡ u m -	xx.x
+ratcliffearabic:Classical Arabic > Arabic|79_stand	STAND	Maltese	q aː m a	ʔ a m -	x..x
+ratcliffearabic:Classical Arabic > Arabic|7_bite	BITE	Bukhari Arabic	ʕ a d dˤ a	j a ʕ zː -	x.xxx
+ratcliffearabic:Classical Arabic > Arabic|7_bite	BITE	Cairene (Egyptian) Arabic	ʕ a d dˤ a	ʕ a - dˤː -	..xxx
+ratcliffearabic:Classical Arabic > Arabic|7_bite	BITE	Cypriot Arabic	ʕ a d dˤ a	ʕ a ðː dˤ dˤ	..x.x
+ratcliffearabic:Classical Arabic > Arabic|7_bite	BITE	Damascene (Levantine) Arabic	ʕ a d dˤ a	ʕ a - dˤː -	..xxx
+ratcliffearabic:Classical Arabic > Arabic|7_bite	BITE	Gulf Arabic	ʕ a d dˤ a	ʕ a - dˤː -	..xxx
+ratcliffearabic:Classical Arabic > Arabic|7_bite	BITE	Iraqi (Judeo-Iraqi) Arabic	ʕ a d dˤ a	ʕ a - ðˤː -	..xxx
+ratcliffearabic:Classical Arabic > Arabic|7_bite	BITE	Ki-Nubi	ʕ a d dˤ a	- a - d i	x.xxx
+ratcliffearabic:Classical Arabic > Arabic|7_bite	BITE	Moroccan Arabic	ʕ a d dˤ a	ʕ e d dˤ -	.x..x
+ratcliffearabic:Classical Arabic > Arabic|7_bite	BITE	Nigerian (Chadian) Arabic	ʕ a d dˤ a	- a - dˤː a	x.xx.
+ratcliffearabic:Classical Arabic > Arabic|7_bite	BITE	Soukhne Arabic	ʕ a d dˤ a	ʕ a - ðˤː -	..xxx
+ratcliffearabic:Classical Arabic > Arabic|80_star	STAR	Bukhari Arabic	n a dʒ m a	n u ʒ m -	.xx.x
+ratcliffearabic:Classical Arabic > Arabic|80_star	STAR	Cairene (Egyptian) Arabic	n a dʒ m a	n i ɡ m a	.xx..
+ratcliffearabic:Classical Arabic > Arabic|80_star	STAR	Cypriot Arabic	n a dʒ m a	n - dʒ m -	.x..x
+ratcliffearabic:Classical Arabic > Arabic|80_star	STAR	Damascene (Levantine) Arabic	n a dʒ m a	n a dʒ m e	....x
+ratcliffearabic:Classical Arabic > Arabic|80_star	STAR	Gulf Arabic	n a dʒ m a	n a dʒ m a	.....
+ratcliffearabic:Classical Arabic > Arabic|80_star	STAR	Iraqi (Judeo-Iraqi) Arabic	n a dʒ m a	n a dʒ m a	.....
+ratcliffearabic:Classical Arabic > Arabic|80_star	STAR	Ki-Nubi	n a dʒ m a	n e z m a	.xx..
+ratcliffearabic:Classical Arabic > Arabic|80_star	STAR	Moroccan Arabic	n a dʒ m a	n e ʒ m a	.xx..
+ratcliffearabic:Classical Arabic > Arabic|80_star	STAR	Nigerian (Chadian) Arabic	n a dʒ m a	n a dʒ m a	.....
+ratcliffearabic:Classical Arabic > Arabic|80_star	STAR	Soukhne Arabic	n a dʒ m a	n i ts m i	.xx.x
+ratcliffearabic:Classical Arabic > Arabic|80_star	STAR	Yemenite (Judeo-Yemeni) Arabic	n a dʒ m a	n a dʒ m -	....x
+ratcliffearabic:Classical Arabic > Arabic|81_stone	STONE	Aqra-Arbil (Judeo-Iraqi) Arabic	ħ a dʒ a r a h	ħ a dʒ a r - -	.....xx
+ratcliffearabic:Classical Arabic > Arabic|81_stone	STONE	Bukhari Arabic	ħ a dʒ a r a h	h a ʒ a r - -	x.x..xx
+ratcliffearabic:Classical Arabic > Arabic|81_stone	STONE	Cairene (Egyptian) Arabic	ħ a dʒ a r a h	ħ a ɡ a rˤ a -	..x.x.x
+ratcliffearabic:Classical Arabic > Arabic|81_stone	STONE	Cypriot Arabic	ħ a dʒ a r a h	ħ - dʒ - r - -	.x.x.xx
+ratcliffearabic:Classical Arabic > Arabic|81_stone	STONE	Damascene (Levantine) Arabic	ħ a dʒ a r a h	ħ a dʒ a r a -	......x
+ratcliffearabic:Classical Arabic > Arabic|81_stone	STONE	Gulf Arabic	ħ a dʒ a r a h	ħ a dʒ a r - -	.....xx
+ratcliffearabic:Classical Arabic > Arabic|81_stone	STONE	Iraqi (Judeo-Iraqi) Arabic	ħ a dʒ a r a h	ħ - dʒ aː r a -	.x....x
+ratcliffearabic:Classical Arabic > Arabic|81_stone	STONE	Ki-Nubi	ħ a dʒ a r a h	l a ɡ e r - -	x.xx.xx
+ratcliffearabic:Classical Arabic > Arabic|81_stone	STONE	Moroccan Arabic	ħ a dʒ a r a h	ħ e ʒ - r a -	.xxx..x
+ratcliffearabic:Classical Arabic > Arabic|81_stone	STONE	Nigerian (Chadian) Arabic	ħ a dʒ a r a h	h i dʒ e r - -	xx.x.xx
+ratcliffearabic:Classical Arabic > Arabic|81_stone	STONE	Soukhne Arabic	ħ a dʒ a r a h	ħ a ts a r - -	..x..xx
+ratcliffearabic:Classical Arabic > Arabic|81_stone	STONE	Yemenite (Judeo-Yemeni) Arabic	ħ a dʒ a r a h	ħ a dʒ a r - -	.....xx
+ratcliffearabic:Classical Arabic > Arabic|82_sun	SUN	Aqra-Arbil (Judeo-Iraqi) Arabic	ʃ a m s	ʃ a m s	....
+ratcliffearabic:Classical Arabic > Arabic|82_sun	SUN	Bukhari Arabic	ʃ a m s	ʃ a m s	....
+ratcliffearabic:Classical Arabic > Arabic|82_sun	SUN	Cairene (Egyptian) Arabic	ʃ a m s	ʃ a m s	....
+ratcliffearabic:Classical Arabic > Arabic|82_sun	SUN	Cypriot Arabic	ʃ a m s	ʃ i m s	.x..
+ratcliffearabic:Classical Arabic > Arabic|82_sun	SUN	Damascene (Levantine) Arabic	ʃ a m s	ʃ a m s	....
+ratcliffearabic:Classical Arabic > Arabic|82_sun	SUN	Gulf Arabic	ʃ a m s	ʃ a m s	....
+ratcliffearabic:Classical Arabic > Arabic|82_sun	SUN	Iraqi (Judeo-Iraqi) Arabic	ʃ a m s	ʃ a m s	....
+ratcliffearabic:Classical Arabic > Arabic|82_sun	SUN	Ki-Nubi	ʃ a m s	s e m s	xx..
+ratcliffearabic:Classical Arabic > Arabic|82_sun	SUN	Maltese	ʃ a m s	ʃ e m ʃ	.x.x
+ratcliffearabic:Classical Arabic > Arabic|82_sun	SUN	Moroccan Arabic	ʃ a m s	ʃ e m ʃ	.x.x
+ratcliffearabic:Classical Arabic > Arabic|82_sun	SUN	Nigerian (Chadian) Arabic	ʃ a m s	ʃ a m -	...x
+ratcliffearabic:Classical Arabic > Arabic|82_sun	SUN	Soukhne Arabic	ʃ a m s	ʃ a m s	....
+ratcliffearabic:Classical Arabic > Arabic|82_sun	SUN	Yemenite (Judeo-Yemeni) Arabic	ʃ a m s	ʃ a m s	....
+ratcliffearabic:Classical Arabic > Arabic|83_swim	SWIM	Aqra-Arbil (Judeo-Iraqi) Arabic	s a b a ħ a	z ə b ə ħ -	xx.x.x
+ratcliffearabic:Classical Arabic > Arabic|83_swim	SWIM	Bukhari Arabic	s a b a ħ a	s o b a j a	.x..x.
+ratcliffearabic:Classical Arabic > Arabic|83_swim	SWIM	Damascene (Levantine) Arabic	s a b a ħ a	s a b a ħ -	.....x
+ratcliffearabic:Classical Arabic > Arabic|83_swim	SWIM	Gulf Arabic	s a b a ħ a	s i b a ħ -	.x...x
+ratcliffearabic:Classical Arabic > Arabic|83_swim	SWIM	Iraqi (Judeo-Iraqi) Arabic	s a b a ħ a	s i b a ħ -	.x...x
+ratcliffearabic:Classical Arabic > Arabic|83_swim	SWIM	Soukhne Arabic	s a b a ħ a	s a b a ħ -	.....x
+ratcliffearabic:Classical Arabic > Arabic|84_tail	TAIL	Cairene (Egyptian) Arabic	ð a n a b	d a n a b	x....
+ratcliffearabic:Classical Arabic > Arabic|84_tail	TAIL	Cypriot Arabic	ð a n a b	ð - n - b	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|84_tail	TAIL	Damascene (Levantine) Arabic	ð a n a b	d a n a b	x....
+ratcliffearabic:Classical Arabic > Arabic|84_tail	TAIL	Ki-Nubi	ð a n a b	d a n a b	x....
+ratcliffearabic:Classical Arabic > Arabic|84_tail	TAIL	Maltese	ð a n a b	d e n - b	xx.x.
+ratcliffearabic:Classical Arabic > Arabic|84_tail	TAIL	Nigerian (Chadian) Arabic	ð a n a b	d a n a b	x....
+ratcliffearabic:Classical Arabic > Arabic|85_that	THAT	Aqra-Arbil (Judeo-Iraqi) Arabic	ð a l i k a	h a d aː k -	x.xx.x
+ratcliffearabic:Classical Arabic > Arabic|85_that	THAT	Bukhari Arabic	ð a l i k a	d uː - - k -	xxxx.x
+ratcliffearabic:Classical Arabic > Arabic|85_that	THAT	Iraqi (Judeo-Iraqi) Arabic	ð a l i k a	ð aː - - k -	..xx.x
+ratcliffearabic:Classical Arabic > Arabic|85_that	THAT	Maltese	ð a l i k a	d a - - k -	x.xx.x
+ratcliffearabic:Classical Arabic > Arabic|85_that	THAT	Moroccan Arabic	ð a l i k a	d a - - k -	x.xx.x
+ratcliffearabic:Classical Arabic > Arabic|85_that	THAT	Nigerian (Chadian) Arabic	ð a l i k a	dˤ aː - - k a	x.xx..
+ratcliffearabic:Classical Arabic > Arabic|85_that	THAT	Soukhne Arabic	ð a l i k a	ð aː - - tʃ -	..xxxx
+ratcliffearabic:Classical Arabic > Arabic|85_that	THAT	Yemenite (Judeo-Yemeni) Arabic	ð a l i k a	ð a jː i k -	..x..x
+ratcliffearabic:Classical Arabic > Arabic|86_this	THIS	Aqra-Arbil (Judeo-Iraqi) Arabic	h aː ð aː	h a d aː	..x.
+ratcliffearabic:Classical Arabic > Arabic|86_this	THIS	Bukhari Arabic	h aː ð aː	h aː - -	..xx
+ratcliffearabic:Classical Arabic > Arabic|86_this	THIS	Cairene (Egyptian) Arabic	h aː ð aː	d a - -	x.xx
+ratcliffearabic:Classical Arabic > Arabic|86_this	THIS	Cypriot Arabic	h aː ð aː	h ʔ - -	.xxx
+ratcliffearabic:Classical Arabic > Arabic|86_this	THIS	Damascene (Levantine) Arabic	h aː ð aː	h aː d a	..x.
+ratcliffearabic:Classical Arabic > Arabic|86_this	THIS	Gulf Arabic	h aː ð aː	h aː ð a	....
+ratcliffearabic:Classical Arabic > Arabic|86_this	THIS	Iraqi (Judeo-Iraqi) Arabic	h aː ð aː	h aː ð a	....
+ratcliffearabic:Classical Arabic > Arabic|86_this	THIS	Maltese	h aː ð aː	d i n -	xxxx
+ratcliffearabic:Classical Arabic > Arabic|86_this	THIS	Moroccan Arabic	h aː ð aː	h a d -	..xx
+ratcliffearabic:Classical Arabic > Arabic|86_this	THIS	Nigerian (Chadian) Arabic	h aː ð aː	d aː - -	x.xx
+ratcliffearabic:Classical Arabic > Arabic|86_this	THIS	Soukhne Arabic	h aː ð aː	h aː - -	..xx
+ratcliffearabic:Classical Arabic > Arabic|87_thou	THOU	Aqra-Arbil (Judeo-Iraqi) Arabic	ʔ a n t a	- ə n t a	xx...
+ratcliffearabic:Classical Arabic > Arabic|87_thou	THOU	Bukhari Arabic	ʔ a n t a	h i n t -	xx..x
+ratcliffearabic:Classical Arabic > Arabic|87_thou	THOU	Cairene (Egyptian) Arabic	ʔ a n t a	- i n t a	xx...
+ratcliffearabic:Classical Arabic > Arabic|87_thou	THOU	Cypriot Arabic	ʔ a n t a	ʔ - n t -	.x..x
+ratcliffearabic:Classical Arabic > Arabic|87_thou	THOU	Damascene (Levantine) Arabic	ʔ a n t a	ʔ ə n t e	.x..x
+ratcliffearabic:Classical Arabic > Arabic|87_thou	THOU	Gulf Arabic	ʔ a n t a	- i n t a	xx...
+ratcliffearabic:Classical Arabic > Arabic|87_thou	THOU	Iraqi (Judeo-Iraqi) Arabic	ʔ a n t a	ʔ i n t a	.x...
+ratcliffearabic:Classical Arabic > Arabic|87_thou	THOU	Ki-Nubi	ʔ a n t a	ʔ i - t a	.xx..
+ratcliffearabic:Classical Arabic > Arabic|87_thou	THOU	Maltese	ʔ a n t a	- i n t -	xx..x
+ratcliffearabic:Classical Arabic > Arabic|87_thou	THOU	Moroccan Arabic	ʔ a n t a	- - n t a	xx...
+ratcliffearabic:Classical Arabic > Arabic|87_thou	THOU	Nigerian (Chadian) Arabic	ʔ a n t a	- i n t a	xx...
+ratcliffearabic:Classical Arabic > Arabic|87_thou	THOU	Soukhne Arabic	ʔ a n t a	- i n t -	xx..x
+ratcliffearabic:Classical Arabic > Arabic|87_thou	THOU	Yemenite (Judeo-Yemeni) Arabic	ʔ a n t a	ʔ a n t -	....x
+ratcliffearabic:Classical Arabic > Arabic|88_tongue	TONGUE	Aqra-Arbil (Judeo-Iraqi) Arabic	l i s aː n	- - s eː n	xx.x.
+ratcliffearabic:Classical Arabic > Arabic|88_tongue	TONGUE	Bukhari Arabic	l i s aː n	l i ʔ aː n	..x..
+ratcliffearabic:Classical Arabic > Arabic|88_tongue	TONGUE	Cairene (Egyptian) Arabic	l i s aː n	l i s a n	.....
+ratcliffearabic:Classical Arabic > Arabic|88_tongue	TONGUE	Cypriot Arabic	l i s aː n	l - s - n	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|88_tongue	TONGUE	Damascene (Levantine) Arabic	l i s aː n	l - s aː n	.x...
+ratcliffearabic:Classical Arabic > Arabic|88_tongue	TONGUE	Gulf Arabic	l i s aː n	l i s aː n	.....
+ratcliffearabic:Classical Arabic > Arabic|88_tongue	TONGUE	Iraqi (Judeo-Iraqi) Arabic	l i s aː n	l i s aː n	.....
+ratcliffearabic:Classical Arabic > Arabic|88_tongue	TONGUE	Ki-Nubi	l i s aː n	l i s aː n	.....
+ratcliffearabic:Classical Arabic > Arabic|88_tongue	TONGUE	Maltese	l i s aː n	l - s iː n	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|88_tongue	TONGUE	Moroccan Arabic	l i s aː n	l - s a n	.x...
+ratcliffearabic:Classical Arabic > Arabic|88_tongue	TONGUE	Nigerian (Chadian) Arabic	l i s aː n	l i s aː n	.....
+ratcliffearabic:Classical Arabic > Arabic|88_tongue	TONGUE	Soukhne Arabic	l i s aː n	l - s iː n	.x.x.
+ratcliffearabic:Classical Arabic > Arabic|88_tongue	TONGUE	Yemenite (Judeo-Yemeni) Arabic	l i s aː n	l i s aː n	.....
+ratcliffearabic:Classical Arabic > Arabic|89_tooth	TOOTH	Aqra-Arbil (Judeo-Iraqi) Arabic	s i n n	s - n n	.x..
+ratcliffearabic:Classical Arabic > Arabic|89_tooth	TOOTH	Cairene (Egyptian) Arabic	s i n n	s i nː -	..xx
+ratcliffearabic:Classical Arabic > Arabic|89_tooth	TOOTH	Cypriot Arabic	s i n n	s a n n	.x..
+ratcliffearabic:Classical Arabic > Arabic|89_tooth	TOOTH	Damascene (Levantine) Arabic	s i n n	s ə nː -	.xxx
+ratcliffearabic:Classical Arabic > Arabic|89_tooth	TOOTH	Gulf Arabic	s i n n	s i nː -	..xx
+ratcliffearabic:Classical Arabic > Arabic|89_tooth	TOOTH	Iraqi (Judeo-Iraqi) Arabic	s i n n	s i nː -	..xx
+ratcliffearabic:Classical Arabic > Arabic|89_tooth	TOOTH	Ki-Nubi	s i n n	s u n n	.x..
+ratcliffearabic:Classical Arabic > Arabic|89_tooth	TOOTH	Maltese	s i n n	s i n s	...x
+ratcliffearabic:Classical Arabic > Arabic|89_tooth	TOOTH	Moroccan Arabic	s i n n	s e n n	.x..
+ratcliffearabic:Classical Arabic > Arabic|89_tooth	TOOTH	Nigerian (Chadian) Arabic	s i n n	s i nː -	..xx
+ratcliffearabic:Classical Arabic > Arabic|89_tooth	TOOTH	Soukhne Arabic	s i n n	s i nː -	..xx
+ratcliffearabic:Classical Arabic > Arabic|89_tooth	TOOTH	Yemenite (Judeo-Yemeni) Arabic	s i n n	s i nː -	..xx
+ratcliffearabic:Classical Arabic > Arabic|8_black	BLACK	Aqra-Arbil (Judeo-Iraqi) Arabic	ʔ a s w a d	- ə s w ə d	xx..x.
+ratcliffearabic:Classical Arabic > Arabic|8_black	BLACK	Bukhari Arabic	ʔ a s w a d	ʔ a s w a d	......
+ratcliffearabic:Classical Arabic > Arabic|8_black	BLACK	Cairene (Egyptian) Arabic	ʔ a s w a d	- i s w i d	xx..x.
+ratcliffearabic:Classical Arabic > Arabic|8_black	BLACK	Cypriot Arabic	ʔ a s w a d	- i s f e t	xx.xxx
+ratcliffearabic:Classical Arabic > Arabic|8_black	BLACK	Damascene (Levantine) Arabic	ʔ a s w a d	ʔ a s w a d	......
+ratcliffearabic:Classical Arabic > Arabic|8_black	BLACK	Gulf Arabic	ʔ a s w a d	ʔ a s w a d	......
+ratcliffearabic:Classical Arabic > Arabic|8_black	BLACK	Iraqi (Judeo-Iraqi) Arabic	ʔ a s w a d	ʔ a s w a d	......
+ratcliffearabic:Classical Arabic > Arabic|8_black	BLACK	Maltese	ʔ a s w a d	- i s w e d	xx..x.
+ratcliffearabic:Classical Arabic > Arabic|8_black	BLACK	Soukhne Arabic	ʔ a s w a d	ʔ a s w a d	......
+ratcliffearabic:Classical Arabic > Arabic|8_black	BLACK	Yemenite (Judeo-Yemeni) Arabic	ʔ a s w a d	ʔ a s w a d	......
+ratcliffearabic:Classical Arabic > Arabic|90_tree	TREE	Aqra-Arbil (Judeo-Iraqi) Arabic	ʃ a dʒ a r a h	ʃ ə dʒ a rˤ a -	.x..x.x
+ratcliffearabic:Classical Arabic > Arabic|90_tree	TREE	Cairene (Egyptian) Arabic	ʃ a dʒ a r a h	ʃ a ɡ a r a -	..x...x
+ratcliffearabic:Classical Arabic > Arabic|90_tree	TREE	Damascene (Levantine) Arabic	ʃ a dʒ a r a h	ʃ a dʒ a r a -	......x
+ratcliffearabic:Classical Arabic > Arabic|90_tree	TREE	Gulf Arabic	ʃ a dʒ a r a h	ʃ i dʒ a r a -	.x....x
+ratcliffearabic:Classical Arabic > Arabic|90_tree	TREE	Iraqi (Judeo-Iraqi) Arabic	ʃ a dʒ a r a h	ʃ a dʒ a r a -	......x
+ratcliffearabic:Classical Arabic > Arabic|90_tree	TREE	Ki-Nubi	ʃ a dʒ a r a h	ʃ e d e r - -	.xxx.xx
+ratcliffearabic:Classical Arabic > Arabic|90_tree	TREE	Maltese	ʃ a dʒ a r a h	s i dʒ - r a -	xx.x..x
+ratcliffearabic:Classical Arabic > Arabic|90_tree	TREE	Moroccan Arabic	ʃ a dʒ a r a h	ʃ e ʒ - r a -	.xxx..x
+ratcliffearabic:Classical Arabic > Arabic|90_tree	TREE	Nigerian (Chadian) Arabic	ʃ a dʒ a r a h	ʃ a d a r a -	..x...x
+ratcliffearabic:Classical Arabic > Arabic|90_tree	TREE	Soukhne Arabic	ʃ a dʒ a r a h	ʃ a ts a rˤ a -	..x.x.x
+ratcliffearabic:Classical Arabic > Arabic|90_tree	TREE	Yemenite (Judeo-Yemeni) Arabic	ʃ a dʒ a r a h	ʃ i dʒ a r e h	.x...x.
+ratcliffearabic:Classical Arabic > Arabic|91_two	TWO	Aqra-Arbil (Judeo-Iraqi) Arabic	i θ n aː n i	- t n a n -	xx...x
+ratcliffearabic:Classical Arabic > Arabic|91_two	TWO	Bukhari Arabic	i θ n aː n i	u s n aː - -	xx..xx
+ratcliffearabic:Classical Arabic > Arabic|91_two	TWO	Cairene (Egyptian) Arabic	i θ n aː n i	i t n e n -	.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|91_two	TWO	Cypriot Arabic	i θ n aː n i	- x n ai̯ n y	xx.x.x
+ratcliffearabic:Classical Arabic > Arabic|91_two	TWO	Damascene (Levantine) Arabic	i θ n aː n i	- t n eː n -	xx.x.x
+ratcliffearabic:Classical Arabic > Arabic|91_two	TWO	Gulf Arabic	i θ n aː n i	i θ n eː n -	...x.x
+ratcliffearabic:Classical Arabic > Arabic|91_two	TWO	Iraqi (Judeo-Iraqi) Arabic	i θ n aː n i	- θ n eː n -	x..x.x
+ratcliffearabic:Classical Arabic > Arabic|91_two	TWO	Ki-Nubi	i θ n aː n i	- t n i n -	xx.x.x
+ratcliffearabic:Classical Arabic > Arabic|91_two	TWO	Maltese	i θ n aː n i	- t n e n -	xx.x.x
+ratcliffearabic:Classical Arabic > Arabic|91_two	TWO	Nigerian (Chadian) Arabic	i θ n aː n i	- t n eː n -	xx.x.x
+ratcliffearabic:Classical Arabic > Arabic|91_two	TWO	Soukhne Arabic	i θ n aː n i	- θ n eː n -	x..x.x
+ratcliffearabic:Classical Arabic > Arabic|91_two	TWO	Yemenite (Judeo-Yemeni) Arabic	i θ n aː n i	- θ n a n -	x....x
+ratcliffearabic:Classical Arabic > Arabic|92_walk	WALK	Aqra-Arbil (Judeo-Iraqi) Arabic	m a ʃ aː	m ə ʃ i	.x.x
+ratcliffearabic:Classical Arabic > Arabic|92_walk	WALK	Cairene (Egyptian) Arabic	m a ʃ aː	m i ʃ i	.x.x
+ratcliffearabic:Classical Arabic > Arabic|92_walk	WALK	Cypriot Arabic	m a ʃ aː	m i ʃ i	.x.x
+ratcliffearabic:Classical Arabic > Arabic|92_walk	WALK	Damascene (Levantine) Arabic	m a ʃ aː	m ə ʃ i	.x.x
+ratcliffearabic:Classical Arabic > Arabic|92_walk	WALK	Gulf Arabic	m a ʃ aː	m i ʃ a	.x..
+ratcliffearabic:Classical Arabic > Arabic|92_walk	WALK	Iraqi (Judeo-Iraqi) Arabic	m a ʃ aː	m i ʃ a	.x..
+ratcliffearabic:Classical Arabic > Arabic|92_walk	WALK	Ki-Nubi	m a ʃ aː	m a ʃ i	...x
+ratcliffearabic:Classical Arabic > Arabic|92_walk	WALK	Maltese	m a ʃ aː	m e ʃ a	.x..
+ratcliffearabic:Classical Arabic > Arabic|92_walk	WALK	Moroccan Arabic	m a ʃ aː	m - ʃ a	.x..
+ratcliffearabic:Classical Arabic > Arabic|92_walk	WALK	Nigerian (Chadian) Arabic	m a ʃ aː	m a ʃ a	....
+ratcliffearabic:Classical Arabic > Arabic|92_walk	WALK	Soukhne Arabic	m a ʃ aː	m a ʃ a	....
+ratcliffearabic:Classical Arabic > Arabic|94_water	WATER	Aqra-Arbil (Judeo-Iraqi) Arabic	m aː ʔ	m aː j	..x
+ratcliffearabic:Classical Arabic > Arabic|94_water	WATER	Bukhari Arabic	m aː ʔ	m aː -	..x
+ratcliffearabic:Classical Arabic > Arabic|94_water	WATER	Cairene (Egyptian) Arabic	m aː ʔ	m ai̯ j	.xx
+ratcliffearabic:Classical Arabic > Arabic|94_water	WATER	Cypriot Arabic	m aː ʔ	m w h	.xx
+ratcliffearabic:Classical Arabic > Arabic|94_water	WATER	Damascene (Levantine) Arabic	m aː ʔ	mˤ a jː	x.x
+ratcliffearabic:Classical Arabic > Arabic|94_water	WATER	Gulf Arabic	m aː ʔ	m aːi̯ -	.xx
+ratcliffearabic:Classical Arabic > Arabic|94_water	WATER	Iraqi (Judeo-Iraqi) Arabic	m aː ʔ	m aː j	..x
+ratcliffearabic:Classical Arabic > Arabic|94_water	WATER	Ki-Nubi	m aː ʔ	m o o	.xx
+ratcliffearabic:Classical Arabic > Arabic|94_water	WATER	Maltese	m aː ʔ	m a -	..x
+ratcliffearabic:Classical Arabic > Arabic|94_water	WATER	Moroccan Arabic	m aː ʔ	m a -	..x
+ratcliffearabic:Classical Arabic > Arabic|94_water	WATER	Nigerian (Chadian) Arabic	m aː ʔ	m e -	.xx
+ratcliffearabic:Classical Arabic > Arabic|94_water	WATER	Soukhne Arabic	m aː ʔ	m i -	.xx
+ratcliffearabic:Classical Arabic > Arabic|94_water	WATER	Yemenite (Judeo-Yemeni) Arabic	m aː ʔ	m aː ʔ	...
+ratcliffearabic:Classical Arabic > Arabic|95_we	WE	Aqra-Arbil (Judeo-Iraqi) Arabic	n a ħ n u	n ə ħ n a	.x..x
+ratcliffearabic:Classical Arabic > Arabic|95_we	WE	Bukhari Arabic	n a ħ n u	n ə ħ n a	.x..x
+ratcliffearabic:Classical Arabic > Arabic|95_we	WE	Cairene (Egyptian) Arabic	n a ħ n u	- i ħ n a	xx..x
+ratcliffearabic:Classical Arabic > Arabic|95_we	WE	Cypriot Arabic	n a ħ n u	n - ħ n -	.x..x
+ratcliffearabic:Classical Arabic > Arabic|95_we	WE	Damascene (Levantine) Arabic	n a ħ n u	n ə ħ n a	.x..x
+ratcliffearabic:Classical Arabic > Arabic|95_we	WE	Gulf Arabic	n a ħ n u	- i ħ n a	xx..x
+ratcliffearabic:Classical Arabic > Arabic|95_we	WE	Iraqi (Judeo-Iraqi) Arabic	n a ħ n u	ʔ i ħ n a	xx..x
+ratcliffearabic:Classical Arabic > Arabic|95_we	WE	Ki-Nubi	n a ħ n u	- i - n a	xxx.x
+ratcliffearabic:Classical Arabic > Arabic|95_we	WE	Maltese	n a ħ n u	- a ħ n a	x...x
+ratcliffearabic:Classical Arabic > Arabic|95_we	WE	Moroccan Arabic	n a ħ n u	- - ħ n a	xx..x
+ratcliffearabic:Classical Arabic > Arabic|95_we	WE	Nigerian (Chadian) Arabic	n a ħ n u	n iː - n a	.xx.x
+ratcliffearabic:Classical Arabic > Arabic|95_we	WE	Soukhne Arabic	n a ħ n u	- i ħ n a	xx..x
+ratcliffearabic:Classical Arabic > Arabic|95_we	WE	Yemenite (Judeo-Yemeni) Arabic	n a ħ n u	- - ħ n a	xx..x
+ratcliffearabic:Classical Arabic > Arabic|96_what	WHAT	Yemenite (Judeo-Yemeni) Arabic	m aː	m aː	..
+ratcliffearabic:Classical Arabic > Arabic|97_white	WHITE	Aqra-Arbil (Judeo-Iraqi) Arabic	ʔ a b j a dˤ	ʔ a b j a dˤ	......
+ratcliffearabic:Classical Arabic > Arabic|97_white	WHITE	Bukhari Arabic	ʔ a b j a dˤ	ʔ a b j a d	.....x
+ratcliffearabic:Classical Arabic > Arabic|97_white	WHITE	Cairene (Egyptian) Arabic	ʔ a b j a dˤ	- a b j a dˤ	x.....
+ratcliffearabic:Classical Arabic > Arabic|97_white	WHITE	Cypriot Arabic	ʔ a b j a dˤ	- a p k a dˤ	x.xx..
+ratcliffearabic:Classical Arabic > Arabic|97_white	WHITE	Damascene (Levantine) Arabic	ʔ a b j a dˤ	ʔ a b j a dˤ	......
+ratcliffearabic:Classical Arabic > Arabic|97_white	WHITE	Gulf Arabic	ʔ a b j a dˤ	ʔ a b j a dˤ	......
+ratcliffearabic:Classical Arabic > Arabic|97_white	WHITE	Iraqi (Judeo-Iraqi) Arabic	ʔ a b j a dˤ	ʔ a b j a ðˤ	.....x
+ratcliffearabic:Classical Arabic > Arabic|97_white	WHITE	Ki-Nubi	ʔ a b j a dˤ	- a b j a -	x....x
+ratcliffearabic:Classical Arabic > Arabic|97_white	WHITE	Maltese	ʔ a b j a dˤ	- a b j a d	x....x
+ratcliffearabic:Classical Arabic > Arabic|97_white	WHITE	Moroccan Arabic	ʔ a b j a dˤ	- - b j e dˤ	xx..x.
+ratcliffearabic:Classical Arabic > Arabic|97_white	WHITE	Nigerian (Chadian) Arabic	ʔ a b j a dˤ	- a b j a dˤ	x.....
+ratcliffearabic:Classical Arabic > Arabic|97_white	WHITE	Soukhne Arabic	ʔ a b j a dˤ	ʔ a b j a ðˤ	.....x
+ratcliffearabic:Classical Arabic > Arabic|97_white	WHITE	Yemenite (Judeo-Yemeni) Arabic	ʔ a b j a dˤ	ʔ a b j a ðˤ	.....x
+ratcliffearabic:Classical Arabic > Arabic|98_who	WHO	Aqra-Arbil (Judeo-Iraqi) Arabic	m a n	m ə n	.x.
+ratcliffearabic:Classical Arabic > Arabic|98_who	WHO	Bukhari Arabic	m a n	m iː n	.x.
+ratcliffearabic:Classical Arabic > Arabic|98_who	WHO	Cairene (Egyptian) Arabic	m a n	m iː n	.x.
+ratcliffearabic:Classical Arabic > Arabic|98_who	WHO	Cypriot Arabic	m a n	m - n	.x.
+ratcliffearabic:Classical Arabic > Arabic|98_who	WHO	Damascene (Levantine) Arabic	m a n	m iː n	.x.
+ratcliffearabic:Classical Arabic > Arabic|98_who	WHO	Gulf Arabic	m a n	m i n	.x.
+ratcliffearabic:Classical Arabic > Arabic|98_who	WHO	Iraqi (Judeo-Iraqi) Arabic	m a n	m i n	.x.
+ratcliffearabic:Classical Arabic > Arabic|98_who	WHO	Ki-Nubi	m a n	m u n	.x.
+ratcliffearabic:Classical Arabic > Arabic|98_who	WHO	Maltese	m a n	m i n	.x.
+ratcliffearabic:Classical Arabic > Arabic|98_who	WHO	Nigerian (Chadian) Arabic	m a n	m i n	.x.
+ratcliffearabic:Classical Arabic > Arabic|98_who	WHO	Soukhne Arabic	m a n	m aː n	...
+ratcliffearabic:Classical Arabic > Arabic|98_who	WHO	Yemenite (Judeo-Yemeni) Arabic	m a n	m a n	...
+ratcliffearabic:Classical Arabic > Arabic|99_woman	WOMAN	Aqra-Arbil (Judeo-Iraqi) Arabic	i m r a ʔ a h	- m - a rˤ a -	x.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|99_woman	WOMAN	Bukhari Arabic	i m r a ʔ a h	i m r a ʔ a t	......x
+ratcliffearabic:Classical Arabic > Arabic|99_woman	WOMAN	Cypriot Arabic	i m r a ʔ a h	- m r a ʔ - -	x....xx
+ratcliffearabic:Classical Arabic > Arabic|99_woman	WOMAN	Damascene (Levantine) Arabic	i m r a ʔ a h	- m - a r a -	x.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|99_woman	WOMAN	Gulf Arabic	i m r a ʔ a h	- m - a r a -	x.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|99_woman	WOMAN	Iraqi (Judeo-Iraqi) Arabic	i m r a ʔ a h	- m - a r a -	x.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|99_woman	WOMAN	Ki-Nubi	i m r a ʔ a h	- m r - j a -	x..xx.x
+ratcliffearabic:Classical Arabic > Arabic|99_woman	WOMAN	Maltese	i m r a ʔ a h	- m - a r a -	x.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|99_woman	WOMAN	Moroccan Arabic	i m r a ʔ a h	- m r a - - -	x...xxx
+ratcliffearabic:Classical Arabic > Arabic|99_woman	WOMAN	Nigerian (Chadian) Arabic	i m r a ʔ a h	- m - a r a -	x.x.x.x
+ratcliffearabic:Classical Arabic > Arabic|99_woman	WOMAN	Soukhne Arabic	i m r a ʔ a h	- m r a jː i -	x...xxx
+ratcliffearabic:Classical Arabic > Arabic|99_woman	WOMAN	Yemenite (Judeo-Yemeni) Arabic	i m r a ʔ a h	- m - a r e h	x.x.xx.
+ratcliffearabic:Classical Arabic > Arabic|9_blood	BLOOD	Aqra-Arbil (Judeo-Iraqi) Arabic	d a m	d a m	...
+ratcliffearabic:Classical Arabic > Arabic|9_blood	BLOOD	Bukhari Arabic	d a m	d a m	...
+ratcliffearabic:Classical Arabic > Arabic|9_blood	BLOOD	Cairene (Egyptian) Arabic	d a m	d a m	...
+ratcliffearabic:Classical Arabic > Arabic|9_blood	BLOOD	Cypriot Arabic	d a m	d - m	.x.
+ratcliffearabic:Classical Arabic > Arabic|9_blood	BLOOD	Damascene (Levantine) Arabic	d a m	d a m	...
+ratcliffearabic:Classical Arabic > Arabic|9_blood	BLOOD	Gulf Arabic	d a m	d a m	...
+ratcliffearabic:Classical Arabic > Arabic|9_blood	BLOOD	Iraqi (Judeo-Iraqi) Arabic	d a m	d a m	...
+ratcliffearabic:Classical Arabic > Arabic|9_blood	BLOOD	Ki-Nubi	d a m	d u m	.x.
+ratcliffearabic:Classical Arabic > Arabic|9_blood	BLOOD	Maltese	d a m	d e m	.x.
+ratcliffearabic:Classical Arabic > Arabic|9_blood	BLOOD	Moroccan Arabic	d a m	d e mː	.xx
+ratcliffearabic:Classical Arabic > Arabic|9_blood	BLOOD	Nigerian (Chadian) Arabic	d a m	d a mː	..x
+ratcliffearabic:Classical Arabic > Arabic|9_blood	BLOOD	Soukhne Arabic	d a m	d a m	...
+ratcliffearabic:Classical Arabic > Arabic|9_blood	BLOOD	Yemenite (Judeo-Yemeni) Arabic	d a m	d a m	...

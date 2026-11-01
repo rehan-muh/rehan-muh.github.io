@@ -1,0 +1,753 @@
+Set	Concept	Language	Ancestor	Aligned	Changed
+uralex:Proto-Uralic > Uralic|uralex_1-a	fire	Erzya	t u l ɯ	t o l -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_1-a	fire	Kildin Saami	t u l ɯ	t oː lː -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_1-a	fire	Meadow Mari	t u l ɯ	t u l -	...x
+uralex:Proto-Uralic > Uralic|uralex_1-a	fire	Nganasan	t u l ɯ	t u j -	..xx
+uralex:Proto-Uralic > Uralic|uralex_1-a	fire	Selkup	t u l ɯ	t yː - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_1-a	fire	Standard Estonian	t u l ɯ	t u l i	...x
+uralex:Proto-Uralic > Uralic|uralex_1-a	fire	Standard Finnish	t u l ɯ	t u l i	...x
+uralex:Proto-Uralic > Uralic|uralex_1-a	fire	Udmurt	t u l ɯ	t ɯ l -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_10-a	you_sg	Erzya	t i	t o	.x
+uralex:Proto-Uralic > Uralic|uralex_10-a	you_sg	Hungarian	t i	t ɛ	.x
+uralex:Proto-Uralic > Uralic|uralex_10-a	you_sg	Kildin Saami	t i	t oː	.x
+uralex:Proto-Uralic > Uralic|uralex_10-a	you_sg	Komi-Zyrian	t i	t e	.x
+uralex:Proto-Uralic > Uralic|uralex_10-a	you_sg	Meadow Mari	t i	t ə	.x
+uralex:Proto-Uralic > Uralic|uralex_10-a	you_sg	Nganasan	t i	t ə	.x
+uralex:Proto-Uralic > Uralic|uralex_10-a	you_sg	Selkup	t i	t ɑ	.x
+uralex:Proto-Uralic > Uralic|uralex_10-a	you_sg	Standard Estonian	t i	s ɑ	xx
+uralex:Proto-Uralic > Uralic|uralex_10-a	you_sg	Standard Finnish	t i	s i	x.
+uralex:Proto-Uralic > Uralic|uralex_10-a	you_sg	Udmurt	t i	t o	.x
+uralex:Proto-Uralic > Uralic|uralex_100-f	hard	Erzya	k æ m æ	k e m e	.x.x
+uralex:Proto-Uralic > Uralic|uralex_100-f	hard	Hungarian	k æ m æ	k ɛ m eː	.x.x
+uralex:Proto-Uralic > Uralic|uralex_104-j	animal	Selkup	ɕ u r m ɯ	s uː r m -	x...x
+uralex:Proto-Uralic > Uralic|uralex_108-e	belly	Kildin Saami	tɕ o w j a	t u v - -	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_108-e	belly	Nganasan	tɕ o w j a	ʧ ɑ b - ə	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_109-g	berry	Nganasan	o s a	u t ɑ	xxx
+uralex:Proto-Uralic > Uralic|uralex_109-g	berry	Udmurt	o s a	o r ɯ	.xx
+uralex:Proto-Uralic > Uralic|uralex_109-g	berry	Vakh-Vasyugan Khanty	o s a	u l -	xxx
+uralex:Proto-Uralic > Uralic|uralex_11-a	come	Meadow Mari	t u l ɯ	t o l ɑ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_11-a	come	Nganasan	t u l ɯ	t u j ɑ	..xx
+uralex:Proto-Uralic > Uralic|uralex_11-a	come	Selkup	t u l ɯ	t yː - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_11-a	come	Standard Estonian	t u l ɯ	t u lː ɑ	..xx
+uralex:Proto-Uralic > Uralic|uralex_11-a	come	Standard Finnish	t u l ɯ	t u lː ɑ	..xx
+uralex:Proto-Uralic > Uralic|uralex_110-b	breathe	Kildin Saami	w a j ŋ ɯ	v uː jː n e	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_110-b	breathe	Nganasan	w a j ŋ ɯ	b ɑ ʧ dʲ ɑ	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_110-b	breathe	Selkup	w a j ŋ ɯ	k u j - -	xx.xx
+uralex:Proto-Uralic > Uralic|uralex_112-a	claw_nail	Erzya	k y n tʃ i	k e n ʒ e	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_112-a	claw_nail	Kildin Saami	k y n tʃ i	k eː nː c -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_112-a	claw_nail	Komi-Zyrian	k y n tʃ i	g ɯ - ʒ -	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_112-a	claw_nail	Meadow Mari	k y n tʃ i	k y - ʧ -	..x.x
+uralex:Proto-Uralic > Uralic|uralex_112-a	claw_nail	Nganasan	k y n tʃ i	k ə - t u	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_112-a	claw_nail	Sosva Mansi	k y n tʃ i	k o - s -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_112-a	claw_nail	Standard Estonian	k y n tʃ i	k yː - s -	..xxx
+uralex:Proto-Uralic > Uralic|uralex_112-a	claw_nail	Standard Finnish	k y n tʃ i	k y n s i	...x.
+uralex:Proto-Uralic > Uralic|uralex_112-a	claw_nail	Udmurt	k y n tʃ i	g i - ʒ ɯ	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_112-a	claw_nail	Vakh-Vasyugan Khanty	k y n tʃ i	k ø ɳ ʧ -	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_113-a	cloud	Erzya	p i l w i	p e ʎ - -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_113-a	cloud	Hungarian	p i l w i	f ɛ l ɦ øː	xx.xx
+uralex:Proto-Uralic > Uralic|uralex_113-a	cloud	Kildin Saami	p i l w i	p eː l - -	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_113-a	cloud	Meadow Mari	p i l w i	p ə l - -	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_113-a	cloud	Standard Estonian	p i l w i	p i l v -	...xx
+uralex:Proto-Uralic > Uralic|uralex_113-a	cloud	Standard Finnish	p i l w i	p i l ʋ i	...x.
+uralex:Proto-Uralic > Uralic|uralex_113-a	cloud	Udmurt	p i l w i	p i ʎ - e	..xxx
+uralex:Proto-Uralic > Uralic|uralex_113-a	cloud	Vakh-Vasyugan Khanty	p i l w i	p ə l - ə	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_115-b	count	Erzya	l u k ɯ	l o v o	.xxx
+uralex:Proto-Uralic > Uralic|uralex_115-b	count	Kildin Saami	l u k ɯ	l oː gː e	.xxx
+uralex:Proto-Uralic > Uralic|uralex_115-b	count	Komi-Zyrian	l u k ɯ	l ɯ dʲ ɯ	.xx.
+uralex:Proto-Uralic > Uralic|uralex_115-b	count	Meadow Mari	l u k ɯ	l u ð ɑ	..xx
+uralex:Proto-Uralic > Uralic|uralex_115-b	count	Sosva Mansi	l u k ɯ	l o w i	.xxx
+uralex:Proto-Uralic > Uralic|uralex_115-b	count	Standard Estonian	l u k ɯ	l u k e	...x
+uralex:Proto-Uralic > Uralic|uralex_115-b	count	Udmurt	l u k ɯ	l ɯ ʥː ɯ	.xx.
+uralex:Proto-Uralic > Uralic|uralex_115-b	count	Vakh-Vasyugan Khanty	l u k ɯ	l o ŋ ə	.xxx
+uralex:Proto-Uralic > Uralic|uralex_116-h	cut	Erzya	p e tʃ k æ	p e ʧ k e	....x
+uralex:Proto-Uralic > Uralic|uralex_116-h	cut	Meadow Mari	p e tʃ k æ	p y ʧ k ɑ	.x..x
+uralex:Proto-Uralic > Uralic|uralex_117-f	day	Nganasan	j e l æ	dʲ ɑ l ɯ	xx.x
+uralex:Proto-Uralic > Uralic|uralex_117-f	day	Selkup	j e l æ	ʨ eː l ə	x..x
+uralex:Proto-Uralic > Uralic|uralex_118-a	die	Erzya	k a l ɯ	k u l o	.x.x
+uralex:Proto-Uralic > Uralic|uralex_118-a	die	Hungarian	k a l ɯ	k ɒ l -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_118-a	die	Komi-Zyrian	k a l ɯ	k u v ɯ	.xx.
+uralex:Proto-Uralic > Uralic|uralex_118-a	die	Meadow Mari	k a l ɯ	k o l e	.x.x
+uralex:Proto-Uralic > Uralic|uralex_118-a	die	Nganasan	k a l ɯ	k u dʲ ɑ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_118-a	die	Selkup	k a l ɯ	q uː - -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_118-a	die	Sosva Mansi	k a l ɯ	χ oː l i	xx.x
+uralex:Proto-Uralic > Uralic|uralex_118-a	die	Standard Finnish	k a l ɯ	k o lː ɑ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_118-a	die	Udmurt	k a l ɯ	k u l ɯ	.x..
+uralex:Proto-Uralic > Uralic|uralex_118-a	die	Vakh-Vasyugan Khanty	k a l ɯ	k ɑ l ɑ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_119-a	dig	Kildin Saami	k o j w a	k u jː v e	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_119-a	dig	Standard Estonian	k o j w a	k ɑ e v ɑ	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_119-a	dig	Standard Finnish	k o j w a	k ɑ i ʋ ɑː	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_120-c	dry	Erzya	k u ɕ k a	k o ɕ k e	.x..x
+uralex:Proto-Uralic > Uralic|uralex_120-c	dry	Kildin Saami	k u ɕ k a	k ɒː ʃʲ k e	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_120-c	dry	Nganasan	k u ɕ k a	k o ɕ y ə	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_123-a	father	Kildin Saami	i tɕ æ	a ʒ -	xxx
+uralex:Proto-Uralic > Uralic|uralex_123-a	father	Nganasan	i tɕ æ	e s ɯ	xxx
+uralex:Proto-Uralic > Uralic|uralex_123-a	father	Selkup	i tɕ æ	ɤ s ə	xxx
+uralex:Proto-Uralic > Uralic|uralex_123-a	father	Sosva Mansi	i tɕ æ	ɑː ɕ -	xxx
+uralex:Proto-Uralic > Uralic|uralex_123-a	father	Standard Estonian	i tɕ æ	i s ɑ	.xx
+uralex:Proto-Uralic > Uralic|uralex_123-a	father	Standard Finnish	i tɕ æ	i s æ	.x.
+uralex:Proto-Uralic > Uralic|uralex_124-a	fear	Erzya	p e l i	p e ʎ e	..xx
+uralex:Proto-Uralic > Uralic|uralex_124-a	fear	Hungarian	p e l i	f eː l -	x..x
+uralex:Proto-Uralic > Uralic|uralex_124-a	fear	Kildin Saami	p e l i	p eː lː e	..xx
+uralex:Proto-Uralic > Uralic|uralex_124-a	fear	Komi-Zyrian	p e l i	p o v ɯ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_124-a	fear	Nganasan	p e l i	h ɯ l ɯ	xx.x
+uralex:Proto-Uralic > Uralic|uralex_124-a	fear	Sosva Mansi	p e l i	p i l i	.x..
+uralex:Proto-Uralic > Uralic|uralex_124-a	fear	Standard Finnish	p e l i	p e l æ	...x
+uralex:Proto-Uralic > Uralic|uralex_124-a	fear	Vakh-Vasyugan Khanty	p e l i	p ə l -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_125-a	feather	Erzya	t u l k a	t o l g ɑ	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_125-a	feather	Hungarian	t u l k a	t o lː - -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_125-a	feather	Nganasan	t u l k a	t o - t ə	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_125-a	feather	Selkup	t u l k a	t uː - - -	..xxx
+uralex:Proto-Uralic > Uralic|uralex_125-a	feather	Sosva Mansi	t u l k a	t o w - ə	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_125-a	feather	Standard Estonian	t u l k a	s u l k -	x...x
+uralex:Proto-Uralic > Uralic|uralex_125-a	feather	Standard Finnish	t u l k a	s u l k ɑ	x...x
+uralex:Proto-Uralic > Uralic|uralex_125-a	feather	Udmurt	t u l k a	t ɯ l - ɯ	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_125-a	feather	Vakh-Vasyugan Khanty	t u l k a	t o - ɣ ə	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_127-b	fight	Erzya	t o r ə	t u rʲ e	.xxx
+uralex:Proto-Uralic > Uralic|uralex_127-b	fight	Kildin Saami	t o r ə	t u rː e	.xxx
+uralex:Proto-Uralic > Uralic|uralex_127-b	fight	Nganasan	t o r ə	t o r ɑ	...x
+uralex:Proto-Uralic > Uralic|uralex_128-a	five	Erzya	w i j t t i	v e - tʲ - e	xxxxxx
+uralex:Proto-Uralic > Uralic|uralex_128-a	five	Hungarian	w i j t t i	- ø - t - -	xxx.xx
+uralex:Proto-Uralic > Uralic|uralex_128-a	five	Kildin Saami	w i j t t i	v ɨ - dː - -	xxxxxx
+uralex:Proto-Uralic > Uralic|uralex_128-a	five	Komi-Zyrian	w i j t t i	v i - t - -	x.x.xx
+uralex:Proto-Uralic > Uralic|uralex_128-a	five	Meadow Mari	w i j t t i	β i - ʧ - -	x.xxxx
+uralex:Proto-Uralic > Uralic|uralex_128-a	five	Sosva Mansi	w i j t t i	- ɑ - t - -	xxx.xx
+uralex:Proto-Uralic > Uralic|uralex_128-a	five	Standard Estonian	w i j t t i	v iː - s - -	x.xxxx
+uralex:Proto-Uralic > Uralic|uralex_128-a	five	Standard Finnish	w i j t t i	ʋ iː - s - i	x.xxx.
+uralex:Proto-Uralic > Uralic|uralex_128-a	five	Udmurt	w i j t t i	v i - tʲ - -	x.xxxx
+uralex:Proto-Uralic > Uralic|uralex_128-a	five	Vakh-Vasyugan Khanty	w i j t t i	w e - t - -	.xx.xx
+uralex:Proto-Uralic > Uralic|uralex_13-a	rain	Nganasan	ɕ a ð a	s o r ɑ	xxxx
+uralex:Proto-Uralic > Uralic|uralex_13-a	rain	Selkup	ɕ a ð a	s o ʧ æ	xxxx
+uralex:Proto-Uralic > Uralic|uralex_13-a	rain	Standard Estonian	ɕ a ð a	s ɑ t ɑ	xxxx
+uralex:Proto-Uralic > Uralic|uralex_13-a	rain	Standard Finnish	ɕ a ð a	s ɑ d e	xxxx
+uralex:Proto-Uralic > Uralic|uralex_133-j	fog	Hungarian	k y n t ə	k ø - d -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_134-a	four	Erzya	ɲ e l j æ	ɲ i ʎ - e	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_134-a	four	Hungarian	ɲ e l j æ	n eː ɟ - -	x.xxx
+uralex:Proto-Uralic > Uralic|uralex_134-a	four	Kildin Saami	ɲ e l j æ	ɲ i ʎː - -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_134-a	four	Komi-Zyrian	ɲ e l j æ	ɲ o ʎ - -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_134-a	four	Meadow Mari	ɲ e l j æ	n ə l - -	xx.xx
+uralex:Proto-Uralic > Uralic|uralex_134-a	four	Sosva Mansi	ɲ e l j æ	ɲ i l - ɑ	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_134-a	four	Standard Estonian	ɲ e l j æ	n e l - i	x..xx
+uralex:Proto-Uralic > Uralic|uralex_134-a	four	Standard Finnish	ɲ e l j æ	n e l j æ	x....
+uralex:Proto-Uralic > Uralic|uralex_134-a	four	Udmurt	ɲ e l j æ	ɲ ɯ ʎ - -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_134-a	four	Vakh-Vasyugan Khanty	ɲ e l j æ	ɲ ə l - ə	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_136-d	full	Komi-Zyrian	t y r i	t ɯ r -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_136-d	full	Selkup	t y r i	t iː r ə	.x.x
+uralex:Proto-Uralic > Uralic|uralex_136-d	full	Udmurt	t y r i	t ɯ r -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_139-a	guts	Erzya	ɕ a l ɯ	ɕ u l o	.x.x
+uralex:Proto-Uralic > Uralic|uralex_139-a	guts	Kildin Saami	ɕ a l ɯ	ʃ u lːʲ -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_139-a	guts	Komi-Zyrian	ɕ a l ɯ	ɕ u v -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_139-a	guts	Meadow Mari	ɕ a l ɯ	ʃ o l o	xx.x
+uralex:Proto-Uralic > Uralic|uralex_139-a	guts	Standard Estonian	ɕ a l ɯ	s oː l -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_139-a	guts	Standard Finnish	ɕ a l ɯ	s o l i	xx.x
+uralex:Proto-Uralic > Uralic|uralex_139-a	guts	Udmurt	ɕ a l ɯ	ɕ u l -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_139-a	guts	Vakh-Vasyugan Khanty	ɕ a l ɯ	s o l -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_14-a	I	Erzya	m i n	m o n	.x.
+uralex:Proto-Uralic > Uralic|uralex_14-a	I	Hungarian	m i n	- eː n	xx.
+uralex:Proto-Uralic > Uralic|uralex_14-a	I	Kildin Saami	m i n	m u nː	.xx
+uralex:Proto-Uralic > Uralic|uralex_14-a	I	Komi-Zyrian	m i n	m e -	.xx
+uralex:Proto-Uralic > Uralic|uralex_14-a	I	Meadow Mari	m i n	m ə j	.xx
+uralex:Proto-Uralic > Uralic|uralex_14-a	I	Nganasan	m i n	m ə n	.x.
+uralex:Proto-Uralic > Uralic|uralex_14-a	I	Selkup	m i n	m ɑ n	.x.
+uralex:Proto-Uralic > Uralic|uralex_14-a	I	Sosva Mansi	m i n	- ɑ m	xxx
+uralex:Proto-Uralic > Uralic|uralex_14-a	I	Standard Estonian	m i n	m i n	...
+uralex:Proto-Uralic > Uralic|uralex_14-a	I	Standard Finnish	m i n	m i n	...
+uralex:Proto-Uralic > Uralic|uralex_14-a	I	Udmurt	m i n	m o n	.x.
+uralex:Proto-Uralic > Uralic|uralex_14-a	I	Vakh-Vasyugan Khanty	m i n	m æ -	.xx
+uralex:Proto-Uralic > Uralic|uralex_140-a	head	Hungarian	p æ ŋ i	f ɛ j -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_140-a	head	Sosva Mansi	p æ ŋ i	p u ŋ k	.x.x
+uralex:Proto-Uralic > Uralic|uralex_140-a	head	Standard Estonian	p æ ŋ i	p e - ɑ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_140-a	head	Standard Finnish	p æ ŋ i	p æː - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_140-b	head	Kildin Saami	o j w a	u jː v -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_140-b	head	Meadow Mari	o j w a	u j - -	x.xx
+uralex:Proto-Uralic > Uralic|uralex_140-b	head	Nganasan	o j w a	o j b u	..xx
+uralex:Proto-Uralic > Uralic|uralex_141-a	heart	Erzya	ɕ y ð æ m	ɕ e dʲ e -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_141-a	heart	Hungarian	ɕ y ð æ m	s iː v - -	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_141-a	heart	Komi-Zyrian	ɕ y ð æ m	ɕ ɤ l ɤ -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_141-a	heart	Meadow Mari	ɕ y ð æ m	ʃ y m - -	x.xxx
+uralex:Proto-Uralic > Uralic|uralex_141-a	heart	Nganasan	ɕ y ð æ m	s əː - - -	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_141-a	heart	Selkup	ɕ y ð æ m	s iː ʨ ə -	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_141-a	heart	Sosva Mansi	ɕ y ð æ m	s i m - -	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_141-a	heart	Standard Estonian	ɕ y ð æ m	s y d ɑ -	x.xxx
+uralex:Proto-Uralic > Uralic|uralex_141-a	heart	Standard Finnish	ɕ y ð æ m	s y d æ -	x.x.x
+uralex:Proto-Uralic > Uralic|uralex_141-a	heart	Udmurt	ɕ y ð æ m	ɕ u l e -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_141-a	heart	Vakh-Vasyugan Khanty	ɕ y ð æ m	s ə m - -	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_142-a	here	Erzya	t æ k æ	tʲ e s e	xxxx
+uralex:Proto-Uralic > Uralic|uralex_142-a	here	Kildin Saami	t æ k æ	t e t -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_142-a	here	Komi-Zyrian	t æ k æ	t ɑ n -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_142-a	here	Meadow Mari	t æ k æ	t ə t e	.xxx
+uralex:Proto-Uralic > Uralic|uralex_142-a	here	Selkup	t æ k æ	t i t ə	.xxx
+uralex:Proto-Uralic > Uralic|uralex_142-a	here	Sosva Mansi	t æ k æ	t i t -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_142-a	here	Standard Finnish	t æ k æ	t æː lː æ	..x.
+uralex:Proto-Uralic > Uralic|uralex_142-a	here	Udmurt	t æ k æ	t ɑ t ɯ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_142-a	here	Vakh-Vasyugan Khanty	t æ k æ	t ə t -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_145-k	husband	Nganasan	k o j e m ə	k u dʲ u - -	.xxxxx
+uralex:Proto-Uralic > Uralic|uralex_145-k	husband	Sosva Mansi	k o j e m ə	χ u m - - -	xxxxxx
+uralex:Proto-Uralic > Uralic|uralex_145-k	husband	Vakh-Vasyugan Khanty	k o j e m ə	k u - - - -	.xxxxx
+uralex:Proto-Uralic > Uralic|uralex_148-b	lake	Hungarian	t o ɣ ɯ	t oː - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_148-b	lake	Komi-Zyrian	t o ɣ ɯ	t ɯ - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_148-b	lake	Nganasan	t o ɣ ɯ	t u k u	.xxx
+uralex:Proto-Uralic > Uralic|uralex_148-b	lake	Selkup	t o ɣ ɯ	t oː - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_148-b	lake	Udmurt	t o ɣ ɯ	t ɯ - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_15-a	louse	Hungarian	t æ j i	t ɛ t yː	.xxx
+uralex:Proto-Uralic > Uralic|uralex_15-a	louse	Kildin Saami	t æ j i	t ɨ h kʲ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_15-a	louse	Komi-Zyrian	t æ j i	t o j -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_15-a	louse	Meadow Mari	t æ j i	t i - j	.xxx
+uralex:Proto-Uralic > Uralic|uralex_15-a	louse	Sosva Mansi	t æ j i	t ɑː k ə	.xxx
+uralex:Proto-Uralic > Uralic|uralex_15-a	louse	Standard Estonian	t æ j i	t æ - i	..x.
+uralex:Proto-Uralic > Uralic|uralex_15-a	louse	Standard Finnish	t æ j i	t æ - i	..x.
+uralex:Proto-Uralic > Uralic|uralex_15-a	louse	Udmurt	t æ j i	t e j -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_15-a	louse	Vakh-Vasyugan Khanty	t æ j i	t ø ɣ ə	.xxx
+uralex:Proto-Uralic > Uralic|uralex_151-a	live	Hungarian	e l æ	eː l -	..x
+uralex:Proto-Uralic > Uralic|uralex_151-a	live	Kildin Saami	e l æ	eː lːʲ e	.xx
+uralex:Proto-Uralic > Uralic|uralex_151-a	live	Komi-Zyrian	e l æ	o v ɯ	xxx
+uralex:Proto-Uralic > Uralic|uralex_151-a	live	Meadow Mari	e l æ	i l e	x.x
+uralex:Proto-Uralic > Uralic|uralex_151-a	live	Nganasan	e l æ	i l ɯ	x.x
+uralex:Proto-Uralic > Uralic|uralex_151-a	live	Selkup	e l æ	i l ə	x.x
+uralex:Proto-Uralic > Uralic|uralex_151-a	live	Standard Estonian	e l æ	e l ɑ	..x
+uralex:Proto-Uralic > Uralic|uralex_151-a	live	Standard Finnish	e l æ	e l æː	...
+uralex:Proto-Uralic > Uralic|uralex_151-a	live	Udmurt	e l æ	u l ɯ	x.x
+uralex:Proto-Uralic > Uralic|uralex_152-k	many	Komi-Zyrian	e n æ	u n ɑ	x.x
+uralex:Proto-Uralic > Uralic|uralex_153-a	moon	Erzya	k u ŋ ɯ	k o v -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_153-a	moon	Hungarian	k u ŋ ɯ	h o d -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_153-a	moon	Nganasan	k u ŋ ɯ	k i ʧ ə	.xxx
+uralex:Proto-Uralic > Uralic|uralex_153-a	moon	Standard Estonian	k u ŋ ɯ	k uː - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_153-a	moon	Standard Finnish	k u ŋ ɯ	k uː - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_154-b	mother	Nganasan	e m æ	e m ɯ	..x
+uralex:Proto-Uralic > Uralic|uralex_154-b	mother	Selkup	e m æ	ɤ m ə	x.x
+uralex:Proto-Uralic > Uralic|uralex_154-b	mother	Standard Estonian	e m æ	e m ɑ	..x
+uralex:Proto-Uralic > Uralic|uralex_155-a	mountain	Standard Finnish	w æ r æ	ʋ u r i	xx.x
+uralex:Proto-Uralic > Uralic|uralex_16-a	name	Erzya	n i m i	ʎ e m -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_16-a	name	Hungarian	n i m i	n eː v -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_16-a	name	Kildin Saami	n i m i	n eː mː -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_16-a	name	Komi-Zyrian	n i m i	ɲ i m -	x..x
+uralex:Proto-Uralic > Uralic|uralex_16-a	name	Meadow Mari	n i m i	l y m -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_16-a	name	Nganasan	n i m i	ɲ i m -	x..x
+uralex:Proto-Uralic > Uralic|uralex_16-a	name	Selkup	n i m i	n i m -	...x
+uralex:Proto-Uralic > Uralic|uralex_16-a	name	Sosva Mansi	n i m i	n ɑ m -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_16-a	name	Standard Estonian	n i m i	n i m i	....
+uralex:Proto-Uralic > Uralic|uralex_16-a	name	Standard Finnish	n i m i	n i m i	....
+uralex:Proto-Uralic > Uralic|uralex_16-a	name	Udmurt	n i m i	ɲ i m -	x..x
+uralex:Proto-Uralic > Uralic|uralex_16-a	name	Vakh-Vasyugan Khanty	n i m i	n e m -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_164-a	river	Kildin Saami	j u k a	j oː gː -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_164-a	river	Komi-Zyrian	j u k a	j u - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_164-a	river	Sosva Mansi	j u k a	j ɑː - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_164-a	river	Standard Estonian	j u k a	j ɤ k i	.x.x
+uralex:Proto-Uralic > Uralic|uralex_164-a	river	Standard Finnish	j u k a	j o k i	.x.x
+uralex:Proto-Uralic > Uralic|uralex_164-a	river	Vakh-Vasyugan Khanty	j u k a	j o ɣ ə	.xxx
+uralex:Proto-Uralic > Uralic|uralex_165-i	road	Hungarian	u k t ɯ	uː - t -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_165-i	road	Nganasan	u k t ɯ	u - t ɑ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_165-i	road	Selkup	u k t ɯ	u ə tː ə	.xxx
+uralex:Proto-Uralic > Uralic|uralex_168-b	scratch	Komi-Zyrian	k y n tʃ i	g ɯ ʒ v ɯ	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_168-b	scratch	Nganasan	k y n tʃ i	k ɑ ʔ s ɑ	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_168-b	scratch	Selkup	k y n tʃ i	q ɑ - t ə	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_168-b	scratch	Sosva Mansi	k y n tʃ i	k o n s i	.x.x.
+uralex:Proto-Uralic > Uralic|uralex_168-b	scratch	Vakh-Vasyugan Khanty	k y n tʃ i	k ø ɳ ʧ -	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_177-d	smell	Kildin Saami	i p s i	a pːʲ s e	xx.x
+uralex:Proto-Uralic > Uralic|uralex_177-d	smell	Komi-Zyrian	i p s i	i - s ɑ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_177-d	smell	Meadow Mari	i p s i	y p ʃ i	x.x.
+uralex:Proto-Uralic > Uralic|uralex_177-d	smell	Selkup	i p s i	ɑ p t æ	x.xx
+uralex:Proto-Uralic > Uralic|uralex_177-d	smell	Sosva Mansi	i p s i	ɑ - t ɑ	xxxx
+uralex:Proto-Uralic > Uralic|uralex_177-d	smell	Vakh-Vasyugan Khanty	i p s i	e w s i	xx..
+uralex:Proto-Uralic > Uralic|uralex_179-b	snake	Erzya	k y j i	g u j -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_179-b	snake	Hungarian	k y j i	k iː ɟ oː	.xxx
+uralex:Proto-Uralic > Uralic|uralex_179-b	snake	Komi-Zyrian	k y j i	k ɯ j -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_179-b	snake	Meadow Mari	k y j i	k i ʃ e	.xxx
+uralex:Proto-Uralic > Uralic|uralex_179-b	snake	Selkup	k y j i	ɕ yː - -	x.xx
+uralex:Proto-Uralic > Uralic|uralex_179-b	snake	Udmurt	k y j i	k ɯ j -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_180-a	snow	Erzya	l u m ɯ	l o v -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_180-a	snow	Komi-Zyrian	l u m ɯ	l ɯ m -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_180-a	snow	Meadow Mari	l u m ɯ	l u m -	...x
+uralex:Proto-Uralic > Uralic|uralex_180-a	snow	Nganasan	l u m ɯ	dʲ u m -	x..x
+uralex:Proto-Uralic > Uralic|uralex_180-a	snow	Standard Estonian	l u m ɯ	l u m i	...x
+uralex:Proto-Uralic > Uralic|uralex_180-a	snow	Standard Finnish	l u m ɯ	l u m i	...x
+uralex:Proto-Uralic > Uralic|uralex_180-a	snow	Udmurt	l u m ɯ	l ɯ m ɯ	.x..
+uralex:Proto-Uralic > Uralic|uralex_188-a	swim	Erzya	u j ɯ	u j e	..x
+uralex:Proto-Uralic > Uralic|uralex_188-a	swim	Hungarian	u j ɯ	uː s i	.xx
+uralex:Proto-Uralic > Uralic|uralex_188-a	swim	Kildin Saami	u j ɯ	uː jː e	.xx
+uralex:Proto-Uralic > Uralic|uralex_188-a	swim	Komi-Zyrian	u j ɯ	u j ɑ	..x
+uralex:Proto-Uralic > Uralic|uralex_188-a	swim	Meadow Mari	u j ɯ	i j ɑ	x.x
+uralex:Proto-Uralic > Uralic|uralex_188-a	swim	Selkup	u j ɯ	uː - -	.xx
+uralex:Proto-Uralic > Uralic|uralex_188-a	swim	Sosva Mansi	u j ɯ	u j i	..x
+uralex:Proto-Uralic > Uralic|uralex_188-a	swim	Standard Estonian	u j ɯ	u j u	..x
+uralex:Proto-Uralic > Uralic|uralex_188-a	swim	Standard Finnish	u j ɯ	u i ɑ	.xx
+uralex:Proto-Uralic > Uralic|uralex_188-a	swim	Udmurt	u j ɯ	u j ɑ	..x
+uralex:Proto-Uralic > Uralic|uralex_188-a	swim	Vakh-Vasyugan Khanty	u j ɯ	o tʲ -	xxx
+uralex:Proto-Uralic > Uralic|uralex_189-a	that	Erzya	t o	t o	..
+uralex:Proto-Uralic > Uralic|uralex_189-a	that	Kildin Saami	t o	t u	.x
+uralex:Proto-Uralic > Uralic|uralex_189-a	that	Komi-Zyrian	t o	t ɯ	.x
+uralex:Proto-Uralic > Uralic|uralex_189-a	that	Meadow Mari	t o	t u	.x
+uralex:Proto-Uralic > Uralic|uralex_189-a	that	Nganasan	t o	t ɑː	.x
+uralex:Proto-Uralic > Uralic|uralex_189-a	that	Selkup	t o	t oː	..
+uralex:Proto-Uralic > Uralic|uralex_189-a	that	Standard Estonian	t o	t oː	..
+uralex:Proto-Uralic > Uralic|uralex_189-a	that	Standard Finnish	t o	t u	.x
+uralex:Proto-Uralic > Uralic|uralex_189-a	that	Vakh-Vasyugan Khanty	t o	t o	..
+uralex:Proto-Uralic > Uralic|uralex_189-d	that	Hungarian	o	ɒ	x
+uralex:Proto-Uralic > Uralic|uralex_19-a	hand	Erzya	k æ t i	k e dʲ -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_19-a	hand	Hungarian	k æ t i	k eː z -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_19-a	hand	Kildin Saami	k æ t i	k iː dː -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_19-a	hand	Komi-Zyrian	k æ t i	k i - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_19-a	hand	Meadow Mari	k æ t i	k i t -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_19-a	hand	Sosva Mansi	k æ t i	k ɑː t -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_19-a	hand	Standard Estonian	k æ t i	k æ s i	..x.
+uralex:Proto-Uralic > Uralic|uralex_19-a	hand	Standard Finnish	k æ t i	k æ s i	..x.
+uralex:Proto-Uralic > Uralic|uralex_19-a	hand	Udmurt	k æ t i	k i - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_19-a	hand	Vakh-Vasyugan Khanty	k æ t i	k ø t -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_193-a	three	Erzya	k o l m ɯ	k o l m o	....x
+uralex:Proto-Uralic > Uralic|uralex_193-a	three	Hungarian	k o l m ɯ	h aː r m -	xxx.x
+uralex:Proto-Uralic > Uralic|uralex_193-a	three	Kildin Saami	k o l m ɯ	k oː lː m -	..x.x
+uralex:Proto-Uralic > Uralic|uralex_193-a	three	Komi-Zyrian	k o l m ɯ	k u j m -	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_193-a	three	Meadow Mari	k o l m ɯ	k u - m -	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_193-a	three	Sosva Mansi	k o l m ɯ	χ uː r m -	xxx.x
+uralex:Proto-Uralic > Uralic|uralex_193-a	three	Standard Estonian	k o l m ɯ	k o l m -	....x
+uralex:Proto-Uralic > Uralic|uralex_193-a	three	Standard Finnish	k o l m ɯ	k o l m e	....x
+uralex:Proto-Uralic > Uralic|uralex_193-a	three	Vakh-Vasyugan Khanty	k o l m ɯ	k ɔ l m -	.x..x
+uralex:Proto-Uralic > Uralic|uralex_196-a	two	Erzya	k æ k t æ	k ɑ v t o	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_196-a	two	Hungarian	k æ k t æ	k ɛ - tː øː	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_196-a	two	Kildin Saami	k æ k t æ	k uː h t -	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_196-a	two	Komi-Zyrian	k æ k t æ	k ɯ k - -	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_196-a	two	Meadow Mari	k æ k t æ	k o k - -	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_196-a	two	Nganasan	k æ k t æ	ɕ i - t i	xxx.x
+uralex:Proto-Uralic > Uralic|uralex_196-a	two	Selkup	k æ k t æ	ɕ i - t ə	xxx.x
+uralex:Proto-Uralic > Uralic|uralex_196-a	two	Sosva Mansi	k æ k t æ	k i - t i	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_196-a	two	Standard Estonian	k æ k t æ	k ɑ k s -	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_196-a	two	Standard Finnish	k æ k t æ	k ɑ k s i	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_196-a	two	Udmurt	k æ k t æ	k ɯ k - -	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_196-a	two	Vakh-Vasyugan Khanty	k æ k t æ	k æ t k ə	..xxx
+uralex:Proto-Uralic > Uralic|uralex_198-k	walk	Nganasan	j u t a	dʲ o ð ɑ	xxxx
+uralex:Proto-Uralic > Uralic|uralex_199-d	warm	Selkup	p æ w i	p yː - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_2-c	nose	Komi-Zyrian	ɲ æ r i	n ɯ r -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_2-c	nose	Meadow Mari	ɲ æ r i	n e r -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_2-c	nose	Udmurt	ɲ æ r i	n ɯ r -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_200-c	wash	Hungarian	m u ɕ k ɯ	m o ʃ - -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_200-c	wash	Komi-Zyrian	m u ɕ k ɯ	m ɯ ɕ k ɯ	.x...
+uralex:Proto-Uralic > Uralic|uralex_200-c	wash	Meadow Mari	m u ɕ k ɯ	m u ʃ k ɑ	..x.x
+uralex:Proto-Uralic > Uralic|uralex_200-c	wash	Selkup	m u ɕ k ɯ	m uː s ʧ ə	..xxx
+uralex:Proto-Uralic > Uralic|uralex_200-c	wash	Udmurt	m u ɕ k ɯ	m i ɕ k ɯ	.x...
+uralex:Proto-Uralic > Uralic|uralex_201-a	we	Erzya	m ə	m i	.x
+uralex:Proto-Uralic > Uralic|uralex_201-a	we	Hungarian	m ə	m i	.x
+uralex:Proto-Uralic > Uralic|uralex_201-a	we	Kildin Saami	m ə	m ɨ	.x
+uralex:Proto-Uralic > Uralic|uralex_201-a	we	Komi-Zyrian	m ə	m i	.x
+uralex:Proto-Uralic > Uralic|uralex_201-a	we	Meadow Mari	m ə	m e	.x
+uralex:Proto-Uralic > Uralic|uralex_201-a	we	Nganasan	m ə	m ɯ	.x
+uralex:Proto-Uralic > Uralic|uralex_201-a	we	Selkup	m ə	m eː	.x
+uralex:Proto-Uralic > Uralic|uralex_201-a	we	Sosva Mansi	m ə	m ɑː	.x
+uralex:Proto-Uralic > Uralic|uralex_201-a	we	Standard Estonian	m ə	m e	.x
+uralex:Proto-Uralic > Uralic|uralex_201-a	we	Standard Finnish	m ə	m e	.x
+uralex:Proto-Uralic > Uralic|uralex_201-a	we	Udmurt	m ə	m i	.x
+uralex:Proto-Uralic > Uralic|uralex_201-a	we	Vakh-Vasyugan Khanty	m ə	m ə	..
+uralex:Proto-Uralic > Uralic|uralex_206-g	wipe	Udmurt	tʃ o tʃ ə	ʧ u ʃ ɯ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_208-h	woman	Hungarian	n i ŋ æ	n øː - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_208-h	woman	Nganasan	n i ŋ æ	n ɯ - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_208-h	woman	Sosva Mansi	n i ŋ æ	n eː - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_208-h	woman	Vakh-Vasyugan Khanty	n i ŋ æ	n i - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_21-a	night	Erzya	y j i	e - -	xxx
+uralex:Proto-Uralic > Uralic|uralex_21-a	night	Hungarian	y j i	eː j -	x.x
+uralex:Proto-Uralic > Uralic|uralex_21-a	night	Kildin Saami	y j i	ɨ jː -	xxx
+uralex:Proto-Uralic > Uralic|uralex_21-a	night	Komi-Zyrian	y j i	o j -	x.x
+uralex:Proto-Uralic > Uralic|uralex_21-a	night	Standard Estonian	y j i	øː - -	xxx
+uralex:Proto-Uralic > Uralic|uralex_21-a	night	Standard Finnish	y j i	y ø̯ -	.xx
+uralex:Proto-Uralic > Uralic|uralex_21-a	night	Udmurt	y j i	u j -	x.x
+uralex:Proto-Uralic > Uralic|uralex_21-a	night	Vakh-Vasyugan Khanty	y j i	ə j -	x.x
+uralex:Proto-Uralic > Uralic|uralex_211-e	year	Udmurt	æ r ə	ɑ r -	x.x
+uralex:Proto-Uralic > Uralic|uralex_213-a	you_pl	Erzya	t ə	t i	.x
+uralex:Proto-Uralic > Uralic|uralex_213-a	you_pl	Hungarian	t ə	t i	.x
+uralex:Proto-Uralic > Uralic|uralex_213-a	you_pl	Kildin Saami	t ə	t ɨ	.x
+uralex:Proto-Uralic > Uralic|uralex_213-a	you_pl	Komi-Zyrian	t ə	t i	.x
+uralex:Proto-Uralic > Uralic|uralex_213-a	you_pl	Meadow Mari	t ə	t e	.x
+uralex:Proto-Uralic > Uralic|uralex_213-a	you_pl	Nganasan	t ə	t ɯ	.x
+uralex:Proto-Uralic > Uralic|uralex_213-a	you_pl	Selkup	t ə	t eː	.x
+uralex:Proto-Uralic > Uralic|uralex_213-a	you_pl	Standard Estonian	t ə	t e	.x
+uralex:Proto-Uralic > Uralic|uralex_213-a	you_pl	Standard Finnish	t ə	t e	.x
+uralex:Proto-Uralic > Uralic|uralex_213-a	you_pl	Udmurt	t ə	t i	.x
+uralex:Proto-Uralic > Uralic|uralex_215-a	behind	Nganasan	t a k a n a	t ɑ k ə n u	.x.x.x
+uralex:Proto-Uralic > Uralic|uralex_215-a	behind	Selkup	t a k a n a	t ɑː k - - -	.x.xxx
+uralex:Proto-Uralic > Uralic|uralex_215-a	behind	Standard Estonian	t a k a n a	t ɑ k ɑ - -	.x.xxx
+uralex:Proto-Uralic > Uralic|uralex_215-a	behind	Standard Finnish	t a k a n a	t ɑ k ɑ n ɑ	.x.x.x
+uralex:Proto-Uralic > Uralic|uralex_219-b	ten	Kildin Saami	l u k a	l ɒː gːʲ -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_219-b	ten	Meadow Mari	l u k a	l u - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_219-b	ten	Sosva Mansi	l u k a	l o w -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_22-b	ear	Erzya	p e l j æ	p i ʎ - e	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_22-b	ear	Hungarian	p e l j æ	f y l - -	xx.xx
+uralex:Proto-Uralic > Uralic|uralex_22-b	ear	Kildin Saami	p e l j æ	p i ʎː - -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_22-b	ear	Komi-Zyrian	p e l j æ	p e ʎ - -	..xxx
+uralex:Proto-Uralic > Uralic|uralex_22-b	ear	Meadow Mari	p e l j æ	p ə l - ə	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_22-b	ear	Sosva Mansi	p e l j æ	p ɑ ʎ - -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_22-b	ear	Udmurt	p e l j æ	p e ʎ - -	..xxx
+uralex:Proto-Uralic > Uralic|uralex_22-b	ear	Vakh-Vasyugan Khanty	p e l j æ	p ə l - -	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_225-h	rotten	Komi-Zyrian	s æ j i	s i ɕ -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_225-h	rotten	Udmurt	s æ j i	ɕ i ɕ -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_227-c	cooked	Erzya	p e j i	p i dʲ e	.xxx
+uralex:Proto-Uralic > Uralic|uralex_227-c	cooked	Hungarian	p e j i	f øː tː -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_227-c	cooked	Komi-Zyrian	p e j i	p u n ɯ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_227-c	cooked	Nganasan	p e j i	h i r i	xxx.
+uralex:Proto-Uralic > Uralic|uralex_227-c	cooked	Sosva Mansi	p e j i	p ɑː j i	.x..
+uralex:Proto-Uralic > Uralic|uralex_229-f	bark_n	Erzya	k e r i	k e rʲ -	..xx
+uralex:Proto-Uralic > Uralic|uralex_229-f	bark_n	Hungarian	k e r i	k eː r ɛ	...x
+uralex:Proto-Uralic > Uralic|uralex_229-f	bark_n	Kildin Saami	k e r i	k eː rː -	..xx
+uralex:Proto-Uralic > Uralic|uralex_229-f	bark_n	Meadow Mari	k e r i	k y r -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_229-f	bark_n	Sosva Mansi	k e r i	k eː r -	...x
+uralex:Proto-Uralic > Uralic|uralex_229-f	bark_n	Udmurt	k e r i	k u r -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_229-f	bark_n	Vakh-Vasyugan Khanty	k e r i	k æ r -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_229-j	bark_n	Nganasan	k o ɲ tɕ k ə	k ɑ - s - u	.xxxxx
+uralex:Proto-Uralic > Uralic|uralex_229-j	bark_n	Selkup	k o ɲ tɕ k ə	q ɑː - s - ə	xxxxx.
+uralex:Proto-Uralic > Uralic|uralex_240-k	person	Selkup	k o j ɯ m ə	q u m - - -	xxxxxx
+uralex:Proto-Uralic > Uralic|uralex_240-k	person	Sosva Mansi	k o j ɯ m ə	χ u m - - -	xxxxxx
+uralex:Proto-Uralic > Uralic|uralex_249-a	bore	Hungarian	p u r a	f uː r -	x..x
+uralex:Proto-Uralic > Uralic|uralex_249-a	bore	Selkup	p u r a	p u r ə	...x
+uralex:Proto-Uralic > Uralic|uralex_249-a	bore	Standard Estonian	p u r a	p uː r ɑ	...x
+uralex:Proto-Uralic > Uralic|uralex_249-a	bore	Standard Finnish	p u r a	p o r ɑ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_25-a	do	Erzya	t e k i	tʲ e j e	x.xx
+uralex:Proto-Uralic > Uralic|uralex_25-a	do	Hungarian	t e k i	t ɛ s -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_25-a	do	Standard Estonian	t e k i	t e h ɑ	..xx
+uralex:Proto-Uralic > Uralic|uralex_25-a	do	Standard Finnish	t e k i	t e ç æ	..xx
+uralex:Proto-Uralic > Uralic|uralex_250-h	wife	Erzya	n i ŋ æ	ɲ i - -	x.xx
+uralex:Proto-Uralic > Uralic|uralex_250-h	wife	Vakh-Vasyugan Khanty	n i ŋ æ	n i - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_253-k	man	Sosva Mansi	k o j ɯ	χ u m -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_253-k	man	Vakh-Vasyugan Khanty	k o j ɯ	k u - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_26-h	house	Selkup	m æ t t ə	m ɑː t - -	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_27-a	stone	Erzya	k i w i	c e v -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_27-a	stone	Hungarian	k i w i	k øː - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_27-a	stone	Meadow Mari	k i w i	k y - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_27-a	stone	Standard Estonian	k i w i	k i v i	..x.
+uralex:Proto-Uralic > Uralic|uralex_27-a	stone	Standard Finnish	k i w i	k i ʋ i	..x.
+uralex:Proto-Uralic > Uralic|uralex_27-a	stone	Vakh-Vasyugan Khanty	k i w i	k ø χ -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_283-b	summer	Nganasan	s u ŋ ɯ	t ə ŋ ə	xx.x
+uralex:Proto-Uralic > Uralic|uralex_283-b	summer	Selkup	s u ŋ ɯ	t ɑ ŋ ə	xx.x
+uralex:Proto-Uralic > Uralic|uralex_283-b	summer	Sosva Mansi	s u ŋ ɯ	t u j i	x.xx
+uralex:Proto-Uralic > Uralic|uralex_283-b	summer	Standard Estonian	s u ŋ ɯ	s u v i	..xx
+uralex:Proto-Uralic > Uralic|uralex_283-b	summer	Vakh-Vasyugan Khanty	s u ŋ ɯ	l o ŋ -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_287-a	ice	Erzya	j æ ŋ ɯ	- e j -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_287-a	ice	Hungarian	j æ ŋ ɯ	j eː ɡ -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_287-a	ice	Kildin Saami	j æ ŋ ɯ	- iː ŋː -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_287-a	ice	Komi-Zyrian	j æ ŋ ɯ	j ɯ - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_287-a	ice	Meadow Mari	j æ ŋ ɯ	- i j -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_287-a	ice	Sosva Mansi	j æ ŋ ɯ	j ɑː ŋ k	.x.x
+uralex:Proto-Uralic > Uralic|uralex_287-a	ice	Standard Estonian	j æ ŋ ɯ	j æː - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_287-a	ice	Standard Finnish	j æ ŋ ɯ	j æː - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_287-a	ice	Udmurt	j æ ŋ ɯ	j ɤ - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_287-a	ice	Vakh-Vasyugan Khanty	j æ ŋ ɯ	j ø ŋ k	.x.x
+uralex:Proto-Uralic > Uralic|uralex_29-l	say	Hungarian	m a n ə	m o n d	.x.x
+uralex:Proto-Uralic > Uralic|uralex_29-l	say	Meadow Mari	m a n ə	m ɑ n ɑ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_29-l	say	Nganasan	m a n ə	m u n ɑ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_290-b	girl	Kildin Saami	n æ ɣ i	n iː t a	.xxx
+uralex:Proto-Uralic > Uralic|uralex_290-b	girl	Komi-Zyrian	n æ ɣ i	n ɯ v -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_290-b	girl	Selkup	n æ ɣ i	n e t æ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_290-b	girl	Udmurt	n æ ɣ i	n ɯ l -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_292-b	extinguish	Komi-Zyrian	k u p s a	k u s d ɯ	..xxx
+uralex:Proto-Uralic > Uralic|uralex_292-b	extinguish	Nganasan	k u p s a	k ə b t ɑ	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_292-b	extinguish	Selkup	k u p s a	q ɑ p t ə	xx.xx
+uralex:Proto-Uralic > Uralic|uralex_292-b	extinguish	Standard Estonian	k u p s a	k u s t ɑ	..xxx
+uralex:Proto-Uralic > Uralic|uralex_292-b	extinguish	Udmurt	k u p s a	k ɯ - s ɯ	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_292-b	extinguish	Vakh-Vasyugan Khanty	k u p s a	k o w t -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_297-b	charcoal	Erzya	ɕ y ðʲ i	ɕ e dʲ -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_297-b	charcoal	Meadow Mari	ɕ y ðʲ i	ʃ y - j	x.xx
+uralex:Proto-Uralic > Uralic|uralex_297-b	charcoal	Selkup	ɕ y ðʲ i	ʨ uː ʦ -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_297-b	charcoal	Standard Estonian	ɕ y ðʲ i	s y s i	x.x.
+uralex:Proto-Uralic > Uralic|uralex_297-b	charcoal	Vakh-Vasyugan Khanty	ɕ y ðʲ i	s ø j -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_298-a	uncle	Kildin Saami	tʃ e tʃ æ	t i d zʲ	xxxx
+uralex:Proto-Uralic > Uralic|uralex_298-a	uncle	Komi-Zyrian	tʃ e tʃ æ	ʨ o ʒ -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_298-a	uncle	Meadow Mari	tʃ e tʃ æ	ʧ ə ʧ ə	.x.x
+uralex:Proto-Uralic > Uralic|uralex_298-a	uncle	Nganasan	tʃ e tʃ æ	t ɯ t ɑ	xxxx
+uralex:Proto-Uralic > Uralic|uralex_298-a	uncle	Sosva Mansi	tʃ e tʃ æ	s ɑː s i	xxxx
+uralex:Proto-Uralic > Uralic|uralex_298-a	uncle	Standard Finnish	tʃ e tʃ æ	s e t æ	x.x.
+uralex:Proto-Uralic > Uralic|uralex_298-f	uncle	Kildin Saami	e k æ	eː gːʲ -	.xx
+uralex:Proto-Uralic > Uralic|uralex_298-f	uncle	Sosva Mansi	e k æ	ɑ k i	x.x
+uralex:Proto-Uralic > Uralic|uralex_299-b	lung	Erzya	t æ w i w	tʲ e v e v	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_299-b	lung	Hungarian	t æ w i w	t y d øː -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_299-b	lung	Komi-Zyrian	t æ w i w	t ɯ - - -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_299-b	lung	Nganasan	t æ w i w	ʧ ə - i dʲ	xxx.x
+uralex:Proto-Uralic > Uralic|uralex_299-b	lung	Udmurt	t æ w i w	t ɯ - - -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_3-a	go	Hungarian	m e n i	m ɛ ɟ -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_3-a	go	Kildin Saami	m e n i	m eː nː e	..xx
+uralex:Proto-Uralic > Uralic|uralex_3-a	go	Komi-Zyrian	m e n i	m u nː ɯ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_3-a	go	Meadow Mari	m e n i	m i j e	.xxx
+uralex:Proto-Uralic > Uralic|uralex_3-a	go	Nganasan	m e n i	m ɯ n ɯ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_3-a	go	Sosva Mansi	m e n i	m iː n i	.x..
+uralex:Proto-Uralic > Uralic|uralex_3-a	go	Standard Estonian	m e n i	m i nː ɑ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_3-a	go	Standard Finnish	m e n i	m e nː æ	..xx
+uralex:Proto-Uralic > Uralic|uralex_3-a	go	Udmurt	m e n i	m ɯ n ɯ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_3-a	go	Vakh-Vasyugan Khanty	m e n i	m ə n -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_30-b	tooth	Erzya	p i ŋ i	p e j -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_30-b	tooth	Hungarian	p i ŋ i	f o ɡ -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_30-b	tooth	Komi-Zyrian	p i ŋ i	p i ɲ -	..xx
+uralex:Proto-Uralic > Uralic|uralex_30-b	tooth	Meadow Mari	p i ŋ i	p y j -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_30-b	tooth	Sosva Mansi	p i ŋ i	p u ŋ k	.x.x
+uralex:Proto-Uralic > Uralic|uralex_30-b	tooth	Udmurt	p i ŋ i	p i ɲ -	..xx
+uralex:Proto-Uralic > Uralic|uralex_30-b	tooth	Vakh-Vasyugan Khanty	p i ŋ i	p ø ŋ k	.x.x
+uralex:Proto-Uralic > Uralic|uralex_31-b	hair	Kildin Saami	ɯ p t ɯ	uː pː t -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_31-b	hair	Meadow Mari	ɯ p t ɯ	y p - -	x.xx
+uralex:Proto-Uralic > Uralic|uralex_31-b	hair	Nganasan	ɯ p t ɯ	ɑ b t ə	xx.x
+uralex:Proto-Uralic > Uralic|uralex_31-b	hair	Selkup	ɯ p t ɯ	oː p t ə	x..x
+uralex:Proto-Uralic > Uralic|uralex_31-b	hair	Sosva Mansi	ɯ p t ɯ	ɑː - t -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_31-b	hair	Vakh-Vasyugan Khanty	ɯ p t ɯ	ɑ w t -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_313-a	armpit	Hungarian	k o n ə	h oː n ɒ	x..x
+uralex:Proto-Uralic > Uralic|uralex_313-a	armpit	Kildin Saami	k o n ə	k a n a	.x.x
+uralex:Proto-Uralic > Uralic|uralex_313-a	armpit	Komi-Zyrian	k o n ə	k ɯ ɲ ɑ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_313-a	armpit	Meadow Mari	k o n ə	k o ŋ ɑ	..xx
+uralex:Proto-Uralic > Uralic|uralex_313-a	armpit	Selkup	k o n ə	q ɑː ɲ -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_313-a	armpit	Sosva Mansi	k o n ə	χ ɑ n l	xx.x
+uralex:Proto-Uralic > Uralic|uralex_313-a	armpit	Standard Estonian	k o n ə	k ɑ n ɑ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_313-a	armpit	Standard Finnish	k o n ə	k ɑ n ɑ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_313-a	armpit	Udmurt	k o n ə	k u n -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_313-a	armpit	Vakh-Vasyugan Khanty	k o n ə	k u n ə	.x..
+uralex:Proto-Uralic > Uralic|uralex_32-e	big	Sosva Mansi	e n æ	ɑ n i	x.x
+uralex:Proto-Uralic > Uralic|uralex_32-e	big	Vakh-Vasyugan Khanty	e n æ	e ɳ ə	.xx
+uralex:Proto-Uralic > Uralic|uralex_33-a	one	Erzya	y k t i	e k - e	x.xx
+uralex:Proto-Uralic > Uralic|uralex_33-a	one	Kildin Saami	y k t i	eː xː t -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_33-a	one	Komi-Zyrian	y k t i	ɤ tʲ - i	xxx.
+uralex:Proto-Uralic > Uralic|uralex_33-a	one	Meadow Mari	y k t i	i k t e	x..x
+uralex:Proto-Uralic > Uralic|uralex_33-a	one	Sosva Mansi	y k t i	ɑ kʷ - ɑ	xxxx
+uralex:Proto-Uralic > Uralic|uralex_33-a	one	Standard Estonian	y k t i	y kː s -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_33-a	one	Standard Finnish	y k t i	y k s i	..x.
+uralex:Proto-Uralic > Uralic|uralex_33-a	one	Udmurt	y k t i	o d - i	xxx.
+uralex:Proto-Uralic > Uralic|uralex_33-a	one	Vakh-Vasyugan Khanty	y k t i	ə j - ə	xxxx
+uralex:Proto-Uralic > Uralic|uralex_35-a	who	Komi-Zyrian	k u	k o	.x
+uralex:Proto-Uralic > Uralic|uralex_35-a	who	Meadow Mari	k u	k u	..
+uralex:Proto-Uralic > Uralic|uralex_35-a	who	Selkup	k u	k u	..
+uralex:Proto-Uralic > Uralic|uralex_35-a	who	Sosva Mansi	k u	χ oː	xx
+uralex:Proto-Uralic > Uralic|uralex_35-a	who	Standard Finnish	k u	k u	..
+uralex:Proto-Uralic > Uralic|uralex_35-a	who	Vakh-Vasyugan Khanty	k u	k o	.x
+uralex:Proto-Uralic > Uralic|uralex_35-b	who	Erzya	k e	k i	.x
+uralex:Proto-Uralic > Uralic|uralex_35-b	who	Hungarian	k e	k i	.x
+uralex:Proto-Uralic > Uralic|uralex_35-b	who	Kildin Saami	k e	k eː	..
+uralex:Proto-Uralic > Uralic|uralex_35-b	who	Komi-Zyrian	k e	k i	.x
+uralex:Proto-Uralic > Uralic|uralex_35-b	who	Meadow Mari	k e	k ø	.x
+uralex:Proto-Uralic > Uralic|uralex_35-b	who	Nganasan	k e	s ɯ	xx
+uralex:Proto-Uralic > Uralic|uralex_35-b	who	Standard Estonian	k e	k e	..
+uralex:Proto-Uralic > Uralic|uralex_35-b	who	Standard Finnish	k e	k e	..
+uralex:Proto-Uralic > Uralic|uralex_35-b	who	Udmurt	k e	k i	.x
+uralex:Proto-Uralic > Uralic|uralex_37-a	foot	Kildin Saami	j a l k a	j uː lːʲ k -	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_37-a	foot	Meadow Mari	j a l k a	j o l - -	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_37-a	foot	Standard Estonian	j a l k a	j ɑ l k -	.x..x
+uralex:Proto-Uralic > Uralic|uralex_37-a	foot	Standard Finnish	j a l k a	j ɑ l k ɑ	.x..x
+uralex:Proto-Uralic > Uralic|uralex_39-a	fish	Erzya	k a l a	k ɑ l -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_39-a	fish	Kildin Saami	k a l a	k uː lːʲ -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_39-a	fish	Meadow Mari	k a l a	k o l -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_39-a	fish	Nganasan	k a l a	k o l ɯ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_39-a	fish	Selkup	k a l a	q ə l ə	xx.x
+uralex:Proto-Uralic > Uralic|uralex_39-a	fish	Sosva Mansi	k a l a	χ uː l -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_39-a	fish	Standard Estonian	k a l a	k ɑ l ɑ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_39-a	fish	Standard Finnish	k a l a	k ɑ l ɑ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_39-a	fish	Vakh-Vasyugan Khanty	k a l a	k u l -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_4-a	water	Erzya	w e t i	v e dʲ -	x.xx
+uralex:Proto-Uralic > Uralic|uralex_4-a	water	Hungarian	w e t i	v iː z -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_4-a	water	Komi-Zyrian	w e t i	v ɑ - -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_4-a	water	Meadow Mari	w e t i	β y t -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_4-a	water	Nganasan	w e t i	b ɯ ʔ -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_4-a	water	Selkup	w e t i	- y t -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_4-a	water	Sosva Mansi	w e t i	w i t -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_4-a	water	Standard Estonian	w e t i	v e s i	x.x.
+uralex:Proto-Uralic > Uralic|uralex_4-a	water	Standard Finnish	w e t i	ʋ e s i	x.x.
+uralex:Proto-Uralic > Uralic|uralex_4-a	water	Udmurt	w e t i	v u - -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_40-a	horn	Erzya	ɕ a r w ɯ	ɕ u r - o	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_40-a	horn	Kildin Saami	ɕ a r w ɯ	ʃ u rːʲ v -	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_40-a	horn	Komi-Zyrian	ɕ a r w ɯ	ɕ u r - -	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_40-a	horn	Meadow Mari	ɕ a r w ɯ	ʃ u r - -	xx.xx
+uralex:Proto-Uralic > Uralic|uralex_40-a	horn	Standard Estonian	ɕ a r w ɯ	s ɑ r v -	xx.xx
+uralex:Proto-Uralic > Uralic|uralex_40-a	horn	Standard Finnish	ɕ a r w ɯ	s ɑ r ʋ i	xx.xx
+uralex:Proto-Uralic > Uralic|uralex_40-a	horn	Udmurt	ɕ a r w ɯ	ɕ u r - -	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_41-a	this	Erzya	t æ	tʲ e	xx
+uralex:Proto-Uralic > Uralic|uralex_41-a	this	Kildin Saami	t æ	t a	.x
+uralex:Proto-Uralic > Uralic|uralex_41-a	this	Komi-Zyrian	t æ	t ɑ	.x
+uralex:Proto-Uralic > Uralic|uralex_41-a	this	Meadow Mari	t æ	t ə	.x
+uralex:Proto-Uralic > Uralic|uralex_41-a	this	Selkup	t æ	t ɑ	.x
+uralex:Proto-Uralic > Uralic|uralex_41-a	this	Sosva Mansi	t æ	t i	.x
+uralex:Proto-Uralic > Uralic|uralex_41-a	this	Standard Finnish	t æ	t æ	..
+uralex:Proto-Uralic > Uralic|uralex_41-a	this	Udmurt	t æ	t ɑ	.x
+uralex:Proto-Uralic > Uralic|uralex_41-a	this	Vakh-Vasyugan Khanty	t æ	t i	.x
+uralex:Proto-Uralic > Uralic|uralex_44-a	drink	Kildin Saami	j u x ɯ	j u gː e	..xx
+uralex:Proto-Uralic > Uralic|uralex_44-a	drink	Komi-Zyrian	j u x ɯ	j u n ɯ	..x.
+uralex:Proto-Uralic > Uralic|uralex_44-a	drink	Meadow Mari	j u x ɯ	j y - ɑ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_44-a	drink	Sosva Mansi	j u x ɯ	j i - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_44-a	drink	Standard Estonian	j u x ɯ	j uː - ɑ	..xx
+uralex:Proto-Uralic > Uralic|uralex_44-a	drink	Standard Finnish	j u x ɯ	j u d ɑ	..xx
+uralex:Proto-Uralic > Uralic|uralex_44-a	drink	Udmurt	j u x ɯ	j u - ɯ	..x.
+uralex:Proto-Uralic > Uralic|uralex_44-a	drink	Vakh-Vasyugan Khanty	j u x ɯ	j æ tʲ -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_47-h	back	Nganasan	m u k a	m ə k u	.x.x
+uralex:Proto-Uralic > Uralic|uralex_47-h	back	Selkup	m u k a	m o q ə	.xxx
+uralex:Proto-Uralic > Uralic|uralex_48-a	bite	Meadow Mari	p u r ɯ	p u r ɑ	...x
+uralex:Proto-Uralic > Uralic|uralex_48-a	bite	Sosva Mansi	p u r ɯ	p u r i	...x
+uralex:Proto-Uralic > Uralic|uralex_48-a	bite	Standard Finnish	p u r ɯ	p u rː ɑ	..xx
+uralex:Proto-Uralic > Uralic|uralex_48-a	bite	Vakh-Vasyugan Khanty	p u r ɯ	p o r -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_48-f	bite	Erzya	s o s k ɯ	s u s k o	.x..x
+uralex:Proto-Uralic > Uralic|uralex_49-a	wind	Komi-Zyrian	t u w l ɯ	t ɤ - v -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_49-a	wind	Standard Estonian	t u w l ɯ	t uː - l -	..x.x
+uralex:Proto-Uralic > Uralic|uralex_49-a	wind	Standard Finnish	t u w l ɯ	t uː - l i	..x.x
+uralex:Proto-Uralic > Uralic|uralex_49-a	wind	Udmurt	t u w l ɯ	t ɤ - l -	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_5-e	mouth	Komi-Zyrian	a ŋ ɯ	o m -	xxx
+uralex:Proto-Uralic > Uralic|uralex_5-e	mouth	Nganasan	a ŋ ɯ	ɑ ŋ -	x.x
+uralex:Proto-Uralic > Uralic|uralex_5-e	mouth	Selkup	a ŋ ɯ	ɑː ŋ -	x.x
+uralex:Proto-Uralic > Uralic|uralex_5-e	mouth	Udmurt	a ŋ ɯ	ɯ m -	xxx
+uralex:Proto-Uralic > Uralic|uralex_51-a	what	Erzya	m ə	m e	.x
+uralex:Proto-Uralic > Uralic|uralex_51-a	what	Kildin Saami	m ə	m e	.x
+uralex:Proto-Uralic > Uralic|uralex_51-a	what	Komi-Zyrian	m ə	m ɯ	.x
+uralex:Proto-Uralic > Uralic|uralex_51-a	what	Meadow Mari	m ə	m o	.x
+uralex:Proto-Uralic > Uralic|uralex_51-a	what	Nganasan	m ə	m ɑː	.x
+uralex:Proto-Uralic > Uralic|uralex_51-a	what	Sosva Mansi	m ə	m ɑ	.x
+uralex:Proto-Uralic > Uralic|uralex_51-a	what	Standard Estonian	m ə	m i	.x
+uralex:Proto-Uralic > Uralic|uralex_51-a	what	Standard Finnish	m ə	m i	.x
+uralex:Proto-Uralic > Uralic|uralex_51-a	what	Udmurt	m ə	m ɑ	.x
+uralex:Proto-Uralic > Uralic|uralex_51-a	what	Vakh-Vasyugan Khanty	m ə	m ø	.x
+uralex:Proto-Uralic > Uralic|uralex_53-a	egg	Kildin Saami	m u n a	m a nːʲ -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_53-a	egg	Meadow Mari	m u n a	m u n o	...x
+uralex:Proto-Uralic > Uralic|uralex_53-a	egg	Nganasan	m u n a	m ə n u	.x.x
+uralex:Proto-Uralic > Uralic|uralex_53-a	egg	Sosva Mansi	m u n a	m uː ŋ i	..xx
+uralex:Proto-Uralic > Uralic|uralex_53-a	egg	Standard Estonian	m u n a	m u n ɑ	...x
+uralex:Proto-Uralic > Uralic|uralex_53-a	egg	Standard Finnish	m u n a	m u n ɑ	...x
+uralex:Proto-Uralic > Uralic|uralex_55-e	give	Nganasan	m i ɣ i	m i ɕ i	..x.
+uralex:Proto-Uralic > Uralic|uralex_55-e	give	Selkup	m i ɣ i	m i - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_55-e	give	Sosva Mansi	m i ɣ i	m i ɣ -	...x
+uralex:Proto-Uralic > Uralic|uralex_55-e	give	Vakh-Vasyugan Khanty	m i ɣ i	m ə - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_56-a	new	Erzya	w u ð ɯ	- o d -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_56-a	new	Hungarian	w u ð ɯ	- uː j -	x.xx
+uralex:Proto-Uralic > Uralic|uralex_56-a	new	Kildin Saami	w u ð ɯ	- oː dː -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_56-a	new	Komi-Zyrian	w u ð ɯ	v ɯ ʎ -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_56-a	new	Meadow Mari	w u ð ɯ	- u - -	x.xx
+uralex:Proto-Uralic > Uralic|uralex_56-a	new	Standard Estonian	w u ð ɯ	- uː s -	x.xx
+uralex:Proto-Uralic > Uralic|uralex_56-a	new	Standard Finnish	w u ð ɯ	- uː s i	x.xx
+uralex:Proto-Uralic > Uralic|uralex_56-a	new	Udmurt	w u ð ɯ	v ɯ ʎ -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_58-b	know	Hungarian	t u m t ɯ	t u - d -	..xxx
+uralex:Proto-Uralic > Uralic|uralex_58-b	know	Kildin Saami	t u m t ɯ	t o mː t e	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_58-b	know	Komi-Zyrian	t u m t ɯ	t ɤ - d ɯ	.xxx.
+uralex:Proto-Uralic > Uralic|uralex_58-b	know	Udmurt	t u m t ɯ	t o - s ɯ	.xxx.
+uralex:Proto-Uralic > Uralic|uralex_59-a	not	Erzya	e	ɑ	x
+uralex:Proto-Uralic > Uralic|uralex_59-a	not	Kildin Saami	e	e	.
+uralex:Proto-Uralic > Uralic|uralex_59-a	not	Komi-Zyrian	e	o	x
+uralex:Proto-Uralic > Uralic|uralex_59-a	not	Meadow Mari	e	o	x
+uralex:Proto-Uralic > Uralic|uralex_59-a	not	Nganasan	e	i	x
+uralex:Proto-Uralic > Uralic|uralex_59-a	not	Selkup	e	ɑ	x
+uralex:Proto-Uralic > Uralic|uralex_59-a	not	Sosva Mansi	e	ɑ	x
+uralex:Proto-Uralic > Uralic|uralex_59-a	not	Standard Estonian	e	e	.
+uralex:Proto-Uralic > Uralic|uralex_59-a	not	Standard Finnish	e	e	.
+uralex:Proto-Uralic > Uralic|uralex_59-a	not	Udmurt	e	u	x
+uralex:Proto-Uralic > Uralic|uralex_59-a	not	Vakh-Vasyugan Khanty	e	ə	x
+uralex:Proto-Uralic > Uralic|uralex_6-a	tongue	Erzya	k æ l i	k e ʎ -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_6-a	tongue	Komi-Zyrian	k æ l i	k ɯ v -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_6-a	tongue	Nganasan	k æ l i	ɕ i dʲ ə	xxxx
+uralex:Proto-Uralic > Uralic|uralex_6-a	tongue	Selkup	k æ l i	ɕ eː - -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_6-a	tongue	Standard Estonian	k æ l i	k eː l -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_6-a	tongue	Standard Finnish	k æ l i	k i l i	.x..
+uralex:Proto-Uralic > Uralic|uralex_6-a	tongue	Udmurt	k æ l i	k ɯ l -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_60-a	knee	Erzya	p o w ɯ l ɯ	k u ʒ ɑ - -	xxxxxx
+uralex:Proto-Uralic > Uralic|uralex_60-a	knee	Kildin Saami	p o w ɯ l ɯ	p uː vː l - -	.xxxxx
+uralex:Proto-Uralic > Uralic|uralex_60-a	knee	Meadow Mari	p o w ɯ l ɯ	p u β u - -	.xxxxx
+uralex:Proto-Uralic > Uralic|uralex_60-a	knee	Nganasan	p o w ɯ l ɯ	h ə g j - -	xxxxxx
+uralex:Proto-Uralic > Uralic|uralex_60-a	knee	Selkup	p o w ɯ l ɯ	p uː l ə - -	.xxxxx
+uralex:Proto-Uralic > Uralic|uralex_60-a	knee	Standard Estonian	p o w ɯ l ɯ	p ɤ v - - -	.xxxxx
+uralex:Proto-Uralic > Uralic|uralex_60-a	knee	Standard Finnish	p o w ɯ l ɯ	p o l i - -	..xxxx
+uralex:Proto-Uralic > Uralic|uralex_64-a	earth	Komi-Zyrian	m a ɣ ɯ	m u - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_64-a	earth	Meadow Mari	m a ɣ ɯ	m ɑ d e	.xxx
+uralex:Proto-Uralic > Uralic|uralex_64-a	earth	Nganasan	m a ɣ ɯ	m o - u	.xxx
+uralex:Proto-Uralic > Uralic|uralex_64-a	earth	Sosva Mansi	m a ɣ ɯ	m ɑː - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_64-a	earth	Standard Estonian	m a ɣ ɯ	m ɑː - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_64-a	earth	Standard Finnish	m a ɣ ɯ	m ɑː - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_64-a	earth	Udmurt	m a ɣ ɯ	m u - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_64-a	earth	Vakh-Vasyugan Khanty	m a ɣ ɯ	m ə ɣ -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_65-a	left	Nganasan	w a s a	b ə t i	xxxx
+uralex:Proto-Uralic > Uralic|uralex_65-a	left	Selkup	w a s a	k ə t i	xxxx
+uralex:Proto-Uralic > Uralic|uralex_65-a	left	Standard Estonian	w a s a	v ɑ s ɑ	xx.x
+uralex:Proto-Uralic > Uralic|uralex_65-a	left	Standard Finnish	w a s a	ʋ ɑ s e	xx.x
+uralex:Proto-Uralic > Uralic|uralex_67-a	liver	Erzya	m a k s a	m ɑ k s o	.x..x
+uralex:Proto-Uralic > Uralic|uralex_67-a	liver	Hungarian	m a k s a	m aː - j -	..xxx
+uralex:Proto-Uralic > Uralic|uralex_67-a	liver	Komi-Zyrian	m a k s a	m u - s -	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_67-a	liver	Meadow Mari	m a k s a	m o k ʃ -	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_67-a	liver	Nganasan	m a k s a	m i t - ə	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_67-a	liver	Selkup	m a k s a	m ɯː t - ə	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_67-a	liver	Sosva Mansi	m a k s a	m ɑː j t -	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_67-a	liver	Standard Estonian	m a k s a	m ɑ k s -	.x..x
+uralex:Proto-Uralic > Uralic|uralex_67-a	liver	Standard Finnish	m a k s a	m ɑ k s ɑ	.x..x
+uralex:Proto-Uralic > Uralic|uralex_67-a	liver	Udmurt	m a k s a	m u - s -	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_67-a	liver	Vakh-Vasyugan Khanty	m a k s a	m u ɣ - ə	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_69-g	skin	Komi-Zyrian	k o p a	k u - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_69-g	skin	Nganasan	k o p a	k u h u	.xxx
+uralex:Proto-Uralic > Uralic|uralex_69-g	skin	Selkup	k o p a	q o p ə	x..x
+uralex:Proto-Uralic > Uralic|uralex_69-g	skin	Udmurt	k o p a	k u - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_7-a	blood	Erzya	w e r i	v e rʲ -	x.xx
+uralex:Proto-Uralic > Uralic|uralex_7-a	blood	Hungarian	w e r i	v eː r -	x..x
+uralex:Proto-Uralic > Uralic|uralex_7-a	blood	Kildin Saami	w e r i	v eː rː -	x.xx
+uralex:Proto-Uralic > Uralic|uralex_7-a	blood	Komi-Zyrian	w e r i	v i r -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_7-a	blood	Meadow Mari	w e r i	β y r -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_7-a	blood	Sosva Mansi	w e r i	w i r -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_7-a	blood	Standard Estonian	w e r i	v e r i	x...
+uralex:Proto-Uralic > Uralic|uralex_7-a	blood	Standard Finnish	w e r i	ʋ e r i	x...
+uralex:Proto-Uralic > Uralic|uralex_7-a	blood	Udmurt	w e r i	v i r -	xx.x
+uralex:Proto-Uralic > Uralic|uralex_7-a	blood	Vakh-Vasyugan Khanty	w e r i	w ə r -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_70-a	suck	Kildin Saami	i m i	u mː e	xxx
+uralex:Proto-Uralic > Uralic|uralex_70-a	suck	Selkup	i m i	i m -	..x
+uralex:Proto-Uralic > Uralic|uralex_70-a	suck	Standard Estonian	i m i	i m e	..x
+uralex:Proto-Uralic > Uralic|uralex_70-a	suck	Standard Finnish	i m i	i m e	..x
+uralex:Proto-Uralic > Uralic|uralex_70-a	suck	Vakh-Vasyugan Khanty	i m i	e m -	x.x
+uralex:Proto-Uralic > Uralic|uralex_71-a	carry	Erzya	k a n t a	k ɑ n d o	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_71-a	carry	Kildin Saami	k a n t a	k uː nːʲ t e	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_71-a	carry	Meadow Mari	k a n t a	k o n d e	.x.xx
+uralex:Proto-Uralic > Uralic|uralex_71-a	carry	Selkup	k a n t a	q u n t ə	xx..x
+uralex:Proto-Uralic > Uralic|uralex_71-a	carry	Standard Estonian	k a n t a	k ɑ n t ɑ	.x..x
+uralex:Proto-Uralic > Uralic|uralex_71-a	carry	Standard Finnish	k a n t a	k ɑ n t ɑː	.x..x
+uralex:Proto-Uralic > Uralic|uralex_76-a	eat	Erzya	s e w i	s e v e	..xx
+uralex:Proto-Uralic > Uralic|uralex_76-a	eat	Hungarian	s e w i	s i k -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_76-a	eat	Komi-Zyrian	s e w i	ɕ o j ɯ	xxxx
+uralex:Proto-Uralic > Uralic|uralex_76-a	eat	Sosva Mansi	s e w i	t eː ɣ -	x.xx
+uralex:Proto-Uralic > Uralic|uralex_76-a	eat	Standard Estonian	s e w i	s yː - ɑ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_76-a	eat	Standard Finnish	s e w i	s y - ø	.xxx
+uralex:Proto-Uralic > Uralic|uralex_76-a	eat	Udmurt	s e w i	ɕ i - ɯ	xxxx
+uralex:Proto-Uralic > Uralic|uralex_76-a	eat	Vakh-Vasyugan Khanty	s e w i	l i - -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_8-a	bone	Erzya	l u w ɯ	l o v ɑ	.xxx
+uralex:Proto-Uralic > Uralic|uralex_8-a	bone	Komi-Zyrian	l u w ɯ	l ɯ - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_8-a	bone	Meadow Mari	l u w ɯ	l u - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_8-a	bone	Nganasan	l u w ɯ	l ɑ t əː	.xxx
+uralex:Proto-Uralic > Uralic|uralex_8-a	bone	Selkup	l u w ɯ	l ɯː - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_8-a	bone	Sosva Mansi	l u w ɯ	l u w -	...x
+uralex:Proto-Uralic > Uralic|uralex_8-a	bone	Standard Estonian	l u w ɯ	l uː - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_8-a	bone	Standard Finnish	l u w ɯ	l uː - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_8-a	bone	Udmurt	l u w ɯ	l ɯ - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_8-a	bone	Vakh-Vasyugan Khanty	l u w ɯ	l o ɣ -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_80-b	blow	Erzya	p u w ə	p u v ɑ	..xx
+uralex:Proto-Uralic > Uralic|uralex_80-b	blow	Hungarian	p u w ə	f uː j -	x.xx
+uralex:Proto-Uralic > Uralic|uralex_80-b	blow	Meadow Mari	p u w ə	p u - e	..xx
+uralex:Proto-Uralic > Uralic|uralex_80-b	blow	Nganasan	p u w ə	h y l ə	xxx.
+uralex:Proto-Uralic > Uralic|uralex_80-b	blow	Selkup	p u w ə	p uː - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_80-b	blow	Sosva Mansi	p u w ə	p u w i	...x
+uralex:Proto-Uralic > Uralic|uralex_80-b	blow	Vakh-Vasyugan Khanty	p u w ə	p o ɣ -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_81-a	tree	Hungarian	p u w ɯ	f ɒ - -	xxxx
+uralex:Proto-Uralic > Uralic|uralex_81-a	tree	Komi-Zyrian	p u w ɯ	p u - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_81-a	tree	Meadow Mari	p u w ɯ	p u ʃ e	..xx
+uralex:Proto-Uralic > Uralic|uralex_81-a	tree	Nganasan	p u w ɯ	h u - ɑː	x.xx
+uralex:Proto-Uralic > Uralic|uralex_81-a	tree	Selkup	p u w ɯ	p oː - -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_81-a	tree	Standard Estonian	p u w ɯ	p uː - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_81-a	tree	Standard Finnish	p u w ɯ	p uː - -	..xx
+uralex:Proto-Uralic > Uralic|uralex_81-a	tree	Udmurt	p u w ɯ	p i s -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_82-j	fall	Hungarian	e tɕ ə	ɛ ʃ i	xxx
+uralex:Proto-Uralic > Uralic|uralex_82-j	fall	Komi-Zyrian	e tɕ ə	u ɕ ɯ	xxx
+uralex:Proto-Uralic > Uralic|uralex_82-j	fall	Udmurt	e tɕ ə	u ɕ ɯ	xxx
+uralex:Proto-Uralic > Uralic|uralex_83-h	run	Hungarian	p u k t a	f u - t -	x.x.x
+uralex:Proto-Uralic > Uralic|uralex_84-a	eye	Erzya	ɕ i l m æ	ɕ e ʎ m e	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_84-a	eye	Hungarian	ɕ i l m æ	s ɛ - m -	xxx.x
+uralex:Proto-Uralic > Uralic|uralex_84-a	eye	Kildin Saami	ɕ i l m æ	ʃ a lːʲ m -	xxx.x
+uralex:Proto-Uralic > Uralic|uralex_84-a	eye	Komi-Zyrian	ɕ i l m æ	ɕ i - n -	..xxx
+uralex:Proto-Uralic > Uralic|uralex_84-a	eye	Meadow Mari	ɕ i l m æ	ʃ i - ɲ ɑ	x.xxx
+uralex:Proto-Uralic > Uralic|uralex_84-a	eye	Nganasan	ɕ i l m æ	ɕ e j m ɯ	.xx.x
+uralex:Proto-Uralic > Uralic|uralex_84-a	eye	Selkup	ɕ i l m æ	s ɑ j - i	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_84-a	eye	Sosva Mansi	ɕ i l m æ	s ɑ - m -	xxx.x
+uralex:Proto-Uralic > Uralic|uralex_84-a	eye	Standard Estonian	ɕ i l m æ	s i l m -	x...x
+uralex:Proto-Uralic > Uralic|uralex_84-a	eye	Standard Finnish	ɕ i l m æ	s i l m æ	x....
+uralex:Proto-Uralic > Uralic|uralex_84-a	eye	Udmurt	ɕ i l m æ	ɕ i - n -	..xxx
+uralex:Proto-Uralic > Uralic|uralex_84-a	eye	Vakh-Vasyugan Khanty	ɕ i l m æ	s e - m -	xxx.x
+uralex:Proto-Uralic > Uralic|uralex_86-b	dog	Erzya	p e n æ	p i ɲ e	.xxx
+uralex:Proto-Uralic > Uralic|uralex_86-b	dog	Kildin Saami	p e n æ	p i nː e	.xxx
+uralex:Proto-Uralic > Uralic|uralex_86-b	dog	Komi-Zyrian	p e n æ	p o n -	.x.x
+uralex:Proto-Uralic > Uralic|uralex_86-b	dog	Meadow Mari	p e n æ	p i j -	.xxx
+uralex:Proto-Uralic > Uralic|uralex_86-b	dog	Udmurt	p e n æ	p u n ɯ	.x.x
+uralex:Proto-Uralic > Uralic|uralex_87-c	tail	Kildin Saami	s e j p æ	s e jː p -	..x.x
+uralex:Proto-Uralic > Uralic|uralex_87-c	tail	Nganasan	s e j p æ	t ə j b u	xx.xx
+uralex:Proto-Uralic > Uralic|uralex_9-d	root	Komi-Zyrian	w a n tʃ a	v u - ʒ -	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_9-d	root	Meadow Mari	w a n tʃ a	β o - ʒ -	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_9-d	root	Selkup	w a n tʃ a	k o n ʧ ə	xx..x
+uralex:Proto-Uralic > Uralic|uralex_9-d	root	Udmurt	w a n tʃ a	v ɯ - ʒ ɯ	xxxxx
+uralex:Proto-Uralic > Uralic|uralex_93-h	rope	Erzya	p i k s ə	p i k s -	....x
+uralex:Proto-Uralic > Uralic|uralex_98-e	in	Komi-Zyrian	p u tʃ k ə	p ɯ ʧ k ɯ	.x..x
+uralex:Proto-Uralic > Uralic|uralex_98-e	in	Selkup	p u tʃ k ə	p uː ʧ - ə	...x.
+uralex:Proto-Uralic > Uralic|uralex_98-e	in	Udmurt	p u tʃ k ə	p u ʃ k ɯ	..x.x
+uralex:Proto-Uralic > Uralic|uralex_99-c	star	Komi-Zyrian	k u ɲ ɕ a	k o - ʥ u	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_99-c	star	Selkup	k u ɲ ɕ a	q ɯ - ɕ ɑ	xxx.x
+uralex:Proto-Uralic > Uralic|uralex_99-c	star	Udmurt	k u ɲ ɕ a	k i - ʑ i	.xxxx
+uralex:Proto-Uralic > Uralic|uralex_99-c	star	Vakh-Vasyugan Khanty	k u ɲ ɕ a	k ɔ - s -	.xxxx
