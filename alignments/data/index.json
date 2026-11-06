@@ -71,6 +71,34 @@
   ]
  },
  {
+  "analysis": "Early Slovenian > Kostel",
+  "slug": "Early_Slovenian_to_Kostel",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 148,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Early Slovenian > Slovene",
+  "slug": "Early_Slovenian_to_Slovene",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 157,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
   "analysis": "Koine > Greek",
   "slug": "Koine_to_Greek",
   "family": "Indo-European",
@@ -85,12 +113,26 @@
   ]
  },
  {
+  "analysis": "Latin > Romance (REW)",
+  "slug": "Latin_to_Romance_REW",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 3838,
+  "languages": 7,
+  "sources": [
+   {
+    "text": "Meyer-Lübke, Wilhelm (1935). Romanisches Etymologisches Wörterbuch. Carl Winter."
+   }
+  ]
+ },
+ {
   "analysis": "Latin > Romance (reviewed)",
   "slug": "Latin_to_Romance_reviewed",
   "family": "Indo-European",
   "kind": "attested ancestor",
   "machine": false,
-  "sets": 424,
+  "sets": 419,
   "languages": 21,
   "sources": [
    {
@@ -107,6 +149,20 @@
   "machine": true,
   "sets": 158,
   "languages": 2,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Middle Cornish > Late Cornish",
+  "slug": "Middle_Cornish_to_Late_Cornish",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 121,
+  "languages": 1,
   "sources": [
    {
     "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
@@ -149,6 +205,20 @@
   "machine": true,
   "sets": 149,
   "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Old Breton > Breton",
+  "slug": "Old_Breton_to_Breton",
+  "family": "Indo-European",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 64,
+  "languages": 2,
   "sources": [
    {
     "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
@@ -471,6 +541,20 @@
   ]
  },
  {
+  "analysis": "Proto-Romance > Romance (REW)",
+  "slug": "Proto-Romance_to_Romance_REW",
+  "family": "Indo-European",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 754,
+  "languages": 7,
+  "sources": [
+   {
+    "text": "Meyer-Lübke, Wilhelm (1935). Romanisches Etymologisches Wörterbuch. Carl Winter."
+   }
+  ]
+ },
+ {
   "analysis": "Reconstructed OIA > modern Indo-Aryan",
   "slug": "Reconstructed_OIA_to_modern_Indo-Aryan",
   "family": "Indo-European",
@@ -486,6 +570,20 @@
   ]
  },
  {
+  "analysis": "Sogdian > Yaghnobi",
+  "slug": "Sogdian_to_Yaghnobi",
+  "family": "Indo-European",
+  "kind": "attested relative of the ancestor",
+  "machine": true,
+  "sets": 65,
+  "languages": 1,
+  "sources": [
+   {
+    "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
   "analysis": "Vedic > Indo-Aryan",
   "slug": "Vedic_to_Indo-Aryan",
   "family": "Indo-European",
@@ -496,6 +594,21 @@
   "sources": [
    {
     "text": "Heggarty, Paul et al. (2023). Language trees with sampled ancestors support a hybrid model for the origin of Indo-European languages. Science."
+   }
+  ]
+ },
+ {
+  "analysis": "Classical Arabic > Arabic",
+  "slug": "Classical_Arabic_to_Arabic",
+  "family": "Afro-Asiatic",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 97,
+  "languages": 13,
+  "sources": [
+   {
+    "text": "Ratcliffe, Robert R. (2021). The Glottometrics of Arabic. Language Dynamics and Change.",
+    "url": "https://doi.org/10.1163/22105832-01001100"
    }
   ]
  },
@@ -545,6 +658,40 @@
   ]
  },
  {
+  "analysis": "Old Javanese > Javanese",
+  "slug": "Old_Javanese_to_Javanese",
+  "family": "Austronesian",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 605,
+  "languages": 3,
+  "sources": [
+   {
+    "text": "Blust, Robert & Trussel, Stephen (2010). The Austronesian Comparative Dictionary. Online at acd.clld.org.",
+    "url": "https://acd.clld.org"
+   },
+   {
+    "text": "Greenhill, Simon J., Blust, Robert & Gray, Russell D. (2008). The Austronesian Basic Vocabulary Database: From Bioinformatics to Lexomics. Evolutionary Bioinformatics.",
+    "url": "https://doi.org/10.4137/EBO.S893"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Malayo-Polynesian > Malayo-Polynesian",
+  "slug": "Proto-Malayo-Polynesian_to_Malayo-Polynesian",
+  "family": "Austronesian",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 1719,
+  "languages": 17,
+  "sources": [
+   {
+    "text": "Blust, Robert & Trussel, Stephen (2010). The Austronesian Comparative Dictionary. Online at acd.clld.org.",
+    "url": "https://acd.clld.org"
+   }
+  ]
+ },
+ {
   "analysis": "Proto-Micronesian > Micronesian",
   "slug": "Proto-Micronesian_to_Micronesian",
   "family": "Austronesian",
@@ -556,6 +703,20 @@
    {
     "text": "Bender, Byron W., Goodenough, Ward H., Jackson, Frederick H., Marck, Jeffrey C., Rehg, Kenneth L., Sohn, Ho-min, Trussel, Stephen & Wang, Judith W. (2003). Proto-Micronesian reconstructions: I. Oceanic Linguistics.",
     "url": "https://doi.org/10.2307/3623449"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Oceanic > Oceanic",
+  "slug": "Proto-Oceanic_to_Oceanic",
+  "family": "Austronesian",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 1529,
+  "languages": 22,
+  "sources": [
+   {
+    "text": " (1998). The Lexicon of Proto Oceanic. Pacific Linguistics and ANU Press."
    }
   ]
  },
@@ -791,12 +952,27 @@
   ]
  },
  {
+  "analysis": "Old-Classical Newari > Newar",
+  "slug": "Old-Classical_Newari_to_Newar",
+  "family": "Sino-Tibetan",
+  "kind": "attested ancestor",
+  "machine": true,
+  "sets": 179,
+  "languages": 2,
+  "sources": [
+   {
+    "text": "Liu, Zhenyang, Jacques, Guillaume & List, Johann-Mattis (2023). Creating a Standardized Comparative Wordlist of Newari Varieties. Computer-Assisted Language Comparison in Practice 6(7).",
+    "url": "https://calc.hypotheses.org/6269"
+   }
+  ]
+ },
+ {
   "analysis": "Proto-Bizic > Bizic",
   "slug": "Proto-Bizic_to_Bizic",
   "family": "Sino-Tibetan",
   "kind": "reconstructed ancestor",
   "machine": true,
-  "sets": 327,
+  "sets": 312,
   "languages": 6,
   "sources": [
    {
@@ -874,6 +1050,21 @@
    {
     "text": "Gao, Tianjun (2020). Reconstruction and analysis of phylogenetic network on Tibeto-Burman languages in China. Journal of Chinese Linguistics.",
     "url": "https://doi.org/10.1353/jcl.2020.0006"
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Siouan > Siouan",
+  "slug": "Proto-Siouan_to_Siouan",
+  "family": "Siouan",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 633,
+  "languages": 13,
+  "sources": [
+   {
+    "text": "Rankin, Robert L., Carter, Richard T., Jones, A. Wesley, Koontz, John E., Rood, David S. & Hartmann, Iren (2015). Comparative Siouan Dictionary. Leipzig: Max Planck Institute for Evolutionary Anthropology.",
+    "url": "https://csd.clld.org"
    }
   ]
  },
@@ -967,6 +1158,21 @@
   ]
  },
  {
+  "analysis": "Tupinamba > Omagua and Kokama",
+  "slug": "Tupinamba_to_Omagua_and_Kokama",
+  "family": "Tupian",
+  "kind": "attested relative of the ancestor",
+  "machine": false,
+  "sets": 173,
+  "languages": 2,
+  "sources": [
+   {
+    "text": "Lundgren, Olof (2020). A phonological reconstruction of Proto-Omagua-Kokama-Tupinambá. Lund University.",
+    "url": "https://lup.lub.lu.se/student-papers/search/publication/9007022"
+   }
+  ]
+ },
+ {
   "analysis": "Old Turkic > Common Turkic",
   "slug": "Old_Turkic_to_Common_Turkic",
   "family": "Turkic",
@@ -977,6 +1183,21 @@
   "sources": [
    {
     "text": "Robbeets, Martine et al. (2021). Triangulation supports agricultural spread of the Transeurasian languages. Nature."
+   }
+  ]
+ },
+ {
+  "analysis": "Proto-Uralic > Uralic",
+  "slug": "Proto-Uralic_to_Uralic",
+  "family": "Uralic",
+  "kind": "reconstructed ancestor",
+  "machine": true,
+  "sets": 132,
+  "languages": 12,
+  "sources": [
+   {
+    "text": "Syrjänen, Kaj, Honkola, Terhi, Korhonen, Kalle, Lehtinen, Jyri, Vesakoski, Outi & Leino, Unni (2013). Shedding more light on language classification using basic vocabularies and phylogenetic methods: A case study of Uralic. Diachronica.",
+    "url": "https://doi.org/10.1075/dia.30.3.02syr"
    }
   ]
  },

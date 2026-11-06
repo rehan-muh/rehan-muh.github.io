@@ -49,14 +49,14 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_1007	NEAR	Xishanba Lalo	n ɛ	n ɛ̤	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_1007	NEAR	Xuzhang Lalo	n ɛ	- ɛi	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1007	NEAR	Yangliu	n ɛ	- ai	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1008	HIGH	Dongshanba Lalo	ˀm u	ɤ̃ -	xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_1008	HIGH	Eka	ˀm u	m u	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_1008	HIGH	Southern Lalo	ˀm u	m u	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_1008	HIGH	Eka	ˀm u	m u	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_1008	HIGH	Southern Lalo	ˀm u	m u	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_1008	HIGH	Western Lalu	ˀm u	- ɨ̃	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1008	HIGH	Xishanba Lalo	ˀm u	- ə	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1008	HIGH	Xuzhang Lalo	ˀm u	- ɨ̃	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1008	HIGH	Yangliu	ˀm u	- õ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1009	LOW	Eka	ˀn i	- ə	xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_1009	LOW	Southern Lalo	ˀn i	n i	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_1009	LOW	Southern Lalo	ˀn i	n i	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_1009	LOW	Xishanba Lalo	ˀn i	- a̠i	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1009	LOW	Xuzhang Lalo	ˀn i	- ɛi	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_101	WILD ANIMAL	Dongshanba Lalo	dz e k a ŋ	j a k a -	xx..x
@@ -83,11 +83,11 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_1012	MANY	Xuzhang Lalo	m j a	m - o	.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1012	MANY	Yangliu	m j a	m - a	.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_1013	FEW	Dongshanba Lalo	n e	n ei	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_1013	FEW	Southern Lalo	n e	n ɛ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_1013	FEW	Xishanba Lalo	n e	ˀn i̤	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_1013	FEW	Xishanba Lalo	n e	ˀn i̤	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1013	FEW	Xuzhang Lalo	n e	n ɛi	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_1013	FEW	Yangliu	n e	- ai	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1014	WIDE	Southern Lalo	f e	f ɛ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_1015	NARROW	Southern Lalo	ˀɲ a̠	ɲ ɑ̠	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_1015	NARROW	Southern Lalo	ˀɲ a̠	ɲ ɑ̠	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1016	BIG	Dongshanba Lalo	ɣ ɛ	ɣ ɛ	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_1016	BIG	Eka	ɣ ɛ	ʝ ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_1016	BIG	Southern Lalo	ɣ ɛ	ʝ ɛ	x.
@@ -102,21 +102,21 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_1018	SMALL	Eka	ʒ a ŋ	z a -	x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_1018	SMALL	Southern Lalo	ʒ a ŋ	j a -	x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_1018	SMALL	Western Lalu	ʒ a ŋ	- u -	xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1018	SMALL	Xishanba Lalo	ʒ a ŋ	- u -	xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_1019	DEEP	Dongshanba Lalo	ˀn e̠	n ei	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_1019	DEEP	Eka	ˀn e̠	n i̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_1019	DEEP	Southern Lalo	ˀn e̠	n ɛ̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_1019	DEEP	Western Lalu	ˀn e̠	n ɛ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_1019	DEEP	Xishanba Lalo	ˀn e̠	n ɛ̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_1019	DEEP	Yangliu	ˀn e̠	n ai	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_1019	DEEP	Dongshanba Lalo	ˀn e̠	n ei	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_1019	DEEP	Eka	ˀn e̠	n i̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_1019	DEEP	Southern Lalo	ˀn e̠	n ɛ̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_1019	DEEP	Western Lalu	ˀn e̠	n ɛ	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_1019	DEEP	Xishanba Lalo	ˀn e̠	n ɛ̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_1019	DEEP	Yangliu	ˀn e̠	n ai	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_102	BEAR	Eka	a ɣ y	a ɣ ɨ	..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_102	BEAR	Southern Lalo	a ɣ y	a ɣ ɨ	..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_102	BEAR	Western Lalu	a ɣ y	a v v̩	.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_102	BEAR	Xishanba Lalo	a ɣ y	a̤ j y	.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_102	BEAR	Xuzhang Lalo	a ɣ y	- w v̩	xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_102	BEAR	Yangliu	a ɣ y	- ɣ ɨ	x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_1020	SHALLOW	Eka	m a ˀn e̠	m a n i	...x
-yanglalo:Proto-Lalo > Lalo|yanglalo_1020	SHALLOW	Southern Lalo	m a ˀn e̠	m a n ɛ̠	...x
-yanglalo:Proto-Lalo > Lalo|yanglalo_1020	SHALLOW	Xishanba Lalo	m a ˀn e̠	m a̤ n ɛ̠	...x
+yanglalo:Proto-Lalo > Lalo|yanglalo_1020	SHALLOW	Eka	m a ˀn e̠	m a n i	..xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_1020	SHALLOW	Southern Lalo	m a ˀn e̠	m a n ɛ̠	..xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_1020	SHALLOW	Xishanba Lalo	m a ˀn e̠	m a̤ n ɛ̠	..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1021	LIGHT (WEIGHT)	Dongshanba Lalo	l a ŋ	l a -	..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_1021	LIGHT (WEIGHT)	Eka	l a ŋ	l a -	..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_1021	LIGHT (WEIGHT)	Southern Lalo	l a ŋ	l a -	..x
@@ -178,9 +178,9 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_1036	THREE	Western Lalu	s a	s a	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_1036	THREE	Xishanba Lalo	s a	s a	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_1036	THREE	Xuzhang Lalo	s a	s o	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_1036	THREE	Yangliu	s a	s a	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_1037	FOUR	Dongshanba Lalo	ˀl i	l i	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_1037	FOUR	Eka	ˀl i	l i	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_1037	FOUR	Southern Lalo	ˀl i	l ɨ	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_1037	FOUR	Dongshanba Lalo	ˀl i	l i	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_1037	FOUR	Eka	ˀl i	l i	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_1037	FOUR	Southern Lalo	ˀl i	l ɨ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1037	FOUR	Western Lalu	ˀl i	ʐ ʅ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1037	FOUR	Xishanba Lalo	ˀl i	ˀʐ ʅ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1037	FOUR	Xuzhang Lalo	ˀl i	ʐ ʅ	xx
@@ -307,10 +307,10 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_1057	I	Xuzhang Lalo	ŋ a	- ũ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1058	WE	Dongshanba Lalo	ŋ a ts a	ŋ ɔ ts ɔ	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_1058	WE	Xishanba Lalo	ŋ a ts a	ŋ a ts a	....
 yanglalo:Proto-Lalo > Lalo|yanglalo_1059	WE	Dongshanba Lalo	ˀŋ a	n a	x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_1059	WE	Eka	ˀŋ a	ŋ o	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_1059	WE	Eka	ˀŋ a	ŋ o	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1059	WE	Western Lalu	ˀŋ a	- u	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1059	WE	Xuzhang Lalo	ˀŋ a	n u	xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_1059	WE	Yangliu	ˀŋ a	ŋ a	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_1059	WE	Yangliu	ˀŋ a	ŋ a	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_106	MONKEY	Dongshanba Lalo	m j o̠	m j u	..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_106	MONKEY	Eka	m j o̠	m - u̠	.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_106	MONKEY	Southern Lalo	m j o̠	m - u̠	.xx
@@ -387,9 +387,9 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_1084	BETWEEN	Southern Lalo	k a̠ k a ŋ	k a 
 yanglalo:Proto-Lalo > Lalo|yanglalo_1084	BETWEEN	Western Lalu	k a̠ k a ŋ	k a k v̩ -	...xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1084	BETWEEN	Xishanba Lalo	k a̠ k a ŋ	k a k ə -	...xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1084	BETWEEN	Yangliu	k a̠ k a ŋ	k a l a -	..x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_1085	LEFT	Dongshanba Lalo	ˀv ɛ	v ɛ	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_1085	LEFT	Southern Lalo	ˀv ɛ	v ɛ	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_1085	LEFT	Western Lalu	ˀv ɛ	v ɛ	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_1085	LEFT	Dongshanba Lalo	ˀv ɛ	v ɛ	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_1085	LEFT	Southern Lalo	ˀv ɛ	v ɛ	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_1085	LEFT	Western Lalu	ˀv ɛ	v ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_1085	LEFT	Xishanba Lalo	ˀv ɛ	ˀv ɛ̤	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_1085	LEFT	Xuzhang Lalo	ˀv ɛ	pʰ ɛi	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1086	RIGHT	Southern Lalo	ʒ a	dʒ ə	xx
@@ -485,9 +485,9 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_1110	SLOWLY	Western Lalu	a d e d e	a d e d e
 yanglalo:Proto-Lalo > Lalo|yanglalo_1110	SLOWLY	Xishanba Lalo	a d e d e	a̤ d i d i	..x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_1110	SLOWLY	Xuzhang Lalo	a d e d e	a d i d i	..x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_1110	SLOWLY	Yangliu	a d e d e	a d i d i	..x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_1111	QUICKLY	Southern Lalo	ˀm j y̠	m - ɛ	.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_1111	QUICKLY	Western Lalu	ˀm j y̠	m - y	.x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_1111	QUICKLY	Yangliu	ˀm j y̠	m - ə	.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_1111	QUICKLY	Southern Lalo	ˀm j y̠	m - ɛ	xxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_1111	QUICKLY	Western Lalu	ˀm j y̠	m - y	xx.
+yanglalo:Proto-Lalo > Lalo|yanglalo_1111	QUICKLY	Yangliu	ˀm j y̠	m - ə	xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_1117	NOT	Dongshanba Lalo	m a	m a	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_1117	NOT	Eka	m a	m a	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_1117	NOT	Southern Lalo	m a	m a	..
@@ -674,8 +674,8 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_151	WASP	Xuzhang Lalo	b j a ʃ ɛ	b - a ʂ �
 yanglalo:Proto-Lalo > Lalo|yanglalo_152	MOSQUITO	Dongshanba Lalo	ɣ a ŋ b i̠	j a - - -	x.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_152	MOSQUITO	Western Lalu	ɣ a ŋ b i̠	v u - dz ɿ	xxxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_152	MOSQUITO	Xuzhang Lalo	ɣ a ŋ b i̠	j a - - -	x.xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_154	BUTTERFLY	Dongshanba Lalo	b o ˀl u	- - l ei	xx.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_154	BUTTERFLY	Western Lalu	b o ˀl u	dz ɿ l v̩	xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_154	BUTTERFLY	Dongshanba Lalo	b o ˀl u	- - l ei	xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_154	BUTTERFLY	Western Lalu	b o ˀl u	dz ɿ l v̩	xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_154	BUTTERFLY	Xishanba Lalo	b o ˀl u	v i̤ ˀl ə	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_155	CRICKET	Dongshanba Lalo	b ɨ tʃ ɛ̠	b ə ts ɿ	.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_155	CRICKET	Eka	b ɨ tʃ ɛ̠	p ɨ tɕ ɛ	x.x.
@@ -765,13 +765,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_171	HORN (ANATOMY)	Western Lalu	kʰ o	kʰ v�
 yanglalo:Proto-Lalo > Lalo|yanglalo_171	HORN (ANATOMY)	Xishanba Lalo	kʰ o	kʰ ə	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_171	HORN (ANATOMY)	Xuzhang Lalo	kʰ o	kʰ ɤ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_171	HORN (ANATOMY)	Yangliu	kʰ o	kʰ ɤ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_173	TAIL	Dongshanba Lalo	ˀm ɛ	m ɛ	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_173	TAIL	Eka	ˀm ɛ	m ɛ̠	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_173	TAIL	Southern Lalo	ˀm ɛ	m ɛ	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_173	TAIL	Western Lalu	ˀm ɛ	m ɛ	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_173	TAIL	Dongshanba Lalo	ˀm ɛ	m ɛ	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_173	TAIL	Eka	ˀm ɛ	m ɛ̠	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_173	TAIL	Southern Lalo	ˀm ɛ	m ɛ	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_173	TAIL	Western Lalu	ˀm ɛ	m ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_173	TAIL	Xishanba Lalo	ˀm ɛ	ˀm ɛ̤	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_173	TAIL	Xuzhang Lalo	ˀm ɛ	m ɛ	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_173	TAIL	Yangliu	ˀm ɛ	m ɛ	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_173	TAIL	Xuzhang Lalo	ˀm ɛ	m ɛ	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_173	TAIL	Yangliu	ˀm ɛ	m ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_174	TUSK	Dongshanba Lalo	dʒ ɛ	dz ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_174	TUSK	Eka	dʒ ɛ	dʑ i	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_174	TUSK	Southern Lalo	dʒ ɛ	dʑ ɛ	x.
@@ -796,8 +796,8 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_177	PINE	Eka	tʰ a ŋ dz e	tʰ a ŋ dʑ i	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_177	PINE	Western Lalu	tʰ a ŋ dz e	tʰ u - dz ɿ	.xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_177	PINE	Xishanba Lalo	tʰ a ŋ dz e	tʰ u̥ - dz ɿ	.xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_177	PINE	Xuzhang Lalo	tʰ a ŋ dz e	tʰ a ŋ dz ɿ	....x
-yanglalo:Proto-Lalo > Lalo|yanglalo_178	FIR	Dongshanba Lalo	ˀŋ y dz e	ŋ ɯ dz ei	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_178	FIR	Western Lalu	ˀŋ y dz e	ŋ o dz ɿ	.x.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_178	FIR	Dongshanba Lalo	ˀŋ y dz e	ŋ ɯ dz ei	xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_178	FIR	Western Lalu	ˀŋ y dz e	ŋ o dz ɿ	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_178	FIR	Xishanba Lalo	ˀŋ y dz e	n ə dz ɿ	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_178	FIR	Xuzhang Lalo	ˀŋ y dz e	- - dz ɿ	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_179	WILLOW	Dongshanba Lalo	ɣ i m ɨ dz e	- i m ʉ dz ei	x..x.x
@@ -807,7 +807,7 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_179	WILLOW	Xuzhang Lalo	ɣ i m ɨ dz e	v v̩
 yanglalo:Proto-Lalo > Lalo|yanglalo_18	FROST	Dongshanba Lalo	ˀn i pʰ u	- i f ɤ	x.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_18	FROST	Eka	ˀn i pʰ u	m i pʰ v̩	x..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_18	FROST	Southern Lalo	ˀn i pʰ u	m i pʰ u	x...
-yanglalo:Proto-Lalo > Lalo|yanglalo_18	FROST	Western Lalu	ˀn i pʰ u	n i f v̩	..xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_18	FROST	Western Lalu	ˀn i pʰ u	n i f v̩	x.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_18	FROST	Xishanba Lalo	ˀn i pʰ u	- i f v̩	x.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_18	FROST	Xuzhang Lalo	ˀn i pʰ u	j i pfʰ v̩	x.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_18	FROST	Yangliu	ˀn i pʰ u	- i f v̩	x.xx
@@ -839,7 +839,7 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_186	BARLEY	Dongshanba Lalo	z i	z ɿ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_186	BARLEY	Western Lalu	z i	z ɿ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_186	BARLEY	Xishanba Lalo	z i	z ɿ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_186	BARLEY	Xuzhang Lalo	z i	z ɿ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_187	SORGHUM	Western Lalu	ˀl u	l v̩	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_187	SORGHUM	Western Lalu	ˀl u	l v̩	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_187	SORGHUM	Xishanba Lalo	ˀl u	ˀl ə	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_188	JOB'S TEARS	Western Lalu	n a b a ŋ s ɛ	n a p u - s ɛ	..xxx..
 yanglalo:Proto-Lalo > Lalo|yanglalo_189	MAIZE	Dongshanba Lalo	ʃ a m ɨ	- u m ɛ	xx.x
@@ -854,9 +854,9 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_19	DEW	Southern Lalo	k j y	ts - ɿ	xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_19	DEW	Western Lalu	k j y	tɕ - y	xx.
 yanglalo:Proto-Lalo > Lalo|yanglalo_19	DEW	Xishanba Lalo	k j y	k - y̤	.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_19	DEW	Xuzhang Lalo	k j y	tɕ - y	xx.
-yanglalo:Proto-Lalo > Lalo|yanglalo_190	EAR (OF GRAIN)	Western Lalu	ˀn y	n y	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_190	EAR (OF GRAIN)	Western Lalu	ˀn y	n y	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_190	EAR (OF GRAIN)	Xishanba Lalo	ˀn y	ˀn y	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_190	EAR (OF GRAIN)	Xuzhang Lalo	ˀn y	n y	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_190	EAR (OF GRAIN)	Xuzhang Lalo	ˀn y	n y	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_192	WALNUT	Dongshanba Lalo	s a m e	s a m ei	...x
 yanglalo:Proto-Lalo > Lalo|yanglalo_192	WALNUT	Western Lalu	s a m e	s a m e	....
 yanglalo:Proto-Lalo > Lalo|yanglalo_192	WALNUT	Xishanba Lalo	s a m e	s ɛ̤ m i	.x.x
@@ -903,7 +903,7 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_199	AUBERGINE	Western Lalu	ɡ a z i	ɣ a z �
 yanglalo:Proto-Lalo > Lalo|yanglalo_199	AUBERGINE	Xishanba Lalo	ɡ a z i	ɦ a z ɿ	x..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_199	AUBERGINE	Xuzhang Lalo	ɡ a z i	ɡ o z ɿ	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_2	SKY	Xuzhang Lalo	m o d a ŋ	n̩ - d a -	xx..x
-yanglalo:Proto-Lalo > Lalo|yanglalo_20	HAIL	Western Lalu	ˀl o̠ h a	l v̩ - -	.xxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_20	HAIL	Western Lalu	ˀl o̠ h a	l v̩ - -	xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_20	HAIL	Xishanba Lalo	ˀl o̠ h a	ˀl o h a	....
 yanglalo:Proto-Lalo > Lalo|yanglalo_200	VEGETABLES	Dongshanba Lalo	ɣ a ŋ tʃ e̠	j a - - -	x.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_200	VEGETABLES	Eka	ɣ a ŋ tʃ e̠	v a - - -	x.xxx
@@ -953,11 +953,11 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_209	PEACH	Southern Lalo	s a v y	tsʰ a ɣ ɨ
 yanglalo:Proto-Lalo > Lalo|yanglalo_209	PEACH	Western Lalu	s a v y	s a v e	...x
 yanglalo:Proto-Lalo > Lalo|yanglalo_209	PEACH	Xishanba Lalo	s a v y	s ø̤ ʔ ø̤	.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_209	PEACH	Xuzhang Lalo	s a v y	s a w u	..xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_21	GROUND	Dongshanba Lalo	ˀm i d i	m i - -	..xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_21	GROUND	Eka	ˀm i d i	m i - -	..xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_21	GROUND	Southern Lalo	ˀm i d i	m i - -	..xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_21	GROUND	Western Lalu	ˀm i d i	m i d i	....
-yanglalo:Proto-Lalo > Lalo|yanglalo_21	GROUND	Xishanba Lalo	ˀm i d i	m i - -	..xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_21	GROUND	Dongshanba Lalo	ˀm i d i	m i - -	x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_21	GROUND	Eka	ˀm i d i	m i - -	x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_21	GROUND	Southern Lalo	ˀm i d i	m i - -	x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_21	GROUND	Western Lalu	ˀm i d i	m i d i	x...
+yanglalo:Proto-Lalo > Lalo|yanglalo_21	GROUND	Xishanba Lalo	ˀm i d i	m i - -	x.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_21	GROUND	Xuzhang Lalo	ˀm i d i	n̩ - d i	xx..
 yanglalo:Proto-Lalo > Lalo|yanglalo_210	PEACH	Eka	s a v y	s a pʰ ɛ	..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_211	PERSIMMON	Dongshanba Lalo	m u b ɛ	m̩ - b ɛ	.x..
@@ -1038,11 +1038,11 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_228	BOARD	Yangliu	p ɛ	p ɛ	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_229	BOARD	Southern Lalo	pʰ e	pʰ ɛ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_229	BOARD	Xishanba Lalo	pʰ e	pʰ i̤	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_23	MUD	Xishanba Lalo	e h a ŋ	i h ə -	x.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_230	STICK	Dongshanba Lalo	ˀm ɛ t u	m ɛ t ɤ	...x
+yanglalo:Proto-Lalo > Lalo|yanglalo_230	STICK	Dongshanba Lalo	ˀm ɛ t u	m ɛ t ɤ	x..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_230	STICK	Southern Lalo	ˀm ɛ t u	- - t ũ	xx.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_230	STICK	Western Lalu	ˀm ɛ t u	m ɛ t u	....
+yanglalo:Proto-Lalo > Lalo|yanglalo_230	STICK	Western Lalu	ˀm ɛ t u	m ɛ t u	x...
 yanglalo:Proto-Lalo > Lalo|yanglalo_230	STICK	Xishanba Lalo	ˀm ɛ t u	ˀm ɛ t ə	...x
-yanglalo:Proto-Lalo > Lalo|yanglalo_230	STICK	Xuzhang Lalo	ˀm ɛ t u	m ɛ t ɛ	...x
+yanglalo:Proto-Lalo > Lalo|yanglalo_230	STICK	Xuzhang Lalo	ˀm ɛ t u	m ɛ t ɛ	x..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_232	BRANCH	Dongshanba Lalo	s i̠ k a̠ l e̠	ɕ i k u l ei	x..x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_232	BRANCH	Southern Lalo	s i̠ k a̠ l e̠	ɕ i k a l a	x....x
 yanglalo:Proto-Lalo > Lalo|yanglalo_232	BRANCH	Western Lalu	s i̠ k a̠ l e̠	s ɿ k a - -	.x..xx
@@ -1078,7 +1078,7 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_237	GLUTINOUS RICE	Western Lalu	tʃʰ e ɲ a
 yanglalo:Proto-Lalo > Lalo|yanglalo_237	GLUTINOUS RICE	Xishanba Lalo	tʃʰ e ɲ a	tɕʰ i n ə̤	xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_237	GLUTINOUS RICE	Xuzhang Lalo	tʃʰ e ɲ a	tɕʰ i ɲ a	xx..
 yanglalo:Proto-Lalo > Lalo|yanglalo_237	GLUTINOUS RICE	Yangliu	tʃʰ e ɲ a	tɕʰ i ɲ a	xx..
-yanglalo:Proto-Lalo > Lalo|yanglalo_238	RICE SEEDLING	Eka	ˀl i	l ɨ	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_238	RICE SEEDLING	Eka	ˀl i	l ɨ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_238	RICE SEEDLING	Western Lalu	ˀl i	ʝ i	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_238	RICE SEEDLING	Xishanba Lalo	ˀl i	ˀʐ ʐ̩	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_239	RICE HUSK	Dongshanba Lalo	tʃʰ e pʰ ɛ	tɕʰ i pʰ ɛ	xx..
@@ -1146,20 +1146,20 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_250	HEAD	Western Lalu	n u d y	n̩ - d y	.x..
 yanglalo:Proto-Lalo > Lalo|yanglalo_250	HEAD	Xishanba Lalo	n u d y	n̩ - d y	.x..
 yanglalo:Proto-Lalo > Lalo|yanglalo_250	HEAD	Xuzhang Lalo	n u d y	ŋ̩ - - -	xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_250	HEAD	Yangliu	n u d y	n̩ - d ə	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_251	BRAIN	Dongshanba Lalo	ˀn u̠	n u	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_251	BRAIN	Eka	ˀn u̠	n u̠	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_251	BRAIN	Southern Lalo	ˀn u̠	n o	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_251	BRAIN	Western Lalu	ˀn u̠	n u	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_251	BRAIN	Dongshanba Lalo	ˀn u̠	n u	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_251	BRAIN	Eka	ˀn u̠	n u̠	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_251	BRAIN	Southern Lalo	ˀn u̠	n o	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_251	BRAIN	Western Lalu	ˀn u̠	n u	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_251	BRAIN	Xishanba Lalo	ˀn u̠	ˀn ə̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_251	BRAIN	Xuzhang Lalo	ˀn u̠	n o	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_251	BRAIN	Yangliu	ˀn u̠	n o	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_252	FOREHEAD	Dongshanba Lalo	ˀn u̠ k a ŋ	n u k a -	....x
-yanglalo:Proto-Lalo > Lalo|yanglalo_252	FOREHEAD	Eka	ˀn u̠ k a ŋ	n a kʰ a̠ -	.xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_251	BRAIN	Xuzhang Lalo	ˀn u̠	n o	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_251	BRAIN	Yangliu	ˀn u̠	n o	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_252	FOREHEAD	Dongshanba Lalo	ˀn u̠ k a ŋ	n u k a -	x...x
+yanglalo:Proto-Lalo > Lalo|yanglalo_252	FOREHEAD	Eka	ˀn u̠ k a ŋ	n a kʰ a̠ -	xxx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_252	FOREHEAD	Southern Lalo	ˀn u̠ k a ŋ	ŋ̩ - k o -	xx.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_252	FOREHEAD	Western Lalu	ˀn u̠ k a ŋ	n a k o -	.x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_252	FOREHEAD	Western Lalu	ˀn u̠ k a ŋ	n a k o -	xx.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_252	FOREHEAD	Xishanba Lalo	ˀn u̠ k a ŋ	ˀn ao k o -	.x.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_252	FOREHEAD	Xuzhang Lalo	ˀn u̠ k a ŋ	n o k o -	.x.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_252	FOREHEAD	Yangliu	ˀn u̠ k a ŋ	n o kʰ o -	.xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_252	FOREHEAD	Xuzhang Lalo	ˀn u̠ k a ŋ	n o k o -	xx.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_252	FOREHEAD	Yangliu	ˀn u̠ k a ŋ	n o kʰ o -	xxxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_253	HAIR (HEAD)	Dongshanba Lalo	n̩ tsʰ y	n̩ tsʰ ə	..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_253	HAIR (HEAD)	Eka	n̩ tsʰ y	ŋ̩ tsʰ ə	x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_253	HAIR (HEAD)	Western Lalu	n̩ tsʰ y	n̩ tɕʰ y	.x.
@@ -1172,32 +1172,32 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_254	BRAID	Western Lalu	n̩ tsʰ y pʰ e	n̩ 
 yanglalo:Proto-Lalo > Lalo|yanglalo_254	BRAID	Xishanba Lalo	n̩ tsʰ y pʰ e	n̩ tsʰ y pʰ i	....x
 yanglalo:Proto-Lalo > Lalo|yanglalo_254	BRAID	Xuzhang Lalo	n̩ tsʰ y pʰ e	n̩ tsʰ y pʰ ɛi	....x
 yanglalo:Proto-Lalo > Lalo|yanglalo_254	BRAID	Yangliu	n̩ tsʰ y pʰ e	n̩ tsʰ ə pʰ ai	..x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_255	FACE	Dongshanba Lalo	pʰ j a ŋ ˀm j e̠	pʰ - a - m - ei	.x.x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_255	FACE	Dongshanba Lalo	pʰ j a ŋ ˀm j e̠	pʰ - a - m - ei	.x.xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_255	FACE	Eka	pʰ j a ŋ ˀm j e̠	pʰ - a̠ - n - i	.x.xxxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_255	FACE	Southern Lalo	pʰ j a ŋ ˀm j e̠	pʰ - ɛ - m - ɛ	.xxx.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_255	FACE	Western Lalu	pʰ j a ŋ ˀm j e̠	pʰ - u - m - e	.xxx.x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_255	FACE	Southern Lalo	pʰ j a ŋ ˀm j e̠	pʰ - ɛ - m - ɛ	.xxxxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_255	FACE	Western Lalu	pʰ j a ŋ ˀm j e̠	pʰ - u - m - e	.xxxxx.
 yanglalo:Proto-Lalo > Lalo|yanglalo_255	FACE	Xishanba Lalo	pʰ j a ŋ ˀm j e̠	pʰ - u̥ - ˀm - ɛ̠	.xxx.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_255	FACE	Xuzhang Lalo	pʰ j a ŋ ˀm j e̠	pʰ - a - m - ɛi	.x.x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_255	FACE	Xuzhang Lalo	pʰ j a ŋ ˀm j e̠	pʰ - a - m - ɛi	.x.xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_255	FACE	Yangliu	pʰ j a ŋ ˀm j e̠	b - a - w - v̩	xx.xxxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_256	EYEBROW	Dongshanba Lalo	ˀm j e̠ tsʰ a m	m - ei - - -	.xxxxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_256	EYEBROW	Eka	ˀm j e̠ tsʰ a m	m - ɨ tɕ i -	.xxxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_256	EYEBROW	Dongshanba Lalo	ˀm j e̠ tsʰ a m	m - ei - - -	xxxxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_256	EYEBROW	Eka	ˀm j e̠ tsʰ a m	m - ɨ tɕ i -	xxxxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_256	EYEBROW	Xishanba Lalo	ˀm j e̠ tsʰ a m	ˀm - ɛ̠ - - -	.xxxxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_256	EYEBROW	Xuzhang Lalo	ˀm j e̠ tsʰ a m	m - i tsʰ y -	.xx.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_256	EYEBROW	Yangliu	ˀm j e̠ tsʰ a m	m - i tsʰ ə -	.xx.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_257	EYE	Dongshanba Lalo	ˀm j e̠ s ɛ	m - i s ɛ	.xx..
-yanglalo:Proto-Lalo > Lalo|yanglalo_257	EYE	Eka	ˀm j e̠ s ɛ	m - ɨ ɕ ɛ	.xxx.
-yanglalo:Proto-Lalo > Lalo|yanglalo_257	EYE	Southern Lalo	ˀm j e̠ s ɛ	m - i ɕ ɛ	.xxx.
-yanglalo:Proto-Lalo > Lalo|yanglalo_257	EYE	Western Lalu	ˀm j e̠ s ɛ	m - ei s ɛ	.xx..
+yanglalo:Proto-Lalo > Lalo|yanglalo_256	EYEBROW	Xuzhang Lalo	ˀm j e̠ tsʰ a m	m - i tsʰ y -	xxx.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_256	EYEBROW	Yangliu	ˀm j e̠ tsʰ a m	m - i tsʰ ə -	xxx.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_257	EYE	Dongshanba Lalo	ˀm j e̠ s ɛ	m - i s ɛ	xxx..
+yanglalo:Proto-Lalo > Lalo|yanglalo_257	EYE	Eka	ˀm j e̠ s ɛ	m - ɨ ɕ ɛ	xxxx.
+yanglalo:Proto-Lalo > Lalo|yanglalo_257	EYE	Southern Lalo	ˀm j e̠ s ɛ	m - i ɕ ɛ	xxxx.
+yanglalo:Proto-Lalo > Lalo|yanglalo_257	EYE	Western Lalu	ˀm j e̠ s ɛ	m - ei s ɛ	xxx..
 yanglalo:Proto-Lalo > Lalo|yanglalo_257	EYE	Xishanba Lalo	ˀm j e̠ s ɛ	ˀm - ɛ̠ s ɛ	.xx..
-yanglalo:Proto-Lalo > Lalo|yanglalo_257	EYE	Xuzhang Lalo	ˀm j e̠ s ɛ	m - i s ɛ	.xx..
-yanglalo:Proto-Lalo > Lalo|yanglalo_257	EYE	Yangliu	ˀm j e̠ s ɛ	m - i s ɛ	.xx..
-yanglalo:Proto-Lalo > Lalo|yanglalo_258	EYEBALL	Dongshanba Lalo	ˀm j e̠ ˀn i̠	m - ei n i	.xx..
-yanglalo:Proto-Lalo > Lalo|yanglalo_258	EYEBALL	Western Lalu	ˀm j e̠ ˀn i̠	m - ei - -	.xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_257	EYE	Xuzhang Lalo	ˀm j e̠ s ɛ	m - i s ɛ	xxx..
+yanglalo:Proto-Lalo > Lalo|yanglalo_257	EYE	Yangliu	ˀm j e̠ s ɛ	m - i s ɛ	xxx..
+yanglalo:Proto-Lalo > Lalo|yanglalo_258	EYEBALL	Dongshanba Lalo	ˀm j e̠ ˀn i̠	m - ei n i	xxxx.
+yanglalo:Proto-Lalo > Lalo|yanglalo_258	EYEBALL	Western Lalu	ˀm j e̠ ˀn i̠	m - ei - -	xxxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_258	EYEBALL	Xishanba Lalo	ˀm j e̠ ˀn i̠	ˀm - ɛ̠ ˀl y	.xxxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_259	TEAR (OF EYE)	Dongshanba Lalo	ˀm j e̠ ɣ i	m - ei j i	.xxx.
-yanglalo:Proto-Lalo > Lalo|yanglalo_259	TEAR (OF EYE)	Southern Lalo	ˀm j e̠ ɣ i	m - ɛ - -	.xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_259	TEAR (OF EYE)	Dongshanba Lalo	ˀm j e̠ ɣ i	m - ei j i	xxxx.
+yanglalo:Proto-Lalo > Lalo|yanglalo_259	TEAR (OF EYE)	Southern Lalo	ˀm j e̠ ɣ i	m - ɛ - -	xxxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_259	TEAR (OF EYE)	Xishanba Lalo	ˀm j e̠ ɣ i	ˀm - ɛ̠ ɣ ɨ	.xx.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_259	TEAR (OF EYE)	Yangliu	ˀm j e̠ ɣ i	m - i ɣ ɨ	.xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_259	TEAR (OF EYE)	Yangliu	ˀm j e̠ ɣ i	m - i ɣ ɨ	xxx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_26	DITCH	Dongshanba Lalo	ɣ i kʰ a	j i kʰ a	x...
 yanglalo:Proto-Lalo > Lalo|yanglalo_26	DITCH	Eka	ɣ i kʰ a	- o kʰ o	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_26	DITCH	Southern Lalo	ɣ i kʰ a	ɣ ɨ kʰ o	.x.x
@@ -1205,20 +1205,20 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_26	DITCH	Western Lalu	ɣ i kʰ a	ɣ ɨ kʰ a
 yanglalo:Proto-Lalo > Lalo|yanglalo_26	DITCH	Xishanba Lalo	ɣ i kʰ a	ɣ ɨ kʰ a	.x..
 yanglalo:Proto-Lalo > Lalo|yanglalo_26	DITCH	Xuzhang Lalo	ɣ i kʰ a	ɣ ɨ kʰ o	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_26	DITCH	Yangliu	ɣ i kʰ a	w v̩ k v̩	xxxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_260	NOSE	Dongshanba Lalo	ˀn a kʰ a ŋ	n a kʰ ɤ -	...xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_260	NOSE	Eka	ˀn a kʰ a ŋ	n a kʰ v̩ -	...xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_260	NOSE	Southern Lalo	ˀn a kʰ a ŋ	n o kʰ u -	.x.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_260	NOSE	Western Lalu	ˀn a kʰ a ŋ	n a kʰ v̩ -	...xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_260	NOSE	Dongshanba Lalo	ˀn a kʰ a ŋ	n a kʰ ɤ -	x..xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_260	NOSE	Eka	ˀn a kʰ a ŋ	n a kʰ v̩ -	x..xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_260	NOSE	Southern Lalo	ˀn a kʰ a ŋ	n o kʰ u -	xx.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_260	NOSE	Western Lalu	ˀn a kʰ a ŋ	n a kʰ v̩ -	x..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_260	NOSE	Xishanba Lalo	ˀn a kʰ a ŋ	ˀn a kʰ ə -	...xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_260	NOSE	Xuzhang Lalo	ˀn a kʰ a ŋ	n ɨ˞ kʰ ɤ -	.x.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_260	NOSE	Yangliu	ˀn a kʰ a ŋ	n a kʰ o -	...xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_261	EAR	Dongshanba Lalo	ˀn a p a ŋ	n a p a -	....x
-yanglalo:Proto-Lalo > Lalo|yanglalo_261	EAR	Eka	ˀn a p a ŋ	n a p a -	....x
-yanglalo:Proto-Lalo > Lalo|yanglalo_261	EAR	Southern Lalo	ˀn a p a ŋ	n o p a -	.x..x
-yanglalo:Proto-Lalo > Lalo|yanglalo_261	EAR	Western Lalu	ˀn a p a ŋ	n a p u -	...xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_260	NOSE	Xuzhang Lalo	ˀn a kʰ a ŋ	n ɨ˞ kʰ ɤ -	xx.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_260	NOSE	Yangliu	ˀn a kʰ a ŋ	n a kʰ o -	x..xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_261	EAR	Dongshanba Lalo	ˀn a p a ŋ	n a p a -	x...x
+yanglalo:Proto-Lalo > Lalo|yanglalo_261	EAR	Eka	ˀn a p a ŋ	n a p a -	x...x
+yanglalo:Proto-Lalo > Lalo|yanglalo_261	EAR	Southern Lalo	ˀn a p a ŋ	n o p a -	xx..x
+yanglalo:Proto-Lalo > Lalo|yanglalo_261	EAR	Western Lalu	ˀn a p a ŋ	n a p u -	x..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_261	EAR	Xishanba Lalo	ˀn a p a ŋ	ˀn a̤ p u -	...xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_261	EAR	Xuzhang Lalo	ˀn a p a ŋ	n a p a -	....x
-yanglalo:Proto-Lalo > Lalo|yanglalo_261	EAR	Yangliu	ˀn a p a ŋ	n a p u -	...xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_261	EAR	Xuzhang Lalo	ˀn a p a ŋ	n a p a -	x...x
+yanglalo:Proto-Lalo > Lalo|yanglalo_261	EAR	Yangliu	ˀn a p a ŋ	n a p u -	x..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_263	CHEEK	Eka	b a	pʰ a̠	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_264	MOUTH	Dongshanba Lalo	kʰ a p e̠	kʰ a p ei	...x
 yanglalo:Proto-Lalo > Lalo|yanglalo_264	MOUTH	Western Lalu	kʰ a p e̠	kʰ a pʰ ɛ	..xx
@@ -1236,13 +1236,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_267	TOOTH	Xuzhang Lalo	s y	s y	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_267	TOOTH	Yangliu	s y	s ə	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_27	DITCH	Eka	l a ŋ k a̠	n a - kʰ o	x.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_27	DITCH	Xishanba Lalo	l a ŋ k a̠	l u - k a̠	.xx..
-yanglalo:Proto-Lalo > Lalo|yanglalo_271	TONGUE	Dongshanba Lalo	ˀl a	l ɔ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_271	TONGUE	Eka	ˀl a	l o	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_271	TONGUE	Southern Lalo	ˀl a	l ɛ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_271	TONGUE	Western Lalu	ˀl a	l a	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_271	TONGUE	Dongshanba Lalo	ˀl a	l ɔ	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_271	TONGUE	Eka	ˀl a	l o	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_271	TONGUE	Southern Lalo	ˀl a	l ɛ	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_271	TONGUE	Western Lalu	ˀl a	l a	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_271	TONGUE	Xishanba Lalo	ˀl a	ˀl a	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_271	TONGUE	Xuzhang Lalo	ˀl a	l o	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_271	TONGUE	Yangliu	ˀl a	l a	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_271	TONGUE	Xuzhang Lalo	ˀl a	l o	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_271	TONGUE	Yangliu	ˀl a	l a	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_272	BEARD	Dongshanba Lalo	tsʰ i̠	tsʰ ɿ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_272	BEARD	Eka	tsʰ i̠	tsʰ ɿ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_272	BEARD	Southern Lalo	tsʰ i̠	tʃʰ ɿ	xx
@@ -1287,8 +1287,8 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_282	WRIST	Xuzhang Lalo	ts i̠	ts ɿ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_282	WRIST	Yangliu	ts i̠	ts ɿ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_283	ELBOW	Dongshanba Lalo	ts i̠	dz ɿ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_283	ELBOW	Western Lalu	ts i̠	ts ɿ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_284	FINGER	Dongshanba Lalo	ˀn i	n i	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_284	FINGER	Eka	ˀn i	n i	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_284	FINGER	Dongshanba Lalo	ˀn i	n i	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_284	FINGER	Eka	ˀn i	n i	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_284	FINGER	Western Lalu	ˀn i	- i	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_284	FINGER	Xishanba Lalo	ˀn i	ˀn i	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_284	FINGER	Xuzhang Lalo	ˀn i	ʔ ĩ	xx
@@ -1319,8 +1319,8 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_291	FOOT OR LEG	Yangliu	kʰ i pʰ e̠	k ɛ v
 yanglalo:Proto-Lalo > Lalo|yanglalo_292	LEG	Southern Lalo	kʰ i	kʰ i	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_292	LEG	Xuzhang Lalo	kʰ i	kʰ ɨ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_293	FOOT	Yangliu	kʰ i	k ɛ	xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_298	ANKLE	Southern Lalo	kʰ i ˀm j e̠	tɕʰ i m - ɛ	x..xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_298	ANKLE	Western Lalu	kʰ i ˀm j e̠	kʰ ɨ m - i	.x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_298	ANKLE	Southern Lalo	kʰ i ˀm j e̠	tɕʰ i m - ɛ	x.xxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_298	ANKLE	Western Lalu	kʰ i ˀm j e̠	kʰ ɨ m - i	.xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_298	ANKLE	Xishanba Lalo	kʰ i ˀm j e̠	kʰ ɨ ˀm - ɛ̠	.x.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_3	SUN	Dongshanba Lalo	a m o ɣ i	a m ə j i	..xx.
 yanglalo:Proto-Lalo > Lalo|yanglalo_3	SUN	Eka	a m o ɣ i	a m i - -	..xxx
@@ -1355,12 +1355,12 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_307	BONE	Western Lalu	ɣ o	w o	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_307	BONE	Xishanba Lalo	ɣ o	ɦ a̤	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_307	BONE	Xuzhang Lalo	ɣ o	v v̩	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_307	BONE	Yangliu	ɣ o	v v̩	xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_308	RIB	Dongshanba Lalo	ˀn y	n ə	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_308	RIB	Eka	ˀn y	n i	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_308	RIB	Southern Lalo	ˀn y	n ɛ	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_308	RIB	Dongshanba Lalo	ˀn y	n ə	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_308	RIB	Eka	ˀn y	n i	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_308	RIB	Southern Lalo	ˀn y	n ɛ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_308	RIB	Xishanba Lalo	ˀn y	ˀl y	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_308	RIB	Xuzhang Lalo	ˀn y	l ə	xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_308	RIB	Yangliu	ˀn y	n ə	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_308	RIB	Yangliu	ˀn y	n ə	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_309	STOMACH	Eka	h e̠	x ɛ̠	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_309	STOMACH	Southern Lalo	h e̠	x ɛ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_309	STOMACH	Western Lalu	h e̠	x ɛ	xx
@@ -1396,9 +1396,9 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_315	INTESTINES	Western Lalu	h e̠ v u	x ɛ v
 yanglalo:Proto-Lalo > Lalo|yanglalo_315	INTESTINES	Xishanba Lalo	h e̠ v u	h ɛ̠ v̩ -	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_315	INTESTINES	Xuzhang Lalo	h e̠ v u	x ai v v̩	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_315	INTESTINES	Yangliu	h e̠ v u	x ai v v̩	xx.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_316	HEART	Dongshanba Lalo	ˀn i̠ m a	n i m ɔ	...x
-yanglalo:Proto-Lalo > Lalo|yanglalo_316	HEART	Eka	ˀn i̠ m a	n i̠ m o	...x
-yanglalo:Proto-Lalo > Lalo|yanglalo_316	HEART	Western Lalu	ˀn i̠ m a	n i m a	....
+yanglalo:Proto-Lalo > Lalo|yanglalo_316	HEART	Dongshanba Lalo	ˀn i̠ m a	n i m ɔ	x..x
+yanglalo:Proto-Lalo > Lalo|yanglalo_316	HEART	Eka	ˀn i̠ m a	n i̠ m o	x..x
+yanglalo:Proto-Lalo > Lalo|yanglalo_316	HEART	Western Lalu	ˀn i̠ m a	n i m a	x...
 yanglalo:Proto-Lalo > Lalo|yanglalo_316	HEART	Xishanba Lalo	ˀn i̠ m a	ˀɲ ɛ̠ m a	xx..
 yanglalo:Proto-Lalo > Lalo|yanglalo_316	HEART	Xuzhang Lalo	ˀn i̠ m a	- ĩ m o	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_316	HEART	Yangliu	ˀn i̠ m a	- i m a	x...
@@ -1449,13 +1449,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_323	BLOOD	Western Lalu	s i	s ɿ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_323	BLOOD	Xishanba Lalo	s i	s ɿ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_323	BLOOD	Xuzhang Lalo	s i	s ɿ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_323	BLOOD	Yangliu	s i	s ɿ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_324	NASAL MUCUS (SNOT)	Dongshanba Lalo	ˀn y̠	n ə	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_324	NASAL MUCUS (SNOT)	Eka	ˀn y̠	n ɨ̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_324	NASAL MUCUS (SNOT)	Southern Lalo	ˀn y̠	n ɑ̠̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_324	NASAL MUCUS (SNOT)	Western Lalu	ˀn y̠	n y	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_324	NASAL MUCUS (SNOT)	Dongshanba Lalo	ˀn y̠	n ə	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_324	NASAL MUCUS (SNOT)	Eka	ˀn y̠	n ɨ̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_324	NASAL MUCUS (SNOT)	Southern Lalo	ˀn y̠	n ɑ̠̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_324	NASAL MUCUS (SNOT)	Western Lalu	ˀn y̠	n y	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_324	NASAL MUCUS (SNOT)	Xishanba Lalo	ˀn y̠	ˀn ø̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_324	NASAL MUCUS (SNOT)	Xuzhang Lalo	ˀn y̠	n ø̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_324	NASAL MUCUS (SNOT)	Yangliu	ˀn y̠	n ə	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_324	NASAL MUCUS (SNOT)	Xuzhang Lalo	ˀn y̠	n ø̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_324	NASAL MUCUS (SNOT)	Yangliu	ˀn y̠	n ə	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_325	PHLEGM	Dongshanba Lalo	t i kʰ a	t i tɕʰ i	..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_325	PHLEGM	Eka	t i kʰ a	t ɨ x a̠	.xx.
 yanglalo:Proto-Lalo > Lalo|yanglalo_325	PHLEGM	Southern Lalo	t i kʰ a	t ɨ ɣ ɨ	.xxx
@@ -1555,7 +1555,7 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_343	FEMALE PERSON	Yangliu	z a m ɛ	z a m ɛ	
 yanglalo:Proto-Lalo > Lalo|yanglalo_344	AUTONYM (OF PEOPLE)	Dongshanba Lalo	l a l o̠ p a̠	l a l u p u	...x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_344	AUTONYM (OF PEOPLE)	Southern Lalo	l a l o̠ p a̠	l o l o p ɑ̠	.x...x
 yanglalo:Proto-Lalo > Lalo|yanglalo_344	AUTONYM (OF PEOPLE)	Western Lalu	l a l o̠ p a̠	l a l u p a	...x..
-yanglalo:Proto-Lalo > Lalo|yanglalo_344	AUTONYM (OF PEOPLE)	Xishanba Lalo	l a l o̠ p a̠	l a̠ ˀl o̠ p a̠	......
+yanglalo:Proto-Lalo > Lalo|yanglalo_344	AUTONYM (OF PEOPLE)	Xishanba Lalo	l a l o̠ p a̠	l a̠ ˀl o̠ p a̠	..x...
 yanglalo:Proto-Lalo > Lalo|yanglalo_344	AUTONYM (OF PEOPLE)	Xuzhang Lalo	l a l o̠ p a̠	l a l u - -	...xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_344	AUTONYM (OF PEOPLE)	Yangliu	l a l o̠ p a̠	l a l u - -	...xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_345	HAN CHINESE	Xishanba Lalo	h e̠	h a̠	.x
@@ -1636,16 +1636,16 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_374	WIDOWER	Dongshanba Lalo	m e tʃʰ u p a�
 yanglalo:Proto-Lalo > Lalo|yanglalo_374	WIDOWER	Eka	m e tʃʰ u p a̠	- - tsʰ ɿ p o̠	xxxx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_374	WIDOWER	Southern Lalo	m e tʃʰ u p a̠	m ɛ tʃʰ u p ɑ	.x...x
 yanglalo:Proto-Lalo > Lalo|yanglalo_374	WIDOWER	Yangliu	m e tʃʰ u p a̠	m ɛ tsʰ ɿ p a	.xxx..
-yanglalo:Proto-Lalo > Lalo|yanglalo_376	BLIND	Eka	ˀm j e̠ t ɛ	m - ɨ t a	.xx.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_376	BLIND	Southern Lalo	ˀm j e̠ t ɛ	m - ɛ t ɛ	.xx..
+yanglalo:Proto-Lalo > Lalo|yanglalo_376	BLIND	Eka	ˀm j e̠ t ɛ	m - ɨ t a	xxx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_376	BLIND	Southern Lalo	ˀm j e̠ t ɛ	m - ɛ t ɛ	xxx..
 yanglalo:Proto-Lalo > Lalo|yanglalo_376	BLIND	Xishanba Lalo	ˀm j e̠ t ɛ	ˀm - ɛ̠ - -	.xxxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_376	BLIND	Xuzhang Lalo	ˀm j e̠ t ɛ	m - i - -	.xxxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_376	BLIND	Yangliu	ˀm j e̠ t ɛ	m - i t ɛ	.xx..
-yanglalo:Proto-Lalo > Lalo|yanglalo_377	DEAF	Dongshanba Lalo	ˀn a b a ŋ	n a b a -	....x
-yanglalo:Proto-Lalo > Lalo|yanglalo_377	DEAF	Western Lalu	ˀn a b a ŋ	n a b u -	...xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_376	BLIND	Xuzhang Lalo	ˀm j e̠ t ɛ	m - i - -	xxxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_376	BLIND	Yangliu	ˀm j e̠ t ɛ	m - i t ɛ	xxx..
+yanglalo:Proto-Lalo > Lalo|yanglalo_377	DEAF	Dongshanba Lalo	ˀn a b a ŋ	n a b a -	x...x
+yanglalo:Proto-Lalo > Lalo|yanglalo_377	DEAF	Western Lalu	ˀn a b a ŋ	n a b u -	x..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_377	DEAF	Xishanba Lalo	ˀn a b a ŋ	ˀn a b u -	...xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_377	DEAF	Xuzhang Lalo	ˀn a b a ŋ	n a b a -	....x
-yanglalo:Proto-Lalo > Lalo|yanglalo_377	DEAF	Yangliu	ˀn a b a ŋ	n a b u -	...xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_377	DEAF	Xuzhang Lalo	ˀn a b a ŋ	n a b a -	x...x
+yanglalo:Proto-Lalo > Lalo|yanglalo_377	DEAF	Yangliu	ˀn a b a ŋ	n a b u -	x..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_378	PATERNAL GRANDFATHER	Xishanba Lalo	a p a	a - -	.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_378	PATERNAL GRANDFATHER	Yangliu	a p a	a p a	...
 yanglalo:Proto-Lalo > Lalo|yanglalo_379	PATERNAL GRANDMOTHER	Dongshanba Lalo	a n e	a n ai	..x
@@ -1723,16 +1723,16 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_391	YOUNGER SISTER (OF MAN)	Southern Lalo	ɲ
 yanglalo:Proto-Lalo > Lalo|yanglalo_391	YOUNGER SISTER (OF MAN)	Western Lalu	ɲ e m a	n y m a	xx..
 yanglalo:Proto-Lalo > Lalo|yanglalo_391	YOUNGER SISTER (OF MAN)	Xishanba Lalo	ɲ e m a	ɲ i m a	.x..
 yanglalo:Proto-Lalo > Lalo|yanglalo_391	YOUNGER SISTER (OF MAN)	Xuzhang Lalo	ɲ e m a	ɲ ɛ m o	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_392	YOUNGER SISTER (OF MAN)	Western Lalu	ˀn y m a	n e m a	.x..
+yanglalo:Proto-Lalo > Lalo|yanglalo_392	YOUNGER SISTER (OF MAN)	Western Lalu	ˀn y m a	n e m a	xx..
 yanglalo:Proto-Lalo > Lalo|yanglalo_397	HUSBAND	Eka	dʒ ɛ	dʑ ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_397	HUSBAND	Western Lalu	dʒ ɛ	ɖʐ ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_397	HUSBAND	Yangliu	dʒ ɛ	dz ɛ	x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_398	WIFE	Eka	m ɛ ˀn y	- - n i	xx.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_398	WIFE	Southern Lalo	m ɛ ˀn y	n̩ - n ə	xx.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_398	WIFE	Western Lalu	m ɛ ˀn y	m ɑ n y	.x..
+yanglalo:Proto-Lalo > Lalo|yanglalo_398	WIFE	Eka	m ɛ ˀn y	- - n i	xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_398	WIFE	Southern Lalo	m ɛ ˀn y	n̩ - n ə	xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_398	WIFE	Western Lalu	m ɛ ˀn y	m ɑ n y	.xx.
 yanglalo:Proto-Lalo > Lalo|yanglalo_398	WIFE	Xishanba Lalo	m ɛ ˀn y	m a̠ ˀn y	.x..
-yanglalo:Proto-Lalo > Lalo|yanglalo_398	WIFE	Xuzhang Lalo	m ɛ ˀn y	m ɛ n y	....
-yanglalo:Proto-Lalo > Lalo|yanglalo_398	WIFE	Yangliu	m ɛ ˀn y	m ɛ n ə	...x
+yanglalo:Proto-Lalo > Lalo|yanglalo_398	WIFE	Xuzhang Lalo	m ɛ ˀn y	m ɛ n y	..x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_398	WIFE	Yangliu	m ɛ ˀn y	m ɛ n ə	..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_399	SON	Dongshanba Lalo	z a	z ɔ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_399	SON	Eka	z a	z o	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_399	SON	Southern Lalo	z a	j o	xx
@@ -1756,13 +1756,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_401	DAUGHTER-IN-LAW	Western Lalu	kʰ ɨ m a	
 yanglalo:Proto-Lalo > Lalo|yanglalo_401	DAUGHTER-IN-LAW	Xishanba Lalo	kʰ ɨ m a	kʰ ɨ m a	....
 yanglalo:Proto-Lalo > Lalo|yanglalo_401	DAUGHTER-IN-LAW	Xuzhang Lalo	kʰ ɨ m a	kʰ ɨ m o	...x
 yanglalo:Proto-Lalo > Lalo|yanglalo_401	DAUGHTER-IN-LAW	Yangliu	kʰ ɨ m a	kʰ ɨ m a	....
-yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Dongshanba Lalo	ˀm e̠ ɣ o	m ei ɣ ə	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Eka	ˀm e̠ ɣ o	m ɨ - -	.xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Southern Lalo	ˀm e̠ ɣ o	m ɨ - -	.xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Western Lalu	ˀm e̠ ɣ o	m e v v̩	..xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Xishanba Lalo	ˀm e̠ ɣ o	m ɛ̠ - v̩	.xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Xuzhang Lalo	ˀm e̠ ɣ o	m ɛi v v̩	.xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Yangliu	ˀm e̠ ɣ o	m ei v v̩	.xxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Dongshanba Lalo	ˀm e̠ ɣ o	m ei ɣ ə	xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Eka	ˀm e̠ ɣ o	m ɨ - -	xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Southern Lalo	ˀm e̠ ɣ o	m ɨ - -	xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Western Lalu	ˀm e̠ ɣ o	m e v v̩	x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Xishanba Lalo	ˀm e̠ ɣ o	m ɛ̠ - v̩	xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Xuzhang Lalo	ˀm e̠ ɣ o	m ɛi v v̩	xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_402	SON-IN-LAW	Yangliu	ˀm e̠ ɣ o	m ei v v̩	xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_403		Dongshanba Lalo	z a d u	s u d ɤ	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_403		Southern Lalo	z a d u	d a d u	x...
 yanglalo:Proto-Lalo > Lalo|yanglalo_403		Western Lalu	z a d u	z a d v̩	...x
@@ -1775,17 +1775,17 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_404		Xuzhang Lalo	z a m ɛ d u	z a m ɛ d v�
 yanglalo:Proto-Lalo > Lalo|yanglalo_404		Yangliu	z a m ɛ d u	z a m ɛ d o	.....x
 yanglalo:Proto-Lalo > Lalo|yanglalo_405		Dongshanba Lalo	ʃ a̠	s u	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_405		Xishanba Lalo	ʃ a̠	s a̠	x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_406	GRANDSON (SON'S SON)	Dongshanba Lalo	ˀl i p a̠	l i p u	...x
-yanglalo:Proto-Lalo > Lalo|yanglalo_406	GRANDSON (SON'S SON)	Eka	ˀl i p a̠	l i p oi	...x
-yanglalo:Proto-Lalo > Lalo|yanglalo_406	GRANDSON (SON'S SON)	Southern Lalo	ˀl i p a̠	l u p ɑ̠	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_406	GRANDSON (SON'S SON)	Western Lalu	ˀl i p a̠	l i p a	....
+yanglalo:Proto-Lalo > Lalo|yanglalo_406	GRANDSON (SON'S SON)	Dongshanba Lalo	ˀl i p a̠	l i p u	x..x
+yanglalo:Proto-Lalo > Lalo|yanglalo_406	GRANDSON (SON'S SON)	Eka	ˀl i p a̠	l i p oi	x..x
+yanglalo:Proto-Lalo > Lalo|yanglalo_406	GRANDSON (SON'S SON)	Southern Lalo	ˀl i p a̠	l u p ɑ̠	xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_406	GRANDSON (SON'S SON)	Western Lalu	ˀl i p a̠	l i p a	x...
 yanglalo:Proto-Lalo > Lalo|yanglalo_406	GRANDSON (SON'S SON)	Xishanba Lalo	ˀl i p a̠	ˀʐ ʅ p a̠	xx..
 yanglalo:Proto-Lalo > Lalo|yanglalo_406	GRANDSON (SON'S SON)	Xuzhang Lalo	ˀl i p a̠	ʐ ʅ p o	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_406	GRANDSON (SON'S SON)	Yangliu	ˀl i p a̠	- i - -	x.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_407		Dongshanba Lalo	ˀl i m a	l i m ɔ	...x
-yanglalo:Proto-Lalo > Lalo|yanglalo_407		Eka	ˀl i m a	l i m oi	...x
-yanglalo:Proto-Lalo > Lalo|yanglalo_407		Southern Lalo	ˀl i m a	l u m o	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_407		Western Lalu	ˀl i m a	l i m a	....
+yanglalo:Proto-Lalo > Lalo|yanglalo_407		Dongshanba Lalo	ˀl i m a	l i m ɔ	x..x
+yanglalo:Proto-Lalo > Lalo|yanglalo_407		Eka	ˀl i m a	l i m oi	x..x
+yanglalo:Proto-Lalo > Lalo|yanglalo_407		Southern Lalo	ˀl i m a	l u m o	xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_407		Western Lalu	ˀl i m a	l i m a	x...
 yanglalo:Proto-Lalo > Lalo|yanglalo_407		Xishanba Lalo	ˀl i m a	ˀʐ ʅ m a	xx..
 yanglalo:Proto-Lalo > Lalo|yanglalo_407		Xuzhang Lalo	ˀl i m a	ʐ ʅ m o	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_407		Yangliu	ˀl i m a	- i m a	x...
@@ -1836,12 +1836,12 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_417		Western Lalu	p a̠ l a	p a l a	....
 yanglalo:Proto-Lalo > Lalo|yanglalo_417		Xishanba Lalo	p a̠ l a	p a̠ l a̤	....
 yanglalo:Proto-Lalo > Lalo|yanglalo_417		Xuzhang Lalo	p a̠ l a	pʰ o l o	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_417		Yangliu	p a̠ l a	p a l a	....
-yanglalo:Proto-Lalo > Lalo|yanglalo_418		Dongshanba Lalo	ˀm a l a	m ɔ l ɔ	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_418		Southern Lalo	ˀm a l a	m o l o	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_418		Western Lalu	ˀm a l a	m a l a	....
+yanglalo:Proto-Lalo > Lalo|yanglalo_418		Dongshanba Lalo	ˀm a l a	m ɔ l ɔ	xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_418		Southern Lalo	ˀm a l a	m o l o	xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_418		Western Lalu	ˀm a l a	m a l a	x...
 yanglalo:Proto-Lalo > Lalo|yanglalo_418		Xishanba Lalo	ˀm a l a	ˀm a l a̤	....
-yanglalo:Proto-Lalo > Lalo|yanglalo_418		Xuzhang Lalo	ˀm a l a	m o l o	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_418		Yangliu	ˀm a l a	m a l a	....
+yanglalo:Proto-Lalo > Lalo|yanglalo_418		Xuzhang Lalo	ˀm a l a	m o l o	xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_418		Yangliu	ˀm a l a	m a l a	x...
 yanglalo:Proto-Lalo > Lalo|yanglalo_419		Dongshanba Lalo	p i l a	pʰ i l ɔ	x..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_419		Eka	p i l a	p o l i	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_419		Western Lalu	p i l a	ts ɿ l a	xx..
@@ -1955,12 +1955,12 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_444	HAT	Western Lalu	n u ts i	n̩ - ts ɿ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_444	HAT	Xishanba Lalo	n u ts i	n̩ - ts ɿ	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_444	HAT	Xuzhang Lalo	n u ts i	n̩ - ts ɿ	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_444	HAT	Yangliu	n u ts i	n̩ - ts ɿ	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_445	EARRING	Dongshanba Lalo	ˀn a v a ŋ	n a b a -	..x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_445	EARRING	Eka	ˀn a v a ŋ	n a v a ŋ	.....
-yanglalo:Proto-Lalo > Lalo|yanglalo_445	EARRING	Southern Lalo	ˀn a v a ŋ	n u - - -	.xxxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_445	EARRING	Western Lalu	ˀn a v a ŋ	n a w u -	..xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_445	EARRING	Xuzhang Lalo	ˀn a v a ŋ	n a b a -	..x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_445	EARRING	Yangliu	ˀn a v a ŋ	n a v v̩ -	...xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_445	EARRING	Dongshanba Lalo	ˀn a v a ŋ	n a b a -	x.x.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_445	EARRING	Eka	ˀn a v a ŋ	n a v a ŋ	x....
+yanglalo:Proto-Lalo > Lalo|yanglalo_445	EARRING	Southern Lalo	ˀn a v a ŋ	n u - - -	xxxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_445	EARRING	Western Lalu	ˀn a v a ŋ	n a w u -	x.xxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_445	EARRING	Xuzhang Lalo	ˀn a v a ŋ	n a b a -	x.x.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_445	EARRING	Yangliu	ˀn a v a ŋ	n a v v̩ -	x..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_446	BRACELET	Dongshanba Lalo	l e̠ ɡ o	l ei ɡ ɤ	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_446	BRACELET	Eka	l e̠ ɡ o	l u ɡ u	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_446	BRACELET	Southern Lalo	l e̠ ɡ o	l u ɡ u	.x.x
@@ -1980,12 +1980,12 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_449	COLLAR	Western Lalu	pʰ j a kʰ j ɛ	pʰ
 yanglalo:Proto-Lalo > Lalo|yanglalo_449	COLLAR	Xishanba Lalo	pʰ j a kʰ j ɛ	pʰ - u kʰ - ɛ	.xx.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_449	COLLAR	Xuzhang Lalo	pʰ j a kʰ j ɛ	pʰ - a kʰ - ɛ	.x..x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_449	COLLAR	Yangliu	pʰ j a kʰ j ɛ	pʰ - a kʰ - ɛ	.x..x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_45	FLAME	Dongshanba Lalo	a t o̠ ˀl y	a t u̠ l ə	..x.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_45	FLAME	Dongshanba Lalo	a t o̠ ˀl y	a t u̠ l ə	..xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_45	FLAME	Eka	a t o̠ ˀl y	a t u̠ - -	..xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_45	FLAME	Southern Lalo	a t o̠ ˀl y	a t o l ə	....x
+yanglalo:Proto-Lalo > Lalo|yanglalo_45	FLAME	Southern Lalo	a t o̠ ˀl y	a t o l ə	...xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_45	FLAME	Western Lalu	a t o̠ ˀl y	a t u - -	..xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_45	FLAME	Xishanba Lalo	a t o̠ ˀl y	a t o̠ ˀl y	.....
-yanglalo:Proto-Lalo > Lalo|yanglalo_45	FLAME	Xuzhang Lalo	a t o̠ ˀl y	a t u l i	..x.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_45	FLAME	Xuzhang Lalo	a t o̠ ˀl y	a t u l i	..xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_45	FLAME	Yangliu	a t o̠ ˀl y	a t u - -	..xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_450	SLEEVE	Eka	pʰ j a l e̠	pʰ - a l i̠	.x..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_450	SLEEVE	Southern Lalo	pʰ j a l e̠	pʰ - a l ɨ	.x..x
@@ -2000,7 +2000,7 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_452		Western Lalu	ɡ a b y	ɣ a b y	x...
 yanglalo:Proto-Lalo > Lalo|yanglalo_452		Xishanba Lalo	ɡ a b y	ɡ ɨ b y	.x..
 yanglalo:Proto-Lalo > Lalo|yanglalo_452		Xuzhang Lalo	ɡ a b y	ɡ o b y	.x..
 yanglalo:Proto-Lalo > Lalo|yanglalo_452		Yangliu	ɡ a b y	ɡ a b ɨ	...x
-yanglalo:Proto-Lalo > Lalo|yanglalo_453	TROUSERS	Southern Lalo	ˀl a	l o	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_453	TROUSERS	Southern Lalo	ˀl a	l o	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_453	TROUSERS	Xishanba Lalo	ˀl a	ˀl a̤	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_455	SHOE	Dongshanba Lalo	kʰ i n e̠	tɕʰ i n ə	x..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_455	SHOE	Eka	kʰ i n e̠	kʰ i n i	...x
@@ -2009,22 +2009,22 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_455	SHOE	Western Lalu	kʰ i n e̠	kʰ ɨ n e
 yanglalo:Proto-Lalo > Lalo|yanglalo_455	SHOE	Xishanba Lalo	kʰ i n e̠	kʰ ɨ n ɛ̠	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_455	SHOE	Xuzhang Lalo	kʰ i n e̠	kʰ ɨ n ɛi	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_455	SHOE	Yangliu	kʰ i n e̠	kʰ ei n i	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_456	CLOTH	Eka	ˀm ɛ	m ɛ	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_456	CLOTH	Eka	ˀm ɛ	m ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_456	CLOTH	Xishanba Lalo	ˀm ɛ	ˀm ɛ	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_458		Western Lalu	t a l a p y	t a l a p y	......
 yanglalo:Proto-Lalo > Lalo|yanglalo_458		Xishanba Lalo	t a l a p y	t ɛ̤ l ɛ̠ p y	.x.x..
-yanglalo:Proto-Lalo > Lalo|yanglalo_459	BLANKET	Dongshanba Lalo	ˀl a b a	l ɔ b ɔ	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_459	BLANKET	Eka	ˀl a b a	l a b o	...x
-yanglalo:Proto-Lalo > Lalo|yanglalo_459	BLANKET	Southern Lalo	ˀl a b a	l a b o	...x
+yanglalo:Proto-Lalo > Lalo|yanglalo_459	BLANKET	Dongshanba Lalo	ˀl a b a	l ɔ b ɔ	xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_459	BLANKET	Eka	ˀl a b a	l a b o	x..x
+yanglalo:Proto-Lalo > Lalo|yanglalo_459	BLANKET	Southern Lalo	ˀl a b a	l a b o	x..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_459	BLANKET	Xishanba Lalo	ˀl a b a	ˀl a b a	....
-yanglalo:Proto-Lalo > Lalo|yanglalo_459	BLANKET	Yangliu	ˀl a b a	l a b a	....
-yanglalo:Proto-Lalo > Lalo|yanglalo_46	SMOKE (EXHAUST)	Dongshanba Lalo	ˀm u kʰ o s e̠	m i kʰ ə s ei	.x.x.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_459	BLANKET	Yangliu	ˀl a b a	l a b a	x...
+yanglalo:Proto-Lalo > Lalo|yanglalo_46	SMOKE (EXHAUST)	Dongshanba Lalo	ˀm u kʰ o s e̠	m i kʰ ə s ei	xx.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_46	SMOKE (EXHAUST)	Southern Lalo	ˀm u kʰ o s e̠	ŋ̩ - k ɨ s ɿ	xxxx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_46	SMOKE (EXHAUST)	Western Lalu	ˀm u kʰ o s e̠	n̩ - kʰ ɨ - -	xx.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_46	SMOKE (EXHAUST)	Xishanba Lalo	ˀm u kʰ o s e̠	ŋ̩ - kʰ ə̤ - -	xx.xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_46	SMOKE (EXHAUST)	Yangliu	ˀm u kʰ o s e̠	m i kʰ ɔ - -	.x.xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_460	BLANKET	Western Lalu	ˀm ɛ b o	m ɛ dz ɿ	..xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_460	BLANKET	Xuzhang Lalo	ˀm ɛ b o	m ɛ - -	..xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_46	SMOKE (EXHAUST)	Yangliu	ˀm u kʰ o s e̠	m i kʰ ɔ - -	xx.xxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_460	BLANKET	Western Lalu	ˀm ɛ b o	m ɛ dz ɿ	x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_460	BLANKET	Xuzhang Lalo	ˀm ɛ b o	m ɛ - -	x.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_461	PILLOW	Dongshanba Lalo	n u k a̠ d u	- - k a d ɤ	xx...x
 yanglalo:Proto-Lalo > Lalo|yanglalo_461	PILLOW	Eka	n u k a̠ d u	n a kʰ a̠ d u	.xx...
 yanglalo:Proto-Lalo > Lalo|yanglalo_461	PILLOW	Southern Lalo	n u k a̠ d u	- - kʰ a d u	xxx...
@@ -2106,7 +2106,7 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_479	KNIFE	Western Lalu	a tʰ a	a tʰ a	...
 yanglalo:Proto-Lalo > Lalo|yanglalo_479	KNIFE	Xishanba Lalo	a tʰ a	a tʰ a̤	...
 yanglalo:Proto-Lalo > Lalo|yanglalo_479	KNIFE	Xuzhang Lalo	a tʰ a	a tʰ o	..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_479	KNIFE	Yangliu	a tʰ a	a tʰ a	...
-yanglalo:Proto-Lalo > Lalo|yanglalo_48	DAY (24 HOURS)	Dongshanba Lalo	ˀn i	n ɛ	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_48	DAY (24 HOURS)	Dongshanba Lalo	ˀn i	n ɛ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_48	DAY (24 HOURS)	Western Lalu	ˀn i	- ĩ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_48	DAY (24 HOURS)	Xishanba Lalo	ˀn i	ˀɲ ɛ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_48	DAY (24 HOURS)	Xuzhang Lalo	ˀn i	- ĩ	xx
@@ -2156,10 +2156,10 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_489	NEEDLE (FOR SEWING)	Western Lalu	ɣ y̠	
 yanglalo:Proto-Lalo > Lalo|yanglalo_489	NEEDLE (FOR SEWING)	Xishanba Lalo	ɣ y̠	j ø̠	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_489	NEEDLE (FOR SEWING)	Xuzhang Lalo	ɣ y̠	w u	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_489	NEEDLE (FOR SEWING)	Yangliu	ɣ y̠	ɣ ɨ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_49	TODAY	Dongshanba Lalo	i ˀn i	i n ɛ	..x
+yanglalo:Proto-Lalo > Lalo|yanglalo_49	TODAY	Dongshanba Lalo	i ˀn i	i n ɛ	.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_49	TODAY	Eka	i ˀn i	i m i	.x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_49	TODAY	Southern Lalo	i ˀn i	i n i	...
-yanglalo:Proto-Lalo > Lalo|yanglalo_49	TODAY	Western Lalu	i ˀn i	i̠ n a	..x
+yanglalo:Proto-Lalo > Lalo|yanglalo_49	TODAY	Southern Lalo	i ˀn i	i n i	.x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_49	TODAY	Western Lalu	i ˀn i	i̠ n a	.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_49	TODAY	Xishanba Lalo	i ˀn i	- ˀɲ i	xx.
 yanglalo:Proto-Lalo > Lalo|yanglalo_49	TODAY	Xuzhang Lalo	i ˀn i	ĩ ɲ ĩ	xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_491	THREAD	Yangliu	kʰ i	kʰ ɨ	.x
@@ -2175,14 +2175,14 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_495	WHIP	Yangliu	l a kʰ o̠	l a t i	..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_496	DUSTPAN	Dongshanba Lalo	ˀv a	- ɔ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_496	DUSTPAN	Eka	ˀv a	- o	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_496	DUSTPAN	Southern Lalo	ˀv a	- o	xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_496	DUSTPAN	Western Lalu	ˀv a	v a	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_496	DUSTPAN	Western Lalu	ˀv a	v a	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_496	DUSTPAN	Xishanba Lalo	ˀv a	ˀv a	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_496	DUSTPAN	Xuzhang Lalo	ˀv a	l ɛi	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_496	DUSTPAN	Yangliu	ˀv a	w a	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_497		Dongshanba Lalo	ˀv a k ɨ	- ɔ tɕ i	xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_497		Eka	ˀv a k ɨ	- o k i	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_497		Southern Lalo	ˀv a k ɨ	- o k i	xx.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_497		Western Lalu	ˀv a k ɨ	v a k ɨ	....
+yanglalo:Proto-Lalo > Lalo|yanglalo_497		Western Lalu	ˀv a k ɨ	v a k ɨ	x...
 yanglalo:Proto-Lalo > Lalo|yanglalo_497		Xishanba Lalo	ˀv a k ɨ	ˀv a kʰ ɨ	..x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_497		Xuzhang Lalo	ˀv a k ɨ	- ɤ k u	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_497		Yangliu	ˀv a k ɨ	- a k ɨ	x...
@@ -2199,11 +2199,11 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_5	MOON	Southern Lalo	x a b a	x o b o	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_5	MOON	Western Lalu	x a b a	x a b a	....
 yanglalo:Proto-Lalo > Lalo|yanglalo_5	MOON	Xishanba Lalo	x a b a	x a b a	....
 yanglalo:Proto-Lalo > Lalo|yanglalo_5	MOON	Yangliu	x a b a	x a b a	....
-yanglalo:Proto-Lalo > Lalo|yanglalo_50	YESTERDAY	Dongshanba Lalo	a ˀn i	a n ɛ	..x
+yanglalo:Proto-Lalo > Lalo|yanglalo_50	YESTERDAY	Dongshanba Lalo	a ˀn i	a n ɛ	.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_50	YESTERDAY	Eka	a ˀn i	a m i	.x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_50	YESTERDAY	Southern Lalo	a ˀn i	a n i	...
+yanglalo:Proto-Lalo > Lalo|yanglalo_50	YESTERDAY	Southern Lalo	a ˀn i	a n i	.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_50	YESTERDAY	Xuzhang Lalo	a ˀn i	a ɲ i	.x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_50	YESTERDAY	Yangliu	a ˀn i	a n i	...
+yanglalo:Proto-Lalo > Lalo|yanglalo_50	YESTERDAY	Yangliu	a ˀn i	a n i	.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_502		Xishanba Lalo	tsʰ y	tsʰ i	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_502		Xuzhang Lalo	tsʰ y	tɕʰ i	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_502		Yangliu	tsʰ y	tsʰ ə	.x
@@ -2211,7 +2211,7 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_506	MEDICINE	Dongshanba Lalo	n ɛ̠	n ɛ	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_506	MEDICINE	Eka	n ɛ̠	n a	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_506	MEDICINE	Southern Lalo	n ɛ̠	n a	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_506	MEDICINE	Western Lalu	n ɛ̠	n ɛ	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_506	MEDICINE	Xishanba Lalo	n ɛ̠	ˀn ɛ̠	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_506	MEDICINE	Xishanba Lalo	n ɛ̠	ˀn ɛ̠	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_506	MEDICINE	Xuzhang Lalo	n ɛ̠	n ɛ	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_506	MEDICINE	Yangliu	n ɛ̠	n ɛ	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_509	BROOM	Dongshanba Lalo	ɡ ɨ s i̠	- - s ɿ	xx.x
@@ -2221,11 +2221,11 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_509	BROOM	Western Lalu	ɡ ɨ s i̠	ɡ ɨ s �
 yanglalo:Proto-Lalo > Lalo|yanglalo_509	BROOM	Xishanba Lalo	ɡ ɨ s i̠	ɡ ɨ s ʐ̩	...x
 yanglalo:Proto-Lalo > Lalo|yanglalo_509	BROOM	Xuzhang Lalo	ɡ ɨ s i̠	ɡ ɛ s ɿ	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_509	BROOM	Yangliu	ɡ ɨ s i̠	ɡ ɛ s ɿ	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_51	DAY BEFORE YESTERDAY	Dongshanba Lalo	ʃ i̠ ˀn i	s ɿ n ɛ	xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_51	DAY BEFORE YESTERDAY	Dongshanba Lalo	ʃ i̠ ˀn i	s ɿ n ɛ	xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_51	DAY BEFORE YESTERDAY	Eka	ʃ i̠ ˀn i	s ɿ m i	xxx.
-yanglalo:Proto-Lalo > Lalo|yanglalo_51	DAY BEFORE YESTERDAY	Southern Lalo	ʃ i̠ ˀn i	ɕ i n i	x...
+yanglalo:Proto-Lalo > Lalo|yanglalo_51	DAY BEFORE YESTERDAY	Southern Lalo	ʃ i̠ ˀn i	ɕ i n i	x.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_51	DAY BEFORE YESTERDAY	Xuzhang Lalo	ʃ i̠ ˀn i	ʂ ʅ ɲ i	xxx.
-yanglalo:Proto-Lalo > Lalo|yanglalo_51	DAY BEFORE YESTERDAY	Yangliu	ʃ i̠ ˀn i	s ɿ n i	xx..
+yanglalo:Proto-Lalo > Lalo|yanglalo_51	DAY BEFORE YESTERDAY	Yangliu	ʃ i̠ ˀn i	s ɿ n i	xxx.
 yanglalo:Proto-Lalo > Lalo|yanglalo_510	WOK	Dongshanba Lalo	a tʃʰ ɛ	a tsʰ ɛ	.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_510	WOK	Eka	a tʃʰ ɛ	a tɕʰ ɛ	.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_510	WOK	Southern Lalo	a tʃʰ ɛ	a tsʰ a	.xx
@@ -2242,7 +2242,7 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_511	BUCKET	Yangliu	ɣ ɨ tʰ u	ɣ ɨ tʰ ɤ	
 yanglalo:Proto-Lalo > Lalo|yanglalo_512	CLAY POT	Dongshanba Lalo	ˀn u	- ɤ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_512	CLAY POT	Yangliu	ˀn u	- õ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_513	SINK (BASIN)	Yangliu	l a ŋ	l o -	.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_514	BAG	Dongshanba Lalo	l a ˀl i̠	- - l i	xx..
+yanglalo:Proto-Lalo > Lalo|yanglalo_514	BAG	Dongshanba Lalo	l a ˀl i̠	- - l i	xxx.
 yanglalo:Proto-Lalo > Lalo|yanglalo_514	BAG	Xuzhang Lalo	l a ˀl i̠	l o ʐ ʅ	.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_515	COMB	Dongshanba Lalo	m̩ p j ɨ	m̩ p - ə	..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_515	COMB	Eka	m̩ p j ɨ	- p - ɨ	x.x.
@@ -2271,9 +2271,9 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_518	SMALL BOWL	Southern Lalo	a k j e z a	i �
 yanglalo:Proto-Lalo > Lalo|yanglalo_518	SMALL BOWL	Western Lalu	a k j e z a	a k - ai z a	..xx..
 yanglalo:Proto-Lalo > Lalo|yanglalo_518	SMALL BOWL	Xishanba Lalo	a k j e z a	a k - ai - -	..xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_518	SMALL BOWL	Yangliu	a k j e z a	a k - ai z a	..xx..
-yanglalo:Proto-Lalo > Lalo|yanglalo_52	THREE DAYS BEFORE NOW	Southern Lalo	ʃ i̠ ɣ u ˀn i	ɕ i w u n i	x.x...
+yanglalo:Proto-Lalo > Lalo|yanglalo_52	THREE DAYS BEFORE NOW	Southern Lalo	ʃ i̠ ɣ u ˀn i	ɕ i w u n i	x.x.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_52	THREE DAYS BEFORE NOW	Xuzhang Lalo	ʃ i̠ ɣ u ˀn i	ʂ ʅ w u ɲ i	xxx.x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_52	THREE DAYS BEFORE NOW	Yangliu	ʃ i̠ ɣ u ˀn i	s ɿ w u n i	xxx...
+yanglalo:Proto-Lalo > Lalo|yanglalo_52	THREE DAYS BEFORE NOW	Yangliu	ʃ i̠ ɣ u ˀn i	s ɿ w u n i	xxx.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_520	CHOPSTICKS	Dongshanba Lalo	a dʒ u	a dz u	.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_520	CHOPSTICKS	Eka	a dʒ u	a dz u	.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_520	CHOPSTICKS	Southern Lalo	a dʒ u	a dʒ u	...
@@ -2324,7 +2324,7 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_531	PRICE	Western Lalu	pʰ o	tsʰ ɿ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_531	PRICE	Xishanba Lalo	pʰ o	f i	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_531	PRICE	Xuzhang Lalo	pʰ o	tsʰ ɿ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_531	PRICE	Yangliu	pʰ o	pʰ u	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_536	SPEECH	Dongshanba Lalo	ɣ ɛ ˀl i	ɣ ɔ l i	.x..
+yanglalo:Proto-Lalo > Lalo|yanglalo_536	SPEECH	Dongshanba Lalo	ɣ ɛ ˀl i	ɣ ɔ l i	.xx.
 yanglalo:Proto-Lalo > Lalo|yanglalo_536	SPEECH	Western Lalu	ɣ ɛ ˀl i	ɣ ɛ ʐ ʅ	..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_536	SPEECH	Xishanba Lalo	ɣ ɛ ˀl i	v ɛ - -	x.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_536	SPEECH	Xuzhang Lalo	ɣ ɛ ˀl i	ɡ v̩ ʐ ʅ	xxxx
@@ -2336,27 +2336,27 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_539	SOUND OR NOISE	Dongshanba Lalo	kʰ o tʰ
 yanglalo:Proto-Lalo > Lalo|yanglalo_539	SOUND OR NOISE	Eka	kʰ o tʰ y	k ə tʰ ə	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_539	SOUND OR NOISE	Southern Lalo	kʰ o tʰ y	- - tʰ ə	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_539	SOUND OR NOISE	Yangliu	kʰ o tʰ y	kʰ o tʰ ə	...x
-yanglalo:Proto-Lalo > Lalo|yanglalo_54	TOMORROW	Dongshanba Lalo	a ɡ y ˀn i	a ɡ ə n ɛ	..x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_54	TOMORROW	Eka	a ɡ y ˀn i	a ɡ i n i	..x..
-yanglalo:Proto-Lalo > Lalo|yanglalo_54	TOMORROW	Xishanba Lalo	a ɡ y ˀn i	a ɡ y n̩ -	....x
+yanglalo:Proto-Lalo > Lalo|yanglalo_54	TOMORROW	Dongshanba Lalo	a ɡ y ˀn i	a ɡ ə n ɛ	..xxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_54	TOMORROW	Eka	a ɡ y ˀn i	a ɡ i n i	..xx.
+yanglalo:Proto-Lalo > Lalo|yanglalo_54	TOMORROW	Xishanba Lalo	a ɡ y ˀn i	a ɡ y n̩ -	...xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_54	TOMORROW	Xuzhang Lalo	a ɡ y ˀn i	ɛ ɡ u ɲ i	x.xx.
 yanglalo:Proto-Lalo > Lalo|yanglalo_54	TOMORROW	Yangliu	a ɡ y ˀn i	ɛ ɡ ɨ m i	x.xx.
 yanglalo:Proto-Lalo > Lalo|yanglalo_540	BOOK	Dongshanba Lalo	tʰ o ɣ u	tʰ a j i	.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_540	BOOK	Western Lalu	tʰ o ɣ u	tʰ u - -	.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_540	BOOK	Xishanba Lalo	tʰ o ɣ u	tʰ au - -	.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_540	BOOK	Xuzhang Lalo	tʰ o ɣ u	tʰ a ɣ ɨ	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_541	NAME	Dongshanba Lalo	ˀm i	m i	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_541	NAME	Southern Lalo	ˀm i	m i	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_541	NAME	Dongshanba Lalo	ˀm i	m i	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_541	NAME	Southern Lalo	ˀm i	m i	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_541	NAME	Western Lalu	ˀm i	- ĩ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_541	NAME	Xishanba Lalo	ˀm i	ˀm i	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_541	NAME	Xuzhang Lalo	ˀm i	m ĩ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_541	NAME	Yangliu	ˀm i	m i	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_542	DREAM	Dongshanba Lalo	ʒ i̠ ˀm e̠	z ɿ m ei	xx.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_542	DREAM	Eka	ʒ i̠ ˀm e̠	- - m ə	xx.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_542	DREAM	Southern Lalo	ʒ i̠ ˀm e̠	- i m ɛ	x..x
+yanglalo:Proto-Lalo > Lalo|yanglalo_541	NAME	Xuzhang Lalo	ˀm i	m ĩ	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_541	NAME	Yangliu	ˀm i	m i	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_542	DREAM	Dongshanba Lalo	ʒ i̠ ˀm e̠	z ɿ m ei	xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_542	DREAM	Eka	ʒ i̠ ˀm e̠	- - m ə	xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_542	DREAM	Southern Lalo	ʒ i̠ ˀm e̠	- i m ɛ	x.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_542	DREAM	Xishanba Lalo	ʒ i̠ ˀm e̠	ʐ ʅ ˀm ɛ̠	xx.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_542	DREAM	Xuzhang Lalo	ʒ i̠ ˀm e̠	ʐ ʅ m o	xx.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_542	DREAM	Yangliu	ʒ i̠ ˀm e̠	z ɿ m̩ -	xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_542	DREAM	Xuzhang Lalo	ʒ i̠ ˀm e̠	ʐ ʅ m o	xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_542	DREAM	Yangliu	ʒ i̠ ˀm e̠	z ɿ m̩ -	xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_543	SHADE	Dongshanba Lalo	a ɣ ɨ	a ɣ ə	..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_543	SHADE	Eka	a ɣ ɨ	- ɣ ɨ	x..
 yanglalo:Proto-Lalo > Lalo|yanglalo_543	SHADE	Southern Lalo	a ɣ ɨ	- ɣ ɨ	x..
@@ -2372,13 +2372,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_547	GHOST	Yangliu	n e	n ai	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_549	FENCE	Eka	kʰ y	k ɨ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_549	FENCE	Western Lalu	kʰ y	kʰ u	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_549	FENCE	Xuzhang Lalo	kʰ y	kʰ u	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_55	DAY AFTER TOMORROW	Dongshanba Lalo	tsʰ a pʰ e̠ ˀn i	tsʰ a p e n ɛ	..x..x
-yanglalo:Proto-Lalo > Lalo|yanglalo_55	DAY AFTER TOMORROW	Eka	tsʰ a pʰ e̠ ˀn i	ts a pʰ ɛ n i	x..x..
+yanglalo:Proto-Lalo > Lalo|yanglalo_55	DAY AFTER TOMORROW	Dongshanba Lalo	tsʰ a pʰ e̠ ˀn i	tsʰ a p e n ɛ	..x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_55	DAY AFTER TOMORROW	Eka	tsʰ a pʰ e̠ ˀn i	ts a pʰ ɛ n i	x..xx.
 yanglalo:Proto-Lalo > Lalo|yanglalo_55	DAY AFTER TOMORROW	Southern Lalo	tsʰ a pʰ e̠ ˀn i	ts a pʰ i - -	x..xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_55	DAY AFTER TOMORROW	Western Lalu	tsʰ a pʰ e̠ ˀn i	tsʰ a pʰ ɛ - -	...xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_55	DAY AFTER TOMORROW	Xishanba Lalo	tsʰ a pʰ e̠ ˀn i	tsʰ a pʰ ɛ - -	...xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_55	DAY AFTER TOMORROW	Xuzhang Lalo	tsʰ a pʰ e̠ ˀn i	tsʰ a pʰ i ɲ i	...xx.
-yanglalo:Proto-Lalo > Lalo|yanglalo_55	DAY AFTER TOMORROW	Yangliu	tsʰ a pʰ e̠ ˀn i	tsʰ a p e n i	..x...
+yanglalo:Proto-Lalo > Lalo|yanglalo_55	DAY AFTER TOMORROW	Yangliu	tsʰ a pʰ e̠ ˀn i	tsʰ a p e n i	..x.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_551	BOW	Dongshanba Lalo	t a̠ n ɛ	t ɛ n ɛ	.x..
 yanglalo:Proto-Lalo > Lalo|yanglalo_551	BOW	Eka	t a̠ n ɛ	ts a̠ n a̠	x..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_551	BOW	Southern Lalo	t a̠ n ɛ	t a n a̠	...x
@@ -2394,13 +2394,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_558	VILLAGE	Eka	kʰ a̠	k a̠	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_558	VILLAGE	Southern Lalo	kʰ a̠	kʰ a	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_558	VILLAGE	Xuzhang Lalo	kʰ a̠	kʰ ɛ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_558	VILLAGE	Yangliu	kʰ a̠	kʰ ɛ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_56	THREE DAYS FROM NOW	Dongshanba Lalo	a pʰ e̠ ˀn i	a pʰ e n ɛ	....x
-yanglalo:Proto-Lalo > Lalo|yanglalo_56	THREE DAYS FROM NOW	Eka	a pʰ e̠ ˀn i	- pʰ ɛ n i	x.x..
+yanglalo:Proto-Lalo > Lalo|yanglalo_56	THREE DAYS FROM NOW	Dongshanba Lalo	a pʰ e̠ ˀn i	a pʰ e n ɛ	...xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_56	THREE DAYS FROM NOW	Eka	a pʰ e̠ ˀn i	- pʰ ɛ n i	x.xx.
 yanglalo:Proto-Lalo > Lalo|yanglalo_56	THREE DAYS FROM NOW	Southern Lalo	a pʰ e̠ ˀn i	a pʰ i - -	..xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_56	THREE DAYS FROM NOW	Western Lalu	a pʰ e̠ ˀn i	a pʰ e - -	...xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_56	THREE DAYS FROM NOW	Xishanba Lalo	a pʰ e̠ ˀn i	a̤ pʰ ɛ - -	..xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_56	THREE DAYS FROM NOW	Xuzhang Lalo	a pʰ e̠ ˀn i	a pʰ i ɲ i	..xx.
-yanglalo:Proto-Lalo > Lalo|yanglalo_56	THREE DAYS FROM NOW	Yangliu	a pʰ e̠ ˀn i	a pʰ e n i	.....
+yanglalo:Proto-Lalo > Lalo|yanglalo_56	THREE DAYS FROM NOW	Yangliu	a pʰ e̠ ˀn i	a pʰ e n i	...x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_563	FLUTE	Dongshanba Lalo	ɡ j i l y	dʑ - i l u	xx..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_563	FLUTE	Southern Lalo	ɡ j i l y	d - ə l ə	xxx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_563	FLUTE	Western Lalu	ɡ j i l y	d - y l y	xxx..
@@ -2429,13 +2429,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_569	SEE	Western Lalu	m j a ŋ	m - u -	.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_569	SEE	Xishanba Lalo	m j a ŋ	m - u -	.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_569	SEE	Xuzhang Lalo	m j a ŋ	m - a -	.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_57	FOUR DAYS FROM NOW	Western Lalu	a ɣ o ˀn i	ɛ ɣ õ - -	x.xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_57	FOUR DAYS FROM NOW	Yangliu	a ɣ o ˀn i	a w u n i	.xx..
-yanglalo:Proto-Lalo > Lalo|yanglalo_571	LISTEN	Dongshanba Lalo	ˀn a	n ɔ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_571	LISTEN	Southern Lalo	ˀn a	n o	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_571	LISTEN	Western Lalu	ˀn a	n a	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_57	FOUR DAYS FROM NOW	Yangliu	a ɣ o ˀn i	a w u n i	.xxx.
+yanglalo:Proto-Lalo > Lalo|yanglalo_571	LISTEN	Dongshanba Lalo	ˀn a	n ɔ	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_571	LISTEN	Southern Lalo	ˀn a	n o	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_571	LISTEN	Western Lalu	ˀn a	n a	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_571	LISTEN	Xishanba Lalo	ˀn a	ˀn a	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_571	LISTEN	Xuzhang Lalo	ˀn a	n o	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_571	LISTEN	Yangliu	ˀn a	n a	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_571	LISTEN	Xuzhang Lalo	ˀn a	n o	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_571	LISTEN	Yangliu	ˀn a	n a	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_572	HEAR	Dongshanba Lalo	ɡ j a	ɣ - ɔ	xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_572	HEAR	Eka	ɡ j a	ɡ - o	.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_572	HEAR	Southern Lalo	ɡ j a	ɡ - o	.xx
@@ -2496,13 +2496,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_585	SPIT	Xuzhang Lalo	pʰ i̠	tsʰ ʐ̩	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_585	SPIT	Yangliu	pʰ i̠	pʰ ai	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_586	VOMIT	Eka	pʰ e̠	pʰ i	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_586	VOMIT	Southern Lalo	pʰ e̠	pʰ ɛ̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_588	BLOW (WITH MOUTH)	Dongshanba Lalo	ˀm y̠	m ə	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_588	BLOW (WITH MOUTH)	Eka	ˀm y̠	m ɨ̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_588	BLOW (WITH MOUTH)	Southern Lalo	ˀm y̠	m i	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_588	BLOW (WITH MOUTH)	Western Lalu	ˀm y̠	m v̩	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_588	BLOW (WITH MOUTH)	Dongshanba Lalo	ˀm y̠	m ə	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_588	BLOW (WITH MOUTH)	Eka	ˀm y̠	m ɨ̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_588	BLOW (WITH MOUTH)	Southern Lalo	ˀm y̠	m i	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_588	BLOW (WITH MOUTH)	Western Lalu	ˀm y̠	m v̩	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_588	BLOW (WITH MOUTH)	Xishanba Lalo	ˀm y̠	ˀm ʉ̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_588	BLOW (WITH MOUTH)	Xuzhang Lalo	ˀm y̠	m ø	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_588	BLOW (WITH MOUTH)	Yangliu	ˀm y̠	m i	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_588	BLOW (WITH MOUTH)	Xuzhang Lalo	ˀm y̠	m ø	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_588	BLOW (WITH MOUTH)	Yangliu	ˀm y̠	m i	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_589	SAY	Dongshanba Lalo	b e̠	b ei	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_589	SAY	Southern Lalo	b e̠	b ɛ̠	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_589	SAY	Western Lalu	b e̠	b ɛ	.x
@@ -2523,8 +2523,8 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_592	CALL BY NAME	Western Lalu	k u	k v̩	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_592	CALL BY NAME	Xishanba Lalo	k u	k ə	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_592	CALL BY NAME	Xuzhang Lalo	k u	k ɤ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_592	CALL BY NAME	Yangliu	k u	k ɤ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_593	ASK (INQUIRE)	Eka	ˀn a	n o	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_593	ASK (INQUIRE)	Southern Lalo	ˀn a	n ə	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_593	ASK (INQUIRE)	Eka	ˀn a	n o	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_593	ASK (INQUIRE)	Southern Lalo	ˀn a	n ə	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_594	ANSWER	Western Lalu	p o̠	p u	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_594	ANSWER	Xishanba Lalo	p o̠	p o̠	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_594	ANSWER	Xuzhang Lalo	p o̠	p u	.x
@@ -2579,18 +2579,18 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_606	PICK UP	Western Lalu	ɡ o̠	ɣ o	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_606	PICK UP	Xishanba Lalo	ɡ o̠	w o̠	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_606	PICK UP	Xuzhang Lalo	ɡ o̠	ɡ u	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_606	PICK UP	Yangliu	ɡ o̠	ɡ u	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_609	THROW AWAY	Dongshanba Lalo	ˀl o̠	l u	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_609	THROW AWAY	Eka	ˀl o̠	l u̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_609	THROW AWAY	Western Lalu	ˀl o̠	l u	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_609	THROW AWAY	Dongshanba Lalo	ˀl o̠	l u	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_609	THROW AWAY	Eka	ˀl o̠	l u̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_609	THROW AWAY	Western Lalu	ˀl o̠	l u	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_609	THROW AWAY	Xishanba Lalo	ˀl o̠	ˀl o̠	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_609	THROW AWAY	Yangliu	ˀl o̠	l u	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_609	THROW AWAY	Yangliu	ˀl o̠	l u	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_61		Dongshanba Lalo	kʰ o̠ x ɨ̠	kʰ o ɕ i	..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_61		Eka	kʰ o̠ x ɨ̠	kʰ u̠ x ɨ	.x..
 yanglalo:Proto-Lalo > Lalo|yanglalo_61		Southern Lalo	kʰ o̠ x ɨ̠	kʰ u x ɨ	.x..
 yanglalo:Proto-Lalo > Lalo|yanglalo_61		Western Lalu	kʰ o̠ x ɨ̠	kʰ o x ɨ	....
 yanglalo:Proto-Lalo > Lalo|yanglalo_61		Xishanba Lalo	kʰ o̠ x ɨ̠	kʰ o̠ x ɨ	....
 yanglalo:Proto-Lalo > Lalo|yanglalo_61		Xuzhang Lalo	kʰ o̠ x ɨ̠	kʰ o kʰ ɨ	..x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_610		Southern Lalo	ˀl o̠	l u	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_610		Southern Lalo	ˀl o̠	l u	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_612	STRETCH	Dongshanba Lalo	dʒ e	dʑ i	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_612	STRETCH	Eka	dʒ e	dʑ ɛ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_612	STRETCH	Xishanba Lalo	dʒ e	dʑ i	xx
@@ -2684,9 +2684,9 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_633		Southern Lalo	p y	p ə	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_633		Xishanba Lalo	p y	p y	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_633		Xuzhang Lalo	p y	p y	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_633		Yangliu	p y	p ɨ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_634	TUMBLE (FALL DOWN)	Western Lalu	ˀl y	l y	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_634	TUMBLE (FALL DOWN)	Western Lalu	ˀl y	l y	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_634	TUMBLE (FALL DOWN)	Xishanba Lalo	ˀl y	ˀl y	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_634	TUMBLE (FALL DOWN)	Xuzhang Lalo	ˀl y	l y	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_634	TUMBLE (FALL DOWN)	Xuzhang Lalo	ˀl y	l y	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_635		Eka	e̠	ɛ̠	x
 yanglalo:Proto-Lalo > Lalo|yanglalo_635		Southern Lalo	e̠	ɛ̃	x
 yanglalo:Proto-Lalo > Lalo|yanglalo_637	REST	Southern Lalo	n a	n o	.x
@@ -2724,10 +2724,10 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_644	DO	Eka	p e	m ɨ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_644	DO	Western Lalu	p e	p ɛ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_644	DO	Xishanba Lalo	p e	p i	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_644	DO	Yangliu	p e	p ai	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_645	WORK (LABOUR)	Dongshanba Lalo	m j a n i ˀm u	m - ei l i m ɤ	.xxx..x
-yanglalo:Proto-Lalo > Lalo|yanglalo_645	WORK (LABOUR)	Western Lalu	m j a n i ˀm u	m - a n i m v̩	.x....x
-yanglalo:Proto-Lalo > Lalo|yanglalo_645	WORK (LABOUR)	Xuzhang Lalo	m j a n i ˀm u	m - a ɲ i m ɤ	.x.x..x
-yanglalo:Proto-Lalo > Lalo|yanglalo_645	WORK (LABOUR)	Yangliu	m j a n i ˀm u	m - a n i m̩ -	.x....x
+yanglalo:Proto-Lalo > Lalo|yanglalo_645	WORK (LABOUR)	Dongshanba Lalo	m j a n i ˀm u	m - ei l i m ɤ	.xxx.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_645	WORK (LABOUR)	Western Lalu	m j a n i ˀm u	m - a n i m v̩	.x...xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_645	WORK (LABOUR)	Xuzhang Lalo	m j a n i ˀm u	m - a ɲ i m ɤ	.x.x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_645	WORK (LABOUR)	Yangliu	m j a n i ˀm u	m - a n i m̩ -	.x...xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_646	PLOUGH	Dongshanba Lalo	m j a	m j a	...
 yanglalo:Proto-Lalo > Lalo|yanglalo_646	PLOUGH	Xishanba Lalo	m j a	m - i	.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_647	DIG	Dongshanba Lalo	k ɛ̠	k ɛ	..
@@ -2804,10 +2804,10 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_661	PULL OUT	Xishanba Lalo	tʃ i̠	ʈʂ ʐ̩
 yanglalo:Proto-Lalo > Lalo|yanglalo_661	PULL OUT	Xuzhang Lalo	tʃ i̠	ʈʂ ʅ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_662	PULL OUT	Eka	p ɨ̠	p ɨ	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_662	PULL OUT	Yangliu	p ɨ̠	p u	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_663	GRAZE	Eka	ˀl o̠	l ui	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_663	GRAZE	Southern Lalo	ˀl o̠	l ɛ̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_663	GRAZE	Xishanba Lalo	ˀl o̠	l o̠	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_663	GRAZE	Xuzhang Lalo	ˀl o̠	l u̠	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_663	GRAZE	Eka	ˀl o̠	l ui	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_663	GRAZE	Southern Lalo	ˀl o̠	l ɛ̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_663	GRAZE	Xishanba Lalo	ˀl o̠	l o̠	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_663	GRAZE	Xuzhang Lalo	ˀl o̠	l u̠	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_664		Dongshanba Lalo	h u	f ɤ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_664		Eka	h u	f v̩	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_664		Southern Lalo	h u	x u	x.
@@ -2832,20 +2832,20 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_668	COUNT	Dongshanba Lalo	ɣ o	ɣ ə	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_668	COUNT	Eka	ɣ o	ɣ ɨ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_669	COUNT	Southern Lalo	ɡ j a ŋ	k - u -	xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_669	COUNT	Xishanba Lalo	ɡ j a ŋ	ɡ - u -	.xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_67	NEXT YEAR	Dongshanba Lalo	ˀn a h e̠	n a x ei	..xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_67	NEXT YEAR	Eka	ˀn a h e̠	n a x i	..xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_67	NEXT YEAR	Southern Lalo	ˀn a h e̠	n ɛ x ɛ	.xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_67	NEXT YEAR	Western Lalu	ˀn a h e̠	n ɛ h ɛ	.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_67	NEXT YEAR	Xuzhang Lalo	ˀn a h e̠	n o x ai	.xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_67	NEXT YEAR	Yangliu	ˀn a h e̠	n a x ai	..xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_67	NEXT YEAR	Dongshanba Lalo	ˀn a h e̠	n a x ei	x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_67	NEXT YEAR	Eka	ˀn a h e̠	n a x i	x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_67	NEXT YEAR	Southern Lalo	ˀn a h e̠	n ɛ x ɛ	xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_67	NEXT YEAR	Western Lalu	ˀn a h e̠	n ɛ h ɛ	xx.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_67	NEXT YEAR	Xuzhang Lalo	ˀn a h e̠	n o x ai	xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_67	NEXT YEAR	Yangliu	ˀn a h e̠	n a x ai	x.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_670	COUNT	Southern Lalo	tʃ a	tʃ a	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_670	COUNT	Western Lalu	tʃ a	ʈʂ a	x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_671	TEACH	Dongshanba Lalo	ˀm a	m ɔ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_671	TEACH	Eka	ˀm a	m o	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_671	TEACH	Southern Lalo	ˀm a	m o	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_671	TEACH	Western Lalu	ˀm a	m a	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_671	TEACH	Dongshanba Lalo	ˀm a	m ɔ	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_671	TEACH	Eka	ˀm a	m o	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_671	TEACH	Southern Lalo	ˀm a	m o	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_671	TEACH	Western Lalu	ˀm a	m a	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_671	TEACH	Xishanba Lalo	ˀm a	ˀm a̤	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_671	TEACH	Xuzhang Lalo	ˀm a	m o	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_671	TEACH	Xuzhang Lalo	ˀm a	m o	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_672	TEACH	Western Lalu	ts a ŋ	ts u -	.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_673	LEARN	Dongshanba Lalo	dz a ŋ	dz a -	..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_673	LEARN	Southern Lalo	dz a ŋ	dz a -	..x
@@ -2858,10 +2858,10 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_674	COOK (SOMETHING)	Western Lalu	ts e̠	tɕ
 yanglalo:Proto-Lalo > Lalo|yanglalo_674	COOK (SOMETHING)	Xishanba Lalo	ts e̠	tɕ ɛ̠	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_674	COOK (SOMETHING)	Xuzhang Lalo	ts e̠	tɕ ɛ̠	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_674	COOK (SOMETHING)	Yangliu	ts e̠	ts ai	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_675	FRY	Eka	ˀl u	l u	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_675	FRY	Southern Lalo	ˀl u	l u	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_675	FRY	Xuzhang Lalo	ˀl u	l ɤ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_675	FRY	Yangliu	ˀl u	l ɤ	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_675	FRY	Eka	ˀl u	l u	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_675	FRY	Southern Lalo	ˀl u	l u	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_675	FRY	Xuzhang Lalo	ˀl u	l ɤ	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_675	FRY	Yangliu	ˀl u	l ɤ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_677	STEAM	Eka	p u	b v̩	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_677	STEAM	Xishanba Lalo	p u	p ʉ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_677	STEAM	Yangliu	p u	p u	..
@@ -2908,23 +2908,23 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_69		Dongshanba Lalo	n a ɣ u n i̠	n o w u n
 yanglalo:Proto-Lalo > Lalo|yanglalo_69		Xishanba Lalo	n a ɣ u n i̠	n ə w u ɲ ɛ̠	.xx.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_69		Xuzhang Lalo	n a ɣ u n i̠	n o w u ɲ i̠	.xx.x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_69		Yangliu	n a ɣ u n i̠	n u w u - ĩ	.xx.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_691		Dongshanba Lalo	ˀv i̠ t u	v ei t u	.x..
-yanglalo:Proto-Lalo > Lalo|yanglalo_691		Eka	ˀv i̠ t u	v i̠ - -	..xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_691		Southern Lalo	ˀv i̠ t u	v ɛ̠ - -	.xxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_691		Dongshanba Lalo	ˀv i̠ t u	v ei t u	xx..
+yanglalo:Proto-Lalo > Lalo|yanglalo_691		Eka	ˀv i̠ t u	v i̠ - -	x.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_691		Southern Lalo	ˀv i̠ t u	v ɛ̠ - -	xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_691		Western Lalu	ˀv i̠ t u	ʝ i - -	x.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_691		Xishanba Lalo	ˀv i̠ t u	j ɛ̠ - -	xxxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_691		Xuzhang Lalo	ˀv i̠ t u	ʝ ɛ̠ t u	xx..
-yanglalo:Proto-Lalo > Lalo|yanglalo_691		Yangliu	ˀv i̠ t u	v ai - -	.xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_692	UNDRESS	Dongshanba Lalo	ˀl i̠	l i	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_692	UNDRESS	Eka	ˀl i̠	l ɨ̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_692	UNDRESS	Southern Lalo	ˀl i̠	l ɨ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_692	UNDRESS	Western Lalu	ˀl i̠	l i	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_691		Yangliu	ˀv i̠ t u	v ai - -	xxxx
+yanglalo:Proto-Lalo > Lalo|yanglalo_692	UNDRESS	Dongshanba Lalo	ˀl i̠	l i	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_692	UNDRESS	Eka	ˀl i̠	l ɨ̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_692	UNDRESS	Southern Lalo	ˀl i̠	l ɨ	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_692	UNDRESS	Western Lalu	ˀl i̠	l i	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_692	UNDRESS	Xishanba Lalo	ˀl i̠	ˀʐ ʐ̩	xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_692	UNDRESS	Xuzhang Lalo	ˀl i̠	l a	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_692	UNDRESS	Yangliu	ˀl i̠	l i	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_693		Dongshanba Lalo	ˀl y	l ə	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_693		Eka	ˀl y	l i	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_693		Southern Lalo	ˀl y	l ɨ	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_692	UNDRESS	Xuzhang Lalo	ˀl i̠	l a	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_692	UNDRESS	Yangliu	ˀl i̠	l i	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_693		Dongshanba Lalo	ˀl y	l ə	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_693		Eka	ˀl y	l i	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_693		Southern Lalo	ˀl y	l ɨ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_694	SHAVE	Dongshanba Lalo	tʃʰ o̠	tsʰ ɛ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_694	SHAVE	Southern Lalo	tʃʰ o̠	tʃ̠ʰ u̠	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_694	SHAVE	Yangliu	tʃʰ o̠	tsʰ u	xx
@@ -2938,13 +2938,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_697	SEW	Dongshanba Lalo	ɡ u̠	ɡ ə	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_697	SEW	Eka	ɡ u̠	ɡ ɨ̠	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_697	SEW	Southern Lalo	ɡ u̠	ɡ ɨ̠	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_697	SEW	Yangliu	ɡ u̠	ɡ ɤ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_698	REPAIR	Dongshanba Lalo	ˀn ɛ̠	n ɛ	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_698	REPAIR	Eka	ˀn ɛ̠	n a̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_698	REPAIR	Southern Lalo	ˀn ɛ̠	n a̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_698	REPAIR	Western Lalu	ˀn ɛ̠	n ɛ	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_698	REPAIR	Dongshanba Lalo	ˀn ɛ̠	n ɛ	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_698	REPAIR	Eka	ˀn ɛ̠	n a̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_698	REPAIR	Southern Lalo	ˀn ɛ̠	n a̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_698	REPAIR	Western Lalu	ˀn ɛ̠	n ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_698	REPAIR	Xishanba Lalo	ˀn ɛ̠	ˀn a̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_698	REPAIR	Xuzhang Lalo	ˀn ɛ̠	n ɛ	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_698	REPAIR	Yangliu	ˀn ɛ̠	n ɛ	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_698	REPAIR	Xuzhang Lalo	ˀn ɛ̠	n ɛ	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_698	REPAIR	Yangliu	ˀn ɛ̠	n ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_699	WEAVE	Eka	dz ɛ̠	dz a̠	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_699	WEAVE	Southern Lalo	dz ɛ̠	dʒ a̠	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_699	WEAVE	Western Lalu	dz ɛ̠	ts e	xx
@@ -3120,13 +3120,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_740		Yangliu	d e	d i	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_741	DELIVER	Eka	x ɛ x a	x ɛ - -	..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_741	DELIVER	Southern Lalo	x ɛ x a	x ɛ x o	...x
 yanglalo:Proto-Lalo > Lalo|yanglalo_741	DELIVER	Western Lalu	x ɛ x a	x ɛ x a	....
-yanglalo:Proto-Lalo > Lalo|yanglalo_742	WAIT (FOR)	Dongshanba Lalo	ˀl a ŋ	l a -	..x
-yanglalo:Proto-Lalo > Lalo|yanglalo_742	WAIT (FOR)	Eka	ˀl a ŋ	l a -	..x
-yanglalo:Proto-Lalo > Lalo|yanglalo_742	WAIT (FOR)	Southern Lalo	ˀl a ŋ	l a -	..x
-yanglalo:Proto-Lalo > Lalo|yanglalo_742	WAIT (FOR)	Western Lalu	ˀl a ŋ	l v̩ -	.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_742	WAIT (FOR)	Dongshanba Lalo	ˀl a ŋ	l a -	x.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_742	WAIT (FOR)	Eka	ˀl a ŋ	l a -	x.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_742	WAIT (FOR)	Southern Lalo	ˀl a ŋ	l a -	x.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_742	WAIT (FOR)	Western Lalu	ˀl a ŋ	l v̩ -	xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_742	WAIT (FOR)	Xishanba Lalo	ˀl a ŋ	ˀl ə -	.xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_742	WAIT (FOR)	Xuzhang Lalo	ˀl a ŋ	l a -	..x
-yanglalo:Proto-Lalo > Lalo|yanglalo_742	WAIT (FOR)	Yangliu	ˀl a ŋ	l u -	.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_742	WAIT (FOR)	Xuzhang Lalo	ˀl a ŋ	l a -	x.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_742	WAIT (FOR)	Yangliu	ˀl a ŋ	l u -	xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_743	MEET	Dongshanba Lalo	tʰ u dz i	- - dz ɿ	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_743	MEET	Western Lalu	tʰ u dz i	tʰ u dz ɿ	...x
 yanglalo:Proto-Lalo > Lalo|yanglalo_746	MARRY (AS MAN)	Dongshanba Lalo	ts i	ts ɿ	.x
@@ -3305,11 +3305,11 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_784	GO DOWN (DESCEND)	Western Lalu	z e̠ ʒ 
 yanglalo:Proto-Lalo > Lalo|yanglalo_784	GO DOWN (DESCEND)	Xishanba Lalo	z e̠ ʒ e	z ɛ̠ j i	.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_784	GO DOWN (DESCEND)	Xuzhang Lalo	z e̠ ʒ e	z ɛi ʝ i	.xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_784	GO DOWN (DESCEND)	Yangliu	z e̠ ʒ e	z ai ʝ i	.xxx
-yanglalo:Proto-Lalo > Lalo|yanglalo_785	CLIMB	Dongshanba Lalo	ˀm ɛ̠	m ɛ	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_785	CLIMB	Western Lalu	ˀm ɛ̠	m ɛ	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_785	CLIMB	Dongshanba Lalo	ˀm ɛ̠	m ɛ	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_785	CLIMB	Western Lalu	ˀm ɛ̠	m ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_785	CLIMB	Xishanba Lalo	ˀm ɛ̠	ˀm a	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_785	CLIMB	Xuzhang Lalo	ˀm ɛ̠	m ɛ	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_785	CLIMB	Yangliu	ˀm ɛ̠	m ɛ	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_785	CLIMB	Xuzhang Lalo	ˀm ɛ̠	m ɛ	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_785	CLIMB	Yangliu	ˀm ɛ̠	m ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_786	COME BACK	Eka	t y	t ə	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_787	ARRIVE	Dongshanba Lalo	kʰ j e	tɕʰ - i	xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_787	ARRIVE	Eka	kʰ j e	kʰ - ɛ	.xx
@@ -3380,13 +3380,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_8	WIND	Western Lalu	a m o h i	- n̩ - ɕ i	x
 yanglalo:Proto-Lalo > Lalo|yanglalo_8	WIND	Xishanba Lalo	a m o h i	a m̩ - ɕ y	..xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_8	WIND	Xuzhang Lalo	a m o h i	a m v̩ h ĩ	..x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_8	WIND	Yangliu	a m o h i	- m i h e	x.x.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Dongshanba Lalo	ˀl y̠	l ə	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Eka	ˀl y̠	l ə	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Southern Lalo	ˀl y̠	l ɑ̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Western Lalu	ˀl y̠	l ø	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Xishanba Lalo	ˀl y̠	l ø̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Xuzhang Lalo	ˀl y̠	l ø̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Yangliu	ˀl y̠	l ə	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Dongshanba Lalo	ˀl y̠	l ə	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Eka	ˀl y̠	l ə	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Southern Lalo	ˀl y̠	l ɑ̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Western Lalu	ˀl y̠	l ø	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Xishanba Lalo	ˀl y̠	l ø̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Xuzhang Lalo	ˀl y̠	l ø̠	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_800	DRY UP	Yangliu	ˀl y̠	l ə	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_802	BLOW (OF WIND)	Dongshanba Lalo	kʰ y	kʰ ə	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_802	BLOW (OF WIND)	Yangliu	kʰ y	kʰ ɨ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_803	LIGHT (IGNITE)	Southern Lalo	t o̠	t o	..
@@ -3423,8 +3423,8 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_816	LACK (NOT HAVE)	Southern Lalo	kʰ ɛ̠	k
 yanglalo:Proto-Lalo > Lalo|yanglalo_816	LACK (NOT HAVE)	Western Lalu	kʰ ɛ̠	kʰ ɛ	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_816	LACK (NOT HAVE)	Xishanba Lalo	kʰ ɛ̠	tɕʰ a	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_816	LACK (NOT HAVE)	Xuzhang Lalo	kʰ ɛ̠	kʰ ɛ	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_817	ROLL	Eka	ˀl y	l ə	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_817	ROLL	Southern Lalo	ˀl y	l ə	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_817	ROLL	Eka	ˀl y	l ə	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_817	ROLL	Southern Lalo	ˀl y	l ə	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_818	SPIN	Southern Lalo	tʃ a ŋ	tʃ a -	..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_818	SPIN	Western Lalu	tʃ a ŋ	ʈʂ u -	xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_818	SPIN	Xishanba Lalo	tʃ a ŋ	ʈʂ u -	xxx
@@ -3476,16 +3476,16 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_833	FLY (MOVE THROUGH AIR)	Xuzhang Lalo	b j 
 yanglalo:Proto-Lalo > Lalo|yanglalo_833	FLY (MOVE THROUGH AIR)	Yangliu	b j y	b - ɨ	.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_834	BARKING	Southern Lalo	l u	l u	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_834	BARKING	Western Lalu	l u	l v̩	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_834	BARKING	Xishanba Lalo	l u	ˀl ə	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_834	BARKING	Xishanba Lalo	l u	ˀl ə	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_834	BARKING	Xuzhang Lalo	l u	l ɤ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_834	BARKING	Yangliu	l u	l ɤ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_837	BROOD (VERB)	Dongshanba Lalo	ˀm y	m ə	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_837	BROOD (VERB)	Eka	ˀm y	m ɨ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_837	BROOD (VERB)	Southern Lalo	ˀm y	m ɨ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_837	BROOD (VERB)	Western Lalu	ˀm y	m y	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_837	BROOD (VERB)	Dongshanba Lalo	ˀm y	m ə	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_837	BROOD (VERB)	Eka	ˀm y	m ɨ	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_837	BROOD (VERB)	Southern Lalo	ˀm y	m ɨ	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_837	BROOD (VERB)	Western Lalu	ˀm y	m y	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_837	BROOD (VERB)	Xishanba Lalo	ˀm y	ˀm ṳ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_837	BROOD (VERB)	Xuzhang Lalo	ˀm y	m ø	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_837	BROOD (VERB)	Yangliu	ˀm y	m ə	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_837	BROOD (VERB)	Xuzhang Lalo	ˀm y	m ø	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_837	BROOD (VERB)	Yangliu	ˀm y	m ə	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_838	BUD	Western Lalu	ts ɛ̠	ts ɛ̃	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_838	BUD	Xishanba Lalo	ts ɛ̠	ts a̠	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_838	BUD	Xuzhang Lalo	ts ɛ̠	ɖʐ ɛ	x.
@@ -3498,13 +3498,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_84	HORSE	Southern Lalo	a m j u	a m - u	..x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_84	HORSE	Western Lalu	a m j u	a m - u	..x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_84	HORSE	Xuzhang Lalo	a m j u	a m - ɤ	..xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_84	HORSE	Yangliu	a m j u	a m - u	..x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_840	BLOOM	Dongshanba Lalo	ˀv e̠	v i	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_840	BLOOM	Dongshanba Lalo	ˀv e̠	v i	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_840	BLOOM	Eka	ˀv e̠	b ə	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_840	BLOOM	Southern Lalo	ˀv e̠	b ɛ̠	xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_840	BLOOM	Western Lalu	ˀv e̠	v ɛ	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_840	BLOOM	Western Lalu	ˀv e̠	v ɛ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_840	BLOOM	Xishanba Lalo	ˀv e̠	ˀv ɛ̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_840	BLOOM	Xuzhang Lalo	ˀv e̠	v ɛi	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_840	BLOOM	Yangliu	ˀv e̠	v ei	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_840	BLOOM	Xuzhang Lalo	ˀv e̠	v ɛi	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_840	BLOOM	Yangliu	ˀv e̠	v ei	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_841	BEAR FRUIT	Western Lalu	dʒ ɛ	ɖʐ ʅ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_841	BEAR FRUIT	Xishanba Lalo	dʒ ɛ	dʑ ɛ̤	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_842		Xishanba Lalo	pʰ ɨ	pʰ ʉ̤	.x
@@ -3516,13 +3516,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_844	BEGIN OR START	Western Lalu	t u	t o	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_844	BEGIN OR START	Yangliu	t u	t a	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_845	HALT (STOP)	Dongshanba Lalo	n a	n ɔ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_845	HALT (STOP)	Yangliu	n a	n a	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_847	WRITE	Dongshanba Lalo	ˀv ɛ̠	v ɛ	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_847	WRITE	Dongshanba Lalo	ˀv ɛ̠	v ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_847	WRITE	Eka	ˀv ɛ̠	b u̠	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_847	WRITE	Southern Lalo	ˀv ɛ̠	b o	xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_847	WRITE	Western Lalu	ˀv ɛ̠	v ɛ	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_847	WRITE	Western Lalu	ˀv ɛ̠	v ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_847	WRITE	Xishanba Lalo	ˀv ɛ̠	ˀv a̠	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_847	WRITE	Xuzhang Lalo	ˀv ɛ̠	ɣ ɛ	x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_847	WRITE	Yangliu	ˀv ɛ̠	v ɛ	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_847	WRITE	Yangliu	ˀv ɛ̠	v ɛ	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_848	WASH (ONESELF)	Eka	tsʰ i	tɕʰ i	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_848	WASH (ONESELF)	Southern Lalo	tsʰ i	tɕʰ i	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_848	WASH (ONESELF)	Xuzhang Lalo	tsʰ i	tsʰ ɿ	.x
@@ -3537,10 +3537,10 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_85	PIG	Western Lalu	a v e̠	a v e	...
 yanglalo:Proto-Lalo > Lalo|yanglalo_85	PIG	Xishanba Lalo	a v e̠	a v ɛ̠	..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_85	PIG	Xuzhang Lalo	a v e̠	a v ɛ̠i	..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_85	PIG	Yangliu	a v e̠	a v ei	..x
-yanglalo:Proto-Lalo > Lalo|yanglalo_850	SHAKE	Dongshanba Lalo	ˀl u̠	l i	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_850	SHAKE	Western Lalu	ˀl u̠	l v̩	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_850	SHAKE	Xuzhang Lalo	ˀl u̠	l i	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_850	SHAKE	Yangliu	ˀl u̠	l o	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_850	SHAKE	Dongshanba Lalo	ˀl u̠	l i	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_850	SHAKE	Western Lalu	ˀl u̠	l v̩	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_850	SHAKE	Xuzhang Lalo	ˀl u̠	l i	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_850	SHAKE	Yangliu	ˀl u̠	l o	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_853	GIVE	Dongshanba Lalo	ɡ u	ɡ ə	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_853	GIVE	Eka	ɡ u	ɡ ɛ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_853	GIVE	Southern Lalo	ɡ u	ɡ ɨ	.x
@@ -3610,7 +3610,7 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_873	ROT	Xuzhang Lalo	ɡ u	ɡ ɤ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_874	COUGH	Eka	ts i	ts ɿ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_874	COUGH	Southern Lalo	ts i	ts ɿ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_874	COUGH	Yangliu	ts i	ts ɿ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_875	YAWN	Southern Lalo	ˀl i̠ k u	l i - -	..xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_875	YAWN	Southern Lalo	ˀl i̠ k u	l i - -	x.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_875	YAWN	Western Lalu	ˀl i̠ k u	ʐ ɿ̃ k v̩	xx.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_876	YAWN	Eka	h a s e	x a s u	x..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_876	YAWN	Xuzhang Lalo	h a s e	x ai - -	xxxx
@@ -3670,13 +3670,13 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_89	WILD BOAR	Western Lalu	a v e̠ k a ŋ	a v
 yanglalo:Proto-Lalo > Lalo|yanglalo_89	WILD BOAR	Xuzhang Lalo	a v e̠ k a ŋ	a v ɛ̠i k a̠ -	..x..x
 yanglalo:Proto-Lalo > Lalo|yanglalo_890	WHITE	Yangliu	pʰ u	pʰ v̩	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_892	BLACK	Xishanba Lalo	ˀn e̠	ˀn ɛ̠	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_892	BLACK	Xuzhang Lalo	ˀn e̠	n ɛi	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_892	BLACK	Yangliu	ˀn e̠	n i	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_892	BLACK	Xuzhang Lalo	ˀn e̠	n ɛi	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_892	BLACK	Yangliu	ˀn e̠	n i	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_893	RED	Yangliu	ˀn i	ʔ i	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_894	YELLOW	Southern Lalo	ʃ ɛ	ɕ ɛ	x.
-yanglalo:Proto-Lalo > Lalo|yanglalo_895	BLUE	Eka	ˀn i	n ɨ	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_896	GREEN	Eka	ˀn i	n o	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_896	GREEN	Western Lalu	ˀn i	n i	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_895	BLUE	Eka	ˀn i	n ɨ	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_896	GREEN	Eka	ˀn i	n o	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_896	GREEN	Western Lalu	ˀn i	n i	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_897	GREY	Southern Lalo	pʰ ɛ	pʰ a	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_898	POINTED	Eka	tsʰ y	tsʰ ə	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_898	POINTED	Xishanba Lalo	tsʰ y	tɕʰ y	x.
@@ -3785,7 +3785,7 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_931	YOUNG	Western Lalu	l e̠	l ɛ	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_931	YOUNG	Xishanba Lalo	l e̠	l ɛ̠	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_932	YOUNG	Xishanba Lalo	tʰ y n u	tʰ y n ə̤	...x
 yanglalo:Proto-Lalo > Lalo|yanglalo_935	BAD	Yangliu	d u	d u	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_936	FAST	Southern Lalo	ˀm j y̠	m - ɛ̠	.xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_936	FAST	Southern Lalo	ˀm j y̠	m - ɛ̠	xxx
 yanglalo:Proto-Lalo > Lalo|yanglalo_938	WET	Eka	tʃʰ ɨ	tsʰ ɿ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_939	WET	Xishanba Lalo	tʃ e	tɕ i	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_94	DOG	Dongshanba Lalo	a kʰ i	- tɕʰ i	xx.
@@ -3807,15 +3807,15 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_943	NEW	Western Lalu	x ɨ̠	x ɨ	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_943	NEW	Xishanba Lalo	x ɨ̠	x ɨ̠	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_943	NEW	Xuzhang Lalo	x ɨ̠	x ɨ	..
 yanglalo:Proto-Lalo > Lalo|yanglalo_943	NEW	Yangliu	x ɨ̠	x ɨ	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_944	OLD (USED)	Western Lalu	ˀl i	l i	..
+yanglalo:Proto-Lalo > Lalo|yanglalo_944	OLD (USED)	Western Lalu	ˀl i	l i	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_944	OLD (USED)	Yangliu	ˀl i	- i	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_945	RAW	Dongshanba Lalo	dʒ i	dʑ i	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_945	RAW	Western Lalu	dʒ i	dz ɿ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_945	RAW	Xishanba Lalo	dʒ i	dz ɿ	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_945	RAW	Xuzhang Lalo	dʒ i	dz ɿ	xx
-yanglalo:Proto-Lalo > Lalo|yanglalo_946	COOKED	Eka	ˀm i	m i	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_946	COOKED	Western Lalu	ˀm i	m e	.x
-yanglalo:Proto-Lalo > Lalo|yanglalo_946	COOKED	Xuzhang Lalo	ˀm i	m y	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_946	COOKED	Eka	ˀm i	m i	x.
+yanglalo:Proto-Lalo > Lalo|yanglalo_946	COOKED	Western Lalu	ˀm i	m e	xx
+yanglalo:Proto-Lalo > Lalo|yanglalo_946	COOKED	Xuzhang Lalo	ˀm i	m y	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_947	EARLY	Xuzhang Lalo	n e̠	n ɛi	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_948	LATE	Southern Lalo	m j a	m - ɨ	.xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_95	DOG	Eka	a n a	a n o̠	..x
@@ -3936,7 +3936,7 @@ yanglalo:Proto-Lalo > Lalo|yanglalo_977	ITCH OR ITCHY OR ITCHING	Eka	dz i̠	dʑ 
 yanglalo:Proto-Lalo > Lalo|yanglalo_977	ITCH OR ITCHY OR ITCHING	Southern Lalo	dz i̠	dʑ i̠	x.
 yanglalo:Proto-Lalo > Lalo|yanglalo_977	ITCH OR ITCHY OR ITCHING	Xishanba Lalo	dz i̠	dz ʐ̩	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_978	SICK	Xishanba Lalo	n a	n a	..
-yanglalo:Proto-Lalo > Lalo|yanglalo_979	CLEVER	Southern Lalo	ˀl u	l a	.x
+yanglalo:Proto-Lalo > Lalo|yanglalo_979	CLEVER	Southern Lalo	ˀl u	l a	xx
 yanglalo:Proto-Lalo > Lalo|yanglalo_979	CLEVER	Xishanba Lalo	ˀl u	ˀl ə̠	.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_98	RABBIT	Dongshanba Lalo	h ɛ̠ tʰ a l a	- - tʰ ɔ l ɔ	xx.x.x
 yanglalo:Proto-Lalo > Lalo|yanglalo_98	RABBIT	Eka	h ɛ̠ tʰ a l a	- - t a l ɛo	xxx..x

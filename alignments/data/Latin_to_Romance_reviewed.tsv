@@ -576,18 +576,6 @@ romance|bad::LING:Bad:Primary	bad	Portuguese	m a l u m	m a w - -	..xxx
 romance|bad::LING:Bad:Primary	bad	Portuguese: Brazilian	m a l u m	m a w - -	..xxx
 romance|bad::LING:Bad:Primary	bad	Spanish	m a l u m	m a l o -	...xx
 romance|bad::LING:Bad:Primary	bad	Walloon	m a l u m	m ɑ v a -	.xxxx
-romance|bark::182	bark	Catalan	k o r t i k e m	k ɔ r - - s ə -	.x.xxxxx
-romance|bark::182	bark	Franco-Provençal	k o r t i k e m	k u r - - f a -	.x.xxxxx
-romance|bark::182	bark	French	k o r t i k e m	k ɔ ʁ - - - - s	.xxxxxxx
-romance|bark::182	bark	Friulian	k o r t i k e m	kʷ a r - - tʃ e -	xx.xxx.x
-romance|bark::182	bark	Italian	k o r t i k e m	k o r t e tʃː a -	....xxxx
-romance|bark::182	bark	Ladin	k o r t i k e m	k o r - - ts a -	...xxxxx
-romance|bark::182	bark	Neapolitan	k o r t i k e m	k ɔ r - - ts ə -	.x.xxxxx
-romance|bark::182	bark	Old Catalan	k o r t i k e m	k ɔ ɾ - - s ə -	.x.xxxxx
-romance|bark::182	bark	Old Spanish	k o r t i k e m	k o ɾ t e ts a -	....xxxx
-romance|bark::182	bark	Romanian	k o r t i k e m	c o̯ r - - ts ə -	xx.xxxxx
-romance|bark::182	bark	Sardinian: Logudoro	k o r t i k e m	k o r - - ts a -	...xxxxx
-romance|bark::182	bark	Spanish	k o r t i k e m	k o ɾ t e θ a -	....xxxx
 romance|belly::854	belly	Dalmatian: Vegliote	w e n t r e m	v a n t r o -	xx...xx
 romance|belly::854	belly	Franco-Provençal	w e n t r e m	v - - t r ɔ -	xxx..xx
 romance|belly::854	belly	French	w e n t r e m	v - - t - - ʁ	xxx.xxx
@@ -622,16 +610,6 @@ romance|big::LING:Big:Grandem	big	Portuguese: Brazilian	ɡ r a n d e m	ɡ ɾ ɐ�
 romance|big::LING:Big:Grandem	big	Spanish	ɡ r a n d e m	ɡ ɾ a n d e -	......x
 romance|big::LING:Big:Grandem	big	Walloon	ɡ r a n d e m	ɡ r ɑ̃ - - - -	..xxxxx
 romance|big::LING:Big:Primary	big	Friulian	m a ɡ n u m	m a - ɲ - -	..xxxx
-romance|bird::856	bird	Catalan	a w e m	- u e ʎ	xx.x
-romance|bird::856	bird	Franco-Provençal	a w e m	- u ai z	xxxx
-romance|bird::856	bird	French	a w e m	- w a z	x.xx
-romance|bird::856	bird	Friulian	a w e m	- u ɛ l	xxxx
-romance|bird::856	bird	Italian	a w e m	- u ɛ lː	xxxx
-romance|bird::856	bird	Ladin	a w e m	- u e l	xx.x
-romance|bird::856	bird	Milanese	a w e m	- y ɛ l	xxxx
-romance|bird::856	bird	Neapolitan	a w e m	a u e lː	.x.x
-romance|bird::856	bird	Old Catalan	a w e m	ə w e ʎ	x..x
-romance|bird::856	bird	Walloon	a w e m	- uː ɛː -	xxxx
 romance|bird::LING:Bird:Aucellus	bird	Catalan	au̯ k e l l u m	u s e ʎ - - -	xx.xxxx
 romance|bird::LING:Bird:Aucellus	bird	French	au̯ k e l l u m	a z o - - - -	xxxxxxx
 romance|bird::LING:Bird:Aucellus	bird	Friulian	au̯ k e l l u m	u - ɛ l - - -	xxx.xxx
@@ -1249,20 +1227,16 @@ romance|full::2235	full	Sardinian: Logudoro	p l eː n u m	p j ɛ n u -	.xx..x
 romance|full::2235	full	Sardinian: Nuoro	p l eː n u m	p r ɛː n u -	.xx..x
 romance|full::2235	full	Spanish	p l eː n u m	- j e n o -	xx..xx
 romance|full::2235	full	Walloon	p l eː n u m	p l ẽ - - -	..xxxx
-romance|give::405	give	Catalan	d a r e	d u - -	.xxx
-romance|give::405	give	French	d a r e	d ɔ - -	.xxx
 romance|give::405	give	Friulian	d a r e	d aː - -	..xx
 romance|give::405	give	Italian	d a r e	d a r e	....
 romance|give::405	give	Ladin	d a r e	d e - -	.xxx
 romance|give::405	give	Milanese	d a r e	d a - -	..xx
 romance|give::405	give	Neapolitan	d a r e	r a - -	x.xx
-romance|give::405	give	Old Catalan	d a r e	d u - -	.xxx
 romance|give::405	give	Old Spanish	d a r e	d a ɾ -	...x
 romance|give::405	give	Portuguese	d a r e	d a ɾ -	...x
 romance|give::405	give	Sardinian: Logudoro	d a r e	d aː r ɛ	...x
 romance|give::405	give	Sardinian: Nuoro	d a r e	dʒ aː r ɛ	x..x
 romance|give::405	give	Spanish	d a r e	d a ɾ -	...x
-romance|give::405	give	Walloon	d a r e	d i - -	.xxx
 romance|give::LING:ToGive:Donare	give	Catalan	d o n aː r e	d u n a - -	.x..xx
 romance|give::LING:ToGive:Donare	give	French	d o n aː r e	d ɔ n e - -	.x.xxx
 romance|give::LING:ToGive:Donare	give	Friulian	d o n aː r e	d o n aː - -	....xx
@@ -1895,7 +1869,6 @@ romance|neck::LING:Neck:Primary	neck	Portuguese	k o l l u m	k o l - u -	...x.x
 romance|neck::LING:Neck:Primary	neck	Portuguese: Brazilian	k o l l u m	k o l - u -	...x.x
 romance|new::86	new	Dalmatian: Vegliote	n o w u m	n u v - -	.xxxx
 romance|new::86	new	Franco-Provençal	n o w u m	n y v ɔ -	.xxxx
-romance|new::86	new	French	n o w u m	n u v o -	.xxxx
 romance|new::86	new	Friulian	n o w u m	ɲ uː f - -	xxxxx
 romance|new::86	new	Italian	n o w u m	n ɔ v o -	.xxxx
 romance|new::86	new	Ladin	n o w u m	n u f - -	.xxxx
@@ -1906,7 +1879,6 @@ romance|new::86	new	Portuguese	n o w u m	n o v u -	..x.x
 romance|new::86	new	Sardinian: Logudoro	n o w u m	n oː - u -	..x.x
 romance|new::86	new	Sardinian: Nuoro	n o w u m	n oː - u -	..x.x
 romance|new::86	new	Spanish	n o w u m	n e b o -	.xxxx
-romance|new::86	new	Walloon	n o w u m	n ɔ v ɛ -	.xxxx
 romance|new::LING:New:Novella	new	Catalan	n o w e l l a	n u b e ʎ - ə	.xx.xxx
 romance|new::LING:New:Novella	new	French	n o w e l l a	n u v ɛ l - -	.xxx.xx
 romance|new::LING:New:Novella	new	Italian	n o w e l l a	n o v ɛ l l a	..xx...
@@ -2049,16 +2021,6 @@ romance|rain::919	rain	Sardinian: Nuoro	p l u w i a m	p r oː - ɛ ɛ -	.xxxxxx
 romance|rain::919	rain	Spanish	p l u w i a m	- j u b j a -	xx.xx.x
 romance|rain::919	rain	Walloon	p l u w i a m	p l uː ʁ - - -	...xxxx
 romance|rain::LING:Rain:Primary	rain	Portuguese: Brazilian	p l u w i a m	- ʃ u v - a -	xx.xx.x
-romance|red::6592	red	Franco-Provençal	r u b r u m	r ɔ ð - ɔ -	.xxxxx
-romance|red::6592	red	French	r u b r u m	ʁ u ʒ - - -	x.xxxx
-romance|red::6592	red	Friulian	r u b r u m	r ɔ s - - -	.xxxxx
-romance|red::6592	red	Italian	r u b r u m	r o sː - o -	.xxxxx
-romance|red::6592	red	Milanese	r u b r u m	r u s - - -	..xxxx
-romance|red::6592	red	Neapolitan	r u b r u m	r u sː - ə -	..xxxx
-romance|red::6592	red	Romanian	r u b r u m	r o ʃ - u -	.xxx.x
-romance|red::6592	red	Sardinian: Logudoro	r u b r u m	r uː - j u -	..xx.x
-romance|red::6592	red	Sardinian: Nuoro	r u b r u m	r uː β j u -	..xx.x
-romance|red::6592	red	Walloon	r u b r u m	r ɔ tʃ - - -	.xxxxx
 romance|red::LING:Red:Primary	red	Catalan	r u s s u m	r o s - - -	.x.xxx
 romance|red::LING:Red:Primary	red	French	r u s s u m	ʁ u - - - -	x.xxxx
 romance|red::LING:Red:Primary	red	Friulian	r u s s u m	r ɔ s - - -	.x.xxx
@@ -2291,20 +2253,6 @@ romance|short::LING:Short:Primary	short	Portuguese	k u r t u m	k u ɾ t u -	....
 romance|short::LING:Short:Primary	short	Portuguese: Brazilian	k u r t u m	k u ɾ t u -	.....x
 romance|short::LING:Short:Primary	short	Spanish	k u r t u m	k o ɾ t o -	.x..xx
 romance|short::LING:Short:Primary	short	Walloon	k u r t u m	k u r - - -	...xxx
-romance|sing::565	sing	Catalan	k a n e r e	k ə n a - -	.x.xxx
-romance|sing::565	sing	Dalmatian: Vegliote	k a n e r e	k a n u r -	...x.x
-romance|sing::565	sing	Franco-Provençal	k a n e r e	θ ɔ̃ - ɑ - -	xxxxxx
-romance|sing::565	sing	Friulian	k a n e r e	c a n aː - -	x..xxx
-romance|sing::565	sing	Italian	k a n e r e	k a n a r e	...x..
-romance|sing::565	sing	Milanese	k a n e r e	k a n a - -	...xxx
-romance|sing::565	sing	Neapolitan	k a n e r e	k a n a - -	...xxx
-romance|sing::565	sing	Old Catalan	k a n e r e	k ə n a - -	.x.xxx
-romance|sing::565	sing	Old Spanish	k a n e r e	k a n a ɾ -	...x.x
-romance|sing::565	sing	Portuguese	k a n e r e	k ɐ̃ - a ɾ -	.xxx.x
-romance|sing::565	sing	Romanian	k a n e r e	k ɨ n a - -	.x.xxx
-romance|sing::565	sing	Sardinian: Logudoro	k a n e r e	k a n a r ɛ	...x.x
-romance|sing::565	sing	Sardinian: Nuoro	k a n e r e	k a n aː r ɛ	...x.x
-romance|sing::565	sing	Spanish	k a n e r e	k a n a ɾ -	...x.x
 romance|sing::LING:ToSing:Primary	sing	Catalan	k a n t aː r e	k ə n t a - -	.x...xx
 romance|sing::LING:ToSing:Primary	sing	French	k a n t aː r e	ʃ ɑ̃ - t e - -	xxx.xxx
 romance|sing::LING:ToSing:Primary	sing	Friulian	k a n t aː r e	c a n t aː - -	x....xx
@@ -2382,7 +2330,6 @@ romance|smell::LING:ToSmell:Sentire	smell	Spanish	s e n t iː r e	s e n t i ɾ -
 romance|smell::LING:ToSmell:Sentire	smell	Walloon	s e n t iː r e	s ɛ̃ - t i - -	.xx..xx
 romance|smoke::123	smoke	Catalan	f uː m u m	f u m - -	...xx
 romance|smoke::123	smoke	Franco-Provençal	f uː m u m	f - m i x	.x.xx
-romance|smoke::123	smoke	French	f uː m u m	f y m e -	.x.xx
 romance|smoke::123	smoke	Friulian	f uː m u m	f u m - -	...xx
 romance|smoke::123	smoke	Italian	f uː m u m	f u m o -	...xx
 romance|smoke::123	smoke	Ladin	f uː m u m	f u m - -	...xx
@@ -2571,17 +2518,6 @@ romance|swell::LING:ToSwell:Primary	swell	Portuguese: Brazilian	i n f l aː r e	
 romance|swell::LING:ToSwell:Primary	swell	Romanian	i n f l aː r e	u m f l a - -	xx...xx
 romance|swell::LING:ToSwell:Primary	swell	Spanish	i n f l aː r e	i n tʃ - a ɾ -	..xx..x
 romance|swell::LING:ToSwell:Primary	swell	Walloon	i n f l aː r e	ẽ - f l e - -	xx..xxx
-romance|swim::535	swim	Catalan	n aː r e	n a - -	..xx
-romance|swim::535	swim	Friulian	n aː r e	n aː - -	..xx
-romance|swim::535	swim	Italian	n aː r e	n a r e	....
-romance|swim::535	swim	Milanese	n aː r e	n a - -	..xx
-romance|swim::535	swim	Neapolitan	n aː r e	n a - -	..xx
-romance|swim::535	swim	Old Catalan	n aː r e	n a - -	..xx
-romance|swim::535	swim	Old Spanish	n aː r e	n a ɾ -	...x
-romance|swim::535	swim	Portuguese	n aː r e	n a ɾ -	...x
-romance|swim::535	swim	Sardinian: Logudoro	n aː r e	n aː r ɛ	...x
-romance|swim::535	swim	Sardinian: Nuoro	n aː r e	n aː r ɛ	...x
-romance|swim::535	swim	Spanish	n aː r e	n a ɾ -	...x
 romance|swim::LING:ToSwim:Navigare	swim	Catalan	n a v i ɡ aː r e	n ə b ə ɡ a - -	.xxx..xx
 romance|swim::LING:ToSwim:Navigare	swim	French	n a v i ɡ aː r e	n a - - ʒ e - -	..xxxxxx
 romance|swim::LING:ToSwim:Navigare	swim	Friulian	n a v i ɡ aː r e	n a v i ɡ aː - -	......xx

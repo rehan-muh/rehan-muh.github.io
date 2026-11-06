@@ -14,15 +14,10 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_100	FIVE	GuzhangHusi	ŋ i	- u	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_100	FIVE	LongshanHusiT	ŋ i	- ɔ̃	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_100	FIVE	Northern Shanic	ŋ i	- o	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_100	FIVE	XiaTujia	ŋ i	- õ	xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1001		CajiAdi	ɹ i c	j i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1001		LongshanHusiT	ɹ i c	z ɿ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1001		Northern Shanic	ɹ i c	z i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1001		XiaTujia	ɹ i c	ʑ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1002	WHAT	Cebu	tsʰ	tsʰ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1002	WHAT	GuzhangHusi	tsʰ	tɕʰ	x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1002	WHAT	LongshanHusiT	tsʰ	tɕʰ	x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1002	WHAT	Northern Shanic	tsʰ	tsʰ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1002	WHAT	XiaTujia	tsʰ	tɕʰ	x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1001		CajiAdi	ɹ i C	j i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1001		LongshanHusiT	ɹ i C	z ɿ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1001		Northern Shanic	ɹ i C	z i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1001		XiaTujia	ɹ i C	ʑ i -	x.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1003	HEAD	Cebu	b ɑ	b o	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1003	HEAD	GuzhangHusi	b ɑ	p a	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1003	HEAD	Northern Shanic	b ɑ	p a	x.
@@ -61,10 +56,10 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_101	VOMIT	GuzhangHusi	pʰ i	pʰ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_101	VOMIT	LongshanHusiT	pʰ i	pʰ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_101	VOMIT	Northern Shanic	pʰ i	pʰ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_101	VOMIT	XiaTujia	pʰ i	pʰ i	..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1010	FAN (OBJECT)	Cebu	n ɑ ə	n o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1010	FAN (OBJECT)	LongshanHusiT	n ɑ ə	l ã -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1010	FAN (OBJECT)	Northern Shanic	n ɑ ə	l a n	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1010	FAN (OBJECT)	XiaTujia	n ɑ ə	l ã -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1010	FAN (OBJECT)	Cebu	n ɑ	n o	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1010	FAN (OBJECT)	LongshanHusiT	n ɑ	l ã	xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1010	FAN (OBJECT)	Northern Shanic	n ɑ	l a	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1010	FAN (OBJECT)	XiaTujia	n ɑ	l ã	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1011		Cebu	n ɑ	l o	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1011		LongshanHusiT	n ɑ	l ã	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1011		Northern Shanic	n ɑ	l a	x.
@@ -100,11 +95,11 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_1019	SOUR	GuzhangHusi	ʔ ɑ	ɣ a	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1019	SOUR	LongshanHusiT	ʔ ɑ	- a	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1019	SOUR	Northern Shanic	ʔ ɑ	- a	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1019	SOUR	XiaTujia	ʔ ɑ	ɣ a	x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_102	GET	Cebu	t i ə	t i -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_102	GET	GuzhangHusi	t i ə	tʰ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_102	GET	LongshanHusiT	t i ə	tʰ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_102	GET	Northern Shanic	t i ə	tʰ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_102	GET	XiaTujia	t i ə	tʰ i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_102	GET	Cebu	t i	t i	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_102	GET	GuzhangHusi	t i	tʰ i	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_102	GET	LongshanHusiT	t i	tʰ i	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_102	GET	Northern Shanic	t i	tʰ i	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_102	GET	XiaTujia	t i	tʰ i	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1020	SUN	Cebu	n ɑ w	l o -	xxx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1020	SUN	LongshanHusiT	n ɑ w	l au -	xxx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1020	SUN	Northern Shanic	n ɑ w	l au -	xxx
@@ -122,27 +117,27 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_1024	SPARROW	Cebu	tsʰ æ	tsʰ a	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1024	SPARROW	LongshanHusiT	tsʰ æ	tsʰ a	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1024	SPARROW	Northern Shanic	tsʰ æ	tsʰ a	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1024	SPARROW	XiaTujia	tsʰ æ	tsʰ a	.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1025	ROUND	Cebu	b ɑ c	b a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1025	ROUND	LongshanHusiT	b ɑ c	p ɔ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1025	ROUND	Northern Shanic	b ɑ c	p o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1026		CajiAdi	l ɑ c	l a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1026		Cebu	l ɑ c	l a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1026		GuzhangHusi	l ɑ c	l o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1026		LongshanHusiT	l ɑ c	l ɔ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1026		Northern Shanic	l ɑ c	l o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1026		XiaTujia	l ɑ c	l o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1027	CAT	Cebu	m ɑ c	m a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1027	CAT	LongshanHusiT	m ɑ c	m ɔ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1027	CAT	Northern Shanic	m ɑ c	m o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1027	CAT	XiaTujia	m ɑ c	m o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1028	THREE	Cebu	s ɑ c	s a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1028	THREE	GuzhangHusi	s ɑ c	s o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1028	THREE	LongshanHusiT	s ɑ c	s ɔ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1028	THREE	Northern Shanic	s ɑ c	s o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1028	THREE	XiaTujia	s ɑ c	s o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1029	DEW	CajiAdi	s ɑ c	s a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1029	DEW	LongshanHusiT	s ɑ c	s ɔ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1029	DEW	Northern Shanic	s ɑ c	s o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1025	ROUND	Cebu	b ɑ C	b a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1025	ROUND	LongshanHusiT	b ɑ C	p ɔ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1025	ROUND	Northern Shanic	b ɑ C	p o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1026		CajiAdi	l ɑ C	l a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1026		Cebu	l ɑ C	l a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1026		GuzhangHusi	l ɑ C	l o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1026		LongshanHusiT	l ɑ C	l ɔ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1026		Northern Shanic	l ɑ C	l o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1026		XiaTujia	l ɑ C	l o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1027	CAT	Cebu	m ɑ C	m a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1027	CAT	LongshanHusiT	m ɑ C	m ɔ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1027	CAT	Northern Shanic	m ɑ C	m o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1027	CAT	XiaTujia	m ɑ C	m o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1028	THREE	Cebu	s ɑ C	s a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1028	THREE	GuzhangHusi	s ɑ C	s o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1028	THREE	LongshanHusiT	s ɑ C	s ɔ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1028	THREE	Northern Shanic	s ɑ C	s o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1028	THREE	XiaTujia	s ɑ C	s o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1029	DEW	CajiAdi	s ɑ C	s a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1029	DEW	LongshanHusiT	s ɑ C	s ɔ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1029	DEW	Northern Shanic	s ɑ C	s o -	.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_103	SCALE	Cebu	tɕʰ i	tɕʰ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_103	SCALE	GuzhangHusi	tɕʰ i	tɕʰ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_103	SCALE	LongshanHusiT	tɕʰ i	tɕʰ i	..
@@ -152,15 +147,15 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_1030	AT FIRST	Cebu	b e	b e	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1030	AT FIRST	LongshanHusiT	b e	pʰ ɛ	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1030	AT FIRST	Northern Shanic	b e	p e	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1030	AT FIRST	XiaTujia	b e	p e	x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1031	COMB	Cebu	ɕ e ə	ɕ e -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1031	COMB	LongshanHusiT	ɕ e ə	ɕ ɛ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1031	COMB	XiaTujia	ɕ e ə	ɕ e -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1031	COMB	Cebu	ɕ e	ɕ e	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1031	COMB	LongshanHusiT	ɕ e	ɕ ɛ	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1031	COMB	XiaTujia	ɕ e	ɕ e	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1032	SHOE	CajiAdi	ɕ e	ɕ e	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1032	SHOE	Cebu	ɕ e	ɕ e	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1032	SHOE	LongshanHusiT	ɕ e	ɕ ɛ	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1032	SHOE	XiaTujia	ɕ e	ɕ e	..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1033	DIRECTION	Cebu	kʰ e ə	kʰ ɨe -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1033	DIRECTION	XiaTujia	kʰ e ə	kʰ e -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1033	DIRECTION	Cebu	kʰ e	kʰ ɨe	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1033	DIRECTION	XiaTujia	kʰ e	kʰ e	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1034	FOUR	Cebu	ɹ e	z ɨe	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1034	FOUR	GuzhangHusi	ɹ e	z e	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1034	FOUR	LongshanHusiT	ɹ e	z ɤ	xx
@@ -181,36 +176,17 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_1037	DRUM	Cebu	x e	ʕ e	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1037	DRUM	GuzhangHusi	x e	x e	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1037	DRUM	Northern Shanic	x e	x e	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1037	DRUM	XiaTujia	x e	x ə	.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1038		CajiAdi	z e ə	z e -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1038		Cebu	z e ə	z e -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1038		GuzhangHusi	z e ə	d e -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1038		LongshanHusiT	z e ə	ts ɤ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1038		Northern Shanic	z e ə	ts e -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1038		XiaTujia	z e ə	ts ə -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1039	BLOOD	CajiAdi	m	m	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1039	BLOOD	Cebu	m	m	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1039	BLOOD	GuzhangHusi	m	m	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1039	BLOOD	LongshanHusiT	m	m	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1039	BLOOD	Northern Shanic	m	m	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1039	BLOOD	XiaTujia	m	m	.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1038		CajiAdi	z e	z e	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1038		Cebu	z e	z e	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1038		GuzhangHusi	z e	d e	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1038		LongshanHusiT	z e	ts ɤ	xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1038		Northern Shanic	z e	ts e	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1038		XiaTujia	z e	ts ə	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_104		CajiAdi	tɕʰ i	tɕʰ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_104		Cebu	tɕʰ i	tɕʰ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_104		LongshanHusiT	tɕʰ i	tɕʰ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_104		Northern Shanic	tɕʰ i	tɕʰ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_104		XiaTujia	tɕʰ i	tɕʰ i	..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1040	SOUND (OF INSTRUMENT OR VOICE)	CajiAdi	ɹ	z	x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1040	SOUND (OF INSTRUMENT OR VOICE)	Cebu	ɹ	z	x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1040	SOUND (OF INSTRUMENT OR VOICE)	LongshanHusiT	ɹ	z	x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1040	SOUND (OF INSTRUMENT OR VOICE)	Northern Shanic	ɹ	z	x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1041	DAY (24 HOURS)	Cebu	ȵ	ȵ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1041	DAY (24 HOURS)	GuzhangHusi	ȵ	ȵ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1041	DAY (24 HOURS)	LongshanHusiT	ȵ	ȵ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1041	DAY (24 HOURS)	Northern Shanic	ȵ	ȵ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1041	DAY (24 HOURS)	XiaTujia	ȵ	ȵ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1042	URINE	Cebu	tsʰ	tsʰ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1042	URINE	LongshanHusiT	tsʰ	tsʰ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1042	URINE	Northern Shanic	tsʰ	tsʰ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1042	URINE	XiaTujia	tsʰ	tsʰ	.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1043	SOME	Cebu	d ɤ	d e	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1043	SOME	LongshanHusiT	d ɤ	t ɛ	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1043	SOME	Northern Shanic	d ɤ	t e	xx
@@ -231,10 +207,10 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_1047	SMOKE (EXHAUST)	GuzhangHusi	kʰ ɤ	
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1047	SMOKE (EXHAUST)	LongshanHusiT	kʰ ɤ	kʰ ɤ	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1047	SMOKE (EXHAUST)	Northern Shanic	kʰ ɤ	kʰ e	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1047	SMOKE (EXHAUST)	XiaTujia	kʰ ɤ	kʰ ə	.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1049	BELLY	Cebu	m ɤ ə	m ai -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1049	BELLY	LongshanHusiT	m ɤ ə	m ɤ -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1049	BELLY	Northern Shanic	m ɤ ə	m e -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1049	BELLY	XiaTujia	m ɤ ə	m ɰ ə	.x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1049	BELLY	Cebu	m ɤ	m ai	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1049	BELLY	LongshanHusiT	m ɤ	m ɤ	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1049	BELLY	Northern Shanic	m ɤ	m e	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1049	BELLY	XiaTujia	m ɤ	m ə	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_105	PAINT (PIGMENTS)	CajiAdi	tɕʰ i	tɕʰ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_105	PAINT (PIGMENTS)	GuzhangHusi	tɕʰ i	tɕʰ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1050	TWO	Northern Shanic	b u	p u	x.
@@ -294,10 +270,10 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_1065	BITTER	GuzhangHusi	kʰ i	kʰ ɯ	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1065	BITTER	LongshanHusiT	kʰ i	kʰ ɨ	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1065	BITTER	Northern Shanic	kʰ i	kʰ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1065	BITTER	XiaTujia	kʰ i	kʰ ɯ	.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1066	HANG	Cebu	kʰ i ə	kʰ i -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1066	HANG	GuzhangHusi	kʰ i ə	kʰ ɯ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1066	HANG	Northern Shanic	kʰ i ə	kʰ i -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1066	HANG	XiaTujia	kʰ i ə	kʰ ɯ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1066	HANG	Cebu	kʰ i	kʰ i	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1066	HANG	GuzhangHusi	kʰ i	kʰ ɯ	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1066	HANG	Northern Shanic	kʰ i	kʰ i	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1066	HANG	XiaTujia	kʰ i	kʰ ɯ	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1067	HEART	CajiAdi	l i	l i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1067	HEART	Cebu	l i	l i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1067	HEART	GuzhangHusi	l i	l i	..
@@ -332,15 +308,15 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_1072	SEPARATE	Northern Shanic	pʰ i	pʰ 
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1072	SEPARATE	XiaTujia	pʰ i	pʰ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1073	SALT	Cebu	s i	s ɿ	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1073	SALT	Northern Shanic	s i	ɕ i	x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1074	SALIVA	Cebu	s i ə	s i -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1074	SALIVA	LongshanHusiT	s i ə	s ɿ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1075		Cebu	s i ə	s ɿ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1075		GuzhangHusi	s i ə	ɕ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1075		LongshanHusiT	s i ə	s ɿ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1075		Northern Shanic	s i ə	s i -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1075		XiaTujia	s i ə	ɕ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1076 1086	CLOTHES	CajiAdi	t i ə s i c	ɕ i - t i -	x.xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1076 1086	CLOTHES	Cebu	t i ə s i c	ɕ i - t i -	x.xx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1074	SALIVA	Cebu	s i	s i	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1074	SALIVA	LongshanHusiT	s i	s ɿ	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1075		Cebu	s i	s ɿ	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1075		GuzhangHusi	s i	ɕ i	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1075		LongshanHusiT	s i	s ɿ	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1075		Northern Shanic	s i	s i	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1075		XiaTujia	s i	ɕ i	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1076 1086	CLOTHES	CajiAdi	t i s i C	ɕ i t i -	x.x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1076 1086	CLOTHES	Cebu	t i s i C	ɕ i t i -	x.x.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1077	BUTTOCKS	CajiAdi	t i	t i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1077	BUTTOCKS	Cebu	t i	d i	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1077	BUTTOCKS	GuzhangHusi	t i	tʰ i	x.
@@ -378,24 +354,22 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_1083	TEN	LongshanHusiT	x i	x ɨ	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1083	TEN	Northern Shanic	x i	x ei	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1083	TEN	XiaTujia	x i	x ə	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1084	VILLAGE	Cebu	ʔ i	j i	x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1085	COMB (VERB)	Cebu	s i c	ɕ e -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1085	COMB (VERB)	GuzhangHusi	s i c	ɕ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1085	COMB (VERB)	LongshanHusiT	s i c	ɕ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1085	COMB (VERB)	Northern Shanic	s i c	ɕ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1085	COMB (VERB)	XiaTujia	s i c	ɕ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1087	BIG	Cebu	tsʰ i c	tɕʰ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1087	BIG	LongshanHusiT	tsʰ i c	tsʰ - ɿ	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1087	BIG	Northern Shanic	tsʰ i c	tsʰ i -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1087	BIG	XiaTujia	tsʰ i c	tɕʰ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1088	KNOW (SOMETHING)	CajiAdi	s ə	ɕ e	xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1088	KNOW (SOMETHING)	Cebu	s ə	s e	.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1089	BED	Cebu	d ɑ ə	d o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1089	BED	GuzhangHusi	d ɑ ə	d o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_109	HAVE	Cebu	ʔ i ə	j i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_109	HAVE	GuzhangHusi	ʔ i ə	ɕ e -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_109	HAVE	LongshanHusiT	ʔ i ə	tʰ - ai	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_109	HAVE	Northern Shanic	ʔ i ə	tʰ - ai	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_109	HAVE	XiaTujia	ʔ i ə	tʰ ɛ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1085	COMB (VERB)	Cebu	s i C	ɕ e -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1085	COMB (VERB)	GuzhangHusi	s i C	ɕ i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1085	COMB (VERB)	LongshanHusiT	s i C	ɕ i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1085	COMB (VERB)	Northern Shanic	s i C	ɕ i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1085	COMB (VERB)	XiaTujia	s i C	ɕ i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1087	BIG	Cebu	tsʰ i C	tɕʰ i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1087	BIG	LongshanHusiT	tsʰ i C	tsʰ ɿ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1087	BIG	Northern Shanic	tsʰ i C	tsʰ i -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1087	BIG	XiaTujia	tsʰ i C	tɕʰ i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1089	BED	Cebu	d ɑ	d o	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1089	BED	GuzhangHusi	d ɑ	d o	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_109	HAVE	Cebu	ʔ i	j i	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_109	HAVE	GuzhangHusi	ʔ i	ɕ e	xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_109	HAVE	LongshanHusiT	ʔ i	tʰ ai	xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_109	HAVE	Northern Shanic	ʔ i	tʰ ai	xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_109	HAVE	XiaTujia	ʔ i	tʰ ɛ	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1090	UNCOOKED RICE	Cebu	s ɿ	s i	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1090	UNCOOKED RICE	LongshanHusiT	s ɿ	s ɿ	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1090	UNCOOKED RICE	Northern Shanic	s ɿ	s i	.x
@@ -405,12 +379,12 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_1091	FLEA	GuzhangHusi	s ɿ	s ɿ	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1091	FLEA	LongshanHusiT	s ɿ	s ɿ	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1091	FLEA	Northern Shanic	s ɿ	s i	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1091	FLEA	XiaTujia	s ɿ	s ɿ	..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1092	WHITE	CajiAdi	s ɿ ə	s ɿ -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1092	WHITE	Cebu	s ɿ ə	s i -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1092	WHITE	GuzhangHusi	s ɿ ə	s i -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1092	WHITE	LongshanHusiT	s ɿ ə	s ɿ -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1092	WHITE	Northern Shanic	s ɿ ə	s i -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1092	WHITE	XiaTujia	s ɿ ə	s i -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1092	WHITE	CajiAdi	s ɿ	s ɿ	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1092	WHITE	Cebu	s ɿ	s i	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1092	WHITE	GuzhangHusi	s ɿ	s i	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1092	WHITE	LongshanHusiT	s ɿ	s ɿ	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1092	WHITE	Northern Shanic	s ɿ	s i	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1092	WHITE	XiaTujia	s ɿ	s i	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1093	WILD ANIMAL	CajiAdi	s ɿ	s ɿ	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1093	WILD ANIMAL	LongshanHusiT	s ɿ	s ɿ	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1093	WILD ANIMAL	Northern Shanic	s ɿ	s i	.x
@@ -440,29 +414,29 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_11	WRITE	GuzhangHusi	ɣ ɑ	ɣ a	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_11	WRITE	LongshanHusiT	ɣ ɑ	- a	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_11	WRITE	Northern Shanic	ɣ ɑ	- a	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_11	WRITE	XiaTujia	ɣ ɑ	ɣ a	..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_110	CRY	Cebu	d i c	dʑ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_110	CRY	GuzhangHusi	d i c	dʑ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_110	CRY	LongshanHusiT	d i c	ts ɿ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_110	CRY	Northern Shanic	d i c	ts i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_110	CRY	XiaTujia	d i c	tɕ i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_110	CRY	Cebu	d i C	dʑ i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_110	CRY	GuzhangHusi	d i C	dʑ i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_110	CRY	LongshanHusiT	d i C	ts ɿ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_110	CRY	Northern Shanic	d i C	ts i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_110	CRY	XiaTujia	d i C	tɕ i -	x.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1100	FACE	Cebu	ɡ u	ɡ u	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1100	FACE	GuzhangHusi	ɡ u	k u	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1100	FACE	LongshanHusiT	ɡ u	k u	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1100	FACE	Northern Shanic	ɡ u	k u	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1100	FACE	XiaTujia	ɡ u	k u	x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1101	NOW	Cebu	m u ə	m u -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1101	NOW	LongshanHusiT	m u ə	m u -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1101	NOW	Northern Shanic	m u ə	m u -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1101	NOW	XiaTujia	m u ə	m u -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1101	NOW	Cebu	m u	m u	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1101	NOW	LongshanHusiT	m u	m u	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1101	NOW	Northern Shanic	m u	m u	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1101	NOW	XiaTujia	m u	m u	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1102	BAMBOO	Cebu	m u	m u	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1102	BAMBOO	GuzhangHusi	m u	m u	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1102	BAMBOO	LongshanHusiT	m u	m u	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1102	BAMBOO	Northern Shanic	m u	m u	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1102	BAMBOO	XiaTujia	m u	m u	..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1103	TIE	Cebu	p u ə	p u -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1103	TIE	GuzhangHusi	p u ə	tʰ i -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1103	TIE	LongshanHusiT	p u ə	pʰ u -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1103	TIE	Northern Shanic	p u ə	pʰ u -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1103	TIE	Cebu	p u	p u	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1103	TIE	GuzhangHusi	p u	tʰ i	xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1103	TIE	LongshanHusiT	p u	pʰ u	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1103	TIE	Northern Shanic	p u	pʰ u	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1104	FLOWER	Cebu	p u	p u	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1104	FLOWER	GuzhangHusi	p u	pʰ ei	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1104	FLOWER	LongshanHusiT	p u	pʰ u	x.
@@ -498,23 +472,20 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_1110	COLD (OF WEATHER)	Northern Shanic	�
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1110	COLD (OF WEATHER)	XiaTujia	ʔ u	- u	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1111	REMAIN	Cebu	ʔ u	w u	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1111	REMAIN	LongshanHusiT	ʔ u	w u	x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1112	ESCAPE	Cebu	b ə	b u	.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1112	ESCAPE	LongshanHusiT	b ə	p ɔ	xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1112	ESCAPE	Northern Shanic	b ə	p o	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1113	CAVE	Cebu	d u ŋ	d ɯ -	.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1113	CAVE	GuzhangHusi	d u ŋ	d u ŋ	...
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1113	CAVE	LongshanHusiT	d u ŋ	t ɔ̃ -	xxx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1113	CAVE	Northern Shanic	d u ŋ	t o ŋ	xx.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1113	CAVE	XiaTujia	d u ŋ	t õ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1114		Cebu	ɣ u ŋ ə	ɣ ɯ - -	.xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1114		GuzhangHusi	ɣ u ŋ ə	- u ŋ -	x..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1114		Northern Shanic	ɣ u ŋ ə	- o ŋ -	xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1114		XiaTujia	ɣ u ŋ ə	- õ - -	xxxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1115	ANIMAL (CLASSIFIER)	Cebu	l u ŋ ə	n ũ - -	xxxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1115	ANIMAL (CLASSIFIER)	GuzhangHusi	l u ŋ ə	l u ŋ -	...x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1115	ANIMAL (CLASSIFIER)	LongshanHusiT	l u ŋ ə	l ɔ̃ - -	.xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1115	ANIMAL (CLASSIFIER)	Northern Shanic	l u ŋ ə	l o ŋ -	.x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1115	ANIMAL (CLASSIFIER)	XiaTujia	l u ŋ ə	n õ - -	xxxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1114		Cebu	ɣ u ŋ	ɣ ɯ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1114		GuzhangHusi	ɣ u ŋ	- u ŋ	x..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1114		Northern Shanic	ɣ u ŋ	- o ŋ	xx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1114		XiaTujia	ɣ u ŋ	- õ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1115	ANIMAL (CLASSIFIER)	Cebu	l u ŋ	n ũ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1115	ANIMAL (CLASSIFIER)	GuzhangHusi	l u ŋ	l u ŋ	...
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1115	ANIMAL (CLASSIFIER)	LongshanHusiT	l u ŋ	l ɔ̃ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1115	ANIMAL (CLASSIFIER)	Northern Shanic	l u ŋ	l o ŋ	.x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1115	ANIMAL (CLASSIFIER)	XiaTujia	l u ŋ	n õ -	xxx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1116	BLOCK (THE WAY)	CajiAdi	s u ŋ	s ɯ -	.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1116	BLOCK (THE WAY)	Cebu	s u ŋ	s ɯ -	.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1116	BLOCK (THE WAY)	Northern Shanic	s u ŋ	s o ŋ	.x.
@@ -531,8 +502,8 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_112	LIGHT (IGNITE)	CajiAdi	tʰ j e	tʰ -
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_112	LIGHT (IGNITE)	Cebu	tʰ j e	tʰ - i	.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_112	LIGHT (IGNITE)	GuzhangHusi	tʰ j e	tʰ - i	.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_112	LIGHT (IGNITE)	Northern Shanic	tʰ j e	tʰ - i	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1120		Cebu	ɡ ɯ ə	ɡ ɯ -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_1120		LongshanHusiT	ɡ ɯ ə	k - u	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1120		Cebu	ɡ ɯ	ɡ ɯ	..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_1120		LongshanHusiT	ɡ ɯ	k u	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1121	SIX	Cebu	ɣ ɯ	ɣ ɯ	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1121	SIX	GuzhangHusi	ɣ ɯ	w o	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_1121	SIX	LongshanHusiT	ɣ ɯ	l u	xx
@@ -660,10 +631,10 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_143	RICE STEAMER	XiaTujia	b u ŋ	p õ -	
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_144	SHORT	Cebu	d u ŋ	d ɯ -	.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_144	SHORT	Northern Shanic	d u ŋ	ts o ŋ	xx.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_144	SHORT	XiaTujia	d u ŋ	ts õ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_145	ROTTEN	Cebu	u ŋ	- n	xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_145	ROTTEN	GuzhangHusi	u ŋ	u ŋ	..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_145	ROTTEN	LongshanHusiT	u ŋ	ɔ̃ -	xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_145	ROTTEN	Northern Shanic	u ŋ	o ŋ	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_145	ROTTEN	Cebu	C u ŋ	- - n	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_145	ROTTEN	GuzhangHusi	C u ŋ	l u ŋ	x..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_145	ROTTEN	LongshanHusiT	C u ŋ	l ɔ̃ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_145	ROTTEN	Northern Shanic	C u ŋ	l o ŋ	xx.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_147	YEAR	Cebu	ȵ u ŋ	ȵ ɯ -	.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_147	YEAR	LongshanHusiT	ȵ u ŋ	l ɔ̃ -	xxx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_147	YEAR	Northern Shanic	ȵ u ŋ	l o ŋ	xx.
@@ -739,14 +710,11 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_20	CUT (WITH KNIFE)	GuzhangHusi	ŋ ɑ	ŋ
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_20	CUT (WITH KNIFE)	LongshanHusiT	ŋ ɑ	ŋ a	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_20	CUT (WITH KNIFE)	Northern Shanic	ŋ ɑ	ŋ a	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_20	CUT (WITH KNIFE)	XiaTujia	ŋ ɑ	ŋ ã	.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2001 2002		Cebu	l ɯ ə ɡ ɑ	l ɯ - k ɯ	..xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2001 2002		LongshanHusiT	l ɯ ə ɡ ɑ	l u - k a	.xxx.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2001 2002		XiaTujia	l ɯ ə ɡ ɑ	l u - k a	.xxx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2001 2002		Cebu	l ɯ ɡ ɑ	l ɯ k ɯ	..xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2001 2002		LongshanHusiT	l ɯ ɡ ɑ	l u k a	.xx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2001 2002		XiaTujia	l ɯ ɡ ɑ	l u k a	.xx.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2003 2004	GOURD	Cebu	l ɑ tʰ ɯ	l o t ɯ	.xx.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2003 2004	GOURD	Northern Shanic	l ɑ tʰ ɯ	l a tʰ u	...x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2005 2006	ANT	CajiAdi	s ə ȵ i	s a ȵ i	.x..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2005 2006	ANT	Cebu	s ə ȵ i	s a ȵ i	.x..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2005 2006	ANT	LongshanHusiT	s ə ȵ i	s ɿ ȵ i	.x..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2007 2008	BELT	Cebu	p u l ɑ	b u l o	x..x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2007 2008	BELT	LongshanHusiT	p u l ɑ	pʰ u l a	x...
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2007 2008	BELT	Northern Shanic	p u l ɑ	pʰ u l a	x...
@@ -756,38 +724,32 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_2009 2010	BRIGHT	GuzhangHusi	k u s u	kʰ
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2009 2010	BRIGHT	LongshanHusiT	k u s u	kʰ u s u	x...
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2009 2010	BRIGHT	Northern Shanic	k u s u	- - s u	xx..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2009 2010	BRIGHT	XiaTujia	k u s u	- - s u	xx..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2011 2012	BUG	CajiAdi	t ɤ c pʰ ɤ	t i - pʰ ei	.xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2011 2012	BUG	Cebu	t ɤ c pʰ ɤ	t ei - pʰ e	.xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2011 2012	BUG	LongshanHusiT	t ɤ c pʰ ɤ	tʰ ɛ - pʰ ɤ	xxx..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2011 2012	BUG	Northern Shanic	t ɤ c pʰ ɤ	tʰ e - pʰ e	xxx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2011 2012	BUG	XiaTujia	t ɤ c pʰ ɤ	tʰ e - pʰ ɯɛ	xxx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2013 2014	COLD	CajiAdi	s d æ	s d a	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2015 2016	DREAM (SOMETHING)	CajiAdi	m ɯ d i c	m u - - -	.xxxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2015 2016	DREAM (SOMETHING)	Cebu	m ɯ d i c	m u z i -	.xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2015 2016	DREAM (SOMETHING)	GuzhangHusi	m ɯ d i c	m u dʑ i -	.xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2015 2016	DREAM (SOMETHING)	LongshanHusiT	m ɯ d i c	m u ts ɿ -	.xxxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2015 2016	DREAM (SOMETHING)	Northern Shanic	m ɯ d i c	m u ts i -	.xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2015 2016	DREAM (SOMETHING)	XiaTujia	m ɯ d i c	m u tɕ i -	.xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2017 2018	DUSTPAN	Cebu	t ɑ ə k	t i - k	.xx.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2017 2018	DUSTPAN	GuzhangHusi	t ɑ ə k	tʰ a - kʰ	x.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2017 2018	DUSTPAN	LongshanHusiT	t ɑ ə k	tʰ a - kʰ	x.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2017 2018	DUSTPAN	Northern Shanic	t ɑ ə k	tʰ a - kʰ	x.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2017 2018	DUSTPAN	XiaTujia	t ɑ ə k	tʰ a - kʰ	x.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2019 2020	EAGLE	Cebu	b ɑ c ŋ i	b a - ŋ ɨ	..x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2011 2012	BUG	CajiAdi	t ɤ C pʰ ɤ	t i - pʰ ei	.xx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2011 2012	BUG	Cebu	t ɤ C pʰ ɤ	t ei - pʰ e	.xx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2011 2012	BUG	LongshanHusiT	t ɤ C pʰ ɤ	tʰ ɛ - pʰ ɤ	xxx..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2011 2012	BUG	Northern Shanic	t ɤ C pʰ ɤ	tʰ e - pʰ e	xxx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2011 2012	BUG	XiaTujia	t ɤ C pʰ ɤ	tʰ e - pʰ ɯɛ	xxx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2015 2016	DREAM (SOMETHING)	CajiAdi	m ɯ d i C	m u - - -	.xxxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2015 2016	DREAM (SOMETHING)	Cebu	m ɯ d i C	m u z i -	.xx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2015 2016	DREAM (SOMETHING)	GuzhangHusi	m ɯ d i C	m u dʑ i -	.xx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2015 2016	DREAM (SOMETHING)	LongshanHusiT	m ɯ d i C	m u ts ɿ -	.xxxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2015 2016	DREAM (SOMETHING)	Northern Shanic	m ɯ d i C	m u ts i -	.xx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2015 2016	DREAM (SOMETHING)	XiaTujia	m ɯ d i C	m u tɕ i -	.xx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2019 2020	EAGLE	Cebu	b ɑ C ŋ i	b a - ŋ ɨ	..x.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2021 2022	EAR (OF GRAIN)	Cebu	ʔ æ pʰ ɤ	- a pʰ e	xx.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2021 2022	EAR (OF GRAIN)	LongshanHusiT	ʔ æ pʰ ɤ	- a pʰ ɤ	xx..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2021 2022	EAR (OF GRAIN)	Northern Shanic	ʔ æ pʰ ɤ	- a pʰ e	xx.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2021 2022	EAR (OF GRAIN)	XiaTujia	ʔ æ pʰ ɤ	- a pʰ e	xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2023 2024		CajiAdi	ʔ æ ɑ c	ʔ a - ts	.xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2023 2024		Cebu	ʔ æ ɑ c	- a - d	xxxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2023 2024		LongshanHusiT	ʔ æ ɑ c	- a - tsʰ	xxxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2023 2024		Northern Shanic	ʔ æ ɑ c	- a - ts	xxxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2023 2024		XiaTujia	ʔ æ ɑ c	ts o - ʑ	xxxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2025 2026	FIELD	CajiAdi	s i ə t ɤ	s ɿ - t e	.xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2025 2026	FIELD	Cebu	s i ə t ɤ	s i - d e	..xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2025 2026	FIELD	GuzhangHusi	s i ə t ɤ	- - - tʰ e	xxxxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2025 2026	FIELD	Northern Shanic	s i ə t ɤ	s i - t e	..x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2025 2026	FIELD	XiaTujia	s i ə t ɤ	ɕ i - kʰ ə	x.xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2023 2024		CajiAdi	ʔ æ C ɑ C	ʔ a ts a -	.xx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2023 2024		Cebu	ʔ æ C ɑ C	- a d a -	xxx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2023 2024		LongshanHusiT	ʔ æ C ɑ C	- a tsʰ ɔ -	xxxxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2023 2024		Northern Shanic	ʔ æ C ɑ C	- a ts o -	xxxxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2023 2024		XiaTujia	ʔ æ C ɑ C	ts o ʑ i -	xxxxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2025 2026	FIELD	CajiAdi	s i t ɤ	s ɿ t e	.x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2025 2026	FIELD	Cebu	s i t ɤ	s i d e	..xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2025 2026	FIELD	GuzhangHusi	s i t ɤ	- - tʰ e	xxxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2025 2026	FIELD	Northern Shanic	s i t ɤ	s i t e	...x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2025 2026	FIELD	XiaTujia	s i t ɤ	ɕ i kʰ ə	x.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2027 2028	FISH	Cebu	s ɿ ŋ i	s i ŋ ɨ	.x.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2029 2030	FRONT (PART)	Cebu	d i ɡ ɑ	d i ɡ o	...x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2029 2030	FRONT (PART)	LongshanHusiT	d i ɡ ɑ	t i k a	x.x.
@@ -800,15 +762,15 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_2031 2032		XiaTujia	ʔ æ ʑ e	- a tɕ e
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2033 2034	GRANARY	Cebu	ʔ u dʑ i	ʔ u dʑ i	....
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2033 2034	GRANARY	Northern Shanic	ʔ u dʑ i	- u tɕ i	x.x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2033 2034	GRANARY	XiaTujia	ʔ u dʑ i	w u tɕ i	x.x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2037 2038		CajiAdi	ʔ æ p u ŋ ə	- a p ɯ - -	xx.xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2037 2038		LongshanHusiT	ʔ æ p u ŋ ə	- a p u - -	xx..xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2037 2038		Northern Shanic	ʔ æ p u ŋ ə	- a pʰ o ŋ -	xxxx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2039 2040	MIDDLE	LongshanHusiT	l i l ɑ c	l ɔ l u -	.x.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2041 2042	MONEY	Cebu	k u l ɑ c ə	k u l u - -	...xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2043 2044	NEW	Cebu	ʔ æ s i c	ʔ a ɕ i -	.xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2043 2044	NEW	LongshanHusiT	ʔ æ s i c	- a ɕ i -	xxx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2043 2044	NEW	Northern Shanic	ʔ æ s i c	- a ɕ i -	xxx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2043 2044	NEW	XiaTujia	ʔ æ s i c	- a ɕ i -	xxx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2037 2038		CajiAdi	ʔ æ p u ŋ	- a p ɯ -	xx.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2037 2038		LongshanHusiT	ʔ æ p u ŋ	- a p u -	xx..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2037 2038		Northern Shanic	ʔ æ p u ŋ	- a pʰ o ŋ	xxxx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2039 2040	MIDDLE	LongshanHusiT	l i l ɑ C	l ɔ l j u	.x.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2041 2042	MONEY	Cebu	k u l ɑ C	k u l u -	...xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2043 2044	NEW	Cebu	ʔ æ s i C	ʔ a ɕ i -	.xx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2043 2044	NEW	LongshanHusiT	ʔ æ s i C	- a ɕ i -	xxx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2043 2044	NEW	Northern Shanic	ʔ æ s i C	- a ɕ i -	xxx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2043 2044	NEW	XiaTujia	ʔ æ s i C	- a ɕ i -	xxx.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2045 2046	RADISH	Cebu	l æ b ɤ	l a b e	.x.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2045 2046	RADISH	LongshanHusiT	l æ b ɤ	l a p ɤ	.xx.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2045 2046	RADISH	Northern Shanic	l æ b ɤ	l a p e	.xxx
@@ -829,11 +791,6 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_2053 2054	THIN (OF LEAF AND CLOTH)	Cebu	
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2053 2054	THIN (OF LEAF AND CLOTH)	LongshanHusiT	s ɑ s ɑ	s a s a	....
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2053 2054	THIN (OF LEAF AND CLOTH)	Northern Shanic	s ɑ s ɑ	s a s ai	...x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2053 2054	THIN (OF LEAF AND CLOTH)	XiaTujia	s ɑ s ɑ	s a s a	....
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2055 2056	THREAD	Cebu	t m u	t m u	...
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2055 2056	THREAD	GuzhangHusi	t m u	tʰ m u	x..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2055 2056	THREAD	LongshanHusiT	t m u	tʰ m ɔ̃	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2055 2056	THREAD	Northern Shanic	t m u	tʰ m u	x..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2055 2056	THREAD	XiaTujia	t m u	tʰ m u	x..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2057 2058	CONNECT	CajiAdi	ʔ æ s ɑ	ʔ a s o	.x.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2057 2058	CONNECT	LongshanHusiT	ʔ æ s ɑ	- a s a	xx..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2059 2060		Cebu	ʔ æ dʑ e	ʔ a dʑ e	.x..
@@ -851,14 +808,9 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_2065 2066	FORGET	GuzhangHusi	s i m ɑ	ɕ
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2065 2066	FORGET	LongshanHusiT	s i m ɑ	s ɿ m a	.x..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2065 2066	FORGET	Northern Shanic	s i m ɑ	ɕ i m a	x...
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2065 2066	FORGET	XiaTujia	s i m ɑ	ɕ i m a	x...
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2067 2068	ITCHY	Cebu	s i ɑ	s i o	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2067 2068	ITCHY	LongshanHusiT	s i ɑ	s ɿ a	.x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2067 2068	ITCHY	XiaTujia	s i ɑ	ɕ i ã	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2069 2070	LEARN	Cebu	ʔ æ ɣ	- a ɣ	xx.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2069 2070	LEARN	GuzhangHusi	ʔ æ ɣ	- a ɣ	xx.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2069 2070	LEARN	LongshanHusiT	ʔ æ ɣ	- a ɣ	xx.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2069 2070	LEARN	Northern Shanic	ʔ æ ɣ	- a ei	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2069 2070	LEARN	XiaTujia	ʔ æ ɣ	- a ɣ	xx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2067 2068	ITCHY	Cebu	s i C ɑ	s i w o	..xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2067 2068	ITCHY	LongshanHusiT	s i C ɑ	s ɿ ŋ a	.xx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2067 2068	ITCHY	XiaTujia	s i C ɑ	ɕ i ŋ ã	x.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2071 2072	LOVE	Cebu	ʔ æ tsʰ ɿ	- a tsʰ i	xx.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2071 2072	LOVE	LongshanHusiT	ʔ æ tsʰ ɿ	- a tsʰ ɿ	xx..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2071 2072	LOVE	Northern Shanic	ʔ æ tsʰ ɿ	- a tsʰ i	xx.x
@@ -867,10 +819,10 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_2073 2074	ROAST (SOMETHING)	Cebu	t u ʔ 
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2073 2074	ROAST (SOMETHING)	GuzhangHusi	t u ʔ u	tʰ u w u	x.x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2073 2074	ROAST (SOMETHING)	Northern Shanic	t u ʔ u	tʰ u - u	x.x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2073 2074	ROAST (SOMETHING)	XiaTujia	t u ʔ u	tʰ u - u	x.x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2075 2076	ROLL	CajiAdi	k u ə l ɑ c	k u - l u -	..x.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2075 2076	ROLL	Cebu	k u ə l ɑ c	k u - l u -	..x.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2075 2076	ROLL	LongshanHusiT	k u ə l ɑ c	kʰ u - l ɔ -	x.x.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2075 2076	ROLL	Northern Shanic	k u ə l ɑ c	kʰ u - l u -	x.x.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2075 2076	ROLL	CajiAdi	k u l ɑ C	k u l u -	...xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2075 2076	ROLL	Cebu	k u l ɑ C	k u l u -	...xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2075 2076	ROLL	LongshanHusiT	k u l ɑ C	kʰ u l ɔ -	x..xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2075 2076	ROLL	Northern Shanic	k u l ɑ C	kʰ u l u -	x..xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2077 2078	CROUCH	Cebu	ɡ u d u	k u d u	x...
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2077 2078	CROUCH	GuzhangHusi	ɡ u d u	k u t u	x.x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2077 2078	CROUCH	LongshanHusiT	ɡ u d u	k u t u	x.x.
@@ -881,7 +833,7 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_2079 2080		LongshanHusiT	ʔ æ ȵ ɑ	- a
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2079 2080		Northern Shanic	ʔ æ ȵ ɑ	- a l a	xxx.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2079 2080		XiaTujia	ʔ æ ȵ ɑ	- a n a	xxx.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2081 2082	STINKING	Cebu	n ɑ ŋ i	l a ŋ i	x...
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2083 2084	THROW	Cebu	i ȵ ɑ	i ȵ io	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2083 2084	THROW	Cebu	C i ȵ ɑ	ɕ i ȵ io	x..x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2085 2086		CajiAdi	ʔ æ tʰ j e	ʔ a tʰ - e	.x.x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2085 2086		Cebu	ʔ æ tʰ j e	ʔ a tʰ - i	.x.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2085 2086		GuzhangHusi	ʔ æ tʰ j e	- - tʰ - i	xx.xx
@@ -900,25 +852,25 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_2091 2092	WE (INCLUSIVE)	GuzhangHusi	ʔ 
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2091 2092	WE (INCLUSIVE)	LongshanHusiT	ʔ æ ȵ i	- ã ȵ i	xx..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2091 2092	WE (INCLUSIVE)	Northern Shanic	ʔ æ ȵ i	- a ȵ i	xx..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2091 2092	WE (INCLUSIVE)	XiaTujia	ʔ æ ȵ i	- a ȵ i	xx..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2093 2094	WHO	GuzhangHusi	ʔ æ s ɤ ə	- a s ə -	xx.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2093 2094	WHO	LongshanHusiT	ʔ æ s ɤ ə	- a s ɤ -	xx..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2093 2094	WHO	Northern Shanic	ʔ æ s ɤ ə	- a s e -	xx.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2093 2094	WHO	XiaTujia	ʔ æ s ɤ ə	- a s o -	xx.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2095 2096	WILD CAT	Cebu	d ɑ c k u	z a - ɡ u	x.xx.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2095 2096	WILD CAT	LongshanHusiT	d ɑ c k u	ts ɔ - kʰ u	xxxx.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2095 2096	WILD CAT	Northern Shanic	d ɑ c k u	ts o - kʰ u	xxxx.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2095 2096	WILD CAT	XiaTujia	d ɑ c k u	ts o - kʰ u	xxxx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2093 2094	WHO	GuzhangHusi	ʔ æ s ɤ	- a s ə	xx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2093 2094	WHO	LongshanHusiT	ʔ æ s ɤ	- a s ɤ	xx..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2093 2094	WHO	Northern Shanic	ʔ æ s ɤ	- a s e	xx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2093 2094	WHO	XiaTujia	ʔ æ s ɤ	- a s o	xx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2095 2096	WILD CAT	Cebu	d ɑ C k u	z a - ɡ u	x.xx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2095 2096	WILD CAT	LongshanHusiT	d ɑ C k u	ts ɔ - kʰ u	xxxx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2095 2096	WILD CAT	Northern Shanic	d ɑ C k u	ts o - kʰ u	xxxx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2095 2096	WILD CAT	XiaTujia	d ɑ C k u	ts o - kʰ u	xxxx.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2097 2098	WOK	CajiAdi	t ɑ k ɯ	d ɯ ɡ ɯ	xxx.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2097 2098	WOK	Cebu	t ɑ k ɯ	t ɯ k ɯ	.x..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2097 2098	WOK	GuzhangHusi	t ɑ k ɯ	tʰ a kʰ u	x.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2097 2098	WOK	LongshanHusiT	t ɑ k ɯ	tʰ a kʰ u	x.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2097 2098	WOK	Northern Shanic	t ɑ k ɯ	tʰ a kʰ u	x.xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2097 2098	WOK	XiaTujia	t ɑ k ɯ	tʰ a kʰ u	x.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2099 2100	YESTERDAY	Cebu	pʰ u ə ȵ i ə	pʰ u - ȵ j e	..x.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2099 2100	YESTERDAY	GuzhangHusi	pʰ u ə ȵ i ə	pʰ u - ȵ - e	..x.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2099 2100	YESTERDAY	LongshanHusiT	pʰ u ə ȵ i ə	pʰ ɔ̃ - ȵ j ɛ	.xx.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2099 2100	YESTERDAY	Northern Shanic	pʰ u ə ȵ i ə	pʰ u - ȵ - i	..x.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2099 2100	YESTERDAY	XiaTujia	pʰ u ə ȵ i ə	pʰ u - ȵ - i	..x.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2099 2100	YESTERDAY	Cebu	pʰ u ȵ i	pʰ u ȵ e	...x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2099 2100	YESTERDAY	GuzhangHusi	pʰ u ȵ i	pʰ u ȵ e	...x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2099 2100	YESTERDAY	LongshanHusiT	pʰ u ȵ i	pʰ ɔ̃ ȵ ɛ	.x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2099 2100	YESTERDAY	Northern Shanic	pʰ u ȵ i	pʰ u ȵ i	....
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2099 2100	YESTERDAY	XiaTujia	pʰ u ȵ i	pʰ u ȵ i	....
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_21	SMALL	Cebu	s ɑ	s a	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_21	SMALL	GuzhangHusi	s ɑ	s ã	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_21	SMALL	LongshanHusiT	s ɑ	s ã	.x
@@ -929,42 +881,42 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_2101 2102	YOUNGER BROTHER	Cebu	ʔ æ ŋ 
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2101 2102	YOUNGER BROTHER	LongshanHusiT	ʔ æ ŋ ɑ	- ã ŋ ai	xx.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2101 2102	YOUNGER BROTHER	Northern Shanic	ʔ æ ŋ ɑ	- a ŋ ai	xx.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2101 2102	YOUNGER BROTHER	XiaTujia	ʔ æ ŋ ɑ	- ã ŋ ei	xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2103 2104	FINGER	CajiAdi	ə m̩ tʰ j e ə	- m̩ t - e -	x.xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2103 2104	FINGER	LongshanHusiT	ə m̩ tʰ j e ə	i - tʰ - i -	xx.xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2103 2104	FINGER	Northern Shanic	ə m̩ tʰ j e ə	i - tʰ - i -	xx.xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2103 2104	FINGER	XiaTujia	ə m̩ tʰ j e ə	i - tʰ - i -	xx.xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2105 2106	CHOPSTICKS	CajiAdi	ə m̩ d ɿ	- m̩ d ɿ	x...
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2105 2106	CHOPSTICKS	Cebu	ə m̩ d ɿ	- m d ɿ	xx..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2105 2106	CHOPSTICKS	GuzhangHusi	ə m̩ d ɿ	- p ts ɿ	xxx.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2105 2106	CHOPSTICKS	LongshanHusiT	ə m̩ d ɿ	- p ts ɿ	xxx.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2105 2106	CHOPSTICKS	Northern Shanic	ə m̩ d ɿ	- p ts i	xxxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2105 2106	CHOPSTICKS	XiaTujia	ə m̩ d ɿ	- m ts ɿ	xxx.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2107 2108	SPIDER	CajiAdi	ə m̩ tsʰ ɿ	a - tsʰ ɿ	xx..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2107 2108	SPIDER	Cebu	ə m̩ tsʰ ɿ	a - tsʰ i	xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2107 2108	SPIDER	LongshanHusiT	ə m̩ tsʰ ɿ	u - tsʰ ɿ	xx..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2107 2108	SPIDER	Northern Shanic	ə m̩ tsʰ ɿ	u - tsʰ i	xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2107 2108	SPIDER	XiaTujia	ə m̩ tsʰ ɿ	u - tsʰ ɿ	xx..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2109 2110	GUEST	CajiAdi	ə m̩ tsʰ ɑ c	- m̩ tsʰ a -	x...x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2109 2110	GUEST	Cebu	ə m̩ tsʰ ɑ c	- m̩ tsʰ a -	x...x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2109 2110	GUEST	GuzhangHusi	ə m̩ tsʰ ɑ c	u - tsʰ o -	xx.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2109 2110	GUEST	LongshanHusiT	ə m̩ tsʰ ɑ c	u - tsʰ ɔ -	xx.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2109 2110	GUEST	Northern Shanic	ə m̩ tsʰ ɑ c	u - tsʰ o -	xx.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2109 2110	GUEST	XiaTujia	ə m̩ tsʰ ɑ c	o - tsʰ o -	xx.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2111 2112	BAMBOO MAT	CajiAdi	ə m̩ s ɤ	- m s e	xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2111 2112	BAMBOO MAT	Cebu	ə m̩ s ɤ	- m̩ ɕ e	x.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2111 2112	BAMBOO MAT	LongshanHusiT	ə m̩ s ɤ	u - s ɤ	xx..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2111 2112	BAMBOO MAT	XiaTujia	ə m̩ s ɤ	u - s e	xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2113 2114		CajiAdi	ə m̩ d i	- m̩ d ɿ	x..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2113 2114		Cebu	ə m̩ d i	- m̩ d ɿ	x..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2113 2114		XiaTujia	ə m̩ d i	- m tɕ i	xxx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2103 2104	FINGER	CajiAdi	m̩ tʰ j e	m̩ t - e	.xx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2103 2104	FINGER	LongshanHusiT	m̩ tʰ j e	m tʰ - i	x.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2103 2104	FINGER	Northern Shanic	m̩ tʰ j e	m tʰ - i	x.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2103 2104	FINGER	XiaTujia	m̩ tʰ j e	m tʰ - i	x.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2105 2106	CHOPSTICKS	CajiAdi	m̩ d ɿ	m̩ d ɿ	...
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2105 2106	CHOPSTICKS	Cebu	m̩ d ɿ	m d ɿ	x..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2105 2106	CHOPSTICKS	GuzhangHusi	m̩ d ɿ	p ts ɿ	xx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2105 2106	CHOPSTICKS	LongshanHusiT	m̩ d ɿ	p ts ɿ	xx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2105 2106	CHOPSTICKS	Northern Shanic	m̩ d ɿ	p ts i	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2105 2106	CHOPSTICKS	XiaTujia	m̩ d ɿ	m ts ɿ	xx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2107 2108	SPIDER	CajiAdi	m̩ tsʰ ɿ	ʔ tsʰ ɿ	x..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2107 2108	SPIDER	Cebu	m̩ tsʰ ɿ	a tsʰ i	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2107 2108	SPIDER	LongshanHusiT	m̩ tsʰ ɿ	p tsʰ ɿ	x..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2107 2108	SPIDER	Northern Shanic	m̩ tsʰ ɿ	p tsʰ i	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2107 2108	SPIDER	XiaTujia	m̩ tsʰ ɿ	m tsʰ ɿ	x..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2109 2110	GUEST	CajiAdi	m̩ tsʰ ɑ C	m̩ tsʰ a -	...x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2109 2110	GUEST	Cebu	m̩ tsʰ ɑ C	m̩ tsʰ a -	...x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2109 2110	GUEST	GuzhangHusi	m̩ tsʰ ɑ C	u tsʰ o -	x.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2109 2110	GUEST	LongshanHusiT	m̩ tsʰ ɑ C	u tsʰ ɔ -	x.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2109 2110	GUEST	Northern Shanic	m̩ tsʰ ɑ C	u tsʰ o -	x.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2109 2110	GUEST	XiaTujia	m̩ tsʰ ɑ C	m tsʰ o -	x.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2111 2112	BAMBOO MAT	CajiAdi	m̩ s ɤ	m s e	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2111 2112	BAMBOO MAT	Cebu	m̩ s ɤ	m̩ ɕ e	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2111 2112	BAMBOO MAT	LongshanHusiT	m̩ s ɤ	p s ɤ	x..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2111 2112	BAMBOO MAT	XiaTujia	m̩ s ɤ	m s e	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2113 2114		CajiAdi	m̩ d i	m̩ d ɿ	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2113 2114		Cebu	m̩ d i	m̩ d ɿ	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2113 2114		XiaTujia	m̩ d i	m tɕ i	xx.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2115 2116	SNOW	Cebu	s u s u	s u s u	....
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2115 2116	SNOW	GuzhangHusi	s u s u	s u s u	....
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2115 2116	SNOW	LongshanHusiT	s u s u	s u s u	....
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2115 2116	SNOW	XiaTujia	s u s u	s u s u	....
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2117 2118	BE HUNGRY	GuzhangHusi	l i ə ɣ ɑ	- - - ɣ a	xxx..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2117 2118	BE HUNGRY	LongshanHusiT	l i ə ɣ ɑ	l i - - a	..xx.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2117 2118	BE HUNGRY	Northern Shanic	l i ə ɣ ɑ	- - - - a	xxxx.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_2117 2118	BE HUNGRY	XiaTujia	l i ə ɣ ɑ	l j e - a	.xxx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2117 2118	BE HUNGRY	GuzhangHusi	l i ɣ ɑ	- - ɣ a	xx..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2117 2118	BE HUNGRY	LongshanHusiT	l i ɣ ɑ	l i - a	..x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2117 2118	BE HUNGRY	Northern Shanic	l i ɣ ɑ	- - - a	xxx.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_2117 2118	BE HUNGRY	XiaTujia	l i ɣ ɑ	l e - a	.xx.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2119 2120	EGG	Cebu	ʔ æ l ɤ	ʔ a l e	.x.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2119 2120	EGG	GuzhangHusi	ʔ æ l ɤ	z a l e	xx.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_2119 2120	EGG	LongshanHusiT	ʔ æ l ɤ	- a l ɛ	xx.x
@@ -995,63 +947,63 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_27	NO	XiaTujia	t æ	tʰ a	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_28	PULL	CajiAdi	tsʰ æ	tsʰ a	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_28	PULL	Cebu	tsʰ æ	tsʰ a	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_28	PULL	Northern Shanic	tsʰ æ	tɕʰ a	xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_29		CajiAdi	d ɑ c	d a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_29		Cebu	d ɑ c	d a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_29		LongshanHusiT	d ɑ c	t ɔ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_30	CHOP	Cebu	d ɑ c	d a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_30	CHOP	LongshanHusiT	d ɑ c	t ɔ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_30	CHOP	Northern Shanic	d ɑ c	t o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_30	CHOP	XiaTujia	d ɑ c	t o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_31	BEG	Cebu	ɡ ɑ c	ɡ a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_31	BEG	Northern Shanic	ɡ ɑ c	k o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_31	BEG	XiaTujia	ɡ ɑ c	k o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_32	HE OR SHE OR IT	Cebu	k ɑ c	k a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_32	HE OR SHE OR IT	GuzhangHusi	k ɑ c	k o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_32	HE OR SHE OR IT	LongshanHusiT	k ɑ c	k ɔ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_32	HE OR SHE OR IT	Northern Shanic	k ɑ c	k o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_32	HE OR SHE OR IT	XiaTujia	k ɑ c	k o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_33	BREAK (BREAKING)	Cebu	kʰ ɑ c	kʰ a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_33	BREAK (BREAKING)	LongshanHusiT	kʰ ɑ c	kʰ ɔ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_33	BREAK (BREAKING)	Northern Shanic	kʰ ɑ c	kʰ o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_34	BOIL (SOMETHING)	Cebu	l ɑ c	l a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_34	BOIL (SOMETHING)	Northern Shanic	l ɑ c	l o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_34	BOIL (SOMETHING)	XiaTujia	l ɑ c	l o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_35	PERSON	Cebu	ȵ ɑ c	ȵ a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_35	PERSON	GuzhangHusi	ȵ ɑ c	l o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_35	PERSON	LongshanHusiT	ȵ ɑ c	l ɔ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_35	PERSON	Northern Shanic	ȵ ɑ c	l o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_35	PERSON	XiaTujia	ȵ ɑ c	n o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_36	SILVER	Cebu	ŋ ɑ c	ŋ a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_36	SILVER	GuzhangHusi	ŋ ɑ c	ŋ o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_36	SILVER	LongshanHusiT	ŋ ɑ c	ŋ ɔ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_36	SILVER	Northern Shanic	ŋ ɑ c	ŋ o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_36	SILVER	XiaTujia	ŋ ɑ c	ŋ o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_38	LET GO OR SET FREE	Cebu	pʰ ɑ c	pʰ a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_38	LET GO OR SET FREE	LongshanHusiT	pʰ ɑ c	pʰ ɔ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_38	LET GO OR SET FREE	Northern Shanic	pʰ ɑ c	pʰ o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_38	LET GO OR SET FREE	XiaTujia	pʰ ɑ c	pʰ o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_39	EARTH (SOIL)	Cebu	ɹ ɑ c	z a -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_39	EARTH (SOIL)	GuzhangHusi	ɹ ɑ c	z o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_39	EARTH (SOIL)	LongshanHusiT	ɹ ɑ c	z ɔ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_39	EARTH (SOIL)	Northern Shanic	ɹ ɑ c	z o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_39	EARTH (SOIL)	XiaTujia	ɹ ɑ c	z o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_29		CajiAdi	d ɑ C	d a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_29		Cebu	d ɑ C	d a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_29		LongshanHusiT	d ɑ C	t ɔ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_30	CHOP	Cebu	d ɑ C	d a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_30	CHOP	LongshanHusiT	d ɑ C	t ɔ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_30	CHOP	Northern Shanic	d ɑ C	t o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_30	CHOP	XiaTujia	d ɑ C	t o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_31	BEG	Cebu	ɡ ɑ C	ɡ a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_31	BEG	Northern Shanic	ɡ ɑ C	k o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_31	BEG	XiaTujia	ɡ ɑ C	k o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_32	HE OR SHE OR IT	Cebu	k ɑ C	k a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_32	HE OR SHE OR IT	GuzhangHusi	k ɑ C	k o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_32	HE OR SHE OR IT	LongshanHusiT	k ɑ C	k ɔ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_32	HE OR SHE OR IT	Northern Shanic	k ɑ C	k o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_32	HE OR SHE OR IT	XiaTujia	k ɑ C	k o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_33	BREAK (BREAKING)	Cebu	kʰ ɑ C	kʰ a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_33	BREAK (BREAKING)	LongshanHusiT	kʰ ɑ C	kʰ ɔ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_33	BREAK (BREAKING)	Northern Shanic	kʰ ɑ C	kʰ o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_34	BOIL (SOMETHING)	Cebu	l ɑ C	l a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_34	BOIL (SOMETHING)	Northern Shanic	l ɑ C	l o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_34	BOIL (SOMETHING)	XiaTujia	l ɑ C	l o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_35	PERSON	Cebu	ȵ ɑ C	ȵ a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_35	PERSON	GuzhangHusi	ȵ ɑ C	l o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_35	PERSON	LongshanHusiT	ȵ ɑ C	l ɔ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_35	PERSON	Northern Shanic	ȵ ɑ C	l o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_35	PERSON	XiaTujia	ȵ ɑ C	n o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_36	SILVER	Cebu	ŋ ɑ C	ŋ a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_36	SILVER	GuzhangHusi	ŋ ɑ C	ŋ o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_36	SILVER	LongshanHusiT	ŋ ɑ C	ŋ ɔ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_36	SILVER	Northern Shanic	ŋ ɑ C	ŋ o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_36	SILVER	XiaTujia	ŋ ɑ C	ŋ o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_38	LET GO OR SET FREE	Cebu	pʰ ɑ C	pʰ a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_38	LET GO OR SET FREE	LongshanHusiT	pʰ ɑ C	pʰ ɔ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_38	LET GO OR SET FREE	Northern Shanic	pʰ ɑ C	pʰ o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_38	LET GO OR SET FREE	XiaTujia	pʰ ɑ C	pʰ o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_39	EARTH (SOIL)	Cebu	ɹ ɑ C	z a -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_39	EARTH (SOIL)	GuzhangHusi	ɹ ɑ C	z o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_39	EARTH (SOIL)	LongshanHusiT	ɹ ɑ C	z ɔ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_39	EARTH (SOIL)	Northern Shanic	ɹ ɑ C	z o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_39	EARTH (SOIL)	XiaTujia	ɹ ɑ C	z o -	xxx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_4	DRIP (FALL IN GLOBULES)	Cebu	d ɑ	d o	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_4	DRIP (FALL IN GLOBULES)	LongshanHusiT	d ɑ	t a	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_4	DRIP (FALL IN GLOBULES)	Northern Shanic	d ɑ	t a	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_4	DRIP (FALL IN GLOBULES)	XiaTujia	d ɑ	t a	x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_40	CAPRINE (GOAT OR SHEEP)	CajiAdi	ɹ ɑ c	z o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_40	CAPRINE (GOAT OR SHEEP)	Cebu	ɹ ɑ c	z o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_40	CAPRINE (GOAT OR SHEEP)	LongshanHusiT	ɹ ɑ c	z ɔ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_40	CAPRINE (GOAT OR SHEEP)	Northern Shanic	ɹ ɑ c	z o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_40	CAPRINE (GOAT OR SHEEP)	XiaTujia	ɹ ɑ c	z o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_41	HOUSE	Cebu	tsʰ ɑ c	tsʰ o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_41	HOUSE	LongshanHusiT	tsʰ ɑ c	tsʰ ɔ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_41	HOUSE	Northern Shanic	tsʰ ɑ c	tsʰ o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_41	HOUSE	XiaTujia	tsʰ ɑ c	tsʰ o -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_42	CARRY ON BACK	Cebu	ʔ ɑ c	ʔ a -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_42	CARRY ON BACK	GuzhangHusi	ʔ ɑ c	w o -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_42	CARRY ON BACK	LongshanHusiT	ʔ ɑ c	w ɔ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_42	CARRY ON BACK	Northern Shanic	ʔ ɑ c	- o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_40	CAPRINE (GOAT OR SHEEP)	CajiAdi	ɹ ɑ C	z o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_40	CAPRINE (GOAT OR SHEEP)	Cebu	ɹ ɑ C	z o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_40	CAPRINE (GOAT OR SHEEP)	LongshanHusiT	ɹ ɑ C	z ɔ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_40	CAPRINE (GOAT OR SHEEP)	Northern Shanic	ɹ ɑ C	z o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_40	CAPRINE (GOAT OR SHEEP)	XiaTujia	ɹ ɑ C	z o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_41	HOUSE	Cebu	tsʰ ɑ C	tsʰ o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_41	HOUSE	LongshanHusiT	tsʰ ɑ C	tsʰ ɔ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_41	HOUSE	Northern Shanic	tsʰ ɑ C	tsʰ o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_41	HOUSE	XiaTujia	tsʰ ɑ C	tsʰ o -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_42	CARRY ON BACK	Cebu	ʔ ɑ C	ʔ a -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_42	CARRY ON BACK	GuzhangHusi	ʔ ɑ C	w o -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_42	CARRY ON BACK	LongshanHusiT	ʔ ɑ C	w ɔ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_42	CARRY ON BACK	Northern Shanic	ʔ ɑ C	- o -	xxx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_43	BOVINE	Cebu	ʔ ɑ w	- o -	xxx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_43	BOVINE	GuzhangHusi	ʔ ɑ w	- au -	xxx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_43	BOVINE	Northern Shanic	ʔ ɑ w	- au -	xxx
@@ -1068,8 +1020,8 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_46	HAND	GuzhangHusi	dʑ e	tɕ e	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_46	HAND	LongshanHusiT	dʑ e	tɕ ɛ	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_46	HAND	Northern Shanic	dʑ e	tɕ e	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_46	HAND	XiaTujia	dʑ e	tɕ e	x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_47		Cebu	e ə	e -	.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_47		Northern Shanic	e ə	e -	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_47		Cebu	C e	p e	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_47		Northern Shanic	C e	p e	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_48	SCRAPE	Cebu	pʰ e	pʰ e	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_48	SCRAPE	GuzhangHusi	pʰ e	pʰ e	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_48	SCRAPE	LongshanHusiT	pʰ e	pʰ ɛ	.x
@@ -1104,33 +1056,25 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_54	WATER	GuzhangHusi	tsʰ e	tsʰ e	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_54	WATER	LongshanHusiT	tsʰ e	tsʰ ɤ	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_54	WATER	Northern Shanic	tsʰ e	tsʰ e	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_54	WATER	XiaTujia	tsʰ e	tsʰ ə	.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_55	ARRIVE	Cebu	ʔ e ə	j e -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_55	ARRIVE	GuzhangHusi	ʔ e ə	j e -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_55	ARRIVE	LongshanHusiT	ʔ e ə	j ɛ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_55	ARRIVE	Northern Shanic	ʔ e ə	j e -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_55	ARRIVE	XiaTujia	ʔ e ə	ʑ e -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_56		CajiAdi	b ə	b e	.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_56		Cebu	b ə	b e	.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_56		Northern Shanic	b ə	p e	xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_56		XiaTujia	b ə	p ə	x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_57	SLEEP (STATE)	Cebu	ȵ	ȵ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_57	SLEEP (STATE)	LongshanHusiT	ȵ	ȵ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_57	SLEEP (STATE)	Northern Shanic	ȵ	ȵ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_57	SLEEP (STATE)	XiaTujia	ȵ	ȵ	.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_59		CajiAdi	b e c	b ɯ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_59		Cebu	b e c	b ɯ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_59		LongshanHusiT	b e c	p ɤ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_59		XiaTujia	b e c	p e -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_55	ARRIVE	Cebu	ʔ e	j e	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_55	ARRIVE	GuzhangHusi	ʔ e	j e	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_55	ARRIVE	LongshanHusiT	ʔ e	j ɛ	xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_55	ARRIVE	Northern Shanic	ʔ e	j e	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_55	ARRIVE	XiaTujia	ʔ e	ʑ e	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_59		CajiAdi	b e C	b ɯ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_59		Cebu	b e C	b ɯ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_59		LongshanHusiT	b e C	p ɤ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_59		XiaTujia	b e C	p e -	x.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_6	HOLD	Cebu	d ɑ	d o	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_6	HOLD	GuzhangHusi	d ɑ	ts a	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_6	HOLD	Northern Shanic	d ɑ	ts a	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_6	HOLD	XiaTujia	d ɑ	ts a	x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_60	BLOW (OF WIND)	CajiAdi	m e c	m i -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_60	BLOW (OF WIND)	Cebu	m e c	m i -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_60	BLOW (OF WIND)	GuzhangHusi	m e c	m e -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_60	BLOW (OF WIND)	LongshanHusiT	m e c	m ɛ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_60	BLOW (OF WIND)	Northern Shanic	m e c	m e -	..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_60	BLOW (OF WIND)	XiaTujia	m e c	m e -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_60	BLOW (OF WIND)	CajiAdi	m e C	m i -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_60	BLOW (OF WIND)	Cebu	m e C	m i -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_60	BLOW (OF WIND)	GuzhangHusi	m e C	m e -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_60	BLOW (OF WIND)	LongshanHusiT	m e C	m ɛ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_60	BLOW (OF WIND)	Northern Shanic	m e C	m e -	..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_60	BLOW (OF WIND)	XiaTujia	m e C	m e -	..x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_63	CARRY	Cebu	b ɤ	b e	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_63	CARRY	GuzhangHusi	b ɤ	p e	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_63	CARRY	LongshanHusiT	b ɤ	p ɤ	x.
@@ -1231,14 +1175,14 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_83	RAIN (RAINING)	GuzhangHusi	z ɤ	d ə	
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_83	RAIN (RAINING)	LongshanHusiT	z ɤ	ts ɤ	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_83	RAIN (RAINING)	Northern Shanic	z ɤ	ts e	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_83	RAIN (RAINING)	XiaTujia	z ɤ	ts ə	xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_84	SOFT	Cebu	b ɤ c	b ɯ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_84	SOFT	GuzhangHusi	b ɤ c	p e -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_84	SOFT	LongshanHusiT	b ɤ c	p ɤ -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_84	SOFT	XiaTujia	b ɤ c	p ɯɛ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_85	SIMILAR	Cebu	d ɤ c	d ɿ -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_85	SIMILAR	LongshanHusiT	d ɤ c	ts ɤ -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_85	SIMILAR	Northern Shanic	d ɤ c	ts e -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_85	SIMILAR	XiaTujia	d ɤ c	ts ə -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_84	SOFT	Cebu	b ɤ C	b ɯ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_84	SOFT	GuzhangHusi	b ɤ C	p e -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_84	SOFT	LongshanHusiT	b ɤ C	p ɤ -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_84	SOFT	XiaTujia	b ɤ C	p ɯɛ -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_85	SIMILAR	Cebu	d ɤ C	d ɿ -	.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_85	SIMILAR	LongshanHusiT	d ɤ C	ts ɤ -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_85	SIMILAR	Northern Shanic	d ɤ C	ts e -	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_85	SIMILAR	XiaTujia	d ɤ C	ts ə -	xxx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_86		Cebu	b i	b i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_86		GuzhangHusi	b i	p e	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_86		LongshanHusiT	b i	p ɛ	xx
@@ -1262,10 +1206,10 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_9	CROW	XiaTujia	ɡ ɑ	k ã	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_90	DISEASE	CajiAdi	d i	d i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_90	DISEASE	Northern Shanic	d i	t i	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_90	DISEASE	XiaTujia	d i	t i	x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_91	BECOME	Cebu	d i ə	dʑ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_91	BECOME	GuzhangHusi	d i ə	dʑ i -	x.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_91	BECOME	LongshanHusiT	d i ə	ts ɿ -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_91	BECOME	Northern Shanic	d i ə	ts i -	x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_91	BECOME	Cebu	d i	dʑ i	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_91	BECOME	GuzhangHusi	d i	dʑ i	x.
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_91	BECOME	LongshanHusiT	d i	ts ɿ	xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_91	BECOME	Northern Shanic	d i	ts i	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_92	WALK	Cebu	ɣ i	ɣ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_92	WALK	GuzhangHusi	ɣ i	ɣ ɯ	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_92	WALK	LongshanHusiT	ɣ i	ɣ ɨ	.x
@@ -1297,20 +1241,17 @@ zhoubizic:Proto-Bizic > Bizic|zhoubizic_98	THOU	XiaTujia	ȵ i	ȵ i	..
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_99	LEND	Cebu	ŋ i	ŋ ɨ	.x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_99	LEND	Northern Shanic	ŋ i	- o	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_99	LEND	XiaTujia	ŋ i	ɣ õ	xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_?10		CajiAdi	d ɿ ə	d i -	.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_?10		LongshanHusiT	d ɿ ə	ts i -	xxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_?11	BLINK	CajiAdi	n j e ə	ȵ j e -	x..x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_?11	BLINK	Northern Shanic	n j e ə	ȵ - i -	xxxx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_?11	BLINK	XiaTujia	n j e ə	ȵ - e -	xx.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_?10		CajiAdi	d ɿ	d i	.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_?10		LongshanHusiT	d ɿ	ts i	xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_?11	BLINK	CajiAdi	n j e	ȵ j e	x..
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_?11	BLINK	Northern Shanic	n j e	ȵ - i	xxx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_?11	BLINK	XiaTujia	n j e	ȵ - e	xx.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_?12		CajiAdi	n ɑ	l o	xx
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_?12		Northern Shanic	n ɑ	l a	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_?12		XiaTujia	n ɑ	l ã	xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_?13 ?14	THORN	CajiAdi	t a s	t o s	.x.
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_?13 ?14	THORN	Northern Shanic	t a s	tʰ a s	x..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_?13 ?14	THORN	XiaTujia	t a s	tʰ a s	x..
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_?15 ?16	ORANGE (FRUIT)	CajiAdi	kʰ e ə s i c	kʰ e - ɕ i -	..xx.x
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_?15 ?16	ORANGE (FRUIT)	LongshanHusiT	kʰ e ə s i c	tɕʰ ɛ - s ɿ -	xxx.xx
-zhoubizic:Proto-Bizic > Bizic|zhoubizic_?15 ?16	ORANGE (FRUIT)	Northern Shanic	kʰ e ə s i c	tɕʰ e - s i -	x.x..x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_?15 ?16	ORANGE (FRUIT)	CajiAdi	kʰ e s i C	kʰ e ɕ i -	..x.x
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_?15 ?16	ORANGE (FRUIT)	LongshanHusiT	kʰ e s i C	tɕʰ ɛ s ɿ -	xx.xx
+zhoubizic:Proto-Bizic > Bizic|zhoubizic_?15 ?16	ORANGE (FRUIT)	Northern Shanic	kʰ e s i C	tɕʰ e s i -	x...x
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_?2	WIPE	CajiAdi	ʔ e	j e	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_?2	WIPE	GuzhangHusi	ʔ e	j e	x.
 zhoubizic:Proto-Bizic > Bizic|zhoubizic_?2	WIPE	LongshanHusiT	ʔ e	j ɛ	xx
