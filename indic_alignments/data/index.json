@@ -145,42 +145,6 @@
  },
  {
   "book": "Indic 6 Comparanda and variants",
-  "sheet": "Old Indo-Aryan > Nuristani comparanda",
-  "slug": "jambu_full__Old_Indo-Aryan_to_Nuristani_comparanda",
-  "source": "jambu",
-  "chain": "Old Indo-Aryan > Nuristani comparanda",
-  "rows": 2940,
-  "sets": 1046,
-  "languages": 35,
-  "marked": 307,
-  "reviewed": 0
- },
- {
-  "book": "Indic 6 Comparanda and variants",
-  "sheet": "Old Indo-Aryan > Iranian comparanda",
-  "slug": "jambu_full__Old_Indo-Aryan_to_Iranian_comparanda",
-  "source": "jambu",
-  "chain": "Old Indo-Aryan > Iranian comparanda",
-  "rows": 233,
-  "sets": 150,
-  "languages": 37,
-  "marked": 16,
-  "reviewed": 0
- },
- {
-  "book": "Indic 6 Comparanda and variants",
-  "sheet": "Old Indo-Aryan > other comparanda",
-  "slug": "jambu_full__Old_Indo-Aryan_to_other_comparanda",
-  "source": "jambu",
-  "chain": "Old Indo-Aryan > other comparanda",
-  "rows": 337,
-  "sets": 208,
-  "languages": 60,
-  "marked": 37,
-  "reviewed": 0
- },
- {
-  "book": "Indic 6 Comparanda and variants",
   "sheet": "Old Indo-Aryan > headword variants",
   "slug": "jambu_full__Old_Indo-Aryan_to_headword_variants",
   "source": "jambu",
@@ -189,42 +153,6 @@
   "sets": 691,
   "languages": 14,
   "marked": 44,
-  "reviewed": 0
- },
- {
-  "book": "Indic 6 Comparanda and variants",
-  "sheet": "Reconstructed OIA > Nuristani comparanda",
-  "slug": "jambu_full__Reconstructed_OIA_to_Nuristani_comparanda",
-  "source": "jambu",
-  "chain": "Reconstructed OIA > Nuristani comparanda",
-  "rows": 1331,
-  "sets": 520,
-  "languages": 31,
-  "marked": 214,
-  "reviewed": 0
- },
- {
-  "book": "Indic 6 Comparanda and variants",
-  "sheet": "Reconstructed OIA > Iranian comparanda",
-  "slug": "jambu_full__Reconstructed_OIA_to_Iranian_comparanda",
-  "source": "jambu",
-  "chain": "Reconstructed OIA > Iranian comparanda",
-  "rows": 134,
-  "sets": 60,
-  "languages": 37,
-  "marked": 13,
-  "reviewed": 0
- },
- {
-  "book": "Indic 6 Comparanda and variants",
-  "sheet": "Reconstructed OIA > other comparanda",
-  "slug": "jambu_full__Reconstructed_OIA_to_other_comparanda",
-  "source": "jambu",
-  "chain": "Reconstructed OIA > other comparanda",
-  "rows": 120,
-  "sets": 77,
-  "languages": 34,
-  "marked": 17,
   "reviewed": 0
  },
  {
