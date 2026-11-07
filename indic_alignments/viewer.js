@@ -144,22 +144,32 @@
     if (editing && brush) body = `<button class="mk" type="button" data-i="${i}" aria-pressed="${cell.morph}">${esc(lost ? GAP : cell.bottom)}</button>`;
     return `<td class="${cls}" data-i="${i}"${tip}>${body}</td>`;
   }
-  function rowHTML(pair, width) {
+  // cells of a pair by slot: added[p] are the segments the reflex added before ancestor
+  // segment p (the last entry is the end of the word), and rank[p] is that segment's cell
+  function layout(pair) {
+    const added = [[]], rank = [];
+    pair.cells.forEach((cell, i) => {
+      if (cell.top === ADDED) added[added.length - 1].push(i);
+      else { rank.push(i); added.push([]); }
+    });
+    return { added, rank };
+  }
+  function addedCell(pair, i) {
+    if (i === undefined) return '<td class="add"></td>';
+    const cell = pair.cells[i];
+    return `<td class="seg add${cell.morph ? " m" : ""}">${esc(cell.bottom)}</td>`;
+  }
+  // `slots[p]` is how many columns the added segments before p need in this table
+  function rowHTML(pair, slots) {
     const excluded = /excluded/.test(pair.status);
     let h = `<tr class="${excluded ? "ex" : ""}" data-key="${esc(pair.key)}">`;
     h += `<td class="lang">${esc(pair.language)}</td><td class="form">${esc(pair.form)}</td>`;
-    let added = "";
-    const cols = [];
-    pair.cells.forEach((cell, i) => {
-      if (cell.top === ADDED) added += `<span class="in${cell.morph ? " m" : ""}">${esc(cell.bottom)}</span>`;
-      else { cols.push([i, added]); added = ""; }
+    const { added, rank } = layout(pair);
+    slots.forEach((width, p) => {
+      for (let k = 0; k < width; k++) h += addedCell(pair, added[p] ? added[p][k] : undefined);
+      if (p < rank.length) h += segCell(pair, rank[p]);
+      else if (p < slots.length - 1) h += "<td></td>";
     });
-    cols.forEach(([i, before], c) => {
-      const html = segCell(pair, i);
-      const after = c === cols.length - 1 ? added : "";
-      h += before || after ? html.replace(/(<td[^>]*>)/, `$1${before}`).replace(/<\/td>$/, `${after}</td>`) : html;
-    });
-    for (let k = cols.length; k < width; k++) h += "<td></td>";
     const status = pair.status && pair.status !== "machine" ? `<span class="tag ${esc(pair.status.split(" ")[0])}">${esc(pair.status)}</span>` : "";
     h += `<td class="where">${esc(pair.rule())}${status}${pair.details ? ` <span class="det">${esc(pair.details)}</span>` : ""}${pair.edited ? ` <span class="det">edited ${esc(pair.edited)}</span>` : ""}</td>`;
     if (editing) {
@@ -175,13 +185,21 @@
     const first = rows[0];
     const segs = first.ranks.map((i) => first.cells[i]);
     const everyone = segs.map((_, k) => rows.every((p) => p.cells[p.ranks[k]] && p.cells[p.ranks[k]].morph));
+    const slots = segs.map(() => 0).concat([0]);
+    rows.forEach((p) => {
+      layout(p).added.forEach((list, k) => { if (k < slots.length) slots[k] = Math.max(slots[k], list.length); });
+      p.slots = slots;
+    });
     let h = `<section class="set"><h3>${esc(set.head || segs.map((s) => s.top).join(""))}`;
     if (set.gloss && set.gloss !== set.head) h += ` <span class="gl">‘${esc(set.gloss)}’</span>`;
     h += ` <span class="id">${esc(set.id)}, ${rows.length} of ${set.rows.length} ${set.rows.length === 1 ? "form" : "forms"}</span></h3>`;
     h += '<table><thead><tr class="anc"><th class="lang" scope="col">Language</th><th class="form" scope="col">As cited</th>';
-    segs.forEach((s, k) => { h += `<th scope="col"${everyone[k] ? ' class="m"' : ""}>${esc(s.top)}</th>`; });
+    slots.forEach((width, k) => {
+      h += '<th class="add"></th>'.repeat(width);
+      if (k < segs.length) h += `<th scope="col"${everyone[k] ? ' class="m"' : ""}>${esc(segs[k].top)}</th>`;
+    });
     h += '<th class="where" scope="col">Morphology, status, source</th>' + (editing ? '<th class="where" scope="col">Edit</th>' : "") + "</tr></thead><tbody>";
-    rows.forEach((p) => { h += rowHTML(p, segs.length); });
+    rows.forEach((p) => { h += rowHTML(p, slots); });
     return h + "</tbody></table></section>";
   }
   function draw() {
@@ -358,7 +376,7 @@
     pair.morph = unchanged ? pair.base[2] : pair.cells.some((c) => c.morph) ? `${pair.base[2] ? pair.base[2] + "; " : ""}edited by hand` : "";
     save(pair);
     const tr = button.closest("tr");
-    tr.outerHTML = rowHTML(pair, tr.querySelectorAll("td.seg").length);
+    tr.outerHTML = rowHTML(pair, pair.slots);
   });
   $("ia-sets").addEventListener("change", (e) => {
     const tr = e.target.closest("tr[data-key]");

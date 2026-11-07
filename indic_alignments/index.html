@@ -63,6 +63,9 @@ nav: false
   .pa td.seg.lost { color: var(--pa-lost); }
   .pa td.seg.m { background: var(--pa-m); }
   .pa td.seg.fix { box-shadow: inset 0 -3px 0 var(--pa-fixline); }
+  .pa th.add, .pa td.add { min-width: 1.2em; padding: 1px 2px; }
+  .pa td.seg.add { color: var(--pa-ins); background: var(--pa-insbg); font-weight: 700; }
+  .pa td.seg.add.m { color: var(--global-text-color); background: var(--pa-m); }
   .pa .in { font-family: "Charis SIL", serif; font-weight: 700; color: var(--pa-ins); background: var(--pa-insbg);
             border-radius: 3px; padding: 0 2px; margin: 0 1px; font-size: 0.95em; }
   .pa .in.m { background: var(--pa-m); color: var(--global-text-color); }
@@ -133,7 +136,7 @@ nav: false
     <span><i class="sw">a</i> unchanged</span>
     <span><i class="sw c">ɳ</i> changed</span>
     <span><i class="sw lost">-</i> lost</span>
-    <span><i class="in">i</i> added before this segment</span>
+    <span><i class="in">i</i> added by the reflex, in its own column</span>
     <span><i class="sw m">t</i> morphology</span>
     <span><i class="sw fix">e</i> edited (hover for the first alignment)</span>
   </div>
