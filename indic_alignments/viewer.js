@@ -144,8 +144,9 @@
     if (editing && brush) body = `<button class="mk" type="button" data-i="${i}" aria-pressed="${cell.morph}">${esc(lost ? GAP : cell.bottom)}</button>`;
     return `<td class="${cls}" data-i="${i}"${tip}>${body}</td>`;
   }
-  // cells of a pair by slot: added[p] are the segments the reflex added before ancestor
-  // segment p (the last entry is the end of the word), and rank[p] is that segment's cell
+  // cells of a pair by slot: added[p] are the segments the reflex has where the ancestor has
+  // a gap, before ancestor segment p (the last entry is the end of the word), and rank[p] is
+  // that segment's cell. Each gap in the ancestor is a green column of its own.
   function layout(pair) {
     const added = [[]], rank = [];
     pair.cells.forEach((cell, i) => {
@@ -155,9 +156,7 @@
     return { added, rank };
   }
   function addedCell(pair, i) {
-    if (i === undefined) return '<td class="add"></td>';
-    const cell = pair.cells[i];
-    return `<td class="seg add${cell.morph ? " m" : ""}">${esc(cell.bottom)}</td>`;
+    return i === undefined ? `<td class="seg add none">${GAP}</td>` : `<td class="seg add">${esc(pair.cells[i].bottom)}</td>`;
   }
   // `slots[p]` is how many columns the added segments before p need in this table
   function rowHTML(pair, slots) {
@@ -195,7 +194,7 @@
     h += ` <span class="id">${esc(set.id)}, ${rows.length} of ${set.rows.length} ${set.rows.length === 1 ? "form" : "forms"}</span></h3>`;
     h += '<table><thead><tr class="anc"><th class="lang" scope="col">Language</th><th class="form" scope="col">As cited</th>';
     slots.forEach((width, k) => {
-      h += '<th class="add"></th>'.repeat(width);
+      h += `<th class="add" scope="col">${GAP}</th>`.repeat(width);
       if (k < segs.length) h += `<th scope="col"${everyone[k] ? ' class="m"' : ""}>${esc(segs[k].top)}</th>`;
     });
     h += '<th class="where" scope="col">Morphology, status, source</th>' + (editing ? '<th class="where" scope="col">Edit</th>' : "") + "</tr></thead><tbody>";
