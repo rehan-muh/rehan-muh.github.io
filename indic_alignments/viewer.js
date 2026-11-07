@@ -120,7 +120,9 @@
   }
   function showChecked() {
     const done = SETS.filter((s) => s.checks.length).length;
-    $("ia-done").textContent = `${num(done)} of ${num(SETS.length)} sets checked`;
+    let uncertain = 0;
+    SETS.forEach((s) => { uncertain += s.rows.filter((p) => p.status === "uncertain").length; });
+    $("ia-done").textContent = `${num(done)} of ${num(SETS.length)} sets checked · ${num(uncertain)} ${uncertain === 1 ? "row" : "rows"} uncertain`;
   }
   function toggleCheck(set, on) {
     const name = identity.editor.replace(/\|/g, " ");
@@ -200,7 +202,8 @@
     const status = pair.status && pair.status !== "machine" ? `<span class="tag ${esc(pair.status.split(" ")[0])}">${esc(pair.status)}</span>` : "";
     h += `<td class="where">${esc(pair.rule())}${status}${pair.details ? ` <span class="det">${esc(pair.details)}</span>` : ""}${pair.edited ? ` <span class="det">edited ${esc(pair.edited)}</span>` : ""}</td>`;
     if (editing) {
-      h += `<td class="tools"><label><input class="exclude" type="checkbox"${excluded ? " checked" : ""}> exclude</label>` +
+      h += `<td class="tools"><label><input class="exclude" type="checkbox"${excluded ? " checked" : ""}> exclude</label> ` +
+           `<label><input class="uncertain" type="checkbox"${pair.status === "uncertain" ? " checked" : ""}> uncertain</label>` +
            `<input class="note" type="text" placeholder="note" aria-label="Note" value="${esc(pair.note)}"></td>`;
     } else if (pair.note) {
       h += `<td class="where">${esc(pair.note)}</td>`;
@@ -219,7 +222,8 @@
     });
     let h = `<section class="set"><h3>${esc(set.head || segs.map((s) => s.top).join(""))}`;
     if (set.gloss && set.gloss !== set.head) h += ` <span class="gl">‘${esc(set.gloss)}’</span>`;
-    h += ` <span class="id">${esc(set.id)}, ${rows.length} of ${set.rows.length} ${set.rows.length === 1 ? "form" : "forms"}</span>`;
+    const aside = set.rows.filter((p) => p.status === "uncertain").length;
+    h += ` <span class="id">${esc(set.id)}, ${rows.length} of ${set.rows.length} ${set.rows.length === 1 ? "form" : "forms"}${aside ? `, ${aside} uncertain` : ""}</span>`;
     if (editing) {
       const mine = set.checks.includes(identity.editor.replace(/\|/g, " "));
       h += ` <label class="chk"><input class="setcheck" type="checkbox" data-id="${esc(set.id)}"${mine ? " checked" : ""}> I checked this set</label>`;
@@ -256,6 +260,8 @@
       const whole = q && set.f.includes(q);
       const rows = set.rows.filter((p) => {
         if (lang && p.base_language !== lang) return false;
+        // an uncertain row leaves its table and is seen only in the views that ask for it
+        if (p.status === "uncertain" && status !== "uncertain" && status !== "edited") return false;
         if (status === "edited" && !p.edited) return false;
         if (status && !["edited", "checked", "unchecked"].includes(status) && !p.status.startsWith(status)) return false;
         const marked = p.cells.some((c) => c.morph);
@@ -435,6 +441,16 @@
     } else if (e.target.classList.contains("exclude")) {
       pair.status = e.target.checked ? "excluded" : (/excluded/.test(pair.base[3]) ? "machine" : pair.base[3]);
       tr.classList.toggle("ex", e.target.checked);
+    } else if (e.target.classList.contains("uncertain")) {
+      pair.status = e.target.checked ? "uncertain" : (pair.base[3] === "uncertain" ? "machine" : pair.base[3]);
+      save(pair);
+      showChecked();
+      if ($("ia-status").value !== "edited") {
+        const section = tr.closest("section.set");
+        tr.remove();
+        if (!section.querySelector("tbody tr")) section.remove();
+      }
+      return;
     } else if (e.target.classList.contains("note")) {
       pair.note = e.target.value.trim();
     } else return;

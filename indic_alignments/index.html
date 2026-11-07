@@ -108,7 +108,8 @@ nav: false
   <div class="editbar" id="ia-editbar" hidden>
     <p>Click a segment to change it, using the IPA shown in the table. Leave it empty to mark it lost. Press Enter for the next
     segment. To mark or unmark morphology, switch on <i>Mark morphology</i> and click the segments. Setting a pair back to its
-    first alignment removes the edit.</p>
+    first alignment removes the edit. A row marked <i>uncertain</i> leaves its table. Choose <i>uncertain rows</i> under Status
+    to see those rows, and untick one to put it back.</p>
     <div class="row">
       <button id="ia-brush" type="button" aria-pressed="false">Mark morphology</button>
       <span id="ia-saved" role="status"></span>
@@ -123,6 +124,7 @@ nav: false
       <option value="machine">machine alignment</option>
       <option value="reviewed">reviewed</option>
       <option value="excluded">excluded</option>
+      <option value="uncertain">uncertain rows</option>
       <option value="edited">edited here</option>
       <option value="checked">sets checked</option>
       <option value="unchecked">sets not yet checked</option>
@@ -150,7 +152,7 @@ nav: false
   <div class="notes">
     <p><b>Sources.</b> Turner's <i>Comparative Dictionary</i> as digitized in JAMBU (Arora et al. 2023); Pischel, <i>Grammatik der Prakrit-Sprachen</i> (1900), in Subhadra Jhā's translation; Oberlies, <i>Pāli</i> (2001); IE-CoR (Heggarty et al. 2023).</p>
     <p><b>Morphology.</b> Each mark gives its rule. <i>3sg verb ending</i>, <i>3sg -ai</i>, <i>final anusvāra</i>, <i>extended stem</i>, and <i>infinitive</i> are the rules used before a fit. <i>Ending -am</i> and the like are a table of Sanskrit endings, applied to words cited without a hyphen, and they overmark: a short noun can pass as inflected. <i>Marked in review</i> came from the reviewers.</p>
-    <p><b>Status.</b> <i>Reviewed</i> pairs show the reviewed alignment. <i>Excluded in review</i> pairs were dropped from the fits. Everything else is the machine alignment.</p>
+    <p><b>Status.</b> <i>Reviewed</i> pairs show the reviewed alignment. <i>Excluded in review</i> pairs were dropped from the fits. <i>Uncertain</i> rows are set aside from their tables and listed under Status. Everything else is the machine alignment.</p>
   </div>
 </div>
 
