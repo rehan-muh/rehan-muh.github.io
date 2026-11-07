@@ -8,7 +8,7 @@
   "rows": 85825,
   "sets": 9456,
   "languages": 685,
-  "marked": 29072,
+  "marked": 28902,
   "reviewed": 16551
  },
  {
@@ -20,7 +20,7 @@
   "rows": 82223,
   "sets": 6780,
   "languages": 670,
-  "marked": 29930,
+  "marked": 29623,
   "reviewed": 14468
  },
  {
@@ -32,7 +32,7 @@
   "rows": 61997,
   "sets": 5041,
   "languages": 640,
-  "marked": 21620,
+  "marked": 21605,
   "reviewed": 0
  },
  {
@@ -44,7 +44,7 @@
   "rows": 43826,
   "sets": 5814,
   "languages": 550,
-  "marked": 19640,
+  "marked": 19371,
   "reviewed": 8187
  },
  {
@@ -56,7 +56,7 @@
   "rows": 6470,
   "sets": 4789,
   "languages": 8,
-  "marked": 1446,
+  "marked": 784,
   "reviewed": 1517
  },
  {
@@ -68,7 +68,7 @@
   "rows": 10783,
   "sets": 6029,
   "languages": 19,
-  "marked": 2070,
+  "marked": 1498,
   "reviewed": 1888
  },
  {
@@ -80,7 +80,7 @@
   "rows": 1674,
   "sets": 479,
   "languages": 46,
-  "marked": 382,
+  "marked": 226,
   "reviewed": 0
  },
  {
@@ -92,7 +92,7 @@
   "rows": 1632,
   "sets": 916,
   "languages": 58,
-  "marked": 418,
+  "marked": 269,
   "reviewed": 0
  },
  {
@@ -104,7 +104,7 @@
   "rows": 1235,
   "sets": 864,
   "languages": 8,
-  "marked": 465,
+  "marked": 229,
   "reviewed": 0
  },
  {
@@ -116,7 +116,7 @@
   "rows": 2998,
   "sets": 1525,
   "languages": 15,
-  "marked": 1083,
+  "marked": 754,
   "reviewed": 0
  },
  {
@@ -128,7 +128,7 @@
   "rows": 221,
   "sets": 70,
   "languages": 29,
-  "marked": 61,
+  "marked": 27,
   "reviewed": 0
  },
  {
@@ -140,7 +140,7 @@
   "rows": 368,
   "sets": 207,
   "languages": 42,
-  "marked": 98,
+  "marked": 69,
   "reviewed": 0
  },
  {
@@ -152,7 +152,7 @@
   "rows": 2989,
   "sets": 1060,
   "languages": 35,
-  "marked": 330,
+  "marked": 312,
   "reviewed": 0
  },
  {
@@ -164,7 +164,7 @@
   "rows": 243,
   "sets": 150,
   "languages": 38,
-  "marked": 22,
+  "marked": 16,
   "reviewed": 0
  },
  {
@@ -176,7 +176,7 @@
   "rows": 344,
   "sets": 208,
   "languages": 62,
-  "marked": 45,
+  "marked": 38,
   "reviewed": 0
  },
  {
@@ -188,7 +188,7 @@
   "rows": 1020,
   "sets": 697,
   "languages": 14,
-  "marked": 253,
+  "marked": 44,
   "reviewed": 0
  },
  {
@@ -200,7 +200,7 @@
   "rows": 1350,
   "sets": 526,
   "languages": 31,
-  "marked": 229,
+  "marked": 215,
   "reviewed": 0
  },
  {
@@ -212,7 +212,7 @@
   "rows": 145,
   "sets": 61,
   "languages": 40,
-  "marked": 14,
+  "marked": 13,
   "reviewed": 0
  },
  {
@@ -224,7 +224,7 @@
   "rows": 121,
   "sets": 77,
   "languages": 34,
-  "marked": 23,
+  "marked": 17,
   "reviewed": 0
  },
  {
@@ -236,7 +236,7 @@
   "rows": 1511,
   "sets": 853,
   "languages": 14,
-  "marked": 284,
+  "marked": 61,
   "reviewed": 0
  },
  {
@@ -248,7 +248,7 @@
   "rows": 13625,
   "sets": 7761,
   "languages": 76,
-  "marked": 3675,
+  "marked": 291,
   "reviewed": 0
  },
  {
@@ -260,7 +260,7 @@
   "rows": 1049,
   "sets": 586,
   "languages": 44,
-  "marked": 379,
+  "marked": 35,
   "reviewed": 0
  },
  {
@@ -272,7 +272,7 @@
   "rows": 1848,
   "sets": 1545,
   "languages": 19,
-  "marked": 449,
+  "marked": 6,
   "reviewed": 0
  },
  {
@@ -284,7 +284,7 @@
   "rows": 158,
   "sets": 145,
   "languages": 5,
-  "marked": 40,
+  "marked": 0,
   "reviewed": 0
  },
  {
@@ -308,7 +308,7 @@
   "rows": 642,
   "sets": 110,
   "languages": 10,
-  "marked": 213,
+  "marked": 203,
   "reviewed": 642
  }
 ]
