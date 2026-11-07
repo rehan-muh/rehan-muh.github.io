@@ -54,6 +54,7 @@
   const ENDPOINT = (window.INDIC_CONFIG && window.INDIC_CONFIG.endpoint) || "";
   const STORE = "indic-alignments-v1";
   const PAGE = 25, ROWS = 300;
+  const KEEPS_CHECKED = ["edited", "uncertain"];
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const fold = (s) => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ʰ/g, "h").toLowerCase();
@@ -139,6 +140,19 @@
     queue.push(item);
     remember();
     flush();
+  }
+
+  // take a table off the page without redrawing, so the reader keeps their place
+  function leave(set, section) {
+    const at = hits.findIndex((h) => h.set === set);
+    if (at >= 0) {
+      hits.splice(at, 1);
+      if (at < shown) shown--;
+    }
+    section.remove();
+    const forms = hits.reduce((n, h) => n + h.rows.length, 0);
+    $("ia-count").textContent = `${num(forms)} forms in ${num(hits.length)} sets`;
+    if (!$("ia-sets").querySelector("section.set") && shown < hits.length) draw();
   }
 
   function toggleProblem(set, on) {
@@ -289,15 +303,15 @@
     SETS.forEach((set) => {
       // a problem set leaves every view but its own
       if (status === "problem" ? !set.problem : set.problem) return;
-      if (status === "checked" && !set.checks.length) return;
-      if (status === "unchecked" && set.checks.length) return;
+      // a checked set is done, so it leaves the page too, except where a view asks for it
+      if (status === "checked" ? !set.checks.length : set.checks.length && !KEEPS_CHECKED.includes(status)) return;
       const whole = q && set.f.includes(q);
       const rows = set.rows.filter((p) => {
         if (lang && p.base_language !== lang) return false;
         // an uncertain row leaves its table and is seen only in the views that ask for it
         if (p.status === "uncertain" && status !== "uncertain" && status !== "edited") return false;
         if (status === "edited" && !p.edited) return false;
-        if (status && !["edited", "checked", "unchecked", "problem"].includes(status) && !p.status.startsWith(status)) return false;
+        if (status && !["edited", "checked", "problem"].includes(status) && !p.status.startsWith(status)) return false;
         const marked = p.cells.some((c) => c.morph);
         if (morph === "yes" && !marked) return false;
         if (morph === "no" && marked) return false;
@@ -459,12 +473,16 @@
       toggleCheck(set, e.target.checked);
       e.target.closest("h3").querySelector(".oks").innerHTML = checkLabel(set);
       showChecked();
+      const view = $("ia-status").value;
+      const gone = view === "checked" ? !set.checks.length : set.checks.length && !KEEPS_CHECKED.includes(view);
+      if (gone) leave(set, e.target.closest("section.set"));
       return;
     }
     if (e.target.classList.contains("setproblem")) {
-      toggleProblem(SETS.find((s) => s.id === e.target.dataset.id), e.target.checked);
+      const set = SETS.find((s) => s.id === e.target.dataset.id);
+      toggleProblem(set, e.target.checked);
       showChecked();
-      e.target.closest("section.set").remove();
+      leave(set, e.target.closest("section.set"));
       return;
     }
     const tr = e.target.closest("tr[data-key]");
