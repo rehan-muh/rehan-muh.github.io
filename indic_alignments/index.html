@@ -1,0 +1,160 @@
+---
+layout: page
+title: indic alignments
+permalink: /indic_alignments/
+nav: false
+---
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  .pa { --pa-ins: #00684c; --pa-insbg: #dcefe9; --pa-fix: #fff3c4; --pa-fixline: #d4a500; --pa-m: #e6e1f7; --pa-mline: #6a55b8;
+        --pa-lost: #b4457f; --pa-faint: #9aa5b1; --pa-bad: #a4324f; --pa-badbg: #fbe4ea; --pa-warn: #8a6100; }
+  html[data-theme="dark"] .pa { --pa-ins: #8fe0c4; --pa-insbg: #123d33; --pa-fix: #4a3d10; --pa-fixline: #d5a63f; --pa-m: #2e2852; --pa-mline: #a998ee;
+        --pa-lost: #e58fbf; --pa-faint: #6b7480; --pa-bad: #f2a3b7; --pa-badbg: #4a1f2c; --pa-warn: #f0cf7a; }
+  .pa .intro { max-width: 70ch; }
+  .pa .controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin: 0.8rem 0 0.6rem; }
+  .pa select, .pa input[type=search], .pa input[type=password], .pa input[type=text] {
+    font: inherit; font-size: 0.95rem; padding: 4px 8px; border-radius: 4px; color: var(--global-text-color);
+    background: var(--global-bg-color); border: 1px solid var(--global-divider-color); max-width: 100%; }
+  .pa #ia-sheet { max-width: 30rem; }
+  .pa #ia-morph, .pa #ia-lang { max-width: 14rem; }
+  .pa input[type=search] { width: 17rem; font-family: "Charis SIL", serif; }
+  .pa label { display: inline-flex; gap: 5px; align-items: center; font-size: 0.95rem; margin: 0; }
+  .pa button, .pa a.btn { font: inherit; font-size: 0.9rem; padding: 4px 12px; border-radius: 4px; cursor: pointer;
+               border: 1px solid var(--global-divider-color); background: var(--global-bg-color);
+               color: var(--global-text-color); }
+  .pa button:hover:not(:disabled), .pa a.btn:hover { border-color: var(--global-theme-color); color: var(--global-theme-color); }
+  .pa button:disabled { opacity: 0.4; cursor: default; }
+  .pa button[aria-pressed="true"], .pa button[aria-pressed="true"]:hover:not(:disabled) {
+    background: var(--global-theme-color); color: var(--global-bg-color); border-color: var(--global-theme-color); }
+  .pa .status { font-size: 0.9rem; color: var(--global-text-color-light); margin: 0 0 0.6rem; }
+  .pa .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.85rem; color: var(--global-text-color-light);
+                padding: 8px 12px; border: 1px solid var(--global-divider-color); border-radius: 4px; margin: 0 0 1rem; }
+  .pa .legend span { display: inline-flex; gap: 5px; align-items: center; }
+  .pa .sw { display: inline-block; min-width: 1.3em; padding: 0 3px; text-align: center; border-radius: 3px;
+            font-family: "Charis SIL", serif; font-style: normal; color: var(--pa-faint); }
+  .pa .sw.c { color: var(--global-text-color); font-weight: 700; }
+  .pa .sw.lost { color: var(--pa-lost); }
+  .pa .sw.fix { color: var(--global-text-color); box-shadow: inset 0 -3px 0 var(--pa-fixline); }
+  .pa .sw.m { color: var(--global-text-color); background: var(--pa-m); box-shadow: inset 0 0 0 1px var(--pa-mline); }
+  .pa .editbar, .pa form.login { border: 1px solid var(--pa-fixline); border-radius: 4px; padding: 8px 12px; margin: 0 0 1rem; font-size: 0.9rem; }
+  .pa .editbar p, .pa form.login p { margin: 0 0 6px; max-width: 76ch; }
+  .pa .row { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+  .pa #ia-saved { font-weight: 700; }
+  .pa #ia-saved.bad { color: var(--pa-bad); }
+  .pa .set { border: 1px solid var(--global-divider-color); border-radius: 4px; margin: 0 0 12px;
+             background: var(--global-card-bg-color); overflow-x: auto; }
+  .pa .set h3 { font-size: 1.05rem; margin: 0; padding: 7px 12px; border-bottom: 1px solid var(--global-divider-color);
+                display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; font-family: "Charis SIL", serif; }
+  .pa .set h3 .id { color: var(--global-text-color-light); font-weight: 400; font-size: 0.8rem; font-family: var(--global-font, inherit); }
+  .pa .set h3 .gl { font-weight: 400; font-size: 0.95rem; }
+  .pa table { border-collapse: collapse; margin: 6px 10px 10px; width: auto; }
+  .pa th, .pa td { padding: 1px 4px; text-align: center; border: 0; vertical-align: baseline; }
+  .pa .lang { text-align: left; padding-right: 10px; white-space: nowrap; color: var(--global-text-color-light); font-size: 0.85rem; font-weight: 400; }
+  .pa .form { text-align: left; padding-right: 16px; white-space: nowrap; font-family: "Charis SIL", serif; font-size: 1.05rem; }
+  .pa .where { text-align: left; padding-left: 14px; white-space: nowrap; font-size: 0.78rem; color: var(--global-text-color-light); }
+  .pa .det { margin-left: 6px; opacity: 0.85; }
+  .pa tr.anc th { font-family: "Charis SIL", serif; font-size: 1.15rem; font-weight: 700;
+                  border-bottom: 2px solid var(--global-divider-color); padding-bottom: 3px; }
+  .pa tr.anc th.m { background: var(--pa-m); }
+  .pa tr.anc th.lang, .pa tr.anc th.form, .pa tr.anc th.where { font-family: inherit; font-size: 0.8rem; font-weight: 400; color: var(--global-text-color-light); }
+  .pa td.seg { font-family: "Charis SIL", serif; font-size: 1.05rem; color: var(--pa-faint); min-width: 1.7em; white-space: nowrap; }
+  .pa td.seg.c { color: var(--global-text-color); font-weight: 700; }
+  .pa td.seg.lost { color: var(--pa-lost); }
+  .pa td.seg.m { background: var(--pa-m); }
+  .pa td.seg.fix { box-shadow: inset 0 -3px 0 var(--pa-fixline); }
+  .pa .in { font-family: "Charis SIL", serif; font-weight: 700; color: var(--pa-ins); background: var(--pa-insbg);
+            border-radius: 3px; padding: 0 2px; margin: 0 1px; font-size: 0.95em; }
+  .pa .in.m { background: var(--pa-m); color: var(--global-text-color); }
+  .pa .tag { font-size: 0.7rem; border-radius: 3px; padding: 0 4px; margin-left: 5px; border: 1px solid var(--global-divider-color); }
+  .pa .tag.excluded { background: var(--pa-badbg); color: var(--pa-bad); border-color: transparent; }
+  .pa tr.ex td { opacity: 0.45; }
+  .pa tr.ex td.tools { opacity: 1; }
+  .pa input.cell { width: 2.6em; padding: 0 2px; text-align: center; font-family: "Charis SIL", serif; font-size: 1rem;
+                   border: 1px solid var(--global-divider-color); border-radius: 3px; background: var(--global-bg-color); color: var(--global-text-color); }
+  .pa td.seg.m input.cell { background: var(--pa-m); }
+  .pa td.seg.fix input.cell { border-color: var(--pa-fixline); border-width: 2px; }
+  .pa button.mk { padding: 0 6px; min-width: 2em; font-family: "Charis SIL", serif; font-size: 1rem; }
+  .pa td.tools { text-align: left; padding-left: 12px; white-space: nowrap; font-size: 0.8rem; }
+  .pa td.tools input[type=text] { width: 11rem; font-size: 0.8rem; padding: 0 4px; margin-left: 6px; }
+  .pa .pager { display: flex; justify-content: center; margin: 1rem 0 2rem; }
+  .pa .empty { color: var(--global-text-color-light); text-align: center; padding: 2rem; }
+  .pa .notes { font-size: 0.87rem; color: var(--global-text-color-light); max-width: 76ch; border-top: 1px solid var(--global-divider-color); padding-top: 0.8rem; }
+  .pa .notes p { margin: 0 0 8px; }
+</style>
+
+<div class="pa">
+  <p class="intro">
+    Every Indic alignment in the project, one sheet to a chain. Each table is one ancestor word. The top row gives its
+    segments, and each row below gives, under every segment, the reflex that continues it, or
+    <span style="font-family:'Charis SIL',serif">-</span> where it was lost. Shaded segments are morphology.
+    Most alignments come from a neural CRF aligner and have not been reviewed. The status beside a form says which.
+  </p>
+
+  <div class="controls">
+    <label>Sheet <select id="ia-sheet"></select></label>
+    <a class="btn" id="ia-open" target="_blank" rel="noopener" hidden>Open in Google Sheets</a>
+    <button id="ia-edit" type="button" aria-pressed="false">Edit alignments</button>
+  </div>
+  <p class="status" id="ia-about"></p>
+
+  <form class="login" id="ia-login" hidden>
+    <p>Edits are saved to Google Sheets as you make them. Enter your name, which is recorded with each edit, and the passphrase you were given.</p>
+    <div class="row">
+      <label>Name <input type="text" id="ia-editor" required autocomplete="name"></label>
+      <label>Passphrase <input type="password" id="ia-pass" required autocomplete="current-password"></label>
+      <button type="submit">Start editing</button>
+      <span id="ia-loginmsg"></span>
+    </div>
+  </form>
+
+  <div class="editbar" id="ia-editbar" hidden>
+    <p>Click a segment to change it, using the IPA shown in the table. Leave it empty to mark it lost. Press Enter for the next
+    segment. To mark or unmark morphology, switch on <i>Mark morphology</i> and click the segments. Setting a pair back to its
+    first alignment removes the edit.</p>
+    <div class="row">
+      <button id="ia-brush" type="button" aria-pressed="false">Mark morphology</button>
+      <span id="ia-saved" role="status"></span>
+    </div>
+  </div>
+
+  <div class="controls">
+    <input id="ia-q" type="search" placeholder="Search word, gloss, or language" aria-label="Search word, gloss, or language">
+    <label>Language <select id="ia-lang"></select></label>
+    <label>Status <select id="ia-status">
+      <option value="">all</option>
+      <option value="machine">machine alignment</option>
+      <option value="reviewed">reviewed</option>
+      <option value="excluded">excluded</option>
+      <option value="edited">edited here</option>
+    </select></label>
+    <label>Morphology <select id="ia-morph"></select></label>
+    <label>Sort <select id="ia-sort">
+      <option value="n">most forms</option>
+      <option value="a">A to Z</option>
+    </select></label>
+  </div>
+  <p class="status" id="ia-count" role="status"></p>
+
+  <div class="legend">
+    <span><i class="sw">a</i> unchanged</span>
+    <span><i class="sw c">ɳ</i> changed</span>
+    <span><i class="sw lost">-</i> lost</span>
+    <span><i class="in">i</i> added before this segment</span>
+    <span><i class="sw m">t</i> morphology</span>
+    <span><i class="sw fix">e</i> edited (hover for the first alignment)</span>
+  </div>
+
+  <div id="ia-sets"><div class="empty">Loading…</div></div>
+  <div class="pager"><button id="ia-more" type="button" hidden>Show more sets</button></div>
+
+  <div class="notes">
+    <p><b>Sources.</b> Turner's <i>Comparative Dictionary</i> as digitized in JAMBU (Arora et al. 2023); Pischel, <i>Grammatik der Prakrit-Sprachen</i> (1900), in Subhadra Jhā's translation; Oberlies, <i>Pāli</i> (2001); IE-CoR (Heggarty et al. 2023).</p>
+    <p><b>Morphology.</b> Each mark gives its rule. <i>3sg verb ending</i>, <i>3sg -ai</i>, <i>final anusvāra</i>, <i>extended stem</i>, and <i>infinitive</i> are the rules used before a fit. <i>Ending -am</i> and the like are a table of Sanskrit endings, applied to words cited without a hyphen, and they overmark: a short noun can pass as inflected. <i>Marked in review</i> came from the reviewers.</p>
+    <p><b>Status.</b> <i>Reviewed</i> pairs show the reviewed alignment. <i>Excluded in review</i> pairs were dropped from the fits. Everything else is the machine alignment.</p>
+  </div>
+</div>
+
+<script src="{{ '/indic_alignments/config.js' | relative_url }}"></script>
+<script src="{{ '/indic_alignments/viewer.js' | relative_url }}"></script>
