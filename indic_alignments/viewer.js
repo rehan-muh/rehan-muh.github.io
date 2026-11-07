@@ -54,7 +54,8 @@
   const ENDPOINT = (window.INDIC_CONFIG && window.INDIC_CONFIG.endpoint) || "";
   const STORE = "indic-alignments-v1";
   const PAGE = 25, ROWS = 300;
-  const KEEPS_CHECKED = ["edited", "uncertain"];
+  const KEEPS_CHECKED = ["edited", "uncertain", "learned"];
+  const LEARNED = "probable learned form";
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const fold = (s) => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ʰ/g, "h").toLowerCase();
@@ -318,6 +319,7 @@
       h += ` <label class="chk"><input class="setcheck" type="checkbox" data-id="${esc(set.id)}"${mine ? " checked" : ""}> I checked this set</label>`;
       h += ` <label class="chk2"><input class="setproblem" type="checkbox" data-id="${esc(set.id)}"${set.problem ? " checked" : ""}> problem set, set aside</label>`;
     }
+    if (set.learned) h += '<span class="tag learned">probable learned form</span>';
     h += `<span class="oks">${checkLabel(set)}</span>`;
     if (set.problem) h += `<span class="tag excluded">set aside${set.problem.editor ? ` by ${esc(set.problem.editor)}` : ""}</span>`;
     h += "</h3>";
@@ -354,13 +356,14 @@
       if (status === "problem" ? !set.problem : set.problem) return;
       // a checked set is done, so it leaves the page too, except where a view asks for it
       if (status === "checked" ? !set.checks.length : set.checks.length && !KEEPS_CHECKED.includes(status)) return;
+      if (status === "learned" && !set.learned) return;
       const whole = q && set.f.includes(q);
       const rows = set.rows.filter((p) => {
         if (lang && p.base_language !== lang) return false;
         // an uncertain row leaves its table and is seen only in the views that ask for it
         if (p.status === "uncertain" && status !== "uncertain" && status !== "edited") return false;
         if (status === "edited" && !p.edited) return false;
-        if (status && !["edited", "checked", "problem"].includes(status) && !p.status.startsWith(status)) return false;
+        if (status && !["edited", "checked", "problem", "learned"].includes(status) && !p.status.startsWith(status)) return false;
         const marked = p.cells.some((c) => c.morph);
         if (morph === "yes" && !marked) return false;
         if (morph === "no" && marked) return false;
@@ -397,8 +400,10 @@
       let set = byId.get(id);
       if (!set) { set = { id, head: row[3], gloss: row[1], rows: [] }; byId.set(id, set); }
       const language = row[2].split("#")[0];
+      if (row[9].includes(LEARNED)) set.learned = true;
+      const details = row[9].replace(new RegExp(`(^|; )${LEARNED}(?=;|$)`), "");
       const pair = { key, n, set, language: row[2], base_language: language, form: row[4], base: [row[5], row[6], row[7], row[8], row[10]],
-                     details: row[9], f: fold(`${row[2]} ${row[4]}`) };
+                     details, f: fold(`${row[2]} ${row[4]}`) };
       pair.rule = function () { return this.morph; };
       overlay(pair);
       languages[language] = (languages[language] || 0) + 1;

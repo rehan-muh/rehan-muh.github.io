@@ -74,6 +74,7 @@ nav: false
             border-radius: 3px; padding: 0 2px; margin: 0 1px; font-size: 0.95em; }
   .pa .in.m { background: var(--pa-m); color: var(--global-text-color); }
   .pa .tag { font-size: 0.7rem; border-radius: 3px; padding: 0 4px; margin-left: 5px; border: 1px solid var(--global-divider-color); }
+  .pa .tag.learned { font-family: var(--global-font, inherit); font-weight: 400; background: var(--pa-fix); color: var(--pa-warn); border-color: transparent; }
   .pa .tag.excluded { background: var(--pa-badbg); color: var(--pa-bad); border-color: transparent; }
   .pa tr.ex td { opacity: 0.45; }
   .pa tr.ex td.tools { opacity: 1; }
@@ -133,6 +134,7 @@ nav: false
       <option value="excluded">excluded</option>
       <option value="uncertain">uncertain rows</option>
       <option value="problem">problem sets</option>
+      <option value="learned">probable learned forms</option>
       <option value="edited">edited here</option>
       <option value="checked">sets checked</option>
     </select></label>
@@ -161,6 +163,7 @@ nav: false
   <div class="notes">
     <p><b>Sources.</b> Turner's <i>Comparative Dictionary</i> as digitized in JAMBU (Arora et al. 2023); Pischel, <i>Grammatik der Prakrit-Sprachen</i> (1900), in Subhadra Jhā's translation; Oberlies, <i>Pāli</i> (2001); IE-CoR (Heggarty et al. 2023).</p>
     <p><b>Morphology.</b> An ancestor's ending is marked only where the words of a set differ over it, so an ending every reflex continues carries no mark. Each mark gives its rule. <i>3sg verb ending</i>, <i>3sg -ai</i>, <i>final anusvāra</i>, and <i>infinitive</i> are the rules used before a fit. <i>Suffix</i> marks come from Turner's own word families: forms of one language under one headword that share a stem show what the suffixes are, and a suffix is cut only if the stem then fits the ancestor better. Each stem is then aligned alone, and so is each member of a compound. <i>Ending -am</i> and the like are a table of Sanskrit endings, applied to words cited without a hyphen, and they overmark: a short noun can pass as inflected. <i>Marked in review</i> came from the reviewers.</p>
+    <p><b>Learned forms.</b> A Prakrit ancestor is tagged <i>probable learned form</i> if it keeps the Sanskrit stop between vowels, which Prakrit normally loses. A stop at the start of a compound member or after a prefix counts as word-initial and is not tagged, and neither is a dialect's regular change (Śaurasenī <i>-d-</i> from <i>-t-</i>). This is a rule of thumb: a tagged form may still be a plain inherited word in some dialect.</p>
     <p><b>Repeats.</b> A row with the same ancestor, language, and reflex is shown once, and it says where else it occurs. The same reflex under a different ancestor is a separate comparison and stays.</p>
     <p><b>Status.</b> <i>Reviewed</i> pairs show the reviewed alignment. <i>Excluded in review</i> pairs were dropped from the fits. <i>Uncertain</i> rows are set aside from their tables and listed under Status. Everything else is the machine alignment.</p>
   </div>
