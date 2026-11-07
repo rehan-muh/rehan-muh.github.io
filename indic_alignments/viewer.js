@@ -8,7 +8,7 @@
 // A row holds two strings, cell for cell: "k a r [a t i] · ·" over "k a r [- - -] [n aː]".
 // · under a reflex segment: the reflex added it. -: lost. Square brackets: morphology.
 (function () {
-  const GAP = "-", ADDED = "·", CHECK = "|#checked:";
+  const GAP = "-", ADDED = "·", CHECK = "|#checked:", PROBLEM = "|#problem";
 
   function parseCells(text) {
     const out = [];
@@ -114,20 +114,34 @@
   }
   function setChecks(set) {
     set.checks = checksOf(set.id);
+    set.problem = changes[`${current.slug}\t${set.id}${PROBLEM}`] || null;
   }
   function checkLabel(set) {
     return set.checks.length ? `<span class="ok">✓ checked by ${esc(set.checks.join(", "))}</span>` : "";
   }
   function showChecked() {
     const done = SETS.filter((s) => s.checks.length).length;
+    const aside = SETS.filter((s) => s.problem).length;
     let uncertain = 0;
     SETS.forEach((s) => { uncertain += s.rows.filter((p) => p.status === "uncertain").length; });
-    $("ia-done").textContent = `${num(done)} of ${num(SETS.length)} sets checked · ${num(uncertain)} ${uncertain === 1 ? "row" : "rows"} uncertain`;
+    $("ia-done").textContent = `${num(done)} of ${num(SETS.length)} sets checked · ${num(aside)} ${aside === 1 ? "set" : "sets"} set aside · ${num(uncertain)} ${uncertain === 1 ? "row" : "rows"} uncertain`;
   }
   function toggleCheck(set, on) {
     const name = identity.editor.replace(/\|/g, " ");
     const key = `${set.id}${CHECK}${name}`;
     const item = { sheet: current.slug, key, row: 0, anc: "", ref: "", morph: "", status: "checked", note: "" };
+    if (on) changes[`${current.slug}\t${key}`] = { ...item, editor: identity.editor, saved: new Date().toISOString() };
+    else { item.clear = true; delete changes[`${current.slug}\t${key}`]; }
+    setChecks(set);
+    queue = queue.filter((q) => !(q.sheet === item.sheet && q.key === item.key));
+    queue.push(item);
+    remember();
+    flush();
+  }
+
+  function toggleProblem(set, on) {
+    const key = `${set.id}${PROBLEM}`;
+    const item = { sheet: current.slug, key, row: 0, anc: "", ref: "", morph: "", status: "problem set", note: "" };
     if (on) changes[`${current.slug}\t${key}`] = { ...item, editor: identity.editor, saved: new Date().toISOString() };
     else { item.clear = true; delete changes[`${current.slug}\t${key}`]; }
     setChecks(set);
@@ -227,8 +241,11 @@
     if (editing) {
       const mine = set.checks.includes(identity.editor.replace(/\|/g, " "));
       h += ` <label class="chk"><input class="setcheck" type="checkbox" data-id="${esc(set.id)}"${mine ? " checked" : ""}> I checked this set</label>`;
+      h += ` <label class="chk2"><input class="setproblem" type="checkbox" data-id="${esc(set.id)}"${set.problem ? " checked" : ""}> problem set, set aside</label>`;
     }
-    h += `<span class="oks">${checkLabel(set)}</span></h3>`;
+    h += `<span class="oks">${checkLabel(set)}</span>`;
+    if (set.problem) h += `<span class="tag excluded">set aside${set.problem.editor ? ` by ${esc(set.problem.editor)}` : ""}</span>`;
+    h += "</h3>";
     h += '<table><thead><tr class="anc"><th class="lang" scope="col">Language</th><th class="form" scope="col">As cited</th>';
     slots.forEach((width, k) => {
       h += `<th class="add" scope="col">${GAP}</th>`.repeat(width);
@@ -255,6 +272,8 @@
     hits = [];
     let forms = 0;
     SETS.forEach((set) => {
+      // a problem set leaves every view but its own
+      if (status === "problem" ? !set.problem : set.problem) return;
       if (status === "checked" && !set.checks.length) return;
       if (status === "unchecked" && set.checks.length) return;
       const whole = q && set.f.includes(q);
@@ -263,7 +282,7 @@
         // an uncertain row leaves its table and is seen only in the views that ask for it
         if (p.status === "uncertain" && status !== "uncertain" && status !== "edited") return false;
         if (status === "edited" && !p.edited) return false;
-        if (status && !["edited", "checked", "unchecked"].includes(status) && !p.status.startsWith(status)) return false;
+        if (status && !["edited", "checked", "unchecked", "problem"].includes(status) && !p.status.startsWith(status)) return false;
         const marked = p.cells.some((c) => c.morph);
         if (morph === "yes" && !marked) return false;
         if (morph === "no" && marked) return false;
@@ -425,6 +444,12 @@
       toggleCheck(set, e.target.checked);
       e.target.closest("h3").querySelector(".oks").innerHTML = checkLabel(set);
       showChecked();
+      return;
+    }
+    if (e.target.classList.contains("setproblem")) {
+      toggleProblem(SETS.find((s) => s.id === e.target.dataset.id), e.target.checked);
+      showChecked();
+      e.target.closest("section.set").remove();
       return;
     }
     const tr = e.target.closest("tr[data-key]");

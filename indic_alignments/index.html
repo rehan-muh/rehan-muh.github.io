@@ -49,6 +49,7 @@ nav: false
   .pa .set h3 .id { color: var(--global-text-color-light); font-weight: 400; font-size: 0.8rem; font-family: var(--global-font, inherit); }
   .pa .set h3 .gl { font-weight: 400; font-size: 0.95rem; }
   .pa .set h3 .chk { font-family: var(--global-font, inherit); font-size: 0.8rem; font-weight: 400; margin-left: auto; }
+  .pa .set h3 .chk2 { font-family: var(--global-font, inherit); font-size: 0.8rem; font-weight: 400; }
   .pa .set h3 .ok { font-family: var(--global-font, inherit); font-size: 0.8rem; font-weight: 400; color: var(--pa-ins); }
   .pa table { border-collapse: collapse; margin: 6px 10px 10px; width: auto; }
   .pa th, .pa td { padding: 1px 4px; text-align: center; border: 0; vertical-align: baseline; }
@@ -108,8 +109,8 @@ nav: false
   <div class="editbar" id="ia-editbar" hidden>
     <p>Click a segment to change it, using the IPA shown in the table. Leave it empty to mark it lost. Press Enter for the next
     segment. To mark or unmark morphology, switch on <i>Mark morphology</i> and click the segments. Setting a pair back to its
-    first alignment removes the edit. A row marked <i>uncertain</i> leaves its table. Choose <i>uncertain rows</i> under Status
-    to see those rows, and untick one to put it back.</p>
+    first alignment removes the edit. A row marked <i>uncertain</i> leaves its table, and a set marked <i>problem set</i> leaves the
+    page. Choose <i>uncertain rows</i> or <i>problem sets</i> under Status to see them, and untick one to put it back.</p>
     <div class="row">
       <button id="ia-brush" type="button" aria-pressed="false">Mark morphology</button>
       <span id="ia-saved" role="status"></span>
@@ -125,6 +126,7 @@ nav: false
       <option value="reviewed">reviewed</option>
       <option value="excluded">excluded</option>
       <option value="uncertain">uncertain rows</option>
+      <option value="problem">problem sets</option>
       <option value="edited">edited here</option>
       <option value="checked">sets checked</option>
       <option value="unchecked">sets not yet checked</option>
