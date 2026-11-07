@@ -1,0 +1,1 @@
+window.INDIC_CONFIG={endpoint:""};
