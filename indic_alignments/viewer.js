@@ -8,7 +8,7 @@
 // A row holds two strings, cell for cell: "k a r [a t i] · ·" over "k a r [- - -] [n aː]".
 // · under a reflex segment: the reflex added it. -: lost. Square brackets: morphology.
 (function () {
-  const GAP = "-", ADDED = "·";
+  const GAP = "-", ADDED = "·", CHECK = "|#checked:";
 
   function parseCells(text) {
     const out = [];
@@ -107,6 +107,34 @@
     sending = false;
   }
 
+  // a check is one row on the Changes tab, keyed by the set and the person
+  function checksOf(id) {
+    const head = `${current.slug}\t${id}${CHECK}`;
+    return Object.keys(changes).filter((k) => k.startsWith(head)).map((k) => k.slice(head.length));
+  }
+  function setChecks(set) {
+    set.checks = checksOf(set.id);
+  }
+  function checkLabel(set) {
+    return set.checks.length ? `<span class="ok">✓ checked by ${esc(set.checks.join(", "))}</span>` : "";
+  }
+  function showChecked() {
+    const done = SETS.filter((s) => s.checks.length).length;
+    $("ia-done").textContent = `${num(done)} of ${num(SETS.length)} sets checked`;
+  }
+  function toggleCheck(set, on) {
+    const name = identity.editor.replace(/\|/g, " ");
+    const key = `${set.id}${CHECK}${name}`;
+    const item = { sheet: current.slug, key, row: 0, anc: "", ref: "", morph: "", status: "checked", note: "" };
+    if (on) changes[`${current.slug}\t${key}`] = { ...item, editor: identity.editor, saved: new Date().toISOString() };
+    else { item.clear = true; delete changes[`${current.slug}\t${key}`]; }
+    setChecks(set);
+    queue = queue.filter((q) => !(q.sheet === item.sheet && q.key === item.key));
+    queue.push(item);
+    remember();
+    flush();
+  }
+
   function overlay(pair) {
     const c = changes[`${current.slug}\t${pair.key}`];
     pair.cells = parsePair(c ? c.anc : pair.base[0], c ? c.ref : pair.base[1]);
@@ -191,7 +219,12 @@
     });
     let h = `<section class="set"><h3>${esc(set.head || segs.map((s) => s.top).join(""))}`;
     if (set.gloss && set.gloss !== set.head) h += ` <span class="gl">‘${esc(set.gloss)}’</span>`;
-    h += ` <span class="id">${esc(set.id)}, ${rows.length} of ${set.rows.length} ${set.rows.length === 1 ? "form" : "forms"}</span></h3>`;
+    h += ` <span class="id">${esc(set.id)}, ${rows.length} of ${set.rows.length} ${set.rows.length === 1 ? "form" : "forms"}</span>`;
+    if (editing) {
+      const mine = set.checks.includes(identity.editor.replace(/\|/g, " "));
+      h += ` <label class="chk"><input class="setcheck" type="checkbox" data-id="${esc(set.id)}"${mine ? " checked" : ""}> I checked this set</label>`;
+    }
+    h += `<span class="oks">${checkLabel(set)}</span></h3>`;
     h += '<table><thead><tr class="anc"><th class="lang" scope="col">Language</th><th class="form" scope="col">As cited</th>';
     slots.forEach((width, k) => {
       h += `<th class="add" scope="col">${GAP}</th>`.repeat(width);
@@ -218,11 +251,13 @@
     hits = [];
     let forms = 0;
     SETS.forEach((set) => {
+      if (status === "checked" && !set.checks.length) return;
+      if (status === "unchecked" && set.checks.length) return;
       const whole = q && set.f.includes(q);
       const rows = set.rows.filter((p) => {
         if (lang && p.base_language !== lang) return false;
         if (status === "edited" && !p.edited) return false;
-        if (status && status !== "edited" && !p.status.startsWith(status)) return false;
+        if (status && !["edited", "checked", "unchecked"].includes(status) && !p.status.startsWith(status)) return false;
         const marked = p.cells.some((c) => c.morph);
         if (morph === "yes" && !marked) return false;
         if (morph === "no" && marked) return false;
@@ -269,7 +304,8 @@
       pairs.set(key, pair);
     });
     SETS = [...byId.values()];
-    SETS.forEach((s) => { s.f = fold(`${s.head} ${s.gloss} ${s.id}`); });
+    SETS.forEach((s) => { s.f = fold(`${s.head} ${s.gloss} ${s.id}`); setChecks(s); });
+    showChecked();
     $("ia-lang").innerHTML = '<option value="">all languages</option>' + Object.keys(languages).sort()
       .map((k) => `<option value="${esc(k)}">${esc(k)} (${num(languages[k])})</option>`).join("");
     $("ia-morph").innerHTML = '<option value="">all forms</option><option value="yes">with morphology marked</option><option value="no">without</option>' +
@@ -378,6 +414,13 @@
     tr.outerHTML = rowHTML(pair, pair.slots);
   });
   $("ia-sets").addEventListener("change", (e) => {
+    if (e.target.classList.contains("setcheck")) {
+      const set = SETS.find((s) => s.id === e.target.dataset.id);
+      toggleCheck(set, e.target.checked);
+      e.target.closest("h3").querySelector(".oks").innerHTML = checkLabel(set);
+      showChecked();
+      return;
+    }
     const tr = e.target.closest("tr[data-key]");
     if (!tr) return;
     const pair = pairs.get(tr.dataset.key);

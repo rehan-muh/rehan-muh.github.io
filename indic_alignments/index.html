@@ -48,6 +48,8 @@ nav: false
                 display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; font-family: "Charis SIL", serif; }
   .pa .set h3 .id { color: var(--global-text-color-light); font-weight: 400; font-size: 0.8rem; font-family: var(--global-font, inherit); }
   .pa .set h3 .gl { font-weight: 400; font-size: 0.95rem; }
+  .pa .set h3 .chk { font-family: var(--global-font, inherit); font-size: 0.8rem; font-weight: 400; margin-left: auto; }
+  .pa .set h3 .ok { font-family: var(--global-font, inherit); font-size: 0.8rem; font-weight: 400; color: var(--pa-ins); }
   .pa table { border-collapse: collapse; margin: 6px 10px 10px; width: auto; }
   .pa th, .pa td { padding: 1px 4px; text-align: center; border: 0; vertical-align: baseline; }
   .pa .lang { text-align: left; padding-right: 10px; white-space: nowrap; color: var(--global-text-color-light); font-size: 0.85rem; font-weight: 400; }
@@ -122,6 +124,8 @@ nav: false
       <option value="reviewed">reviewed</option>
       <option value="excluded">excluded</option>
       <option value="edited">edited here</option>
+      <option value="checked">sets checked</option>
+      <option value="unchecked">sets not yet checked</option>
     </select></label>
     <label>Morphology <select id="ia-morph"></select></label>
     <label>Sort <select id="ia-sort">
@@ -129,7 +133,7 @@ nav: false
       <option value="a">A to Z</option>
     </select></label>
   </div>
-  <p class="status" id="ia-count" role="status"></p>
+  <p class="status"><span id="ia-count" role="status"></span> · <span id="ia-done"></span></p>
 
   <div class="legend">
     <span><i class="sw">a</i> unchanged</span>
