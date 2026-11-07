@@ -68,6 +68,8 @@ nav: false
   .pa td.seg.fix { box-shadow: inset 0 -3px 0 var(--pa-fixline); }
   .pa tr.anc th.add, .pa td.seg.add { min-width: 1.4em; padding: 1px 3px; color: var(--pa-ins); background: var(--pa-insbg); font-weight: 700; }
   .pa td.seg.add.none { font-weight: 400; }
+  .pa tr.anc th.add.plain, .pa td.seg.add.plain { color: var(--global-text-color-light); background: transparent; box-shadow: inset 1px 0 0 var(--global-divider-color), inset -1px 0 0 var(--global-divider-color); }
+  .pa tr.anc th.seam, .pa td.seg.seam { border-left: 2px solid var(--global-text-color-light); }
   .pa .in { font-family: "Charis SIL", serif; font-weight: 700; color: var(--pa-ins); background: var(--pa-insbg);
             border-radius: 3px; padding: 0 2px; margin: 0 1px; font-size: 0.95em; }
   .pa .in.m { background: var(--pa-m); color: var(--global-text-color); }
@@ -143,7 +145,9 @@ nav: false
     <span><i class="sw">a</i> unchanged</span>
     <span><i class="sw c">ɳ</i> changed</span>
     <span><i class="sw lost">-</i> lost</span>
-    <span><i class="in">i</i> green column: the ancestor has a gap here</span>
+    <span><i class="in">i</i> green column: a suffix, opposite a gap in the ancestor</span>
+    <span><i class="sw">i</i> outlined column: a segment the aligner could not place</span>
+    <span>heavy line: the seam of a compound, each member aligned alone</span>
     <span><i class="sw m">t</i> morphology</span>
     <span><i class="sw fix">e</i> edited (hover for the first alignment)</span>
   </div>
@@ -153,7 +157,7 @@ nav: false
 
   <div class="notes">
     <p><b>Sources.</b> Turner's <i>Comparative Dictionary</i> as digitized in JAMBU (Arora et al. 2023); Pischel, <i>Grammatik der Prakrit-Sprachen</i> (1900), in Subhadra Jhā's translation; Oberlies, <i>Pāli</i> (2001); IE-CoR (Heggarty et al. 2023).</p>
-    <p><b>Morphology.</b> Each mark gives its rule. <i>3sg verb ending</i>, <i>3sg -ai</i>, <i>final anusvāra</i>, <i>extended stem</i>, and <i>infinitive</i> are the rules used before a fit. <i>Ending -am</i> and the like are a table of Sanskrit endings, applied to words cited without a hyphen, and they overmark: a short noun can pass as inflected. <i>Marked in review</i> came from the reviewers.</p>
+    <p><b>Morphology.</b> Each mark gives its rule. <i>3sg verb ending</i>, <i>3sg -ai</i>, <i>final anusvāra</i>, and <i>infinitive</i> are the rules used before a fit. <i>Suffix</i> marks come from Turner's own word families: forms of one language under one headword that share a stem show what the suffixes are, and a suffix is cut only if the stem then fits the ancestor better. Each stem is then aligned alone, and so is each member of a compound. <i>Ending -am</i> and the like are a table of Sanskrit endings, applied to words cited without a hyphen, and they overmark: a short noun can pass as inflected. <i>Marked in review</i> came from the reviewers.</p>
     <p><b>Status.</b> <i>Reviewed</i> pairs show the reviewed alignment. <i>Excluded in review</i> pairs were dropped from the fits. <i>Uncertain</i> rows are set aside from their tables and listed under Status. Everything else is the machine alignment.</p>
   </div>
 </div>

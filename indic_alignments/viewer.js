@@ -16,8 +16,10 @@
     String(text).split(" ").forEach((token) => {
       if (!token) return;
       const opens = token[0] === "[", shuts = token[token.length - 1] === "]";
-      const bare = token.replace(/^\[/, "").replace(/\]$/, "");
-      out.push({ seg: bare, morph: inside || opens });
+      let bare = token.replace(/^\[/, "").replace(/\]$/, "");
+      const seam = bare.length > 1 && bare[0] === "+";
+      if (seam) bare = bare.slice(1);
+      out.push({ seg: bare, morph: inside || opens, seam });
       inside = (inside || opens) && !shuts;
     });
     return out;
@@ -26,16 +28,16 @@
     return cells.map((c, n) => {
       const opens = c.morph && (n === 0 || !cells[n - 1].morph);
       const shuts = c.morph && (n === cells.length - 1 || !cells[n + 1].morph);
-      return `${opens ? "[" : ""}${c.seg}${shuts ? "]" : ""}`;
+      return `${opens ? "[" : ""}${c.seam ? "+" : ""}${c.seg}${shuts ? "]" : ""}`;
     }).join(" ");
   }
   // [{top, bottom, morph}] for a pair, from its two strings
   function parsePair(anc, ref) {
     const top = parseCells(anc), bottom = parseCells(ref);
-    return top.map((c, i) => ({ top: c.seg, bottom: bottom[i] ? bottom[i].seg : GAP, morph: c.morph }));
+    return top.map((c, i) => ({ top: c.seg, bottom: bottom[i] ? bottom[i].seg : GAP, morph: c.morph, seam: c.seam }));
   }
   function renderPair(cells) {
-    return [renderCells(cells.map((c) => ({ seg: c.top, morph: c.morph }))),
+    return [renderCells(cells.map((c) => ({ seg: c.top, morph: c.morph, seam: c.seam }))),
             renderCells(cells.map((c) => ({ seg: c.bottom, morph: c.morph })))];
   }
   const clean = (v) => {
@@ -181,7 +183,7 @@
     const lost = cell.bottom === GAP;
     const was = parsePair(pair.base[0], pair.base[1])[i];
     const fixed = !was || was.bottom !== cell.bottom || was.morph !== cell.morph;
-    const cls = ["seg", lost ? "lost" : cell.bottom !== cell.top ? "c" : "", cell.morph ? "m" : "", fixed ? "fix" : ""].join(" ");
+    const cls = ["seg", lost ? "lost" : cell.bottom !== cell.top ? "c" : "", cell.morph ? "m" : "", cell.seam ? "seam" : "", fixed ? "fix" : ""].join(" ");
     const tip = fixed && was ? ` title="first alignment: ${esc(was.bottom)}${was.morph ? " (morphology)" : ""}"` : "";
     let body = esc(lost ? GAP : cell.bottom);
     if (editing && !brush) body = `<input class="cell" data-i="${i}" value="${esc(lost ? "" : cell.bottom)}" aria-label="Reflex of ${esc(cell.top)}">`;
@@ -199,17 +201,18 @@
     });
     return { added, rank };
   }
-  function addedCell(pair, i) {
-    return i === undefined ? `<td class="seg add none">${GAP}</td>` : `<td class="seg add">${esc(pair.cells[i].bottom)}</td>`;
+  function addedCell(pair, i, green) {
+    const kind = green ? "add" : "add plain";
+    return i === undefined ? `<td class="seg ${kind} none">${GAP}</td>` : `<td class="seg ${kind}">${esc(pair.cells[i].bottom)}</td>`;
   }
   // `slots[p]` is how many columns the added segments before p need in this table
-  function rowHTML(pair, slots) {
+  function rowHTML(pair, slots, greens) {
     const excluded = /excluded/.test(pair.status);
     let h = `<tr class="${excluded ? "ex" : ""}" data-key="${esc(pair.key)}">`;
     h += `<td class="lang">${esc(pair.language)}</td><td class="form">${esc(pair.form)}</td>`;
     const { added, rank } = layout(pair);
     slots.forEach((width, p) => {
-      for (let k = 0; k < width; k++) h += addedCell(pair, added[p] ? added[p][k] : undefined);
+      for (let k = 0; k < width; k++) h += addedCell(pair, added[p] ? added[p][k] : undefined, greens[p][k]);
       if (p < rank.length) h += segCell(pair, rank[p]);
       else if (p < slots.length - 1) h += "<td></td>";
     });
@@ -234,6 +237,15 @@
       layout(p).added.forEach((list, k) => { if (k < slots.length) slots[k] = Math.max(slots[k], list.length); });
       p.slots = slots;
     });
+    // a column is green if it holds a suffix in any row, and grey if it holds only segments
+    // the aligner could not place
+    const greens = slots.map((width) => Array(width).fill(false));
+    rows.forEach((p) => {
+      p.greens = greens;
+      layout(p).added.forEach((list, k) => list.forEach((i, n) => {
+        if (k < greens.length && p.cells[i].morph) greens[k][n] = true;
+      }));
+    });
     let h = `<section class="set"><h3>${esc(set.head || segs.map((s) => s.top).join(""))}`;
     if (set.gloss && set.gloss !== set.head) h += ` <span class="gl">‘${esc(set.gloss)}’</span>`;
     const aside = set.rows.filter((p) => p.status === "uncertain").length;
@@ -248,11 +260,14 @@
     h += "</h3>";
     h += '<table><thead><tr class="anc"><th class="lang" scope="col">Language</th><th class="form" scope="col">As cited</th>';
     slots.forEach((width, k) => {
-      h += `<th class="add" scope="col">${GAP}</th>`.repeat(width);
-      if (k < segs.length) h += `<th scope="col"${everyone[k] ? ' class="m"' : ""}>${esc(segs[k].top)}</th>`;
+      for (let n = 0; n < width; n++) h += `<th class="add${greens[k][n] ? "" : " plain"}" scope="col">${GAP}</th>`;
+      if (k < segs.length) {
+        const cls = [everyone[k] ? "m" : "", segs[k].seam ? "seam" : ""].join(" ").trim();
+        h += `<th scope="col"${cls ? ` class="${cls}"` : ""}>${esc(segs[k].top)}</th>`;
+      }
     });
     h += '<th class="where" scope="col">Morphology, status, source</th>' + (editing ? '<th class="where" scope="col">Edit</th>' : "") + "</tr></thead><tbody>";
-    rows.forEach((p) => { h += rowHTML(p, slots); });
+    rows.forEach((p) => { h += rowHTML(p, slots, greens); });
     return h + "</tbody></table></section>";
   }
   function draw() {
@@ -436,7 +451,7 @@
     pair.morph = unchanged ? pair.base[2] : pair.cells.some((c) => c.morph) ? `${pair.base[2] ? pair.base[2] + "; " : ""}edited by hand` : "";
     save(pair);
     const tr = button.closest("tr");
-    tr.outerHTML = rowHTML(pair, pair.slots);
+    tr.outerHTML = rowHTML(pair, pair.slots, pair.greens);
   });
   $("ia-sets").addEventListener("change", (e) => {
     if (e.target.classList.contains("setcheck")) {
