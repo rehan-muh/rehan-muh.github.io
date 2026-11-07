@@ -5,11 +5,11 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_modern_Indo-Aryan",
   "source": "jambu",
   "chain": "Old Indo-Aryan > modern Indo-Aryan",
-  "rows": 85825,
-  "sets": 9456,
-  "languages": 685,
-  "marked": 28902,
-  "reviewed": 16551
+  "rows": 84478,
+  "sets": 9424,
+  "languages": 676,
+  "marked": 28518,
+  "reviewed": 16527
  },
  {
   "book": "Indic 2 Prakrit to modern",
@@ -17,11 +17,11 @@
   "slug": "jambu_full__Prakrit_to_modern_Indo-Aryan",
   "source": "jambu",
   "chain": "Prakrit > modern Indo-Aryan",
-  "rows": 82223,
-  "sets": 6780,
-  "languages": 670,
-  "marked": 29623,
-  "reviewed": 14468
+  "rows": 71254,
+  "sets": 6126,
+  "languages": 633,
+  "marked": 27352,
+  "reviewed": 12830
  },
  {
   "book": "Indic 3 Pali to modern",
@@ -29,10 +29,10 @@
   "slug": "jambu_full__Pali_to_modern_Indo-Aryan",
   "source": "jambu",
   "chain": "Pali > modern Indo-Aryan",
-  "rows": 61997,
-  "sets": 5041,
-  "languages": 640,
-  "marked": 21605,
+  "rows": 29871,
+  "sets": 2844,
+  "languages": 521,
+  "marked": 13045,
   "reviewed": 0
  },
  {
@@ -41,11 +41,11 @@
   "slug": "jambu_full__Reconstructed_OIA_to_modern_Indo-Aryan",
   "source": "jambu",
   "chain": "Reconstructed OIA > modern Indo-Aryan",
-  "rows": 43826,
-  "sets": 5814,
-  "languages": 550,
-  "marked": 19371,
-  "reviewed": 8187
+  "rows": 41232,
+  "sets": 5651,
+  "languages": 539,
+  "marked": 18243,
+  "reviewed": 7941
  },
  {
   "book": "Indic 5 OIA to Middle Indo-Aryan",
@@ -53,10 +53,10 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_Pali",
   "source": "jambu",
   "chain": "Old Indo-Aryan > Pali",
-  "rows": 6470,
-  "sets": 4789,
+  "rows": 5839,
+  "sets": 4506,
   "languages": 8,
-  "marked": 784,
+  "marked": 736,
   "reviewed": 1517
  },
  {
@@ -65,10 +65,10 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_Prakrit",
   "source": "jambu",
   "chain": "Old Indo-Aryan > Prakrit",
-  "rows": 10783,
-  "sets": 6029,
+  "rows": 9640,
+  "sets": 5727,
   "languages": 19,
-  "marked": 1498,
+  "marked": 1440,
   "reviewed": 1888
  },
  {
@@ -77,9 +77,9 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_Ashokan_Prakrit",
   "source": "jambu",
   "chain": "Old Indo-Aryan > Ashokan Prakrit",
-  "rows": 1674,
+  "rows": 1671,
   "sets": 479,
-  "languages": 46,
+  "languages": 45,
   "marked": 226,
   "reviewed": 0
  },
@@ -89,10 +89,10 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_other_Middle_Indo-Aryan",
   "source": "jambu",
   "chain": "Old Indo-Aryan > other Middle Indo-Aryan",
-  "rows": 1632,
+  "rows": 1612,
   "sets": 916,
-  "languages": 58,
-  "marked": 269,
+  "languages": 57,
+  "marked": 267,
   "reviewed": 0
  },
  {
@@ -101,10 +101,10 @@
   "slug": "jambu_full__Reconstructed_OIA_to_Pali",
   "source": "jambu",
   "chain": "Reconstructed OIA > Pali",
-  "rows": 1235,
-  "sets": 864,
+  "rows": 1184,
+  "sets": 838,
   "languages": 8,
-  "marked": 229,
+  "marked": 224,
   "reviewed": 0
  },
  {
@@ -113,10 +113,10 @@
   "slug": "jambu_full__Reconstructed_OIA_to_Prakrit",
   "source": "jambu",
   "chain": "Reconstructed OIA > Prakrit",
-  "rows": 2998,
-  "sets": 1525,
+  "rows": 2913,
+  "sets": 1499,
   "languages": 15,
-  "marked": 754,
+  "marked": 741,
   "reviewed": 0
  },
  {
@@ -137,10 +137,10 @@
   "slug": "jambu_full__Reconstructed_OIA_to_other_Middle_Indo-Aryan",
   "source": "jambu",
   "chain": "Reconstructed OIA > other Middle Indo-Aryan",
-  "rows": 368,
+  "rows": 363,
   "sets": 207,
-  "languages": 42,
-  "marked": 69,
+  "languages": 41,
+  "marked": 68,
   "reviewed": 0
  },
  {
@@ -149,10 +149,10 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_Nuristani_comparanda",
   "source": "jambu",
   "chain": "Old Indo-Aryan > Nuristani comparanda",
-  "rows": 2989,
-  "sets": 1060,
+  "rows": 2940,
+  "sets": 1046,
   "languages": 35,
-  "marked": 312,
+  "marked": 307,
   "reviewed": 0
  },
  {
@@ -161,9 +161,9 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_Iranian_comparanda",
   "source": "jambu",
   "chain": "Old Indo-Aryan > Iranian comparanda",
-  "rows": 243,
+  "rows": 233,
   "sets": 150,
-  "languages": 38,
+  "languages": 37,
   "marked": 16,
   "reviewed": 0
  },
@@ -173,10 +173,10 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_other_comparanda",
   "source": "jambu",
   "chain": "Old Indo-Aryan > other comparanda",
-  "rows": 344,
+  "rows": 337,
   "sets": 208,
-  "languages": 62,
-  "marked": 38,
+  "languages": 60,
+  "marked": 37,
   "reviewed": 0
  },
  {
@@ -185,8 +185,8 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_headword_variants",
   "source": "jambu",
   "chain": "Old Indo-Aryan > headword variants",
-  "rows": 1020,
-  "sets": 697,
+  "rows": 1009,
+  "sets": 691,
   "languages": 14,
   "marked": 44,
   "reviewed": 0
@@ -197,10 +197,10 @@
   "slug": "jambu_full__Reconstructed_OIA_to_Nuristani_comparanda",
   "source": "jambu",
   "chain": "Reconstructed OIA > Nuristani comparanda",
-  "rows": 1350,
-  "sets": 526,
+  "rows": 1331,
+  "sets": 520,
   "languages": 31,
-  "marked": 215,
+  "marked": 214,
   "reviewed": 0
  },
  {
@@ -209,9 +209,9 @@
   "slug": "jambu_full__Reconstructed_OIA_to_Iranian_comparanda",
   "source": "jambu",
   "chain": "Reconstructed OIA > Iranian comparanda",
-  "rows": 145,
-  "sets": 61,
-  "languages": 40,
+  "rows": 134,
+  "sets": 60,
+  "languages": 37,
   "marked": 13,
   "reviewed": 0
  },
@@ -221,7 +221,7 @@
   "slug": "jambu_full__Reconstructed_OIA_to_other_comparanda",
   "source": "jambu",
   "chain": "Reconstructed OIA > other comparanda",
-  "rows": 121,
+  "rows": 120,
   "sets": 77,
   "languages": 34,
   "marked": 17,
@@ -233,10 +233,10 @@
   "slug": "jambu_full__Reconstructed_OIA_to_headword_variants",
   "source": "jambu",
   "chain": "Reconstructed OIA > headword variants",
-  "rows": 1511,
-  "sets": 853,
+  "rows": 1477,
+  "sets": 841,
   "languages": 14,
-  "marked": 61,
+  "marked": 60,
   "reviewed": 0
  },
  {
@@ -245,10 +245,10 @@
   "slug": "pischel_full__Old_Indo-Aryan_to_Prakrits",
   "source": "pischel",
   "chain": "Old Indo-Aryan > Prakrits",
-  "rows": 13625,
-  "sets": 7761,
-  "languages": 76,
-  "marked": 291,
+  "rows": 13440,
+  "sets": 7739,
+  "languages": 75,
+  "marked": 288,
   "reviewed": 0
  },
  {
@@ -257,8 +257,8 @@
   "slug": "pischel_full__Reconstructed_OIA_to_Prakrits",
   "source": "pischel",
   "chain": "Reconstructed OIA > Prakrits",
-  "rows": 1049,
-  "sets": 586,
+  "rows": 1045,
+  "sets": 584,
   "languages": 44,
   "marked": 35,
   "reviewed": 0
@@ -269,9 +269,9 @@
   "slug": "oberlies_full__Old_Indo-Aryan_to_Pali",
   "source": "oberlies",
   "chain": "Old Indo-Aryan > Pali",
-  "rows": 1848,
-  "sets": 1545,
-  "languages": 19,
+  "rows": 1625,
+  "sets": 1388,
+  "languages": 17,
   "marked": 6,
   "reviewed": 0
  },
@@ -281,8 +281,8 @@
   "slug": "oberlies_full__Reconstructed_OIA_to_Pali",
   "source": "oberlies",
   "chain": "Reconstructed OIA > Pali",
-  "rows": 158,
-  "sets": 145,
+  "rows": 154,
+  "sets": 142,
   "languages": 5,
   "marked": 0,
   "reviewed": 0
@@ -305,10 +305,10 @@
   "slug": "iecor__Pali_to_Indo-Aryan",
   "source": "iecor",
   "chain": "Pali > Indo-Aryan",
-  "rows": 642,
-  "sets": 110,
+  "rows": 600,
+  "sets": 103,
   "languages": 10,
   "marked": 203,
-  "reviewed": 642
+  "reviewed": 600
  }
 ]
