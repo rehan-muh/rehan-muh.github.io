@@ -122,6 +122,16 @@
   function checkLabel(set) {
     return set.checks.length ? `<span class="ok">✓ checked by ${esc(set.checks.join(", "))}</span>` : "";
   }
+  // the menu of sheets, smallest first, each with how far the checking has got
+  function fillSheets() {
+    $("ia-sheet").innerHTML = INDEX.map((s) => {
+      const head = `${s.slug}\t`;
+      const done = new Set(Object.keys(changes).filter((k) => k.startsWith(head) && k.includes(CHECK))
+        .map((k) => k.slice(head.length).split(CHECK)[0])).size;
+      return `<option value="${esc(s.slug)}">${esc(s.sheet)} (${num(done)} of ${num(s.sets)} sets checked)</option>`;
+    }).join("");
+    if (current) $("ia-sheet").value = current.slug;
+  }
   function showChecked() {
     const done = SETS.filter((s) => s.checks.length).length;
     const aside = SETS.filter((s) => s.problem).length;
@@ -433,16 +443,11 @@
     recall();
     const r = await fetch(`${BASE}index.json`);
     if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
-    INDEX = await r.json();
-    let group = null, html = "";
-    INDEX.forEach((s) => {
-      if (s.book !== group) { html += `${group ? "</optgroup>" : ""}<optgroup label="${esc(s.book)}">`; group = s.book; }
-      html += `<option value="${esc(s.slug)}">${esc(s.sheet)} (${num(s.rows)})</option>`;
-    });
-    $("ia-sheet").innerHTML = html + "</optgroup>";
+    INDEX = (await r.json()).sort((x, y) => x.sets - y.sets);
     $("ia-edit").disabled = !ENDPOINT;
     if (!ENDPOINT) $("ia-edit").title = "Saving to Google Sheets is not switched on yet";
     await readChanges();
+    fillSheets();
     await open(decodeURIComponent(location.hash.slice(1)));
     if (queue.length) flush();
   }
@@ -524,6 +529,7 @@
       toggleCheck(set, e.target.checked);
       e.target.closest("h3").querySelector(".oks").innerHTML = checkLabel(set);
       showChecked();
+      fillSheets();
       const view = $("ia-status").value;
       const gone = view === "checked" ? !set.checks.length : set.checks.length && !KEEPS_CHECKED.includes(view);
       if (gone) leave(set, e.target.closest("section.set"));
