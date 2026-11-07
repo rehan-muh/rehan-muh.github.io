@@ -61,7 +61,7 @@
   const num = (n) => Number(n).toLocaleString("en-US");
 
   let INDEX = [], current = null, SETS = [], hits = [], shown = 0, wait = null;
-  let editing = false, brush = false, changes = {}, links = {};
+  let editing = false, brush = false, gapping = false, changes = {}, links = {};
   let identity = { editor: "", pass: "" }, queue = [], sending = false;
   const pairs = new Map();
 
@@ -174,8 +174,37 @@
     pair.status = c ? c.status : pair.base[3];
     pair.note = c ? c.note : pair.base[4];
     pair.edited = c ? `${c.editor || ""} ${String(c.saved || "").slice(0, 16)}`.trim() : "";
+    pair.baseRanks = parsePair(pair.base[0], pair.base[1]).filter((c) => c.top !== ADDED);
+    setRanks(pair);
+  }
+  function setRanks(pair) {
     pair.ranks = [];
     pair.cells.forEach((cell, i) => { if (cell.top !== ADDED) pair.ranks.push(i); });
+  }
+  // a segment with no counterpart goes to a gap column of its own, beside the column it was in
+  function toGap(pair, i, side) {
+    const cell = pair.cells[i];
+    pair.cells.splice(side === "left" ? i : i + 1, 0, { top: ADDED, bottom: cell.bottom, morph: false, seam: false });
+    cell.bottom = GAP;
+    setRanks(pair);
+  }
+  // back into the next empty column on either side, if there is one
+  function putBack(pair, i) {
+    const near = (step) => {
+      let j = i + step;
+      while (j >= 0 && j < pair.cells.length && pair.cells[j].top === ADDED) j += step;
+      return j >= 0 && j < pair.cells.length && pair.cells[j].bottom === GAP ? j : -1;
+    };
+    const j = near(1) >= 0 ? near(1) : near(-1);
+    if (j < 0) return false;
+    pair.cells[j].bottom = pair.cells[i].bottom;
+    pair.cells.splice(i, 1);
+    setRanks(pair);
+    return true;
+  }
+  function redraw(pair, inside) {
+    const hit = hits.find((h) => h.set === pair.set);
+    if (hit) inside.closest("section.set").outerHTML = box(hit);
   }
   function save(pair) {
     const [anc, ref] = renderPair(pair.cells);
@@ -195,13 +224,19 @@
   function segCell(pair, i) {
     const cell = pair.cells[i];
     const lost = cell.bottom === GAP;
-    const was = parsePair(pair.base[0], pair.base[1])[i];
+    const was = pair.baseRanks[pair.ranks.indexOf(i)];
     const fixed = !was || was.bottom !== cell.bottom || was.morph !== cell.morph;
     const cls = ["seg", lost ? "lost" : cell.bottom !== cell.top ? "c" : "", cell.morph ? "m" : "", cell.seam ? "seam" : "", fixed ? "fix" : ""].join(" ");
     const tip = fixed && was ? ` title="first alignment: ${esc(was.bottom)}${was.morph ? " (morphology)" : ""}"` : "";
     let body = esc(lost ? GAP : cell.bottom);
     if (editing && !brush) body = `<input class="cell" data-i="${i}" value="${esc(lost ? "" : cell.bottom)}" aria-label="Reflex of ${esc(cell.top)}">`;
     if (editing && brush) body = `<button class="mk" type="button" data-i="${i}" aria-pressed="${cell.morph}">${esc(lost ? GAP : cell.bottom)}</button>`;
+    if (editing && gapping && !lost) {
+      body = `<button class="gp" type="button" data-i="${i}" data-side="left" aria-label="Move ${esc(cell.bottom)} to a gap column on the left">←</button>${esc(cell.bottom)}` +
+             `<button class="gp" type="button" data-i="${i}" data-side="right" aria-label="Move ${esc(cell.bottom)} to a gap column on the right">→</button>`;
+    } else if (editing && gapping) {
+      body = esc(GAP);
+    }
     return `<td class="${cls}" data-i="${i}"${tip}>${body}</td>`;
   }
   // cells of a pair by slot: added[p] are the segments the reflex has where the ancestor has
@@ -217,7 +252,11 @@
   }
   function addedCell(pair, i, green) {
     const kind = green ? "add" : "add plain";
-    return i === undefined ? `<td class="seg ${kind} none">${GAP}</td>` : `<td class="seg ${kind}">${esc(pair.cells[i].bottom)}</td>`;
+    if (i === undefined) return `<td class="seg ${kind} none">${GAP}</td>`;
+    const seg = esc(pair.cells[i].bottom);
+    if (editing && gapping) return `<td class="seg ${kind}"><button class="gb" type="button" data-i="${i}" title="Put back in the empty column beside it">${seg}</button></td>`;
+    if (editing && brush) return `<td class="seg ${kind}"><button class="mk" type="button" data-i="${i}" aria-pressed="${pair.cells[i].morph}">${seg}</button></td>`;
+    return `<td class="seg ${kind}">${seg}</td>`;
   }
   // `slots[p]` is how many columns the added segments before p need in this table
   function rowHTML(pair, slots, greens) {
@@ -348,7 +387,7 @@
       let set = byId.get(id);
       if (!set) { set = { id, head: row[3], gloss: row[1], rows: [] }; byId.set(id, set); }
       const language = row[2].split("#")[0];
-      const pair = { key, n, language: row[2], base_language: language, form: row[4], base: [row[5], row[6], row[7], row[8], row[10]],
+      const pair = { key, n, set, language: row[2], base_language: language, form: row[4], base: [row[5], row[6], row[7], row[8], row[10]],
                      details: row[9], f: fold(`${row[2]} ${row[4]}`) };
       pair.rule = function () { return this.morph; };
       overlay(pair);
@@ -412,6 +451,8 @@
   function setEditing(on) {
     editing = on;
     brush = false;
+    gapping = false;
+    $("ia-gap").setAttribute("aria-pressed", "false");
     $("ia-edit").setAttribute("aria-pressed", on ? "true" : "false");
     $("ia-editbar").hidden = !on;
     $("ia-brush").setAttribute("aria-pressed", "false");
@@ -449,23 +490,33 @@
       $("ia-loginmsg").textContent = `Google Sheets did not answer (${err.message}).`;
     }
   });
-  $("ia-brush").addEventListener("click", () => {
-    brush = !brush;
+  function setTool(useBrush, useGap) {
+    brush = useBrush;
+    gapping = useGap;
     $("ia-brush").setAttribute("aria-pressed", brush ? "true" : "false");
+    $("ia-gap").setAttribute("aria-pressed", gapping ? "true" : "false");
     apply();
-  });
+  }
+  $("ia-brush").addEventListener("click", () => setTool(!brush, false));
+  $("ia-gap").addEventListener("click", () => setTool(false, !gapping));
   $("ia-sets").addEventListener("click", (e) => {
-    const button = e.target.closest("button.mk");
+    const button = e.target.closest("button.mk, button.gp, button.gb");
     if (!button) return;
     const pair = pairs.get(button.closest("tr").dataset.key);
-    const cell = pair.cells[+button.dataset.i];
-    cell.morph = !cell.morph;
-    const was = parsePair(pair.base[0], pair.base[1]);
-    const unchanged = pair.cells.every((c, i) => was[i].morph === c.morph);
-    pair.morph = unchanged ? pair.base[2] : pair.cells.some((c) => c.morph) ? `${pair.base[2] ? pair.base[2] + "; " : ""}edited by hand` : "";
+    const i = +button.dataset.i;
+    if (button.classList.contains("gp")) {
+      toGap(pair, i, button.dataset.side);
+    } else if (button.classList.contains("gb")) {
+      if (!putBack(pair, i)) { say("There is no empty column beside it. Empty one first.", true); return; }
+    } else {
+      const cell = pair.cells[i];
+      cell.morph = !cell.morph;
+      const was = parsePair(pair.base[0], pair.base[1]);
+      const unchanged = was.length === pair.cells.length && pair.cells.every((c, k) => was[k].morph === c.morph);
+      pair.morph = unchanged ? pair.base[2] : pair.cells.some((c) => c.morph) ? `${pair.base[2] ? pair.base[2] + "; " : ""}edited by hand` : "";
+    }
     save(pair);
-    const tr = button.closest("tr");
-    tr.outerHTML = rowHTML(pair, pair.slots, pair.greens);
+    redraw(pair, button);
   });
   $("ia-sets").addEventListener("change", (e) => {
     if (e.target.classList.contains("setcheck")) {
@@ -492,7 +543,7 @@
       pair.cells[+e.target.dataset.i].bottom = clean(e.target.value);
       const td = e.target.closest("td");
       const cell = pair.cells[+e.target.dataset.i];
-      const was = parsePair(pair.base[0], pair.base[1])[+e.target.dataset.i];
+      const was = pair.baseRanks[pair.ranks.indexOf(+e.target.dataset.i)];
       td.classList.toggle("lost", cell.bottom === GAP);
       td.classList.toggle("c", cell.bottom !== GAP && cell.bottom !== cell.top);
       td.classList.toggle("fix", was.bottom !== cell.bottom || was.morph !== cell.morph);
