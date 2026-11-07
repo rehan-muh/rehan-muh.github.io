@@ -12,7 +12,6 @@ nav: false
         --pa-lost: #b4457f; --pa-faint: #9aa5b1; --pa-bad: #a4324f; --pa-badbg: #fbe4ea; --pa-warn: #8a6100; }
   html[data-theme="dark"] .pa { --pa-ins: #8fe0c4; --pa-insbg: #123d33; --pa-fix: #4a3d10; --pa-fixline: #d5a63f; --pa-m: #2e2852; --pa-mline: #a998ee;
         --pa-lost: #e58fbf; --pa-faint: #6b7480; --pa-bad: #f2a3b7; --pa-badbg: #4a1f2c; --pa-warn: #f0cf7a; }
-  .pa .intro { max-width: 70ch; }
   .pa .controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin: 0.8rem 0 0.6rem; }
   .pa select, .pa input[type=search], .pa input[type=password], .pa input[type=text] {
     font: inherit; font-size: 0.95rem; padding: 4px 8px; border-radius: 4px; color: var(--global-text-color);
@@ -85,13 +84,6 @@ nav: false
 </style>
 
 <div class="pa">
-  <p class="intro">
-    Every Indic alignment in the project, one sheet to a chain. Each table is one ancestor word. The top row gives its
-    segments, and each row below gives, under every segment, the reflex that continues it, or
-    <span style="font-family:'Charis SIL',serif">-</span> where it was lost. Shaded segments are morphology.
-    Most alignments come from a neural CRF aligner and have not been reviewed. The status beside a form says which.
-  </p>
-
   <div class="controls">
     <label>Sheet <select id="ia-sheet"></select></label>
     <a class="btn" id="ia-open" target="_blank" rel="noopener" hidden>Open in Google Sheets</a>
