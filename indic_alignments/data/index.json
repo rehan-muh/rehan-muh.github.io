@@ -53,8 +53,8 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_Pali",
   "source": "jambu",
   "chain": "Old Indo-Aryan > Pali",
-  "rows": 5839,
-  "sets": 4506,
+  "rows": 5834,
+  "sets": 4504,
   "languages": 8,
   "marked": 736,
   "reviewed": 1517
@@ -65,10 +65,10 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_Prakrit",
   "source": "jambu",
   "chain": "Old Indo-Aryan > Prakrit",
-  "rows": 9640,
+  "rows": 9636,
   "sets": 5727,
   "languages": 19,
-  "marked": 1440,
+  "marked": 1438,
   "reviewed": 1888
  },
  {
@@ -245,10 +245,10 @@
   "slug": "pischel_full__Old_Indo-Aryan_to_Prakrits",
   "source": "pischel",
   "chain": "Old Indo-Aryan > Prakrits",
-  "rows": 13440,
-  "sets": 7739,
+  "rows": 13035,
+  "sets": 7633,
   "languages": 75,
-  "marked": 288,
+  "marked": 286,
   "reviewed": 0
  },
  {
@@ -269,8 +269,8 @@
   "slug": "oberlies_full__Old_Indo-Aryan_to_Pali",
   "source": "oberlies",
   "chain": "Old Indo-Aryan > Pali",
-  "rows": 1625,
-  "sets": 1388,
+  "rows": 1606,
+  "sets": 1375,
   "languages": 17,
   "marked": 6,
   "reviewed": 0
