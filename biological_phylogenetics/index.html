@@ -429,7 +429,7 @@ body.page-home .site-foot { text-align: center; }
       <div class="landing-head">
         <p class="landing-sub">A field atlas of biological phylogenetics</p>
         <p class="landing-intro">The discipline that reconstructs evolutionary trees, from Darwin's 1837 notebook sketch to million-genome pandemic phylogenies, charted as the kind of tree it studies. Six superclades, sixteen branches, and every topic of the field as a tip.</p>
-        <p class="landing-intro">Every topic has its own full article: history, core concepts, the mathematics, a worked example, software and commands, debates, current research and references. Start from the map, follow the workflow of a genome-scale study, or browse the timeline, the toolbox and the open problems.</p>
+        <p class="landing-intro">The atlas is also a book. Its sixteen branches are parts and its topics are chapters, each with the history told as a story, the core ideas with their equations, diagrams, a worked example, software, debates and references. Read it from the first chapter to the last with the next buttons, start from the map, follow the workflow of a genome-scale study, or browse the timeline, the toolbox and the open problems.</p>
       </div>
       <div class="landing-grid">
         <a class="pill pill-morph landing-pill" data-part="lp-morph" href="#map">Map</a>
@@ -439,6 +439,7 @@ body.page-home .site-foot { text-align: center; }
         <a class="pill pill-scan landing-pill" data-part="lp-scan" href="#toolbox">Toolbox</a>
       </div>
       <div class="landing-row">
+        <a class="pill pill-cite landing-pill" href="#b-foundations-and-tree-thinking">Read from the start</a>
         <a class="pill pill-styl landing-pill" href="#frontiers">Open problems</a>
         <a class="pill pill-cite landing-pill" href="#all-topics">All topics</a>
       </div>
@@ -1121,6 +1122,10 @@ const {ROOT,SUPER,branches,all,esc,label}=A;
 const tips=all.filter(n=>n.depth===3);
 const bySlugT=new Map(tips.map(t=>[t.slug,t]));
 const bySlugB=new Map(branches.map(b=>[b.slug,b]));
+// Reading order of the book: each part opener (branch) followed by its chapters (topics).
+const book=[];branches.forEach((b,i)=>{b.part=i+1;book.push(b);b.c.forEach(t=>book.push(t));});
+const bookHref=n=>"#"+(n.depth===2?"b-":"t-")+n.slug;
+const bookLabel=n=>n.depth===2?"Part "+n.part+": "+n.n:n.n;
 const $=id=>document.getElementById(id);
 const home=$("home"), secs=$("sections"), page=$("page");
 const SEC={map:["morph","The map"],pipeline:["phon","Workflow"],timeline:["syn","Timeline"],toolbox:["scan","Toolbox"],frontiers:["styl","Open problems"]};
@@ -1158,8 +1163,10 @@ function panel(title,body,open){
 function hero(kick,h1,lead,extra){
   return '<div class="hero"><p class="kicker">'+kick.join(" · ")+"</p><h1>"+h1+"</h1>"+(lead?'<p class="lead">'+lead+"</p>":"")+(extra||"")+"</div>";
 }
-function pager(pv,nx,pre,word){
-  return '<nav class="pager" aria-label="'+word+' navigation"><span>'+(pv?'<a class="btn" href="#'+pre+"-"+pv.slug+'" title="Previous '+word.toLowerCase()+'">← '+esc(pv.n)+"</a>":"")+'</span><span>'+(nx?'<a class="btn" href="#'+pre+"-"+nx.slug+'" title="Next '+word.toLowerCase()+'">'+esc(nx.n)+" →</a>":"")+"</span></nav>";
+function pager(cur){
+  const i=book.indexOf(cur), pv=book[i-1], nx=book[i+1];
+  const a=(n,t,arrow)=>n?'<a class="btn" href="'+bookHref(n)+'" title="'+t+'">'+(arrow==="l"?"← ":"")+esc(bookLabel(n))+(arrow==="r"?" →":"")+"</a>":"";
+  return '<nav class="pager" aria-label="Reading order"><span>'+a(pv,"Previous chapter","l")+'</span><span>'+a(nx,"Next chapter","r")+"</span></nav>";
 }
 function sibList(list,cur){
   return '<ol class="sib">'+list.map(c=>"<li"+(c===cur?' class="cur" aria-current="page"':"")+'><a href="#t-'+c.slug+'">'+esc(label(c))+"</a></li>").join("")+"</ol>";
@@ -1234,11 +1241,11 @@ async function showTopic(t){
   const b=t.parent, i=b.c.indexOf(t), gi=tips.indexOf(t);
   setChrome(t.pk,null,t.n);
   page.innerHTML=
-    hero(['<a href="#map">Map</a>','<a href="#b-'+b.slug+'">'+esc(b.n)+"</a>","Topic "+(i+1)+" of "+b.c.length],esc(t.n),esc(t.d),'<div class="tab-meta-row"><span class="small-muted" id="tmeta"></span></div>')+
+    hero(['<a href="#map">Map</a>','<a href="#b-'+b.slug+'">'+esc(b.n)+"</a>","Part "+b.part+", chapter "+(i+1)+" of "+b.c.length],esc(t.n),esc(t.d),'<div class="tab-meta-row"><span class="small-muted" id="tmeta"></span></div>')+
     panel("Article",'<nav class="toc" id="toc" aria-label="On this page" hidden></nav><article class="card prose" id="art"><p class="lead">'+esc(t.d)+'</p><p class="loading">Loading the full article…</p></article>',true)+
     panel("At a glance",glanceBody(t),false)+
     panel("Topics in "+esc(b.n),'<div class="card">'+sibList(b.c,t)+"</div>",false)+
-    pager(tips[gi-1],tips[gi+1],"t","Topic");
+    pager(t);
   wirePanels(page); window.scrollTo(0,0);
   try{A.select(t);}catch(e){}
   let html=null;
@@ -1260,10 +1267,10 @@ async function showBranch(b){
   const bi=branches.indexOf(b);
   setChrome(b.pk,null,b.n);
   page.innerHTML=
-    hero(['<a href="#map">Map</a>',esc(b.parent.n),"Branch "+(bi+1)+" of "+branches.length,b.c.length+" topics"],esc(b.n),esc(b.d))+
+    hero(['<a href="#map">Map</a>',esc(b.parent.n),"Part "+(bi+1)+" of "+branches.length,b.c.length+" chapters"],esc(b.n),esc(b.d))+
     panel("Overview",'<article class="card prose" id="art"><p class="loading">Loading the branch overview…</p></article>',true)+
     panel("All "+b.c.length+" topics",'<div class="card"><ul class="toplist">'+b.c.map((t,k)=>'<li><a href="#t-'+t.slug+'"><span class="tn"><i class="dotc" aria-hidden="true"></i>'+esc(t.n)+'</span><span class="td">'+esc(t.d)+'</span><span class="tk">Topic '+(k+1)+" of "+b.c.length+"</span></a></li>").join("")+"</ul></div>",true)+
-    pager(branches[bi-1],branches[bi+1],"b","Branch");
+    pager(b);
   wirePanels(page); window.scrollTo(0,0);
   let html=null;
   try{html=await frag("branches/"+b.slug+".html");}catch(e){}
