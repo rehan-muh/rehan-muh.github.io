@@ -103,6 +103,11 @@ nav: false
   .pa tr.anc th[data-k] { position: relative; }
   .pa button.cadd { position: absolute; top: -3px; left: -8px; z-index: 1; padding: 0 2px; font-size: 0.65rem; line-height: 1; color: var(--pa-ins); }
   .pa button.cadd.after { left: auto; right: -8px; }
+  /* morphology mode: on the line before a letter, × takes a compound seam away, | puts one there */
+  .pa button.aseam { position: absolute; top: 50%; left: -7px; transform: translateY(-50%); z-index: 1; padding: 0 2px;
+                     font-size: 0.7rem; line-height: 1.1; color: var(--global-text-color-light); opacity: 0.55; }
+  .pa button.aseam.on { color: var(--pa-bad); opacity: 1; font-weight: 700; }
+  .pa button.aseam:hover, .pa button.aseam:focus { opacity: 1; }
   .pa .dragfrom { opacity: 0.4; }
   .pa .dropok { outline: 2px dashed var(--pa-ins); outline-offset: -2px; }
   .pa .dropno { outline: 2px dashed var(--pa-bad); outline-offset: -2px; }
@@ -142,7 +147,9 @@ nav: false
     it out of the row. When no segment has the cursor, <kbd>M</kbd> switches <i>Mark morphology</i> on or off, <kbd>G</kbd>
     switches <i>Add gap column</i> on or off, <kbd>Esc</kbd> goes back to typing, and <kbd>U</kbd> takes back your last change.
     In <i>Mark morphology</i>, click a segment to mark or unmark it in that row, or click a letter of the ancestor, at the top of
-    the table, to mark or unmark it in every row of the set. In <i>Add gap column</i>, the × beside a letter of the ancestor
+    the table, to mark or unmark it in every row of the set. The heavy black line of a compound seam can go too: in <i>Mark
+    morphology</i>, click the × on the line to take the seam away in every row of the set, or the | on any other line between
+    two letters to put one there. In <i>Add gap column</i>, the × beside a letter of the ancestor
     takes that segment out of the ancestor in every row of the set; what stood under it stays as an added segment. The + before a
     letter (and after the last) adds a segment to the ancestor there: type it and press Enter (<kbd>Esc</kbd> to cancel). Every
     row gets a gap under it; type the reflexes in, or click an added segment beside it to move it in. The + of a green or
@@ -193,7 +200,7 @@ nav: false
     <span><i class="sw lost">-</i> lost</span>
     <span><i class="in">i</i> green column: a suffix, opposite a gap in the ancestor</span>
     <span><i class="sw">i</i> outlined column: a segment the aligner could not place</span>
-    <span>heavy line: the seam of a compound, each member aligned alone</span>
+    <span>heavy line: the seam of a compound, each member aligned alone (× on it in <i>Mark morphology</i> takes it away)</span>
     <span><i class="sw m">t</i> morphology</span>
     <span><i class="sw fix">e</i> edited (hover for the first alignment)</span>
   </div>

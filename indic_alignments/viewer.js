@@ -165,6 +165,14 @@
     cells[ranks[k]].morph = on;
     return "";
   }
+  // the compound seam (the heavy line) before the ancestor's k-th segment put in or taken out
+  function setSeam(cells, k, on) {
+    const ranks = rankList(cells);
+    if (k < 0 || k >= ranks.length) return "That segment is not in this row.";
+    if (on && k === 0) return "A seam goes between two segments of the ancestor.";
+    cells[ranks[k]].seam = !!on;
+    return "";
+  }
   // the ancestor's k-th segment changed in one row; emptied, it is taken out (deleteAncestor,
   // with its width and keep)
   function renameAncestor(cells, k, seg, width, keep) {
@@ -247,7 +255,7 @@
   if (typeof document === "undefined") {
     module.exports = { parseCells, renderCells, parsePair, renderPair, clean, rankList, deleteAncestor, markAncestor,
                        insertAncestor, layoutOf, insertReflex, ancestorIntoColumn, deleteColumn,
-                       renameAncestor, moveReflex, moveAncestor, pad, tidy, isFiller };
+                       renameAncestor, moveReflex, moveAncestor, pad, tidy, isFiller, setSeam };
     return;
   }
 
@@ -556,6 +564,25 @@
         "so those rows no longer spell their cited form. U takes it back");
     reshaped(set);
   }
+  // morphology mode, the button on a column line: the compound seam there taken away or put
+  // in, in every row whose ancestor has that segment there
+  function seamInSet(set, k, seg, on) {
+    const rows = ancestorRows(set, k, seg);
+    if (!rows.length) return;
+    const msg = setSeam(rows[0].cells.map((c) => ({ ...c })), k, on);
+    if (msg) { say(msg, true); return; }
+    snapshot(rows);
+    rows.forEach((p) => {
+      setSeam(p.cells, k, on);
+      // the row is labelled a compound while it has a seam, as it was first
+      const items = String(p.morph || "").split("; ").filter((x) => x && x !== "compound");
+      if (p.cells.some((c) => c.seam) && String(p.base[2] || "").split("; ").includes("compound")) items.unshift("compound");
+      p.morph = items.join("; ");
+      save(p);
+    });
+    say(`Compound seam before ${seg} ${on ? "put in" : "taken away"} in ${rows.length} ${rows.length === 1 ? "row" : "rows"}; U takes it back`);
+    redrawSet(set);
+  }
   // typing mode, an ancestor letter changed: changed in every row whose ancestor has it there
   function renameAncestorInSet(set, k, seg, value) {
     const rows = ancestorRows(set, k, seg);
@@ -741,7 +768,11 @@
         // morphology mode: the letter marks or unmarks the segment in every row of the set;
         // gap mode: × takes the segment out of the set's ancestor
         if (editing && brush) {
-          body = `<button class="amk" type="button" data-k="${k}" data-seg="${seg}" aria-pressed="${everyone[k]}" title="Mark or unmark ${seg} as morphology in every row of this set">${seg}</button>`;
+          // on the line before the letter: × takes the compound seam there away, | puts one there
+          const seam = k === 0 ? "" : segs[k].seam
+            ? `<button class="aseam on" type="button" data-k="${k}" data-seg="${seg}" data-on="0" aria-label="Take away the compound seam before ${seg} in every row of this set" title="Take away the compound seam (the heavy line) before ${seg}">×</button>`
+            : `<button class="aseam" type="button" data-k="${k}" data-seg="${seg}" data-on="1" aria-label="Put a compound seam before ${seg} in every row of this set" title="Put a compound seam (a heavy line) before ${seg}">|</button>`;
+          body = seam + `<button class="amk" type="button" data-k="${k}" data-seg="${seg}" aria-pressed="${everyone[k]}" title="Mark or unmark ${seg} as morphology in every row of this set">${seg}</button>`;
         } else if (editing && gapping) {
           // + adds a segment to the ancestor before this one (and, on the last, after it too)
           const add = (pos, where) => `<button class="aadd" type="button" data-pos="${pos}" aria-label="Add a segment to the ancestor ${where}" title="Add a segment to the ancestor ${where}">+</button>`;
@@ -932,7 +963,7 @@
       const hit = hits.find((h) => h.set.id === section.dataset.set);
       if (hit) section.outerHTML = box(hit);
     });
-    say(brush ? "Morphology mode: click a segment, or an ancestor letter for the whole set (M or Esc to leave)"
+    say(brush ? "Morphology mode: click a segment, or an ancestor letter for the whole set; × on a heavy line takes the seam away (M or Esc to leave)"
         : gapping ? "Gap mode: arrows send a segment to a gap column, × takes an ancestor segment out (G or Esc to leave)"
         : "Typing mode: drag a segment to move it, + at the top adds an empty column");
   }
@@ -953,14 +984,15 @@
       say("Empty column added: drag a segment into it, or type an ancestor segment at its top");
       return;
     }
-    const head = e.target.closest("button.amk, button.adel, button.aadd, button.aput, button.cdel");
+    const head = e.target.closest("button.amk, button.aseam, button.adel, button.aadd, button.aput, button.cdel");
     if (head) {
       const section = head.closest("section.set");
       const set = SETS.find((s) => s.id === section.dataset.set);
       const hit = hits.find((h) => h.set === set);
       if (!set || !hit) return;
       const first = hit.rows[0], tops = first.ranks.map((i) => first.cells[i].top);
-      if (head.classList.contains("amk")) markAncestorInSet(set, +head.dataset.k, head.dataset.seg);
+      if (head.classList.contains("aseam")) seamInSet(set, +head.dataset.k, head.dataset.seg, head.dataset.on === "1");
+      else if (head.classList.contains("amk")) markAncestorInSet(set, +head.dataset.k, head.dataset.seg);
       else if (head.classList.contains("adel")) deleteAncestorInSet(set, +head.dataset.k, head.dataset.seg);
       else if (head.classList.contains("cdel")) deleteColumnInSet(set, head.dataset.kind, +head.dataset.slot, +head.dataset.n, tops);
       else {
@@ -1155,7 +1187,7 @@
   let drag = null, swallowClick = false;
   function dragSource(el) {
     if (!editing || !el.closest) return null;
-    if (el.closest("button.cadd, button.aadd, button.adel, button.aput, button.cdel, input.anew, input.slotin, input.aslot, td.tools")) return null;
+    if (el.closest("button.cadd, button.aseam, button.aadd, button.adel, button.aput, button.cdel, input.anew, input.slotin, input.aslot, td.tools")) return null;
     const td = el.closest("td.seg");
     if (td) {
       const tr = td.closest("tr[data-key]");
