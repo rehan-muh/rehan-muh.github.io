@@ -76,6 +76,7 @@ nav: false
   .pa .tag { font-size: 0.7rem; border-radius: 3px; padding: 0 4px; margin-left: 5px; border: 1px solid var(--global-divider-color); }
   .pa .tag.learned { font-family: var(--global-font, inherit); font-weight: 400; background: var(--pa-fix); color: var(--pa-warn); border-color: transparent; }
   .pa .tag.excluded { background: var(--pa-badbg); color: var(--pa-bad); border-color: transparent; }
+  .pa .tag.again { font-family: var(--global-font, inherit); background: var(--pa-fix); color: var(--pa-warn); border-color: transparent; }
   .pa tr.ex td { opacity: 0.45; }
   .pa tr.ex td.tools { opacity: 1; }
   .pa input.cell { width: 2.6em; padding: 0 2px; text-align: center; font-family: "Charis SIL", serif; font-size: 1rem;
@@ -167,7 +168,9 @@ nav: false
     moves it one column. From under an ancestor segment, one step puts it in the gap column beside it, and a second puts it
     under the next ancestor segment, if that one has nothing under it. Click a segment to pick it, and the arrow keys move it
     the same way. A segment never jumps over another of its row; move that one first, or add a column with +. A row marked <i>uncertain</i> leaves its table, and a set you tick as checked or as a <i>problem set</i>
-    leaves the page. Choose <i>uncertain rows</i>, <i>sets checked</i>, or <i>problem sets</i> under Status to see them, and untick one to put it back.</p>
+    leaves the page. Choose <i>uncertain rows</i>, <i>sets checked</i>, or <i>problem sets</i> under Status to see them, and untick one to put it back. Rows Claude repaired on 8 November are under <i>to look at again</i>, with the sheets that hold them named in the
+    sheet menu; saving such a row, or ticking it, makes it yours. <i>Changed by the new rules</i> shows the rows the conventions read
+    from your edits changed (each says how in its details); rows you saved, and sets you checked or set aside, were left as they were.</p>
     <div class="row">
       <button id="ia-brush" type="button" aria-pressed="false" title="Key M">Mark morphology <kbd>M</kbd></button>
       <button id="ia-gap" type="button" aria-pressed="false" title="Key G">Add gap column <kbd>G</kbd></button>
@@ -187,6 +190,8 @@ nav: false
       <option value="problem">problem sets</option>
       <option value="learned">probable learned forms</option>
       <option value="edited">edited here</option>
+      <option value="again">to look at again (repaired by Claude)</option>
+      <option value="rules">changed by the new rules</option>
       <option value="checked">sets checked</option>
     </select></label>
     <label>Morphology <select id="ia-morph"></select></label>

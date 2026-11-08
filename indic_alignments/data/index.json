@@ -8,7 +8,7 @@
   "rows": 84489,
   "sets": 9424,
   "languages": 676,
-  "marked": 29332,
+  "marked": 34132,
   "reviewed": 16417
  },
  {
@@ -17,10 +17,10 @@
   "slug": "jambu_full__Prakrit_to_modern_Indo-Aryan",
   "source": "jambu",
   "chain": "Prakrit > modern Indo-Aryan",
-  "rows": 71258,
+  "rows": 71259,
   "sets": 6124,
   "languages": 633,
-  "marked": 28022,
+  "marked": 28210,
   "reviewed": 12763
  },
  {
@@ -32,7 +32,7 @@
   "rows": 29791,
   "sets": 2796,
   "languages": 519,
-  "marked": 13196,
+  "marked": 15507,
   "reviewed": 0
  },
  {
@@ -44,7 +44,7 @@
   "rows": 41234,
   "sets": 5651,
   "languages": 539,
-  "marked": 18780,
+  "marked": 20118,
   "reviewed": 7918
  },
  {
@@ -56,7 +56,7 @@
   "rows": 5834,
   "sets": 4504,
   "languages": 8,
-  "marked": 1014,
+  "marked": 1500,
   "reviewed": 1517
  },
  {
@@ -65,10 +65,10 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_Prakrit",
   "source": "jambu",
   "chain": "Old Indo-Aryan > Prakrit",
-  "rows": 9636,
+  "rows": 9652,
   "sets": 5727,
   "languages": 19,
-  "marked": 1658,
+  "marked": 3006,
   "reviewed": 1888
  },
  {
@@ -80,7 +80,7 @@
   "rows": 1671,
   "sets": 479,
   "languages": 45,
-  "marked": 374,
+  "marked": 654,
   "reviewed": 0
  },
  {
@@ -92,7 +92,7 @@
   "rows": 1612,
   "sets": 916,
   "languages": 57,
-  "marked": 368,
+  "marked": 783,
   "reviewed": 0
  },
  {
@@ -104,7 +104,7 @@
   "rows": 1184,
   "sets": 838,
   "languages": 8,
-  "marked": 312,
+  "marked": 464,
   "reviewed": 0
  },
  {
@@ -116,7 +116,7 @@
   "rows": 2913,
   "sets": 1499,
   "languages": 15,
-  "marked": 871,
+  "marked": 1393,
   "reviewed": 0
  },
  {
@@ -140,7 +140,7 @@
   "rows": 365,
   "sets": 207,
   "languages": 41,
-  "marked": 86,
+  "marked": 168,
   "reviewed": 0
  },
  {
@@ -152,7 +152,7 @@
   "rows": 1008,
   "sets": 691,
   "languages": 14,
-  "marked": 44,
+  "marked": 74,
   "reviewed": 0
  },
  {
@@ -161,10 +161,10 @@
   "slug": "jambu_full__Reconstructed_OIA_to_headword_variants",
   "source": "jambu",
   "chain": "Reconstructed OIA > headword variants",
-  "rows": 1474,
+  "rows": 1479,
   "sets": 838,
   "languages": 14,
-  "marked": 59,
+  "marked": 75,
   "reviewed": 0
  },
  {
@@ -176,7 +176,7 @@
   "rows": 13035,
   "sets": 7633,
   "languages": 75,
-  "marked": 310,
+  "marked": 1234,
   "reviewed": 0
  },
  {
@@ -188,7 +188,7 @@
   "rows": 1045,
   "sets": 584,
   "languages": 44,
-  "marked": 37,
+  "marked": 115,
   "reviewed": 0
  },
  {
@@ -200,7 +200,7 @@
   "rows": 1606,
   "sets": 1375,
   "languages": 17,
-  "marked": 12,
+  "marked": 251,
   "reviewed": 0
  },
  {
@@ -209,7 +209,7 @@
   "slug": "oberlies_full__Reconstructed_OIA_to_Pali",
   "source": "oberlies",
   "chain": "Reconstructed OIA > Pali",
-  "rows": 154,
+  "rows": 155,
   "sets": 142,
   "languages": 5,
   "marked": 0,
