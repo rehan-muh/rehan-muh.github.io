@@ -58,6 +58,18 @@
     else cells[i] = { top: ADDED, bottom: cell.bottom, morph: false, seam: false };
     return "";
   }
+  // a segment added to the ancestor of one row, before its segment `pos` (after the last one
+  // when pos is the number of segments), with a gap under it: the reflex is typed in, or an
+  // added segment beside it is moved in with the gap tool
+  function insertAncestor(cells, pos, seg) {
+    const ranks = rankList(cells);
+    if (pos < 0 || pos > ranks.length) return "That place is not in this row.";
+    const token = clean(seg);
+    if (token === GAP || token === ADDED || /[[\]+]/.test(token)) return "Type the segment to add, in IPA.";
+    const at = pos < ranks.length ? ranks[pos] : ranks[ranks.length - 1] + 1;
+    cells.splice(at, 0, { top: token, bottom: GAP, morph: false, seam: false });
+    return "";
+  }
   // the ancestor's k-th segment marked as morphology, or not, in one row
   function markAncestor(cells, k, on) {
     const ranks = rankList(cells);
@@ -67,7 +79,8 @@
   }
 
   if (typeof document === "undefined") {
-    module.exports = { parseCells, renderCells, parsePair, renderPair, clean, rankList, deleteAncestor, markAncestor };
+    module.exports = { parseCells, renderCells, parsePair, renderPair, clean, rankList, deleteAncestor, markAncestor,
+                       insertAncestor };
     return;
   }
 
@@ -301,6 +314,22 @@
     say(`${seg} ${on ? "marked" : "unmarked"} as morphology in ${rows.length} ${rows.length === 1 ? "row" : "rows"}`);
     redrawSet(set);
   }
+  // gap mode, the + beside an ancestor letter: a segment added to the set's ancestor, in every
+  // row whose ancestor is the one the table shows
+  function insertAncestorInSet(set, pos, seg, tops) {
+    const rows = set.rows.filter((p) => p.ranks.length === tops.length &&
+                                        p.ranks.every((i, k) => p.cells[i].top === tops[k]));
+    if (!rows.length) return;
+    const test = rows[0].cells.map((c) => ({ ...c }));
+    const msg = insertAncestor(test, pos, seg);
+    if (msg) { say(msg, true); return; }
+    snapshot(rows);
+    rows.forEach((p) => { insertAncestor(p.cells, pos, seg); setRanks(p); relabel(p); save(p); });
+    const where = pos < tops.length ? `before ${tops[pos]}` : `after ${tops[tops.length - 1]}`;
+    say(`${clean(seg)} added to the ancestor ${where} in ${rows.length} ${rows.length === 1 ? "row" : "rows"}, ` +
+        "with a gap under it; type the reflexes in, or click an added segment to move it in. U takes it back");
+    redrawSet(set);
+  }
   // gap mode, the × under an ancestor letter: the segment taken out of the set's ancestor
   function deleteAncestorInSet(set, k, seg) {
     const rows = ancestorRows(set, k, seg);
@@ -430,8 +459,12 @@
         // gap mode: × takes the segment out of the set's ancestor
         if (editing && brush) {
           body = `<button class="amk" type="button" data-k="${k}" data-seg="${seg}" aria-pressed="${everyone[k]}" title="Mark or unmark ${seg} as morphology in every row of this set">${seg}</button>`;
-        } else if (editing && gapping && segs.length > 1) {
-          body = `${seg}<button class="adel" type="button" data-k="${k}" data-seg="${seg}" aria-label="Take ${seg} out of the ancestor in every row of this set" title="Take ${seg} out of the ancestor">×</button>`;
+        } else if (editing && gapping) {
+          // + adds a segment to the ancestor before this one (and, on the last, after it too)
+          const add = (pos, where) => `<button class="aadd" type="button" data-pos="${pos}" aria-label="Add a segment to the ancestor ${where}" title="Add a segment to the ancestor ${where}">+</button>`;
+          body = add(k, `before ${seg}`) + seg +
+                 (segs.length > 1 ? `<button class="adel" type="button" data-k="${k}" data-seg="${seg}" aria-label="Take ${seg} out of the ancestor in every row of this set" title="Take ${seg} out of the ancestor">×</button>` : "") +
+                 (k === segs.length - 1 ? add(k + 1, `after ${seg}`) : "");
         }
         h += `<th scope="col"${cls ? ` class="${cls}"` : ""}>${body}</th>`;
       }
@@ -622,12 +655,22 @@
   $("ia-brush").addEventListener("click", () => setTool(!brush, false));
   $("ia-gap").addEventListener("click", () => setTool(false, !gapping));
   $("ia-sets").addEventListener("click", (e) => {
-    const head = e.target.closest("button.amk, button.adel");
+    const head = e.target.closest("button.amk, button.adel, button.aadd");
     if (head) {
       const set = SETS.find((s) => s.id === head.closest("section.set").dataset.set);
       if (!set) return;
       if (head.classList.contains("amk")) markAncestorInSet(set, +head.dataset.k, head.dataset.seg);
-      else deleteAncestorInSet(set, +head.dataset.k, head.dataset.seg);
+      else if (head.classList.contains("adel")) deleteAncestorInSet(set, +head.dataset.k, head.dataset.seg);
+      else {
+        // + becomes a small box for the new segment: Enter adds it, Esc leaves it
+        const field = document.createElement("input");
+        field.className = "anew";
+        field.dataset.pos = head.dataset.pos;
+        field.setAttribute("aria-label", head.getAttribute("aria-label"));
+        field.placeholder = "+";
+        head.replaceWith(field);
+        field.focus();
+      }
       return;
     }
     const button = e.target.closest("button.mk, button.gp, button.gb");
@@ -715,6 +758,18 @@
   // below work again)
   $("ia-sets").addEventListener("keydown", (e) => {
     const input = e.target;
+    if (input.classList && input.classList.contains("anew")) {
+      // the box for a segment to add to the ancestor
+      if (e.key !== "Enter" && e.key !== "Escape") return;
+      e.preventDefault();
+      const section = input.closest("section.set");
+      const hit = hits.find((h) => h.set.id === section.dataset.set);
+      if (!hit) return;
+      if (e.key === "Escape" || !input.value.trim()) { redrawSet(hit.set); return; }
+      const first = hit.rows[0];
+      insertAncestorInSet(hit.set, +input.dataset.pos, input.value, first.ranks.map((i) => first.cells[i].top));
+      return;
+    }
     if (!input.classList || !input.classList.contains("cell")) return;
     if (e.key === "Escape") {
       e.preventDefault();
