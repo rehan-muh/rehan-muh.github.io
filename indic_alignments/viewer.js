@@ -222,6 +222,52 @@
     tidy(cells);
     return "";
   }
+  // a reflex segment moved one column left (dir -1) or right (+1) in the table: from under
+  // an ancestor segment into the gap column beside it, from there under the next ancestor
+  // segment, and so on, one column at a time. `widths` are the table's gap columns per place.
+  // Under an ancestor segment, a first step left goes to a new gap column if the row has a
+  // segment in the last one; otherwise a segment of the row in the way stops it, so the word's
+  // order is kept. {msg} on a refusal, else {msg: "", i}: the segment's cell now.
+  function stepReflex(cells, i, dir, widths) {
+    const src = cells[i];
+    if (!src || src.bottom === GAP) return { msg: "There is no segment there to move." };
+    const { added, rank } = layoutOf(cells);
+    const W = (p) => Math.max((widths && widths[p]) || 0, (added[p] || []).length);
+    const taken = (p, n) => n < added[p].length && !isFiller(cells[added[p][n]]);
+    let p, n = null;
+    if (src.top === ADDED) {
+      p = added.findIndex((list) => list.includes(i));
+      n = added[p].indexOf(i);
+    } else {
+      p = rank.indexOf(i);
+    }
+    let target;
+    if (dir > 0) {
+      if (n === null) target = { kind: "added", p: p + 1, n: 0 };
+      else if (n + 1 < W(p)) target = { kind: "added", p, n: n + 1 };
+      else if (p < rank.length) target = { kind: "rank", p };
+      else target = { kind: "added", p, n: n + 1 };          // a new column after the word
+    } else if (n === null) {
+      const last = W(p) - 1;
+      target = { kind: "added", p, n: last >= 0 && !taken(p, last) ? last : W(p) };
+    } else if (n > 0) {
+      target = { kind: "added", p, n: n - 1 };
+    } else if (p > 0) {
+      target = { kind: "rank", p: p - 1 };
+    } else {
+      return { msg: "It is at the start of the word already." };
+    }
+    if (target.kind === "rank") {
+      const dest = cells[rank[target.p]];
+      if (dest.bottom !== GAP) return { msg: `${dest.top} has ${dest.bottom} under it: move that first, or add a column with +.` };
+    } else if (taken(target.p, target.n)) {
+      return { msg: `${cells[added[target.p][target.n]].bottom} is in the way: move it first, or add a column with +.` };
+    }
+    const msg = moveReflex(cells, i, target);
+    if (msg) return { msg };
+    const now = layoutOf(cells);
+    return { msg: "", i: target.kind === "rank" ? now.rank[target.p] : now.added[target.p][target.n] };
+  }
   // the ancestor's k-th segment moved into column n of the gap columns before ancestor segment
   // p (as the table was before the move): a reflex segment the row has in that column stands
   // under it, a row with none there gets a gap; the reflex segment that stood under it stays,
@@ -255,7 +301,7 @@
   if (typeof document === "undefined") {
     module.exports = { parseCells, renderCells, parsePair, renderPair, clean, rankList, deleteAncestor, markAncestor,
                        insertAncestor, layoutOf, insertReflex, ancestorIntoColumn, deleteColumn,
-                       renameAncestor, moveReflex, moveAncestor, pad, tidy, isFiller, setSeam };
+                       renameAncestor, moveReflex, moveAncestor, pad, tidy, isFiller, setSeam, stepReflex };
     return;
   }
 
@@ -404,44 +450,6 @@
   function setRanks(pair) {
     pair.ranks = [];
     pair.cells.forEach((cell, i) => { if (cell.top !== ADDED) pair.ranks.push(i); });
-  }
-  // a segment with no counterpart goes to the gap column beside the column it was in, if this
-  // row has nothing there: on the left, the last gap column of the table before it (a new one
-  // if the row has a segment there); on the right, the first gap column after it. No other
-  // segment moves, so a taken column on the right is refused.
-  function toGap(pair, i, side) {
-    const p = pair.ranks.indexOf(i);
-    const { added } = layoutOf(pair.cells);
-    let msg;
-    if (side === "left") {
-      const width = Math.max((pair.slots && pair.slots[p]) || 0, added[p].length);
-      const last = width - 1;
-      const free = last >= 0 && (last >= added[p].length || isFiller(pair.cells[added[p][last]]));
-      msg = moveReflex(pair.cells, i, { kind: "added", p, n: free ? last : width });
-    } else if (added[p + 1].length && !isFiller(pair.cells[added[p + 1][0]])) {
-      msg = "The gap column to its right is taken in this row: drag the segment instead, or add a column with +.";
-    } else {
-      msg = moveReflex(pair.cells, i, { kind: "added", p: p + 1, n: 0 });
-    }
-    setRanks(pair);
-    return msg;
-  }
-  // back into the next empty column on either side, if there is one; its own column is left
-  // empty, so no other segment moves
-  function putBack(pair, i) {
-    const near = (step) => {
-      let j = i + step;
-      while (j >= 0 && j < pair.cells.length && pair.cells[j].top === ADDED) j += step;
-      return j >= 0 && j < pair.cells.length && pair.cells[j].bottom === GAP ? j : -1;
-    };
-    const j = near(1) >= 0 ? near(1) : near(-1);
-    if (j < 0) return false;
-    pair.cells[j].bottom = pair.cells[i].bottom;
-    pair.cells[i].bottom = GAP;
-    pair.cells[i].morph = false;
-    tidy(pair.cells);
-    setRanks(pair);
-    return true;
   }
   function redraw(pair, inside) {
     const hit = hits.find((h) => h.set === pair.set);
@@ -637,19 +645,29 @@
   }
 
   // ------------------------------------------------------------- drawing
+  // gap mode: a segment with an arrow on each side; each click moves it one column, and a
+  // click on the segment itself picks it for the arrow keys
+  let picked = null;
+  function stepper(pair, i) {
+    const seg = esc(pair.cells[i].bottom);
+    return `<button class="gp" type="button" data-i="${i}" data-side="left" aria-label="Move ${seg} one column left" title="One column left">←</button>` +
+           `<button class="gsel" type="button" data-i="${i}" title="Pick ${seg}: the arrow keys move it">${seg}</button>` +
+           `<button class="gp" type="button" data-i="${i}" data-side="right" aria-label="Move ${seg} one column right" title="One column right">→</button>`;
+  }
+  const isPicked = (pair, i) => editing && gapping && picked && picked.key === pair.key && picked.i === i;
   function segCell(pair, i) {
     const cell = pair.cells[i];
     const lost = cell.bottom === GAP;
     const was = pair.baseRanks[pair.ranks.indexOf(i)];
     const fixed = !was || was.bottom !== cell.bottom || was.morph !== cell.morph;
-    const cls = ["seg", lost ? "lost" : cell.bottom !== cell.top ? "c" : "", cell.morph ? "m" : "", cell.seam ? "seam" : "", fixed ? "fix" : ""].join(" ");
+    const cls = ["seg", lost ? "lost" : cell.bottom !== cell.top ? "c" : "", cell.morph ? "m" : "", cell.seam ? "seam" : "", fixed ? "fix" : "",
+                 isPicked(pair, i) ? "picked" : ""].join(" ");
     const tip = fixed && was ? ` title="first alignment: ${esc(was.bottom)}${was.morph ? " (morphology)" : ""}"` : "";
     let body = esc(lost ? GAP : cell.bottom);
     if (editing && !brush) body = `<input class="cell" data-i="${i}" value="${esc(lost ? "" : cell.bottom)}" aria-label="Reflex of ${esc(cell.top)}">`;
     if (editing && brush) body = `<button class="mk" type="button" data-i="${i}" aria-pressed="${cell.morph}">${esc(lost ? GAP : cell.bottom)}</button>`;
     if (editing && gapping && !lost) {
-      body = `<button class="gp" type="button" data-i="${i}" data-side="left" aria-label="Move ${esc(cell.bottom)} to a gap column on the left">←</button>${esc(cell.bottom)}` +
-             `<button class="gp" type="button" data-i="${i}" data-side="right" aria-label="Move ${esc(cell.bottom)} to a gap column on the right">→</button>`;
+      body = stepper(pair, i);
     } else if (editing && gapping) {
       body = esc(GAP);
     }
@@ -675,7 +693,7 @@
       return `<td class="seg ${kind} none" ${at}>${GAP}</td>`;
     }
     const seg = esc(pair.cells[i].bottom);
-    if (editing && gapping) return `<td class="seg ${kind}" ${at}><button class="gb" type="button" data-i="${i}" title="Put back in the empty column beside it">${seg}</button></td>`;
+    if (editing && gapping) return `<td class="seg ${kind}${isPicked(pair, i) ? " picked" : ""}" ${at}>${stepper(pair, i)}</td>`;
     if (editing && brush) return `<td class="seg ${kind}" ${at}><button class="mk" type="button" data-i="${i}" aria-pressed="${pair.cells[i].morph}">${seg}</button></td>`;
     // a suffix or an unplaced segment can be changed too; emptied, it is taken out
     if (editing) return `<td class="seg ${kind}" ${at}><input class="cell" data-i="${i}" value="${seg}" aria-label="Segment the ancestor lacks"></td>`;
@@ -956,6 +974,7 @@
   function setTool(useBrush, useGap) {
     brush = useBrush;
     gapping = useGap;
+    if (!useGap) picked = null;
     $("ia-brush").setAttribute("aria-pressed", brush ? "true" : "false");
     $("ia-gap").setAttribute("aria-pressed", gapping ? "true" : "false");
     // the sets on the page are drawn again where they are, so the reader keeps their place
@@ -964,7 +983,7 @@
       if (hit) section.outerHTML = box(hit);
     });
     say(brush ? "Morphology mode: click a segment, or an ancestor letter for the whole set; × on a heavy line takes the seam away (M or Esc to leave)"
-        : gapping ? "Gap mode: arrows send a segment to a gap column, × takes an ancestor segment out (G or Esc to leave)"
+        : gapping ? "Gap mode: ← → move a segment one column at a time (or click it, then the arrow keys); × takes an ancestor segment out (G or Esc to leave)"
         : "Typing mode: drag a segment to move it, + at the top adds an empty column");
   }
   $("ia-brush").addEventListener("click", () => setTool(!brush, false));
@@ -1012,22 +1031,46 @@
       }
       return;
     }
-    const button = e.target.closest("button.mk, button.gp, button.gb");
+    const button = e.target.closest("button.mk, button.gp, button.gsel");
     if (!button) return;
     const pair = pairs.get(button.closest("tr").dataset.key);
     const i = +button.dataset.i;
-    snapshot(pair);
-    if (button.classList.contains("gp")) {
-      const msg = toGap(pair, i, button.dataset.side);
-      if (msg) { UNDO.pop(); say(msg, true); return; }
-    } else if (button.classList.contains("gb")) {
-      if (!putBack(pair, i)) { UNDO.pop(); say("There is no empty column beside it. Empty one first.", true); return; }
-    } else {
-      toggleMorph(pair, i);
+    if (button.classList.contains("gsel")) {
+      picked = { key: pair.key, i };
+      redraw(pair, button);
+      focusPicked();
+      say(`${pair.cells[i].bottom} picked: ← and → move it one column at a time`);
+      return;
     }
+    if (button.classList.contains("gp")) {
+      step(pair, i, button.dataset.side === "left" ? -1 : 1, button);
+      return;
+    }
+    snapshot(pair);
+    toggleMorph(pair, i);
     save(pair);
     redraw(pair, button);
   });
+  // gap mode: a segment moved one column (stepReflex); it stays picked for the arrow keys
+  function step(pair, i, dir, inside) {
+    snapshot(pair);
+    const seg = pair.cells[i] ? pair.cells[i].bottom : "";
+    const result = stepReflex(pair.cells, i, dir, pair.slots);
+    if (result.msg) { UNDO.pop(); say(result.msg, true); return; }
+    setRanks(pair);
+    save(pair);
+    picked = { key: pair.key, i: result.i };
+    redraw(pair, inside);
+    focusPicked();
+    say(`${seg} moved one column ${dir < 0 ? "left" : "right"}; U takes it back`);
+  }
+  // the picked segment's button gets the focus, so the arrow keys go on moving it
+  function focusPicked() {
+    if (!picked) return;
+    const tr = [...$("ia-sets").querySelectorAll("tr[data-key]")].find((t) => t.dataset.key === picked.key);
+    const b = tr && tr.querySelector(`button.gsel[data-i="${picked.i}"]`);
+    if (b) b.focus({ preventScroll: true });
+  }
   $("ia-sets").addEventListener("change", (e) => {
     if (e.target.classList.contains("setcheck")) {
       const set = SETS.find((s) => s.id === e.target.dataset.id);
@@ -1171,6 +1214,15 @@
     const t = e.target;
     if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) && t.type !== "checkbox")) return;
     const key = e.key.toLowerCase();
+    if (gapping && picked && (e.key === "ArrowLeft" || e.key === "ArrowRight")) {
+      const pair = pairs.get(picked.key);
+      const tr = [...$("ia-sets").querySelectorAll("tr[data-key]")].find((t) => t.dataset.key === picked.key);
+      if (pair && tr && pair.cells[picked.i]) {
+        e.preventDefault();
+        step(pair, picked.i, e.key === "ArrowLeft" ? -1 : 1, tr);
+        return;
+      }
+    }
     if (key === "m") setTool(!brush, false);
     else if (key === "g") setTool(false, !gapping);
     else if (key === "escape" && (brush || gapping)) setTool(false, false);
