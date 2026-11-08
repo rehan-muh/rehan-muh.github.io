@@ -448,7 +448,7 @@ body.page-home .site-foot { text-align: center; }
 
   <div id="sections" hidden>
 
-    <section class="secpage" id="map" hidden>
+    <section class="secpage" id="sec-map" hidden>
       <div class="hero">
         <p class="kicker">The map</p>
         <h1>Every branch, every topic</h1>
@@ -497,7 +497,7 @@ body.page-home .site-foot { text-align: center; }
       </section>
     </section>
 
-    <section class="secpage" id="pipeline" hidden>
+    <section class="secpage" id="sec-pipeline" hidden>
       <div class="hero">
         <p class="kicker">Workflow</p>
         <h1>How a phylogenomic study runs</h1>
@@ -529,7 +529,7 @@ body.page-home .site-foot { text-align: center; }
       </section>
     </section>
 
-    <section class="secpage" id="timeline" hidden>
+    <section class="secpage" id="sec-timeline" hidden>
       <div class="hero">
         <p class="kicker">Timeline</p>
         <h1>Two centuries in five eras</h1>
@@ -595,7 +595,7 @@ body.page-home .site-foot { text-align: center; }
       </section>
     </section>
 
-    <section class="secpage" id="toolbox" hidden>
+    <section class="secpage" id="sec-toolbox" hidden>
       <div class="hero">
         <p class="kicker">Toolbox</p>
         <h1>Software by task</h1>
@@ -640,7 +640,7 @@ body.page-home .site-foot { text-align: center; }
       </section>
     </section>
 
-    <section class="secpage" id="frontiers" hidden>
+    <section class="secpage" id="sec-frontiers" hidden>
       <div class="hero">
         <p class="kicker">Open problems</p>
         <h1>Where the field is still unresolved</h1>
@@ -1186,7 +1186,7 @@ function showView(which){
 function showHome(){++token;showView("home");setChrome("home",null,null);window.scrollTo(0,0);}
 function showSection(id){
   ++token; showView("sec");
-  secs.querySelectorAll(".secpage").forEach(s=>{s.hidden=s.id!==id;});
+  secs.querySelectorAll(".secpage").forEach(s=>{s.hidden=s.id!=="sec-"+id;});
   setChrome(SEC[id][0],id,SEC[id][1]); curSec=id;
   window.scrollTo(0,secY[id]||0);
 }
