@@ -46,50 +46,28 @@
   };
   // indices of the cells that hold an ancestor segment
   const rankList = (cells) => cells.reduce((a, c, i) => (c.top !== ADDED ? a.concat(i) : a), []);
-  // key G: a gap before the reflex segment in cell i. That segment and the ones after it move
-  // one ancestor segment to the right, up to the first gap, which they fill; past the end of
-  // the word the last one goes to a column of its own. Returns a message if nothing moved.
-  function insertGap(cells, i) {
-    const ranks = rankList(cells), k = ranks.indexOf(i);
-    if (k < 0) return "A gap goes in one of the ancestor's columns.";
-    if (cells[i].bottom === GAP) return "This is a gap already.";
-    let carry = cells[i].bottom;
-    cells[i].bottom = GAP;
-    for (let j = k + 1; j < ranks.length; j++) {
-      const next = cells[ranks[j]].bottom;
-      cells[ranks[j]].bottom = carry;
-      if (next === GAP) return "";
-      carry = next;
-    }
-    cells.splice(ranks[ranks.length - 1] + 1, 0, { top: ADDED, bottom: carry, morph: false, seam: false });
+  // the ancestor's k-th segment taken out of one row: a reflex segment that stood under it
+  // stays, in a column of its own (the ancestor has a gap there); a gap goes with it
+  function deleteAncestor(cells, k) {
+    const ranks = rankList(cells);
+    if (k < 0 || k >= ranks.length) return "That segment is not in this row.";
+    if (ranks.length < 2) return "The ancestor would have no segment left.";
+    const i = ranks[k], cell = cells[i];
+    if (cell.seam && k + 1 < ranks.length) cells[ranks[k + 1]].seam = true;
+    if (cell.bottom === GAP) cells.splice(i, 1);
+    else cells[i] = { top: ADDED, bottom: cell.bottom, morph: false, seam: false };
     return "";
   }
-  // key D: the gap in cell i taken out. The segments after it move one to the left, up to the
-  // next gap; at the end of the word, a segment in a column of its own just after the word
-  // (not a suffix) comes back in.
-  function removeGap(cells, i) {
-    const ranks = rankList(cells), k = ranks.indexOf(i);
-    if (k < 0 || cells[i].bottom !== GAP) return "Only a gap in one of the ancestor's columns can be taken out.";
-    let j = k;
-    while (j + 1 < ranks.length && cells[ranks[j + 1]].bottom !== GAP) {
-      cells[ranks[j]].bottom = cells[ranks[j + 1]].bottom;
-      j++;
-    }
-    // cell j's segment has moved to j - 1; j takes the spilled segment, or becomes the gap
-    const after = ranks[ranks.length - 1] + 1;
-    const spill = j === ranks.length - 1 && cells[after] && cells[after].top === ADDED && !cells[after].morph;
-    if (j === k && !spill) return "There is nothing after this gap to move in.";
-    if (spill) {
-      cells[ranks[j]].bottom = cells[after].bottom;
-      cells.splice(after, 1);
-    } else {
-      cells[ranks[j]].bottom = GAP;
-    }
+  // the ancestor's k-th segment marked as morphology, or not, in one row
+  function markAncestor(cells, k, on) {
+    const ranks = rankList(cells);
+    if (k < 0 || k >= ranks.length) return "That segment is not in this row.";
+    cells[ranks[k]].morph = on;
     return "";
   }
 
   if (typeof document === "undefined") {
-    module.exports = { parseCells, renderCells, parsePair, renderPair, clean, insertGap, removeGap };
+    module.exports = { parseCells, renderCells, parsePair, renderPair, clean, rankList, deleteAncestor, markAncestor };
     return;
   }
 
@@ -273,24 +251,65 @@
                   inputs.filter((x) => +x.dataset.i < i).pop() || inputs[0];
     if (input) { input.focus(); input.select(); }
   }
-  // every change to a pair can be taken back with U, as far as the state the page loaded
-  function snapshot(pair) {
-    pair.history = pair.history || [];
-    pair.history.push(JSON.stringify({ cells: pair.cells, morph: pair.morph, status: pair.status, note: pair.note }));
-    if (pair.history.length > 100) pair.history.shift();
+  // U takes back the last change on the page, whether to one pair or to a whole set (an
+  // ancestor segment deleted or marked), as far back as the state the page loaded
+  const UNDO = [];
+  function snapshot(list) {
+    UNDO.push((Array.isArray(list) ? list : [list]).map((p) =>
+      [p, JSON.stringify({ cells: p.cells, morph: p.morph, status: p.status, note: p.note })]));
+    if (UNDO.length > 200) UNDO.shift();
   }
-  function undo(pair) {
-    if (!pair.history || !pair.history.length) return false;
-    Object.assign(pair, JSON.parse(pair.history.pop()));
-    setRanks(pair);
-    return true;
+  function undoLast() {
+    const entry = UNDO.pop();
+    if (!entry) { say("Nothing left to take back.", true); return; }
+    const sets = new Set();
+    entry.forEach(([p, state]) => {
+      Object.assign(p, JSON.parse(state));
+      setRanks(p);
+      save(p);
+      sets.add(p.set);
+    });
+    sets.forEach(redrawSet);
+  }
+  function redrawSet(set) {
+    const hit = hits.find((h) => h.set === set);
+    const section = [...$("ia-sets").querySelectorAll("section.set")].find((s) => s.dataset.set === set.id);
+    if (hit && section) section.outerHTML = box(hit);
+  }
+  // the morphology label of a pair after its marks changed
+  function relabel(pair) {
+    const was = parsePair(pair.base[0], pair.base[1]);
+    const unchanged = was.length === pair.cells.length && pair.cells.every((c, k) => was[k].morph === c.morph && was[k].top === c.top);
+    pair.morph = unchanged ? pair.base[2] : pair.cells.some((c) => c.morph) ? `${pair.base[2] ? pair.base[2] + "; " : ""}edited by hand` : "";
   }
   function toggleMorph(pair, i) {
-    const cell = pair.cells[i];
-    cell.morph = !cell.morph;
-    const was = parsePair(pair.base[0], pair.base[1]);
-    const unchanged = was.length === pair.cells.length && pair.cells.every((c, k) => was[k].morph === c.morph);
-    pair.morph = unchanged ? pair.base[2] : pair.cells.some((c) => c.morph) ? `${pair.base[2] ? pair.base[2] + "; " : ""}edited by hand` : "";
+    pair.cells[i].morph = !pair.cells[i].morph;
+    relabel(pair);
+  }
+  // the rows of a set whose ancestor has segment `seg` at rank k
+  function ancestorRows(set, k, seg) {
+    return set.rows.filter((p) => p.ranks.length > k && p.cells[p.ranks[k]].top === seg);
+  }
+  // morphology mode, a click on an ancestor letter: marked in every row of the set, or, if
+  // every row has it marked already, unmarked in every row
+  function markAncestorInSet(set, k, seg) {
+    const rows = ancestorRows(set, k, seg);
+    if (!rows.length) return;
+    const on = !rows.every((p) => p.cells[p.ranks[k]].morph);
+    snapshot(rows);
+    rows.forEach((p) => { markAncestor(p.cells, k, on); relabel(p); save(p); });
+    say(`${seg} ${on ? "marked" : "unmarked"} as morphology in ${rows.length} ${rows.length === 1 ? "row" : "rows"}`);
+    redrawSet(set);
+  }
+  // gap mode, the × under an ancestor letter: the segment taken out of the set's ancestor
+  function deleteAncestorInSet(set, k, seg) {
+    const rows = ancestorRows(set, k, seg);
+    if (!rows.length) return;
+    if (rows.some((p) => p.ranks.length < 2)) { say("The ancestor would have no segment left.", true); return; }
+    snapshot(rows);
+    rows.forEach((p) => { deleteAncestor(p.cells, k); setRanks(p); relabel(p); save(p); });
+    say(`${seg} taken out of the ancestor in ${rows.length} ${rows.length === 1 ? "row" : "rows"}; press U to take it back`);
+    redrawSet(set);
   }
   function save(pair) {
     const [anc, ref] = renderPair(pair.cells);
@@ -387,7 +406,7 @@
         if (k < greens.length && p.cells[i].morph) greens[k][n] = true;
       }));
     });
-    let h = `<section class="set"><h3>${esc(set.head || segs.map((s) => s.top).join(""))}`;
+    let h = `<section class="set" data-set="${esc(set.id)}"><h3>${esc(set.head || segs.map((s) => s.top).join(""))}`;
     if (set.gloss && set.gloss !== set.head) h += ` <span class="gl">‘${esc(set.gloss)}’</span>`;
     const aside = set.rows.filter((p) => p.status === "uncertain").length;
     h += ` <span class="id">${esc(set.id)}, ${rows.length} of ${set.rows.length} ${set.rows.length === 1 ? "form" : "forms"}${aside ? `, ${aside} uncertain` : ""}</span>`;
@@ -405,7 +424,16 @@
       for (let n = 0; n < width; n++) h += `<th class="add${greens[k][n] ? "" : " plain"}" scope="col">${GAP}</th>`;
       if (k < segs.length) {
         const cls = [everyone[k] ? "m" : "", segs[k].seam ? "seam" : ""].join(" ").trim();
-        h += `<th scope="col"${cls ? ` class="${cls}"` : ""}>${esc(segs[k].top)}</th>`;
+        const seg = esc(segs[k].top);
+        let body = seg;
+        // morphology mode: the letter marks or unmarks the segment in every row of the set;
+        // gap mode: × takes the segment out of the set's ancestor
+        if (editing && brush) {
+          body = `<button class="amk" type="button" data-k="${k}" data-seg="${seg}" aria-pressed="${everyone[k]}" title="Mark or unmark ${seg} as morphology in every row of this set">${seg}</button>`;
+        } else if (editing && gapping && segs.length > 1) {
+          body = `${seg}<button class="adel" type="button" data-k="${k}" data-seg="${seg}" aria-label="Take ${seg} out of the ancestor in every row of this set" title="Take ${seg} out of the ancestor">×</button>`;
+        }
+        h += `<th scope="col"${cls ? ` class="${cls}"` : ""}>${body}</th>`;
       }
     });
     h += '<th class="where" scope="col">Morphology, status, source</th>' + (editing ? '<th class="where" scope="col">Edit</th>' : "") + "</tr></thead><tbody>";
@@ -582,11 +610,26 @@
     gapping = useGap;
     $("ia-brush").setAttribute("aria-pressed", brush ? "true" : "false");
     $("ia-gap").setAttribute("aria-pressed", gapping ? "true" : "false");
-    apply();
+    // the sets on the page are drawn again where they are, so the reader keeps their place
+    [...$("ia-sets").querySelectorAll("section.set")].forEach((section) => {
+      const hit = hits.find((h) => h.set.id === section.dataset.set);
+      if (hit) section.outerHTML = box(hit);
+    });
+    say(brush ? "Morphology mode: click a segment, or an ancestor letter for the whole set (M or Esc to leave)"
+        : gapping ? "Gap mode: arrows send a segment to a gap column, × takes an ancestor segment out (G or Esc to leave)"
+        : "Typing mode");
   }
   $("ia-brush").addEventListener("click", () => setTool(!brush, false));
   $("ia-gap").addEventListener("click", () => setTool(false, !gapping));
   $("ia-sets").addEventListener("click", (e) => {
+    const head = e.target.closest("button.amk, button.adel");
+    if (head) {
+      const set = SETS.find((s) => s.id === head.closest("section.set").dataset.set);
+      if (!set) return;
+      if (head.classList.contains("amk")) markAncestorInSet(set, +head.dataset.k, head.dataset.seg);
+      else deleteAncestorInSet(set, +head.dataset.k, head.dataset.seg);
+      return;
+    }
     const button = e.target.closest("button.mk, button.gp, button.gb");
     if (!button) return;
     const pair = pairs.get(button.closest("tr").dataset.key);
@@ -595,7 +638,7 @@
     if (button.classList.contains("gp")) {
       toGap(pair, i, button.dataset.side);
     } else if (button.classList.contains("gb")) {
-      if (!putBack(pair, i)) { pair.history.pop(); say("There is no empty column beside it. Empty one first.", true); return; }
+      if (!putBack(pair, i)) { UNDO.pop(); say("There is no empty column beside it. Empty one first.", true); return; }
     } else {
       toggleMorph(pair, i);
     }
@@ -668,62 +711,40 @@
     } else return;
     save(pair);
   });
-  // keys in a segment cell: Enter, the next cell. Capitals, which no transcription here uses:
-  // M marks or unmarks morphology, G puts a gap before the segment, D takes a gap out, and
-  // U takes back the last change to the row.
-  const KEYS = { M: "morph", G: "gap", D: "ungap", U: "undo" };
+  // in a segment cell: Enter goes to the next cell, Esc leaves the cell (so that the keys
+  // below work again)
   $("ia-sets").addEventListener("keydown", (e) => {
     const input = e.target;
     if (!input.classList || !input.classList.contains("cell")) return;
-    const tr = input.closest("tr[data-key]");
-    const pair = tr && pairs.get(tr.dataset.key);
-    if (!pair) return;
-    if (e.key === "Enter") {
+    if (e.key === "Escape") {
       e.preventDefault();
-      const all = [...$("ia-sets").querySelectorAll("input.cell")];
-      const next = all[all.indexOf(input) + 1];
-      const nextRow = next && next.closest("tr[data-key]"), nextI = next ? +next.dataset.i : 0;
       input.blur();
-      if (next && next.isConnected) next.focus();
-      // the row was drawn again (an emptied suffix was taken out): find the cell anew
-      else if (nextRow) focusCell(pairs.get(nextRow.dataset.key), nextRow === tr ? nextI - 1 : nextI);
       return;
     }
-    // a capital letter (Shift, or Caps Lock), whatever the keyboard layout reports for it
-    const letter = e.key.length === 1 && e.key === e.key.toUpperCase() ? e.key
-      : e.shiftKey && /^Key[MGDU]$/.test(e.code || "") ? e.code.slice(3) : "";
-    const op = !e.ctrlKey && !e.metaKey && !e.altKey && KEYS[letter];
-    if (!op) return;
+    if (e.key !== "Enter") return;
+    const tr = input.closest("tr[data-key]");
     e.preventDefault();
-    const i = +input.dataset.i;
-    snapshot(pair);
-    // what was typed in the cell counts first
-    const typed = clean(input.value), cell = pair.cells[i];
-    if (cell && typed !== cell.bottom && !(cell.top === ADDED && typed === GAP)) cell.bottom = typed;
-    let target = i, msg = "";
-    if (op === "morph") {
-      toggleMorph(pair, i);
-    } else if (op === "gap") {
-      const ranks = pair.ranks.slice(), k = ranks.indexOf(i);
-      msg = insertGap(pair.cells, i);
-      // the segment moved one column on, and the cursor follows it, so G again moves it again
-      if (!msg) target = k + 1 < ranks.length ? ranks[k + 1] : ranks[ranks.length - 1] + 1;
-    } else if (op === "ungap") {
-      msg = removeGap(pair.cells, i);
-    } else {
-      pair.history.pop();
-      if (!undo(pair)) msg = "Nothing left to take back in this row.";
-      target = Math.min(i, pair.cells.length - 1);
-    }
-    if (msg) {
-      if (op !== "undo") undo(pair);
-      say(msg, true);
-      return;
-    }
-    setRanks(pair);
-    save(pair);
-    redraw(pair, input);
-    focusCell(pair, target);
+    const all = [...$("ia-sets").querySelectorAll("input.cell")];
+    const next = all[all.indexOf(input) + 1];
+    const nextRow = next && next.closest("tr[data-key]"), nextI = next ? +next.dataset.i : 0;
+    input.blur();
+    if (next && next.isConnected) next.focus();
+    // the row was drawn again (an emptied suffix was taken out): find the cell anew
+    else if (nextRow) focusCell(pairs.get(nextRow.dataset.key), nextRow === tr ? nextI - 1 : nextI);
+  });
+  // keys while editing, when no text field has the cursor: M switches morphology mode on or
+  // off, G gap mode, Esc goes back to typing, U takes back the last change
+  window.addEventListener("keydown", (e) => {
+    if (!editing || e.ctrlKey || e.metaKey || e.altKey) return;
+    const t = e.target;
+    if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) && t.type !== "checkbox")) return;
+    const key = e.key.toLowerCase();
+    if (key === "m") setTool(!brush, false);
+    else if (key === "g") setTool(false, !gapping);
+    else if (key === "escape" && (brush || gapping)) setTool(false, false);
+    else if (key === "u") undoLast();
+    else return;
+    e.preventDefault();
   });
   window.addEventListener("online", flush);
   start().catch((e) => {
