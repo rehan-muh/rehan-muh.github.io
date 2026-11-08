@@ -5,11 +5,11 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_modern_Indo-Aryan",
   "source": "jambu",
   "chain": "Old Indo-Aryan > modern Indo-Aryan",
-  "rows": 84478,
+  "rows": 84489,
   "sets": 9424,
   "languages": 676,
-  "marked": 28518,
-  "reviewed": 16527
+  "marked": 28689,
+  "reviewed": 16421
  },
  {
   "book": "Indic 2 Prakrit to modern",
@@ -17,11 +17,11 @@
   "slug": "jambu_full__Prakrit_to_modern_Indo-Aryan",
   "source": "jambu",
   "chain": "Prakrit > modern Indo-Aryan",
-  "rows": 71254,
-  "sets": 6126,
+  "rows": 71259,
+  "sets": 6125,
   "languages": 633,
-  "marked": 27352,
-  "reviewed": 12830
+  "marked": 27525,
+  "reviewed": 12767
  },
  {
   "book": "Indic 3 Pali to modern",
@@ -29,10 +29,10 @@
   "slug": "jambu_full__Pali_to_modern_Indo-Aryan",
   "source": "jambu",
   "chain": "Pali > modern Indo-Aryan",
-  "rows": 29871,
-  "sets": 2844,
-  "languages": 521,
-  "marked": 13045,
+  "rows": 29795,
+  "sets": 2798,
+  "languages": 519,
+  "marked": 12994,
   "reviewed": 0
  },
  {
@@ -41,11 +41,11 @@
   "slug": "jambu_full__Reconstructed_OIA_to_modern_Indo-Aryan",
   "source": "jambu",
   "chain": "Reconstructed OIA > modern Indo-Aryan",
-  "rows": 41232,
+  "rows": 41234,
   "sets": 5651,
   "languages": 539,
-  "marked": 18243,
-  "reviewed": 7941
+  "marked": 18501,
+  "reviewed": 7919
  },
  {
   "book": "Indic 5 OIA to Middle Indo-Aryan",
@@ -56,7 +56,7 @@
   "rows": 5834,
   "sets": 4504,
   "languages": 8,
-  "marked": 870,
+  "marked": 956,
   "reviewed": 1517
  },
  {
@@ -68,7 +68,7 @@
   "rows": 9636,
   "sets": 5727,
   "languages": 19,
-  "marked": 1566,
+  "marked": 1646,
   "reviewed": 1888
  },
  {
@@ -104,7 +104,7 @@
   "rows": 1184,
   "sets": 838,
   "languages": 8,
-  "marked": 288,
+  "marked": 287,
   "reviewed": 0
  },
  {
@@ -149,7 +149,7 @@
   "slug": "jambu_full__Old_Indo-Aryan_to_headword_variants",
   "source": "jambu",
   "chain": "Old Indo-Aryan > headword variants",
-  "rows": 1009,
+  "rows": 1008,
   "sets": 691,
   "languages": 14,
   "marked": 44,
@@ -161,10 +161,10 @@
   "slug": "jambu_full__Reconstructed_OIA_to_headword_variants",
   "source": "jambu",
   "chain": "Reconstructed OIA > headword variants",
-  "rows": 1477,
+  "rows": 1474,
   "sets": 841,
   "languages": 14,
-  "marked": 60,
+  "marked": 59,
   "reviewed": 0
  },
  {
