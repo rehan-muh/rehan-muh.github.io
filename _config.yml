@@ -202,6 +202,10 @@ defaults:
       path: "linguistic_phylogenetics"
     values:
       sitemap: false
+  - scope:
+      path: "biological_phylogenetics"
+    values:
+      sitemap: false
 
 sass:
   style: compressed
@@ -212,7 +216,7 @@ sass:
 
 jekyll-minifier:
   compress_javascript: false # set to false since we are using terser as the js minifier
-  exclude: ["robots.txt", "assets/js/search/*.js", "tutorials/**/*", "linguistic_phylogenetics/**/*", "alignments/**/*"]
+  exclude: ["robots.txt", "assets/js/search/*.js", "tutorials/**/*", "linguistic_phylogenetics/**/*", "biological_phylogenetics/**/*", "alignments/**/*"]
 
 # -----------------------------------------------------------------------------
 # Terser
