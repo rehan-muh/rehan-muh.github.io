@@ -131,10 +131,78 @@
     cells[ranks[k]].morph = on;
     return "";
   }
+  // the ancestor's k-th segment changed in one row; emptied, it is taken out (deleteAncestor)
+  function renameAncestor(cells, k, seg) {
+    const ranks = rankList(cells);
+    if (k < 0 || k >= ranks.length) return "That segment is not in this row.";
+    const token = clean(seg);
+    if (token === GAP) return deleteAncestor(cells, k);
+    if (token === ADDED || /[[\]+]/.test(token)) return "Type the segment in IPA.";
+    cells[ranks[k]].top = token;
+    return "";
+  }
+  // a reflex segment moved within its row, from cell i to a target: {kind: "rank", p}, the
+  // gap under ancestor segment p, or {kind: "added", p, n}, column n of the gap columns before
+  // ancestor segment p (the last p is after the word). In a gap column it goes before the
+  // segment the row has in that column, or after the row's others in that place.
+  function moveReflex(cells, i, target) {
+    const src = cells[i];
+    if (!src || src.bottom === GAP) return "There is no segment there to move.";
+    const seg = src.bottom, wasAdded = src.top === ADDED;
+    const take = () => { if (wasAdded) cells.splice(cells.indexOf(src), 1); else src.bottom = GAP; };
+    if (target.kind === "rank") {
+      const ranks = rankList(cells);
+      if (target.p < 0 || target.p >= ranks.length) return "That place is not in this row.";
+      const dest = cells[ranks[target.p]];
+      if (dest === src) return "";
+      if (dest.bottom !== GAP) return `${dest.top} has ${dest.bottom} under it already. Drop the segment on a gap, or add a column with +.`;
+      take();
+      dest.bottom = seg;
+      return "";
+    }
+    const { added, rank } = layoutOf(cells);
+    const { p, n } = target;
+    if (p < 0 || p >= added.length) return "That place is not in this row.";
+    const over = n < added[p].length ? cells[added[p][n]] : null;
+    if (over === src) return "";
+    // without a segment in that column, the new cell goes at the end of the place: before
+    // ancestor segment p, or at the end of the word
+    const before = over ? null : (p < rank.length ? cells[rank[p]] : null);
+    take();
+    const at = over ? cells.indexOf(over) : before ? cells.indexOf(before) : cells.length;
+    cells.splice(at, 0, { top: ADDED, bottom: seg, morph: wasAdded ? src.morph : false, seam: false });
+    return "";
+  }
+  // the ancestor's k-th segment moved into column n of the gap columns before ancestor segment
+  // p (as the table was before the move): a reflex segment the row has in that column stands
+  // under it, a row with none there gets a gap; the reflex segment that stood under it stays,
+  // in a column of its own
+  function moveAncestor(cells, k, p, n) {
+    const ranks = rankList(cells);
+    if (k < 0 || k >= ranks.length) return "That segment is not in this row.";
+    const { added, rank } = layoutOf(cells);
+    if (p < 0 || p >= added.length) return "That place is not in this row.";
+    const at = ranks[k], src = cells[at];
+    const over = n < added[p].length ? cells[added[p][n]] : null;
+    const before = over ? null : (p < rank.length ? cells[rank[p]] : null);
+    if (src.seam && k + 1 < ranks.length) cells[ranks[k + 1]].seam = true;
+    if (src.bottom === GAP) cells.splice(at, 1);
+    else cells[at] = { top: ADDED, bottom: src.bottom, morph: false, seam: false };
+    if (over) {
+      over.top = src.top;
+      over.morph = src.morph;
+      return "";
+    }
+    // into the place just before itself: the new cell goes where it was, before what stood under it
+    const where = before === src ? at : before ? cells.indexOf(before) : cells.length;
+    cells.splice(where, 0, { top: src.top, bottom: GAP, morph: src.morph, seam: false });
+    return "";
+  }
 
   if (typeof document === "undefined") {
     module.exports = { parseCells, renderCells, parsePair, renderPair, clean, rankList, deleteAncestor, markAncestor,
-                       insertAncestor, layoutOf, insertReflex, ancestorIntoColumn, deleteColumn };
+                       insertAncestor, layoutOf, insertReflex, ancestorIntoColumn, deleteColumn,
+                       renameAncestor, moveReflex, moveAncestor };
     return;
   }
 
@@ -343,6 +411,12 @@
     const section = [...$("ia-sets").querySelectorAll("section.set")].find((s) => s.dataset.set === set.id);
     if (hit && section) section.outerHTML = box(hit);
   }
+  // after the set's ancestor changed shape: the empty columns added with + are kept by place,
+  // and the places have moved, so they go
+  function reshaped(set) {
+    delete set.want;
+    redrawSet(set);
+  }
   // the morphology label of a pair after its marks changed
   function relabel(pair) {
     const was = parsePair(pair.base[0], pair.base[1]);
@@ -382,7 +456,7 @@
     const where = pos < tops.length ? `before ${tops[pos]}` : `after ${tops[tops.length - 1]}`;
     say(`${clean(seg)} added to the ancestor ${where} in ${rows.length} ${rows.length === 1 ? "row" : "rows"}, ` +
         "with a gap under it; type the reflexes in, or click an added segment to move it in. U takes it back");
-    redrawSet(set);
+    reshaped(set);
   }
   // the rows of a set whose ancestor is the one the table shows
   function rowsWithAncestor(set, tops) {
@@ -399,7 +473,7 @@
     rows.forEach((p) => { ancestorIntoColumn(p.cells, slot, n, seg); setRanks(p); relabel(p); save(p); });
     say(`${clean(seg)} put in the ancestor in ${rows.length} ${rows.length === 1 ? "row" : "rows"}; ` +
         "segments in that column stand under it, the other rows have a gap. U takes it back");
-    redrawSet(set);
+    reshaped(set);
   }
   // gap mode, ⌫: a whole column deleted in every row, reflex segments included
   function deleteColumnInSet(set, kind, slot, n, tops) {
@@ -412,7 +486,34 @@
     touched.forEach((p) => { deleteColumn(p.cells, kind, slot, n); setRanks(p); relabel(p); save(p); });
     say(`Column deleted in ${touched.length} ${touched.length === 1 ? "row" : "rows"}; the segments in it are gone, ` +
         "so those rows no longer spell their cited form. U takes it back");
-    redrawSet(set);
+    reshaped(set);
+  }
+  // typing mode, an ancestor letter changed: changed in every row whose ancestor has it there
+  function renameAncestorInSet(set, k, seg, value) {
+    const rows = ancestorRows(set, k, seg);
+    if (!rows.length) return;
+    const token = clean(value);
+    if (token === seg) return;
+    if (token === GAP) { deleteAncestorInSet(set, k, seg); return; }
+    const msg = renameAncestor(rows[0].cells.map((c) => ({ ...c })), k, value);
+    if (msg) { say(msg, true); redrawSet(set); return; }
+    snapshot(rows);
+    rows.forEach((p) => { renameAncestor(p.cells, k, value); relabel(p); save(p); });
+    say(`${seg} changed to ${token} in the ancestor in ${rows.length} ${rows.length === 1 ? "row" : "rows"}; U takes it back`);
+    reshaped(set);
+  }
+  // an ancestor letter dragged onto a gap column: moved there in every row with the ancestor
+  // the table shows
+  function moveAncestorInSet(set, k, slot, n, tops, seg) {
+    const rows = rowsWithAncestor(set, tops);
+    if (!rows.length) return;
+    const msg = moveAncestor(rows[0].cells.map((c) => ({ ...c })), k, slot, n);
+    if (msg) { say(msg, true); return; }
+    snapshot(rows);
+    rows.forEach((p) => { moveAncestor(p.cells, k, slot, n); setRanks(p); relabel(p); save(p); });
+    say(`${seg} moved in the ancestor in ${rows.length} ${rows.length === 1 ? "row" : "rows"}: segments in that column stand ` +
+        `under it, and what stood under it stays in a column of its own. U takes it back`);
+    reshaped(set);
   }
   // gap mode, the × under an ancestor letter: the segment taken out of the set's ancestor
   function deleteAncestorInSet(set, k, seg) {
@@ -422,7 +523,7 @@
     snapshot(rows);
     rows.forEach((p) => { deleteAncestor(p.cells, k); setRanks(p); relabel(p); save(p); });
     say(`${seg} taken out of the ancestor in ${rows.length} ${rows.length === 1 ? "row" : "rows"}; press U to take it back`);
-    redrawSet(set);
+    reshaped(set);
   }
   function save(pair) {
     const [anc, ref] = renderPair(pair.cells);
@@ -465,19 +566,21 @@
   }
   function addedCell(pair, i, green, p, n) {
     const kind = green ? "add" : "add plain";
+    // where the cell is, for a segment dragged onto it
+    const at = `data-slot="${p}" data-n="${n}"${i === undefined ? "" : ` data-i="${i}"`}`;
     if (i === undefined) {
       // typing mode: a segment can be typed into this row's gap in the column
       if (editing && !brush && !gapping) {
-        return `<td class="seg ${kind} none"><input class="cell slotin" data-slot="${p}" data-n="${n}" data-green="${green ? 1 : 0}" value="" aria-label="Add a segment to this row here"></td>`;
+        return `<td class="seg ${kind} none" ${at}><input class="cell slotin" data-slot="${p}" data-n="${n}" data-green="${green ? 1 : 0}" value="" aria-label="Add a segment to this row here"></td>`;
       }
-      return `<td class="seg ${kind} none">${GAP}</td>`;
+      return `<td class="seg ${kind} none" ${at}>${GAP}</td>`;
     }
     const seg = esc(pair.cells[i].bottom);
-    if (editing && gapping) return `<td class="seg ${kind}"><button class="gb" type="button" data-i="${i}" title="Put back in the empty column beside it">${seg}</button></td>`;
-    if (editing && brush) return `<td class="seg ${kind}"><button class="mk" type="button" data-i="${i}" aria-pressed="${pair.cells[i].morph}">${seg}</button></td>`;
+    if (editing && gapping) return `<td class="seg ${kind}" ${at}><button class="gb" type="button" data-i="${i}" title="Put back in the empty column beside it">${seg}</button></td>`;
+    if (editing && brush) return `<td class="seg ${kind}" ${at}><button class="mk" type="button" data-i="${i}" aria-pressed="${pair.cells[i].morph}">${seg}</button></td>`;
     // a suffix or an unplaced segment can be changed too; emptied, it is taken out
-    if (editing) return `<td class="seg ${kind}"><input class="cell" data-i="${i}" value="${seg}" aria-label="Segment the ancestor lacks"></td>`;
-    return `<td class="seg ${kind}">${seg}</td>`;
+    if (editing) return `<td class="seg ${kind}" ${at}><input class="cell" data-i="${i}" value="${seg}" aria-label="Segment the ancestor lacks"></td>`;
+    return `<td class="seg ${kind}" ${at}>${seg}</td>`;
   }
   // `slots[p]` is how many columns the added segments before p need in this table
   function rowHTML(pair, slots, greens) {
@@ -506,7 +609,8 @@
     const first = rows[0];
     const segs = first.ranks.map((i) => first.cells[i]);
     const everyone = segs.map((_, k) => rows.every((p) => p.cells[p.ranks[k]] && p.cells[p.ranks[k]].morph));
-    const slots = segs.map(() => 0).concat([0]);
+    // columns the editor added with + and has not filled yet (set.want: place -> width)
+    const slots = segs.map((_, k) => (set.want && set.want[k]) || 0).concat([(set.want && set.want[segs.length]) || 0]);
     rows.forEach((p) => {
       layout(p).added.forEach((list, k) => { if (k < slots.length) slots[k] = Math.max(slots[k], list.length); });
       p.slots = slots;
@@ -536,19 +640,32 @@
     h += '<table><thead><tr class="anc"><th class="lang" scope="col">Language</th><th class="form" scope="col">As cited</th>';
     // gap mode: ⌫ deletes a whole column in every row of the set
     const drop = (attrs, what) => `<button class="cdel" type="button" ${attrs} aria-label="Delete ${what} in every row of this set" title="Delete ${what} in every row of this set">⌫</button>`;
+    const typing = editing && !brush && !gapping;
+    // typing mode: + inserts an empty column, to drag a segment into
+    const column = (slot, where) => `<button class="cadd${slot === segs.length ? " after" : ""}" type="button" data-slot="${slot}" aria-label="Insert an empty column ${where}" title="Insert an empty column ${where}">+</button>`;
     slots.forEach((width, k) => {
       for (let n = 0; n < width; n++) {
-        // gap mode: + puts an ancestor segment into this gap column
+        // gap mode: + puts an ancestor segment into this gap column; typing mode: the
+        // segment is typed in at the top of the column
         const body = editing && gapping
           ? `<button class="aput" type="button" data-slot="${k}" data-n="${n}" aria-label="Put an ancestor segment in this column" title="Put an ancestor segment in this column">+</button>` +
             drop(`data-kind="added" data-slot="${k}" data-n="${n}"`, "this column and its segments")
-          : GAP;
-        h += `<th class="add${greens[k][n] ? "" : " plain"}" scope="col">${body}</th>`;
+          : typing
+            ? `<input class="aslot" data-slot="${k}" data-n="${n}" value="" placeholder="${GAP}" aria-label="Put an ancestor segment over this column, in every row of this set" title="Type an ancestor segment to put over this column">`
+            : GAP;
+        h += `<th class="add${greens[k][n] ? "" : " plain"}" scope="col" data-slot="${k}" data-n="${n}">${body}</th>`;
       }
       if (k < segs.length) {
         const cls = [everyone[k] ? "m" : "", segs[k].seam ? "seam" : ""].join(" ").trim();
         const seg = esc(segs[k].top);
         let body = seg;
+        if (typing) {
+          // the letter can be changed in every row of the set; emptied, it is taken out of
+          // the ancestor (what stood under it stays)
+          body = column(k, `before ${seg}`) +
+                 `<input class="acell" data-k="${k}" data-seg="${seg}" value="${seg}" aria-label="Ancestor segment ${seg}, changed in every row of this set" title="Change ${seg} in every row of this set; empty it to take it out">` +
+                 (k === segs.length - 1 ? column(k + 1, `after ${seg}`) : "");
+        }
         // morphology mode: the letter marks or unmarks the segment in every row of the set;
         // gap mode: × takes the segment out of the set's ancestor
         if (editing && brush) {
@@ -561,7 +678,7 @@
                                     drop(`data-kind="rank" data-slot="${k}" data-n="0"`, `the column of ${seg}, with what stands under it,`) : "") +
                  (k === segs.length - 1 ? add(k + 1, `after ${seg}`) : "");
         }
-        h += `<th scope="col"${cls ? ` class="${cls}"` : ""}>${body}</th>`;
+        h += `<th scope="col"${cls ? ` class="${cls}"` : ""} data-k="${k}" data-seg="${seg}">${body}</th>`;
       }
     });
     h += '<th class="where" scope="col">Morphology, status, source</th>' + (editing ? '<th class="where" scope="col">Edit</th>' : "") + "</tr></thead><tbody>";
@@ -745,11 +862,25 @@
     });
     say(brush ? "Morphology mode: click a segment, or an ancestor letter for the whole set (M or Esc to leave)"
         : gapping ? "Gap mode: arrows send a segment to a gap column, × takes an ancestor segment out (G or Esc to leave)"
-        : "Typing mode");
+        : "Typing mode: drag a segment to move it, + at the top adds an empty column");
   }
   $("ia-brush").addEventListener("click", () => setTool(!brush, false));
   $("ia-gap").addEventListener("click", () => setTool(false, !gapping));
   $("ia-sets").addEventListener("click", (e) => {
+    const col = e.target.closest("button.cadd");
+    if (col) {
+      // an empty column in that place, one wider than the widest row there
+      const section = col.closest("section.set");
+      const hit = hits.find((h) => h.set.id === section.dataset.set);
+      if (!hit) return;
+      const slot = +col.dataset.slot, set = hit.set;
+      set.want = set.want || {};
+      set.want[slot] = 1 + Math.max(set.want[slot] || 0,
+                                    ...hit.rows.map((p) => (layoutOf(p.cells).added[slot] || []).length));
+      redrawSet(set);
+      say("Empty column added: drag a segment into it, or type an ancestor segment at its top");
+      return;
+    }
     const head = e.target.closest("button.amk, button.adel, button.aadd, button.aput, button.cdel");
     if (head) {
       const section = head.closest("section.set");
@@ -809,6 +940,20 @@
       toggleProblem(set, e.target.checked);
       showChecked();
       leave(set, e.target.closest("section.set"));
+      return;
+    }
+    if (e.target.classList.contains("acell") || e.target.classList.contains("aslot")) {
+      // the ancestor at the top of a table, typed in: changed in every row of the set
+      const section = e.target.closest("section.set");
+      const hit = hits.find((h) => h.set.id === section.dataset.set);
+      if (!hit) return;
+      const first = hit.rows[0], tops = first.ranks.map((i) => first.cells[i].top);
+      if (e.target.classList.contains("aslot")) {
+        if (!e.target.value.trim()) return;
+        ancestorIntoColumnInSet(hit.set, +e.target.dataset.slot, +e.target.dataset.n, e.target.value, tops);
+      } else {
+        renameAncestorInSet(hit.set, +e.target.dataset.k, e.target.dataset.seg, e.target.value);
+      }
       return;
     }
     const tr = e.target.closest("tr[data-key]");
@@ -873,6 +1018,14 @@
   // below work again)
   $("ia-sets").addEventListener("keydown", (e) => {
     const input = e.target;
+    if (input.classList && (input.classList.contains("acell") || input.classList.contains("aslot"))) {
+      // the ancestor's boxes: Enter makes the change, Esc leaves the box as it was
+      if (e.key !== "Enter" && e.key !== "Escape") return;
+      e.preventDefault();
+      if (e.key === "Escape") input.value = input.defaultValue;
+      input.blur();
+      return;
+    }
     if (input.classList && input.classList.contains("anew")) {
       // the box for a segment to add to the ancestor
       if (e.key !== "Enter" && e.key !== "Escape") return;
@@ -917,6 +1070,126 @@
     else return;
     e.preventDefault();
   });
+  // ------------------------------------------------------------- dragging
+  // While editing, in any mode, a reflex segment dragged within its row goes onto a gap under
+  // an ancestor segment, or into a green or outlined column (before the segment the row has
+  // there, or after its others); an ancestor letter dragged onto a green or outlined column
+  // goes there in every row of the set. A drag starts once the pointer leaves the cell, so a
+  // click still types, marks, or moves as before. + in typing mode adds an empty column.
+  let drag = null, swallowClick = false;
+  function dragSource(el) {
+    if (!editing || !el.closest) return null;
+    if (el.closest("button.cadd, button.aadd, button.adel, button.aput, button.cdel, input.anew, input.slotin, input.aslot, td.tools")) return null;
+    const td = el.closest("td.seg");
+    if (td) {
+      const tr = td.closest("tr[data-key]");
+      const pair = tr && pairs.get(tr.dataset.key);
+      const i = td.dataset.i === undefined ? NaN : +td.dataset.i;
+      if (!pair || Number.isNaN(i) || !pair.cells[i] || pair.cells[i].bottom === GAP) return null;
+      return { kind: "reflex", el: td, pair, i, label: pair.cells[i].bottom };
+    }
+    const th = el.closest("tr.anc th[data-k]");
+    if (th) {
+      const hit = hits.find((h) => h.set.id === th.closest("section.set").dataset.set);
+      if (!hit) return null;
+      return { kind: "ancestor", el: th, hit, k: +th.dataset.k, label: th.dataset.seg };
+    }
+    return null;
+  }
+  // the cell under the pointer that the dragged segment can go to, if any
+  function dropTarget(source, x, y) {
+    const el = document.elementFromPoint(x, y);
+    if (!el || !el.closest) return null;
+    if (source.kind === "reflex") {
+      const td = el.closest("td.seg");
+      if (!td || td.closest("tr") !== source.el.closest("tr")) return null;
+      if (td.dataset.slot !== undefined) return { el: td, target: { kind: "added", p: +td.dataset.slot, n: +td.dataset.n } };
+      if (td.dataset.i === undefined) return null;
+      const i = +td.dataset.i, p = source.pair.ranks.indexOf(i);
+      if (p < 0) return null;
+      return { el: td, target: { kind: "rank", p }, full: i !== source.i && source.pair.cells[i].bottom !== GAP };
+    }
+    const th = el.closest("tr.anc th.add[data-slot]");
+    if (!th || th.closest("section.set") !== source.el.closest("section.set")) return null;
+    return { el: th, target: { p: +th.dataset.slot, n: +th.dataset.n } };
+  }
+  function endDrag(d) {
+    if (d.ghost) d.ghost.remove();
+    if (d.over) d.over.classList.remove("dropok", "dropno");
+    d.source.el.classList.remove("dragfrom");
+    document.body.classList.remove("ia-dragging");
+  }
+  $("ia-sets").addEventListener("pointerdown", (e) => {
+    if (e.button !== 0 || e.pointerType === "touch") return;
+    const source = dragSource(e.target);
+    drag = source ? { source, on: false, ghost: null, over: null } : null;
+  });
+  window.addEventListener("pointermove", (e) => {
+    if (!drag) return;
+    if (!drag.on) {
+      const r = drag.source.el.getBoundingClientRect();
+      if (e.clientX >= r.left - 2 && e.clientX <= r.right + 2 && e.clientY >= r.top - 2 && e.clientY <= r.bottom + 2) return;
+      if (!drag.source.el.isConnected) { drag = null; return; }
+      drag.on = true;
+      const active = document.activeElement;
+      if (active && active !== document.body && active.blur) active.blur();
+      drag.ghost = document.createElement("div");
+      drag.ghost.className = "ia-ghost";
+      drag.ghost.textContent = drag.source.label;
+      document.body.appendChild(drag.ghost);
+      document.body.classList.add("ia-dragging");
+      drag.source.el.classList.add("dragfrom");
+    }
+    const selection = window.getSelection && window.getSelection();
+    if (selection) selection.removeAllRanges();
+    drag.ghost.style.left = `${e.clientX + 12}px`;
+    drag.ghost.style.top = `${e.clientY + 8}px`;
+    const hit = dropTarget(drag.source, e.clientX, e.clientY);
+    if (drag.over && (!hit || drag.over !== hit.el)) drag.over.classList.remove("dropok", "dropno");
+    drag.over = hit ? hit.el : null;
+    if (hit) hit.el.classList.add(hit.full ? "dropno" : "dropok");
+  });
+  window.addEventListener("pointerup", (e) => {
+    const d = drag;
+    drag = null;
+    if (!d || !d.on) return;
+    endDrag(d);
+    // the click that ends a drag does nothing else
+    swallowClick = true;
+    setTimeout(() => { swallowClick = false; }, 0);
+    if (!d.source.el.isConnected) return;
+    const hit = dropTarget(d.source, e.clientX, e.clientY);
+    if (!hit) {
+      say(d.source.kind === "reflex"
+        ? "Drop the segment on a gap in its own row, or on a green or outlined column; + adds an empty column"
+        : "Drop the ancestor letter on a green or outlined column at the top of its table; + adds an empty column", true);
+      return;
+    }
+    if (d.source.kind === "reflex") {
+      const pair = d.source.pair;
+      snapshot(pair);
+      const msg = moveReflex(pair.cells, d.source.i, hit.target);
+      if (msg) { UNDO.pop(); say(msg, true); return; }
+      setRanks(pair);
+      save(pair);
+      redraw(pair, d.source.el);
+      say(`${d.source.label} moved; U takes it back`);
+      return;
+    }
+    const { hit: table, k, label } = d.source;
+    const first = table.rows[0], tops = first.ranks.map((i) => first.cells[i].top);
+    moveAncestorInSet(table.set, k, hit.target.p, hit.target.n, tops, label);
+  });
+  window.addEventListener("pointercancel", () => { if (drag && drag.on) endDrag(drag); drag = null; });
+  $("ia-sets").addEventListener("click", (e) => {
+    if (!swallowClick) return;
+    swallowClick = false;
+    e.stopPropagation();
+    e.preventDefault();
+  }, true);
+  // no native dragging of the text in a box while editing
+  $("ia-sets").addEventListener("dragstart", (e) => { if (editing) e.preventDefault(); });
+
   window.addEventListener("online", flush);
   start().catch((e) => {
     $("ia-sets").innerHTML = `<div class="empty">The alignments could not be loaded (${esc(e.message)}). Reload the page to try again.</div>`;
