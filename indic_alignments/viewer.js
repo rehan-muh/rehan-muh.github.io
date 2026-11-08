@@ -46,16 +46,51 @@
   };
   // indices of the cells that hold an ancestor segment
   const rankList = (cells) => cells.reduce((a, c, i) => (c.top !== ADDED ? a.concat(i) : a), []);
+  // The added columns of a place (the cells before ancestor segment p, or after the word) are
+  // shared by the rows of a set by number: the second added column of a place is the same
+  // column in every row. A row with no segment in a column that a later segment of the place
+  // needs holds a placeholder there, · over -, so no segment slides into another column.
+  const filler = () => ({ top: ADDED, bottom: GAP, morph: false, seam: false });
+  const isFiller = (c) => !!c && c.top === ADDED && c.bottom === GAP;
+  // cells by slot: added[p] are the cells the reflex has where the ancestor has a gap, before
+  // ancestor segment p (the last entry is after the word); rank[p] is that segment's cell
+  function layoutOf(cells) {
+    const added = [[]], rank = [];
+    cells.forEach((cell, i) => {
+      if (cell.top === ADDED) added[added.length - 1].push(i);
+      else { rank.push(i); added.push([]); }
+    });
+    return { added, rank };
+  }
+  // where a new cell of slot p goes: after the slot's added cells
+  const slotEnd = (cells, p) => { const r = rankList(cells); return p < r.length ? r[p] : cells.length; };
+  // the row's added columns of place p made at least n wide, with placeholders
+  function pad(cells, p, n) {
+    const { added } = layoutOf(cells);
+    if (p < 0 || p >= added.length || added[p].length >= n) return;
+    cells.splice(slotEnd(cells, p), 0, ...Array.from({ length: n - added[p].length }, filler));
+  }
+  // placeholders after the last segment of a place hold no column open, and go
+  function tidy(cells) {
+    for (let i = cells.length - 1; i >= 0; i--) {
+      if (isFiller(cells[i]) && (i === cells.length - 1 || cells[i + 1].top !== ADDED)) cells.splice(i, 1);
+    }
+  }
   // the ancestor's k-th segment taken out of one row: a reflex segment that stood under it
-  // stays, in a column of its own (the ancestor has a gap there); a gap goes with it
-  function deleteAncestor(cells, k) {
+  // stays, in a column of its own (the ancestor has a gap there). The column goes if no row
+  // of the set has a segment in it (keep false; one row alone: if it has none). `width` is how
+  // many added columns the set has before it, so that what follows keeps its columns in
+  // every row.
+  function deleteAncestor(cells, k, width, keep) {
     const ranks = rankList(cells);
     if (k < 0 || k >= ranks.length) return "That segment is not in this row.";
     if (ranks.length < 2) return "The ancestor would have no segment left.";
-    const i = ranks[k], cell = cells[i];
-    if (cell.seam && k + 1 < ranks.length) cells[ranks[k + 1]].seam = true;
-    if (cell.bottom === GAP) cells.splice(i, 1);
+    pad(cells, k, width || 0);
+    const now = rankList(cells), i = now[k], cell = cells[i];
+    if (cell.seam && k + 1 < now.length) cells[now[k + 1]].seam = true;
+    if (keep === undefined ? cell.bottom === GAP : !keep) cells.splice(i, 1);
     else cells[i] = { top: ADDED, bottom: cell.bottom, morph: false, seam: false };
+    tidy(cells);
     return "";
   }
   // a segment added to the ancestor of one row, before its segment `pos` (after the last one
@@ -70,26 +105,19 @@
     cells.splice(at, 0, { top: token, bottom: GAP, morph: false, seam: false });
     return "";
   }
-  // cells by slot: added[p] are the cells the reflex has where the ancestor has a gap, before
-  // ancestor segment p (the last entry is after the word); rank[p] is that segment's cell
-  function layoutOf(cells) {
-    const added = [[]], rank = [];
-    cells.forEach((cell, i) => {
-      if (cell.top === ADDED) added[added.length - 1].push(i);
-      else { rank.push(i); added.push([]); }
-    });
-    return { added, rank };
-  }
-  // where a new cell of slot p goes: after the slot's added cells
-  const slotEnd = (cells, p) => { const r = rankList(cells); return p < r.length ? r[p] : cells.length; };
-  // a reflex segment typed into column n of slot p, where this row has none: it goes after
-  // the row's other added cells of that slot
+  // a reflex segment typed into column n of slot p, where this row has none: it goes in that
+  // very column, with placeholders before it if the row has fewer columns there
   function insertReflex(cells, p, n, seg, morph) {
     const { added } = layoutOf(cells);
     if (p < 0 || p >= added.length) return "That place is not in this row.";
-    if (n < added[p].length) return "This row has a segment there already; change it instead.";
     const token = clean(seg);
+    if (n < added[p].length && !isFiller(cells[added[p][n]])) return "This row has a segment there already; change it instead.";
     if (token === GAP || token === ADDED || /[[\]+]/.test(token)) return "Type the segment, in IPA.";
+    if (n < added[p].length) {
+      Object.assign(cells[added[p][n]], { bottom: token, morph: !!morph });
+      return "";
+    }
+    pad(cells, p, n);
     cells.splice(slotEnd(cells, p), 0, { top: ADDED, bottom: token, morph: !!morph, seam: false });
     return "";
   }
@@ -106,22 +134,28 @@
     } else {
       cells.splice(slotEnd(cells, p), 0, { top: token, bottom: GAP, morph: false, seam: false });
     }
+    tidy(cells);
     return "";
   }
   // a whole column deleted from one row: an ancestor segment with whatever stands under it
-  // ("rank", p), or the row's added segment in column n of slot p ("added")
-  function deleteColumn(cells, kind, p, n) {
+  // ("rank", p; `width` as in deleteAncestor), or the row's cell in column n of slot p
+  // ("added"), the same column in every row, so the columns after it all move up by one
+  function deleteColumn(cells, kind, p, n, width) {
     if (kind === "rank") {
       const ranks = rankList(cells);
       if (p < 0 || p >= ranks.length) return "That segment is not in this row.";
       if (ranks.length < 2) return "The ancestor would have no segment left.";
-      if (cells[ranks[p]].seam && p + 1 < ranks.length) cells[ranks[p + 1]].seam = true;
-      cells.splice(ranks[p], 1);
+      pad(cells, p, width || 0);
+      const now = rankList(cells);
+      if (cells[now[p]].seam && p + 1 < now.length) cells[now[p + 1]].seam = true;
+      cells.splice(now[p], 1);
+      tidy(cells);
       return "";
     }
     const { added } = layoutOf(cells);
     if (p < 0 || p >= added.length) return "That place is not in this row.";
     if (n < added[p].length) cells.splice(added[p][n], 1);
+    tidy(cells);
     return "";
   }
   // the ancestor's k-th segment marked as morphology, or not, in one row
@@ -131,78 +165,89 @@
     cells[ranks[k]].morph = on;
     return "";
   }
-  // the ancestor's k-th segment changed in one row; emptied, it is taken out (deleteAncestor)
-  function renameAncestor(cells, k, seg) {
+  // the ancestor's k-th segment changed in one row; emptied, it is taken out (deleteAncestor,
+  // with its width and keep)
+  function renameAncestor(cells, k, seg, width, keep) {
     const ranks = rankList(cells);
     if (k < 0 || k >= ranks.length) return "That segment is not in this row.";
     const token = clean(seg);
-    if (token === GAP) return deleteAncestor(cells, k);
+    if (token === GAP) return deleteAncestor(cells, k, width, keep);
     if (token === ADDED || /[[\]+]/.test(token)) return "Type the segment in IPA.";
     cells[ranks[k]].top = token;
     return "";
   }
   // a reflex segment moved within its row, from cell i to a target: {kind: "rank", p}, the
   // gap under ancestor segment p, or {kind: "added", p, n}, column n of the gap columns before
-  // ancestor segment p (the last p is after the word). In a gap column it goes before the
-  // segment the row has in that column, or after the row's others in that place.
+  // ancestor segment p (the last p is after the word). It goes into that very cell, which
+  // must be empty in this row; the cell it left is emptied, and no other segment moves.
   function moveReflex(cells, i, target) {
     const src = cells[i];
     if (!src || src.bottom === GAP) return "There is no segment there to move.";
-    const seg = src.bottom, wasAdded = src.top === ADDED;
-    const take = () => { if (wasAdded) cells.splice(cells.indexOf(src), 1); else src.bottom = GAP; };
+    const seg = src.bottom, morph = src.top === ADDED ? src.morph : false;
+    const take = () => { src.bottom = GAP; if (src.top === ADDED) src.morph = false; };
     if (target.kind === "rank") {
       const ranks = rankList(cells);
       if (target.p < 0 || target.p >= ranks.length) return "That place is not in this row.";
       const dest = cells[ranks[target.p]];
       if (dest === src) return "";
-      if (dest.bottom !== GAP) return `${dest.top} has ${dest.bottom} under it already. Drop the segment on a gap, or add a column with +.`;
+      if (dest.bottom !== GAP) return `${dest.top} has ${dest.bottom} under it already. Drop the segment on an empty cell, or add a column with +.`;
       take();
       dest.bottom = seg;
+      tidy(cells);
       return "";
     }
-    const { added, rank } = layoutOf(cells);
+    const { added } = layoutOf(cells);
     const { p, n } = target;
     if (p < 0 || p >= added.length) return "That place is not in this row.";
-    const over = n < added[p].length ? cells[added[p][n]] : null;
-    if (over === src) return "";
-    // without a segment in that column, the new cell goes at the end of the place: before
-    // ancestor segment p, or at the end of the word
-    const before = over ? null : (p < rank.length ? cells[rank[p]] : null);
+    if (n < added[p].length) {
+      const dest = cells[added[p][n]];
+      if (dest === src) return "";
+      if (dest.bottom !== GAP) return `This row has ${dest.bottom} in that column already. Drop the segment on an empty cell, or add a column with +.`;
+      take();
+      Object.assign(dest, { bottom: seg, morph });
+      tidy(cells);
+      return "";
+    }
     take();
-    const at = over ? cells.indexOf(over) : before ? cells.indexOf(before) : cells.length;
-    cells.splice(at, 0, { top: ADDED, bottom: seg, morph: wasAdded ? src.morph : false, seam: false });
+    pad(cells, p, n);
+    cells.splice(slotEnd(cells, p), 0, { top: ADDED, bottom: seg, morph, seam: false });
+    tidy(cells);
     return "";
   }
   // the ancestor's k-th segment moved into column n of the gap columns before ancestor segment
   // p (as the table was before the move): a reflex segment the row has in that column stands
   // under it, a row with none there gets a gap; the reflex segment that stood under it stays,
-  // in a column of its own
-  function moveAncestor(cells, k, p, n) {
+  // in a column of its own (width and keep as in deleteAncestor)
+  function moveAncestor(cells, k, p, n, width, keep) {
     const ranks = rankList(cells);
     if (k < 0 || k >= ranks.length) return "That segment is not in this row.";
+    if (p < 0 || p > ranks.length) return "That place is not in this row.";
+    const src = cells[ranks[k]];
+    pad(cells, k, width || 0);
+    pad(cells, p, n);
     const { added, rank } = layoutOf(cells);
-    if (p < 0 || p >= added.length) return "That place is not in this row.";
-    const at = ranks[k], src = cells[at];
     const over = n < added[p].length ? cells[added[p][n]] : null;
     const before = over ? null : (p < rank.length ? cells[rank[p]] : null);
-    if (src.seam && k + 1 < ranks.length) cells[ranks[k + 1]].seam = true;
-    if (src.bottom === GAP) cells.splice(at, 1);
+    const now = rankList(cells);
+    if (src.seam && k + 1 < now.length) cells[now[k + 1]].seam = true;
+    const at = cells.indexOf(src);
+    if (keep === undefined ? src.bottom === GAP : !keep) cells.splice(at, 1);
     else cells[at] = { top: ADDED, bottom: src.bottom, morph: false, seam: false };
     if (over) {
-      over.top = src.top;
-      over.morph = src.morph;
-      return "";
+      Object.assign(over, { top: src.top, morph: src.morph, seam: false });
+    } else {
+      // into the place just before itself: the new cell goes where it was, before what stood under it
+      const where = before === src ? at : before ? cells.indexOf(before) : cells.length;
+      cells.splice(where, 0, { top: src.top, bottom: GAP, morph: src.morph, seam: false });
     }
-    // into the place just before itself: the new cell goes where it was, before what stood under it
-    const where = before === src ? at : before ? cells.indexOf(before) : cells.length;
-    cells.splice(where, 0, { top: src.top, bottom: GAP, morph: src.morph, seam: false });
+    tidy(cells);
     return "";
   }
 
   if (typeof document === "undefined") {
     module.exports = { parseCells, renderCells, parsePair, renderPair, clean, rankList, deleteAncestor, markAncestor,
                        insertAncestor, layoutOf, insertReflex, ancestorIntoColumn, deleteColumn,
-                       renameAncestor, moveReflex, moveAncestor };
+                       renameAncestor, moveReflex, moveAncestor, pad, tidy, isFiller };
     return;
   }
 
@@ -352,14 +397,29 @@
     pair.ranks = [];
     pair.cells.forEach((cell, i) => { if (cell.top !== ADDED) pair.ranks.push(i); });
   }
-  // a segment with no counterpart goes to a gap column of its own, beside the column it was in
+  // a segment with no counterpart goes to the gap column beside the column it was in, if this
+  // row has nothing there: on the left, the last gap column of the table before it (a new one
+  // if the row has a segment there); on the right, the first gap column after it. No other
+  // segment moves, so a taken column on the right is refused.
   function toGap(pair, i, side) {
-    const cell = pair.cells[i];
-    pair.cells.splice(side === "left" ? i : i + 1, 0, { top: ADDED, bottom: cell.bottom, morph: false, seam: false });
-    cell.bottom = GAP;
+    const p = pair.ranks.indexOf(i);
+    const { added } = layoutOf(pair.cells);
+    let msg;
+    if (side === "left") {
+      const width = Math.max((pair.slots && pair.slots[p]) || 0, added[p].length);
+      const last = width - 1;
+      const free = last >= 0 && (last >= added[p].length || isFiller(pair.cells[added[p][last]]));
+      msg = moveReflex(pair.cells, i, { kind: "added", p, n: free ? last : width });
+    } else if (added[p + 1].length && !isFiller(pair.cells[added[p + 1][0]])) {
+      msg = "The gap column to its right is taken in this row: drag the segment instead, or add a column with +.";
+    } else {
+      msg = moveReflex(pair.cells, i, { kind: "added", p: p + 1, n: 0 });
+    }
     setRanks(pair);
+    return msg;
   }
-  // back into the next empty column on either side, if there is one
+  // back into the next empty column on either side, if there is one; its own column is left
+  // empty, so no other segment moves
   function putBack(pair, i) {
     const near = (step) => {
       let j = i + step;
@@ -369,7 +429,9 @@
     const j = near(1) >= 0 ? near(1) : near(-1);
     if (j < 0) return false;
     pair.cells[j].bottom = pair.cells[i].bottom;
-    pair.cells.splice(i, 1);
+    pair.cells[i].bottom = GAP;
+    pair.cells[i].morph = false;
+    tidy(pair.cells);
     setRanks(pair);
     return true;
   }
@@ -475,6 +537,11 @@
         "segments in that column stand under it, the other rows have a gap. U takes it back");
     reshaped(set);
   }
+  // how many added columns the rows have before ancestor segment k, and whether any row has
+  // a reflex segment under it: what deleteAncestor and the like need so that every segment
+  // keeps its column when the ancestor changes shape
+  const placeWidth = (rows, k) => Math.max(0, ...rows.map((p) => (layoutOf(p.cells).added[k] || []).length));
+  const anyUnder = (rows, k) => rows.some((p) => p.cells[p.ranks[k]] && p.cells[p.ranks[k]].bottom !== GAP);
   // gap mode, ⌫: a whole column deleted in every row, reflex segments included
   function deleteColumnInSet(set, kind, slot, n, tops) {
     const rows = rowsWithAncestor(set, tops);
@@ -482,8 +549,9 @@
     if (kind === "rank" && tops.length < 2) { say("The ancestor would have no segment left.", true); return; }
     const touched = rows.filter((p) => kind === "rank" || n < layoutOf(p.cells).added[slot].length);
     if (!touched.length) return;
+    const width = kind === rank ? placeWidth(touched, slot) : 0;
     snapshot(touched);
-    touched.forEach((p) => { deleteColumn(p.cells, kind, slot, n); setRanks(p); relabel(p); save(p); });
+    touched.forEach((p) => { deleteColumn(p.cells, kind, slot, n, width); setRanks(p); relabel(p); save(p); });
     say(`Column deleted in ${touched.length} ${touched.length === 1 ? "row" : "rows"}; the segments in it are gone, ` +
         "so those rows no longer spell their cited form. U takes it back");
     reshaped(set);
@@ -507,10 +575,11 @@
   function moveAncestorInSet(set, k, slot, n, tops, seg) {
     const rows = rowsWithAncestor(set, tops);
     if (!rows.length) return;
-    const msg = moveAncestor(rows[0].cells.map((c) => ({ ...c })), k, slot, n);
+    const width = placeWidth(rows, k), keep = anyUnder(rows, k);
+    const msg = moveAncestor(rows[0].cells.map((c) => ({ ...c })), k, slot, n, width, keep);
     if (msg) { say(msg, true); return; }
     snapshot(rows);
-    rows.forEach((p) => { moveAncestor(p.cells, k, slot, n); setRanks(p); relabel(p); save(p); });
+    rows.forEach((p) => { moveAncestor(p.cells, k, slot, n, width, keep); setRanks(p); relabel(p); save(p); });
     say(`${seg} moved in the ancestor in ${rows.length} ${rows.length === 1 ? "row" : "rows"}: segments in that column stand ` +
         `under it, and what stood under it stays in a column of its own. U takes it back`);
     reshaped(set);
@@ -520,8 +589,9 @@
     const rows = ancestorRows(set, k, seg);
     if (!rows.length) return;
     if (rows.some((p) => p.ranks.length < 2)) { say("The ancestor would have no segment left.", true); return; }
+    const width = placeWidth(rows, k), keep = anyUnder(rows, k);
     snapshot(rows);
-    rows.forEach((p) => { deleteAncestor(p.cells, k); setRanks(p); relabel(p); save(p); });
+    rows.forEach((p) => { deleteAncestor(p.cells, k, width, keep); setRanks(p); relabel(p); save(p); });
     say(`${seg} taken out of the ancestor in ${rows.length} ${rows.length === 1 ? "row" : "rows"}; press U to take it back`);
     reshaped(set);
   }
@@ -566,6 +636,8 @@
   }
   function addedCell(pair, i, green, p, n) {
     const kind = green ? "add" : "add plain";
+    // a placeholder (· over -) is an empty cell of the row
+    if (i !== undefined && isFiller(pair.cells[i])) i = undefined;
     // where the cell is, for a segment dragged onto it
     const at = `data-slot="${p}" data-n="${n}"${i === undefined ? "" : ` data-i="${i}"`}`;
     if (i === undefined) {
@@ -914,7 +986,8 @@
     const i = +button.dataset.i;
     snapshot(pair);
     if (button.classList.contains("gp")) {
-      toGap(pair, i, button.dataset.side);
+      const msg = toGap(pair, i, button.dataset.side);
+      if (msg) { UNDO.pop(); say(msg, true); return; }
     } else if (button.classList.contains("gb")) {
       if (!putBack(pair, i)) { UNDO.pop(); say("There is no empty column beside it. Empty one first.", true); return; }
     } else {
@@ -975,9 +1048,12 @@
       if (!cell || value === cell.bottom) return;
       snapshot(pair);
       if (cell.top === ADDED) {
-        // a suffix or unplaced segment emptied is taken out of the row
+        // a suffix or unplaced segment emptied leaves its column empty in this row (the row's
+        // later segments keep their columns)
         if (value === GAP) {
-          pair.cells.splice(i, 1);
+          cell.bottom = GAP;
+          cell.morph = false;
+          tidy(pair.cells);
           setRanks(pair);
           save(pair);
           redraw(pair, e.target);
