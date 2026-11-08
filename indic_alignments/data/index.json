@@ -56,7 +56,7 @@
   "rows": 5834,
   "sets": 4504,
   "languages": 8,
-  "marked": 736,
+  "marked": 870,
   "reviewed": 1517
  },
  {
@@ -68,7 +68,7 @@
   "rows": 9636,
   "sets": 5727,
   "languages": 19,
-  "marked": 1438,
+  "marked": 1566,
   "reviewed": 1888
  },
  {
@@ -80,7 +80,7 @@
   "rows": 1671,
   "sets": 479,
   "languages": 45,
-  "marked": 226,
+  "marked": 348,
   "reviewed": 0
  },
  {
@@ -92,7 +92,7 @@
   "rows": 1612,
   "sets": 916,
   "languages": 57,
-  "marked": 267,
+  "marked": 352,
   "reviewed": 0
  },
  {
@@ -104,7 +104,7 @@
   "rows": 1184,
   "sets": 838,
   "languages": 8,
-  "marked": 224,
+  "marked": 288,
   "reviewed": 0
  },
  {
@@ -116,7 +116,7 @@
   "rows": 2913,
   "sets": 1499,
   "languages": 15,
-  "marked": 741,
+  "marked": 869,
   "reviewed": 0
  },
  {
@@ -137,10 +137,10 @@
   "slug": "jambu_full__Reconstructed_OIA_to_other_Middle_Indo-Aryan",
   "source": "jambu",
   "chain": "Reconstructed OIA > other Middle Indo-Aryan",
-  "rows": 363,
+  "rows": 365,
   "sets": 207,
   "languages": 41,
-  "marked": 68,
+  "marked": 83,
   "reviewed": 0
  },
  {
@@ -176,7 +176,7 @@
   "rows": 13035,
   "sets": 7633,
   "languages": 75,
-  "marked": 286,
+  "marked": 310,
   "reviewed": 0
  },
  {
@@ -188,7 +188,7 @@
   "rows": 1045,
   "sets": 584,
   "languages": 44,
-  "marked": 35,
+  "marked": 37,
   "reviewed": 0
  },
  {
@@ -200,7 +200,7 @@
   "rows": 1606,
   "sets": 1375,
   "languages": 17,
-  "marked": 6,
+  "marked": 12,
   "reviewed": 0
  },
  {

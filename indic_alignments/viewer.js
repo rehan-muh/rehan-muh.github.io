@@ -44,9 +44,52 @@
     const s = String(v).normalize("NFC").trim();
     return s === "" || s === "–" || s === "—" ? GAP : s.replace(/\s+/g, "");
   };
+  // indices of the cells that hold an ancestor segment
+  const rankList = (cells) => cells.reduce((a, c, i) => (c.top !== ADDED ? a.concat(i) : a), []);
+  // key G: a gap before the reflex segment in cell i. That segment and the ones after it move
+  // one ancestor segment to the right, up to the first gap, which they fill; past the end of
+  // the word the last one goes to a column of its own. Returns a message if nothing moved.
+  function insertGap(cells, i) {
+    const ranks = rankList(cells), k = ranks.indexOf(i);
+    if (k < 0) return "A gap goes in one of the ancestor's columns.";
+    if (cells[i].bottom === GAP) return "This is a gap already.";
+    let carry = cells[i].bottom;
+    cells[i].bottom = GAP;
+    for (let j = k + 1; j < ranks.length; j++) {
+      const next = cells[ranks[j]].bottom;
+      cells[ranks[j]].bottom = carry;
+      if (next === GAP) return "";
+      carry = next;
+    }
+    cells.splice(ranks[ranks.length - 1] + 1, 0, { top: ADDED, bottom: carry, morph: false, seam: false });
+    return "";
+  }
+  // key D: the gap in cell i taken out. The segments after it move one to the left, up to the
+  // next gap; at the end of the word, a segment in a column of its own just after the word
+  // (not a suffix) comes back in.
+  function removeGap(cells, i) {
+    const ranks = rankList(cells), k = ranks.indexOf(i);
+    if (k < 0 || cells[i].bottom !== GAP) return "Only a gap in one of the ancestor's columns can be taken out.";
+    let j = k;
+    while (j + 1 < ranks.length && cells[ranks[j + 1]].bottom !== GAP) {
+      cells[ranks[j]].bottom = cells[ranks[j + 1]].bottom;
+      j++;
+    }
+    // cell j's segment has moved to j - 1; j takes the spilled segment, or becomes the gap
+    const after = ranks[ranks.length - 1] + 1;
+    const spill = j === ranks.length - 1 && cells[after] && cells[after].top === ADDED && !cells[after].morph;
+    if (j === k && !spill) return "There is nothing after this gap to move in.";
+    if (spill) {
+      cells[ranks[j]].bottom = cells[after].bottom;
+      cells.splice(after, 1);
+    } else {
+      cells[ranks[j]].bottom = GAP;
+    }
+    return "";
+  }
 
   if (typeof document === "undefined") {
-    module.exports = { parseCells, renderCells, parsePair, renderPair, clean };
+    module.exports = { parseCells, renderCells, parsePair, renderPair, clean, insertGap, removeGap };
     return;
   }
 
@@ -92,13 +135,17 @@
     sending = true;
     while (queue.length) {
       say(queue.length === 1 ? "Saving…" : `Saving ${queue.length} pairs…`);
+      // the item sent is taken off the queue by identity: an edit to the same pair made while
+      // it was on its way has replaced it in the queue, and must still be sent after it
+      const item = queue[0];
       try {
-        const res = await post({ ...queue[0], action: "save", pass: identity.pass, editor: identity.editor });
+        const res = await post({ ...item, action: "save", pass: identity.pass, editor: identity.editor });
         if (!res.ok) throw new Error(res.error || "refused");
-        const item = queue.shift();
+        queue = queue.filter((q) => q !== item);
         const key = `${item.sheet}\t${item.key}`;
-        if (item.clear) delete changes[key];
-        else changes[key] = { ...item, saved: res.saved, editor: identity.editor };
+        const newer = queue.some((q) => q.sheet === item.sheet && q.key === item.key);
+        if (!newer && item.clear) delete changes[key];
+        else if (!newer) changes[key] = { ...item, saved: res.saved, editor: identity.editor };
         remember();
         say(`Saved to Google Sheets at ${new Date().toTimeString().slice(0, 5)}`);
       } catch (e) {
@@ -217,6 +264,34 @@
     const hit = hits.find((h) => h.set === pair.set);
     if (hit) inside.closest("section.set").outerHTML = box(hit);
   }
+  // the cell to type in once a table has been drawn again
+  function focusCell(pair, i) {
+    const tr = [...$("ia-sets").querySelectorAll("tr[data-key]")].find((t) => t.dataset.key === pair.key);
+    if (!tr) return;
+    const inputs = [...tr.querySelectorAll("input.cell")];
+    const input = inputs.find((x) => +x.dataset.i === i) ||
+                  inputs.filter((x) => +x.dataset.i < i).pop() || inputs[0];
+    if (input) { input.focus(); input.select(); }
+  }
+  // every change to a pair can be taken back with U, as far as the state the page loaded
+  function snapshot(pair) {
+    pair.history = pair.history || [];
+    pair.history.push(JSON.stringify({ cells: pair.cells, morph: pair.morph, status: pair.status, note: pair.note }));
+    if (pair.history.length > 100) pair.history.shift();
+  }
+  function undo(pair) {
+    if (!pair.history || !pair.history.length) return false;
+    Object.assign(pair, JSON.parse(pair.history.pop()));
+    setRanks(pair);
+    return true;
+  }
+  function toggleMorph(pair, i) {
+    const cell = pair.cells[i];
+    cell.morph = !cell.morph;
+    const was = parsePair(pair.base[0], pair.base[1]);
+    const unchanged = was.length === pair.cells.length && pair.cells.every((c, k) => was[k].morph === c.morph);
+    pair.morph = unchanged ? pair.base[2] : pair.cells.some((c) => c.morph) ? `${pair.base[2] ? pair.base[2] + "; " : ""}edited by hand` : "";
+  }
   function save(pair) {
     const [anc, ref] = renderPair(pair.cells);
     const same = anc === pair.base[0] && ref === pair.base[1] && pair.status === pair.base[3] && pair.note === pair.base[4];
@@ -267,6 +342,8 @@
     const seg = esc(pair.cells[i].bottom);
     if (editing && gapping) return `<td class="seg ${kind}"><button class="gb" type="button" data-i="${i}" title="Put back in the empty column beside it">${seg}</button></td>`;
     if (editing && brush) return `<td class="seg ${kind}"><button class="mk" type="button" data-i="${i}" aria-pressed="${pair.cells[i].morph}">${seg}</button></td>`;
+    // a suffix or an unplaced segment can be changed too; emptied, it is taken out
+    if (editing) return `<td class="seg ${kind}"><input class="cell" data-i="${i}" value="${seg}" aria-label="Segment the ancestor lacks"></td>`;
     return `<td class="seg ${kind}">${seg}</td>`;
   }
   // `slots[p]` is how many columns the added segments before p need in this table
@@ -514,16 +591,13 @@
     if (!button) return;
     const pair = pairs.get(button.closest("tr").dataset.key);
     const i = +button.dataset.i;
+    snapshot(pair);
     if (button.classList.contains("gp")) {
       toGap(pair, i, button.dataset.side);
     } else if (button.classList.contains("gb")) {
-      if (!putBack(pair, i)) { say("There is no empty column beside it. Empty one first.", true); return; }
+      if (!putBack(pair, i)) { pair.history.pop(); say("There is no empty column beside it. Empty one first.", true); return; }
     } else {
-      const cell = pair.cells[i];
-      cell.morph = !cell.morph;
-      const was = parsePair(pair.base[0], pair.base[1]);
-      const unchanged = was.length === pair.cells.length && pair.cells.every((c, k) => was[k].morph === c.morph);
-      pair.morph = unchanged ? pair.base[2] : pair.cells.some((c) => c.morph) ? `${pair.base[2] ? pair.base[2] + "; " : ""}edited by hand` : "";
+      toggleMorph(pair, i);
     }
     save(pair);
     redraw(pair, button);
@@ -551,17 +625,34 @@
     if (!tr) return;
     const pair = pairs.get(tr.dataset.key);
     if (e.target.classList.contains("cell")) {
-      pair.cells[+e.target.dataset.i].bottom = clean(e.target.value);
+      const i = +e.target.dataset.i, cell = pair.cells[i], value = clean(e.target.value);
+      if (!cell || value === cell.bottom) return;
+      snapshot(pair);
+      if (cell.top === ADDED) {
+        // a suffix or unplaced segment emptied is taken out of the row
+        if (value === GAP) {
+          pair.cells.splice(i, 1);
+          setRanks(pair);
+          save(pair);
+          redraw(pair, e.target);
+          return;
+        }
+        cell.bottom = value;
+        save(pair);
+        return;
+      }
+      cell.bottom = value;
       const td = e.target.closest("td");
-      const cell = pair.cells[+e.target.dataset.i];
-      const was = pair.baseRanks[pair.ranks.indexOf(+e.target.dataset.i)];
+      const was = pair.baseRanks[pair.ranks.indexOf(i)];
       td.classList.toggle("lost", cell.bottom === GAP);
       td.classList.toggle("c", cell.bottom !== GAP && cell.bottom !== cell.top);
-      td.classList.toggle("fix", was.bottom !== cell.bottom || was.morph !== cell.morph);
+      td.classList.toggle("fix", !was || was.bottom !== cell.bottom || was.morph !== cell.morph);
     } else if (e.target.classList.contains("exclude")) {
+      snapshot(pair);
       pair.status = e.target.checked ? "excluded" : (/excluded/.test(pair.base[3]) ? "machine" : pair.base[3]);
       tr.classList.toggle("ex", e.target.checked);
     } else if (e.target.classList.contains("uncertain")) {
+      snapshot(pair);
       pair.status = e.target.checked ? "uncertain" : (pair.base[3] === "uncertain" ? "machine" : pair.base[3]);
       save(pair);
       showChecked();
@@ -572,17 +663,67 @@
       }
       return;
     } else if (e.target.classList.contains("note")) {
+      snapshot(pair);
       pair.note = e.target.value.trim();
     } else return;
     save(pair);
   });
+  // keys in a segment cell: Enter, the next cell. Capitals, which no transcription here uses:
+  // M marks or unmarks morphology, G puts a gap before the segment, D takes a gap out, and
+  // U takes back the last change to the row.
+  const KEYS = { M: "morph", G: "gap", D: "ungap", U: "undo" };
   $("ia-sets").addEventListener("keydown", (e) => {
-    if (e.key !== "Enter" || !e.target.classList.contains("cell")) return;
+    const input = e.target;
+    if (!input.classList || !input.classList.contains("cell")) return;
+    const tr = input.closest("tr[data-key]");
+    const pair = tr && pairs.get(tr.dataset.key);
+    if (!pair) return;
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const all = [...$("ia-sets").querySelectorAll("input.cell")];
+      const next = all[all.indexOf(input) + 1];
+      const nextRow = next && next.closest("tr[data-key]"), nextI = next ? +next.dataset.i : 0;
+      input.blur();
+      if (next && next.isConnected) next.focus();
+      // the row was drawn again (an emptied suffix was taken out): find the cell anew
+      else if (nextRow) focusCell(pairs.get(nextRow.dataset.key), nextRow === tr ? nextI - 1 : nextI);
+      return;
+    }
+    // a capital letter (Shift, or Caps Lock), whatever the keyboard layout reports for it
+    const letter = e.key.length === 1 && e.key === e.key.toUpperCase() ? e.key
+      : e.shiftKey && /^Key[MGDU]$/.test(e.code || "") ? e.code.slice(3) : "";
+    const op = !e.ctrlKey && !e.metaKey && !e.altKey && KEYS[letter];
+    if (!op) return;
     e.preventDefault();
-    const all = [...$("ia-sets").querySelectorAll("input.cell")];
-    const next = all[all.indexOf(e.target) + 1];
-    e.target.blur();
-    if (next) next.focus();
+    const i = +input.dataset.i;
+    snapshot(pair);
+    // what was typed in the cell counts first
+    const typed = clean(input.value), cell = pair.cells[i];
+    if (cell && typed !== cell.bottom && !(cell.top === ADDED && typed === GAP)) cell.bottom = typed;
+    let target = i, msg = "";
+    if (op === "morph") {
+      toggleMorph(pair, i);
+    } else if (op === "gap") {
+      const ranks = pair.ranks.slice(), k = ranks.indexOf(i);
+      msg = insertGap(pair.cells, i);
+      // the segment moved one column on, and the cursor follows it, so G again moves it again
+      if (!msg) target = k + 1 < ranks.length ? ranks[k + 1] : ranks[ranks.length - 1] + 1;
+    } else if (op === "ungap") {
+      msg = removeGap(pair.cells, i);
+    } else {
+      pair.history.pop();
+      if (!undo(pair)) msg = "Nothing left to take back in this row.";
+      target = Math.min(i, pair.cells.length - 1);
+    }
+    if (msg) {
+      if (op !== "undo") undo(pair);
+      say(msg, true);
+      return;
+    }
+    setRanks(pair);
+    save(pair);
+    redraw(pair, input);
+    focusCell(pair, target);
   });
   window.addEventListener("online", flush);
   start().catch((e) => {
