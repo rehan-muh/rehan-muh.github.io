@@ -527,13 +527,13 @@
     const plural = (n, one, many) => `${num(n)} ${n === 1 ? one : many}`;
     const open = el.querySelector("details") && el.querySelector("details").open;
     el.innerHTML =
-      `<div class="ph"><b>All sheets</b><span>${num(done)} of ${num(total)} sets · ${pct(done)}</span></div>` +
-      `<div class="pbar" role="img" aria-label="${num(checked)} sets checked, ${num(aside)} set aside, ${num(left)} to check, of ${num(total)}">` +
-      part("done", checked, "Checked") + part("aside", aside, "Set aside as problem sets") +
-      `<span class="left" title="To check: ${num(left)} sets, ${pct(left)}"></span></div>` +
-      `<p><span class="pk"><i class="key done"></i>${num(checked)} checked</span>` +
-      `<span class="pk"><i class="key aside"></i>${num(aside)} set aside</span>` +
-      `<span class="pk"><i class="key left"></i>${num(left)} to check</span></p>` +
+      `<div class="ia-tally-head"><b>All sheets</b><span>${num(done)} of ${num(total)} sets · ${pct(done)}</span></div>` +
+      `<div class="ia-bar" role="img" aria-label="${num(checked)} sets checked, ${num(aside)} set aside, ${num(left)} to check, of ${num(total)}">` +
+      part("ia-done", checked, "Checked") + part("ia-aside", aside, "Set aside as problem sets") +
+      `<span class="ia-left" title="To check: ${num(left)} sets, ${pct(left)}"></span></div>` +
+      `<p><span class="ia-pk"><span class="ia-key ia-done"></span>${num(checked)} checked</span>` +
+      `<span class="ia-pk"><span class="ia-key ia-aside"></span>${num(aside)} set aside</span>` +
+      `<span class="ia-pk"><span class="ia-key ia-left"></span>${num(left)} to check</span></p>` +
       `<p>${plural(again, "row", "rows")} to look at again · ${plural(uncertain, "row", "rows")} uncertain</p>` +
       `<details${open ? " open" : ""}><summary>By sheet</summary><table><thead><tr><th scope="col">Sheet</th>` +
       '<th scope="col">Checked</th><th scope="col">Set aside</th><th scope="col">Sets</th></tr></thead><tbody>' +

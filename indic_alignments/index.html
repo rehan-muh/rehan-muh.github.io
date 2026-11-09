@@ -13,34 +13,39 @@ nav: false
   html[data-theme="dark"] .pa { --pa-ins: #8fe0c4; --pa-insbg: #123d33; --pa-fix: #4a3d10; --pa-fixline: #d5a63f; --pa-m: #2e2852; --pa-mline: #a998ee;
         --pa-lost: #e58fbf; --pa-faint: #6b7480; --pa-bad: #f2a3b7; --pa-badbg: #4a1f2c; --pa-warn: #f0cf7a; }
   .pa .controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin: 0.8rem 0 0.6rem; }
-  /* the sheet controls on the left, the progress over all sheets at the top right */
-  .pa .top { display: flex; flex-wrap: wrap; gap: 4px 24px; align-items: flex-start; }
-  .pa .topleft { flex: 1 1 26rem; min-width: 0; }
-  .pa .progress { --pa-done: #008a63; --pa-aside: #a46f00;
-                  flex: 0 1 21rem; margin: 0.8rem 0 0.6rem auto; padding: 8px 12px; font-size: 0.85rem;
-                  border: 1px solid var(--global-divider-color); border-radius: 4px; background: var(--global-card-bg-color); }
-  html[data-theme="dark"] .pa .progress { --pa-done: #2f9a76; --pa-aside: #b88524; }
-  .pa .progress .ph { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin: 0 0 6px; }
-  .pa .progress .ph b { font-weight: 700; }
-  .pa .progress .ph span { color: var(--global-text-color-light); font-variant-numeric: tabular-nums; }
+  /* the sheet controls on the left, the progress over all sheets at the top right. Every class
+     here starts ia-: the site's Bootstrap has its own .progress, a 1rem flex strip */
+  .pa .ia-top { display: flex; flex-wrap: wrap; gap: 0 20px; align-items: flex-start; }
+  .pa .ia-topleft { flex: 1 1 24rem; min-width: 0; }
+  .pa .ia-topleft #ia-sheet { max-width: 26rem; min-width: 0; }
+  .pa .ia-topleft label { max-width: 100%; min-width: 0; }
+  .pa .ia-tally { --pa-done: #008a63; --pa-aside: #a46f00; --pa-track: #d3dae2;
+                  flex: 0 0 17.5rem; max-width: 100%; height: auto; overflow: visible;
+                  margin: 0.8rem 0 0.6rem auto; padding: 7px 11px; font-size: 0.8rem; line-height: 1.4;
+                  color: var(--global-text-color); border: 1px solid var(--global-divider-color); border-radius: 4px;
+                  background: var(--global-card-bg-color); }
+  html[data-theme="dark"] .pa .ia-tally { --pa-done: #2f9a76; --pa-aside: #b88524; --pa-track: #4a4e6b; }
+  @media (max-width: 576px) { .pa .ia-tally { flex: 1 1 100%; margin: 0.2rem 0 0.8rem; } }
+  .pa .ia-tally-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin: 0 0 5px; }
+  .pa .ia-tally-head b { font-weight: 700; }
+  .pa .ia-tally-head span { color: var(--global-text-color-light); font-variant-numeric: tabular-nums; white-space: nowrap; }
   /* one whole split into parts: thin, rounded ends, a 2px gap between parts */
-  .pa .pbar { display: flex; gap: 2px; height: 8px; border-radius: 4px; overflow: hidden; margin: 0 0 6px; }
-  .pa .pbar span { display: block; height: 100%; min-width: 2px; }
-  .pa .pbar .done { background: var(--pa-done); }
-  .pa .pbar .aside { background: var(--pa-aside); }
-  .pa .pbar .left { flex: 1 1 auto; background: var(--global-divider-color); }
-  .pa .progress p { margin: 0 0 3px; color: var(--global-text-color-light); font-variant-numeric: tabular-nums; }
-  .pa .progress .key { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin: 0 4px 0 0; vertical-align: 0; }
-  .pa .progress .key.done { background: var(--pa-done); }
-  .pa .progress .key.aside { background: var(--pa-aside); }
-  .pa .progress .key.left { background: var(--global-divider-color); }
-  .pa .progress .pk { display: inline-flex; align-items: center; margin-right: 10px; white-space: nowrap; }
-  .pa .progress details { margin: 4px 0 0; }
-  .pa .progress summary { cursor: pointer; color: var(--global-text-color-light); }
-  .pa .progress table { margin: 4px 0 0; font-size: 0.78rem; font-variant-numeric: tabular-nums; }
-  .pa .progress th, .pa .progress td { padding: 1px 4px; text-align: right; }
-  .pa .progress th:first-child, .pa .progress td:first-child { text-align: left; white-space: normal; }
-  .pa .progress thead th { font-weight: 400; color: var(--global-text-color-light); border-bottom: 1px solid var(--global-divider-color); }
+  .pa .ia-bar { display: flex; gap: 2px; height: 8px; border-radius: 4px; overflow: hidden; margin: 0 0 5px; }
+  .pa .ia-bar span { display: block; height: 100%; min-width: 2px; flex: 0 0 auto; }
+  .pa .ia-bar .ia-left { flex: 1 1 auto; }
+  .pa .ia-done { background: var(--pa-done); }
+  .pa .ia-aside { background: var(--pa-aside); }
+  .pa .ia-left { background: var(--pa-track); }
+  .pa .ia-tally p { margin: 0 0 2px; color: var(--global-text-color-light); font-variant-numeric: tabular-nums; }
+  .pa .ia-key { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin: 0 4px 0 0; flex: 0 0 auto; }
+  .pa .ia-pk { display: inline-flex; align-items: center; margin-right: 9px; white-space: nowrap; }
+  .pa .ia-tally details { margin: 3px 0 0; }
+  .pa .ia-tally summary { cursor: pointer; color: var(--global-text-color-light); }
+  .pa .ia-tally table { margin: 4px 0 0; width: 100%; font-size: 0.75rem; font-variant-numeric: tabular-nums; }
+  .pa .ia-tally th, .pa .ia-tally td { padding: 1px 3px; text-align: right; vertical-align: top;
+                                       font-size: 0.72rem; line-height: 1.3; font-weight: 400; }
+  .pa .ia-tally th:first-child, .pa .ia-tally td:first-child { text-align: left; }
+  .pa .ia-tally thead th { font-weight: 400; color: var(--global-text-color-light); border-bottom: 1px solid var(--global-divider-color); }
   .pa select, .pa input[type=search], .pa input[type=password], .pa input[type=text] {
     font: inherit; font-size: 0.95rem; padding: 4px 8px; border-radius: 4px; color: var(--global-text-color);
     background: var(--global-bg-color); border: 1px solid var(--global-divider-color); max-width: 100%; }
@@ -154,8 +159,8 @@ nav: false
 </style>
 
 <div class="pa">
-  <div class="top">
-    <div class="topleft">
+  <div class="ia-top">
+    <div class="ia-topleft">
       <div class="controls">
         <label>Sheet <select id="ia-sheet"></select></label>
         <a class="btn" id="ia-open" target="_blank" rel="noopener" hidden>Open in Google Sheets</a>
@@ -163,7 +168,7 @@ nav: false
       </div>
       <p class="status" id="ia-about"></p>
     </div>
-    <aside class="progress" id="ia-progress" aria-label="Progress over all sheets" hidden></aside>
+    <div class="ia-tally" id="ia-progress" role="region" aria-label="Progress over all sheets" hidden></div>
   </div>
 
   <form class="login" id="ia-login" hidden>
