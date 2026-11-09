@@ -121,7 +121,8 @@
   const clean = (v) => {
     const s = String(v).normalize("NFC").trim();
     if (s === "" || s === "–" || s === "—") return GAP;
-    const t = s.replace(/\s+/g, "");
+    // a Latin g is the IPA ɡ (seven saves had it, 2026-11-09)
+    const t = s.replace(/\s+/g, "").replace(/g/g, "ɡ");
     // a doubled consonant typed in one cell is one long segment: tt > tː, kkʰ > kʰː
     const twice = t.match(/^(.+?)\1([ʰʱ]?)$/u);
     return twice && isConsonant(twice[1]) && !twice[1].includes(LONG) && !/[[\]+·-]/.test(twice[1])
