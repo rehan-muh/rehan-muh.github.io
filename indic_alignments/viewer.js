@@ -310,8 +310,8 @@
   const STORE = "indic-alignments-v1";
   const PAGE = 25, ROWS = 300;
   const KEEPS_CHECKED = ["edited", "uncertain", "learned", "again"];
-  // rows Claude repaired on the Changes tab, and rows the rules of 2026-11-08 changed
-  const REPAIRER = "Claude", RULES = "new rules: ";
+  // rows Claude repaired on the Changes tab, to be looked at again
+  const REPAIRER = "Claude";
   const LEARNED = "probable learned form";
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
@@ -401,10 +401,10 @@
     const aside = SETS.filter((s) => s.problem).length;
     let uncertain = 0;
     SETS.forEach((s) => { uncertain += s.rows.filter((p) => p.status === "uncertain").length; });
-    let again = 0, rules = 0;
-    SETS.forEach((s) => { again += s.rows.filter((p) => p.again).length; rules += s.rows.filter((p) => p.rules).length; });
+    let again = 0;
+    SETS.forEach((s) => { again += s.rows.filter((p) => p.again).length; });
     $("ia-done").textContent = `${num(done)} of ${num(SETS.length)} sets checked · ${num(aside)} ${aside === 1 ? "set" : "sets"} set aside · ${num(uncertain)} ${uncertain === 1 ? "row" : "rows"} uncertain` +
-      (again ? ` · ${num(again)} to look at again` : "") + (rules ? ` · ${num(rules)} changed by the new rules` : "");
+      (again ? ` · ${num(again)} to look at again` : "");
   }
   function toggleCheck(set, on) {
     const name = identity.editor.replace(/\|/g, " ");
@@ -452,7 +452,6 @@
     pair.note = c ? c.note : pair.base[4];
     pair.edited = c ? `${c.editor || ""} ${String(c.saved || "").slice(0, 16)}`.trim() : "";
     pair.again = !!(c && c.editor === REPAIRER);
-    pair.rules = !c && pair.details.includes(RULES);
     pair.baseRanks = parsePair(pair.base[0], pair.base[1]).filter((c) => c.top !== ADDED);
     setRanks(pair);
   }
@@ -646,7 +645,6 @@
     if (same) { item.clear = true; item.morph = pair.base[2]; pair.morph = pair.base[2]; }
     pair.edited = same ? "" : `${identity.editor} ${new Date().toISOString().slice(0, 16)}`.trim();
     pair.again = false;
-    pair.rules = same && pair.details.includes(RULES);
     delete changes[`${current.slug}\t${pair.key}`];
     if (!same) changes[`${current.slug}\t${pair.key}`] = { ...item, editor: identity.editor, saved: new Date().toISOString() };
     queue = queue.filter((q) => !(q.sheet === item.sheet && q.key === item.key));
@@ -722,7 +720,7 @@
       else if (p < slots.length - 1) h += "<td></td>";
     });
     const status = (pair.status && pair.status !== "machine" ? `<span class="tag ${esc(pair.status.split(" ")[0])}">${esc(pair.status)}</span>` : "") +
-                   (pair.again ? '<span class="tag again">repaired by Claude: look again</span>' : "");
+                   (pair.again ? '<span class="tag again">look again</span>' : "");
     h += `<td class="where">${esc(pair.rule())}${status}${pair.details ? ` <span class="det">${esc(pair.details)}</span>` : ""}${pair.edited ? ` <span class="det">edited ${esc(pair.edited)}</span>` : ""}</td>`;
     if (editing) {
       h += `<td class="tools"><label><input class="exclude" type="checkbox"${excluded ? " checked" : ""}> exclude</label> ` +
@@ -847,8 +845,7 @@
         if (p.status === "uncertain" && status !== "uncertain" && status !== "edited" && status !== "again") return false;
         if (status === "edited" && !p.edited) return false;
         if (status === "again" && !p.again) return false;
-        if (status === "rules" && !p.rules) return false;
-        if (status && !["edited", "checked", "problem", "learned", "again", "rules"].includes(status) && !p.status.startsWith(status)) return false;
+        if (status && !["edited", "checked", "problem", "learned", "again"].includes(status) && !p.status.startsWith(status)) return false;
         const marked = p.cells.some((c) => c.morph);
         if (morph === "yes" && !marked) return false;
         if (morph === "no" && marked) return false;
