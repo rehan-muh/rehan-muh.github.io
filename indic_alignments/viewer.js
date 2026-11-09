@@ -40,9 +40,92 @@
     return [renderCells(cells.map((c) => ({ seg: c.top, morph: c.morph, seam: c.seam }))),
             renderCells(cells.map((c) => ({ seg: c.bottom, morph: c.morph })))];
   }
+  // ------------------------------------------------------------- geminates
+  // A geminate is one long segment, kː or kʰː: the rows are published so, and an edit saved
+  // before 9 November 2026 in two cells (k k) is shown so too. The same rules as long_text in
+  // causal/indic_conventions.py of the word-position project.
+  const LONG = "ː", VOWELS = "aeiouyæøœɛɔəɐɨʉɯɑɒʌɪʊɤɵɘɜɞɿʅɚ";
+  const NASALS = new Set(["m", "n", "ɳ", "ŋ", "ɲ"]);
+  const OPENERS = new Set([...NASALS, "r", "l", "ɾ", "ɭ", "ɽ", "ɹ", "ɻ", "ʋ", "v", "w", "j", "y"]);
+  const bareSeg = (t) => (t.length > 1 && t[0] === "+" ? t.slice(1) : t);
+  const seamed = (t) => t.length > 1 && t[0] === "+";
+  const untied = (t) => t.replace(/[͜͡]/g, "");
+  function isVowel(t) {
+    const d = t.normalize("NFD");
+    const letters = [...d].filter((ch) => VOWELS.includes(ch));
+    if (!letters.length) return false;
+    // a lone non-syllabic vowel (u̯) is a glide
+    return !(letters.length === 1 && d.includes("̯") && !/[jwɥ]/.test(d));
+  }
+  const isConsonant = (t) => t !== "-" && t !== "·" && t !== "" && !isVowel(t);
+  // kʰː > k: without length, aspiration and diacritics
+  const baseOf = (t) => t.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[ʰʱːˑ]/g, "");
+  function geminate(x, y) {
+    x = bareSeg(x); y = bareSeg(y);
+    if (!isConsonant(x) || !isConsonant(y) || x.includes(LONG) || y.includes(LONG)) return null;
+    const px = untied(x), py = untied(y);
+    return px === py || py === `${px}ʰ` || py === `${px}ʱ` ? y + LONG : null;
+  }
+  // a cluster that came out as a geminate has it under its first member, unless a nasal,
+  // liquid or glide opens the cluster, or a nasal geminate meets a nasal second member (jñ > nn)
+  function underSecond(a, b, g) {
+    const fa = baseOf(bareSeg(a)), fb = baseOf(bareSeg(b)), fg = baseOf(g);
+    return (OPENERS.has(fa) && fa !== fg) || (NASALS.has(fg) && NASALS.has(fb) && !NASALS.has(fa));
+  }
+  function longPair(anc, ref) {
+    const top = parseCells(anc), bottom = parseCells(ref);
+    if (top.length !== bottom.length) return [anc, ref];
+    const cols = top.map((c, i) => ({ a: (c.seam ? "+" : "") + c.seg, am: c.morph, x: bottom[i].seg, xm: bottom[i].morph }));
+    // the ancestor's geminates, right to left: the two halves and what stands between and
+    // under them become one column (a second reflex consonant goes in a column before it)
+    const ranks = cols.reduce((acc, c, i) => (c.a !== "·" ? acc.concat(i) : acc), []);
+    for (let r = ranks.length - 2; r >= 0; r--) {
+      const i = ranks[r], j = ranks[r + 1], A = cols[i].a, B = cols[j].a;
+      const g = seamed(B) ? null : geminate(A, B);
+      if (!g || cols[i].am !== cols[j].am) continue;
+      const morph = cols[i].am, top0 = (seamed(A) ? "+" : "") + g;
+      const cell = (a, x) => ({ a, am: morph, x, xm: morph });
+      const segs = cols.slice(i, j + 1).map((c) => c.x).filter((s) => s !== "-");
+      let fresh;
+      if (!segs.length) fresh = [cell(top0, "-")];
+      else if (segs.length === 1) fresh = [cell(top0, segs[0])];
+      else if (segs.length === 2 && geminate(segs[0], segs[1])) fresh = [cell(top0, geminate(segs[0], segs[1]))];
+      else {
+        let at = 0;
+        segs.forEach((s, n) => { if (isConsonant(s)) at = n; });
+        fresh = segs.slice(0, at).map((s) => cell("·", s)).concat([cell(top0, segs[at])], segs.slice(at + 1).map((s) => cell("·", s)));
+      }
+      cols.splice(i, j - i + 1, ...fresh);
+    }
+    // then the reflex's: two cells of one consonant become one
+    let k = 0;
+    while (k + 1 < cols.length) {
+      const c = cols[k], d = cols[k + 1];
+      const g = seamed(d.a) || c.am !== d.am || c.xm !== d.xm ? null : geminate(c.x, d.x);
+      if (!g) { k++; continue; }
+      if (c.a === "·" || d.a === "·") {
+        (c.a === "·" ? d : c).x = g;
+        cols.splice(c.a !== "·" ? k + 1 : k, 1);
+        k++;
+        continue;
+      }
+      const ca = isConsonant(bareSeg(c.a)), cb = isConsonant(bareSeg(d.a));
+      if (!ca && !cb) { k++; continue; }
+      const second = ca && cb ? underSecond(c.a, d.a, g) : cb;
+      [c.x, d.x] = second ? ["-", g] : [g, "-"];
+      k += 2;
+    }
+    return [renderCells(cols.map((c) => ({ seg: bareSeg(c.a), morph: c.am, seam: seamed(c.a) }))),
+            renderCells(cols.map((c) => ({ seg: c.x, morph: c.xm })))];
+  }
   const clean = (v) => {
     const s = String(v).normalize("NFC").trim();
-    return s === "" || s === "–" || s === "—" ? GAP : s.replace(/\s+/g, "");
+    if (s === "" || s === "–" || s === "—") return GAP;
+    const t = s.replace(/\s+/g, "");
+    // a doubled consonant typed in one cell is one long segment: tt > tː, kkʰ > kʰː
+    const twice = t.match(/^(.+?)\1([ʰʱ]?)$/u);
+    return twice && isConsonant(twice[1]) && !twice[1].includes(LONG) && !/[[\]+·-]/.test(twice[1])
+      ? twice[1] + twice[2] + LONG : t;
   };
   // indices of the cells that hold an ancestor segment
   const rankList = (cells) => cells.reduce((a, c, i) => (c.top !== ADDED ? a.concat(i) : a), []);
@@ -299,7 +382,7 @@
   }
 
   if (typeof document === "undefined") {
-    module.exports = { parseCells, renderCells, parsePair, renderPair, clean, rankList, deleteAncestor, markAncestor,
+    module.exports = { parseCells, renderCells, parsePair, renderPair, clean, longPair, rankList, deleteAncestor, markAncestor,
                        insertAncestor, layoutOf, insertReflex, ancestorIntoColumn, deleteColumn,
                        renameAncestor, moveReflex, moveAncestor, pad, tidy, isFiller, setSeam, stepReflex };
     return;
@@ -310,8 +393,8 @@
   const STORE = "indic-alignments-v1";
   const PAGE = 25, ROWS = 300;
   const KEEPS_CHECKED = ["edited", "uncertain", "learned", "again"];
-  // rows Claude repaired on the Changes tab, to be looked at again
-  const REPAIRER = "Claude";
+  // rows whose alignment was automatically repaired on the Changes tab, to be looked at again
+  const REPAIRER = "automatically";
   const LEARNED = "probable learned form";
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
@@ -446,7 +529,7 @@
 
   function overlay(pair) {
     const c = changes[`${current.slug}\t${pair.key}`];
-    pair.cells = parsePair(c ? c.anc : pair.base[0], c ? c.ref : pair.base[1]);
+    pair.cells = parsePair(...(c ? longPair(c.anc, c.ref) : [pair.base[0], pair.base[1]]));
     pair.morph = c ? c.morph : pair.base[2];
     pair.status = c ? c.status : pair.base[3];
     pair.note = c ? c.note : pair.base[4];
@@ -573,7 +656,7 @@
     if (kind === "rank" && tops.length < 2) { say("The ancestor would have no segment left.", true); return; }
     const touched = rows.filter((p) => kind === "rank" || n < layoutOf(p.cells).added[slot].length);
     if (!touched.length) return;
-    const width = kind === rank ? placeWidth(touched, slot) : 0;
+    const width = kind === "rank" ? placeWidth(touched, slot) : 0;
     snapshot(touched);
     touched.forEach((p) => { deleteColumn(p.cells, kind, slot, n, width); setRanks(p); relabel(p); save(p); });
     say(`Column deleted in ${touched.length} ${touched.length === 1 ? "row" : "rows"}; the segments in it are gone, ` +
