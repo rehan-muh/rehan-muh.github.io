@@ -7,7 +7,7 @@
   "chain": "Old Indo-Aryan > modern Indo-Aryan",
   "rows": 84489,
   "sets": 9424,
-  "languages": 676,
+  "languages": 173,
   "marked": 34132,
   "reviewed": 16417
  },
@@ -19,7 +19,7 @@
   "chain": "Prakrit > modern Indo-Aryan",
   "rows": 71259,
   "sets": 6124,
-  "languages": 633,
+  "languages": 165,
   "marked": 28210,
   "reviewed": 12763
  },
@@ -31,7 +31,7 @@
   "chain": "Pali > modern Indo-Aryan",
   "rows": 29791,
   "sets": 2796,
-  "languages": 519,
+  "languages": 152,
   "marked": 15507,
   "reviewed": 0
  },
@@ -43,7 +43,7 @@
   "chain": "Reconstructed OIA > modern Indo-Aryan",
   "rows": 41234,
   "sets": 5651,
-  "languages": 539,
+  "languages": 155,
   "marked": 20118,
   "reviewed": 7918
  },
@@ -55,7 +55,7 @@
   "chain": "Old Indo-Aryan > Pali",
   "rows": 5834,
   "sets": 4504,
-  "languages": 8,
+  "languages": 1,
   "marked": 1500,
   "reviewed": 1517
  },
@@ -67,7 +67,7 @@
   "chain": "Old Indo-Aryan > Prakrit",
   "rows": 9652,
   "sets": 5727,
-  "languages": 19,
+  "languages": 1,
   "marked": 3006,
   "reviewed": 1888
  },
@@ -79,7 +79,7 @@
   "chain": "Old Indo-Aryan > Ashokan Prakrit",
   "rows": 1671,
   "sets": 479,
-  "languages": 45,
+  "languages": 18,
   "marked": 654,
   "reviewed": 0
  },
@@ -91,7 +91,7 @@
   "chain": "Old Indo-Aryan > other Middle Indo-Aryan",
   "rows": 1612,
   "sets": 916,
-  "languages": 57,
+  "languages": 15,
   "marked": 783,
   "reviewed": 0
  },
@@ -103,7 +103,7 @@
   "chain": "Reconstructed OIA > Pali",
   "rows": 1184,
   "sets": 838,
-  "languages": 8,
+  "languages": 1,
   "marked": 464,
   "reviewed": 0
  },
@@ -115,7 +115,7 @@
   "chain": "Reconstructed OIA > Prakrit",
   "rows": 2913,
   "sets": 1499,
-  "languages": 15,
+  "languages": 1,
   "marked": 1393,
   "reviewed": 0
  },
@@ -127,7 +127,7 @@
   "chain": "Reconstructed OIA > Ashokan Prakrit",
   "rows": 221,
   "sets": 70,
-  "languages": 29,
+  "languages": 13,
   "marked": 31,
   "reviewed": 0
  },
@@ -139,7 +139,7 @@
   "chain": "Reconstructed OIA > other Middle Indo-Aryan",
   "rows": 365,
   "sets": 207,
-  "languages": 41,
+  "languages": 13,
   "marked": 168,
   "reviewed": 0
  },
@@ -151,7 +151,7 @@
   "chain": "Old Indo-Aryan > headword variants",
   "rows": 1008,
   "sets": 691,
-  "languages": 14,
+  "languages": 1,
   "marked": 74,
   "reviewed": 0
  },
@@ -163,7 +163,7 @@
   "chain": "Reconstructed OIA > headword variants",
   "rows": 1479,
   "sets": 838,
-  "languages": 14,
+  "languages": 1,
   "marked": 75,
   "reviewed": 0
  },
@@ -175,7 +175,7 @@
   "chain": "Old Indo-Aryan > Prakrits",
   "rows": 13035,
   "sets": 7633,
-  "languages": 75,
+  "languages": 21,
   "marked": 1234,
   "reviewed": 0
  },
@@ -187,7 +187,7 @@
   "chain": "Reconstructed OIA > Prakrits",
   "rows": 1045,
   "sets": 584,
-  "languages": 44,
+  "languages": 16,
   "marked": 115,
   "reviewed": 0
  },
@@ -199,7 +199,7 @@
   "chain": "Old Indo-Aryan > Pali",
   "rows": 1606,
   "sets": 1375,
-  "languages": 17,
+  "languages": 10,
   "marked": 251,
   "reviewed": 0
  },
@@ -211,7 +211,7 @@
   "chain": "Reconstructed OIA > Pali",
   "rows": 155,
   "sets": 142,
-  "languages": 5,
+  "languages": 3,
   "marked": 0,
   "reviewed": 0
  },
