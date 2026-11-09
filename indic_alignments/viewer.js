@@ -597,6 +597,25 @@
     refreshTotals();
   }
 
+  // rows automatically repaired and now looked at again: each is saved as it stands, under the
+  // editor's name, so it is theirs and leaves "to look at again"; its note says so
+  const LOOKED = "looked at again";
+  function lookedAgain(set, rows, section) {
+    if (!rows.length) return;
+    snapshot(rows);
+    rows.forEach((p) => {
+      const note = String(p.note || "");
+      if (!note.split("; ").includes(LOOKED)) p.note = note ? `${note}; ${LOOKED}` : LOOKED;
+      save(p);
+    });
+    showChecked();
+    say(`${rows.length} ${rows.length === 1 ? "row" : "rows"} marked as looked at again`);
+    const view = $("ia-status").value;
+    const gone = view === "again" ? !set.rows.some((p) => p.again) : checkedAway(set, view);
+    if (section && gone) leave(set, section);
+    else redrawSet(set);
+  }
+
   function overlay(pair) {
     const c = changes[`${current.slug}\t${pair.key}`];
     pair.cells = parsePair(...(c ? longPair(c.anc, c.ref) : [pair.base[0], pair.base[1]]));
@@ -877,7 +896,8 @@
                    (pair.again ? '<span class="tag again">look again</span>' : "");
     h += `<td class="where">${esc(pair.rule())}${status}${pair.details ? ` <span class="det">${esc(pair.details)}</span>` : ""}${pair.edited ? ` <span class="det">edited ${esc(pair.edited)}</span>` : ""}${attHTML(pair.att, "det")}</td>`;
     if (editing) {
-      h += `<td class="tools"><label><input class="exclude" type="checkbox"${excluded ? " checked" : ""}> exclude</label> ` +
+      h += `<td class="tools">${pair.again ? '<button class="lookedagain" type="button" title="Save this row as it stands, under your name">looked at again</button> ' : ""}` +
+           `<label><input class="exclude" type="checkbox"${excluded ? " checked" : ""}> exclude</label> ` +
            `<label><input class="uncertain" type="checkbox"${pair.status === "uncertain" ? " checked" : ""}> uncertain</label>` +
            `<input class="note" type="text" placeholder="note" aria-label="Note" value="${esc(pair.note)}"></td>`;
     } else if (pair.note) {
@@ -914,6 +934,8 @@
       const mine = set.checks.includes(identity.editor.replace(/\|/g, " "));
       h += ` <label class="chk"><input class="setcheck" type="checkbox" data-id="${esc(set.id)}"${mine ? " checked" : ""}> I checked this set</label>`;
       h += ` <label class="chk2"><input class="setproblem" type="checkbox" data-id="${esc(set.id)}"${set.problem ? " checked" : ""}> problem set, set aside</label>`;
+      // rows automatically repaired: one tick says they have been looked at again
+      if (set.rows.some((p) => p.again)) h += ` <label class="chk2"><input class="setagain" type="checkbox" data-id="${esc(set.id)}"> looked at again</label>`;
     }
     if (set.learned) h += '<span class="tag learned">probable learned form</span>';
     h += `<span class="oks">${checkLabel(set)}</span>`;
@@ -1204,6 +1226,12 @@
       }
       return;
     }
+    const looked = e.target.closest("button.lookedagain");
+    if (looked) {
+      const pair = pairs.get(looked.closest("tr").dataset.key);
+      if (pair) lookedAgain(pair.set, [pair], looked.closest("section.set"));
+      return;
+    }
     const button = e.target.closest("button.mk, button.gp, button.gsel");
     if (!button) return;
     const pair = pairs.get(button.closest("tr").dataset.key);
@@ -1252,6 +1280,11 @@
       showChecked();
       fillSheets();
       if (checkedAway(set, $("ia-status").value)) leave(set, e.target.closest("section.set"));
+      return;
+    }
+    if (e.target.classList.contains("setagain")) {
+      const set = SETS.find((s) => s.id === e.target.dataset.id);
+      if (set && e.target.checked) lookedAgain(set, set.rows.filter((p) => p.again), e.target.closest("section.set"));
       return;
     }
     if (e.target.classList.contains("setproblem")) {
