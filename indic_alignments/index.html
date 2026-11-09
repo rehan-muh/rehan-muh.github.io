@@ -53,10 +53,10 @@ nav: false
   .pa #ia-morph, .pa #ia-lang { max-width: 14rem; }
   .pa input[type=search] { width: 17rem; font-family: "Charis SIL", serif; }
   .pa label { display: inline-flex; gap: 5px; align-items: center; font-size: 0.95rem; margin: 0; }
-  .pa button, .pa a.btn { font: inherit; font-size: 0.9rem; padding: 4px 12px; border-radius: 4px; cursor: pointer;
+  .pa button, .pa a.ia-btn { font: inherit; font-size: 0.9rem; padding: 4px 12px; border-radius: 4px; cursor: pointer;
                border: 1px solid var(--global-divider-color); background: var(--global-bg-color);
                color: var(--global-text-color); }
-  .pa button:hover:not(:disabled), .pa a.btn:hover { border-color: var(--global-theme-color); color: var(--global-theme-color); }
+  .pa button:hover:not(:disabled), .pa a.ia-btn:hover { border-color: var(--global-theme-color); color: var(--global-theme-color); }
   .pa button:disabled { opacity: 0.4; cursor: default; }
   .pa button[aria-pressed="true"], .pa button[aria-pressed="true"]:hover:not(:disabled) {
     background: var(--global-theme-color); color: var(--global-bg-color); border-color: var(--global-theme-color); }
@@ -72,7 +72,7 @@ nav: false
   .pa .sw.m { color: var(--global-text-color); background: var(--pa-m); box-shadow: inset 0 0 0 1px var(--pa-mline); }
   .pa .editbar, .pa form.login { border: 1px solid var(--pa-fixline); border-radius: 4px; padding: 8px 12px; margin: 0 0 1rem; font-size: 0.9rem; }
   .pa .editbar p, .pa form.login p { margin: 0 0 6px; max-width: 76ch; }
-  .pa .row { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+  .pa .ia-row { display: flex; margin: 0; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
   .pa #ia-saved { font-weight: 700; }
   .pa #ia-saved.bad { color: var(--pa-bad); }
   .pa .set { border: 1px solid var(--global-divider-color); border-radius: 4px; margin: 0 0 12px;
@@ -118,7 +118,8 @@ nav: false
   .pa td.seg.fix input.cell { border-color: var(--pa-fixline); border-width: 2px; }
   .pa td.seg.add input.cell { width: 2.2em; color: var(--pa-ins); background: var(--pa-insbg); font-weight: 700; }
   .pa td.seg.add.plain input.cell { color: var(--global-text-color); background: var(--global-bg-color); font-weight: 400; }
-  .pa kbd { font-size: 0.8em; padding: 0 3px; border: 1px solid var(--global-divider-color); border-radius: 3px; }
+  .pa kbd { font-size: 0.8em; padding: 0 3px; border: 1px solid var(--global-divider-color); border-radius: 3px;
+            background: transparent; color: inherit; box-shadow: none; font-weight: 400; }
   .pa button.mk { padding: 0 6px; min-width: 2em; font-family: "Charis SIL", serif; font-size: 1rem; }
   .pa button.gp { padding: 0 2px; font-size: 0.7rem; line-height: 1.2; }
   .pa button.gsel { padding: 0 4px; font-family: "Charis SIL", serif; font-size: 1rem; }
@@ -163,7 +164,7 @@ nav: false
     <div class="ia-topleft">
       <div class="controls">
         <label>Sheet <select id="ia-sheet"></select></label>
-        <a class="btn" id="ia-open" target="_blank" rel="noopener" hidden>Open in Google Sheets</a>
+        <a class="ia-btn" id="ia-open" target="_blank" rel="noopener" hidden>Open in Google Sheets</a>
         <button id="ia-edit" type="button" aria-pressed="false">Edit alignments</button>
       </div>
       <p class="status" id="ia-about"></p>
@@ -173,7 +174,7 @@ nav: false
 
   <form class="login" id="ia-login" hidden>
     <p>Edits will be saved to Google Sheets as you make. Enter your (/a) name and the password to edit alignments.</p>
-    <div class="row">
+    <div class="ia-row">
       <label>Name <input type="text" id="ia-editor" required autocomplete="name"></label>
       <label>Passphrase <input type="password" id="ia-pass" required autocomplete="current-password"></label>
       <button type="submit">Start editing</button>
@@ -213,7 +214,7 @@ nav: false
     as a geminate has it under its first member (<i>k t</i> over <i>tː -</i>), unless a nasal, liquid or glide opens the cluster
     (<i>r p</i> over <i>- pː</i>). Only a geminate split by a compound seam (<i>ud+dāla</i>), or with one half marked as
     morphology, keeps two columns.</p>
-    <div class="row">
+    <div class="ia-row">
       <button id="ia-brush" type="button" aria-pressed="false" title="Key M">Mark morphology <kbd>M</kbd></button>
       <button id="ia-gap" type="button" aria-pressed="false" title="Key G">Add gap column <kbd>G</kbd></button>
       <span id="ia-saved" role="status"></span>
