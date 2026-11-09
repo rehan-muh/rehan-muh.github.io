@@ -402,6 +402,13 @@
   const num = (n) => Number(n).toLocaleString("en-US");
 
   let INDEX = [], current = null, SETS = [], hits = [], shown = 0, wait = null;
+  let ATT = { where: {}, cited: {}, heads: {}, notes: [] };
+  // where and when, as a short note with its basis on hover
+  const attHTML = (e, cls) => {
+    if (!e) return "";
+    const text = [e[0], e[1]].filter(Boolean).join(", ");
+    return text ? ` <span class="${cls} att" title="${esc(ATT.notes[e[2]] || "")}">${esc(text)}</span>` : "";
+  };
   let editing = false, brush = false, gapping = false, changes = {}, links = {};
   let identity = { editor: "", pass: "" }, queue = [], sending = false;
   const pairs = new Map();
@@ -868,7 +875,7 @@
     });
     const status = (pair.status && pair.status !== "machine" ? `<span class="tag ${esc(pair.status.split(" ")[0])}">${esc(pair.status)}</span>` : "") +
                    (pair.again ? '<span class="tag again">look again</span>' : "");
-    h += `<td class="where">${esc(pair.rule())}${status}${pair.details ? ` <span class="det">${esc(pair.details)}</span>` : ""}${pair.edited ? ` <span class="det">edited ${esc(pair.edited)}</span>` : ""}</td>`;
+    h += `<td class="where">${esc(pair.rule())}${status}${pair.details ? ` <span class="det">${esc(pair.details)}</span>` : ""}${pair.edited ? ` <span class="det">edited ${esc(pair.edited)}</span>` : ""}${attHTML(pair.att, "det")}</td>`;
     if (editing) {
       h += `<td class="tools"><label><input class="exclude" type="checkbox"${excluded ? " checked" : ""}> exclude</label> ` +
            `<label><input class="uncertain" type="checkbox"${pair.status === "uncertain" ? " checked" : ""}> uncertain</label>` +
@@ -902,6 +909,7 @@
     if (set.gloss && set.gloss !== set.head) h += ` <span class="gl">‘${esc(set.gloss)}’</span>`;
     const aside = set.rows.filter((p) => p.status === "uncertain").length;
     h += ` <span class="id">${esc(set.id)}, ${rows.length} of ${set.rows.length} ${set.rows.length === 1 ? "form" : "forms"}${aside ? `, ${aside} uncertain` : ""}</span>`;
+    h += attHTML(set.att, "id");
     if (editing) {
       const mine = set.checks.includes(identity.editor.replace(/\|/g, " "));
       h += ` <label class="chk"><input class="setcheck" type="checkbox" data-id="${esc(set.id)}"${mine ? " checked" : ""}> I checked this set</label>`;
@@ -1025,6 +1033,8 @@
     const r = await fetch(`${BASE}${entry.slug}.json`);
     if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
     const data = await r.json();
+    // where and when a form is attested (causal/indic_attestation.py): [where, when, basis n]
+    ATT = { where: data.where || {}, cited: data.cited || {}, heads: data.heads || {}, notes: data.att_notes || [] };
     const byId = new Map();
     pairs.clear();
     const languages = {}, rules = {};
@@ -1032,12 +1042,12 @@
       const key = row[0], cut = key.lastIndexOf("|");
       const id = key.slice(0, cut);
       let set = byId.get(id);
-      if (!set) { set = { id, head: row[3], gloss: row[1], rows: [] }; byId.set(id, set); }
+      if (!set) { set = { id, head: row[3], gloss: row[1], rows: [], att: ATT.heads[id] || null }; byId.set(id, set); }
       const language = row[2].split("#")[0];
       if (row[9].includes(LEARNED)) set.learned = true;
       const details = row[9].replace(new RegExp(`(^|; )${LEARNED}(?=;|$)`), "");
       const pair = { key, n, set, language: row[2], base_language: language, form: row[4], base: [row[5], row[6], row[7], row[8], row[10]],
-                     details, f: fold(`${row[2]} ${row[4]}`) };
+                     details, f: fold(`${row[2]} ${row[4]}`), att: ATT.cited[key] || ATT.where[row[2]] || null };
       pair.rule = function () { return this.morph; };
       overlay(pair);
       languages[language] = (languages[language] || 0) + 1;
