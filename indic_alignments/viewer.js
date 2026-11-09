@@ -464,20 +464,82 @@
     set.checks = checksOf(set.id);
     set.problem = changes[`${current.slug}\t${set.id}${PROBLEM}`] || null;
   }
+  // a set ticked as checked is done and leaves the page, except in the views that keep it, or
+  // while a row of it is to be looked at again
+  function checkedAway(set, view) {
+    if (view === "checked") return !set.checks.length;
+    return set.checks.length > 0 && !KEEPS_CHECKED.includes(view) && !set.rows.some((p) => p.again);
+  }
   function checkLabel(set) {
     return set.checks.length ? `<span class="ok">✓ checked by ${esc(set.checks.join(", "))}</span>` : "";
   }
-  // the menu of sheets, smallest first, each with how far the checking has got
+  // one pass over the saved edits: for each sheet, the sets ticked as checked or set aside, and
+  // the rows marked uncertain or to be looked at again
+  const emptyTally = () => ({ checked: new Set(), aside: new Set(), again: 0, uncertain: 0 });
+  function tally() {
+    const by = {};
+    Object.keys(changes).forEach((k) => {
+      const tab = k.indexOf("\t"), slug = k.slice(0, tab), key = k.slice(tab + 1), c = changes[k];
+      const t = by[slug] || (by[slug] = emptyTally());
+      if (key.includes(CHECK)) t.checked.add(key.split(CHECK)[0]);
+      else if (key.endsWith(PROBLEM)) t.aside.add(key.slice(0, -PROBLEM.length));
+      else {
+        if (c.editor === REPAIRER) t.again++;
+        if (c.status === "uncertain") t.uncertain++;
+      }
+    });
+    return by;
+  }
+  // the menu of sheets, smallest first, each with how far the checking has got; then the
+  // progress over all sheets
   function fillSheets() {
-    $("ia-sheet").innerHTML = INDEX.map((s) => {
-      const head = `${s.slug}\t`;
-      const done = new Set(Object.keys(changes).filter((k) => k.startsWith(head) && k.includes(CHECK))
-        .map((k) => k.slice(head.length).split(CHECK)[0])).size;
-      const again = Object.keys(changes).filter((k) => k.startsWith(head) && changes[k].editor === REPAIRER).length;
-      return `<option value="${esc(s.slug)}">${esc(s.sheet)} (${num(done)} of ${num(s.sets)} sets checked` +
-             `${again ? `, ${num(again)} to look at again` : ""})</option>`;
-    }).join("");
-    if (current) $("ia-sheet").value = current.slug;
+    const by = tally();
+    const text = (s) => {
+      const t = by[s.slug] || emptyTally();
+      return `${s.sheet} (${num(t.checked.size)} of ${num(s.sets)} sets checked${t.again ? `, ${num(t.again)} to look at again` : ""})`;
+    };
+    const menu = $("ia-sheet");
+    if (menu.options.length === INDEX.length) INDEX.forEach((s, i) => { menu.options[i].textContent = text(s); });
+    else menu.innerHTML = INDEX.map((s) => `<option value="${esc(s.slug)}">${esc(text(s))}</option>`).join("");
+    if (current) menu.value = current.slug;
+    drawProgress(by);
+  }
+  // after a save, the totals once the burst of saves is over (a set-wide change saves every row)
+  let totalsWait = 0;
+  function refreshTotals() {
+    if (!totalsWait) totalsWait = setTimeout(() => { totalsWait = 0; fillSheets(); }, 60);
+  }
+  // top right: how many sets of all the sheets are checked or set aside, as one bar
+  function drawProgress(by) {
+    const el = $("ia-progress"), total = INDEX.reduce((n, s) => n + s.sets, 0);
+    if (!el || !total) return;
+    let checked = 0, aside = 0, again = 0, uncertain = 0;
+    const sheets = INDEX.map((s) => {
+      const t = by[s.slug] || emptyTally();
+      // a set both checked and set aside counts as set aside
+      const c = [...t.checked].filter((id) => !t.aside.has(id)).length;
+      checked += c; aside += t.aside.size; again += t.again; uncertain += t.uncertain;
+      return { s, c, a: t.aside.size };
+    });
+    const done = checked + aside, left = Math.max(0, total - done);
+    const pct = (n, of = total) => { const v = 100 * n / of; return n && v < 0.1 ? "<0.1%" : `${v.toFixed(1)}%`; };
+    const part = (cls, n, what) => (n ? `<span class="${cls}" style="width:${(100 * n / total).toFixed(3)}%" title="${what}: ${num(n)} sets, ${pct(n)}"></span>` : "");
+    const plural = (n, one, many) => `${num(n)} ${n === 1 ? one : many}`;
+    const open = el.querySelector("details") && el.querySelector("details").open;
+    el.innerHTML =
+      `<div class="ph"><b>All sheets</b><span>${num(done)} of ${num(total)} sets · ${pct(done)}</span></div>` +
+      `<div class="pbar" role="img" aria-label="${num(checked)} sets checked, ${num(aside)} set aside, ${num(left)} to check, of ${num(total)}">` +
+      part("done", checked, "Checked") + part("aside", aside, "Set aside as problem sets") +
+      `<span class="left" title="To check: ${num(left)} sets, ${pct(left)}"></span></div>` +
+      `<p><span class="pk"><i class="key done"></i>${num(checked)} checked</span>` +
+      `<span class="pk"><i class="key aside"></i>${num(aside)} set aside</span>` +
+      `<span class="pk"><i class="key left"></i>${num(left)} to check</span></p>` +
+      `<p>${plural(again, "row", "rows")} to look at again · ${plural(uncertain, "row", "rows")} uncertain</p>` +
+      `<details${open ? " open" : ""}><summary>By sheet</summary><table><thead><tr><th scope="col">Sheet</th>` +
+      '<th scope="col">Checked</th><th scope="col">Set aside</th><th scope="col">Sets</th></tr></thead><tbody>' +
+      sheets.map(({ s, c, a }) => `<tr><td>${esc(s.sheet)}</td><td>${num(c)}</td><td>${num(a)}</td><td>${num(s.sets)}</td></tr>`).join("") +
+      "</tbody></table></details>";
+    el.hidden = false;
   }
   function showChecked() {
     const done = SETS.filter((s) => s.checks.length).length;
@@ -525,6 +587,7 @@
     queue.push(item);
     remember();
     flush();
+    refreshTotals();
   }
 
   function overlay(pair) {
@@ -734,6 +797,7 @@
     queue.push(item);
     remember();
     flush();
+    refreshTotals();
   }
 
   // ------------------------------------------------------------- drawing
@@ -916,10 +980,11 @@
     hits = [];
     let forms = 0;
     SETS.forEach((set) => {
-      // a problem set leaves every view but its own
-      if (status === "problem" ? !set.problem : set.problem) return;
-      // a checked set is done, so it leaves the page too, except where a view asks for it
-      if (status === "checked" ? !set.checks.length : set.checks.length && !KEEPS_CHECKED.includes(status)) return;
+      // a problem set leaves every view but its own and the rows to look at again
+      if (status === "problem" ? !set.problem : set.problem && status !== "again") return;
+      if (checkedAway(set, status)) return;
+      // a checked set on the page only for its rows to look at again goes if the filters hide them
+      const forAgain = set.checks.length && status !== "checked" && !KEEPS_CHECKED.includes(status);
       if (status === "learned" && !set.learned) return;
       const whole = q && set.f.includes(q);
       const rows = set.rows.filter((p) => {
@@ -935,10 +1000,14 @@
         if (morph && !["yes", "no"].includes(morph) && !p.morph.includes(morph)) return false;
         return !q || whole || p.f.includes(q);
       });
+      if (forAgain && !rows.some((p) => p.again)) return;
       if (rows.length) { hits.push({ set, rows }); forms += rows.length; }
     });
     const how = $("ia-sort").value;
-    hits.sort((x, y) => how === "a" ? (x.set.f < y.set.f ? -1 : x.set.f > y.set.f ? 1 : 0) : (y.rows.length - x.rows.length));
+    // sets with a row to look at again come first, in either order
+    const later = (h) => (h.rows.some((p) => p.again) ? 0 : 1);
+    hits.sort((x, y) => (later(x) - later(y)) ||
+      (how === "a" ? (x.set.f < y.set.f ? -1 : x.set.f > y.set.f ? 1 : 0) : (y.rows.length - x.rows.length)));
     $("ia-count").textContent = `${num(forms)} forms in ${num(hits.length)} sets`;
     $("ia-sets").innerHTML = hits.length ? "" : '<div class="empty">No forms match these filters.</div>';
     shown = 0;
@@ -1172,16 +1241,15 @@
       e.target.closest("h3").querySelector(".oks").innerHTML = checkLabel(set);
       showChecked();
       fillSheets();
-      const view = $("ia-status").value;
-      const gone = view === "checked" ? !set.checks.length : set.checks.length && !KEEPS_CHECKED.includes(view);
-      if (gone) leave(set, e.target.closest("section.set"));
+      if (checkedAway(set, $("ia-status").value)) leave(set, e.target.closest("section.set"));
       return;
     }
     if (e.target.classList.contains("setproblem")) {
       const set = SETS.find((s) => s.id === e.target.dataset.id);
       toggleProblem(set, e.target.checked);
       showChecked();
-      leave(set, e.target.closest("section.set"));
+      // the view of rows to look at again keeps problem sets
+      if ($("ia-status").value !== "again") leave(set, e.target.closest("section.set"));
       return;
     }
     if (e.target.classList.contains("acell") || e.target.classList.contains("aslot")) {

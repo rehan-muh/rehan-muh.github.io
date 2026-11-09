@@ -13,6 +13,34 @@ nav: false
   html[data-theme="dark"] .pa { --pa-ins: #8fe0c4; --pa-insbg: #123d33; --pa-fix: #4a3d10; --pa-fixline: #d5a63f; --pa-m: #2e2852; --pa-mline: #a998ee;
         --pa-lost: #e58fbf; --pa-faint: #6b7480; --pa-bad: #f2a3b7; --pa-badbg: #4a1f2c; --pa-warn: #f0cf7a; }
   .pa .controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin: 0.8rem 0 0.6rem; }
+  /* the sheet controls on the left, the progress over all sheets at the top right */
+  .pa .top { display: flex; flex-wrap: wrap; gap: 4px 24px; align-items: flex-start; }
+  .pa .topleft { flex: 1 1 26rem; min-width: 0; }
+  .pa .progress { --pa-done: #008a63; --pa-aside: #a46f00;
+                  flex: 0 1 21rem; margin: 0.8rem 0 0.6rem auto; padding: 8px 12px; font-size: 0.85rem;
+                  border: 1px solid var(--global-divider-color); border-radius: 4px; background: var(--global-card-bg-color); }
+  html[data-theme="dark"] .pa .progress { --pa-done: #2f9a76; --pa-aside: #b88524; }
+  .pa .progress .ph { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin: 0 0 6px; }
+  .pa .progress .ph b { font-weight: 700; }
+  .pa .progress .ph span { color: var(--global-text-color-light); font-variant-numeric: tabular-nums; }
+  /* one whole split into parts: thin, rounded ends, a 2px gap between parts */
+  .pa .pbar { display: flex; gap: 2px; height: 8px; border-radius: 4px; overflow: hidden; margin: 0 0 6px; }
+  .pa .pbar span { display: block; height: 100%; min-width: 2px; }
+  .pa .pbar .done { background: var(--pa-done); }
+  .pa .pbar .aside { background: var(--pa-aside); }
+  .pa .pbar .left { flex: 1 1 auto; background: var(--global-divider-color); }
+  .pa .progress p { margin: 0 0 3px; color: var(--global-text-color-light); font-variant-numeric: tabular-nums; }
+  .pa .progress .key { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin: 0 4px 0 0; vertical-align: 0; }
+  .pa .progress .key.done { background: var(--pa-done); }
+  .pa .progress .key.aside { background: var(--pa-aside); }
+  .pa .progress .key.left { background: var(--global-divider-color); }
+  .pa .progress .pk { display: inline-flex; align-items: center; margin-right: 10px; white-space: nowrap; }
+  .pa .progress details { margin: 4px 0 0; }
+  .pa .progress summary { cursor: pointer; color: var(--global-text-color-light); }
+  .pa .progress table { margin: 4px 0 0; font-size: 0.78rem; font-variant-numeric: tabular-nums; }
+  .pa .progress th, .pa .progress td { padding: 1px 4px; text-align: right; }
+  .pa .progress th:first-child, .pa .progress td:first-child { text-align: left; white-space: normal; }
+  .pa .progress thead th { font-weight: 400; color: var(--global-text-color-light); border-bottom: 1px solid var(--global-divider-color); }
   .pa select, .pa input[type=search], .pa input[type=password], .pa input[type=text] {
     font: inherit; font-size: 0.95rem; padding: 4px 8px; border-radius: 4px; color: var(--global-text-color);
     background: var(--global-bg-color); border: 1px solid var(--global-divider-color); max-width: 100%; }
@@ -126,12 +154,17 @@ nav: false
 </style>
 
 <div class="pa">
-  <div class="controls">
-    <label>Sheet <select id="ia-sheet"></select></label>
-    <a class="btn" id="ia-open" target="_blank" rel="noopener" hidden>Open in Google Sheets</a>
-    <button id="ia-edit" type="button" aria-pressed="false">Edit alignments</button>
+  <div class="top">
+    <div class="topleft">
+      <div class="controls">
+        <label>Sheet <select id="ia-sheet"></select></label>
+        <a class="btn" id="ia-open" target="_blank" rel="noopener" hidden>Open in Google Sheets</a>
+        <button id="ia-edit" type="button" aria-pressed="false">Edit alignments</button>
+      </div>
+      <p class="status" id="ia-about"></p>
+    </div>
+    <aside class="progress" id="ia-progress" aria-label="Progress over all sheets" hidden></aside>
   </div>
-  <p class="status" id="ia-about"></p>
 
   <form class="login" id="ia-login" hidden>
     <p>Edits will be saved to Google Sheets as you make. Enter your (/a) name and the password to edit alignments.</p>
@@ -169,7 +202,7 @@ nav: false
     under the next ancestor segment, if that one has nothing under it. Click a segment to pick it, and the arrow keys move it
     the same way. A segment never jumps over another of its row; move that one first, or add a column with +. A row marked <i>uncertain</i> leaves its table, and a set you tick as checked or as a <i>problem set</i>
     leaves the page. Choose <i>uncertain rows</i>, <i>sets checked</i>, or <i>problem sets</i> under Status to see them, and untick one to put it back. Rows whose alignment was automatically repaired are under <i>to look at again</i>, and the sheet menu says which sheets
-    hold them. Saving such a row, or clearing its note, makes it yours.</p>
+    hold them. Their sets come first on the page and stay there even when ticked as checked. Saving such a row, or clearing its note, makes it yours.</p>
     <p>A geminate is one segment with the length mark: <i>kː</i>, <i>kʰː</i>, in the ancestor and the reflexes alike (Pāli
     <i>bhatta</i> is <i>bʰ a tː a</i>). Typing <i>kk</i> or <i>kkʰ</i> in a cell writes <i>kː</i> or <i>kʰː</i>. A cluster that came out
     as a geminate has it under its first member (<i>k t</i> over <i>tː -</i>), unless a nasal, liquid or glide opens the cluster
