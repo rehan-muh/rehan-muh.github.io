@@ -1,0 +1,97 @@
+---
+layout: page
+title: acd alignments
+permalink: /acd_alignments/
+nav: false
+---
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  .acd { --acd-lost: #b4457f; --acd-add: #00684c; --acd-addbg: #dcefe9; --acd-faint: #9aa5b1;
+         --acd-fix: #8a6100; --acd-fixbg: #fff3c4; --acd-bad: #a4324f; --acd-badbg: #fbe4ea; }
+  html[data-theme="dark"] .acd { --acd-lost: #e58fbf; --acd-add: #8fe0c4; --acd-addbg: #123d33; --acd-faint: #6b7480;
+         --acd-fix: #f0cf7a; --acd-fixbg: #4a3d10; --acd-bad: #f2a3b7; --acd-badbg: #4a1f2c; }
+  .acd .acd-intro { max-width: 74ch; }
+  .acd .acd-intro p { margin: 0 0 0.6rem; }
+  .acd .acd-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin: 1rem 0 0.6rem; }
+  .acd select, .acd input[type=search] {
+    font: inherit; font-size: 0.95rem; padding: 4px 8px; border-radius: 4px; color: var(--global-text-color);
+    background: var(--global-bg-color); border: 1px solid var(--global-divider-color); max-width: 100%; }
+  .acd input[type=search] { width: 15rem; font-family: "Charis SIL", serif; }
+  .acd label { display: inline-flex; gap: 5px; align-items: center; font-size: 0.95rem; margin: 0; }
+  .acd button { font: inherit; font-size: 0.9rem; padding: 4px 12px; border-radius: 4px; cursor: pointer;
+                border: 1px solid var(--global-divider-color); background: var(--global-bg-color);
+                color: var(--global-text-color); }
+  .acd button:hover:not(:disabled) { border-color: var(--global-theme-color); color: var(--global-theme-color); }
+  .acd button:disabled { opacity: 0.4; cursor: default; }
+  .acd .acd-status { font-size: 0.9rem; color: var(--global-text-color-light); margin: 0 0 0.6rem; }
+  .acd .acd-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.85rem; color: var(--global-text-color-light);
+                     padding: 8px 12px; border: 1px solid var(--global-divider-color); border-radius: 4px; margin: 0 0 1rem; }
+  .acd .acd-legend span { display: inline-flex; gap: 5px; align-items: center; }
+  .acd .acd-files { font-size: 0.9rem; margin: 0 0 0.4rem; padding-left: 1.2rem; }
+  .acd .acd-set { border: 1px solid var(--global-divider-color); border-radius: 4px; margin: 0 0 12px;
+                  background: var(--global-card-bg-color); overflow-x: auto; }
+  .acd .acd-set h3 { font-size: 1.05rem; margin: 0; padding: 7px 12px; border-bottom: 1px solid var(--global-divider-color);
+                     display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; font-family: "Charis SIL", serif; }
+  .acd .acd-set h3 .acd-gloss { font-weight: 400; font-style: italic; }
+  .acd .acd-set h3 .acd-id { color: var(--global-text-color-light); font-weight: 400; font-size: 0.8rem; font-family: var(--global-font, inherit); }
+  .acd table.acd-rows { border-collapse: collapse; margin: 4px 10px 8px; width: auto; }
+  .acd table.acd-rows > tbody > tr > td { padding: 4px 10px 4px 2px; border: 0; border-top: 1px solid var(--global-divider-color);
+                                         vertical-align: top; }
+  .acd table.acd-rows > tbody > tr:first-child > td { border-top: 0; }
+  .acd .acd-lang { white-space: nowrap; color: var(--global-text-color-light); font-size: 0.85rem; }
+  .acd .acd-form { white-space: nowrap; font-family: "Charis SIL", serif; font-size: 1.05rem; }
+  .acd .acd-mean { font-size: 0.8rem; color: var(--global-text-color-light); max-width: 22rem; }
+  .acd table.acd-al { border-collapse: collapse; }
+  .acd table.acd-al td { padding: 0 4px; text-align: center; border: 0; font-family: "Charis SIL", serif; font-size: 1.05rem;
+                         min-width: 1.1em; }
+  .acd table.acd-al tr.acd-anc td { font-weight: 700; border-bottom: 1px solid var(--global-divider-color); }
+  .acd .acd-affix { color: var(--acd-faint); font-weight: 400 !important; }
+  .acd .acd-gap { color: var(--acd-lost); }
+  .acd .acd-added { color: var(--acd-add); background: var(--acd-addbg); border-radius: 3px; }
+  .acd .acd-nil { color: var(--acd-faint); }
+  .acd .acd-tag { display: inline-block; font-size: 0.72rem; border-radius: 3px; padding: 0 5px; margin-right: 4px;
+                  border: 1px solid var(--global-divider-color); color: var(--global-text-color-light); white-space: nowrap; }
+  .acd .acd-tag.acd-fixed { color: var(--acd-fix); background: var(--acd-fixbg); border-color: var(--acd-fix); }
+  .acd .acd-tag.acd-prob { color: var(--acd-bad); background: var(--acd-badbg); border-color: var(--acd-bad); }
+  .acd .acd-note { font-size: 0.8rem; color: var(--global-text-color-light); max-width: 26rem; font-family: "Charis SIL", serif; }
+  .acd .acd-pager { display: flex; gap: 10px; align-items: center; margin: 0.8rem 0; font-size: 0.9rem; }
+</style>
+
+<div class="acd">
+  <div class="acd-intro">
+    <p>Every reflex in the cognate sets of the <em>Austronesian Comparative Dictionary</em> (Blust, Trussel and Smith),
+      aligned segment by segment with the reconstruction that heads its set. <span id="acd-counts"></span></p>
+    <p>The reconstructions and reflexes were converted from the dictionary's spelling to IPA segments, with each
+      language's spelling read as the dictionary cited for it describes it. Each reflex was aligned with its
+      reconstruction automatically, and every alignment was then read by a large language model acting as a reviewer,
+      which confirmed it, corrected it, or marked a problem. No person has read the alignments.</p>
+    <p>Source: Blust, Robert, Stephen Trussel, and Alexander D. Smith. <em>The Austronesian Comparative Dictionary</em>.
+      CLDF dataset <a href="https://github.com/lexibank/acd">lexibank/acd</a>, licence CC BY 4.0. Please cite the
+      dictionary when using these tables.</p>
+    <ul class="acd-files" id="acd-files"></ul>
+  </div>
+
+  <div class="acd-controls">
+    <label>Level <select id="acd-level"></select></label>
+    <label>Reconstruction or gloss <input type="search" id="acd-find" placeholder="mata, eye"></label>
+    <label>Language <input type="search" id="acd-lang" list="acd-langs" placeholder="any"></label>
+    <datalist id="acd-langs"></datalist>
+    <label><input type="checkbox" id="acd-problems"> show rows marked as a problem</label>
+  </div>
+  <p class="acd-status" id="acd-status">Loading.</p>
+  <div class="acd-legend">
+    <span><b style="font-family:'Charis SIL',serif">p a t</b> segments of the reconstruction</span>
+    <span><span class="acd-affix" style="font-family:'Charis SIL',serif">[m a]</span> affix of the reconstruction; (x) optional</span>
+    <span><span class="acd-gap">–</span> no reflex of that segment</span>
+    <span><span class="acd-added" style="font-family:'Charis SIL',serif;padding:0 3px">a</span> segment the reflex adds</span>
+    <span><span class="acd-tag acd-fixed">corrected</span> realigned by the reader</span>
+    <span><span class="acd-tag acd-prob">problem</span> marked by the reader</span>
+  </div>
+  <div class="acd-pager"><button id="acd-prev">Previous</button><span id="acd-page"></span><button id="acd-next">Next</button></div>
+  <div id="acd-sets"></div>
+  <div class="acd-pager"><button id="acd-prev2">Previous</button><span id="acd-page2"></span><button id="acd-next2">Next</button></div>
+</div>
+
+<script src="{{ '/acd_alignments/viewer.js' | relative_url }}"></script>
