@@ -98,6 +98,7 @@
       var note = el("td", "acd-note");
       if (row[5] === 1) note.appendChild(el("span", "acd-tag acd-fixed", "corrected"));
       if (row[5] === 2) note.appendChild(el("span", "acd-tag acd-fixed", "second reading"));
+      if (row[5] === 4) note.appendChild(el("span", "acd-tag acd-fixed", "segments corrected" + (row[6] ? ": " + row[6] : "")));
       if (row[5] === 3) note.appendChild(el("span", "acd-tag acd-prob", "problem" + (row[6] ? ": " + row[6] : "")));
       var text = [row[7], row[8]].filter(Boolean).join(" · ");
       if (text) note.appendChild(document.createTextNode(text));
@@ -141,7 +142,9 @@
     var c = index.counts, n = function (x) { return (x || 0).toLocaleString(); };
     $("acd-counts").textContent = n(c.rows) + " reflexes of " + n(c.sets) + " reconstructions in " + n(c.languages) +
       " lects (" + n(c.glottocodes) + " Glottolog languages). The reviewer confirmed " + n(c.confirmed) + ", realigned " +
-      n((c.corrected || 0) + (c["resolved on second reading"] || 0)) + ", and marked " + n(c.problem) + " as a problem.";
+      n((c.corrected || 0) + (c["resolved on second reading"] || 0)) + ", corrected the segments of " +
+      n(c["segments corrected"]) + " (the part of the reflex kept, an affix, the value of a letter), and left " +
+      n(c.problem) + " marked as a problem.";
     var level = $("acd-level");
     level.appendChild(new Option("all levels", ""));
     index.levels.forEach(function (lv, i) { level.appendChild(new Option(lv[0] + " · " + lv[1], String(i))); });
@@ -150,7 +153,7 @@
     var files = $("acd-files"), d = index.downloads;
     [["reviewed", "The reviewed table (CSV), without the rows marked as a problem"],
      ["reviewed_short", "The same rows with the final alignments alone (no review columns)"],
-     ["problems", "The rows marked as a problem, with the reviewer's alignment where one was given"],
+     ["problems", "The rows still marked as a problem: uncertain, not cognate, or with no alignment from the reviewer"],
      ["not_aligned", "The forms that could not be read, with the reason"],
      ["readme", "README: columns, conventions and how the tables were made"]].forEach(function (pair) {
       if (!d[pair[0]]) return;
