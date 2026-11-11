@@ -23,8 +23,11 @@
     }).then(function (d) { cache[name] = d; return d; });
   }
 
+  // combining marks U+0300 to U+036F, built from code points so that no tool rewrites the range
+  var MARKS = new RegExp("[" + String.fromCharCode(0x300) + "-" + String.fromCharCode(0x36f) + "]", "g");
+
   function plain(s) {
-    return String(s).normalize("NFD").replace(/\p{M}/gu, "").replace(/[*₀-₉]/g, "").toLowerCase();
+    return String(s).normalize("NFD").replace(MARKS, "").replace(/[*₀-₉]/g, "").toLowerCase();
   }
 
   function filterSets() {
