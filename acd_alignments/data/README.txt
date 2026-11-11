@@ -25,13 +25,18 @@ What is here
     PSHWNG             2              6       3   Proto-South Halmahera-West New Guinea
 
 Files
-  acd_reviewed_2026-11-11.csv         the reviewed table, without the rows a
-                                      reader marked as a problem (103,966 rows)
+  acd_reviewed_2026-11-11.csv         the reviewed table: every row with an
+                                      alignment the reader confirmed or
+                                      supplied (107,231 rows)
   acd_reviewed_2026-11-11_short.csv   the same rows with the final alignments
                                       alone: without Not_Compared, Remark and
                                       the five review columns
-  acd_problem_rows_2026-11-11.csv     the 4,080 rows marked as a problem, with
-                                      the reader's alignment where one was given
+  acd_problem_rows_2026-11-11.csv     the 815 rows still marked as a problem:
+                                      728 with no alignment from the reader
+                                      (uncertain 668, not cognate 33, other
+                                      27), 66 the reader aligned but called
+                                      uncertain, and 21 whose rows the reader
+                                      left as they were
   acd_not_aligned_2026-11-11.csv      177 forms that could not be read, each
                                       with the reason
   The CSV files are UTF-8 with a byte order mark, so that Excel shows the IPA.
@@ -51,18 +56,21 @@ How the tables were made
   Review     rows      meaning
   confirmed  99,458    the automatic alignment stands
   corrected   4,460    same segments, realigned by the reader
-  problem     4,080    something other than placement was wrong; for 3,352 of
-                       them the reader supplied the right rows, which the table
-                       shows. Kinds: wrong part of the reflex kept (1,335),
-                       affix of the reconstruction mis-marked (957), a letter
-                       read as the wrong sound (848), uncertain (734), wrong
-                       word of a phrase (173), not cognate (33).
+  segments corrected
+              3,265    the reader changed the segments compared, and the table
+                       shows the reader's rows: the wrong part of the reflex
+                       had been kept (1,318), an affix of the reconstruction
+                       was mis-marked (935), a letter was read as the wrong
+                       sound (839), the wrong word of a phrase was taken (173).
+                       Problem gives the kind.
   resolved on second reading
                  48    rows the first reader left open, which two further
                        readers, working independently, aligned in the same way.
                        747 open rows were read again like this; where the two
                        did not both give the same alignment the row was left as
                        it was.
+  problem       815    left open (in the file of problem rows, not in the
+                       reviewed table): see Files.
 
 Columns
   Row_ID             level : cognate set : form ID of the ACD
@@ -84,7 +92,8 @@ Columns
   Remark             "word N (...) of the phrase ..." where the reflex is cited
                      as a phrase and one word was taken (4,560 rows); "loan"
                      where the ACD marks the reflex as a loan (248 rows)
-  Review             confirmed, corrected, problem, or resolved on second reading
+  Review             confirmed, corrected, segments corrected, resolved on
+                     second reading, or problem
   Problem            the kind of problem
   Review_Note        the reader's note, in linguistic notation
   Automatic_Ancestor_Aligned, Automatic_Reflex_Aligned
@@ -113,8 +122,8 @@ Conventions worth knowing
     reconstruction is kept; Reflex shows the whole form.
   - Where the ACD heads a set with two reconstructions (*tenzeg, te(n)dek) the
     first is used, unless the reader found that the reflex continues the other,
-    in which case the row is a "problem" with the other form in
-    Ancestor_Aligned.
+    in which case the row shows the other form in Ancestor_Aligned and its
+    Review_Note says so.
   - Spelling values taken from secondary sources because the cited dictionary
     could not be read: Marshallese, Rennellese, Rotuman, Chuukese. The letter e
     is read as schwa by its correspondences alone, with no source read, in
