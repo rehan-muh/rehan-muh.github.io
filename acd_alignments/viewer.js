@@ -1,6 +1,8 @@
 // Viewer for the ACD alignments. Data: data/index.json (levels, languages, one
 // entry per reconstruction) and data/<LEVEL>_<n>.json (the rows), written by
-// causal/publish_acd.py in the analysis repository.
+// causal/publish_acd.py in the analysis repository. A commit of data alone
+// does not start the site's deploy: change this line with it.
+// Data last published: 2026-11-11 (reviewed table, problem rows, mappings.csv).
 (function () {
   "use strict";
   var base = (document.currentScript && document.currentScript.src.replace(/viewer\.js.*$/, "")) || "./";
