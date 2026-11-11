@@ -155,6 +155,7 @@
      ["reviewed_short", "The same rows with the final alignments alone (no review columns)"],
      ["problems", "The rows still marked as a problem: uncertain, not cognate, or with no alignment from the reviewer"],
      ["not_aligned", "The forms that could not be read, with the reason"],
+     ["mappings", "How each language's spelling was read: letter, IPA segment chosen, and source"],
      ["readme", "README: columns, conventions and how the tables were made"]].forEach(function (pair) {
       if (!d[pair[0]]) return;
       var li = el("li"), a = el("a", null, pair[1]);
