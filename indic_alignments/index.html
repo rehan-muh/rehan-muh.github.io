@@ -185,37 +185,6 @@ nav: false
   </form>
 
   <div class="editbar" id="ia-editbar" hidden>
-    <p>Click a segment to change it, using the IPA shown in the table. Leave it empty to mark it lost. Press Enter for the next
-    segment, and <kbd>Esc</kbd> to leave it. The green and outlined columns can be changed in the same way; empty one to take
-    it out of the row. When no segment has the cursor, <kbd>M</kbd> switches <i>Mark morphology</i> on or off, <kbd>G</kbd>
-    switches <i>Add gap column</i> on or off, <kbd>Esc</kbd> goes back to typing, and <kbd>U</kbd> takes back your last change.
-    In <i>Mark morphology</i>, click a segment to mark or unmark it in that row, or click a letter of the ancestor, at the top of
-    the table, to mark or unmark it in every row of the set. The heavy black line of a compound seam can go too: in <i>Mark
-    morphology</i>, click the × on the line to take the seam away in every row of the set, or the | on any other line between
-    two letters to put one there. In <i>Add gap column</i>, the × beside a letter of the ancestor
-    takes that segment out of the ancestor in every row of the set; what stood under it stays as an added segment. The + before a
-    letter (and after the last) adds a segment to the ancestor there: type it and press Enter (<kbd>Esc</kbd> to cancel). Every
-    row gets a gap under it; type the reflexes in, or click an added segment beside it to move it in. The + of a green or
-    outlined column puts an ancestor segment over that column: the segments rows have there stand under it, and the other rows
-    get a gap. ⌫ deletes a whole column in every row of the set, the segments in it included, so those rows no longer spell
-    their cited form; <kbd>U</kbd> takes it back. In typing mode, a row's empty cell in a green or outlined column takes a
-    segment too, and so does the ancestor at the top of the table: change a letter there and it changes in every row of the set
-    (empty it to take it out of the ancestor), or type a segment at the top of a green or outlined column to put it over that
-    column. In any mode, drag a segment to move it: within its row onto a gap (-) under an ancestor segment, or into a green or
-    outlined column, where it goes before the segment the row has there. Drag an ancestor letter onto a green or outlined column
-    to move it there in every row of the set. If there is no column to drop it in, the small + at the top of the table, in typing
-    mode, adds an empty one. Setting a pair back to its
-    first alignment removes the edit. To move a segment along its row, switch on <i>Add gap column</i>: each click on ← or →
-    moves it one column. From under an ancestor segment, one step puts it in the gap column beside it, and a second puts it
-    under the next ancestor segment, if that one has nothing under it. Click a segment to pick it, and the arrow keys move it
-    the same way. A segment never jumps over another of its row; move that one first, or add a column with +. A row marked <i>uncertain</i> leaves its table, and a set you tick as checked or as a <i>problem set</i>
-    leaves the page. Choose <i>uncertain rows</i>, <i>sets checked</i>, or <i>problem sets</i> under Status to see them, and untick one to put it back. Rows whose alignment was automatically repaired are under <i>to look at again</i>, and the sheet menu says which sheets
-    hold them. Their sets come first on the page and stay there even when ticked as checked. Once you have looked at such a row, press <i>looked at again</i> beside it, or tick <i>looked at again</i> at the top of its set for all of them: the row is saved as it stands, under your name, and leaves <i>to look at again</i>. Saving the row, or clearing its note, does the same.</p>
-    <p>A geminate is one segment with the length mark: <i>kː</i>, <i>kʰː</i>, in the ancestor and the reflexes alike (Pāli
-    <i>bhatta</i> is <i>bʰ a tː a</i>). Typing <i>kk</i> or <i>kkʰ</i> in a cell writes <i>kː</i> or <i>kʰː</i>. A cluster that came out
-    as a geminate has it under its first member (<i>k t</i> over <i>tː -</i>), unless a nasal, liquid or glide opens the cluster
-    (<i>r p</i> over <i>- pː</i>). Only a geminate split by a compound seam (<i>ud+dāla</i>), or with one half marked as
-    morphology, keeps two columns.</p>
     <div class="ia-row">
       <button id="ia-brush" type="button" aria-pressed="false" title="Key M">Mark morphology <kbd>M</kbd></button>
       <button id="ia-gap" type="button" aria-pressed="false" title="Key G">Add gap column <kbd>G</kbd></button>
@@ -259,37 +228,6 @@ nav: false
 
   <div id="ia-sets"><div class="empty">Loading…</div></div>
   <div class="pager"><button id="ia-more" type="button" hidden>Show more sets</button></div>
-
-  <div class="notes">
-    <p><b>Sources.</b> Turner's <i>Comparative Dictionary</i> as digitized in JAMBU (Arora et al. 2023); Pischel, <i>Grammatik der Prakrit-Sprachen</i> (1900), in Subhadra Jhā's translation; Oberlies, <i>Pāli</i> (2001); IE-CoR (Heggarty et al. 2023). Turner's comparanda from outside Indo-Aryan are left out.</p>
-    <p><b>Where and when.</b> Each row says where and when its form is attested, as far as the sources tell; hover for the
-    basis. An inscription gives its site and the date of its edict (Kalsi, 260–250 BCE). A form Pischel cites from a text gets the
-    earliest of the texts he cites, with its date and, where it has one, its place: the Jain canon was written down at Valabhī,
-    Hemacandra worked at Aṇahilapāṭaka. A modern form gets JAMBU's point for its dialect or language, and the date of Turner's
-    source for the language where his bibliography names one (Platts's dictionary of 1884 for Hindi-Urdu), else the span of his
-    sources, up to 1966. The heading of a set gives the earliest text Turner names for an Old Indo-Aryan headword (RV., MBh.).
-    Literary Middle Indo-Aryan has a period and no place. The dates of texts are conventional ranges.</p>
-    <p><b>Language names.</b> A language has one name on every sheet, the name JAMBU gives it, with a variety after a colon
-    (<i>Prakrit: Ardhamagadhi</i>, <i>Ashokan Prakrit: Kalsi</i>). Pischel's abbreviations are written out: AMg. is
-    <i>Prakrit: Ardhamagadhi</i>, M. <i>Prakrit: Maharashtri</i>, Ś. <i>Prakrit: Shauraseni</i>, A. <i>Apabhramsha</i>. Oberlies's
-    Aśokan citations go under the site of the inscription, with the edict in the row's details. IE-CoR's Eastern Pahari is
-    <i>Nepali</i>, and its Hindi and Urdu are <i>Hindi-Urdu: Hindi</i> and <i>Hindi-Urdu: Urdu</i>. Where the name says less than the
-    book, the book's label is in the details: Kī. for Kramadīśvara, PG. and VG. for the two Pallava grants. A set with several
-    forms from one language has a row for each, all under the same name.</p>
-    <p><b>Morphology.</b> An ancestor's ending is marked only where the words of a set differ over it, so an ending every reflex continues carries no mark. Each mark gives its rule. <i>3sg verb ending</i>, <i>3sg -ai</i>, <i>final anusvāra</i>, and <i>infinitive</i> are the rules used before a fit. <i>Suffix</i> marks come from Turner's own word families: forms of one language under one headword that share a stem show what the suffixes are, and a suffix is cut only if the stem then fits the ancestor better. Each stem is then aligned alone, and so is each member of a compound. <i>Ending -am</i> and the like are a table of Sanskrit endings, applied to words cited without a hyphen, and they overmark: a short noun can pass as inflected. <i>Marked in review</i> came from the reviewers.</p>
-    <p><b>Middle Indic sets.</b> A final <i>-a</i> is marked, with what the reflexes add after it, in every row of a set where some
-      reflex adds an ending (<i>hásta</i> &gt; <i>astaṁmi</i>), and left unmarked where none does (<i>pū́rva</i> &gt; <i>puvi</i>). Verb
-      endings (<i>-ati</i>, <i>-ate</i>, <i>-tum</i>, <i>-tvā</i>), a causative <i>-aya-</i> that a reflex lacks, and <i>-ka</i> are marked
-      in every row. A preverb or first member before a word of its own (<i>pra-</i>, <i>ut-</i>, <i>vi-</i>, <i>dvi-</i>) is marked, with
-      a seam after it. A reflex with no vowel (<i>d</i>, <i>gg</i>) is set uncertain.</p>
-    <p><b>Clusters.</b> Where a sibilant or <i>h</i> comes before a stop, the reflex stop stands under the stop (<i>ṣṭ</i> &gt; <i>ṭh</i>,
-      <i>st</i> &gt; <i>th</i>); a reflex <i>h</i> or sibilant stands under the sibilant (<i>kṣ</i> &gt; <i>h</i>). Where the reflex keeps an
-      <i>r</i> beside <i>r̥</i>, the <i>r</i> stands under <i>r̥</i> and its vowel is added (<i>tādṛśa</i> &gt; <i>tārisa</i>).</p>
-    <p><b>Learned forms.</b> A Prakrit ancestor is tagged <i>probable learned form</i> if it keeps the Sanskrit stop between vowels, which Prakrit normally loses. A stop at the start of a compound member or after a prefix counts as word-initial and is not tagged, and neither is a dialect's regular change (Śaurasenī <i>-d-</i> from <i>-t-</i>). This is a rule of thumb: a tagged form may still be a plain inherited word in some dialect.</p>
-    <p><b>Repeats.</b> A row with the same ancestor, language, and reflex is shown once, and it says where else it occurs. The same reflex under a different ancestor is a separate comparison and stays.</p>
-    <p><b>Checks.</b> Every row is checked against its cited form: the reflex cells, green and outlined ones included, must spell it. A row that does not is flagged <i>alignment does not spell the cited form</i>, and a reviewed row whose segments are all there but out of order (a metathesis) is flagged <i>segments aligned in another order than the word</i>.</p>
-    <p><b>Status.</b> <i>Reviewed</i> pairs show the reviewed alignment. <i>Excluded in review</i> pairs were dropped from the fits. <i>Uncertain</i> rows are set aside from their tables and listed under Status. Everything else is the machine alignment.</p>
-  </div>
 </div>
 
 <script src="{{ '/indic_alignments/config.js' | relative_url }}"></script>
