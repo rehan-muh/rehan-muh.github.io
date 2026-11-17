@@ -8,7 +8,8 @@
 // A row holds two strings, cell for cell: "k a r [a t i] · ·" over "k a r [- - -] [n aː]".
 // · under a reflex segment: the reflex added it. -: lost. Square brackets: morphology.
 // = and => in the reflex: merged into the segment to the left or right. ~x and ^: x moved.
-// Data of 16 November 2026: these marks are in the rows (causal/indic_marks.py).
+// Data of 16 November 2026: these marks are in the rows (causal/indic_marks.py). A geminate
+// that has something of both members of its cluster (kṣ > cch) is marked as merged too.
 (function () {
   const GAP = "-", ADDED = "·", CHECK = "|#checked:", PROBLEM = "|#problem";
 
