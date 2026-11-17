@@ -7,6 +7,7 @@
 //
 // A row holds two strings, cell for cell: "k a r [a t i] · ·" over "k a r [- - -] [n aː]".
 // · under a reflex segment: the reflex added it. -: lost. Square brackets: morphology.
+// = and => in the reflex: merged into the segment to the left or right. ~x and ^: x moved.
 (function () {
   const GAP = "-", ADDED = "·", CHECK = "|#checked:", PROBLEM = "|#problem";
 
@@ -57,7 +58,18 @@
     // a lone non-syllabic vowel (u̯) is a glide
     return !(letters.length === 1 && d.includes("̯") && !/[jwɥ]/.test(d));
   }
-  const isConsonant = (t) => t !== "-" && t !== "·" && t !== "" && !isVowel(t);
+  // Marks in the reflex string (causal/indic_marks.py of the word-position project):
+  //   =  =>   the ancestor segment above is merged into the reflex segment to the left (=) or
+  //           to the right (=>): a coalescence, not a loss
+  //   ~x      x continues the ancestor segment above and is spoken where the row has ^
+  //   ^       in an added column: the ~ segment is spoken here (~1x and ^1 where a row has two)
+  const isMerged = (t) => t === "=" || t === "=>";
+  const movedOf = (t) => { const m = /^~([0-9]*)(.+)$/.exec(String(t)); return m ? { n: m[1], seg: m[2] } : null; };
+  const landOf = (t) => { const s = String(t); return s[0] === "^" && /^[0-9]*$/.test(s.slice(1)) ? { n: s.slice(1) } : null; };
+  const isMark = (t) => isMerged(t) || !!movedOf(t) || !!landOf(t);
+  // languages written in early Brahmi or Kharoshthi, which do not write double consonants
+  const NO_GEMINATES = /^(Ashokan Prakrit|Gandhari|Kharoshthi Inscriptions|Niya Prakrit)/;
+  const isConsonant = (t) => t !== "-" && t !== "·" && t !== "" && !isMark(t) && !isVowel(t);
   // kʰː > k: without length, aspiration and diacritics
   const baseOf = (t) => t.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[ʰʱːˑ]/g, "");
   function geminate(x, y) {
@@ -86,6 +98,7 @@
       const morph = cols[i].am, top0 = (seamed(A) ? "+" : "") + g;
       const cell = (a, x) => ({ a, am: morph, x, xm: morph });
       const segs = cols.slice(i, j + 1).map((c) => c.x).filter((s) => s !== "-");
+      if (segs.some(isMark)) continue;
       let fresh;
       if (!segs.length) fresh = [cell(top0, "-")];
       else if (segs.length === 1) fresh = [cell(top0, segs[0])];
@@ -393,7 +406,7 @@
   const ENDPOINT = (window.INDIC_CONFIG && window.INDIC_CONFIG.endpoint) || "";
   const STORE = "indic-alignments-v1";
   const PAGE = 25, ROWS = 300;
-  const KEEPS_CHECKED = ["edited", "uncertain", "learned", "again"];
+  const KEEPS_CHECKED = ["edited", "uncertain", "learned", "again", "marks"];
   // rows whose alignment was automatically repaired on the Changes tab, to be looked at again
   const REPAIRER = "automatically";
   const LEARNED = "probable learned form";
@@ -839,15 +852,44 @@
            `<button class="gp" type="button" data-i="${i}" data-side="right" aria-label="Move ${seg} one column right" title="One column right">→</button>`;
   }
   const isPicked = (pair, i) => editing && gapping && picked && picked.key === pair.key && picked.i === i;
+  // the cell a merged one (= or =>) went into: the nearest cell on that side that holds a segment
+  function mergeHost(cells, i) {
+    const step = cells[i].bottom === "=>" ? 1 : -1;
+    for (let j = i + step; j >= 0 && j < cells.length; j += step) {
+      const b = cells[j].bottom;
+      if (b !== GAP && !isMerged(b) && !landOf(b)) return j;
+    }
+    return -1;
+  }
+  const hostsMerge = (cells, i) => cells.some((c, j) => isMerged(c.bottom) && mergeHost(cells, j) === i);
+  // how a cell with a mark reads on the page: what it shows, its classes and its hover text
+  function markView(cells, i) {
+    const b = cells[i].bottom, moved = movedOf(b), land = landOf(b);
+    if (isMerged(b)) {
+      const host = mergeHost(cells, i);
+      return { text: b === "=>" ? "›" : "‹", cls: "mg", tip: host < 0 ? "merged, but no segment beside it" : `merged into ${cells[host].bottom} (coalescence)` };
+    }
+    if (moved) {
+      return { text: moved.seg, cls: `mv${moved.seg !== cells[i].top ? " c" : ""}`, tip: `${moved.seg} continues ${cells[i].top} and is spoken where the row has ↷ (metathesis)` };
+    }
+    if (land) {
+      const from = cells.find((c) => { const m = movedOf(c.bottom); return m && m.n === land.n; });
+      return { text: from ? `↷${movedOf(from.bottom).seg}` : "↷", cls: "ld", tip: from ? `${movedOf(from.bottom).seg}, from ${from.top}, is spoken here (metathesis)` : "a moved segment is spoken here, but the row marks none" };
+    }
+    return null;
+  }
   function segCell(pair, i) {
     const cell = pair.cells[i];
     const lost = cell.bottom === GAP;
     const was = pair.baseRanks[pair.ranks.indexOf(i)];
     const fixed = !was || was.bottom !== cell.bottom || was.morph !== cell.morph;
-    const cls = ["seg", lost ? "lost" : cell.bottom !== cell.top ? "c" : "", cell.morph ? "m" : "", cell.seam ? "seam" : "", fixed ? "fix" : "",
+    const mark = markView(pair.cells, i);
+    const cls = ["seg", mark ? mark.cls : lost ? "lost" : cell.bottom !== cell.top ? "c" : "", hostsMerge(pair.cells, i) ? "mgh" : "",
+                 cell.morph ? "m" : "", cell.seam ? "seam" : "", fixed ? "fix" : "",
                  isPicked(pair, i) ? "picked" : ""].join(" ");
-    const tip = fixed && was ? ` title="first alignment: ${esc(was.bottom)}${was.morph ? " (morphology)" : ""}"` : "";
-    let body = esc(lost ? GAP : cell.bottom);
+    const tips = [mark ? mark.tip : "", fixed && was ? `first alignment: ${was.bottom}${was.morph ? " (morphology)" : ""}` : ""].filter(Boolean);
+    const tip = tips.length ? ` title="${esc(tips.join("; "))}"` : "";
+    let body = esc(mark ? mark.text : lost ? GAP : cell.bottom);
     if (editing && !brush) body = `<input class="cell" data-i="${i}" value="${esc(lost ? "" : cell.bottom)}" aria-label="Reflex of ${esc(cell.top)}">`;
     if (editing && brush) body = `<button class="mk" type="button" data-i="${i}" aria-pressed="${cell.morph}">${esc(lost ? GAP : cell.bottom)}</button>`;
     if (editing && gapping && !lost) {
@@ -881,7 +923,9 @@
     if (editing && brush) return `<td class="seg ${kind}" ${at}><button class="mk" type="button" data-i="${i}" aria-pressed="${pair.cells[i].morph}">${seg}</button></td>`;
     // a suffix or an unplaced segment can be changed too; emptied, it is taken out
     if (editing) return `<td class="seg ${kind}" ${at}><input class="cell" data-i="${i}" value="${seg}" aria-label="Segment the ancestor lacks"></td>`;
-    return `<td class="seg ${kind}" ${at}>${seg}</td>`;
+    const mark = markView(pair.cells, i);
+    if (mark) return `<td class="seg ${kind} ${mark.cls}" ${at} title="${esc(mark.tip)}">${esc(mark.text)}</td>`;
+    return `<td class="seg ${kind}${hostsMerge(pair.cells, i) ? " mgh" : ""}" ${at}>${seg}</td>`;
   }
   // `slots[p]` is how many columns the added segments before p need in this table
   function rowHTML(pair, slots, greens) {
@@ -894,7 +938,11 @@
       if (p < rank.length) h += segCell(pair, rank[p]);
       else if (p < slots.length - 1) h += "<td></td>";
     });
+    // a consonant merger in a language whose script writes no double consonants: the single
+    // consonant may stand for a geminate, which would be no merger
+    const single = NO_GEMINATES.test(pair.base_language) && pair.cells.some((c) => isMerged(c.bottom) && isConsonant(c.top));
     const status = (pair.status && pair.status !== "machine" ? `<span class="tag ${esc(pair.status.split(" ")[0])}">${esc(pair.status)}</span>` : "") +
+                   (single ? '<span class="tag nogem" title="This script does not write double consonants, so the single consonant may stand for a geminate">script writes no geminates</span>' : "") +
                    (pair.again ? '<span class="tag again">look again</span>' : "");
     h += `<td class="where">${esc(pair.rule())}${status}${pair.details ? ` <span class="det">${esc(pair.details)}</span>` : ""}${pair.edited ? ` <span class="det">edited ${esc(pair.edited)}</span>` : ""}${attHTML(pair.att, "det")}</td>`;
     if (editing) {
@@ -1025,7 +1073,8 @@
         if (p.status === "uncertain" && status !== "uncertain" && status !== "edited" && status !== "again") return false;
         if (status === "edited" && !p.edited) return false;
         if (status === "again" && !p.again) return false;
-        if (status && !["edited", "checked", "problem", "learned", "again"].includes(status) && !p.status.startsWith(status)) return false;
+        if (status === "marks" && !p.cells.some((c) => isMark(c.bottom))) return false;
+        if (status && !["edited", "checked", "problem", "learned", "again", "marks"].includes(status) && !p.status.startsWith(status)) return false;
         const marked = p.cells.some((c) => c.morph);
         if (morph === "yes" && !marked) return false;
         if (morph === "no" && marked) return false;
@@ -1329,6 +1378,15 @@
       const i = +e.target.dataset.i, cell = pair.cells[i], value = clean(e.target.value);
       if (!cell || value === cell.bottom) return;
       snapshot(pair);
+      if (isMark(value) || isMark(cell.bottom) || pair.cells.some((c) => isMark(c.bottom))) {
+        // a mark put in, changed or taken out: its partner cells read differently too, so the
+        // whole row is drawn again
+        cell.bottom = value;
+        if (cell.top === ADDED && value === GAP) { cell.morph = false; tidy(pair.cells); setRanks(pair); }
+        save(pair);
+        redraw(pair, e.target);
+        return;
+      }
       if (cell.top === ADDED) {
         // a suffix or unplaced segment emptied leaves its column empty in this row (the row's
         // later segments keep their columns)

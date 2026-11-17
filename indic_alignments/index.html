@@ -9,9 +9,11 @@ nav: false
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400&display=swap">
 <style>
   .pa { --pa-ins: #00684c; --pa-insbg: #dcefe9; --pa-fix: #fff3c4; --pa-fixline: #d4a500; --pa-m: #e6e1f7; --pa-mline: #6a55b8;
-        --pa-lost: #b4457f; --pa-faint: #9aa5b1; --pa-bad: #a4324f; --pa-badbg: #fbe4ea; --pa-warn: #8a6100; }
+        --pa-lost: #b4457f; --pa-faint: #9aa5b1; --pa-bad: #a4324f; --pa-badbg: #fbe4ea; --pa-warn: #8a6100;
+        --pa-mg: #d9e8fb; --pa-mgline: #1f5fae; }
   html[data-theme="dark"] .pa { --pa-ins: #8fe0c4; --pa-insbg: #123d33; --pa-fix: #4a3d10; --pa-fixline: #d5a63f; --pa-m: #2e2852; --pa-mline: #a998ee;
-        --pa-lost: #e58fbf; --pa-faint: #6b7480; --pa-bad: #f2a3b7; --pa-badbg: #4a1f2c; --pa-warn: #f0cf7a; }
+        --pa-lost: #e58fbf; --pa-faint: #6b7480; --pa-bad: #f2a3b7; --pa-badbg: #4a1f2c; --pa-warn: #f0cf7a;
+        --pa-mg: #1d3557; --pa-mgline: #8fbcf5; }
   .pa .controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin: 0.8rem 0 0.6rem; }
   /* the sheet controls on the left, the progress over all sheets at the top right. Every class
      here starts ia-: the site's Bootstrap has its own .progress, a 1rem flex strip */
@@ -68,6 +70,10 @@ nav: false
             font-family: "Charis SIL", serif; font-style: normal; color: var(--pa-faint); }
   .pa .sw.c { color: var(--global-text-color); font-weight: 700; }
   .pa .sw.lost { color: var(--pa-lost); }
+  .pa .sw.mg, .pa .sw.mgh { background: var(--pa-mg); color: var(--global-text-color); border-radius: 0; }
+  .pa .sw.mg { color: var(--pa-mgline); font-weight: 700; margin-left: -5px; }
+  .pa .sw.mv { box-shadow: inset 0 0 0 1px var(--pa-mgline); color: var(--pa-faint); }
+  .pa .sw.ld { color: var(--pa-mgline); font-weight: 700; }
   .pa .sw.fix { color: var(--global-text-color); box-shadow: inset 0 -3px 0 var(--pa-fixline); }
   .pa .sw.m { color: var(--global-text-color); background: var(--pa-m); box-shadow: inset 0 0 0 1px var(--pa-mline); }
   .pa .editbar, .pa form.login { border: 1px solid var(--pa-fixline); border-radius: 4px; padding: 8px 12px; margin: 0 0 1rem; font-size: 0.9rem; }
@@ -99,6 +105,14 @@ nav: false
   .pa td.seg { font-family: "Charis SIL", serif; font-size: 1.05rem; color: var(--pa-faint); min-width: 1.7em; white-space: nowrap; }
   .pa td.seg.c { color: var(--global-text-color); font-weight: 700; }
   .pa td.seg.lost { color: var(--pa-lost); }
+  /* a coalescence: the merged cell and the cell it went into share a tint; a metathesis: the
+     segment where it comes from (dashed) and where it is spoken (↷) */
+  .pa td.seg.mg, .pa td.seg.mgh { background: var(--pa-mg); }
+  .pa td.seg.mg { color: var(--pa-mgline); font-weight: 700; }
+  .pa td.seg.mv { box-shadow: inset 0 0 0 1px var(--pa-mgline); border-radius: 3px; color: var(--pa-faint); }
+  .pa td.seg.mv.c { font-weight: 700; }
+  .pa td.seg.mv.fix { box-shadow: inset 0 0 0 1px var(--pa-mgline), inset 0 -3px 0 var(--pa-fixline); }
+  .pa td.seg.ld { color: var(--pa-mgline); font-weight: 700; background: transparent; white-space: nowrap; }
   .pa td.seg.m { background: var(--pa-m); }
   .pa td.seg.fix { box-shadow: inset 0 -3px 0 var(--pa-fixline); }
   .pa tr.anc th.add, .pa td.seg.add { min-width: 1.4em; padding: 1px 3px; color: var(--pa-ins); background: var(--pa-insbg); font-weight: 700; }
@@ -110,6 +124,7 @@ nav: false
   .pa .in.m { background: var(--pa-m); color: var(--global-text-color); }
   .pa .tag { font-size: 0.7rem; border-radius: 3px; padding: 0 4px; margin-left: 5px; border: 1px solid var(--global-divider-color); }
   .pa .tag.learned { font-family: var(--global-font, inherit); font-weight: 400; background: var(--pa-fix); color: var(--pa-warn); border-color: transparent; }
+  .pa .tag.nogem { font-family: var(--global-font, inherit); font-weight: 400; background: var(--pa-fix); color: var(--pa-warn); border-color: transparent; }
   .pa .tag.excluded { background: var(--pa-badbg); color: var(--pa-bad); border-color: transparent; }
   .pa .tag.again { font-family: var(--global-font, inherit); background: var(--pa-fix); color: var(--pa-warn); border-color: transparent; }
   .pa tr.ex td { opacity: 0.45; }
@@ -205,6 +220,7 @@ nav: false
       <option value="learned">probable learned forms</option>
       <option value="edited">edited here</option>
       <option value="again">to look at again</option>
+      <option value="marks">merged or moved segments</option>
       <option value="checked">sets checked</option>
     </select></label>
     <label>Morphology <select id="ia-morph"></select></label>
@@ -219,6 +235,8 @@ nav: false
     <span><i class="sw">a</i> unchanged</span>
     <span><i class="sw c">ɳ</i> changed</span>
     <span><i class="sw lost">-</i> lost</span>
+    <span><i class="sw mgh">kʰ</i><i class="sw mg">‹</i> merged into the segment beside it</span>
+    <span><i class="sw mv">h</i><i class="sw ld">↷h</i> moved: where it comes from, and where it is spoken</span>
     <span><i class="in">i</i> green column: a suffix, opposite a gap in the ancestor</span>
     <span><i class="sw">i</i> outlined column: aligned with low probability by the aligner</span>
     <span>A vertical line marks a compound boundary.</span>
