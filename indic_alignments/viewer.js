@@ -253,7 +253,7 @@
   function setSeam(cells, k, on) {
     const ranks = rankList(cells);
     if (k < 0 || k >= ranks.length) return "That segment is not in this row.";
-    if (on && k === 0) return "A seam goes between two segments of the ancestor.";
+    if (on && k === 0) return "A compound boundary goes between two segments of the ancestor.";
     cells[ranks[k]].seam = !!on;
     return "";
   }
@@ -481,9 +481,11 @@
   function checkLabel(set) {
     return set.checks.length ? `<span class="ok">✓ checked by ${esc(set.checks.join(", "))}</span>` : "";
   }
-  // one pass over the saved edits: for each sheet, the sets ticked as checked or set aside, and
-  // the rows marked uncertain or to be looked at again
-  const emptyTally = () => ({ checked: new Set(), aside: new Set(), again: 0, uncertain: 0 });
+  // one pass over the saved edits: for each sheet, the sets ticked as checked or marked as
+  // problematic, the sets with a row still to be looked at again, and the rows marked uncertain.
+  // A row looked at again is saved under the editor's name, so its set leaves the count with
+  // its last such row.
+  const emptyTally = () => ({ checked: new Set(), aside: new Set(), again: new Set(), uncertain: 0 });
   function tally() {
     const by = {};
     Object.keys(changes).forEach((k) => {
@@ -492,7 +494,7 @@
       if (key.includes(CHECK)) t.checked.add(key.split(CHECK)[0]);
       else if (key.endsWith(PROBLEM)) t.aside.add(key.slice(0, -PROBLEM.length));
       else {
-        if (c.editor === REPAIRER) t.again++;
+        if (c.editor === REPAIRER) t.again.add(key.slice(0, key.lastIndexOf("|")));
         if (c.status === "uncertain") t.uncertain++;
       }
     });
@@ -504,7 +506,7 @@
     const by = tally();
     const text = (s) => {
       const t = by[s.slug] || emptyTally();
-      return `${s.sheet} (${num(t.checked.size)} of ${num(s.sets)} sets checked${t.again ? `, ${num(t.again)} to look at again` : ""})`;
+      return `${s.sheet} (${num(t.checked.size)} of ${num(s.sets)} sets checked${t.again.size ? `, ${num(t.again.size)} ${t.again.size === 1 ? "set" : "sets"} to look at again` : ""})`;
     };
     const menu = $("ia-sheet");
     if (menu.options.length === INDEX.length) INDEX.forEach((s, i) => { menu.options[i].textContent = text(s); });
@@ -517,16 +519,16 @@
   function refreshTotals() {
     if (!totalsWait) totalsWait = setTimeout(() => { totalsWait = 0; fillSheets(); }, 60);
   }
-  // top right: how many sets of all the sheets are checked or set aside, as one bar
+  // top right: how many sets of all the sheets are checked or marked as problematic, as one bar
   function drawProgress(by) {
     const el = $("ia-progress"), total = INDEX.reduce((n, s) => n + s.sets, 0);
     if (!el || !total) return;
     let checked = 0, aside = 0, again = 0, uncertain = 0;
     const sheets = INDEX.map((s) => {
       const t = by[s.slug] || emptyTally();
-      // a set both checked and set aside counts as set aside
+      // a set both checked and marked as problematic counts as problematic
       const c = [...t.checked].filter((id) => !t.aside.has(id)).length;
-      checked += c; aside += t.aside.size; again += t.again; uncertain += t.uncertain;
+      checked += c; aside += t.aside.size; again += t.again.size; uncertain += t.uncertain;
       return { s, c, a: t.aside.size };
     });
     const done = checked + aside, left = Math.max(0, total - done);
@@ -536,15 +538,15 @@
     const open = el.querySelector("details") && el.querySelector("details").open;
     el.innerHTML =
       `<div class="ia-tally-head"><b>All sheets</b><span>${num(done)} of ${num(total)} sets · ${pct(done)}</span></div>` +
-      `<div class="ia-bar" role="img" aria-label="${num(checked)} sets checked, ${num(aside)} set aside, ${num(left)} to check, of ${num(total)}">` +
-      part("ia-done", checked, "Checked") + part("ia-aside", aside, "Set aside as problem sets") +
+      `<div class="ia-bar" role="img" aria-label="${num(checked)} sets checked, ${num(aside)} marked as problematic, ${num(left)} to check, of ${num(total)}">` +
+      part("ia-done", checked, "Checked") + part("ia-aside", aside, "Marked as problematic") +
       `<span class="ia-left" title="To check: ${num(left)} sets, ${pct(left)}"></span></div>` +
       `<p><span class="ia-pk"><span class="ia-key ia-done"></span>${num(checked)} checked</span>` +
-      `<span class="ia-pk"><span class="ia-key ia-aside"></span>${num(aside)} set aside</span>` +
+      `<span class="ia-pk"><span class="ia-key ia-aside"></span>${num(aside)} marked as problematic</span>` +
       `<span class="ia-pk"><span class="ia-key ia-left"></span>${num(left)} to check</span></p>` +
-      `<p>${plural(again, "row", "rows")} to look at again · ${plural(uncertain, "row", "rows")} uncertain</p>` +
+      `<p>${plural(again, "set", "sets")} to look at again · ${plural(uncertain, "row", "rows")} uncertain</p>` +
       `<details${open ? " open" : ""}><summary>By sheet</summary><table><thead><tr><th scope="col">Sheet</th>` +
-      '<th scope="col">Checked</th><th scope="col">Set aside</th><th scope="col">Sets</th></tr></thead><tbody>' +
+      '<th scope="col">Checked</th><th scope="col">Problematic</th><th scope="col">Sets</th></tr></thead><tbody>' +
       sheets.map(({ s, c, a }) => `<tr><td>${esc(s.sheet)}</td><td>${num(c)}</td><td>${num(a)}</td><td>${num(s.sets)}</td></tr>`).join("") +
       "</tbody></table></details>";
     el.hidden = false;
@@ -554,10 +556,9 @@
     const aside = SETS.filter((s) => s.problem).length;
     let uncertain = 0;
     SETS.forEach((s) => { uncertain += s.rows.filter((p) => p.status === "uncertain").length; });
-    let again = 0;
-    SETS.forEach((s) => { again += s.rows.filter((p) => p.again).length; });
-    $("ia-done").textContent = `${num(done)} of ${num(SETS.length)} sets checked · ${num(aside)} ${aside === 1 ? "set" : "sets"} set aside · ${num(uncertain)} ${uncertain === 1 ? "row" : "rows"} uncertain` +
-      (again ? ` · ${num(again)} to look at again` : "");
+    const again = SETS.filter((s) => s.rows.some((p) => p.again)).length;
+    $("ia-done").textContent = `${num(done)} of ${num(SETS.length)} sets checked · ${num(aside)} ${aside === 1 ? "set" : "sets"} marked as problematic · ${num(uncertain)} ${uncertain === 1 ? "row" : "rows"} uncertain` +
+      (again ? ` · ${num(again)} ${again === 1 ? "set" : "sets"} to look at again` : "");
   }
   function toggleCheck(set, on) {
     const name = identity.editor.replace(/\|/g, " ");
@@ -769,7 +770,7 @@
       p.morph = items.join("; ");
       save(p);
     });
-    say(`Compound seam before ${seg} ${on ? "put in" : "taken away"} in ${rows.length} ${rows.length === 1 ? "row" : "rows"}; U takes it back`);
+    say(`Compound boundary before ${seg} ${on ? "put in" : "taken away"} in ${rows.length} ${rows.length === 1 ? "row" : "rows"}; U takes it back`);
     redrawSet(set);
   }
   // typing mode, an ancestor letter changed: changed in every row whose ancestor has it there
@@ -934,13 +935,13 @@
     if (editing) {
       const mine = set.checks.includes(identity.editor.replace(/\|/g, " "));
       h += ` <label class="chk"><input class="setcheck" type="checkbox" data-id="${esc(set.id)}"${mine ? " checked" : ""}> I checked this set</label>`;
-      h += ` <label class="chk2"><input class="setproblem" type="checkbox" data-id="${esc(set.id)}"${set.problem ? " checked" : ""}> problem set, set aside</label>`;
+      h += ` <label class="chk2"><input class="setproblem" type="checkbox" data-id="${esc(set.id)}"${set.problem ? " checked" : ""}> mark as problematic</label>`;
       // rows automatically repaired: one tick says they have been looked at again
       if (set.rows.some((p) => p.again)) h += ` <label class="chk2"><input class="setagain" type="checkbox" data-id="${esc(set.id)}"> looked at again</label>`;
     }
     if (set.learned) h += '<span class="tag learned">probable learned form</span>';
     h += `<span class="oks">${checkLabel(set)}</span>`;
-    if (set.problem) h += `<span class="tag excluded">set aside${set.problem.editor ? ` by ${esc(set.problem.editor)}` : ""}</span>`;
+    if (set.problem) h += `<span class="tag excluded">marked as problematic${set.problem.editor ? ` by ${esc(set.problem.editor)}` : ""}</span>`;
     h += "</h3>";
     h += '<table><thead><tr class="anc"><th class="lang" scope="col">Language</th><th class="form" scope="col">As cited</th>';
     // gap mode: ⌫ deletes a whole column in every row of the set
@@ -976,8 +977,8 @@
         if (editing && brush) {
           // on the line before the letter: × takes the compound seam there away, | puts one there
           const seam = k === 0 ? "" : segs[k].seam
-            ? `<button class="aseam on" type="button" data-k="${k}" data-seg="${seg}" data-on="0" aria-label="Take away the compound seam before ${seg} in every row of this set" title="Take away the compound seam (the heavy line) before ${seg}">×</button>`
-            : `<button class="aseam" type="button" data-k="${k}" data-seg="${seg}" data-on="1" aria-label="Put a compound seam before ${seg} in every row of this set" title="Put a compound seam (a heavy line) before ${seg}">|</button>`;
+            ? `<button class="aseam on" type="button" data-k="${k}" data-seg="${seg}" data-on="0" aria-label="Take away the compound boundary before ${seg} in every row of this set" title="Take away the compound boundary before ${seg}">×</button>`
+            : `<button class="aseam" type="button" data-k="${k}" data-seg="${seg}" data-on="1" aria-label="Put a compound boundary before ${seg} in every row of this set" title="Put a compound boundary before ${seg}">|</button>`;
           body = seam + `<button class="amk" type="button" data-k="${k}" data-seg="${seg}" aria-pressed="${everyone[k]}" title="Mark or unmark ${seg} as morphology in every row of this set">${seg}</button>`;
         } else if (editing && gapping) {
           // + adds a segment to the ancestor before this one (and, on the last, after it too)
@@ -1178,7 +1179,7 @@
       const hit = hits.find((h) => h.set.id === section.dataset.set);
       if (hit) section.outerHTML = box(hit);
     });
-    say(brush ? "Morphology mode: click a segment, or an ancestor letter for the whole set; × on a heavy line takes the seam away (M or Esc to leave)"
+    say(brush ? "Morphology mode: click a segment, or an ancestor letter for the whole set; × on a vertical line takes the compound boundary away (M or Esc to leave)"
         : gapping ? "Gap mode: ← → move a segment one column at a time (or click it, then the arrow keys); × takes an ancestor segment out (G or Esc to leave)"
         : "Typing mode: drag a segment to move it, + at the top adds an empty column");
   }
