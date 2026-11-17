@@ -10,6 +10,7 @@
 // = and => in the reflex: merged into the segment to the left or right. ~x and ^: x moved.
 // Data of 16 November 2026: these marks are in the rows (causal/indic_marks.py). A geminate
 // that has something of both members of its cluster (kṣ > cch) is marked as merged too.
+// ṣṇ > ṇh (kṛṣṇa > kaṇha) is marked as h moved from the sibilant to after the nasal.
 (function () {
   const GAP = "-", ADDED = "·", CHECK = "|#checked:", PROBLEM = "|#problem";
 
