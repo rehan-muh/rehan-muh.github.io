@@ -63,17 +63,21 @@ nav: false
   .pa button[aria-pressed="true"], .pa button[aria-pressed="true"]:hover:not(:disabled) {
     background: var(--global-theme-color); color: var(--global-bg-color); border-color: var(--global-theme-color); }
   .pa .status { font-size: 0.9rem; color: var(--global-text-color-light); margin: 0 0 0.6rem; }
-  .pa .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.85rem; color: var(--global-text-color-light);
-                padding: 8px 12px; border: 1px solid var(--global-divider-color); border-radius: 4px; margin: 0 0 1rem; }
-  .pa .legend span { display: inline-flex; gap: 5px; align-items: center; }
+  .pa .legend { list-style: disc; font-size: 0.85rem; color: var(--global-text-color-light);
+                padding: 8px 12px 8px 30px; border: 1px solid var(--global-divider-color); border-radius: 4px; margin: 0 0 1rem; }
+  .pa .legend li { margin: 2px 0; }
+  .pa .legend span { display: inline-flex; gap: 5px; align-items: center; vertical-align: middle; }
   .pa .sw { display: inline-block; min-width: 1.3em; padding: 0 3px; text-align: center; border-radius: 3px;
             font-family: "Charis SIL", serif; font-style: normal; color: var(--pa-faint); }
   .pa .sw.c { color: var(--global-text-color); font-weight: 700; }
   .pa .sw.lost { color: var(--pa-lost); }
   .pa .sw.mg, .pa .sw.mgh { background: var(--pa-mg); color: var(--global-text-color); border-radius: 0; }
   .pa .sw.mg { color: var(--pa-mgline); font-weight: 700; margin-left: -5px; }
+  .pa .sw.sp { background: var(--pa-mg); color: var(--global-text-color); font-weight: 700; border-radius: 0; margin-left: -5px; }
   .pa .sw.mv { box-shadow: inset 0 0 0 1px var(--pa-mgline); color: var(--pa-faint); }
   .pa .sw.ld { color: var(--pa-mgline); font-weight: 700; }
+  .pa .sw.pl { color: var(--global-text-color-light); border-radius: 0;
+               box-shadow: inset 1px 0 0 var(--global-divider-color), inset -1px 0 0 var(--global-divider-color); }
   .pa .sw.fix { color: var(--global-text-color); box-shadow: inset 0 -3px 0 var(--pa-fixline); }
   .pa .sw.m { color: var(--global-text-color); background: var(--pa-m); box-shadow: inset 0 0 0 1px var(--pa-mline); }
   .pa .editbar, .pa form.login { border: 1px solid var(--pa-fixline); border-radius: 4px; padding: 8px 12px; margin: 0 0 1rem; font-size: 0.9rem; }
@@ -115,6 +119,8 @@ nav: false
   .pa td.seg.ld { color: var(--pa-mgline); font-weight: 700; background: transparent; white-space: nowrap; }
   .pa td.seg.m { background: var(--pa-m); }
   .pa td.seg.fix { box-shadow: inset 0 -3px 0 var(--pa-fixline); }
+  /* a split: the added segment shares the tint of the cell it belongs with */
+  .pa td.seg.add.sp, .pa td.seg.add.plain.sp { background: var(--pa-mg); color: var(--global-text-color); font-weight: 700; box-shadow: none; }
   .pa tr.anc th.add, .pa td.seg.add { min-width: 1.4em; padding: 1px 3px; color: var(--pa-ins); background: var(--pa-insbg); font-weight: 700; }
   .pa td.seg.add.none { font-weight: 400; }
   .pa tr.anc th.add.plain, .pa td.seg.add.plain { color: var(--global-text-color-light); background: transparent; box-shadow: inset 1px 0 0 var(--global-divider-color), inset -1px 0 0 var(--global-divider-color); }
@@ -220,7 +226,7 @@ nav: false
       <option value="learned">probable learned forms</option>
       <option value="edited">edited here</option>
       <option value="again">to look at again</option>
-      <option value="marks">merged or moved segments</option>
+      <option value="marks">merged, moved or split segments</option>
       <option value="checked">sets checked</option>
     </select></label>
     <label>Morphology <select id="ia-morph"></select></label>
@@ -231,18 +237,19 @@ nav: false
   </div>
   <p class="status"><span id="ia-count" role="status"></span> · <span id="ia-done"></span></p>
 
-  <div class="legend">
-    <span><i class="sw">a</i> unchanged</span>
-    <span><i class="sw c">ɳ</i> changed</span>
-    <span><i class="sw lost">-</i> lost</span>
-    <span><i class="sw mgh">kʰ</i><i class="sw mg">‹</i> merged into the segment beside it</span>
-    <span><i class="sw mv">h</i><i class="sw ld">↷h</i> moved: where it comes from, and where it is spoken</span>
-    <span><i class="in">i</i> green column: a suffix, opposite a gap in the ancestor</span>
-    <span><i class="sw">i</i> outlined column: aligned with low probability by the aligner</span>
-    <span>A vertical line marks a compound boundary.</span>
-    <span><i class="sw m">t</i> morphology</span>
-    <span><i class="sw fix">e</i> edited (hover for the first alignment)</span>
-  </div>
+  <ul class="legend">
+    <li><span><i class="sw">a</i> = unchanged</span></li>
+    <li><span><i class="sw c">ɳ</i> = changed</span></li>
+    <li><span><i class="sw lost">-</i> = lost</span></li>
+    <li><span><i class="sw mgh">kʰ</i><i class="sw mg">‹</i> = merged with the neighboring segment</span></li>
+    <li><span><i class="sw mgh">r</i><i class="sw sp">‹i</i> = split from the neighboring segment (one segment became two)</span></li>
+    <li><span><i class="sw mv">h</i><i class="sw ld">↷h</i> = site of metathesis and site of metathesized segment</span></li>
+    <li><span><i class="in">i</i> = suffixal material corresponding to different morphology than ancestor</span></li>
+    <li><span><i class="sw pl">i</i> = aligned with low probability by the aligner</span></li>
+    <li><span>A vertical line marks a compound boundary.</span></li>
+    <li><span><i class="sw m">t</i> = morphology</span></li>
+    <li><span><i class="sw fix">e</i> = edited (hover for the first alignment)</span></li>
+  </ul>
 
   <div id="ia-sets"><div class="empty">Loading…</div></div>
   <div class="pager"><button id="ia-more" type="button" hidden>Show more sets</button></div>

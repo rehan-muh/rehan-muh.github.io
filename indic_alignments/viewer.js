@@ -8,6 +8,8 @@
 // A row holds two strings, cell for cell: "k a r [a t i] · ·" over "k a r [- - -] [n aː]".
 // · under a reflex segment: the reflex added it. -: lost. Square brackets: morphology.
 // = and => in the reflex: merged into the segment to the left or right. ~x and ^: x moved.
+// =x and =>x in an added column: x and the segment to its left or right continue one ancestor
+// segment that became two (r̩ > r i).
 // Data of 16 November 2026: these marks are in the rows (causal/indic_marks.py). A geminate
 // that has something of both members of its cluster (kṣ > cch) is marked as merged too.
 // ṣṇ > ṇh (kṛṣṇa > kaṇha) is marked as h moved from the sibilant to after the nasal.
@@ -66,10 +68,13 @@
   //           to the right (=>): a coalescence, not a loss
   //   ~x      x continues the ancestor segment above and is spoken where the row has ^
   //   ^       in an added column: the ~ segment is spoken here (~1x and ^1 where a row has two)
+  //   =x =>x  in an added column: x and the reflex segment to its left (=x) or right (=>x) continue
+  //           one ancestor segment, which became two: a split, the opposite of a merger
   const isMerged = (t) => t === "=" || t === "=>";
+  const splitOf = (t) => { const m = isMerged(t) ? null : /^=(>?)(.+)$/.exec(String(t)); return m ? { right: m[1] === ">", seg: m[2] } : null; };
   const movedOf = (t) => { const m = /^~([0-9]*)(.+)$/.exec(String(t)); return m ? { n: m[1], seg: m[2] } : null; };
   const landOf = (t) => { const s = String(t); return s[0] === "^" && /^[0-9]*$/.test(s.slice(1)) ? { n: s.slice(1) } : null; };
-  const isMark = (t) => isMerged(t) || !!movedOf(t) || !!landOf(t);
+  const isMark = (t) => isMerged(t) || !!movedOf(t) || !!landOf(t) || !!splitOf(t);
   // languages written in early Brahmi or Kharoshthi, which do not write double consonants
   const NO_GEMINATES = /^(Ashokan Prakrit|Gandhari|Kharoshthi Inscriptions|Niya Prakrit)/;
   const isConsonant = (t) => t !== "-" && t !== "·" && t !== "" && !isMark(t) && !isVowel(t);
@@ -864,20 +869,36 @@
     }
     return -1;
   }
-  const hostsMerge = (cells, i) => cells.some((c, j) => isMerged(c.bottom) && mergeHost(cells, j) === i);
+  // the cell a split one (=x or =>x) belongs with: the ancestor's cell right beside it
+  function splitHost(cells, i) {
+    const s = splitOf(cells[i].bottom), step = s.right ? 1 : -1;
+    let j = i + step;
+    while (j >= 0 && j < cells.length && splitOf(cells[j].bottom) && splitOf(cells[j].bottom).right === s.right) j += step;
+    if (j < 0 || j >= cells.length) return -1;
+    const b = cells[j].bottom;
+    return cells[j].top !== ADDED && b !== GAP && !isMerged(b) && !landOf(b) ? j : -1;
+  }
+  const hostsMerge = (cells, i) => cells.some((c, j) => (isMerged(c.bottom) && mergeHost(cells, j) === i) ||
+                                                        (splitOf(c.bottom) && splitHost(cells, j) === i));
   // how a cell with a mark reads on the page: what it shows, its classes and its hover text
   function markView(cells, i) {
-    const b = cells[i].bottom, moved = movedOf(b), land = landOf(b);
+    const b = cells[i].bottom, moved = movedOf(b), land = landOf(b), split = splitOf(b);
+    if (split) {
+      const host = splitHost(cells, i);
+      return { text: split.right ? `${split.seg}›` : `‹${split.seg}`, cls: "sp",
+               tip: host < 0 ? "split, but there is no neighboring segment that continues an ancestor segment"
+                             : `split from the neighboring segment ${cells[host].bottom}: both continue ${cells[host].top}` };
+    }
     if (isMerged(b)) {
       const host = mergeHost(cells, i);
-      return { text: b === "=>" ? "›" : "‹", cls: "mg", tip: host < 0 ? "merged, but no segment beside it" : `merged into ${cells[host].bottom} (coalescence)` };
+      return { text: b === "=>" ? "›" : "‹", cls: "mg", tip: host < 0 ? "merged, but there is no neighboring segment" : `merged with the neighboring segment ${cells[host].bottom} (coalescence)` };
     }
     if (moved) {
-      return { text: moved.seg, cls: `mv${moved.seg !== cells[i].top ? " c" : ""}`, tip: `${moved.seg} continues ${cells[i].top} and is spoken where the row has ↷ (metathesis)` };
+      return { text: moved.seg, cls: `mv${moved.seg !== cells[i].top ? " c" : ""}`, tip: `site of metathesis: ${moved.seg} continues ${cells[i].top} and stands where the row has ↷` };
     }
     if (land) {
       const from = cells.find((c) => { const m = movedOf(c.bottom); return m && m.n === land.n; });
-      return { text: from ? `↷${movedOf(from.bottom).seg}` : "↷", cls: "ld", tip: from ? `${movedOf(from.bottom).seg}, from ${from.top}, is spoken here (metathesis)` : "a moved segment is spoken here, but the row marks none" };
+      return { text: from ? `↷${movedOf(from.bottom).seg}` : "↷", cls: "ld", tip: from ? `site of metathesized segment: ${movedOf(from.bottom).seg}, from ${from.top}` : "site of a metathesized segment, but the row marks no site of metathesis" };
     }
     return null;
   }
